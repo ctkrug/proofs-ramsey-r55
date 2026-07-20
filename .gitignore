@@ -1,4 +1,5 @@
-# Reproducible research belongs in Git; local environments and caches do not.
+# proof-factory:start
+# Reproducible research belongs in Git; local environments, caches, and in-flight queue names do not.
 .DS_Store
 .venv/
 venv/
@@ -8,3 +9,5 @@ __pycache__/
 .pytest_cache/
 node_modules/
 *.tmp
+lab-queue/*.running.json
+# proof-factory:end
