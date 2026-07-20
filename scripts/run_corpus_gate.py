@@ -18,6 +18,7 @@ EXPECTED_SHA256 = "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780e
 EXPECTED_BYTES = 47_888
 EXPECTED_RECORDS = 328
 EXPECTED_EDGE_HISTOGRAM = {423: 1, 424: 7, 425: 29, 426: 66, 427: 89, 428: 77, 429: 43, 430: 16}
+AUTHORITATIVE_SOURCE = "https://users.cecs.anu.edu.au/~bdm/data/r55_42some.g6"
 
 
 def digest_bytes(value: bytes) -> str:
@@ -54,6 +55,130 @@ def graph6_records(raw: bytes) -> list[bytes]:
     if any(not record for record in records):
         raise ValueError("corpus contains a blank graph6 record")
     return records
+
+
+def linked_artifact(descriptor: object, artifact_root: Path, label: str) -> Path:
+    if not isinstance(descriptor, dict):
+        raise ValueError(f"provenance {label} descriptor is not a JSON object")
+    relative_path = descriptor.get("path")
+    if not isinstance(relative_path, str) or not relative_path:
+        raise ValueError(f"provenance {label} path must be a nonempty string")
+    path = (artifact_root / relative_path).resolve()
+    root = artifact_root.resolve()
+    if not path.is_relative_to(root):
+        raise ValueError(f"provenance {label} path escapes the artifact root")
+    if not path.is_file():
+        raise ValueError(f"provenance {label} artifact is absent: {relative_path}")
+    if descriptor.get("sha256") != digest(path):
+        raise ValueError(f"provenance {label} SHA-256 does not match its linked artifact")
+    if "byte_count" in descriptor and descriptor["byte_count"] != path.stat().st_size:
+        raise ValueError(f"provenance {label} byte count does not match its linked artifact")
+    return path
+
+
+def parse_http_header_capture(raw: bytes) -> tuple[int, dict[str, str]]:
+    text = raw.decode("iso-8859-1")
+    blocks = [block for block in text.replace("\r\n", "\n").split("\n\n") if block.strip()]
+    if not blocks:
+        raise ValueError("HTTP header capture has no response block")
+    lines = blocks[-1].splitlines()
+    status_fields = lines[0].split()
+    if len(status_fields) < 2 or not status_fields[0].startswith("HTTP/"):
+        raise ValueError("HTTP header capture has no status line")
+    try:
+        status = int(status_fields[1])
+    except ValueError as error:
+        raise ValueError("HTTP header capture has a malformed status code") from error
+    headers: dict[str, str] = {}
+    for line in lines[1:]:
+        if not line.strip():
+            continue
+        if ":" not in line:
+            raise ValueError("HTTP header capture has a malformed field")
+        name, value = line.split(":", 1)
+        key = name.strip().lower()
+        if key in headers:
+            raise ValueError(f"HTTP header capture repeats field {key!r}")
+        headers[key] = value.strip()
+    return status, headers
+
+
+def validate_provenance(
+    payload: object,
+    raw_sha256: str,
+    raw_bytes: int,
+    artifact_root: Path,
+) -> dict[str, object]:
+    if not isinstance(payload, dict):
+        raise ValueError("provenance sidecar is not a JSON object")
+    required = {
+        "schema_version": 2,
+        "source_authority": "authoritative_direct",
+        "requested_url": AUTHORITATIVE_SOURCE,
+        "sha256": raw_sha256,
+        "byte_count": raw_bytes,
+        "response_status": 200,
+        "content_type_inferred": False,
+    }
+    for field, expected in required.items():
+        if payload.get(field) != expected:
+            raise ValueError(f"provenance field {field!r} does not match {expected!r}")
+    for field in ("retrieved_at_utc", "final_url", "acquisition_method"):
+        if not isinstance(payload.get(field), str) or not payload[field].strip():
+            raise ValueError(f"provenance field {field!r} must be a nonempty string")
+    if payload.get("final_url") != AUTHORITATIVE_SOURCE:
+        raise ValueError("provenance final_url is not the authoritative source")
+    recorded_headers = payload.get("response_headers")
+    if not isinstance(recorded_headers, dict) or not recorded_headers:
+        raise ValueError("provenance response_headers must be a nonempty JSON object")
+    if any(not isinstance(key, str) or key != key.lower() for key in recorded_headers):
+        raise ValueError("provenance response_headers keys must be lowercase strings")
+
+    header_path = linked_artifact(payload.get("header_capture"), artifact_root, "header capture")
+    status, captured_headers = parse_http_header_capture(header_path.read_bytes())
+    if status != payload["response_status"]:
+        raise ValueError("provenance response status disagrees with the raw header capture")
+    if captured_headers != recorded_headers:
+        raise ValueError("provenance response headers disagree with the raw header capture")
+    captured_content_type = captured_headers.get("content-type")
+    if payload.get("content_type") != captured_content_type:
+        raise ValueError("provenance content_type disagrees with the raw header capture")
+    if captured_content_type is not None and not captured_content_type.lower().startswith("text/plain"):
+        raise ValueError("authoritative response content-type, when present, must start with text/plain")
+    if captured_headers.get("content-length") != str(raw_bytes):
+        raise ValueError("authoritative response content-length does not match the corpus")
+
+    body_path = linked_artifact(payload.get("retrieved_body"), artifact_root, "retrieved body")
+    if digest(body_path) != raw_sha256 or body_path.stat().st_size != raw_bytes:
+        raise ValueError("linked retrieved body does not match the admitted corpus")
+
+    transfer_path = linked_artifact(
+        payload.get("transfer_metadata_capture"), artifact_root, "transfer metadata capture"
+    )
+    try:
+        transfer = json.loads(transfer_path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, UnicodeDecodeError) as error:
+        raise ValueError("transfer metadata capture is not valid JSON") from error
+    transfer_required = {
+        "http_code": 200,
+        "response_code": 200,
+        "url_effective": AUTHORITATIVE_SOURCE,
+        "size_download": raw_bytes,
+        "ssl_verify_result": 0,
+        "content_type": captured_content_type,
+    }
+    for field, expected in transfer_required.items():
+        if transfer.get(field) != expected:
+            raise ValueError(f"transfer metadata field {field!r} does not match {expected!r}")
+
+    experiment_path = linked_artifact(payload.get("retrieval_experiment"), artifact_root, "retrieval experiment")
+    try:
+        experiment = json.loads(experiment_path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, UnicodeDecodeError) as error:
+        raise ValueError("retrieval experiment is not valid JSON") from error
+    if experiment.get("returncode") != 0 or AUTHORITATIVE_SOURCE not in experiment.get("source_urls", []):
+        raise ValueError("retrieval experiment does not record a successful authoritative-source command")
+    return payload
 
 
 def networkx_signature(record: bytes) -> tuple[int, int, list[int], str]:
@@ -103,12 +228,14 @@ def nauty_version(program: str) -> str:
     return combined[0] if combined else "version unavailable"
 
 
-def canonical_lines(labelg: str, source: Path, destination: Path) -> list[bytes]:
-    result = subprocess.run([labelg, "-q", str(source), str(destination)], text=True, capture_output=True)
+def nauty_file_transform(program: str, source: Path, destination: Path) -> list[bytes]:
+    result = subprocess.run([program, "-q", str(source), str(destination)], text=True, capture_output=True)
     if result.returncode != 0:
-        raise RuntimeError(f"nauty-labelg failed: {result.stderr.strip()}")
+        raise RuntimeError(f"{Path(program).name} failed: {result.stderr.strip()}")
     if result.stdout.strip() or result.stderr.strip():
-        raise RuntimeError("nauty-labelg -q produced unexpected diagnostics")
+        raise RuntimeError(f"{Path(program).name} -q produced unexpected diagnostics")
+    if not destination.read_bytes().endswith(b"\n"):
+        raise RuntimeError(f"{Path(program).name} output is not LF-terminated")
     return destination.read_bytes().splitlines()
 
 
@@ -125,7 +252,9 @@ def main() -> int:
         "bytes": EXPECTED_BYTES,
         "records": EXPECTED_RECORDS,
         "metadata_source": "https://huggingface.co/datasets/linxy/RamseyGraph/blob/main/data/r55_42some.g6",
-        "authoritative_source": "https://users.cecs.anu.edu.au/~bdm/data/r55_42some.g6",
+        "authoritative_source": AUTHORITATIVE_SOURCE,
+        "provenance_sidecar": str(corpus) + ".provenance.json",
+        "required_source_authority": "authoritative_direct",
         "qualification": "mirror hash/size are an acquisition discriminator, not authentication of the authoritative bytes",
     }
     if not corpus.is_file():
@@ -142,6 +271,22 @@ def main() -> int:
         return 2
 
     raw = corpus.read_bytes()
+    provenance_path = Path(str(corpus) + ".provenance.json")
+    provenance: dict[str, object] | None = None
+    provenance_error = ""
+    if not provenance_path.is_file():
+        provenance_error = "provenance sidecar is absent"
+    else:
+        try:
+            provenance_payload = json.loads(provenance_path.read_text(encoding="utf-8"))
+            provenance = validate_provenance(
+                provenance_payload,
+                digest_bytes(raw),
+                len(raw),
+                corpus.parent.parent,
+            )
+        except (json.JSONDecodeError, UnicodeDecodeError, ValueError) as error:
+            provenance_error = str(error)
     try:
         records = graph6_records(raw)
     except ValueError as error:
@@ -156,6 +301,12 @@ def main() -> int:
         "bytes": len(raw),
         "records": len(records),
         "record_format_error": record_error,
+        "provenance": {
+            "path": str(provenance_path),
+            "exists": provenance_path.is_file(),
+            "sha256": digest(provenance_path) if provenance_path.is_file() else None,
+            "validation_error": provenance_error,
+        },
     }
     mismatches = []
     for field in ("sha256", "bytes", "records"):
@@ -163,11 +314,17 @@ def main() -> int:
             mismatches.append({"field": field, "expected": expected[field], "actual": actual[field]})
     if record_error:
         mismatches.append({"field": "record_format", "expected": "one nonblank LF-terminated graph6 record per line", "actual": record_error})
+    if provenance_error:
+        mismatches.append({
+            "field": "provenance",
+            "expected": "valid authoritative-direct retrieval sidecar with response metadata",
+            "actual": provenance_error,
+        })
     if mismatches:
         report = {
             "schema_version": 1,
             "status": "source_preflight_failed",
-            "failure": "source bytes do not match the frozen acquisition discriminator",
+            "failure": "source bytes or provenance do not satisfy the frozen admission gate",
             "expected": expected,
             "actual": actual,
             "mismatches": mismatches,
@@ -179,8 +336,13 @@ def main() -> int:
 
     compiler = shutil.which("gcc")
     labelg = shutil.which("nauty-labelg")
-    if compiler is None or labelg is None:
-        missing = [name for name, value in (("gcc", compiler), ("nauty-labelg", labelg)) if value is None]
+    complg = shutil.which("nauty-complg")
+    if compiler is None or labelg is None or complg is None:
+        missing = [
+            name
+            for name, value in (("gcc", compiler), ("nauty-labelg", labelg), ("nauty-complg", complg))
+            if value is None
+        ]
         raise RuntimeError(f"required tools missing: {', '.join(missing)}")
 
     complements = [complement_graph6(record) for record in records]
@@ -196,6 +358,15 @@ def main() -> int:
             [compiler, "-std=c11", "-O2", "-Wall", "-Wextra", "-Werror", str(checker_b_source), "-o", str(checker_b)],
             check=True,
         )
+        checker_b_binary_sha256 = digest(checker_b)
+
+        reference_complement_path = temp / "nauty-complements.g6"
+        reference_complements = nauty_file_transform(complg, corpus, reference_complement_path)
+        if reference_complement_path.read_bytes() != complement_path.read_bytes():
+            raise AssertionError("local graph6 complements disagree byte-for-byte with nauty-complg")
+        if reference_complements != complements:
+            raise AssertionError("nauty-complg record list disagrees with local graph6 complements")
+
         base_a_payload = run_json([sys.executable, str(checker_a), "--format", "graph6", "--input", str(corpus)])
         base_b_payload = run_json([str(checker_b), "--format", "graph6", "--input", str(corpus)])
         comp_a_payload = run_json([sys.executable, str(checker_a), "--format", "graph6", "--input", str(complement_path)])
@@ -249,8 +420,8 @@ def main() -> int:
 
         base_canonical_path = temp / "base-canonical.g6"
         comp_canonical_path = temp / "comp-canonical.g6"
-        base_canonical = canonical_lines(labelg, corpus, base_canonical_path)
-        comp_canonical = canonical_lines(labelg, complement_path, comp_canonical_path)
+        base_canonical = nauty_file_transform(labelg, corpus, base_canonical_path)
+        comp_canonical = nauty_file_transform(labelg, complement_path, comp_canonical_path)
         canonical_all = base_canonical + comp_canonical
         if len(canonical_all) != 656 or len(set(canonical_all)) != 656:
             raise AssertionError("nauty canonical labels do not give 656 distinct classes")
@@ -280,20 +451,52 @@ def main() -> int:
             "status": "corpus_control_pass",
             "claim_scope": "328 supplied source records and their 328 derived complements only; not corpus completeness",
             "source": actual,
+            "provenance": {
+                "path": str(provenance_path),
+                "sha256": digest(provenance_path),
+                "assertion": provenance,
+                "qualification": "schema validation checks the recorded assertion, not the truth of external transport metadata",
+            },
             "expected": expected,
             "checker_a": {"path": str(checker_a), "sha256": digest(checker_a), "method": base_a_payload["checker"]},
-            "checker_b": {"path": str(checker_b_source), "sha256": digest(checker_b_source), "method": base_b_payload["checker"]},
+            "checker_b": {
+                "path": str(checker_b_source),
+                "source_sha256": digest(checker_b_source),
+                "compiled_binary_sha256": checker_b_binary_sha256,
+                "compile_command": [
+                    compiler,
+                    "-std=c11",
+                    "-O2",
+                    "-Wall",
+                    "-Wextra",
+                    "-Werror",
+                    str(checker_b_source),
+                    "-o",
+                    "<temporary>/checker_b",
+                ],
+                "compiler_version": subprocess.run(
+                    [compiler, "--version"], text=True, capture_output=True, check=True
+                ).stdout.splitlines()[0],
+                "method": base_b_payload["checker"],
+            },
             "third_parser": {
                 "method": "NetworkX from_graph6_bytes; order, edge count, ordered degrees, and full upper-triangle bitstring",
                 "version": importlib.metadata.version("networkx"),
                 "source_and_complement_full_adjacency_agreement": True,
             },
             "canonicalizer": {"path": labelg, "version_probe": nauty_version(labelg)},
+            "reference_complementer": {
+                "path": complg,
+                "version_probe": nauty_version(complg),
+                "byte_exact_agreement_on_target_corpus": True,
+                "output_sha256": digest(reference_complement_path),
+            },
             "checked_instances": 656,
             "forbidden_sets": {"zero_k5": 0, "one_k5": 0},
             "base_edge_histogram": {str(key): value for key, value in edge_histogram.items()},
             "degree_range_all_656": [min(all_degrees), max(all_degrees)],
             "complement_involution": True,
+            "nauty_complement_byte_exact": True,
             "canonical_distinct_classes": len(set(canonical_all)),
             "per_record_manifest": manifest,
         }

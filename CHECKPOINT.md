@@ -1,180 +1,172 @@
-# R(5,5) research checkpoint — epoch 3
+# R(5,5) research checkpoint — epoch 5
 
-Recorded: 2026-07-20 21:15 UTC
+Recorded: 2026-07-20 22:37 UTC
 
 ## Outcome and exact scope
 
-Internal research-software progress only. No new Ramsey bound, witness,
-classification, target-instance exclusion, or canonical novelty claim is made.
-The maintained rigorous status remains `43 <= R(5,5) <= 46`.
+The authoritative-source control blocker for McKay's supplied order-42 corpus
+is closed. This is research-software progress, not a Ramsey-number result. No
+new witness, bound, classification, target-instance exclusion, or canonical
+novelty claim is made. The maintained rigorous status remains
+`43 <= R(5,5) <= 46`.
 
-This epoch continued strategy `r55controls2026`. A genuinely new acquisition
-path was tested against Hugging Face's Xet-backed mirror object. The bounded
-`curl` run returned code 6 after two DNS failures and `--remove-on-error` left
-no `sources/r55_42some.g6`. No HTTP response was received, so
-`artifacts/mirror_retrieval_headers.txt` is empty. The final hardened source
-preflight returned code 2 with `downstream_checks_run: false`. Zero order-42
-records were evaluated. Do not begin S3 unknown-42 search, S4 K43 repair, SAT
-enumeration, or canonical comparison from the provisional local packet.
+Exactly 328 supplied order-42 graph6 records and their 328 derived complements
+passed the full control gate. This does **not** prove that those 656 graphs are
+all `(5,5,42)` graphs.
 
-The reusable positive result closes a narrower verifier gap. The two custom
-parsers and the independent NetworkX parser now expose the complete
-upper-triangle adjacency bitstring, rather than only order, edge count, and
-ordered degrees. On a 42-vertex record this fingerprint has exactly 861 bits.
-The final order-7 regression passed on all 1,044 unlabeled graph classes and
-their 1,044 complements. Checker A and Checker B agreed exactly, the full
-NetworkX fingerprints agreed, local complement bytes agreed with
-`nauty-complg`, and the provisional K43 semantic-mutation and malformed-input
-controls still passed. This remains parser/evaluator infrastructure, not
-evidence about an order-42 record.
+## What changed
 
-## Current source/status audit
+A newly live command-network route enabled a second direct HTTPS retrieval from
+McKay's authoritative URL:
 
-- Dynamic Survey DS1.18 is dated 24 April 2026 and records the 43–46 range:
-  https://www.cs.rit.edu/~spr/ElJC/sur.pdf
-- McKay's maintained page says the file supplies 328 representatives and the
-  other 328 are complements; it does not claim catalogue completeness:
-  https://users.cecs.anu.edu.au/~bdm/data/ramsey.html
-- The browser path confirmed that the maintained ANU object is `text/plain`,
-  but did not expose exportable raw bytes.
-- Hugging Face's file page advertises 47.9 kB and SHA-256
-  `067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb`:
-  https://huggingface.co/datasets/linxy/RamseyGraph/blob/main/data/r55_42some.g6
-  This is mirror metadata, not proof of authoritative-source equivalence.
+`https://users.cecs.anu.edu.au/~bdm/data/r55_42some.g6`
 
-## Decisive experiments
+The actual HTTP/2 200 response omits `Content-Type`. The prior sidecar's
+inference of `text/plain` was rejected. Provenance schema v2 instead preserves
+the missing field as `null` and requires hash-linked copies of:
 
-### New-host acquisition discriminator
+- the raw response headers;
+- the independently retrieved body;
+- curl's transfer/TLS JSON;
+- the deterministic retrieval experiment record.
 
-Experiment: `.proof-experiments/20260720-210542-55792e`
+The second body is byte-for-byte equal to the previously supplied body and to
+the frozen acquisition discriminator:
 
-- Return code 6; not timed out; duration 1.027 s; seed 0; 256 MB cap.
-- Both attempts failed with `Could not resolve host: huggingface.co`.
-- `sources/r55_42some.g6` is absent.
-- `artifacts/mirror_retrieval_headers.txt` is empty because no HTTP response
-  was received.
-- Experiment JSON SHA-256:
-  `4a37b050ec37f9513d138253aa380db868e169c4a2fa5e89256b1444a984d29c`.
-
-Do not retry either the ANU or Hugging Face `curl` path in the unchanged command
-environment. Reopen only with a new network/export mechanism or an unchanged
-externally retrieved file with provenance.
-
-### Final full-adjacency regression
-
-Experiment: `.proof-experiments/20260720-210824-8f13e8`
-
-- Return code 0; duration 1.027 s; seed 0; 1,024 MB cap.
-- `nauty-geng` generated one representative of every 1,044 unlabeled simple
-  graph class at order 7.
-- Checker A (Python/direct combinations) and Checker B (C/recursive bitsets)
-  agreed on their entire outputs for all source records and complements.
-- NetworkX 3.3 agreed on every complete upper-triangle bitstring, not merely
-  order/edge/degree signatures, for all 2,088 records.
-- Local complementation was an involution and agreed byte-for-byte with
-  `nauty-complg`.
-- Order 7 has three graph6 padding bits, as order 42 does.
-- Report: `artifacts/graph6_full_fingerprint_report.json`, SHA-256
-  `9be4f1dc4257390f324bb7491bba5f282aa76e738c085adf6326448be3b8bd55`.
-- The report records final imported corpus-gate SHA-256
-  `cec728c0a1a94bea0f81d804d0a865da8c7aaefe1b919f51819d8da7b2c300ff`.
-- Experiment JSON SHA-256:
-  `92bd0e5ef743beb61196b9c6531972f877ba86a778cf1f557f0be3403eafbc42`.
-
-The earlier epoch-3 run `.proof-experiments/20260720-210522-025825` is
-superseded because the final target manifest added adjacency-fingerprint hashes
-after that run. Cite only the final regression above.
-
-### Semantic and parser controls
-
-Experiment: `.proof-experiments/20260720-210716-8da301`
-
-- Return code 0; duration 13.891 s; seed 0; 1,024 MB cap.
-- Both checkers retained exact agreement on the two provisional K43 matrices.
-- Forced clique and independent-set mutations were detected by both checkers.
-- Asymmetric, invalid-character, and truncated inputs were rejected by both.
-- The two recorded K43 conflicts and four valid 42-vertex deletions were
-  unchanged; the local input remains third-party and publisher authentication
-  remains false.
-- Report: `artifacts/full_fingerprint_semantic_control_report.json`, SHA-256
-  `de66b7c663724a66ee98b5ba91f4f21b55f2b5b9118d8016926ad4c6e9e567c7`.
-- Experiment JSON SHA-256:
-  `58e8fd8619c6c32881af5a21be7f77d81002527a3bf300b8948b0f3675214a2c`.
-
-### Final fail-closed target preflight
-
-Experiment: `.proof-experiments/20260720-210833-0111b6`
-
-- Expected return code 2; duration 0.174 s; seed 0; 256 MB cap.
-- Report status is `source_preflight_failed` with
-  `downstream_checks_run: false`.
-- Report: `artifacts/corpus_source_preflight_epoch3.json`, SHA-256
-  `db893987f58b718712ebd39f6e8338df2c79d32f0fe2dfdc62f7c051011e7fb4`.
-- Experiment JSON SHA-256:
-  `5e276be3963f297e750602ffb013d2d693401e9dd103b9418ec7a24c47b7f0db`.
-
-## Exact continuation
-
-Objective: close the authoritative order-42 corpus control gate.
-
-Do not retry direct `curl` against ANU or Hugging Face in the current command
-environment. Acquire unchanged bytes from
-`https://users.cecs.anu.edu.au/~bdm/data/r55_42some.g6` through a genuinely new
-raw-file path, or receive an unchanged file with retrieval provenance, at
-`sources/r55_42some.g6`. Record retrieval timestamp, final URL, response
-headers/content type, byte count, and SHA-256. Do not normalize line endings.
-
-The byte preflight must see all three:
-
-- exactly 47,888 bytes;
-- exactly 328 nonblank LF-terminated records;
+- 47,888 bytes;
+- 328 nonblank LF-terminated records;
 - SHA-256
   `067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb`.
 
-The digest is a frozen mirror acquisition discriminator. It is not by itself
-proof that the mirror equals the maintained authoritative source. If newly
-retrieved authoritative bytes differ, preserve them unchanged and seek a
-second authoritative retrieval or maintainer confirmation; do not edit the
-constant to force a pass.
+## Decisive experiments
 
-If and only if the byte preflight matches, run:
+### Second authoritative retrieval
+
+Experiment: `.proof-experiments/20260720-221528-34af71`
+
+- Return code 0; duration 0.826 s; 256 MB cap.
+- HTTP/2 200; TLS verification result 0; no redirect.
+- `url_effective` is the authoritative URL.
+- `content_type` is `null` in curl metadata and no `content-type` field occurs
+  in the raw header block.
+- Body: `sources/retrievals/r55_42some_authoritative_epoch5.g6`, SHA-256
+  `067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb`.
+- Headers: `sources/retrievals/r55_42some_authoritative_epoch5.headers`,
+  186 bytes, SHA-256
+  `15d2e458cdc5a91c7c562460a91b15c0db15953c7e8174324aa1074063eaa430`.
+- Experiment JSON SHA-256:
+  `e05052b4db512684c45c9efb64654cfd1f32a8edfffdba1b8e8bfc5fab3ac233`.
+
+### Provenance-v2 and graph6 regression
+
+Experiment: `.proof-experiments/20260720-221937-5c7218`
+
+- Return code 0; duration 1.389 s; 1,024 MB cap.
+- A fixture with an explicitly absent `Content-Type` was accepted only when
+  linked raw header/body/transfer/experiment artifacts agreed.
+- Mutations to source authority, byte count, inference status, and raw-header
+  hash were rejected.
+- Both exact checkers, NetworkX, and `nauty-complg` retained full agreement on
+  every one of the 1,044 unlabeled order-7 classes and their complements.
+- Report: `artifacts/graph6_provenance_v2_regression.json`, SHA-256
+  `c3f0b3d7a0a29b093bd151201669aa63b81870f453b3c979f4d6821923744421`.
+- Experiment JSON SHA-256:
+  `f4f49fe131916090d9123b3e2e937c32b17b78e94ca1e22b994bf989a95a5e19`.
+
+### Full supplied-656 target gate
+
+Experiment: `.proof-experiments/20260720-221949-1e01b8`
+
+- One non-overlapping run; return code 0; duration 997.687 s; 2,048 MB cap;
+  peak child RSS 41,964 KiB.
+- Checker A: independently parsed Python Boolean matrices and direct exhaustive
+  5-subset enumeration.
+- Checker B: separately parsed C graph representation and recursive bitset
+  clique enumeration; compiled binary SHA-256
+  `f5e73e3a83cfff969b321e3288c7d90d083ddbc1517bba90a0d44e56ac455f51`.
+- Both checkers found zero 5-cliques and zero independent 5-sets on all 656
+  supplied/derived instances.
+- NetworkX agreed with both checker parsers on every complete 861-bit adjacency
+  fingerprint.
+- Local complement bytes matched `nauty-complg` byte-for-byte; output SHA-256
+  `8a8834f23a13d589df702df4016f308562c2226c445231ba2ea484f2e288d662`.
+- Base edge histogram was exactly
+  `{423:1,424:7,425:29,426:66,427:89,428:77,429:43,430:16}`.
+- Degree range across the 656 instances was exactly 19..22.
+- `nauty-labelg` produced 656 distinct canonical labels.
+- The entire 328-entry per-record manifest and all decisive graph fields equal
+  the prior host-side run; that earlier run's provenance was not accepted.
+- Report: `artifacts/authenticated_corpus_report.json`, SHA-256
+  `0d9b1801434edcc12f34e73cea6c98d911f0e0c6f0884f8f03d96a46eca1344c`.
+- Experiment JSON SHA-256:
+  `64332bc455ae9d04f743df14063910977e5f49c064ccd30a58f9c183322f3fca`.
+
+## Current source/status audit
+
+- Dynamic Survey DS1.18, revision 2026-04-24, reports the range 43..46 and
+  describes the 656 count as strong evidence rather than a proved census:
+  https://www.cs.rit.edu/~spr/ElJC/sur.pdf
+- McKay's maintained data page says the file contains 328 representatives and
+  the other 328 are complements, while leaving open additional order-42 and
+  larger graphs:
+  https://users.cecs.anu.edu.au/~bdm/data/ramsey.html
+
+## Exact continuation
+
+Objective: authenticate unchanged Springer Supplementary Data 4, the published
+two-conflict K43 seed. Do not begin conflict-core repair, deletion novelty
+comparison, or unknown-42 search before this source gate passes.
+
+First run this bounded raw retrieval from the repository root:
 
 ```bash
 python3 /root/proof-factory/skills/computational-researcher/scripts/run_experiment.py \
-  --name r55-authenticated-corpus-gate \
-  --hypothesis "The acquired McKay bytes encode the reported 328 controls and 328 complements" \
-  --expected-signal "Two exact checkers report zero forbidden sets on 656 instances; all three parsers agree on every full 861-bit adjacency fingerprint; published histogram and degree range, complement, and 656-class canonical gates pass" \
-  --timeout 3600 --memory-mb 2048 \
-  --source-url https://users.cecs.anu.edu.au/~bdm/data/r55_42some.g6 \
-  -- python3 scripts/run_corpus_gate.py \
-  checkers/checker_a.py checkers/checker_b.c \
-  sources/r55_42some.g6 artifacts/authenticated_corpus_report.json
+  --name r55-springer-supplementary-data4-retrieval \
+  --hypothesis "The publisher raw TXT is directly retrievable with immutable body and response metadata" \
+  --expected-signal "Verified HTTPS response from the Springer raw URL, retained unchanged body and raw headers, and curl transfer JSON suitable for a fail-closed source gate" \
+  --timeout 120 --memory-mb 256 \
+  --source-url 'https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-018-07327-2/MediaObjects/41467_2018_7327_MOESM6_ESM.txt' \
+  -- curl --proto '=https' --tlsv1.2 --fail-with-body --silent --show-error \
+  --location \
+  --dump-header sources/retrievals/springer_supplementary_data4.headers \
+  --output sources/retrievals/springer_supplementary_data4.txt \
+  --write-out '%{json}\n' \
+  'https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-018-07327-2/MediaObjects/41467_2018_7327_MOESM6_ESM.txt'
 ```
 
-Stop immediately at any provenance, source hash, LF termination, record count,
-861-bit parser fingerprint, checker output, forbidden-set identity, edge
-histogram, degree, complement, or canonical-label mismatch. Preserve divergent
-inputs and outputs unchanged. A pass establishes properties only of the
-supplied 328 records and their 328 complements, not completeness of all
-`(5,5,42)` graphs.
+Stop immediately if TLS verification fails, the final URL is not publisher
+controlled, the response is not successful, the body is HTML/error content, or
+two immediate direct retrievals differ. Preserve all divergent bytes and
+metadata unchanged.
 
-Only after this gate passes should the next source gate attempt unchanged
-Springer Supplementary Data 4,
-`41467_2018_7327_MOESM6_ESM.txt`. Only after both raw-source gates pass may the
-four valid K43 deletions be canonicalized against the supplied 656, followed by
-the authenticated six-vertex S4 repair slice or S3 novelty search.
+If retrieval is stable, create a source sidecar modeled on schema v2 without
+inventing missing headers. Then write a dedicated publisher-seed gate that:
+
+1. parses the raw publisher representation without using the gist parser;
+2. identifies the color convention under both exact checkers;
+3. requires the exact conflict identities to agree;
+4. compares any claimed transformation to the provisional gist byte/object
+   explicitly, rather than assuming provenance;
+5. lists all valid vertex deletions and only then canonicalizes them against
+   the authenticated supplied 656.
+
+Only after that gate passes should one bounded six-vertex conflict-core repair
+slice be attempted. A zero must pass both exact checkers; an UNSAT neighborhood
+claim needs a checked exact certificate and applies only to that frozen slice.
 
 ## Delegate provenance and tool disclosure
 
 GPT-5.6 Sol was principal investigator. Two precomputed GPT-5.6 Terra memos
-supplied advisory reconnaissance. Sol hash-verified both. Only the
-experiment-verification memo supplied a relied requirement; it was promoted
-byte-for-byte to
-`docs/delegate-memos/20260720-210000-experiment-verification.md`, recorded in
-`records/delegate-provenance-epoch3.json`, and independently implemented and
-tested by Sol. No new agent was spawned.
+were advisory. Sol hash-verified both. The experiment-verification memo
+identified the inferred-Content-Type defect and recommended the second raw
+retrieval plus one non-overlapping full gate; Sol independently inspected the
+actual response, designed and mutation-tested provenance schema v2, and ran the
+target gate. The substantive memo is retained at
+`docs/delegate-memos/20260720-221349-experiment-verification.md`; provenance is
+recorded in `records/delegate-provenance-epoch5.json`. The literature memo was
+not used as decisive evidence. No new subagent was spawned.
 
-Deterministic tools used were Python 3.12.3, C/GCC, nauty 2.8.8+ds-5,
-NetworkX 3.3, curl, SHA-256, Git diagnostics, the computational-researcher
-experiment harness, and web browsing. No SAT solver, proof assistant, or cloud
-job was used.
+Deterministic tools used: Python 3.12.3, C/GCC, curl 8.5.0 with OpenSSL 3.0.13,
+NetworkX 3.3, nauty, SHA-256, Git diagnostics, and the
+computational-researcher experiment harness. Web browsing checked the maintained
+survey and authoritative data pages. No SAT solver or proof assistant was used.

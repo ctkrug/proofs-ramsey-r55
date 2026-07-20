@@ -49,6 +49,74 @@ def main() -> int:
 
     with tempfile.TemporaryDirectory(prefix="r55-g6-test-") as temporary:
         temp = Path(temporary)
+        fixture_body = temp / "fixture.g6"
+        fixture_headers = temp / "fixture.headers"
+        fixture_transfer = temp / "fixture-transfer.json"
+        fixture_experiment = temp / "fixture-experiment.json"
+        fixture_body.write_bytes(b"fixture")
+        fixture_headers.write_bytes(b"HTTP/2 200\r\nserver: fixture\r\ncontent-length: 7\r\n\r\n")
+        fixture_transfer.write_text(json.dumps({
+            "http_code": 200,
+            "response_code": 200,
+            "url_effective": run_corpus_gate.AUTHORITATIVE_SOURCE,
+            "size_download": 7,
+            "ssl_verify_result": 0,
+            "content_type": None,
+        }) + "\n", encoding="utf-8")
+        fixture_experiment.write_text(json.dumps({
+            "returncode": 0,
+            "source_urls": [run_corpus_gate.AUTHORITATIVE_SOURCE],
+        }) + "\n", encoding="utf-8")
+        provenance_control = {
+            "schema_version": 2,
+            "source_authority": "authoritative_direct",
+            "requested_url": run_corpus_gate.AUTHORITATIVE_SOURCE,
+            "final_url": run_corpus_gate.AUTHORITATIVE_SOURCE,
+            "retrieved_at_utc": "2000-01-01T00:00:00Z",
+            "acquisition_method": "regression-fixture",
+            "response_status": 200,
+            "content_type": None,
+            "content_type_inferred": False,
+            "response_headers": {"server": "fixture", "content-length": "7"},
+            "sha256": digest(fixture_body),
+            "byte_count": 7,
+            "header_capture": {
+                "path": fixture_headers.name,
+                "sha256": digest(fixture_headers),
+                "byte_count": fixture_headers.stat().st_size,
+            },
+            "retrieved_body": {
+                "path": fixture_body.name,
+                "sha256": digest(fixture_body),
+                "byte_count": fixture_body.stat().st_size,
+            },
+            "transfer_metadata_capture": {
+                "path": fixture_transfer.name,
+                "sha256": digest(fixture_transfer),
+            },
+            "retrieval_experiment": {
+                "path": fixture_experiment.name,
+                "sha256": digest(fixture_experiment),
+            },
+        }
+        run_corpus_gate.validate_provenance(provenance_control, digest(fixture_body), 7, temp)
+        rejected_provenance_mutations = []
+        mutations = (
+            ("source_authority", lambda value: value.__setitem__("source_authority", "mirror")),
+            ("byte_count", lambda value: value.__setitem__("byte_count", 8)),
+            ("content_type_inferred", lambda value: value.__setitem__("content_type_inferred", True)),
+            ("header_capture_sha256", lambda value: value["header_capture"].__setitem__("sha256", "0" * 64)),
+        )
+        for field, mutate in mutations:
+            mutation = json.loads(json.dumps(provenance_control))
+            mutate(mutation)
+            try:
+                run_corpus_gate.validate_provenance(mutation, digest(fixture_body), 7, temp)
+            except ValueError:
+                rejected_provenance_mutations.append(field)
+            else:
+                raise AssertionError(f"provenance mutation {field} was not rejected")
+
         source = temp / "all-order7.g6"
         ours = temp / "ours-complement.g6"
         nauty = temp / "nauty-complement.g6"
@@ -61,14 +129,21 @@ def main() -> int:
         if [run_corpus_gate.complement_graph6(record) for record in complements] != records:
             raise AssertionError("local complement transformation is not an involution")
         ours.write_bytes(b"\n".join(complements) + b"\n")
-        subprocess.run([required["nauty-complg"], "-q", str(source), str(nauty)], check=True)
+        reference_records = run_corpus_gate.nauty_file_transform(required["nauty-complg"], source, nauty)
         if ours.read_bytes() != nauty.read_bytes():
             raise AssertionError("local complement bytes disagree with nauty-complg")
+        if reference_records != complements:
+            raise AssertionError("local complement records disagree with nauty-complg")
+        tampered = bytearray(ours.read_bytes())
+        tampered[1] = ((tampered[1] - 63) ^ 32) + 63
+        if bytes(tampered) == nauty.read_bytes():
+            raise AssertionError("one-bit complement mutation was not distinguished from nauty output")
 
         subprocess.run(
             [required["gcc"], "-std=c11", "-O2", "-Wall", "-Wextra", "-Werror", str(checker_b_source), "-o", str(checker_b)],
             check=True,
         )
+        checker_b_binary_sha256 = digest(checker_b)
         payloads = {}
         for label, path in (("source", source), ("complement", ours)):
             result_a = run_json([sys.executable, str(checker_a), "--format", "graph6", "--input", str(path)])
@@ -99,6 +174,11 @@ def main() -> int:
             "complement_suite_sha256": digest(ours),
             "complement_involution": True,
             "complement_exact_byte_agreement_with_nauty": True,
+            "one_bit_complement_mutation_detected": True,
+            "provenance_schema_control": {
+                "valid_fixture_accepted": True,
+                "rejected_mutations": rejected_provenance_mutations,
+            },
             "checker_exact_output_agreement": True,
             "networkx_full_adjacency_agreement": True,
             "methods": {
@@ -108,7 +188,11 @@ def main() -> int:
                 "suite_generator": required["nauty-geng"],
                 "third_parser": f"networkx {nx.__version__}; full upper-triangle bitstring",
             },
-            "checker_hashes": {"checker_a": digest(checker_a), "checker_b_source": digest(checker_b_source)},
+            "checker_hashes": {
+                "checker_a": digest(checker_a),
+                "checker_b_source": digest(checker_b_source),
+                "checker_b_binary": checker_b_binary_sha256,
+            },
             "imported_corpus_gate_hash": digest(Path(run_corpus_gate.__file__).resolve()),
             "aggregate_forbidden_sets": {
                 label: {

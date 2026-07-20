@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "epoch": 5,
+  "principal": {
+    "role": "principal-investigator",
+    "model": "gpt-5.6-sol"
+  },
+  "delegates": [
+    {
+      "role": "experiment-verification",
+      "model": "gpt-5.6-terra",
+      "original_pointer_path": ".delegates/20260720-220710-9633ac/experiment-verification/memo.md",
+      "original_pointer_sha256": "84233b01c3ccb409352aa1f3e1a4d619b9cd4a9476808135a88ce47ed5faded7",
+      "promoted_artifact_path": "docs/delegate-memos/20260720-221349-experiment-verification.md",
+      "promoted_artifact_sha256": "5a327ec3c1b57779a625c4541f5506b3149b4e9f72038f184cf2ceba353aec00",
+      "use": "Advisory identification of the inferred-Content-Type provenance defect and recommendation for a second raw retrieval plus one non-overlapping full gate. Sol independently inspected the response, designed schema v2, mutation-tested it, and ran the full gate."
+    },
+    {
+      "role": "literature-strategy",
+      "model": "gpt-5.6-terra",
+      "original_path": ".delegates/20260720-220710-9633ac/literature-strategy/memo.md",
+      "original_sha256": "4323da9ac5bb2e4abddee5685382a2be0fe79a6352fcaa93929d6ab46eda034b",
+      "promoted_artifact_path": null,
+      "use": "Read as advisory context but not used as decisive evidence; its gate recommendation was independently established by the checkpoint and deterministic artifacts."
+    }
+  ],
+  "new_subagents_spawned": false
+}

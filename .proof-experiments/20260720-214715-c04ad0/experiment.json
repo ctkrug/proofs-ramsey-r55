@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "20260720-214715-c04ad0",
+  "name": "r55-corpus-preflight-epoch4-final2",
+  "hypothesis": "The provenance- and complement-hardened target gate remains fail-closed while the raw corpus is absent",
+  "expected_signal": "Return code 2, source_preflight_failed, downstream_checks_run false, and no target record evaluated",
+  "command": [
+    "python3",
+    "scripts/run_corpus_gate.py",
+    "checkers/checker_a.py",
+    "checkers/checker_b.c",
+    "sources/r55_42some.g6",
+    "artifacts/corpus_source_preflight_epoch4.json"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 60,
+  "memory_limit_mb": 256,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-20T21:47:15.164760+00:00",
+  "finished_at": "2026-07-20T21:47:15.337835+00:00",
+  "duration_seconds": 0.173,
+  "returncode": 2,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "e5167505e412c40fb151619b51cb28249223b403",
+  "source_urls": [
+    "https://users.cecs.anu.edu.au/~bdm/data/r55_42some.g6"
+  ],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/scripts/run_corpus_gate.py": "9c548d5fd6bf2f2f8ba6151ea349cb1dad33f0ef2155545f86ae06a8cdf0db58",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/checker_a.py": "b7f28adfec792139acce538ca879b775a0180467763b413e1a464672acddd259",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/checker_b.c": "40f719bb36f8d7d3db3a4b949dce8b20abd49499f57f7d5b651b718658014d2e",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/corpus_source_preflight_epoch4.json": "93246ef3b4b9940605ab2714ff7e11abfd344b01c559fd5e07a3952999f28c8e"
+  },
+  "peak_child_memory_rusage": 21632,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "e30b90ca488a83665a6fef07f5e78210980cd611374476c003c8cccb92766ebc",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "base_edge_histogram": {
+    "423": 1,
+    "424": 7,
+    "425": 29,
+    "426": 66,
+    "427": 89,
+    "428": 77,
+    "429": 43,
+    "430": 16
+  },
+  "canonical_distinct_classes": 656,
+  "checked_instances": 656,
+  "degree_range_all_656": [
+    19,
+    22
+  ],
+  "report": "/root/proof-factory/research/ramsey-r55/workspace/artifacts/authenticated_corpus_report.json",
+  "report_sha256": "0d9b1801434edcc12f34e73cea6c98d911f0e0c6f0884f8f03d96a46eca1344c",
+  "status": "corpus_control_pass"
+}

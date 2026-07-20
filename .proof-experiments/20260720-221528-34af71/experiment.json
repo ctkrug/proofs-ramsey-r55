@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "20260720-221528-34af71",
+  "name": "r55-authoritative-corpus-second-retrieval",
+  "hypothesis": "A fresh direct HTTPS retrieval from the authoritative ANU URL reproduces the frozen corpus bytes while honestly recording the server response headers, including the observed absence of Content-Type",
+  "expected_signal": "HTTP 200; final authoritative URL; 47888-byte body with SHA-256 067902e8...; immutable raw header capture; curl metadata reports content_type null if the server omits the header",
+  "command": [
+    "curl",
+    "--proto",
+    "=https",
+    "--tlsv1.2",
+    "--fail-with-body",
+    "--silent",
+    "--show-error",
+    "--location",
+    "--dump-header",
+    "sources/retrievals/r55_42some_authoritative_epoch5.headers",
+    "--output",
+    "sources/retrievals/r55_42some_authoritative_epoch5.g6",
+    "--write-out",
+    "%{json}\\n",
+    "https://users.cecs.anu.edu.au/~bdm/data/r55_42some.g6"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 120,
+  "memory_limit_mb": 256,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-20T22:15:28.612358+00:00",
+  "finished_at": "2026-07-20T22:15:29.438402+00:00",
+  "duration_seconds": 0.826,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "e5167505e412c40fb151619b51cb28249223b403",
+  "source_urls": [
+    "https://users.cecs.anu.edu.au/~bdm/data/r55_42some.g6"
+  ],
+  "input_artifacts": {},
+  "peak_child_memory_rusage": 17920,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "d67a24736be464f6313e4ef8b238c65bd260a56ee71d067febcb6c3acbaef5db",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

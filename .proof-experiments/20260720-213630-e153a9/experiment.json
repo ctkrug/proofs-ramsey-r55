@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "20260720-213630-e153a9",
+  "name": "r55-target-complement-gate-regression-final",
+  "hypothesis": "The target corpus gate can delegate complementation to nauty-complg and reject byte-level disagreement without weakening the existing parser and evaluator controls",
+  "expected_signal": "On all 1044 unlabeled order-7 graph classes and complements, the shared gate helper matches nauty-complg byte-for-byte, a one-bit complement mutation is rejected, and both exact checkers plus NetworkX retain complete-adjacency agreement",
+  "command": [
+    "python3",
+    "scripts/test_graph6_plumbing.py",
+    "checkers/checker_a.py",
+    "checkers/checker_b.c",
+    "artifacts/graph6_target_complement_regression.json"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 300,
+  "memory_limit_mb": 1024,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-20T21:36:30.847765+00:00",
+  "finished_at": "2026-07-20T21:36:32.203386+00:00",
+  "duration_seconds": 1.356,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "e5167505e412c40fb151619b51cb28249223b403",
+  "source_urls": [
+    "https://users.cecs.anu.edu.au/~bdm/data/r55_42some.g6"
+  ],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/scripts/test_graph6_plumbing.py": "08d4ab3cc60262a13a6d0ab925e8e23fe09b31c154e0a3ab785788d4625efe7a",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/checker_a.py": "b7f28adfec792139acce538ca879b775a0180467763b413e1a464672acddd259",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/checker_b.c": "40f719bb36f8d7d3db3a4b949dce8b20abd49499f57f7d5b651b718658014d2e",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/graph6_target_complement_regression.json": "39f75bfcdb2d45525565593f943ff80fe8566e0805a1e3905fd50ca341502aa9"
+  },
+  "peak_child_memory_rusage": 35912,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "1eabbeff3560311fc43711ba749129acd007f76007d9b1b2c5410af5588992bc",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

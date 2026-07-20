@@ -1,0 +1,16 @@
+{
+  "aggregate_forbidden_sets": {
+    "complement": {
+      "one_k5": 132,
+      "zero_k5": 132
+    },
+    "source": {
+      "one_k5": 132,
+      "zero_k5": 132
+    }
+  },
+  "report": "/root/proof-factory/research/ramsey-r55/workspace/artifacts/graph6_target_complement_regression.json",
+  "report_sha256": "b980b6799907793197be2a6e12a03a22bfca9463d703f30db108ec923f5ff901",
+  "scope": "one representative of every one of the 1044 unlabeled simple graphs on 7 vertices",
+  "status": "graph6_plumbing_pass"
+}

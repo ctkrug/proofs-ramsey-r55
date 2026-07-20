@@ -17,11 +17,11 @@ checks all deletions through the intersection of a two-conflict K43 control.
 
 The K43 matrices in `inputs/k43_two_conflict_gist.txt` are a visible third-party
 transcription, not the raw Springer supplementary file.  They are useful for
-exercising the checkers but cannot close the source-provenance gate.  The order-42
-corpus must likewise be supplied as the unchanged bytes from McKay's maintained
-URL before its result can be admitted.
+exercising the checkers but cannot close the publisher source-provenance gate.
+The McKay order-42 source gate is now closed for the supplied control packet;
+see `CHECKPOINT.md` for the exact scope and evidence.
 
-`scripts/run_corpus_gate.py` freezes the currently visible mirror discriminator
+`scripts/run_corpus_gate.py` freezes the mirror acquisition discriminator
 for that corpus (47,888 bytes, SHA-256
 `067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb`).  It
 refuses to run downstream checks unless all source bytes match.  On a match it
@@ -30,9 +30,10 @@ requires the complete upper-triangle adjacency bitstring to agree across both
 custom parsers and an independent NetworkX graph6 parser for every record and
 complement, reproduces the published edge histogram and degree range, tests
 complement involution, and requires 656 distinct canonical labels from Debian
-nauty's `nauty-labelg`.  The mirror hash is an acquisition discriminator, not
-proof that the authoritative URL served the same bytes; provenance must still
-record the actual McKay retrieval.
+nauty's `nauty-labelg`.  Provenance schema v2 links the admitted bytes to a
+second raw authoritative body, response-header capture, curl transfer metadata,
+and the retrieval experiment.  The captured authoritative response omitted
+`Content-Type`; the sidecar preserves that absence instead of inferring a type.
 
 ## Replay
 
@@ -42,12 +43,12 @@ python3 scripts/run_control_gate.py \
   inputs/k43_two_conflict_gist.txt artifacts/control_report.json
 ```
 
-Once the authoritative corpus bytes are available:
+Replay the authenticated supplied-corpus gate with:
 
 ```bash
 python3 scripts/run_corpus_gate.py \
   checkers/checker_a.py checkers/checker_b.c \
-  sources/r55_42some.g6 artifacts/corpus_report.json
+  sources/r55_42some.g6 artifacts/authenticated_corpus_report.json
 ```
 
 For a graph6 corpus, both standalone checkers accept `--format graph6`.  The

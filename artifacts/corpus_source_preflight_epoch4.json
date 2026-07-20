@@ -1,0 +1,20 @@
+{
+  "actual": {
+    "exists": false,
+    "path": "/root/proof-factory/research/ramsey-r55/workspace/sources/r55_42some.g6"
+  },
+  "downstream_checks_run": false,
+  "expected": {
+    "authoritative_source": "https://users.cecs.anu.edu.au/~bdm/data/r55_42some.g6",
+    "bytes": 47888,
+    "metadata_source": "https://huggingface.co/datasets/linxy/RamseyGraph/blob/main/data/r55_42some.g6",
+    "provenance_sidecar": "/root/proof-factory/research/ramsey-r55/workspace/sources/r55_42some.g6.provenance.json",
+    "qualification": "mirror hash/size are an acquisition discriminator, not authentication of the authoritative bytes",
+    "records": 328,
+    "required_source_authority": "authoritative_direct",
+    "sha256": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb"
+  },
+  "failure": "corpus file is absent",
+  "schema_version": 1,
+  "status": "source_preflight_failed"
+}

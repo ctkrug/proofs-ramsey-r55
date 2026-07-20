@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "20260720-214017-2f5e96",
+  "name": "r55-authenticated-complement-gate-regression",
+  "hypothesis": "The target corpus gate rejects non-authoritative provenance and complement-byte disagreement without weakening parser or evaluator controls",
+  "expected_signal": "All 1044 unlabeled order-7 classes and complements pass full-adjacency/checker/reference-complement agreement; one-bit complement, mirror-authority, byte-count, and content-type mutations are rejected",
+  "command": [
+    "python3",
+    "scripts/test_graph6_plumbing.py",
+    "checkers/checker_a.py",
+    "checkers/checker_b.c",
+    "artifacts/graph6_target_complement_regression.json"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 300,
+  "memory_limit_mb": 1024,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-20T21:40:17.788226+00:00",
+  "finished_at": "2026-07-20T21:40:19.018324+00:00",
+  "duration_seconds": 1.23,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "e5167505e412c40fb151619b51cb28249223b403",
+  "source_urls": [
+    "https://users.cecs.anu.edu.au/~bdm/data/r55_42some.g6"
+  ],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/scripts/test_graph6_plumbing.py": "f419420b7df41e05ba041bc0e8b199bc00a987609d3537296bed22915673ba26",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/checker_a.py": "b7f28adfec792139acce538ca879b775a0180467763b413e1a464672acddd259",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/checker_b.c": "40f719bb36f8d7d3db3a4b949dce8b20abd49499f57f7d5b651b718658014d2e",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/graph6_target_complement_regression.json": "b980b6799907793197be2a6e12a03a22bfca9463d703f30db108ec923f5ff901"
+  },
+  "peak_child_memory_rusage": 36796,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "ab9b8d4e546ba36ee17ac390b18a001e1c31f5c46b767be98e8e9067cb0de27a",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

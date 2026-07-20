@@ -1,0 +1,46 @@
+{
+  "aggregate_forbidden_sets": {
+    "complement": {
+      "one_k5": 132,
+      "zero_k5": 132
+    },
+    "source": {
+      "one_k5": 132,
+      "zero_k5": 132
+    }
+  },
+  "checker_exact_output_agreement": true,
+  "checker_hashes": {
+    "checker_a": "b7f28adfec792139acce538ca879b775a0180467763b413e1a464672acddd259",
+    "checker_b_binary": "f5e73e3a83cfff969b321e3288c7d90d083ddbc1517bba90a0d44e56ac455f51",
+    "checker_b_source": "40f719bb36f8d7d3db3a4b949dce8b20abd49499f57f7d5b651b718658014d2e"
+  },
+  "complement_exact_byte_agreement_with_nauty": true,
+  "complement_involution": true,
+  "complement_suite_sha256": "d691e39fee55c52b3512ba858147402935af0622f45bb1970ced981794f4ca99",
+  "generated_records": 1044,
+  "imported_corpus_gate_hash": "ea8cc894bcc0597aac9eb459cead427fd5282082f35e3a27b5dda299c2065d23",
+  "methods": {
+    "checker_a": "direct combinations over independently parsed Boolean matrices",
+    "checker_b": "recursive bitset clique enumeration over separately parsed records",
+    "complement_reference": "/usr/bin/nauty-complg",
+    "suite_generator": "/usr/bin/nauty-geng",
+    "third_parser": "networkx 3.3; full upper-triangle bitstring"
+  },
+  "networkx_full_adjacency_agreement": true,
+  "one_bit_complement_mutation_detected": true,
+  "provenance_schema_control": {
+    "rejected_mutations": [
+      "source_authority",
+      "byte_count",
+      "content_type_inferred",
+      "header_capture_sha256"
+    ],
+    "valid_fixture_accepted": true
+  },
+  "schema_version": 1,
+  "scope": "one representative of every one of the 1044 unlabeled simple graphs on 7 vertices",
+  "source_suite_sha256": "3c9d236c155206869769a6fdec67a879f31a8e1b5b772d765d384449fa6b5882",
+  "status": "graph6_plumbing_pass",
+  "why_order_7": "C(7,2)=21 leaves three graph6 padding bits, the same padding count as C(42,2)=861"
+}

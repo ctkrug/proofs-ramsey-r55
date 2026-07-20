@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "20260720-213611-fc84c9",
+  "name": "r55-target-complement-gate-regression",
+  "hypothesis": "The target corpus gate can delegate complementation to nauty-complg and detect any byte-level disagreement without weakening the existing parser and evaluator controls",
+  "expected_signal": "On all 1044 unlabeled order-7 graph classes and their complements, the shared gate helper matches nauty-complg byte-for-byte and both exact checkers plus NetworkX retain complete-adjacency agreement",
+  "command": [
+    "python3",
+    "scripts/test_graph6_plumbing.py",
+    "checkers/checker_a.py",
+    "checkers/checker_b.c",
+    "artifacts/graph6_target_complement_regression.json"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 300,
+  "memory_limit_mb": 1024,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-20T21:36:11.728438+00:00",
+  "finished_at": "2026-07-20T21:36:13.390509+00:00",
+  "duration_seconds": 1.662,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "e5167505e412c40fb151619b51cb28249223b403",
+  "source_urls": [
+    "https://users.cecs.anu.edu.au/~bdm/data/r55_42some.g6"
+  ],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/scripts/test_graph6_plumbing.py": "c48b182a5d95f9cdc8cabcc278b54d7be315da30ca56a57dec3ca9e9a579bd94",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/checker_a.py": "b7f28adfec792139acce538ca879b775a0180467763b413e1a464672acddd259",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/checker_b.c": "40f719bb36f8d7d3db3a4b949dce8b20abd49499f57f7d5b651b718658014d2e"
+  },
+  "peak_child_memory_rusage": 35900,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "ce68dbe02e933689a227cc2b357fb927f7d75c4d9f36f0be6e54a4cbdb2337a4",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_status_checked_at": "2026-07-20T21:08:34Z",
+  "source_status_checked_at": "2026-07-20T22:15:00Z",
   "official_status": {
     "url": "https://www.cs.rit.edu/~spr/ElJC/sur.pdf",
     "revision": "DS1.18, 2026-04-24",
@@ -13,16 +13,22 @@
     "expected_sha256_from_public_mirror": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb",
     "mirror_metadata_url": "https://huggingface.co/datasets/linxy/RamseyGraph/blob/main/data/r55_42some.g6",
     "mirror_git_lfs_pointer_sha": "df96f39ff5af573683bf9eb3fadec73c36d9f7ab",
-    "qualification": "mirror hash and size are a byte-acquisition discriminator; authoritative-source equivalence remains unverified",
-    "local_raw_artifact": null,
-    "status": "blocked: the epoch-3 Hugging Face resolve-path curl acquisition also returned code 6 after two DNS failures and left no local corpus; browser access confirmed the maintained ANU index and mirror hash/size metadata but neither browser interface exposed savable raw bytes",
-    "latest_acquisition_experiment": ".proof-experiments/20260720-210542-55792e",
-    "latest_preflight_report": "artifacts/corpus_source_preflight_epoch3.json",
+    "qualification": "The full gate proves properties of exactly the supplied 328 records and their 328 complements; it does not prove corpus completeness.",
+    "local_raw_artifact": "sources/r55_42some.g6",
+    "local_raw_sha256": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb",
+    "status": "authenticated supplied control packet: a second direct authoritative HTTPS body and raw header capture match the first direct body and frozen discriminator; the authoritative response omitted Content-Type and no type was inferred",
+    "latest_acquisition_experiment": ".proof-experiments/20260720-221528-34af71",
+    "latest_gate_experiment": ".proof-experiments/20260720-221949-1e01b8",
+    "latest_gate_report": "artifacts/authenticated_corpus_report.json",
+    "latest_gate_report_sha256": "0d9b1801434edcc12f34e73cea6c98d911f0e0c6f0884f8f03d96a46eca1344c",
+    "raw_header_capture": "sources/retrievals/r55_42some_authoritative_epoch5.headers",
+    "raw_header_capture_sha256": "15d2e458cdc5a91c7c562460a91b15c0db15953c7e8174324aa1074063eaa430",
+    "latest_browser_audit": "artifacts/browser_source_audit_epoch4.json",
     "third_parser_control": {
-      "gate_source_sha256": "cec728c0a1a94bea0f81d804d0a865da8c7aaefe1b919f51819d8da7b2c300ff",
-      "regression_report": "artifacts/graph6_full_fingerprint_report.json",
-      "regression_report_sha256": "9be4f1dc4257390f324bb7491bba5f282aa76e738c085adf6326448be3b8bd55",
-      "scope": "Complete upper-triangle adjacency fingerprints from NetworkX agree with both checker parsers on all 1044 unlabeled order-7 classes and their complements; no order-42 record checked"
+      "gate_source_sha256": "9c548d5fd6bf2f2f8ba6151ea349cb1dad33f0ef2155545f86ae06a8cdf0db58",
+      "regression_report": "artifacts/graph6_target_complement_regression.json",
+      "regression_report_sha256": "5c309e0f8707693bd4a008450e3a3caba587a2e19592944e3ce74820d65f9c94",
+      "scope": "Order-7 regression plus the target order-42 pass: two exact checkers and NetworkX agree on full adjacency for the supplied 328 records and complements; target nauty-complg agrees byte-for-byte; 656 canonical labels are distinct"
     }
   },
   "publisher_k43": {
@@ -37,6 +43,18 @@
     "status": "visible third-party transcription; graph2 is alleged complement-isomorphic to publisher graph; not source authentication"
   },
   "terra_memos": [
+    {
+      "role": "experiment-verification",
+      "path": "docs/delegate-memos/20260720-221349-experiment-verification.md",
+      "sha256": "5a327ec3c1b57779a625c4541f5506b3149b4e9f72038f184cf2ceba353aec00",
+      "provenance": "delegate-authored main-workspace memo; original pointer memo SHA-256 84233b01c3ccb409352aa1f3e1a4d619b9cd4a9476808135a88ce47ed5faded7; see records/delegate-provenance-epoch5.json"
+    },
+    {
+      "role": "experiment-verification",
+      "path": "docs/delegate-memos/20260720-213002-experiment-verification.md",
+      "sha256": "d993b4be2898b1c77e2e2e46d6dd323969f0f239bf311c8b327b15072cd755a5",
+      "provenance": "promoted exact copy; see records/delegate-provenance-epoch4.json"
+    },
     {
       "role": "experiment-verification",
       "path": "docs/delegate-memos/20260720-210000-experiment-verification.md",

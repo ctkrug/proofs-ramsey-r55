@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-07-20T21:38:54Z",
+  "official_status": {
+    "survey_url": "https://www.cs.rit.edu/~spr/ElJC/sur.pdf",
+    "survey_revision": "DS1.18 (2026)",
+    "observed_lines": "277-280 on PDF page 7 report strong evidence for R(5,5)=43 and the current upper bound 46",
+    "maintained_range": "43 <= R(5,5) <= 46"
+  },
+  "maintained_corpus_index": {
+    "url": "https://users.cecs.anu.edu.au/~bdm/data/ramsey.html",
+    "observed_lines": "87-89 state that r55_42some.g6 contains 328 graphs and the other 328 are complements; the page explicitly allows more order-42 graphs and graphs of orders 43-47"
+  },
+  "authoritative_raw_object": {
+    "url": "https://users.cecs.anu.edu.au/~bdm/data/r55_42some.g6",
+    "browser_connector_result": {
+      "content_type": "text/plain",
+      "reported_total_lines": 1,
+      "raw_body_exported": false,
+      "local_file_created": false
+    },
+    "qualification": "The browser connector reached authoritative metadata but did not expose the 47,888 raw bytes for exact export. This is not acquisition or authentication evidence."
+  },
+  "newer_literature_search": {
+    "queries": [
+      "site:arxiv.org Ramsey R(5,5) 2026",
+      "site:combinatorics.org R(5,5) 46 2026",
+      "site:users.cecs.anu.edu.au/~bdm R(5,5) 46"
+    ],
+    "finding": "No rigorous improvement beyond the maintained 43..46 range was located. McKay's maintained publication list records Angeltveit-McKay R(5,5)<=46 as online in Journal of Graph Theory in 2026.",
+    "qualification": "Search non-discovery is not a proof of novelty or completeness."
+  }
+}

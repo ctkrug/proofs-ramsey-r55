@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "20260720-221949-1e01b8",
+  "name": "r55-authenticated-corpus-gate-epoch5",
+  "hypothesis": "The twice-retrieved authoritative McKay bytes encode the reported 328 supplied controls and their 328 complements",
+  "expected_signal": "Linked provenance-v2 admission passes; two exact checkers find zero forbidden 5-sets on 656 instances; three parsers agree on every 861-bit adjacency fingerprint; target nauty-complg, histogram, degree, and 656-distinct-label gates pass",
+  "command": [
+    "python3",
+    "scripts/run_corpus_gate.py",
+    "checkers/checker_a.py",
+    "checkers/checker_b.c",
+    "sources/r55_42some.g6",
+    "artifacts/authenticated_corpus_report.json"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 3600,
+  "memory_limit_mb": 2048,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-20T22:19:49.500555+00:00",
+  "finished_at": "2026-07-20T22:36:27.187562+00:00",
+  "duration_seconds": 997.687,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "e5167505e412c40fb151619b51cb28249223b403",
+  "source_urls": [
+    "https://users.cecs.anu.edu.au/~bdm/data/r55_42some.g6"
+  ],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/scripts/run_corpus_gate.py": "ea8cc894bcc0597aac9eb459cead427fd5282082f35e3a27b5dda299c2065d23",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/checker_a.py": "b7f28adfec792139acce538ca879b775a0180467763b413e1a464672acddd259",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/checker_b.c": "40f719bb36f8d7d3db3a4b949dce8b20abd49499f57f7d5b651b718658014d2e",
+    "/root/proof-factory/research/ramsey-r55/workspace/sources/r55_42some.g6": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb"
+  },
+  "peak_child_memory_rusage": 41964,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "0e3aa2cf59a70f43206402c1ccaa53e41586254c40703f8ab284834e175401b0",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

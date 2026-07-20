@@ -1,0 +1,42 @@
+{
+  "schema_version": 2,
+  "source_authority": "authoritative_direct",
+  "requested_url": "https://users.cecs.anu.edu.au/~bdm/data/r55_42some.g6",
+  "final_url": "https://users.cecs.anu.edu.au/~bdm/data/r55_42some.g6",
+  "retrieved_at_utc": "2026-07-20T22:15:28.612358+00:00",
+  "acquisition_method": "curl 8.5.0 direct HTTPS GET through the computational-researcher experiment harness; admitted corpus compared byte-for-byte with the retained retrieval body",
+  "response_status": 200,
+  "content_type": null,
+  "content_type_inferred": false,
+  "response_headers": {
+    "server": "nginx",
+    "date": "Mon, 20 Jul 2026 22:15:28 GMT",
+    "content-length": "47888",
+    "last-modified": "Tue, 09 Oct 2001 03:54:17 GMT",
+    "etag": "\"bb10-38fdbec684c40\"",
+    "accept-ranges": "bytes"
+  },
+  "sha256": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb",
+  "byte_count": 47888,
+  "record_count": 328,
+  "header_capture": {
+    "path": "sources/retrievals/r55_42some_authoritative_epoch5.headers",
+    "sha256": "15d2e458cdc5a91c7c562460a91b15c0db15953c7e8174324aa1074063eaa430",
+    "byte_count": 186
+  },
+  "retrieved_body": {
+    "path": "sources/retrievals/r55_42some_authoritative_epoch5.g6",
+    "sha256": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb",
+    "byte_count": 47888
+  },
+  "transfer_metadata_capture": {
+    "path": ".proof-experiments/20260720-221528-34af71/stdout.txt",
+    "sha256": "d67a24736be464f6313e4ef8b238c65bd260a56ee71d067febcb6c3acbaef5db",
+    "byte_count": 17236
+  },
+  "retrieval_experiment": {
+    "path": ".proof-experiments/20260720-221528-34af71/experiment.json",
+    "sha256": "e05052b4db512684c45c9efb64654cfd1f32a8edfffdba1b8e8bfc5fab3ac233"
+  },
+  "qualification": "The authoritative HTTP/2 200 response omitted Content-Type. This sidecar preserves that absence and does not infer a media type."
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "20260720-214708-5e7b0a",
+  "name": "r55-authenticated-complement-gate-regression-final",
+  "hypothesis": "The target corpus gate rejects non-authoritative provenance and complement-byte disagreement without weakening parser or evaluator controls",
+  "expected_signal": "All 1044 unlabeled order-7 classes and complements pass full-adjacency/checker/reference-complement agreement; one-bit complement, mirror-authority, byte-count, and content-type mutations are rejected",
+  "command": [
+    "python3",
+    "scripts/test_graph6_plumbing.py",
+    "checkers/checker_a.py",
+    "checkers/checker_b.c",
+    "artifacts/graph6_target_complement_regression.json"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 300,
+  "memory_limit_mb": 1024,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-20T21:47:08.222052+00:00",
+  "finished_at": "2026-07-20T21:47:09.504863+00:00",
+  "duration_seconds": 1.283,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "e5167505e412c40fb151619b51cb28249223b403",
+  "source_urls": [
+    "https://users.cecs.anu.edu.au/~bdm/data/r55_42some.g6"
+  ],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/scripts/test_graph6_plumbing.py": "f419420b7df41e05ba041bc0e8b199bc00a987609d3537296bed22915673ba26",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/checker_a.py": "b7f28adfec792139acce538ca879b775a0180467763b413e1a464672acddd259",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/checker_b.c": "40f719bb36f8d7d3db3a4b949dce8b20abd49499f57f7d5b651b718658014d2e",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/graph6_target_complement_regression.json": "8450f01c8ba30975d612696396b5a709aae93b02537a08bd4de184bfb14ec1b5"
+  },
+  "peak_child_memory_rusage": 36928,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "03751300fbb0a47d57e663e59329484b10531cc322f029d1bf238a9bad27fb60",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

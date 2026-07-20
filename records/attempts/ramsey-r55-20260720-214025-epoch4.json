@@ -1,0 +1,182 @@
+{
+  "id": "ramsey-r55-20260720-214025-epoch4",
+  "problem_id": "ramsey-r55",
+  "started_at": "2026-07-20T21:32:52.114971+00:00",
+  "finished_at": "2026-07-20T21:49:35.743225+00:00",
+  "duration_seconds": 1003.628,
+  "lane": "hard",
+  "phase": "technical",
+  "model": "gpt-5.6-sol",
+  "effort": "xhigh",
+  "orchestration": {
+    "architecture": "sol-principal-terra-delegates",
+    "principal_model": "gpt-5.6-sol",
+    "delegate_model": "gpt-5.6-terra",
+    "delegate_roles": ["literature-strategy", "experiment-verification"],
+    "new_subagents_spawned": false
+  },
+  "outcome": "progress",
+  "approach": "Provenance- and target-reference-complement hardening of the fail-closed order-42 control gate",
+  "strategy": {
+    "family": "audited corpus and independent evaluators",
+    "fingerprint": "r55controls2026",
+    "mechanism": "An authoritative-direct provenance and frozen-byte preflight gates two exact evaluators, three complete-adjacency parser paths, byte-exact target nauty complementation, structural controls, and canonical labeling.",
+    "parent_ids": ["strategy-r55-controls"]
+  },
+  "hypothesis": "The target corpus gate can reject non-authoritative provenance and complement-byte disagreement without weakening its existing parser and evaluator controls.",
+  "discriminating_test": "Run the shared target-gate complement helper on every unlabeled order-7 class and complement, require exact evaluator/parser/reference agreement, and require deliberate complement and provenance mutations to fail.",
+  "strategy_status": "blocked",
+  "summary": "The target gate now requires authoritative-direct provenance, byte-exact target nauty-complg agreement, and records the compiled Checker B hash. The exhaustive order-7 regression passed on all 1,044 unlabeled classes and complements and rejected complement/provenance mutations. A browser audit could not export the authoritative raw body. The final preflight returned code 2 with downstream_checks_run=false; zero order-42 records were checked and no Ramsey bound changed.",
+  "rationale": "The regression closes a concrete correlated-complement and provenance-substitution weakness in the reusable control pipeline. Since no authoritative raw corpus was acquired, this is scoped research-software progress only and the constructive routes remain blocked.",
+  "claims": [
+    "The shared target-gate helper and nauty-complg produced identical complement bytes on all 1,044 unlabeled order-7 graph classes.",
+    "A one-bit complement mutation and provenance mutations to authority, byte count, and content type were rejected.",
+    "Both exact evaluators and NetworkX retained complete-adjacency agreement on all 2,088 order-7 source/complement records.",
+    "No order-42 graph was evaluated; the rigorous range remains 43 <= R(5,5) <= 46."
+  ],
+  "evidence": [
+    "artifacts/graph6_target_complement_regression.json, SHA-256 5c309e0f8707693bd4a008450e3a3caba587a2e19592944e3ce74820d65f9c94",
+    ".proof-experiments/20260720-214708-5e7b0a/experiment.json, SHA-256 6fc1d0d86740fa187170ff644e96c250d8b38faa16098987f2ad205d4945fbc0",
+    "artifacts/corpus_source_preflight_epoch4.json, SHA-256 93246ef3b4b9940605ab2714ff7e11abfd344b01c559fd5e07a3952999f28c8e",
+    ".proof-experiments/20260720-214715-c04ad0/experiment.json, SHA-256 b121f4fe1478bb82f752f8f2b7ed9276ef37b5a8d52dc639420dd4e86bbe13e8",
+    "artifacts/browser_source_audit_epoch4.json, SHA-256 550fb2e096baaa6db24319f2f05ccc0536e9b08141951e75020dc83fdd21912f",
+    "docs/delegate-memos/20260720-213002-experiment-verification.md and records/delegate-provenance-epoch4.json"
+  ],
+  "next_steps": [
+    "Acquire unchanged r55_42some.g6 bytes directly from the maintained ANU URL through a genuinely new raw-file path.",
+    "Create the authoritative-direct provenance sidecar specified in CHECKPOINT.md without normalizing the raw bytes.",
+    "Run the authenticated-corpus command in CHECKPOINT.md and stop on the first provenance, byte, checker, parser, reference-complement, structural, or canonical mismatch.",
+    "Authenticate Springer Supplementary Data 4 only after the corpus gate passes."
+  ],
+  "citations": [
+    "https://www.cs.rit.edu/~spr/ElJC/sur.pdf",
+    "https://users.cecs.anu.edu.au/~bdm/data/ramsey.html",
+    "https://users.cecs.anu.edu.au/~bdm/data/r55_42some.g6",
+    "https://users.cecs.anu.edu.au/~bdm/papers/r55.pdf",
+    "https://arxiv.org/abs/2409.15709"
+  ],
+  "techniques": [
+    "source-byte authentication",
+    "provenance schema validation",
+    "deterministic experiment capture",
+    "graph6 decoding",
+    "complete adjacency fingerprints",
+    "independent parser cross-checking",
+    "exact 5-subset enumeration",
+    "recursive bitset clique enumeration",
+    "semantic mutation testing",
+    "nauty reference complementation"
+  ],
+  "research_mode": "computational",
+  "experiments": [
+    ".proof-experiments/20260720-214708-5e7b0a: final exhaustive order-7 provenance/complement regression passed",
+    ".proof-experiments/20260720-214715-c04ad0: final absent-source preflight returned expected code 2 with downstream_checks_run=false",
+    ".proof-experiments/20260720-213611-fc84c9, 20260720-213630-e153a9, and 20260720-214017-2f5e96: superseded intermediate regressions",
+    ".proof-experiments/20260720-213645-9c559a and 20260720-214025-cd0935: superseded intermediate preflights"
+  ],
+  "independent_checker": "Checker A uses Python, independently parsed Boolean matrices, and direct 5-subset enumeration. Checker B uses C, a separate graph6 parser, and recursive bitset clique enumeration. NetworkX supplies a third decoder and nauty-complg supplies a reference complement implementation. All ran only on order 7 in this epoch because the order-42 source was absent.",
+  "transfer_insights": [
+    "Isolated adversarial reconstruction -> locally derived complements can share a correlated bug -> add target-instance byte-exact nauty-complg comparison; the shared helper passed the exhaustive order-7 control and rejected a one-bit mutation.",
+    "Fail-closed source admission -> matching mirror bytes do not authenticate an authoritative object -> require a raw-byte-linked authoritative-direct provenance sidecar; authority, byte-count, and content-type mutations were rejected."
+  ],
+  "established_facts": [
+    {
+      "claim": "The shared target-gate complement helper agrees byte-for-byte with nauty-complg on every unlabeled order-7 graph class, and a one-bit mutation is detected.",
+      "evidence": "artifacts/graph6_target_complement_regression.json",
+      "scope": "1,044 representatives and 1,044 complements at order 7 only",
+      "status": "computed"
+    },
+    {
+      "claim": "The maintained published range remains 43 <= R(5,5) <= 46.",
+      "evidence": "Dynamic Survey DS1.18 and McKay's maintained publication list",
+      "scope": "Published global status checked 2026-07-20",
+      "status": "proved"
+    }
+  ],
+  "ruled_out": [
+    {
+      "claim_or_route": "Admit matching mirror bytes as an authenticated McKay corpus without direct-source provenance.",
+      "scope": "Corpus admission for downstream novelty and repair work",
+      "reason": "The frozen mirror hash is only an acquisition discriminator and does not prove equivalence to the maintained authoritative object.",
+      "evidence": "scripts/run_corpus_gate.py and artifacts/graph6_target_complement_regression.json",
+      "reopen_condition": "Supply authoritative-direct response metadata or explicit maintainer confirmation linking the exact bytes."
+    },
+    {
+      "claim_or_route": "Start order-42 novelty or K43 repair search from the epoch-4 packet.",
+      "scope": "Any continuation lacking authenticated McKay and Springer raw artifacts",
+      "reason": "The final preflight stopped before every target-instance check.",
+      "evidence": "artifacts/corpus_source_preflight_epoch4.json",
+      "reopen_condition": "Pass the complete McKay source/control gate and then authenticate the Springer seed."
+    }
+  ],
+  "open_leads": [
+    {
+      "description": "Run the provenance- and reference-complement-hardened order-42 gate.",
+      "rationale": "The missing authoritative raw artifact is now the only prerequisite to executing the full supplied-656 control packet.",
+      "next_experiment": "Acquire authoritative bytes and response metadata, create sources/r55_42some.g6.provenance.json as specified in CHECKPOINT.md, and run the recorded command.",
+      "priority": "high",
+      "status": "open"
+    },
+    {
+      "description": "Authenticate Springer Supplementary Data 4 after the corpus passes.",
+      "rationale": "It is the strongest published K43 repair seed, but the current transcription lacks publisher provenance.",
+      "next_experiment": "Retrieve the unchanged TXT, determine its color convention, and require exact violation identities under both checkers.",
+      "priority": "high",
+      "status": "open"
+    }
+  ],
+  "blocker": "The command network cannot resolve source hosts, the browser connector cannot export the raw body, and no authoritative order-42 corpus or provenance sidecar exists locally.",
+  "reopen_condition": "Provide or retrieve unchanged McKay bytes with authoritative-direct response metadata matching the frozen size, record count, and SHA-256 discriminator.",
+  "reopen_evidence": "",
+  "continuation": {
+    "objective": "Close the authoritative order-42 corpus control gate.",
+    "first_action": "Acquire sources/r55_42some.g6 directly from the authoritative URL, create the provenance sidecar specified in CHECKPOINT.md, and run the exact authenticated-corpus command.",
+    "stop_condition": "Stop at any provenance, byte, LF termination, record-count, 861-bit parser fingerprint, forbidden-set, histogram, degree, local/reference complement, or canonical-label mismatch."
+  },
+  "strategy_proposals": [],
+  "candidate_profile": {
+    "contribution_class": "research_artifact",
+    "scholarly_question": "Can future R(5,5) corpus and search claims be gated against provenance substitution and correlated complement-generation errors?",
+    "meaningful_delta": "The previous gate lacked target-instance nauty-complg comparison, authoritative provenance validation, and a compiled Checker B hash; these are now enforced or recorded.",
+    "acceptance_test": "Directly acquired authoritative order-42 bytes pass the complete gate from a cold start and an independent external replay confirms the packet.",
+    "closest_prior_work": [
+      {
+        "url": "https://users.cecs.anu.edu.au/~bdm/data/ramsey.html",
+        "difference": "McKay supplies the historical graphs; this local artifact adds fail-closed provenance and multi-implementation verification and claims no new graph or classification."
+      }
+    ],
+    "novelty_searches": [
+      {
+        "source": "Dynamic Survey DS1.18, arXiv, and McKay's maintained publication list",
+        "query": "R(5,5) 2026; R(5,5) exact; R(5,5)<=46",
+        "url": "https://www.cs.rit.edu/~spr/ElJC/sur.pdf",
+        "finding": "No rigorous update beyond 43 <= R(5,5) <= 46 was located; search non-discovery is not a novelty proof."
+      }
+    ],
+    "external_channel": {
+      "recipient": "Brendan McKay, not contacted",
+      "url": "https://users.cecs.anu.edu.au/~bdm/data/ramsey.html",
+      "acceptance_path": "No contact or submission until authoritative raw-source replay succeeds."
+    },
+    "independent_validations": [
+      {
+        "type": "repository_ci",
+        "validator": "NetworkX 3.3, nauty-complg, and two local exact checkers",
+        "result": "Complete adjacency and byte-exact complement agreement on 2,088 order-7 records; four mutation classes rejected",
+        "artifact": "artifacts/graph6_target_complement_regression.json",
+        "evidence_url": ""
+      }
+    ],
+    "relevance": {
+      "settles_exact_open_target": false,
+      "improves_best_known_result": false,
+      "source_explicitly_requests_result": false,
+      "expert_interest_confirmed": false,
+      "new_structural_result": false,
+      "evidence_url": ""
+    },
+    "arbitrary_cutoff_extension": false
+  },
+  "tool_disclosure": "GPT-5.6 Sol was principal investigator. Two precomputed GPT-5.6 Terra memos were advisory; the relied experiment-verification memo was hash-verified, promoted byte-for-byte, and independently implemented and mutation-tested by Sol. No new subagent was spawned. Deterministic tools: Python 3.12.3, C/GCC, nauty, NetworkX 3.3, SHA-256, Git diagnostics, the computational-researcher experiment harness, and web browsing. No SAT solver, proof assistant, cloud job, or command-network download was used.",
+  "review_status": "not a result claim"
+}

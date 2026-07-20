@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "20260720-221937-5c7218",
+  "name": "r55-provenance-v2-and-graph6-regression",
+  "hypothesis": "The gate can admit an explicitly absent authoritative Content-Type only when linked raw header/body/transfer/experiment artifacts agree, while retaining exact graph6 parser and complement checks",
+  "expected_signal": "Valid absent-Content-Type fixture accepted; authority, byte-count, inference, and header-hash mutations rejected; all 1044 order-7 classes and complements retain exact checker/parser/nauty agreement",
+  "command": [
+    "python3",
+    "scripts/test_graph6_plumbing.py",
+    "checkers/checker_a.py",
+    "checkers/checker_b.c",
+    "artifacts/graph6_provenance_v2_regression.json"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 300,
+  "memory_limit_mb": 1024,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-20T22:19:37.605439+00:00",
+  "finished_at": "2026-07-20T22:19:38.994809+00:00",
+  "duration_seconds": 1.389,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "e5167505e412c40fb151619b51cb28249223b403",
+  "source_urls": [
+    "https://users.cecs.anu.edu.au/~bdm/data/r55_42some.g6"
+  ],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/scripts/test_graph6_plumbing.py": "00c80866b472ea6c0e7b3447046397eda71c5daf46ddbc9ad1cb0c06410442e1",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/checker_a.py": "b7f28adfec792139acce538ca879b775a0180467763b413e1a464672acddd259",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/checker_b.c": "40f719bb36f8d7d3db3a4b949dce8b20abd49499f57f7d5b651b718658014d2e"
+  },
+  "peak_child_memory_rusage": 36040,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "7588c0f77c8ba81ba5d1097804519702819bdc5f20eeeed4043f86fdcbf53766",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

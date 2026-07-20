@@ -1,0 +1,171 @@
+{
+  "id": "ramsey-r55-20260720-223627-epoch5",
+  "problem_id": "ramsey-r55",
+  "finished_at": "2026-07-20T22:37:31+00:00",
+  "lane": "hard",
+  "phase": "technical",
+  "model": "gpt-5.6-sol",
+  "effort": "xhigh",
+  "orchestration": {
+    "architecture": "sol-principal-terra-delegates",
+    "principal_model": "gpt-5.6-sol",
+    "delegate_model": "gpt-5.6-terra",
+    "delegate_roles": ["literature-strategy", "experiment-verification"],
+    "new_subagents_spawned": false
+  },
+  "outcome": "progress",
+  "approach": "Second authoritative retrieval and one non-overlapping full fail-closed order-42 corpus gate",
+  "strategy": {
+    "family": "audited corpus and independent evaluators",
+    "fingerprint": "r55controls2026",
+    "mechanism": "Hash-linked raw HTTPS provenance gates two exact evaluators, three full-adjacency parser paths, target nauty complementation, structural signatures, and canonical labeling.",
+    "parent_ids": ["strategy-r55-controls"]
+  },
+  "hypothesis": "A second direct authoritative retrieval reproduces the frozen McKay bytes and the supplied 328 records plus their 328 complements pass every exact control gate.",
+  "discriminating_test": "Require an immutable direct HTTP/TLS/body capture with no inferred headers, then run exactly one full target gate and stop on the first provenance, byte, parser, evaluator, complement, structural, or canonical mismatch.",
+  "strategy_status": "active",
+  "summary": "A newly live network path returned HTTP/2 200 from McKay's authoritative URL. The server omitted Content-Type, so provenance schema v2 was implemented to preserve that absence and link the admitted corpus to raw header, body, curl-transfer, and experiment captures. The second body exactly matched the first body and frozen 47,888-byte SHA-256. The single full gate passed on 328 source records and 328 complements. No completeness, witness, upper-bound, or exact-value claim is made; 43 <= R(5,5) <= 46 is unchanged.",
+  "rationale": "The direct body/header capture closes the recorded provenance blocker without inventing a response field. Two materially different exact checkers, a third parser, nauty reference tools, published structural controls, semantic mutations, and exact agreement with the prior host run support the supplied-packet claim at its stated scope.",
+  "claims": [
+    "The authoritative corpus body was independently retrieved twice with identical 47,888 bytes and SHA-256 067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb.",
+    "The authoritative HTTP/2 200 response omitted Content-Type; no media type is inferred in the accepted provenance.",
+    "For exactly the supplied 328 order-42 records and their 328 derived complements, both exact checkers found zero 5-cliques and zero independent 5-sets, all three parsers agreed on every 861-bit adjacency fingerprint, nauty-complg matched byte-for-byte, and nauty-labelg produced 656 distinct labels.",
+    "This does not establish that the 656 are all (5,5,42) graphs and does not change the bound 43 <= R(5,5) <= 46."
+  ],
+  "evidence": [
+    "artifacts/authenticated_corpus_report.json, SHA-256 0d9b1801434edcc12f34e73cea6c98d911f0e0c6f0884f8f03d96a46eca1344c",
+    ".proof-experiments/20260720-221949-1e01b8/experiment.json, SHA-256 64332bc455ae9d04f743df14063910977e5f49c064ccd30a58f9c183322f3fca",
+    "sources/retrievals/r55_42some_authoritative_epoch5.headers, SHA-256 15d2e458cdc5a91c7c562460a91b15c0db15953c7e8174324aa1074063eaa430",
+    "sources/retrievals/r55_42some_authoritative_epoch5.g6, SHA-256 067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb",
+    ".proof-experiments/20260720-221528-34af71/experiment.json, SHA-256 e05052b4db512684c45c9efb64654cfd1f32a8edfffdba1b8e8bfc5fab3ac233",
+    "artifacts/graph6_provenance_v2_regression.json, SHA-256 c3f0b3d7a0a29b093bd151201669aa63b81870f453b3c979f4d6821923744421"
+  ],
+  "next_steps": [
+    "Authenticate unchanged Springer Supplementary Data 4 with the same raw body/header/transfer discipline.",
+    "Only after the Springer gate passes, dual-check the two conflicts and canonicalize the valid K43 deletions against the authenticated supplied 656.",
+    "Then run one bounded six-vertex conflict-core repair discriminator; do not perform direct one-vertex extension of the known supplied controls."
+  ],
+  "citations": [
+    "https://www.cs.rit.edu/~spr/ElJC/sur.pdf",
+    "https://users.cecs.anu.edu.au/~bdm/data/ramsey.html",
+    "https://users.cecs.anu.edu.au/~bdm/data/r55_42some.g6",
+    "https://users.cecs.anu.edu.au/~bdm/papers/r55.pdf",
+    "https://doi.org/10.1038/s41467-018-07327-2"
+  ],
+  "techniques": [
+    "source-byte authentication",
+    "raw HTTP/TLS capture",
+    "semantic mutation testing",
+    "exact 5-subset enumeration",
+    "recursive bitset clique enumeration",
+    "independent graph6 parsers",
+    "nauty complementation",
+    "canonical graph labeling",
+    "deterministic experiment capture"
+  ],
+  "research_mode": "computational",
+  "experiments": [
+    ".proof-experiments/20260720-221528-34af71: direct authoritative retrieval passed; HTTP 200, TLS verified, content_type null, 47,888 bytes, frozen SHA-256",
+    ".proof-experiments/20260720-221937-5c7218: provenance-v2/order-7 regression passed; four provenance mutations rejected and 1,044 graph classes plus complements agreed",
+    ".proof-experiments/20260720-221949-1e01b8: full supplied-656 corpus gate passed in 997.687 seconds"
+  ],
+  "independent_checker": "Checker A is Python with direct 5-subset combinations over a Boolean matrix. Checker B is separately parsed C with recursive bitset clique search. NetworkX supplies a third graph6 decoder; nauty-complg and nauty-labelg provide external complement and canonical-label paths. The new per-record manifest also exactly matches the prior host-side run.",
+  "transfer_insights": [
+    "Fail-closed data provenance -> a missing response header must remain missing rather than be inferred -> schema v2 links raw headers and curl metadata and rejected four provenance mutations before admitting the corpus.",
+    "Isolated adversarial reconstruction -> correlated local graph transformations require an external representation -> target nauty-complg agreed byte-for-byte and NetworkX agreed on every complete adjacency fingerprint."
+  ],
+  "established_facts": [
+    {
+      "claim": "The directly retrieved supplied McKay packet has 328 valid source records whose complements yield 656 distinct supplied order-42 Ramsey graphs under the full local gate.",
+      "evidence": "artifacts/authenticated_corpus_report.json",
+      "scope": "Exactly the supplied records and derived complements; not completeness",
+      "status": "computed"
+    }
+  ],
+  "ruled_out": [
+    {
+      "claim_or_route": "Require or assert a text/plain response header for the current authoritative corpus response.",
+      "scope": "The direct ANU HTTP/2 response captured on 2026-07-20",
+      "reason": "The raw authoritative header block and curl transfer metadata both show Content-Type absent.",
+      "evidence": "sources/retrievals/r55_42some_authoritative_epoch5.headers and .proof-experiments/20260720-221528-34af71/stdout.txt",
+      "reopen_condition": "A later authoritative response actually supplies Content-Type; preserve it as a new response rather than rewriting this capture."
+    },
+    {
+      "claim_or_route": "Treat 656 distinct canonical labels as an exhaustive classification of all order-42 Ramsey graphs.",
+      "scope": "All global R(5,5) claims",
+      "reason": "The gate checks only supplied records and contains no exhaustive generation or cover certificate.",
+      "evidence": "claim_scope in artifacts/authenticated_corpus_report.json",
+      "reopen_condition": "Produce a replayable exhaustive enumeration and checked coverage certificate."
+    }
+  ],
+  "open_leads": [
+    {
+      "description": "Authenticate Springer Supplementary Data 4.",
+      "rationale": "It is the strongest published K43 repair seed and is now the remaining source gate before conflict-core work.",
+      "next_experiment": "Run the exact direct-HTTPS retrieval command in CHECKPOINT.md and preserve publisher body, raw headers, curl transfer metadata, and hashes.",
+      "priority": "high",
+      "status": "open"
+    },
+    {
+      "description": "Execute the six-vertex published conflict-core repair slice after seed authentication.",
+      "rationale": "It is a sharply bounded exact neighborhood around the best sourced K43 near-solution.",
+      "next_experiment": "Freeze all edges outside the authenticated six-vertex conflict union and certify the bounded optimum under two encodings.",
+      "priority": "high",
+      "status": "open"
+    }
+  ],
+  "blocker": "Springer Supplementary Data 4 remains unauthenticated; therefore no published-seed deletion novelty or conflict-core repair claim is yet admissible.",
+  "reopen_condition": "Retrieve unchanged publisher bytes with raw provenance and obtain exact agreement under both graph checkers.",
+  "reopen_evidence": "The prior McKay-corpus blocker is satisfied by .proof-experiments/20260720-221528-34af71 and artifacts/authenticated_corpus_report.json.",
+  "continuation": {
+    "objective": "Authenticate the exact publisher K43 two-conflict seed.",
+    "first_action": "Run the Springer raw-TXT retrieval command in CHECKPOINT.md.",
+    "stop_condition": "Stop on transport ambiguity, byte instability, parse ambiguity, or checker disagreement; do not begin repair before the gate passes."
+  },
+  "strategy_proposals": [],
+  "candidate_profile": {
+    "contribution_class": "research_artifact",
+    "scholarly_question": "Can the historically supplied (5,5,42) controls be admitted with fail-closed source provenance and independently replayed exact graph checks?",
+    "meaningful_delta": "The prior packet had matching bytes but inferred a missing Content-Type. This epoch retained a second direct body and immutable header/TLS capture, hardened the schema against inference, and completed the first admissible full supplied-656 gate.",
+    "acceptance_test": "A clean external replay from the retained raw body, header capture, sidecar, checker sources, and tool versions reproduces the decisive manifest and report fields.",
+    "closest_prior_work": [
+      {
+        "url": "https://users.cecs.anu.edu.au/~bdm/data/ramsey.html",
+        "difference": "McKay supplies the historical graphs; this local artifact adds immutable transport provenance, multiple exact checker/parser paths, reference complementation, and a per-record manifest without claiming a new graph or classification."
+      }
+    ],
+    "novelty_searches": [
+      {
+        "source": "Dynamic Survey DS1.18 and McKay's maintained data page",
+        "query": "R(5,5) current bounds and order-42 graph corpus",
+        "url": "https://www.cs.rit.edu/~spr/ElJC/sur.pdf",
+        "finding": "The maintained range remains 43 <= R(5,5) <= 46 and the 656 count remains strongly evidenced rather than proved complete."
+      }
+    ],
+    "external_channel": {
+      "recipient": "Brendan McKay, not contacted",
+      "url": "https://users.cecs.anu.edu.au/~bdm/data/ramsey.html",
+      "acceptance_path": "Seek a clean third-party replay before considering maintainer contact; do not present this control artifact as a Ramsey-number result."
+    },
+    "independent_validations": [
+      {
+        "type": "repository_ci",
+        "validator": "Checker A, Checker B, NetworkX 3.3, nauty-complg, and nauty-labelg",
+        "result": "All supplied 656 instances passed exact forbidden-set checks, representation checks, reference complementation, and distinct-label checks.",
+        "artifact": "artifacts/authenticated_corpus_report.json",
+        "evidence_url": ""
+      }
+    ],
+    "relevance": {
+      "settles_exact_open_target": false,
+      "improves_best_known_result": false,
+      "source_explicitly_requests_result": false,
+      "expert_interest_confirmed": false,
+      "new_structural_result": false,
+      "evidence_url": ""
+    },
+    "arbitrary_cutoff_extension": false
+  },
+  "tool_disclosure": "GPT-5.6 Sol was principal investigator. Two precomputed GPT-5.6 Terra memos were advisory; Sol hash-verified them, relied on the experiment-verification memo only for identifying the provenance defect and next discriminator, and independently implemented and tested the fix. No new subagent was spawned. Deterministic tools: Python 3.12.3, C/GCC, curl 8.5.0/OpenSSL 3.0.13, NetworkX 3.3, nauty, SHA-256, Git diagnostics, and the computational-researcher experiment harness. Web browsing was used for the maintained survey and authoritative data pages. No SAT solver or proof assistant was used.",
+  "review_status": "research-software progress; not a Ramsey result candidate"
+}

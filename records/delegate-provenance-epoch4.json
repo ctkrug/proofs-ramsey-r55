@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "epoch": 4,
+  "principal": {
+    "role": "Sol principal investigator",
+    "model": "GPT-5.6 Sol"
+  },
+  "delegates": [
+    {
+      "role": "literature-strategy",
+      "model": "GPT-5.6 Terra",
+      "source_path": ".delegates/20260720-213002-0edd3e/literature-strategy/memo.md",
+      "source_sha256": "d6aecc208a63991efbeaa0640ce297cf166e778f7b63db3400811a6dc20da71b",
+      "relied_on": false,
+      "promotion": null
+    },
+    {
+      "role": "experiment-verification",
+      "model": "GPT-5.6 Terra",
+      "source_path": ".delegates/20260720-213002-0edd3e/experiment-verification/memo.md",
+      "source_sha256": "d993b4be2898b1c77e2e2e46d6dd323969f0f239bf311c8b327b15072cd755a5",
+      "relied_on": true,
+      "promotion": {
+        "path": "docs/delegate-memos/20260720-213002-experiment-verification.md",
+        "expected_sha256": "d993b4be2898b1c77e2e2e46d6dd323969f0f239bf311c8b327b15072cd755a5",
+        "use": "Requirement for target-level byte-exact nauty-complg comparison and compiled checker hash"
+      }
+    }
+  ],
+  "qualification": "Delegate memos are advisory. Sol independently inspected, implemented, mutation-tested, and bounded the promoted requirement. No model agreement is mathematical evidence."
+}
