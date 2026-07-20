@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "20260720-201015-92e71b",
+  "name": "r55-third-parser-fail-closed-control",
+  "hypothesis": "Adding the third parser does not weaken the corpus source preflight",
+  "expected_signal": "With the corpus absent, status is source_preflight_failed, return code 2, and downstream_checks_run is false before NetworkX or graph checking",
+  "command": [
+    "python3",
+    "scripts/run_corpus_gate.py",
+    "checkers/checker_a.py",
+    "checkers/checker_b.c",
+    "sources/r55_42some.g6",
+    "artifacts/corpus_source_preflight_epoch2.json"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 60,
+  "memory_limit_mb": 256,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-20T20:10:15.264121+00:00",
+  "finished_at": "2026-07-20T20:10:15.547807+00:00",
+  "duration_seconds": 0.284,
+  "returncode": 2,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "cdd2252975e0f9eb36b07c347e4a19f7a29601e6",
+  "source_urls": [
+    "https://users.cecs.anu.edu.au/~bdm/data/r55_42some.g6"
+  ],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/scripts/run_corpus_gate.py": "60a1e201f08103057593dad6ee5f81468702493e6acdf247d804a776fe91797f",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/checker_a.py": "73ab070b87449de7ed3465a3f8165236e2195bc1ba88d72f4ceeb746b108abec",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/checker_b.c": "0bebf72df867d3fa124d828e966c2c7289f92c5bae08e13ca7121efcaab47856"
+  },
+  "peak_child_memory_rusage": 21376,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "3c692f0ed4bbc424e1f3f214b8fb955b72ac5db12f00325a5b4a3595646d4aab",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

@@ -26,11 +26,12 @@ for that corpus (47,888 bytes, SHA-256
 `067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb`).  It
 refuses to run downstream checks unless all source bytes match.  On a match it
 checks the 328 records and 328 derived complements with both exact checkers,
-reproduces the published edge histogram and degree range, tests complement
-involution, and requires 656 distinct canonical labels from Debian nauty's
-`nauty-labelg`.  The mirror hash is an acquisition discriminator, not proof that
-the authoritative URL served the same bytes; provenance must still record the
-actual McKay retrieval.
+requires an independent NetworkX graph6 signature for every record and
+complement, reproduces the published edge histogram and degree range, tests
+complement involution, and requires 656 distinct canonical labels from Debian
+nauty's `nauty-labelg`.  The mirror hash is an acquisition discriminator, not
+proof that the authoritative URL served the same bytes; provenance must still
+record the actual McKay retrieval.
 
 ## Replay
 
@@ -57,6 +58,8 @@ the historical corpus.  It generates all 1,044 order-7 isomorphism classes with
 nauty, checks both custom parsers/evaluators, checks signatures with NetworkX,
 and compares the locally derived complements byte-for-byte with `nauty-complg`.
 Order 7 deliberately has three graph6 padding bits, just like order 42.
+The epoch-2 report `artifacts/graph6_third_parser_report.json` also records the
+hash of the imported target corpus-gate module.
 
 ```bash
 python3 scripts/test_graph6_plumbing.py \

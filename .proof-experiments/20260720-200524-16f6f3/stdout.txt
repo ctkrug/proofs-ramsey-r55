@@ -1,0 +1,4 @@
+url_effective=https://users.cecs.anu.edu.au/~bdm/data/r55_42some.g6
+http_code=000
+content_type=
+size_download=0

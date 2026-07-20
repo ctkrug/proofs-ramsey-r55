@@ -1,0 +1,193 @@
+{
+  "id": "ramsey-r55-20260720-201015-epoch2",
+  "problem_id": "ramsey-r55",
+  "started_at": "2026-07-20T20:00:02+00:00",
+  "finished_at": "2026-07-20T20:11:37+00:00",
+  "lane": "hard",
+  "phase": "technical",
+  "model": "gpt-5.6-sol",
+  "orchestration": {
+    "architecture": "sol-principal-with-precomputed-terra-reconnaissance",
+    "principal_model": "gpt-5.6-sol",
+    "delegate_model": "gpt-5.6-terra",
+    "new_delegates_spawned": false,
+    "delegate_roles": [
+      "literature-strategy",
+      "experiment-verification"
+    ],
+    "delegate_memos": [
+      {
+        "path": ".delegates/20260720-200002-f4d2cf/literature-strategy/memo.md",
+        "sha256": "35c6c3988cfee447ce0e06100f7430e7c5c13e4a534e468e421ac37f7421f0fd"
+      },
+      {
+        "path": ".delegates/20260720-200002-f4d2cf/experiment-verification/memo.md",
+        "sha256": "d3c45789246ca377b1eafffd1293716d914ca82a1e29f37c44ad64e7e21ecdac"
+      }
+    ]
+  },
+  "outcome": "progress",
+  "approach": "Close the authoritative McKay order-42 corpus gate, then strengthen its actual-record parser audit after acquisition remained blocked",
+  "strategy": {
+    "family": "audited corpus and independent evaluators",
+    "fingerprint": "r55controls2026",
+    "mechanism": "A frozen byte preflight gates all mathematics; passing bytes must then agree under two exact forbidden-set evaluators, a third NetworkX graph6 signature path, nauty complementation, and canonical labeling.",
+    "parent_ids": [
+      "strategy-r55-controls"
+    ]
+  },
+  "hypothesis": "The authoritative McKay corpus is retrievable unchanged and, if admitted by the frozen byte discriminator, can be audited through a third independent parser without weakening the fail-closed source gate.",
+  "discriminating_test": "Attempt one bounded authoritative download; require the frozen 47,888-byte SHA-256 before graph work; in parallel require the new NetworkX signature path to agree with both checker parsers on every order-7 isomorphism class and complement.",
+  "strategy_status": "blocked",
+  "summary": "The authoritative curl acquisition failed DNS resolution with return code 6 after one retry and left no corpus. The target preflight therefore again returned code 2 with downstream_checks_run=false, so no order-42 graph or K43 repair neighborhood was checked. The corpus gate was strengthened to require NetworkX order/edge/ordered-degree signatures on every admitted source record and complement. The new path passed an exhaustive 1,044-class order-7 regression (2,088 records including complements), with exact checker-output agreement and byte-exact nauty complementation. Current literature still gives 43 <= R(5,5) <= 46; arXiv:2508.16699 was rejected as status-changing because it explicitly supplies a numerical/prime-sequence heuristic estimate rather than a witness or exclusion proof.",
+  "rationale": "The only positive result is verification infrastructure: a new independent parser obligation was implemented and exhaustively attacked on the smallest suite sharing the order-42 padding pattern. The absent authoritative bytes prevent any claim about the supplied 328 records, their complements, novelty, or R(5,5).",
+  "claims": [
+    "The target corpus gate now contains a third NetworkX graph6 signature check for every admitted source record and complement.",
+    "That exact signature path agrees with both checker parsers on all 1,044 unlabeled order-7 graph representatives and all 1,044 complements; local complement bytes agree with nauty-complg.",
+    "The authoritative order-42 corpus remained absent, so zero order-42 corpus records were checked this epoch.",
+    "The maintained rigorous range remains 43 <= R(5,5) <= 46."
+  ],
+  "evidence": [
+    ".proof-experiments/20260720-200524-16f6f3/experiment.json, SHA-256 31eaf435d38e25b167d4f33065d49aa0f407703927f9e692e633a05c23a860a6; curl return code 6",
+    "artifacts/graph6_third_parser_report.json, SHA-256 91469c68ae5abb0353e4a4a1bc13c3e471e1e341bcd402b2f2bf504c6cd6e430",
+    ".proof-experiments/20260720-200957-c4fca8/experiment.json, SHA-256 75b343850f042321f6ddfe53c7eee95fed0a9c41683a9d5418bc94951dfa2db0; return code 0",
+    "artifacts/corpus_source_preflight_epoch2.json, SHA-256 db893987f58b718712ebd39f6e8338df2c79d32f0fe2dfdc62f7c051011e7fb4; downstream_checks_run=false",
+    "scripts/run_corpus_gate.py, SHA-256 60a1e201f08103057593dad6ee5f81468702493e6acdf247d804a776fe91797f"
+  ],
+  "next_steps": [
+    "Acquire unchanged authoritative bytes at sources/r55_42some.g6 with final URL, timestamp, headers, size, and SHA-256.",
+    "If and only if the byte preflight matches, run the enhanced corpus command in CHECKPOINT.md and require two exact evaluators plus the third NetworkX signature path on all 656 controls.",
+    "After the corpus passes, authenticate Springer Supplementary Data 4 before any canonical comparison or K43 repair search.",
+    "Do not repeat command-environment acquisition without a new network path or user-provided raw bytes."
+  ],
+  "citations": [
+    "https://www.cs.rit.edu/~spr/ElJC/sur.pdf",
+    "https://onlinelibrary.wiley.com/doi/full/10.1002/jgt.70029",
+    "https://users.cecs.anu.edu.au/~bdm/data/ramsey.html",
+    "https://users.cecs.anu.edu.au/~bdm/data/r55_42some.g6",
+    "https://users.cecs.anu.edu.au/~bdm/papers/r55.pdf",
+    "https://arxiv.org/abs/2508.16699"
+  ],
+  "techniques": [
+    "source-byte authentication",
+    "deterministic experiment capture",
+    "graph6 decoding",
+    "independent parser signatures",
+    "exact 5-subset enumeration",
+    "recursive bitset clique enumeration",
+    "complement involution testing",
+    "nauty cross-checking",
+    "adversarial literature triage"
+  ],
+  "research_mode": "computational",
+  "experiments": [
+    ".proof-experiments/20260720-200524-16f6f3: authoritative acquisition failed with curl code 6; no source file remained",
+    ".proof-experiments/20260720-200920-965ada: first third-parser regression passed but was superseded because the imported corpus-gate source hash was absent from the report",
+    ".proof-experiments/20260720-200957-c4fca8: corrected third-parser regression passed on 2,088 order-7 source/complement records",
+    ".proof-experiments/20260720-201015-92e71b: strengthened gate still failed closed on absent source with downstream_checks_run=false"
+  ],
+  "independent_checker": "Checker A is Python with direct C(n,5) enumeration and an independent graph6 parser; Checker B is C with a separate parser and recursive bitset clique enumeration. NetworkX 3.3 is a third decoder used only for order/edge/ordered-degree signatures, while nauty-complg independently checks complement bytes. The new path has not run on order 42 because the source is absent.",
+  "transfer_insights": [
+    "Isolated adversarial reconstruction -> an external parser should detect a shared custom graph6 error -> NetworkX agreed on all 2,088 order-7 source/complement controls.",
+    "Fail-closed data provenance -> missing bytes must prevent downstream mathematics -> the strengthened gate returned source_preflight_failed with downstream_checks_run=false."
+  ],
+  "established_facts": [
+    {
+      "claim": "The NetworkX signature path embedded in the corpus gate agrees with both exact checker parsers and nauty complementation on every unlabeled order-7 graph class and its complement.",
+      "evidence": "artifacts/graph6_third_parser_report.json",
+      "scope": "1,044 source representatives plus 1,044 complements at order 7 only",
+      "status": "computed"
+    },
+    {
+      "claim": "The maintained published range remains 43 <= R(5,5) <= 46.",
+      "evidence": "Dynamic Survey DS1.18 and Angeltveit-McKay 2026",
+      "scope": "Published global R(5,5) status checked 2026-07-20",
+      "status": "proved"
+    }
+  ],
+  "ruled_out": [
+    {
+      "claim_or_route": "Start order-42 novelty or K43 repair search from the current local packet.",
+      "scope": "Any continuation without the authoritative McKay corpus and publisher supplementary seed",
+      "reason": "The byte gate failed before every target-instance check.",
+      "evidence": "artifacts/corpus_source_preflight_epoch2.json",
+      "reopen_condition": "The authoritative corpus passes the enhanced two-evaluator/three-parser control gate."
+    },
+    {
+      "claim_or_route": "Treat arXiv:2508.16699 as establishing R(5,5)=45.",
+      "scope": "Rigorous bound or exact-value status",
+      "reason": "The paper describes randomized numerical diagnostics and a prime-sequence heuristic estimate, not a valid witness or exhaustive exclusion.",
+      "evidence": "https://arxiv.org/abs/2508.16699",
+      "reopen_condition": "Supply an explicit independently checked witness or a complete proof/certificate satisfying the verification contract."
+    }
+  ],
+  "open_leads": [
+    {
+      "description": "Authenticate the 328 McKay records and 328 complements under the enhanced gate.",
+      "rationale": "Every novelty, deletion, and canonical-comparison claim depends on these immutable controls.",
+      "next_experiment": "Place unchanged bytes at sources/r55_42some.g6 and run the exact command in CHECKPOINT.md.",
+      "priority": "high",
+      "status": "open"
+    },
+    {
+      "description": "Authenticate Springer Supplementary Data 4 after the corpus gate passes.",
+      "rationale": "The published two-conflict K43 is the strongest bounded repair seed, but the local transcription has no publisher provenance.",
+      "next_experiment": "Retrieve the unchanged TXT, hash it, decode both color conventions, and require exact dual-checker violation identities.",
+      "priority": "high",
+      "status": "open"
+    }
+  ],
+  "blocker": "The managed command environment cannot resolve the authoritative host, the browser interface cannot export the raw body, and no authenticated corpus exists locally.",
+  "reopen_condition": "Provide or retrieve unchanged McKay bytes with provenance; they must have 47,888 bytes, 328 LF-terminated records, and SHA-256 067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb before downstream checks run.",
+  "reopen_evidence": "",
+  "continuation": {
+    "objective": "Close the authoritative order-42 corpus control gate.",
+    "first_action": "Acquire sources/r55_42some.g6 through a newly available network path or user-provided unchanged file, then run the r55-authenticated-corpus-gate command in CHECKPOINT.md.",
+    "stop_condition": "Stop at any byte hash, record count, exact checker, NetworkX signature, forbidden-set, histogram, degree, complement, or canonical-label mismatch; otherwise proceed to the Springer source gate."
+  },
+  "strategy_proposals": [],
+  "candidate_profile": {
+    "contribution_class": "research_artifact",
+    "scholarly_question": "Can computational R(5,5) experiments be based on a source-authenticated control corpus with mutually independent parsing and exact evaluation paths?",
+    "meaningful_delta": "The existing gate had two exact evaluators but its third parser was tested only in a separate plumbing script; epoch 2 made the NetworkX signature a mandatory per-record obligation of the eventual target corpus gate and recorded its imported source hash.",
+    "acceptance_test": "The unchanged authoritative 328-record corpus and all complements pass the enhanced gate from a cold start, followed by an independent external replay.",
+    "closest_prior_work": [
+      {
+        "url": "https://users.cecs.anu.edu.au/~bdm/data/ramsey.html",
+        "difference": "McKay supplies the historical graphs; this artifact adds fail-closed independent verification plumbing and claims no new graph or classification."
+      }
+    ],
+    "novelty_searches": [
+      {
+        "source": "Dynamic Survey DS1.18 and targeted web/arXiv search",
+        "query": "R(5,5) exact value, 2026, r55_42some.g6",
+        "url": "https://www.cs.rit.edu/~spr/ElJC/sur.pdf",
+        "finding": "No rigorous result beyond 43 <= R(5,5) <= 46 was located; the apparent R(5,5)=45 item is explicitly heuristic."
+      }
+    ],
+    "external_channel": {
+      "recipient": "Brendan McKay, not contacted",
+      "url": "https://users.cecs.anu.edu.au/~bdm/data/ramsey.html",
+      "acceptance_path": "No contact or submission until the authoritative raw-source replay succeeds."
+    },
+    "independent_validations": [
+      {
+        "type": "repository_ci",
+        "validator": "nauty 2.8.8+ds-5 and NetworkX 3.3 local regression",
+        "result": "Exact complement-byte and graph-signature agreement on every order-7 isomorphism class and complement",
+        "artifact": "artifacts/graph6_third_parser_report.json",
+        "evidence_url": ""
+      }
+    ],
+    "relevance": {
+      "settles_exact_open_target": false,
+      "improves_best_known_result": false,
+      "source_explicitly_requests_result": false,
+      "expert_interest_confirmed": false,
+      "new_structural_result": false,
+      "evidence_url": ""
+    },
+    "arbitrary_cutoff_extension": false
+  },
+  "tool_disclosure": "GPT-5.6 Sol acted as principal investigator. Two precomputed GPT-5.6 Terra memos supplied advisory literature and verification reconnaissance; Sol verified their SHA-256 hashes and independently checked every relied-on source/artifact. Deterministic tools were Python 3.12.3, C/GCC, nauty 2.8.8+ds-5, NetworkX 3.3, curl, SHA-256, Git diagnostics, the computational-researcher experiment harness, and web search. No new subagent, SAT solver, proof assistant, or cloud job was used."
+}

@@ -1,0 +1,299 @@
+{
+  "id": "ramsey-r55-20260720-201853-f9f229",
+  "problem_id": "ramsey-r55",
+  "started_at": "2026-07-20T20:00:02.553150+00:00",
+  "finished_at": "2026-07-20T20:18:53.875368+00:00",
+  "duration_seconds": 1131.3,
+  "lane": "hard",
+  "phase": "technical",
+  "model": "gpt-5.6-sol",
+  "effort": "xhigh",
+  "orchestration": {
+    "architecture": "sol-principal-terra-delegates",
+    "principal_model": "gpt-5.6-sol",
+    "delegate_model": "gpt-5.6-terra",
+    "delegate_roles": [
+      "literature-strategy",
+      "experiment-verification"
+    ],
+    "delegate_statuses": {
+      "literature-strategy": "completed",
+      "experiment-verification": "completed"
+    }
+  },
+  "delegates": [
+    {
+      "role": "literature-strategy",
+      "model": "gpt-5.6-terra",
+      "effort": "high",
+      "status": "completed",
+      "memo_path": ".delegates/20260720-200002-f4d2cf/literature-strategy/memo.md",
+      "memo_sha256": "35c6c3988cfee447ce0e06100f7430e7c5c13e4a534e468e421ac37f7421f0fd",
+      "usage": {
+        "input_tokens": 282384,
+        "cached_input_tokens": 228096,
+        "output_tokens": 3278,
+        "reasoning_output_tokens": 822
+      },
+      "error": ""
+    },
+    {
+      "role": "experiment-verification",
+      "model": "gpt-5.6-terra",
+      "effort": "high",
+      "status": "completed",
+      "memo_path": ".delegates/20260720-200002-f4d2cf/experiment-verification/memo.md",
+      "memo_sha256": "d3c45789246ca377b1eafffd1293716d914ca82a1e29f37c44ad64e7e21ecdac",
+      "usage": {
+        "input_tokens": 283583,
+        "cached_input_tokens": 219648,
+        "output_tokens": 4014,
+        "reasoning_output_tokens": 1200
+      },
+      "error": ""
+    }
+  ],
+  "outcome": "no_progress",
+  "approach": "Authoritative McKay corpus acquisition followed by fail-closed validation and strengthening of the actual-record parser audit",
+  "strategy": {
+    "family": "audited corpus and independent evaluators",
+    "fingerprint": "r55controls2026",
+    "mechanism": "A frozen byte preflight gates two exact forbidden-set evaluators, a third NetworkX graph6 signature path, nauty complementation, and canonical labeling.",
+    "parent_ids": [
+      "strategy-r55-controls"
+    ]
+  },
+  "hypothesis": "The authoritative corpus is retrievable unchanged and can be audited through a third independent parser without weakening the source preflight.",
+  "discriminating_test": "Attempt one bounded authoritative download; admit no graph unless the 47,888-byte SHA-256 discriminator matches; regression-test the new parser path on every order-7 isomorphism class and complement.",
+  "strategy_status": "blocked",
+  "summary": "The authoritative download failed DNS resolution with curl code 6 and left no corpus. The target preflight returned code 2 with downstream_checks_run=false. The corpus gate was strengthened to require NetworkX signatures on every admitted record and complement. That path passed on all 1,044 unlabeled order-7 classes and their complements, with exact checker agreement and byte-exact nauty complementation. No order-42 graph was checked and no Ramsey bound changed.",
+  "rationale": "The positive result is verification infrastructure only. The exhaustive small control tests the new independent parsing obligation, while absent authenticated bytes preclude every target-instance, novelty, or repair claim.",
+  "claims": [
+    "The corpus gate now requires a third NetworkX order, edge-count, and ordered-degree signature for every source record and complement.",
+    "The new path agreed with both exact checker parsers on 2,088 order-7 source/complement records.",
+    "Local graph6 complementation agreed byte-for-byte with nauty-complg on that suite.",
+    "Zero order-42 corpus records were checked.",
+    "The rigorous range remains 43 <= R(5,5) <= 46."
+  ],
+  "evidence": [
+    ".proof-experiments/20260720-200524-16f6f3: acquisition returned code 6 and left no source file",
+    "artifacts/graph6_third_parser_report.json, SHA-256 91469c68ae5abb0353e4a4a1bc13c3e471e1e341bcd402b2f2bf504c6cd6e430",
+    ".proof-experiments/20260720-200957-c4fca8: corrected third-parser regression returned code 0",
+    "artifacts/corpus_source_preflight_epoch2.json: source_preflight_failed and downstream_checks_run=false",
+    "artifacts/MANIFEST.sha256 passed sha256sum -c"
+  ],
+  "next_steps": [
+    "Acquire unchanged r55_42some.g6 through a new network path or user-provided authoritative file with provenance.",
+    "Require 47,888 bytes, 328 LF-terminated records, and SHA-256 067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb.",
+    "Run the enhanced authenticated-corpus command recorded verbatim in CHECKPOINT.md.",
+    "Authenticate Springer Supplementary Data 4 only after the corpus passes.",
+    "Do not start unknown-42 or K43 repair search before both raw-source gates pass."
+  ],
+  "citations": [
+    "https://www.cs.rit.edu/~spr/ElJC/sur.pdf",
+    "https://onlinelibrary.wiley.com/doi/full/10.1002/jgt.70029",
+    "https://users.cecs.anu.edu.au/~bdm/data/ramsey.html",
+    "https://users.cecs.anu.edu.au/~bdm/data/r55_42some.g6",
+    "https://users.cecs.anu.edu.au/~bdm/papers/r55.pdf",
+    "https://arxiv.org/abs/2508.16699"
+  ],
+  "techniques": [
+    "source-byte authentication",
+    "deterministic experiment capture",
+    "graph6 decoding",
+    "independent parser signatures",
+    "exact 5-subset enumeration",
+    "recursive bitset clique enumeration",
+    "complement involution testing",
+    "nauty cross-checking",
+    "adversarial literature triage"
+  ],
+  "research_mode": "computational",
+  "experiments": [
+    ".proof-experiments/20260720-200524-16f6f3: authoritative acquisition failed with curl code 6",
+    ".proof-experiments/20260720-200920-965ada: passing regression superseded because its report omitted the imported gate hash",
+    ".proof-experiments/20260720-200957-c4fca8: corrected 2,088-record regression passed",
+    ".proof-experiments/20260720-201015-92e71b: strengthened gate retained fail-closed behavior"
+  ],
+  "independent_checker": "Checker A uses Python, a separate graph6 parser, and literal 5-subset enumeration. Checker B uses C, another parser, and recursive bitset clique enumeration. NetworkX 3.3 supplies a third decoding/signature path, and nauty-complg checks complement bytes. None ran on order 42 because the source was absent.",
+  "transfer_insights": [
+    "Isolated adversarial reconstruction -> an external parser should expose shared graph6 errors -> NetworkX agreed on every order-7 source/complement control.",
+    "Fail-closed provenance -> missing bytes must prevent mathematical evaluation -> the strengthened gate recorded downstream_checks_run=false."
+  ],
+  "established_facts": [
+    {
+      "claim": "The embedded NetworkX signature path agrees with both exact checker parsers and nauty complementation on every unlabeled order-7 graph class and complement.",
+      "evidence": "artifacts/graph6_third_parser_report.json",
+      "scope": "1,044 source representatives and 1,044 complements at order 7 only",
+      "status": "computed"
+    },
+    {
+      "claim": "The maintained published range remains 43 <= R(5,5) <= 46.",
+      "evidence": "Dynamic Survey DS1.18 and Angeltveit-McKay 2026",
+      "scope": "Published global status checked 2026-07-20",
+      "status": "proved"
+    }
+  ],
+  "ruled_out": [
+    {
+      "claim_or_route": "Start order-42 novelty or K43 repair search from the current packet.",
+      "scope": "Any continuation lacking the authenticated McKay corpus and Springer seed",
+      "reason": "The source gate failed before every target-instance check.",
+      "evidence": "artifacts/corpus_source_preflight_epoch2.json",
+      "reopen_condition": "The authoritative corpus passes the enhanced two-evaluator, three-parser gate."
+    },
+    {
+      "claim_or_route": "Treat arXiv:2508.16699 as establishing R(5,5)=45.",
+      "scope": "Rigorous bound or exact-value status",
+      "reason": "It presents randomized numerical diagnostics and a prime-sequence heuristic, not a witness or exhaustive exclusion.",
+      "evidence": "https://arxiv.org/abs/2508.16699",
+      "reopen_condition": "Supply an independently checked witness or a complete proof certificate."
+    }
+  ],
+  "open_leads": [
+    {
+      "description": "Authenticate the 328 McKay records and their 328 complements.",
+      "rationale": "Every novelty and canonical-comparison claim depends on these controls.",
+      "next_experiment": "Place unchanged bytes at sources/r55_42some.g6 and run the command in CHECKPOINT.md.",
+      "priority": "high",
+      "status": "open"
+    },
+    {
+      "description": "Authenticate Springer Supplementary Data 4 after the corpus passes.",
+      "rationale": "It is the strongest published bounded-repair seed, but the local transcription lacks publisher provenance.",
+      "next_experiment": "Retrieve the unchanged TXT and require exact violation identities under both checkers.",
+      "priority": "high",
+      "status": "open"
+    }
+  ],
+  "blocker": "The command environment cannot resolve the authoritative host, the browser cannot export the raw body, and no authenticated corpus exists locally.",
+  "reopen_condition": "Provide or retrieve unchanged McKay bytes with provenance matching the frozen size, record count, and SHA-256 discriminator.",
+  "reopen_evidence": "",
+  "policy_flags": [
+    "Repeated blocked strategy r55controls2026 without evidence satisfying its reopen condition."
+  ],
+  "candidate_profile": {
+    "contribution_class": "research_artifact",
+    "scholarly_question": "Can later R(5,5) experiments use a source-authenticated control corpus with mutually independent parsing and evaluation paths?",
+    "meaningful_delta": "The third parser is now a mandatory per-record obligation of the eventual target gate, with its imported source hash recorded in the regression report.",
+    "acceptance_test": "The unchanged authoritative corpus and all complements pass the enhanced gate from a cold start and receive an independent external replay.",
+    "closest_prior_work": [
+      {
+        "url": "https://users.cecs.anu.edu.au/~bdm/data/ramsey.html",
+        "difference": "McKay supplies the historical graphs; this artifact adds fail-closed verification plumbing and claims no new graph or classification."
+      }
+    ],
+    "novelty_searches": [
+      {
+        "source": "Dynamic Survey DS1.18 and targeted web/arXiv search",
+        "query": "R(5,5) exact value 2026 r55_42some.g6",
+        "url": "https://www.cs.rit.edu/~spr/ElJC/sur.pdf",
+        "finding": "No rigorous result beyond 43 <= R(5,5) <= 46 was located; the apparent value-45 result is explicitly heuristic."
+      }
+    ],
+    "external_channel": {
+      "recipient": "Brendan McKay, not contacted",
+      "url": "https://users.cecs.anu.edu.au/~bdm/data/ramsey.html",
+      "acceptance_path": "No contact or submission until authoritative raw-source replay succeeds."
+    },
+    "independent_validations": [
+      {
+        "type": "repository_ci",
+        "validator": "nauty 2.8.8+ds-5 and NetworkX 3.3 local regression",
+        "result": "Exact complement-byte and signature agreement on every order-7 class and complement",
+        "artifact": "artifacts/graph6_third_parser_report.json",
+        "evidence_url": ""
+      }
+    ],
+    "relevance": {
+      "settles_exact_open_target": false,
+      "improves_best_known_result": false,
+      "source_explicitly_requests_result": false,
+      "expert_interest_confirmed": false,
+      "new_structural_result": false,
+      "evidence_url": ""
+    },
+    "arbitrary_cutoff_extension": false
+  },
+  "contribution_gate": {
+    "schema_version": 1,
+    "passed": false,
+    "status": "not_requested",
+    "reasons": []
+  },
+  "contribution_status": "research_attempt",
+  "continuation": {
+    "objective": "Close the authoritative order-42 corpus control gate.",
+    "first_action": "Acquire sources/r55_42some.g6 through a newly available path, then run the r55-authenticated-corpus-gate command in CHECKPOINT.md.",
+    "stop_condition": "Stop at any byte, record, checker, NetworkX signature, forbidden-set, histogram, degree, complement, or canonical-label mismatch."
+  },
+  "strategy_proposals": [],
+  "tool_disclosure": "GPT-5.6 Sol was principal investigator. Two precomputed GPT-5.6 Terra memos supplied advisory reconnaissance; Sol verified their hashes and independently audited relied-on evidence. Tools used: Python 3.12.3, C/GCC, nauty 2.8.8+ds-5, NetworkX 3.3, curl, SHA-256, Git diagnostics, the experiment harness, and web search. No new subagent, SAT solver, proof assistant, or cloud job was used.; orchestration: gpt-5.6-sol principal with gpt-5.6-terra delegates.",
+  "review_status": "not a result claim",
+  "usage": {
+    "input_tokens": 6638191,
+    "cached_input_tokens": 6441728,
+    "output_tokens": 33327,
+    "reasoning_output_tokens": 9775
+  },
+  "error": "",
+  "artifact_hashes": {
+    ".gitignore": "37ca6f2ba08b1056b844dbccd6415015423c9f4c3ab0d165597d591220cbbc90",
+    ".proof-experiments/20260720-192515-588c72/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".proof-experiments/20260720-192515-588c72/stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".proof-experiments/20260720-193914-fbe251/experiment.json": "c66982c5a42b88769ad5b3dce76dd36ecbdefcfcf57cd8c36a7b04e8e76f779d",
+    ".proof-experiments/20260720-193914-fbe251/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".proof-experiments/20260720-193914-fbe251/stdout.txt": "98a1367a9423dcccf52edf6345cbc1edd6cffc287353b89c934e24199e8c27db",
+    ".proof-experiments/20260720-193953-b4e5bd/experiment.json": "707f0e3a7c131c429cc0a96c8f1fb0b6a509ed9cd62b26bdedde80a4b641c778",
+    ".proof-experiments/20260720-193953-b4e5bd/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".proof-experiments/20260720-193953-b4e5bd/stdout.txt": "c1e4c40b48716ca40bce9d77c1e6f3dc3db6a49910cad1a458778115a4e30eef",
+    ".proof-experiments/20260720-194142-be8455/experiment.json": "3ee0fe2fcadf2a9c81b0ddae0aa91565b96a7d4d0be5e5b968fd98d71a3b0e85",
+    ".proof-experiments/20260720-194142-be8455/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".proof-experiments/20260720-194142-be8455/stdout.txt": "114e399bc59b56f4f9b1237a87ec3828f27818a071baa9c5bc61ba0c921e8ee2",
+    ".proof-experiments/20260720-200524-16f6f3/experiment.json": "31eaf435d38e25b167d4f33065d49aa0f407703927f9e692e633a05c23a860a6",
+    ".proof-experiments/20260720-200524-16f6f3/stderr.txt": "865ed0bcd915fa7e9c236841adf3e8b54b3b692ebdb83d335bcfc0670f306f40",
+    ".proof-experiments/20260720-200524-16f6f3/stdout.txt": "f286390876c21f9e24227e3d19f7ce36853adc6538990c6718eb9daaa612576b",
+    ".proof-experiments/20260720-200920-965ada/experiment.json": "dd07179c024ede09f85368853247baaa6faa18385238791779b2955007fdaf39",
+    ".proof-experiments/20260720-200920-965ada/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".proof-experiments/20260720-200920-965ada/stdout.txt": "17603d735bf8d43eacd9eb7aaf881417a6338763f936b6fef702f287d7ac6bdb",
+    ".proof-experiments/20260720-200957-c4fca8/experiment.json": "75b343850f042321f6ddfe53c7eee95fed0a9c41683a9d5418bc94951dfa2db0",
+    ".proof-experiments/20260720-200957-c4fca8/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".proof-experiments/20260720-200957-c4fca8/stdout.txt": "74f54fb894a97ea1673f79ab98c09a009903eefaab8d6cd1a58aaabb1b250231",
+    ".proof-experiments/20260720-201015-92e71b/experiment.json": "6c763c6f8ab87bf5a430a3df18bbdcd55064a590ff3b70a57ef77a262a7f4734",
+    ".proof-experiments/20260720-201015-92e71b/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".proof-experiments/20260720-201015-92e71b/stdout.txt": "3c692f0ed4bbc424e1f3f214b8fb955b72ac5db12f00325a5b4a3595646d4aab",
+    ".proof-repository/LARGE_ARTIFACTS.json": "753acbea6b706a0f644a70ada7b0acb1b1308c8319ae2e0b19634b4e626a4d93",
+    ".proof-repository/metadata.json": "5308e506daf432cc27dc4b5b258f5fa0b36dc1a3ccdf4e10de8cc4cbdf1a772b",
+    "CHECKPOINT.md": "0f25753831643827bdf157d79fdb2ee73384d82c574f863759e3dc1214ef062f",
+    "README.md": "a2c55e862256998fa5230ac15fdd54b518bed92c46a519628e777c78ac30662a",
+    "artifacts/MANIFEST.sha256": "5eb897405d9413b18d05542e3dcd65a7e79793b6076e02cc7358c62403e78a80",
+    "artifacts/corpus_retrieval_headers.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifacts/corpus_source_preflight_epoch2.json": "db893987f58b718712ebd39f6e8338df2c79d32f0fe2dfdc62f7c051011e7fb4",
+    "artifacts/corpus_source_preflight_report.json": "db893987f58b718712ebd39f6e8338df2c79d32f0fe2dfdc62f7c051011e7fb4",
+    "artifacts/graph6_plumbing_report.json": "b217efb5a2393c62d0ffde250fac4e419d30bb8e431c15b61e3232ff51eb1812",
+    "artifacts/graph6_third_parser_report.json": "91469c68ae5abb0353e4a4a1bc13c3e471e1e341bcd402b2f2bf504c6cd6e430",
+    "artifacts/provisional_k43_control_report.json": "f854b8e8b69c9006fca6e797952eeac5c3540a452105420878b7e4d356df69e5",
+    "checkers/checker_a.py": "73ab070b87449de7ed3465a3f8165236e2195bc1ba88d72f4ceeb746b108abec",
+    "checkers/checker_b.c": "0bebf72df867d3fa124d828e966c2c7289f92c5bae08e13ca7121efcaab47856",
+    "docs/DOSSIER.md": "0b547b998d89449064feb5da20f8e861fecd23148d4a45aebe6b478ae71330fe",
+    "inputs/k43_two_conflict_gist.txt": "3beebde4f3120337029bb24de1f737f72eab567cbe92c77f79e7206ce4c304e9",
+    "lab-archive/lab-ramsey-r55-3b8175732922.json": "00e95b4ead73095044e7e1ba359b84948b5cda87bacff2a81830f99bda94ef02",
+    "lab-archive/lab-ramsey-r55-8a3afada1b59.json": "131a2cee3f73f6ea6c1124dad524aad8843323532179108d024efcd525b84639",
+    "lab-runs/lab-ramsey-r55-3b8175732922/segment-01/20260720-193251-7b935b/experiment.json": "aa41567debcb7f756ef2f82fdad33d45a3b1b5747bbd57dd7faaebf7e49dfcb9",
+    "lab-runs/lab-ramsey-r55-3b8175732922/segment-01/20260720-193251-7b935b/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "lab-runs/lab-ramsey-r55-3b8175732922/segment-01/20260720-193251-7b935b/stdout.txt": "41e1cdb4147cbed4519c9800e1693da39d3ad4dd81bcfaf359d4b937c7eac147",
+    "lab-runs/lab-ramsey-r55-8a3afada1b59/segment-01/20260720-192707-e20224/experiment.json": "51e91e54cb5fb6436d41ff1fd61773f8efcb2832320f103a72dc0f852f1fd15e",
+    "lab-runs/lab-ramsey-r55-8a3afada1b59/segment-01/20260720-192707-e20224/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "lab-runs/lab-ramsey-r55-8a3afada1b59/segment-01/20260720-192707-e20224/stdout.txt": "084c799cd551dd1d8d5c5f9a5d593b2e931f5e36122ee5c793c1d08a19839cc0",
+    "records/attempts/ramsey-r55-20260720-194611-f14832.json": "7a8c45f81a48cf607633b8a0e9467d1cf01cf93df45b2aa9236ae56a08249cf1",
+    "records/attempts/ramsey-r55-20260720-194611-f14832.md": "cf1477c8fae35888ea92c568835990e1947a480ac371f6735f9d20489bf4cdfb",
+    "records/attempts/ramsey-r55-20260720-201015-epoch2.json": "c0a1a2f75f5f0fc2460c7598514390a4bbca8cfcd8ed60a0be45dbf7fc422479",
+    "records/attempts/ramsey-r55-20260720-201015-epoch2.md": "c09be006b29d9bcba0730048175d69a2380560c85f4fb7856868b2e17ae1c3c4",
+    "records/problem.json": "f843c616fcd62e459490ae6c692db6395f68c9ee00d72c2e84fed8cec24f7777",
+    "records/research-state.json": "c22eabdc4fc2b5ab32acd7dace10763fab0bc85bdb773c73b416e09b6e34b862",
+    "scripts/run_control_gate.py": "fc699ad26005d4fa251f34a222e8bad1fb92982f332cc00578237fc2c1c9feb3",
+    "scripts/run_corpus_gate.py": "60a1e201f08103057593dad6ee5f81468702493e6acdf247d804a776fe91797f",
+    "scripts/test_graph6_plumbing.py": "3464395c5d968b03d41909705dba62271c0746ef3ddeb66475252360a985a87d",
+    "sources/provenance.json": "65df8a9c25f04445568eb5bbb4c15944c7ea460af0f00fb2f463acc042046cd5"
+  }
+}

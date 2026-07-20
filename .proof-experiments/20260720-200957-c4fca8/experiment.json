@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "20260720-200957-c4fca8",
+  "name": "r55-third-parser-regression-v2",
+  "hypothesis": "The NetworkX signature path added to the corpus gate agrees with the two exact checker parsers on all source and complement representatives of every order-7 graph class",
+  "expected_signal": "Exact agreement on order, edge count, and ordered degrees for 1,044 source records and 1,044 complements, with byte-exact nauty complementation and an imported corpus-gate source hash",
+  "command": [
+    "python3",
+    "scripts/test_graph6_plumbing.py",
+    "checkers/checker_a.py",
+    "checkers/checker_b.c",
+    "artifacts/graph6_third_parser_report.json"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 300,
+  "memory_limit_mb": 1024,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-20T20:09:57.499537+00:00",
+  "finished_at": "2026-07-20T20:09:58.987798+00:00",
+  "duration_seconds": 1.488,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "cdd2252975e0f9eb36b07c347e4a19f7a29601e6",
+  "source_urls": [
+    "https://users.cecs.anu.edu.au/~bdm/data/r55_42some.g6"
+  ],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/scripts/test_graph6_plumbing.py": "3464395c5d968b03d41909705dba62271c0746ef3ddeb66475252360a985a87d",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/checker_a.py": "73ab070b87449de7ed3465a3f8165236e2195bc1ba88d72f4ceeb746b108abec",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/checker_b.c": "0bebf72df867d3fa124d828e966c2c7289f92c5bae08e13ca7121efcaab47856",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/graph6_third_parser_report.json": "a6ace8152b60c68678a50c5ff2c84d2a4cb7826caabb51b1da526ee1f7dd8466"
+  },
+  "peak_child_memory_rusage": 35456,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "74f54fb894a97ea1673f79ab98c09a009903eefaab8d6cd1a58aaabb1b250231",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

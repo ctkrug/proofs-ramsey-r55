@@ -13,7 +13,7 @@ import tempfile
 
 import networkx as nx
 
-from run_corpus_gate import complement_graph6
+import run_corpus_gate
 
 
 def digest(path: Path) -> str:
@@ -32,11 +32,6 @@ def graph_list(payload: dict[str, object]) -> list[dict[str, object]]:
     if not isinstance(graphs, list):
         raise AssertionError("checker output has no graph list")
     return graphs
-
-
-def networkx_signature(record: bytes) -> tuple[int, int, list[int]]:
-    graph = nx.from_graph6_bytes(record)
-    return graph.number_of_nodes(), graph.number_of_edges(), [degree for _, degree in graph.degree()]
 
 
 def main() -> int:
@@ -62,8 +57,8 @@ def main() -> int:
         records = source.read_bytes().splitlines()
         if len(records) != 1_044:
             raise AssertionError(f"nauty-geng produced {len(records)} records, expected 1044")
-        complements = [complement_graph6(record) for record in records]
-        if [complement_graph6(record) for record in complements] != records:
+        complements = [run_corpus_gate.complement_graph6(record) for record in records]
+        if [run_corpus_gate.complement_graph6(record) for record in complements] != records:
             raise AssertionError("local complement transformation is not an involution")
         ours.write_bytes(b"\n".join(complements) + b"\n")
         subprocess.run([required["nauty-complg"], "-q", str(source), str(nauty)], check=True)
@@ -84,7 +79,7 @@ def main() -> int:
                 raise AssertionError(f"checker disagreement on {label} suite")
             selected_records = records if label == "source" else complements
             for index, (record, checked) in enumerate(zip(selected_records, graphs_a, strict=True), 1):
-                n, edges, degrees = networkx_signature(record)
+                n, edges, degrees = run_corpus_gate.networkx_signature(record)
                 if (checked["n"], checked["edges"], checked["degrees"]) != (n, edges, degrees):
                     raise AssertionError(f"NetworkX signature disagreement on {label} record {index}")
             payloads[label] = graphs_a
@@ -109,6 +104,7 @@ def main() -> int:
                 "third_parser": f"networkx {nx.__version__}",
             },
             "checker_hashes": {"checker_a": digest(checker_a), "checker_b_source": digest(checker_b_source)},
+            "imported_corpus_gate_hash": digest(Path(run_corpus_gate.__file__).resolve()),
             "aggregate_forbidden_sets": {
                 label: {
                     "zero_k5": sum(len(graph["zero_k5"]) for graph in graphs),

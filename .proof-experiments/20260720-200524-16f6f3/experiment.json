@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "id": "20260720-200524-16f6f3",
+  "name": "r55-authoritative-corpus-acquisition",
+  "hypothesis": "The authoritative McKay corpus is retrievable unchanged and matches the frozen byte discriminator",
+  "expected_signal": "A 47,888-byte LF-terminated file with SHA-256 067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb is saved with retrieval headers",
+  "command": [
+    "curl",
+    "--fail",
+    "--location",
+    "--max-time",
+    "60",
+    "--retry",
+    "1",
+    "--retry-all-errors",
+    "--remove-on-error",
+    "--dump-header",
+    "artifacts/corpus_retrieval_headers.txt",
+    "--output",
+    "sources/r55_42some.g6",
+    "--write-out",
+    "url_effective=%{url_effective}\\nhttp_code=%{http_code}\\ncontent_type=%{content_type}\\nsize_download=%{size_download}\\n",
+    "https://users.cecs.anu.edu.au/~bdm/data/r55_42some.g6"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 90,
+  "memory_limit_mb": 256,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-20T20:05:24.715118+00:00",
+  "finished_at": "2026-07-20T20:05:25.822209+00:00",
+  "duration_seconds": 1.107,
+  "returncode": 6,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "cdd2252975e0f9eb36b07c347e4a19f7a29601e6",
+  "source_urls": [
+    "https://users.cecs.anu.edu.au/~bdm/data/r55_42some.g6"
+  ],
+  "input_artifacts": {},
+  "peak_child_memory_rusage": 17920,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "f286390876c21f9e24227e3d19f7ce36853adc6538990c6718eb9daaa612576b",
+    "stderr.txt": "865ed0bcd915fa7e9c236841adf3e8b54b3b692ebdb83d335bcfc0670f306f40"
+  }
+}

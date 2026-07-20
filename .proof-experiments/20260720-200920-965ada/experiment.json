@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "20260720-200920-965ada",
+  "name": "r55-third-parser-regression",
+  "hypothesis": "The NetworkX signature path added to the corpus gate agrees with the two exact checker parsers on all source and complement representatives of every order-7 graph class",
+  "expected_signal": "Exact agreement on order, edge count, and ordered degrees for 1,044 source records and 1,044 complements, with byte-exact nauty complementation",
+  "command": [
+    "python3",
+    "scripts/test_graph6_plumbing.py",
+    "checkers/checker_a.py",
+    "checkers/checker_b.c",
+    "artifacts/graph6_third_parser_report.json"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 300,
+  "memory_limit_mb": 1024,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-20T20:09:20.426630+00:00",
+  "finished_at": "2026-07-20T20:09:21.975368+00:00",
+  "duration_seconds": 1.549,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "cdd2252975e0f9eb36b07c347e4a19f7a29601e6",
+  "source_urls": [
+    "https://users.cecs.anu.edu.au/~bdm/data/r55_42some.g6"
+  ],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/scripts/test_graph6_plumbing.py": "10289eb6296e3c281cd0b05f29c57c0126595acc0182d670317d57719e741f96",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/checker_a.py": "73ab070b87449de7ed3465a3f8165236e2195bc1ba88d72f4ceeb746b108abec",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/checker_b.c": "0bebf72df867d3fa124d828e966c2c7289f92c5bae08e13ca7121efcaab47856"
+  },
+  "peak_child_memory_rusage": 36096,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "17603d735bf8d43eacd9eb7aaf881417a6338763f936b6fef702f287d7ac6bdb",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

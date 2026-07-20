@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_status_checked_at": "2026-07-20T20:00:00Z",
+  "source_status_checked_at": "2026-07-20T20:11:37Z",
   "official_status": {
     "url": "https://www.cs.rit.edu/~spr/ElJC/sur.pdf",
     "revision": "DS1.18, 2026-04-24",
@@ -15,7 +15,15 @@
     "mirror_git_lfs_pointer_sha": "df96f39ff5af573683bf9eb3fadec73c36d9f7ab",
     "qualification": "mirror hash and size are a byte-acquisition discriminator; authoritative-source equivalence remains unverified",
     "local_raw_artifact": null,
-    "status": "blocked: managed command environment denied outbound connection after both DNS and direct-IP/Host attempts; browser exposed metadata but not binary bytes"
+    "status": "blocked: the epoch-2 authoritative curl acquisition returned code 6 after two DNS failures and left no local corpus; browser access confirmed the URL/content type but did not expose savable raw bytes",
+    "latest_acquisition_experiment": ".proof-experiments/20260720-200524-16f6f3",
+    "latest_preflight_report": "artifacts/corpus_source_preflight_epoch2.json",
+    "third_parser_control": {
+      "gate_source_sha256": "60a1e201f08103057593dad6ee5f81468702493e6acdf247d804a776fe91797f",
+      "regression_report": "artifacts/graph6_third_parser_report.json",
+      "regression_report_sha256": "91469c68ae5abb0353e4a4a1bc13c3e471e1e341bcd402b2f2bf504c6cd6e430",
+      "scope": "NetworkX signatures agree with both checker parsers on all 1044 unlabeled order-7 classes and their complements; no order-42 record checked"
+    }
   },
   "publisher_k43": {
     "article_url": "https://doi.org/10.1038/s41467-018-07327-2",
@@ -48,6 +56,16 @@
       "role": "literature-strategy",
       "path": ".delegates/20260720-192523-5a42d3/literature-strategy/memo.md",
       "sha256": "40ead0ae684cc75a215f67c028871f5ee9e295ba30f2e2793e8ee63dd2eee577"
+    },
+    {
+      "role": "literature-strategy",
+      "path": ".delegates/20260720-200002-f4d2cf/literature-strategy/memo.md",
+      "sha256": "35c6c3988cfee447ce0e06100f7430e7c5c13e4a534e468e421ac37f7421f0fd"
+    },
+    {
+      "role": "experiment-verification",
+      "path": ".delegates/20260720-200002-f4d2cf/experiment-verification/memo.md",
+      "sha256": "d3c45789246ca377b1eafffd1293716d914ca82a1e29f37c44ad64e7e21ecdac"
     }
   ]
 }

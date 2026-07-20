@@ -5,6 +5,7 @@ from __future__ import annotations
 
 from collections import Counter
 import hashlib
+import importlib.metadata
 import json
 from pathlib import Path
 import shutil
@@ -53,6 +54,16 @@ def graph6_records(raw: bytes) -> list[bytes]:
     if any(not record for record in records):
         raise ValueError("corpus contains a blank graph6 record")
     return records
+
+
+def networkx_signature(record: bytes) -> tuple[int, int, list[int]]:
+    """Decode through an external parser and return only representation-neutral data."""
+    try:
+        import networkx as nx
+    except ImportError as error:
+        raise RuntimeError("networkx is required for the third graph6 parser gate") from error
+    graph = nx.from_graph6_bytes(record)
+    return graph.number_of_nodes(), graph.number_of_edges(), [degree for _, degree in graph.degree()]
 
 
 def complement_graph6(record: bytes) -> bytes:
@@ -192,9 +203,18 @@ def main() -> int:
         if len(base_a) != EXPECTED_RECORDS or len(comp_a) != EXPECTED_RECORDS:
             raise AssertionError("checker record count mismatch")
 
-        for index, (base, complement) in enumerate(zip(base_a, comp_a, strict=True), 1):
+        base_networkx = [networkx_signature(record) for record in records]
+        comp_networkx = [networkx_signature(record) for record in complements]
+
+        for index, (base, complement, base_nx, complement_nx) in enumerate(
+            zip(base_a, comp_a, base_networkx, comp_networkx, strict=True), 1
+        ):
             if base["n"] != 42 or complement["n"] != 42:
                 raise AssertionError(f"record {index}: graph order is not 42")
+            if (base["n"], base["edges"], base["degrees"]) != base_nx:
+                raise AssertionError(f"record {index}: NetworkX source signature disagreement")
+            if (complement["n"], complement["edges"], complement["degrees"]) != complement_nx:
+                raise AssertionError(f"record {index}: NetworkX complement signature disagreement")
             for item, kind in ((base, "base"), (complement, "complement")):
                 if item["zero_k5"] or item["one_k5"]:
                     raise AssertionError(f"record {index} {kind}: forbidden 5-set found")
@@ -240,6 +260,11 @@ def main() -> int:
             "expected": expected,
             "checker_a": {"path": str(checker_a), "sha256": digest(checker_a), "method": base_a_payload["checker"]},
             "checker_b": {"path": str(checker_b_source), "sha256": digest(checker_b_source), "method": base_b_payload["checker"]},
+            "third_parser": {
+                "method": "NetworkX from_graph6_bytes; order/edge-count/ordered-degree signature only",
+                "version": importlib.metadata.version("networkx"),
+                "source_and_complement_signature_agreement": True,
+            },
             "canonicalizer": {"path": labelg, "version_probe": nauty_version(labelg)},
             "checked_instances": 656,
             "forbidden_sets": {"zero_k5": 0, "one_k5": 0},
