@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "20260720-210716-8da301",
+  "name": "r55-full-fingerprint-semantic-controls",
+  "hypothesis": "Adding full adjacency fingerprints preserves checker agreement, positive semantic mutations, parser rejection, and the provisional K43 deletion controls",
+  "expected_signal": "Control gate returns 0 with exact checker agreement and all semantic controls passing",
+  "command": [
+    "python3",
+    "scripts/run_control_gate.py",
+    "checkers/checker_a.py",
+    "checkers/checker_b.c",
+    "inputs/k43_two_conflict_gist.txt",
+    "artifacts/full_fingerprint_semantic_control_report.json"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 120,
+  "memory_limit_mb": 1024,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-20T21:07:16.576718+00:00",
+  "finished_at": "2026-07-20T21:07:30.467460+00:00",
+  "duration_seconds": 13.891,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "0abf581a8aa8fce8953644c7cacb206ef67ecbac",
+  "source_urls": [
+    "https://doi.org/10.1038/s41467-018-07327-2"
+  ],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/scripts/run_control_gate.py": "fc699ad26005d4fa251f34a222e8bad1fb92982f332cc00578237fc2c1c9feb3",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/checker_a.py": "b7f28adfec792139acce538ca879b775a0180467763b413e1a464672acddd259",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/checker_b.c": "40f719bb36f8d7d3db3a4b949dce8b20abd49499f57f7d5b651b718658014d2e",
+    "/root/proof-factory/research/ramsey-r55/workspace/inputs/k43_two_conflict_gist.txt": "3beebde4f3120337029bb24de1f737f72eab567cbe92c77f79e7206ce4c304e9"
+  },
+  "peak_child_memory_rusage": 31312,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "791239033675907d01571481491fbe7e7877d1ac47793e32f397aec3e2789566",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

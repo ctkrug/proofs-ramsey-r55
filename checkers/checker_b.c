@@ -277,6 +277,13 @@ static void print_checked_graph(Graph *graph) {
     print_string(graph->name);
     printf(",\"n\":%d,\"one_k5\":", graph->n);
     print_sets(&one);
+    printf(",\"upper_triangle_bits\":\"");
+    for (int high = 1; high < graph->n; ++high) {
+        for (int low = 0; low < high; ++low) {
+            putchar(((graph->neighbor[low] >> high) & 1) ? '1' : '0');
+        }
+    }
+    putchar('"');
     printf(",\"zero_k5\":");
     print_sets(&zero);
     putchar('}');

@@ -26,7 +26,8 @@ for that corpus (47,888 bytes, SHA-256
 `067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb`).  It
 refuses to run downstream checks unless all source bytes match.  On a match it
 checks the 328 records and 328 derived complements with both exact checkers,
-requires an independent NetworkX graph6 signature for every record and
+requires the complete upper-triangle adjacency bitstring to agree across both
+custom parsers and an independent NetworkX graph6 parser for every record and
 complement, reproduces the published edge histogram and degree range, tests
 complement involution, and requires 656 distinct canonical labels from Debian
 nauty's `nauty-labelg`.  The mirror hash is an acquisition discriminator, not
@@ -60,6 +61,11 @@ and compares the locally derived complements byte-for-byte with `nauty-complg`.
 Order 7 deliberately has three graph6 padding bits, just like order 42.
 The epoch-2 report `artifacts/graph6_third_parser_report.json` also records the
 hash of the imported target corpus-gate module.
+
+The epoch-3 report `artifacts/graph6_full_fingerprint_report.json` strengthens
+that test from order/edge/degree signatures to complete adjacency fingerprints
+across all three parsers.  It again covers all 1,044 order-7 classes and their
+complements, but it is not an order-42 corpus result.
 
 ```bash
 python3 scripts/test_graph6_plumbing.py \

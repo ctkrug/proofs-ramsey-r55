@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "20260720-210558-ad2aee",
+  "name": "r55-full-fingerprint-corpus-preflight",
+  "hypothesis": "The hardened corpus gate refuses all target-order work when the raw 47,888-byte corpus is absent",
+  "expected_signal": "Return code 2, status source_preflight_failed, and downstream_checks_run=false",
+  "command": [
+    "python3",
+    "scripts/run_corpus_gate.py",
+    "checkers/checker_a.py",
+    "checkers/checker_b.c",
+    "sources/r55_42some.g6",
+    "artifacts/corpus_source_preflight_epoch3.json"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 60,
+  "memory_limit_mb": 256,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-20T21:05:58.181020+00:00",
+  "finished_at": "2026-07-20T21:05:58.302516+00:00",
+  "duration_seconds": 0.122,
+  "returncode": 2,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "0abf581a8aa8fce8953644c7cacb206ef67ecbac",
+  "source_urls": [
+    "https://users.cecs.anu.edu.au/~bdm/data/r55_42some.g6"
+  ],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/scripts/run_corpus_gate.py": "d2fe11dcfd81b54568a9cf1dff822a0f45d4e6acd8e9de3a1a5c8f20bd9d8eb9",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/checker_a.py": "b7f28adfec792139acce538ca879b775a0180467763b413e1a464672acddd259",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/checker_b.c": "40f719bb36f8d7d3db3a4b949dce8b20abd49499f57f7d5b651b718658014d2e"
+  },
+  "peak_child_memory_rusage": 21376,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "caee27a2a4f072504a13a08b7db880304151cf3081c7fa7ce9bcd787dd4f9380",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

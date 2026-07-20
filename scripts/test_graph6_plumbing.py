@@ -79,9 +79,14 @@ def main() -> int:
                 raise AssertionError(f"checker disagreement on {label} suite")
             selected_records = records if label == "source" else complements
             for index, (record, checked) in enumerate(zip(selected_records, graphs_a, strict=True), 1):
-                n, edges, degrees = run_corpus_gate.networkx_signature(record)
-                if (checked["n"], checked["edges"], checked["degrees"]) != (n, edges, degrees):
-                    raise AssertionError(f"NetworkX signature disagreement on {label} record {index}")
+                n, edges, degrees, upper_triangle_bits = run_corpus_gate.networkx_signature(record)
+                if (
+                    checked["n"],
+                    checked["edges"],
+                    checked["degrees"],
+                    checked["upper_triangle_bits"],
+                ) != (n, edges, degrees, upper_triangle_bits):
+                    raise AssertionError(f"NetworkX full-adjacency disagreement on {label} record {index}")
             payloads[label] = graphs_a
 
         report = {
@@ -95,13 +100,13 @@ def main() -> int:
             "complement_involution": True,
             "complement_exact_byte_agreement_with_nauty": True,
             "checker_exact_output_agreement": True,
-            "networkx_signature_agreement": True,
+            "networkx_full_adjacency_agreement": True,
             "methods": {
                 "checker_a": "direct combinations over independently parsed Boolean matrices",
                 "checker_b": "recursive bitset clique enumeration over separately parsed records",
                 "complement_reference": required["nauty-complg"],
                 "suite_generator": required["nauty-geng"],
-                "third_parser": f"networkx {nx.__version__}",
+                "third_parser": f"networkx {nx.__version__}; full upper-triangle bitstring",
             },
             "checker_hashes": {"checker_a": digest(checker_a), "checker_b_source": digest(checker_b_source)},
             "imported_corpus_gate_hash": digest(Path(run_corpus_gate.__file__).resolve()),

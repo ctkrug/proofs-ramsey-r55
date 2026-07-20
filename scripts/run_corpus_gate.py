@@ -56,14 +56,20 @@ def graph6_records(raw: bytes) -> list[bytes]:
     return records
 
 
-def networkx_signature(record: bytes) -> tuple[int, int, list[int]]:
-    """Decode through an external parser and return only representation-neutral data."""
+def networkx_signature(record: bytes) -> tuple[int, int, list[int], str]:
+    """Decode through an external parser and return representation-neutral data."""
     try:
         import networkx as nx
     except ImportError as error:
         raise RuntimeError("networkx is required for the third graph6 parser gate") from error
     graph = nx.from_graph6_bytes(record)
-    return graph.number_of_nodes(), graph.number_of_edges(), [degree for _, degree in graph.degree()]
+    n = graph.number_of_nodes()
+    upper_triangle_bits = "".join(
+        "1" if graph.has_edge(low, high) else "0"
+        for high in range(1, n)
+        for low in range(high)
+    )
+    return n, graph.number_of_edges(), [degree for _, degree in graph.degree()], upper_triangle_bits
 
 
 def complement_graph6(record: bytes) -> bytes:
@@ -211,10 +217,21 @@ def main() -> int:
         ):
             if base["n"] != 42 or complement["n"] != 42:
                 raise AssertionError(f"record {index}: graph order is not 42")
-            if (base["n"], base["edges"], base["degrees"]) != base_nx:
-                raise AssertionError(f"record {index}: NetworkX source signature disagreement")
-            if (complement["n"], complement["edges"], complement["degrees"]) != complement_nx:
-                raise AssertionError(f"record {index}: NetworkX complement signature disagreement")
+            if (base["n"], base["edges"], base["degrees"], base["upper_triangle_bits"]) != base_nx:
+                raise AssertionError(f"record {index}: NetworkX source full-adjacency disagreement")
+            if (
+                complement["n"],
+                complement["edges"],
+                complement["degrees"],
+                complement["upper_triangle_bits"],
+            ) != complement_nx:
+                raise AssertionError(f"record {index}: NetworkX complement full-adjacency disagreement")
+            if len(base["upper_triangle_bits"]) != 861 or len(complement["upper_triangle_bits"]) != 861:
+                raise AssertionError(f"record {index}: upper-triangle fingerprint length is not 861")
+            if complement["upper_triangle_bits"] != "".join(
+                "0" if bit == "1" else "1" for bit in base["upper_triangle_bits"]
+            ):
+                raise AssertionError(f"record {index}: complement adjacency bits are not bitwise inverse")
             for item, kind in ((base, "base"), (complement, "complement")):
                 if item["zero_k5"] or item["one_k5"]:
                     raise AssertionError(f"record {index} {kind}: forbidden 5-set found")
@@ -248,6 +265,12 @@ def main() -> int:
                 "complement_sha256": digest_bytes(complement + b"\n"),
                 "source_canonical_sha256": digest_bytes(base_label + b"\n"),
                 "complement_canonical_sha256": digest_bytes(comp_label + b"\n"),
+                "source_upper_triangle_sha256": digest_bytes(
+                    base_a[index - 1]["upper_triangle_bits"].encode("ascii")
+                ),
+                "complement_upper_triangle_sha256": digest_bytes(
+                    comp_a[index - 1]["upper_triangle_bits"].encode("ascii")
+                ),
                 "source_edges": base_a[index - 1]["edges"],
                 "complement_edges": comp_a[index - 1]["edges"],
             })
@@ -261,9 +284,9 @@ def main() -> int:
             "checker_a": {"path": str(checker_a), "sha256": digest(checker_a), "method": base_a_payload["checker"]},
             "checker_b": {"path": str(checker_b_source), "sha256": digest(checker_b_source), "method": base_b_payload["checker"]},
             "third_parser": {
-                "method": "NetworkX from_graph6_bytes; order/edge-count/ordered-degree signature only",
+                "method": "NetworkX from_graph6_bytes; order, edge count, ordered degrees, and full upper-triangle bitstring",
                 "version": importlib.metadata.version("networkx"),
-                "source_and_complement_signature_agreement": True,
+                "source_and_complement_full_adjacency_agreement": True,
             },
             "canonicalizer": {"path": labelg, "version_probe": nauty_version(labelg)},
             "checked_instances": 656,

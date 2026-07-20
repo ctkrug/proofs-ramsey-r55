@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "20260720-210522-025825",
+  "name": "r55-graph6-full-fingerprint-regression",
+  "hypothesis": "Full upper-triangle fingerprints from the Python parser, C parser, and NetworkX agree on every unlabeled order-7 graph and complement",
+  "expected_signal": "All 2088 full adjacency fingerprints agree; exact forbidden-set outputs agree; local complements match nauty byte-for-byte",
+  "command": [
+    "python3",
+    "scripts/test_graph6_plumbing.py",
+    "checkers/checker_a.py",
+    "checkers/checker_b.c",
+    "artifacts/graph6_full_fingerprint_report.json"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 120,
+  "memory_limit_mb": 1024,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-20T21:05:22.340671+00:00",
+  "finished_at": "2026-07-20T21:05:23.471916+00:00",
+  "duration_seconds": 1.131,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "0abf581a8aa8fce8953644c7cacb206ef67ecbac",
+  "source_urls": [
+    "https://users.cecs.anu.edu.au/~bdm/data/r55_42some.g6"
+  ],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/scripts/test_graph6_plumbing.py": "08c80f8b50810cdc4e46f2c302b7063efa750c88b80216a2fb648bbdd416e4a2",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/checker_a.py": "b7f28adfec792139acce538ca879b775a0180467763b413e1a464672acddd259",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/checker_b.c": "40f719bb36f8d7d3db3a4b949dce8b20abd49499f57f7d5b651b718658014d2e"
+  },
+  "peak_child_memory_rusage": 36596,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "6b791b131330a6a4d32972e1c3fbfb17183a955133998d00fce029d2bb14a993",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

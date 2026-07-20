@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "epoch": 3,
+  "principal": {
+    "role": "Sol principal investigator",
+    "model": "gpt-5.6-sol"
+  },
+  "promoted_delegate_artifacts": [
+    {
+      "role": "experiment-verification",
+      "model": "gpt-5.6-terra",
+      "source_path": ".delegates/20260720-210000-1525c3/experiment-verification/memo.md",
+      "source_sha256": "0721bd8c87de8bf095843cd31f9e6e7d31204171f37b0a9c1fcb958e9db7c763",
+      "promoted_path": "docs/delegate-memos/20260720-210000-experiment-verification.md",
+      "relied_claim": "Compare complete upper-triangle adjacency fingerprints across the two custom graph6 parsers and NetworkX; edge and degree signatures are not sufficient parser evidence.",
+      "audit_result": "Accepted as a verifier-hardening requirement and independently implemented and tested by the Sol principal."
+    }
+  ],
+  "rejected_or_unrelied_advice": [
+    {
+      "role": "literature-strategy",
+      "source_path": ".delegates/20260720-210000-1525c3/literature-strategy/memo.md",
+      "source_sha256": "3f239186665edd4f3c5953249236241682cb943756ab553c1a9929567542789b",
+      "reason": "Its source-gate recommendation matched the pre-existing durable strategy and was audited directly from maintained sources; no claim depended on the memo artifact."
+    }
+  ]
+}

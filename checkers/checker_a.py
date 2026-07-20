@@ -123,11 +123,17 @@ def check(name: str, adjacency: list[list[bool]]) -> dict[str, object]:
         elif not any(values):
             zero.append(list(vertices))
     degrees = [sum(row) for row in adjacency]
+    upper_triangle_bits = "".join(
+        "1" if adjacency[low][high] else "0"
+        for high in range(1, n)
+        for low in range(high)
+    )
     return {
         "id": name,
         "n": n,
         "edges": sum(degrees) // 2,
         "degrees": degrees,
+        "upper_triangle_bits": upper_triangle_bits,
         "zero_k5": zero,
         "one_k5": one,
     }
@@ -165,4 +171,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

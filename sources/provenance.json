@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_status_checked_at": "2026-07-20T20:11:37Z",
+  "source_status_checked_at": "2026-07-20T21:08:34Z",
   "official_status": {
     "url": "https://www.cs.rit.edu/~spr/ElJC/sur.pdf",
     "revision": "DS1.18, 2026-04-24",
@@ -15,14 +15,14 @@
     "mirror_git_lfs_pointer_sha": "df96f39ff5af573683bf9eb3fadec73c36d9f7ab",
     "qualification": "mirror hash and size are a byte-acquisition discriminator; authoritative-source equivalence remains unverified",
     "local_raw_artifact": null,
-    "status": "blocked: the epoch-2 authoritative curl acquisition returned code 6 after two DNS failures and left no local corpus; browser access confirmed the URL/content type but did not expose savable raw bytes",
-    "latest_acquisition_experiment": ".proof-experiments/20260720-200524-16f6f3",
-    "latest_preflight_report": "artifacts/corpus_source_preflight_epoch2.json",
+    "status": "blocked: the epoch-3 Hugging Face resolve-path curl acquisition also returned code 6 after two DNS failures and left no local corpus; browser access confirmed the maintained ANU index and mirror hash/size metadata but neither browser interface exposed savable raw bytes",
+    "latest_acquisition_experiment": ".proof-experiments/20260720-210542-55792e",
+    "latest_preflight_report": "artifacts/corpus_source_preflight_epoch3.json",
     "third_parser_control": {
-      "gate_source_sha256": "60a1e201f08103057593dad6ee5f81468702493e6acdf247d804a776fe91797f",
-      "regression_report": "artifacts/graph6_third_parser_report.json",
-      "regression_report_sha256": "91469c68ae5abb0353e4a4a1bc13c3e471e1e341bcd402b2f2bf504c6cd6e430",
-      "scope": "NetworkX signatures agree with both checker parsers on all 1044 unlabeled order-7 classes and their complements; no order-42 record checked"
+      "gate_source_sha256": "cec728c0a1a94bea0f81d804d0a865da8c7aaefe1b919f51819d8da7b2c300ff",
+      "regression_report": "artifacts/graph6_full_fingerprint_report.json",
+      "regression_report_sha256": "9be4f1dc4257390f324bb7491bba5f282aa76e738c085adf6326448be3b8bd55",
+      "scope": "Complete upper-triangle adjacency fingerprints from NetworkX agree with both checker parsers on all 1044 unlabeled order-7 classes and their complements; no order-42 record checked"
     }
   },
   "publisher_k43": {
@@ -37,6 +37,12 @@
     "status": "visible third-party transcription; graph2 is alleged complement-isomorphic to publisher graph; not source authentication"
   },
   "terra_memos": [
+    {
+      "role": "experiment-verification",
+      "path": "docs/delegate-memos/20260720-210000-experiment-verification.md",
+      "sha256": "0721bd8c87de8bf095843cd31f9e6e7d31204171f37b0a9c1fcb958e9db7c763",
+      "provenance": "promoted exact copy; see records/delegate-provenance-epoch3.json"
+    },
     {
       "role": "experiment-verification",
       "path": ".delegates/20260720-191118-871024/experiment-verification/memo.md",

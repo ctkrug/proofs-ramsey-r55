@@ -1,0 +1,174 @@
+{
+  "id": "ramsey-r55-20260720-211500-epoch3",
+  "problem_id": "ramsey-r55",
+  "started_at": "2026-07-20T21:00:00+00:00",
+  "finished_at": "2026-07-20T21:15:02.841680+00:00",
+  "lane": "hard",
+  "phase": "technical",
+  "model": "gpt-5.6-sol",
+  "outcome": "progress",
+  "approach": "Fail-closed acquisition of the order-42 control corpus through a new mirror path, plus full-adjacency parser hardening",
+  "strategy": {
+    "family": "audited corpus and independent evaluators",
+    "fingerprint": "r55controls2026",
+    "mechanism": "A frozen source-byte preflight gates complete upper-triangle adjacency agreement across two custom parsers and NetworkX, two exact forbidden-set evaluators, nauty complementation, and canonical labeling.",
+    "parent_ids": [
+      "strategy-r55-controls"
+    ]
+  },
+  "hypothesis": "The Hugging Face resolve path can supply the frozen corpus bytes, and complete adjacency fingerprints can close the remaining parser-equivalence gap before any target evaluation.",
+  "discriminating_test": "Attempt one bounded mirror download; require 47,888 bytes and the frozen SHA-256 before target work; independently require all three parsers to agree on complete adjacency for every order-7 class and complement.",
+  "strategy_status": "blocked",
+  "summary": "The new Hugging Face acquisition path failed DNS resolution with curl code 6 and left no corpus or HTTP headers. The final target preflight returned code 2 with downstream_checks_run=false. The gate was strengthened from order/edge/degree signatures to complete upper-triangle adjacency fingerprints across Python, C, and NetworkX; the final exhaustive order-7 regression passed on 1,044 unlabeled classes and their complements, and the semantic/parser controls also passed. No order-42 record was checked, no canonical novelty comparison ran, and no Ramsey bound changed.",
+  "rationale": "The acquisition failure keeps the strategy blocked, but the complete-fingerprint requirement removes a concrete verifier weakness that coarse signatures could miss. The positive evidence is a reusable research-software improvement with an exhaustive finite test only at order 7.",
+  "claims": [
+    "Complete upper-triangle adjacency fingerprints agree across the Python parser, C parser, and NetworkX on all 1,044 unlabeled order-7 graph classes and their 1,044 complements.",
+    "The same suite has exact checker-output agreement and local complement bytes agree with nauty-complg.",
+    "The provisional K43 semantic-mutation, malformed-input, violation-identity, and deletion controls still pass after fingerprint hardening; publisher authentication remains false.",
+    "Zero order-42 corpus records were checked and the rigorous range remains 43 <= R(5,5) <= 46."
+  ],
+  "evidence": [
+    "artifacts/graph6_full_fingerprint_report.json, SHA-256 9be4f1dc4257390f324bb7491bba5f282aa76e738c085adf6326448be3b8bd55",
+    "artifacts/full_fingerprint_semantic_control_report.json, SHA-256 de66b7c663724a66ee98b5ba91f4f21b55f2b5b9118d8016926ad4c6e9e567c7",
+    ".proof-experiments/20260720-210542-55792e: mirror acquisition returned curl code 6 and left no source file",
+    "artifacts/corpus_source_preflight_epoch3.json: status source_preflight_failed and downstream_checks_run=false",
+    "records/delegate-provenance-epoch3.json records the exact promoted Terra memo and Sol audit"
+  ],
+  "next_steps": [
+    "Do not retry ANU or Hugging Face curl in the unchanged command environment.",
+    "Obtain the unchanged McKay bytes through a genuinely new raw-file export path or a user-supplied file with retrieval provenance.",
+    "Require exactly 47,888 bytes, 328 nonblank LF-terminated records, and SHA-256 067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb.",
+    "Run the final authenticated-corpus command in CHECKPOINT.md; stop at the first complete-fingerprint or mathematical mismatch.",
+    "Only after that gate passes, authenticate Springer Supplementary Data 4 before any K43 repair."
+  ],
+  "citations": [
+    "https://www.cs.rit.edu/~spr/ElJC/sur.pdf",
+    "https://users.cecs.anu.edu.au/~bdm/data/ramsey.html",
+    "https://users.cecs.anu.edu.au/~bdm/data/r55_42some.g6",
+    "https://huggingface.co/datasets/linxy/RamseyGraph/blob/main/data/r55_42some.g6",
+    "https://users.cecs.anu.edu.au/~bdm/papers/r55.pdf"
+  ],
+  "techniques": [
+    "source-byte authentication",
+    "deterministic experiment capture",
+    "graph6 decoding",
+    "complete adjacency fingerprints",
+    "independent parser cross-checking",
+    "exact 5-subset enumeration",
+    "recursive bitset clique enumeration",
+    "semantic mutation testing",
+    "complement involution testing",
+    "nauty cross-checking"
+  ],
+  "research_mode": "computational",
+  "experiments": [
+    ".proof-experiments/20260720-210542-55792e: Hugging Face acquisition failed with curl code 6",
+    ".proof-experiments/20260720-210824-8f13e8: final 2,088-record full-fingerprint regression passed",
+    ".proof-experiments/20260720-210716-8da301: semantic mutations and parser-rejection controls passed",
+    ".proof-experiments/20260720-210833-0111b6: final target preflight returned code 2 with downstream_checks_run=false"
+  ],
+  "independent_checker": "Checker A uses Python, a Boolean adjacency matrix, and literal 5-subset enumeration. Checker B uses C, a separate graph6 parser, and recursive bitset clique enumeration. Both emit complete upper-triangle bits; NetworkX independently decodes and emits the same bits, and nauty-complg checks complement bytes. None ran on order 42 because the source file was absent.",
+  "transfer_insights": [
+    "Isolated adversarial reconstruction -> coarse graph signatures can hide decoder errors -> complete adjacency fingerprints agreed across three parsers on the exhaustive order-7 control suite.",
+    "Fail-closed provenance -> missing bytes must prevent mathematical evaluation -> the final target preflight recorded downstream_checks_run=false."
+  ],
+  "established_facts": [
+    {
+      "claim": "Complete upper-triangle adjacency fingerprints from three parser paths agree on every unlabeled order-7 graph class and complement.",
+      "evidence": "artifacts/graph6_full_fingerprint_report.json",
+      "scope": "1,044 source representatives and 1,044 complements at order 7 only",
+      "status": "computed"
+    },
+    {
+      "claim": "The maintained published range remains 43 <= R(5,5) <= 46.",
+      "evidence": "Dynamic Survey DS1.18",
+      "scope": "Published global status checked 2026-07-20",
+      "status": "proved"
+    }
+  ],
+  "ruled_out": [
+    {
+      "claim_or_route": "Retry direct curl acquisition from ANU or Hugging Face in the unchanged command environment.",
+      "scope": "The tested command-network path",
+      "reason": "Both hosts fail DNS resolution before any HTTP response.",
+      "evidence": ".proof-experiments/20260720-200524-16f6f3 and .proof-experiments/20260720-210542-55792e",
+      "reopen_condition": "A new network/export route or user-supplied raw file with provenance becomes available."
+    },
+    {
+      "claim_or_route": "Start order-42 novelty or K43 repair search from the current packet.",
+      "scope": "Any continuation lacking authenticated McKay and Springer bytes",
+      "reason": "The source preflight stopped before every target-instance check.",
+      "evidence": "artifacts/corpus_source_preflight_epoch3.json",
+      "reopen_condition": "The McKay corpus passes the complete-fingerprint gate and the Springer seed then passes its raw-source gate."
+    }
+  ],
+  "open_leads": [
+    {
+      "description": "Authenticate the 328 McKay records and their 328 complements.",
+      "rationale": "Every novelty and canonical-comparison claim depends on these controls.",
+      "next_experiment": "Place unchanged bytes with retrieval provenance at sources/r55_42some.g6 and run the exact command in CHECKPOINT.md.",
+      "priority": "high",
+      "status": "open"
+    },
+    {
+      "description": "Authenticate Springer Supplementary Data 4 only after the corpus passes.",
+      "rationale": "It is the strongest published bounded-repair seed, but the local transcription lacks publisher provenance.",
+      "next_experiment": "Retrieve the unchanged TXT, determine its color convention, and require exact violation identities under both checkers.",
+      "priority": "high",
+      "status": "open"
+    }
+  ],
+  "blocker": "Neither tested command-host resolves, browser retrieval cannot export the raw body, and no authenticated order-42 corpus exists locally.",
+  "reopen_condition": "Provide or retrieve unchanged McKay bytes with provenance matching the frozen size, record count, and SHA-256 discriminator.",
+  "reopen_evidence": "",
+  "continuation": {
+    "objective": "Close the authoritative order-42 corpus control gate.",
+    "first_action": "Do not retry the current curl paths. Supply sources/r55_42some.g6 through a genuinely new raw-file path, preserve retrieval metadata, and run the command in CHECKPOINT.md.",
+    "stop_condition": "Stop at any provenance, byte, record, full 861-bit parser fingerprint, forbidden-set, histogram, degree, complement, or canonical-label mismatch."
+  },
+  "strategy_proposals": [],
+  "candidate_profile": {
+    "contribution_class": "research_artifact",
+    "scholarly_question": "Can later R(5,5) computations depend on a fail-closed control gate that detects every adjacency-level parser disagreement?",
+    "meaningful_delta": "The prior gate compared only order, edge count, and ordered degrees across its third parser; this version compares all adjacency bits and will retain per-record adjacency hashes.",
+    "acceptance_test": "The unchanged authoritative corpus passes the final gate from a cold start and the report receives an independent external replay.",
+    "closest_prior_work": [
+      {
+        "url": "https://users.cecs.anu.edu.au/~bdm/data/ramsey.html",
+        "difference": "McKay supplies the historical graphs; this artifact adds fail-closed multi-parser verification and claims no new graph or classification."
+      }
+    ],
+    "novelty_searches": [
+      {
+        "source": "Dynamic Survey DS1.18 and maintained corpus index",
+        "query": "current R(5,5) range and r55_42some corpus status",
+        "url": "https://www.cs.rit.edu/~spr/ElJC/sur.pdf",
+        "finding": "The exact value remains open and the maintained corpus is explicitly not a complete classification."
+      }
+    ],
+    "external_channel": {
+      "recipient": "Brendan McKay, not contacted",
+      "url": "https://users.cecs.anu.edu.au/~bdm/data/ramsey.html",
+      "acceptance_path": "No contact or submission until the authoritative raw-source replay succeeds."
+    },
+    "independent_validations": [
+      {
+        "type": "repository_ci",
+        "validator": "NetworkX 3.3 and nauty 2.8.8+ds-5 local exhaustive regression",
+        "result": "Complete adjacency agreement and byte-exact complement agreement on all 2,088 order-7 source/complement records",
+        "artifact": "artifacts/graph6_full_fingerprint_report.json",
+        "evidence_url": ""
+      }
+    ],
+    "relevance": {
+      "settles_exact_open_target": false,
+      "improves_best_known_result": false,
+      "source_explicitly_requests_result": false,
+      "expert_interest_confirmed": false,
+      "new_structural_result": false,
+      "evidence_url": ""
+    },
+    "arbitrary_cutoff_extension": false
+  },
+  "tool_disclosure": "GPT-5.6 Sol was principal investigator. Two precomputed GPT-5.6 Terra memos were advisory; only the experiment-verification memo supplied a relied verifier requirement, was hash-verified, promoted exactly into docs/delegate-memos, and independently implemented and tested by Sol. Deterministic tools used: Python 3.12.3, C/GCC, nauty 2.8.8+ds-5, NetworkX 3.3, curl, SHA-256, Git diagnostics, the computational-researcher experiment harness, and web browsing. No new subagent, SAT solver, proof assistant, or cloud job was used."
+}
