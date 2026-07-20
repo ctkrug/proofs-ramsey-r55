@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "lab-ramsey-r55-3b8175732922",
+  "problem_id": "ramsey-r55",
+  "name": "pinned-python-canary",
+  "hypothesis": "Lab jobs resolve the isolated compatible Python math environment",
+  "expected_signal": "numpy 1.26.4 and scipy 1.11.4",
+  "source_urls": [],
+  "command": [
+    "python3",
+    "-c",
+    "import numpy,scipy; print(numpy.__version__, scipy.__version__)"
+  ],
+  "seed": 0,
+  "segment_seconds": 60,
+  "memory_mb": 256,
+  "max_segments": 1,
+  "segment": 1,
+  "checkpoint_path": "",
+  "submitted_at": "2026-07-20T19:32:50.532568+00:00",
+  "final_record": {
+    "recorded_at": "2026-07-20T19:32:51.595292+00:00",
+    "job_id": "lab-ramsey-r55-3b8175732922",
+    "problem_id": "ramsey-r55",
+    "segment": 1,
+    "max_segments": 1,
+    "returncode": 0,
+    "checkpoint_exists": false,
+    "runner_result": "{\n  \"experiment_dir\": \"/root/proof-factory/research/ramsey-r55/workspace/lab-runs/lab-ramsey-r55-3b8175732922/segment-01/20260720-193251-7b935b\",\n  \"schema_version\": 1,\n  \"id\": \"20260720-193251-7b935b\",\n  \"name\": \"pinned-python-canary segment 1/1\",\n  \"hypothesis\": \"Lab jobs resolve the isolated compatible Python math environment\",\n  \"expected_signal\": \"numpy 1.26.4 and scipy 1.11.4\",\n  \"command\": [\n    \"python3\",\n    \"-c\",\n    \"import numpy,scipy; print(numpy.__version__, scipy.__version__)\"\n  ],\n  \"cwd\": \"/root/proof-factory/research/ramsey-r55/workspace\",\n  \"seed\": 0,\n  \"timeout_seconds\": 60,\n  \"memory_limit_mb\": 256,\n  \"memory_limit_enforced\": true,\n  \"started_at\": \"2026-07-20T19:32:51.027229+00:00\",\n  \"finished_at\": \"2026-07-20T19:32:51.571854+00:00\",\n  \"duration_seconds\": 0.545,\n  \"returncode\": 0,\n  \"timed_out\": false,\n  \"python\": \"3.12.3\",\n  \"platform\": \"Linux-6.8.0-124-generic-x86_64-with-glibc2.39\",\n  \"git_commit\": \"ed66c066efcdc6a968c28fca6f9e57885e15e6ac\",\n  \"source_urls\": [],\n  \"input_artifacts\": {},\n  \"peak_child_memory_rusage\": 34488,\n  \"peak_child_memory_unit\": \"kilobytes\",\n  \"artifacts\": {\n    \"stdout.txt\": \"41e1cdb4147cbed4519c9800e1693da39d3ad4dd81bcfaf359d4b937c7eac147\",\n    \"stderr.txt\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\"\n  }\n}\n",
+    "runner_error": ""
+  }
+}

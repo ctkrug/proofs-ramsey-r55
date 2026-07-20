@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "20260720-193914-fbe251",
+  "name": "r55-provisional-k43-dual-control",
+  "hypothesis": "The two independently implemented exact checkers agree on every forbidden 5-set in the visible two-conflict K43 transcription and on semantic/parser controls",
+  "expected_signal": "Exact graph1 2+0 and graph2 0+2 violation identities, four valid graph2 deletions, mutation hits, and malformed-input rejection; publisher provenance remains open",
+  "command": [
+    "python3",
+    "scripts/run_control_gate.py",
+    "checkers/checker_a.py",
+    "checkers/checker_b.c",
+    "inputs/k43_two_conflict_gist.txt",
+    "artifacts/provisional_k43_control_report.json"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 300,
+  "memory_limit_mb": 1024,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-20T19:39:14.069529+00:00",
+  "finished_at": "2026-07-20T19:39:33.926374+00:00",
+  "duration_seconds": 19.857,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "6613bc01c65c0ca136d29473c1b956fcb540f1ea",
+  "source_urls": [
+    "https://doi.org/10.1038/s41467-018-07327-2",
+    "https://gist.github.com/etherwalker/8d64fa0a1cc1dd508f75bf651aaec873"
+  ],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/scripts/run_control_gate.py": "fc699ad26005d4fa251f34a222e8bad1fb92982f332cc00578237fc2c1c9feb3",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/checker_a.py": "73ab070b87449de7ed3465a3f8165236e2195bc1ba88d72f4ceeb746b108abec",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/checker_b.c": "0bebf72df867d3fa124d828e966c2c7289f92c5bae08e13ca7121efcaab47856",
+    "/root/proof-factory/research/ramsey-r55/workspace/inputs/k43_two_conflict_gist.txt": "3beebde4f3120337029bb24de1f737f72eab567cbe92c77f79e7206ce4c304e9"
+  },
+  "peak_child_memory_rusage": 31616,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "98a1367a9423dcccf52edf6345cbc1edd6cffc287353b89c934e24199e8c27db",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

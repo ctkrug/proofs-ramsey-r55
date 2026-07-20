@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "20260720-193953-b4e5bd",
+  "name": "r55-corpus-source-preflight",
+  "hypothesis": "The authoritative McKay corpus bytes are locally available and match the frozen 47,888-byte SHA-256 discriminator before any graph checks run",
+  "expected_signal": "Either exact byte/hash/record match followed by 656 dual checks, or fail-closed source_preflight_failed with downstream_checks_run=false",
+  "command": [
+    "python3",
+    "scripts/run_corpus_gate.py",
+    "checkers/checker_a.py",
+    "checkers/checker_b.c",
+    "sources/r55_42some.g6",
+    "artifacts/corpus_source_preflight_report.json"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 60,
+  "memory_limit_mb": 256,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-20T19:39:53.924199+00:00",
+  "finished_at": "2026-07-20T19:39:54.062282+00:00",
+  "duration_seconds": 0.138,
+  "returncode": 2,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "6613bc01c65c0ca136d29473c1b956fcb540f1ea",
+  "source_urls": [
+    "https://users.cecs.anu.edu.au/~bdm/data/r55_42some.g6",
+    "https://huggingface.co/datasets/linxy/RamseyGraph/blob/main/data/r55_42some.g6"
+  ],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/scripts/run_corpus_gate.py": "57d8252256502c47a4bef067d72f5324ab82bc8c4c84cd0727dfff08730425c2",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/checker_a.py": "73ab070b87449de7ed3465a3f8165236e2195bc1ba88d72f4ceeb746b108abec",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/checker_b.c": "0bebf72df867d3fa124d828e966c2c7289f92c5bae08e13ca7121efcaab47856"
+  },
+  "peak_child_memory_rusage": 18048,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "c1e4c40b48716ca40bce9d77c1e6f3dc3db6a49910cad1a458778115a4e30eef",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

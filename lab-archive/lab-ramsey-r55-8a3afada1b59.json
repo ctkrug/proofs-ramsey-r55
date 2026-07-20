@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "lab-ramsey-r55-8a3afada1b59",
+  "problem_id": "ramsey-r55",
+  "name": "cloud-lab-canary",
+  "hypothesis": "The restricted cloud lab executes deterministic argv without a shell",
+  "expected_signal": "stdout is exactly 42",
+  "source_urls": [],
+  "command": [
+    "python3",
+    "-c",
+    "print(6*7)"
+  ],
+  "seed": 0,
+  "segment_seconds": 60,
+  "memory_mb": 128,
+  "max_segments": 1,
+  "segment": 1,
+  "checkpoint_path": "",
+  "submitted_at": "2026-07-20T19:27:06.609310+00:00",
+  "final_record": {
+    "recorded_at": "2026-07-20T19:27:07.356153+00:00",
+    "job_id": "lab-ramsey-r55-8a3afada1b59",
+    "problem_id": "ramsey-r55",
+    "segment": 1,
+    "max_segments": 1,
+    "returncode": 0,
+    "checkpoint_exists": false,
+    "runner_result": "{\n  \"experiment_dir\": \"/root/proof-factory/research/ramsey-r55/workspace/lab-runs/lab-ramsey-r55-8a3afada1b59/segment-01/20260720-192707-e20224\",\n  \"schema_version\": 1,\n  \"id\": \"20260720-192707-e20224\",\n  \"name\": \"cloud-lab-canary segment 1/1\",\n  \"hypothesis\": \"The restricted cloud lab executes deterministic argv without a shell\",\n  \"expected_signal\": \"stdout is exactly 42\",\n  \"command\": [\n    \"python3\",\n    \"-c\",\n    \"print(6*7)\"\n  ],\n  \"cwd\": \"/root/proof-factory/research/ramsey-r55/workspace\",\n  \"seed\": 0,\n  \"timeout_seconds\": 60,\n  \"memory_limit_mb\": 128,\n  \"memory_limit_enforced\": true,\n  \"started_at\": \"2026-07-20T19:27:07.194067+00:00\",\n  \"finished_at\": \"2026-07-20T19:27:07.319051+00:00\",\n  \"duration_seconds\": 0.125,\n  \"returncode\": 0,\n  \"timed_out\": false,\n  \"python\": \"3.12.3\",\n  \"platform\": \"Linux-6.8.0-124-generic-x86_64-with-glibc2.39\",\n  \"git_commit\": \"8479b230d75365a01db6341a69886e51d6f71c90\",\n  \"source_urls\": [],\n  \"input_artifacts\": {},\n  \"peak_child_memory_rusage\": 17920,\n  \"peak_child_memory_unit\": \"kilobytes\",\n  \"artifacts\": {\n    \"stdout.txt\": \"084c799cd551dd1d8d5c5f9a5d593b2e931f5e36122ee5c793c1d08a19839cc0\",\n    \"stderr.txt\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\"\n  }\n}\n",
+    "runner_error": ""
+  }
+}

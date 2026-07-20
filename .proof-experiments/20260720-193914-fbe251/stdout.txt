@@ -1,0 +1,58 @@
+{
+  "base_violation_counts": {
+    "graph1": {
+      "one": 0,
+      "zero": 2
+    },
+    "graph2": {
+      "one": 2,
+      "zero": 0
+    }
+  },
+  "graph2_conflict_support": {
+    "intersection": [
+      0,
+      15,
+      28,
+      39
+    ],
+    "union": [
+      0,
+      15,
+      22,
+      24,
+      28,
+      39
+    ]
+  },
+  "report": "/root/proof-factory/research/ramsey-r55/workspace/artifacts/provisional_k43_control_report.json",
+  "report_sha256": "f854b8e8b69c9006fca6e797952eeac5c3540a452105420878b7e4d356df69e5",
+  "status": "provisional_control_pass_source_gate_open",
+  "unclosed_gates": [
+    "raw McKay r55_42some.g6 bytes not acquired",
+    "raw Springer Supplementary Data 4 bytes not acquired",
+    "no canonical-isomorphism comparison to the 656 controls"
+  ],
+  "valid_deletions": [
+    {
+      "n": 42,
+      "valid": true,
+      "vertex": 0
+    },
+    {
+      "n": 42,
+      "valid": true,
+      "vertex": 15
+    },
+    {
+      "n": 42,
+      "valid": true,
+      "vertex": 28
+    },
+    {
+      "n": 42,
+      "valid": true,
+      "vertex": 39
+    }
+  ]
+}

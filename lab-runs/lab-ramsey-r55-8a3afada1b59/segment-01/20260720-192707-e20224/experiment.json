@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "20260720-192707-e20224",
+  "name": "cloud-lab-canary segment 1/1",
+  "hypothesis": "The restricted cloud lab executes deterministic argv without a shell",
+  "expected_signal": "stdout is exactly 42",
+  "command": [
+    "python3",
+    "-c",
+    "print(6*7)"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 60,
+  "memory_limit_mb": 128,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-20T19:27:07.194067+00:00",
+  "finished_at": "2026-07-20T19:27:07.319051+00:00",
+  "duration_seconds": 0.125,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "8479b230d75365a01db6341a69886e51d6f71c90",
+  "source_urls": [],
+  "input_artifacts": {},
+  "peak_child_memory_rusage": 17920,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "084c799cd551dd1d8d5c5f9a5d593b2e931f5e36122ee5c793c1d08a19839cc0",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

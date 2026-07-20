@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "20260720-193251-7b935b",
+  "name": "pinned-python-canary segment 1/1",
+  "hypothesis": "Lab jobs resolve the isolated compatible Python math environment",
+  "expected_signal": "numpy 1.26.4 and scipy 1.11.4",
+  "command": [
+    "python3",
+    "-c",
+    "import numpy,scipy; print(numpy.__version__, scipy.__version__)"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 60,
+  "memory_limit_mb": 256,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-20T19:32:51.027229+00:00",
+  "finished_at": "2026-07-20T19:32:51.571854+00:00",
+  "duration_seconds": 0.545,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "ed66c066efcdc6a968c28fca6f9e57885e15e6ac",
+  "source_urls": [],
+  "input_artifacts": {},
+  "peak_child_memory_rusage": 34488,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "41e1cdb4147cbed4519c9800e1693da39d3ad4dd81bcfaf359d4b937c7eac147",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

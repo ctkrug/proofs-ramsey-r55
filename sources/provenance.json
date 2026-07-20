@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "source_status_checked_at": "2026-07-20T20:00:00Z",
+  "official_status": {
+    "url": "https://www.cs.rit.edu/~spr/ElJC/sur.pdf",
+    "revision": "DS1.18, 2026-04-24",
+    "bound": "43 <= R(5,5) <= 46"
+  },
+  "order_42_corpus": {
+    "url": "https://users.cecs.anu.edu.au/~bdm/data/r55_42some.g6",
+    "expected_records": 328,
+    "expected_bytes_from_public_mirror": 47888,
+    "expected_sha256_from_public_mirror": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb",
+    "mirror_metadata_url": "https://huggingface.co/datasets/linxy/RamseyGraph/blob/main/data/r55_42some.g6",
+    "mirror_git_lfs_pointer_sha": "df96f39ff5af573683bf9eb3fadec73c36d9f7ab",
+    "qualification": "mirror hash and size are a byte-acquisition discriminator; authoritative-source equivalence remains unverified",
+    "local_raw_artifact": null,
+    "status": "blocked: managed command environment denied outbound connection after both DNS and direct-IP/Host attempts; browser exposed metadata but not binary bytes"
+  },
+  "publisher_k43": {
+    "article_url": "https://doi.org/10.1038/s41467-018-07327-2",
+    "raw_url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-018-07327-2/MediaObjects/41467_2018_7327_MOESM6_ESM.txt",
+    "local_raw_artifact": null,
+    "status": "blocked: command environment DNS denied and browser returned an internal error for raw TXT"
+  },
+  "provisional_k43": {
+    "url": "https://gist.github.com/etherwalker/8d64fa0a1cc1dd508f75bf651aaec873",
+    "local_artifact": "inputs/k43_two_conflict_gist.txt",
+    "status": "visible third-party transcription; graph2 is alleged complement-isomorphic to publisher graph; not source authentication"
+  },
+  "terra_memos": [
+    {
+      "role": "experiment-verification",
+      "path": ".delegates/20260720-191118-871024/experiment-verification/memo.md",
+      "sha256": "f1805b00cbfb4c71917d26dda3324f79c262c748caad38d63a0e2767766b481c"
+    },
+    {
+      "role": "literature-strategy",
+      "path": ".delegates/20260720-191118-871024/literature-strategy/memo.md",
+      "sha256": "93a4718c6edbecc7fce30caa6b68827d86735ce9625cf0d7e775cfe9c0bc8c3d"
+    },
+    {
+      "role": "experiment-verification",
+      "path": ".delegates/20260720-192523-5a42d3/experiment-verification/memo.md",
+      "sha256": "f1ea135c8f2bb6c8b57e5bb219c64a881d2e8477e51f741370dd8d21e023d7d8"
+    },
+    {
+      "role": "literature-strategy",
+      "path": ".delegates/20260720-192523-5a42d3/literature-strategy/memo.md",
+      "sha256": "40ead0ae684cc75a215f67c028871f5ee9e295ba30f2e2793e8ee63dd2eee577"
+    }
+  ]
+}

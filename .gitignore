@@ -1,0 +1,10 @@
+# Reproducible research belongs in Git; local environments and caches do not.
+.DS_Store
+.venv/
+venv/
+__pycache__/
+*.pyc
+.mypy_cache/
+.pytest_cache/
+node_modules/
+*.tmp

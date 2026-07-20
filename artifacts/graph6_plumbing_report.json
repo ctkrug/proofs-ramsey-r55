@@ -1,0 +1,34 @@
+{
+  "aggregate_forbidden_sets": {
+    "complement": {
+      "one_k5": 132,
+      "zero_k5": 132
+    },
+    "source": {
+      "one_k5": 132,
+      "zero_k5": 132
+    }
+  },
+  "checker_exact_output_agreement": true,
+  "checker_hashes": {
+    "checker_a": "73ab070b87449de7ed3465a3f8165236e2195bc1ba88d72f4ceeb746b108abec",
+    "checker_b_source": "0bebf72df867d3fa124d828e966c2c7289f92c5bae08e13ca7121efcaab47856"
+  },
+  "complement_exact_byte_agreement_with_nauty": true,
+  "complement_involution": true,
+  "complement_suite_sha256": "d691e39fee55c52b3512ba858147402935af0622f45bb1970ced981794f4ca99",
+  "generated_records": 1044,
+  "methods": {
+    "checker_a": "direct combinations over independently parsed Boolean matrices",
+    "checker_b": "recursive bitset clique enumeration over separately parsed records",
+    "complement_reference": "/usr/bin/nauty-complg",
+    "suite_generator": "/usr/bin/nauty-geng",
+    "third_parser": "networkx 2.8.8"
+  },
+  "networkx_signature_agreement": true,
+  "schema_version": 1,
+  "scope": "one representative of every one of the 1044 unlabeled simple graphs on 7 vertices",
+  "source_suite_sha256": "3c9d236c155206869769a6fdec67a879f31a8e1b5b772d765d384449fa6b5882",
+  "status": "graph6_plumbing_pass",
+  "why_order_7": "C(7,2)=21 leaves three graph6 padding bits, the same padding count as C(42,2)=861"
+}

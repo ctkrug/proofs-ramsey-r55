@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "problem_id": "ramsey-r55",
+  "title": "Ramsey number R(5,5)",
+  "source_url": "https://www.cs.rit.edu/~spr/ElJC/sur.pdf",
+  "lane": "hard",
+  "github_owner": "ctkrug",
+  "github_repository": "proofs-ramsey-r55",
+  "visibility_policy": "private-until-explicit-human-release",
+  "canonical_engine": "https://github.com/ctkrug/proofs"
+}

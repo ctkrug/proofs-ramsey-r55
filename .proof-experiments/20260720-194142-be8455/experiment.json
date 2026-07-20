@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "20260720-194142-be8455",
+  "name": "r55-graph6-plumbing-adversarial-control",
+  "hypothesis": "The custom graph6 parsers and complement transformation agree with independent nauty and NetworkX implementations across every order-7 isomorphism class, including the same three padding bits used at order 42",
+  "expected_signal": "1044 records; exact checker-output agreement; NetworkX n/edge/degree agreement; byte-exact complement agreement with nauty-complg; complement involution",
+  "command": [
+    "python3",
+    "scripts/test_graph6_plumbing.py",
+    "checkers/checker_a.py",
+    "checkers/checker_b.c",
+    "artifacts/graph6_plumbing_report.json"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 180,
+  "memory_limit_mb": 1024,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-20T19:41:42.379417+00:00",
+  "finished_at": "2026-07-20T19:41:43.572996+00:00",
+  "duration_seconds": 1.194,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "f03abfab147e1911cc933056ce67e5390ee8f6dc",
+  "source_urls": [
+    "https://users.cecs.anu.edu.au/~bdm/data/formats.txt",
+    "https://pallini.di.uniroma1.it"
+  ],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/scripts/test_graph6_plumbing.py": "7a75e48234ee8ab67eefa67d5a15ae8bce883a469c2f860f254b5c7431bf822e",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/checker_a.py": "73ab070b87449de7ed3465a3f8165236e2195bc1ba88d72f4ceeb746b108abec",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/checker_b.c": "0bebf72df867d3fa124d828e966c2c7289f92c5bae08e13ca7121efcaab47856"
+  },
+  "peak_child_memory_rusage": 31344,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "114e399bc59b56f4f9b1237a87ec3828f27818a071baa9c5bc61ba0c921e8ee2",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}
