@@ -1,0 +1,66 @@
+{
+  "schema_version": 2,
+  "id": "lab-ramsey-r55-census-v2-full",
+  "problem_id": "ramsey-r55",
+  "name": "R55 locked full supplied-class embedding census v2",
+  "hypothesis": "all induced fixed-core pullbacks over 328 supplied graphs and 328 complements can be exhaustively reconciled by two independent implementations under the aggregate per-host gate",
+  "expected_signal": "656 canonical host receipts with exact bitset/VF2 mapping and vector-stream agreement, bounded host times, and a hash-addressed compressed manifest",
+  "decision_value": "decides whether complete supplied-class boundary blocks exist, creates a reusable exact corpus, and supplies the prerequisite evidence for a bounded residual-SAT discriminator",
+  "efficiency_design": {
+    "naive_cost": "For each of 656 labelled order-42 hosts, scan all 42P30 injections of the fixed induced core and every tied residual-row ordering. That direct space is infeasible.",
+    "opportunities_considered": [
+      "Symmetry and canonical augmentation: retain the fixed labelled core and row-lex residual order, expanding every tied-row orbit so quotient coverage is exact.",
+      "Bitsets and incremental evaluation: use adjacency bitsets, most-constrained DFS branching, forward degree constraints, and a sound Hall-union prune.",
+      "Memoization and reusable prefixes: reuse parsed core/host structures per segment; do not memoize DFS states until labelled-map multiplicity preservation is proved; reserve learned clauses for residual SAT.",
+      "Decomposition and resumability: isolate each supplied host/complement into an atomic checkpointed segment, with fresh v2 paths that cannot mix with the rejected 49-host calibration prefix.",
+      "Compressed streamed artifacts: write one gzip host artifact plus an fsync'd JSONL manifest with exact mapping/vector stream hashes.",
+      "Independent coverage: reconcile the custom bitset enumerator with NetworkX VF2 on every host and reject any count, map-stream, vector-stream, or exact-vector disagreement."
+    ],
+    "chosen_reductions": "A hash-locked wrapper verifies the runner, both imported enumerators, and corpus; the runner enforces a 30-second aggregate host gate across both independent implementations; the corpus is segmented by host with compressed hash-addressed outputs and atomic checkpoints.",
+    "expected_throughput_gain": "The fresh local host-0 canary completed in 15.149 seconds with exact dual-stream agreement, versus an infeasible 42P30 scan. The first live host-0 pilot remeasures the deployed path before continuation.",
+    "soundness_basis": "The wrapper fails closed on any protected-input hash or committed-content mismatch. The two implementations must agree on embedding count, exact mapping-stream SHA-256, vector occurrences, unique-vector count, vector-stream SHA-256, and exact unique vectors. The corpus hash and 328+328 coverage remain independently checked.",
+    "remains_uncompressed": "All 328 supplied hosts and their 328 complements, every induced embedding, and every tied-row variant remain in scope. The supplied corpus is not quotient-deduplicated. Residual SAT remains a separate post-census discriminator and cannot use a partial block set."
+  },
+  "source_urls": [],
+  "command": [
+    "scripts/run_known_class_embedding_census_locked.sh",
+    "--corpus",
+    "sources/r55_42some.g6",
+    "--checkpoint",
+    "artifacts/known-class-embedding-census-v2/checkpoint.json",
+    "--progress",
+    "artifacts/known-class-embedding-census-v2/progress.json",
+    "--output",
+    "artifacts/known-class-embedding-census-v2/output",
+    "--hosts-per-segment",
+    "1",
+    "--case-seconds",
+    "900",
+    "--total-hosts",
+    "656"
+  ],
+  "seed": 0,
+  "segment_seconds": 120,
+  "memory_mb": 1000,
+  "max_segments": 0,
+  "segment": 1,
+  "pilot_segments": 1,
+  "review_every_segments": 256,
+  "checkpoint_path": "artifacts/known-class-embedding-census-v2/checkpoint.json",
+  "progress_path": "artifacts/known-class-embedding-census-v2/progress.json",
+  "continuation_thresholds": {
+    "min_throughput_per_second": 0.001,
+    "max_artifact_growth_bytes": 200000000,
+    "require_correctness_checks": true
+  },
+  "submitted_at": "2026-07-21T22:54:23.375456+00:00",
+  "workspace_git_commit": "fb9bd922d1020a5e952ba1784d1cc3d33035197d",
+  "input_sha256": {
+    "scripts/run_known_class_embedding_census_locked.sh": "4641fae36fd53c1b196696cee54cb5d846fcd6907b4a5a65ebb6c723b1c867a7",
+    "scripts/run_known_class_embedding_census.py": "d571103060c50a82bc6b7d41c7affabc4062ef975750da397bacf93ae81623dc",
+    "scripts/enumerate_core_embeddings_bitset.py": "01b3953b1db6a65737e4fb4ee176a88b7c8c8ed26a374c410cf274fe2500739a",
+    "scripts/enumerate_core_embeddings_networkx.py": "c4491591b16394e11d3bf0b907eea8c65a73308e8a2a366e5d594532c7010aaf",
+    "sources/r55_42some.g6": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb"
+  },
+  "spec_sha256": "43e797eb819b3f0483bb9f7253ad89c8b12a32e43c98ace697c0b381ee1de162"
+}
