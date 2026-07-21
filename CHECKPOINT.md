@@ -1,4 +1,112 @@
-# R(5,5) research checkpoint — epoch 14
+# R(5,5) research checkpoint — epoch 15
+
+Recorded: 2026-07-21 16:43 UTC
+
+## Epoch-15 outcome: labelled blocks expose an eight-normal-form bottleneck
+
+The saved `strategy-4c792f58d4a3` discriminator is complete.  It reused the
+immutable trial-1 formula for source record 21: a labelled order-30 core is
+frozen, 426 incident/internal boundary edges are primary variables, the base
+has 155,976 variables and 508,157 clauses, and boundary Hamming distance is at
+least 60.  After each verified supplied-corpus model, the incremental solver
+received the 426-literal clause falsified by exactly that primary vector.
+
+The crucial scope correction is now enforced in code and documentation: each
+clause blocks one labelled assignment, not a nauty isomorphism class.  The
+experiment-verification Terra memo also contained a base-hash transcription
+error (`...59e28c...`); direct decompression and the retained production
+artifact agree on logical SHA-256
+`2f1c3b2ac59e4c4b6e2873d2d5ebb2d2eba4fd908a2927f2a30d1936bc3d1072`.
+
+Production reached the exact budget of 64 distinct primary models.  Every
+total assignment satisfied the base and all earlier blocks, and both full
+graph checkers accepted every decoded graph.  None was outside the supplied
+656.  The supplied-class distribution was:
+
+```text
+source 12: 13    source 18: 11    source 19: 6
+source 20:  8    source 21:  5    source 25: 21
+```
+
+Distances were 136--226.  Solver time totaled 300.533 seconds; the recorded
+production wall time was 609.167 seconds with 152,472 KiB peak child RSS.
+The result does not exclude any isomorphism class or the retained boundary and
+does not change a Ramsey bound.
+
+### Cold audit and exact structural diagnostic
+
+The cold checker imports no producer.  It independently reconstructed the
+primary map, evaluated 508,157 base clauses per model (32,522,048 total),
+checked every ordered block, validated the fixed core and distance, enumerated
+maximal cliques in each graph and complement with NetworkX, and checked
+NetworkX isomorphism to every nauty-identified target.  All 64 models passed.
+
+All 12 destroyed vertices had distinct 30-bit core-neighborhood rows in every
+model.  Sorting those rows therefore gives an exact normal form under the
+destroy-label `S_12` action for this sample.  The 64 labelled vectors collapse
+to only eight normal forms across the six supplied classes.  This is the
+decisive route diagnosis: a larger arbitrary labelled-block cutoff has low
+information value.
+
+Retained records and hashes:
+
+```text
+production experiment  .proof-experiments/20260721-161659-700d02
+production report      8cd3f5b16649f5fab092c5624f345cca9b305e5ac6cac789152677720b6c332e
+ordered blocks         067cc2e42bee9fb40325865637621f69724bf40832408295548dff49d1a59fb1
+cold experiment        .proof-experiments/20260721-162745-91d1f9
+cold report            8c9af0b66c350bfff49b235093f183e037a4a57fc888709af18369bff7f7567c
+embedding cost probe   .proof-experiments/20260721-164245-525153
+```
+
+The reusable incremental driver is
+`tools/novel42_incremental_enumerator.cpp`; the controller and independent
+auditor are `scripts/run_novel42_labelled_cegar.py` and
+`checkers/novel42_labelled_cegar_audit.py`.  Installing Ubuntu package
+`libcadical-dev 1.7.4-1` was the only system change and is recorded in
+`docs/system-toolchain-epoch15.md`.
+
+### Exact continuation
+
+Do not continue the same assignment-block loop with a larger budget.  Reopen
+it only after a sound class-level block or symmetry quotient is installed.
+The next discriminator is a new symmetry-normalized boundary formula:
+
+1. remove the source-specific Hamming condition, because it is not invariant
+   under permutations of the 12 destroyed labels;
+2. order the destroyed vertices lexicographically by their 30-bit adjacency
+   rows into the frozen core;
+3. exhaustively verify lex-encoding satisfiability and orbit coverage on small
+   frozen-core instances, including tied rows;
+4. run one predeclared production first-model gate only if that control passes.
+
+Every boundary completion has a row-sorted representative, so the proposed
+quotient is sound.  When rows are distinct it removes the full `12!` destroy
+label action; the current packet predicts an observed reduction from 64
+vectors to eight normal forms.  Tied rows are the explicit coverage hazard and
+must be tested before production.  Stop on a control failure, one dual-checked
+supplied-corpus novel graph, or a predeclared normal-form budget.
+
+Full formulation and replay details are in
+`docs/novel42-labelled-cegar.md`.
+
+## Epoch-15 disclosure
+
+GPT-5.6 Sol was principal investigator.  The supplied GPT-5.6 Terra
+literature-strategy and experiment-verification memos were advisory and were
+promoted under `docs/delegate-memos/` with provenance in
+`records/delegate-provenance-epoch15.json`.  Sol corrected the labelled/class
+scope, audited the base hash, rejected the impractical embedding census as a
+precondition, implemented and ran the incremental experiment, and wrote the
+independent cold checker.  No new subagent was spawned.  Deterministic tools
+were Python 3.12.3, GCC/G++ 13.3.0, CaDiCaL library 1.7.4, nauty `labelg`,
+NetworkX 3.3, gzip, SHA-256, and the computational-researcher experiment
+harness.  No CAS, proof assistant, external publication, or remote account was
+used.
+
+---
+
+# Prior checkpoint — epoch 14
 
 Recorded: 2026-07-21 14:23 UTC
 

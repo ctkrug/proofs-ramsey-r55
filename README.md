@@ -1,5 +1,26 @@
 # R(5,5) control packet
 
+## Epoch-15 labelled-model CEGAR discriminator
+
+One frozen order-30 core was held fixed while an incremental CaDiCaL driver
+enumerated and exactly blocked 64 distinct labelled 426-edge boundary vectors.
+All 64 decoded graphs were valid, but they occupied only six supplied classes;
+an independently checked `S_12` destroy-label normalization collapsed them to
+eight normal forms.  This is a bounded negative route discriminator, not a
+class block, boundary exclusion, new graph, or Ramsey bound.  See
+`docs/novel42-labelled-cegar.md` for the exact scope and hashes.
+
+Replay the independent audit with a fresh output path:
+
+```bash
+python3 checkers/novel42_labelled_cegar_audit.py \
+  sources/r55_42some.g6 \
+  artifacts/authenticated_corpus_report.json \
+  artifacts/novel42_labelled_cegar64_report.json \
+  artifacts/novel42_labelled_cegar64 \
+  artifacts/novel42_labelled_cegar64_cold_audit.replay.json
+```
+
 ## Epoch-14 exact boundary-repair discriminator
 
 Eight predeclared 12-vertex exact SAT repairs of authenticated order-42

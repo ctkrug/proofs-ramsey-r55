@@ -1,0 +1,7 @@
+{
+  "distinct_reached_supplied_classes": 6,
+  "models_checked": 64,
+  "report": "artifacts/novel42_labelled_cegar64_cold_audit.json",
+  "report_sha256": "8c9af0b66c350bfff49b235093f183e037a4a57fc888709af18369bff7f7567c",
+  "status": "novel42_labelled_cegar_cold_audit_pass"
+}

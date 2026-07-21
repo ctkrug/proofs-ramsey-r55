@@ -1,0 +1,171 @@
+{
+  "outcome": "progress",
+  "approach": "Incremental 64-model labelled-primary CEGAR within the retained source-record-21 frozen order-30 boundary.",
+  "strategy": {
+    "family": "canonical counterexample-guided exact repair",
+    "fingerprint": "4c792f58d4a3",
+    "mechanism": "Parse the immutable boundary CNF once, solve incrementally, and append the unique 426-literal clause falsified by each verified supplied-corpus primary vector.",
+    "parent_ids": [
+      "strategy-r55novel42basin2026"
+    ]
+  },
+  "hypothesis": "Within 64 verified labelled completions of the frozen record-21 boundary, at least one valid Ramsey(5,5,42) graph is absent from the supplied 656 canonical classes.",
+  "discriminating_test": "Enumerate at most 64 distinct primary vectors, require base-CNF and prior-block satisfaction plus two full graph checks per model, and accept novelty only after canonical nonmembership.",
+  "search_efficiency": {
+    "naive_space": "At most 2^426 boundary assignments after freezing 435 of the 861 graph edges; dominant costs are the 508157-clause SAT solve and independent full assignment/graph evaluation per model.",
+    "reductions_considered": [
+      "fixed-core decomposition",
+      "destroy-label S_12 symmetry quotient",
+      "compact packed total models",
+      "incremental base parsing and learned-clause reuse",
+      "physical-CNF-per-round reconstruction",
+      "induced-core embedding census",
+      "direct lower-bound cardinality re-encoding"
+    ],
+    "chosen_mechanism": "Keep the already audited fixed core and Hamming encoding, parse the base once with libcadical, append primary-only blocks, store total assignments as bitsets, and run complete semantic checks after every SAT result.",
+    "estimated_or_measured_savings": "435/861 edge bits fixed (50.52%); 142506 core-only five-sets skipped; one 2.62 MB compressed base retained instead of about 168 MB for 64 copies; post-hoc sound row sorting reduced the 64 vectors to eight S_12 normal forms in this sample.",
+    "soundness_guard": "The cold checker independently reconstructed the primary map, evaluated 32522048 base clauses plus all ordered blocks, checked fixed-core equality and distance, enumerated maximal cliques in each graph and complement, and verified NetworkX isomorphism to nauty targets."
+  },
+  "strategy_status": "blocked",
+  "summary": "The exact 64-model budget was reached. All 64 primary vectors were distinct and valid, but all landed in six supplied source classes: records 12, 18, 19, 20, 21, and 25. Distances were 136-226. The cold audit passed and found only eight destroy-permutation normal forms. No graph, class, boundary, or Ramsey bound was excluded.",
+  "rationale": "The predeclared novelty signal did not occur. The independently measured 64-to-8 label redundancy explains why a larger arbitrary assignment budget has low information value and supplies a concrete, sound symmetry target for the next pass.",
+  "claims": [
+    "The 64 retained primary vectors are distinct, satisfy the exact base and every earlier block, and decode to valid Ramsey(5,5,42) graphs in six supplied classes.",
+    "The frozen source-record-21 order-30 core has compatible completions in at least supplied source classes 12, 18, 19, 20, 21, and 25.",
+    "All 64 retained models have distinct destroyed-vertex core-neighborhood rows and collapse to eight normal forms under the destroy-label S_12 action."
+  ],
+  "evidence": [
+    "artifacts/novel42_labelled_cegar64_report.json; SHA-256 8cd3f5b16649f5fab092c5624f345cca9b305e5ac6cac789152677720b6c332e",
+    "artifacts/novel42_labelled_cegar64_cold_audit.json; SHA-256 8c9af0b66c350bfff49b235093f183e037a4a57fc888709af18369bff7f7567c",
+    "artifacts/novel42_labelled_cegar64/blocks.dimacs; SHA-256 067cc2e42bee9fb40325865637621f69724bf40832408295548dff49d1a59fb1",
+    "docs/novel42-labelled-cegar.md",
+    "artifacts/novel42_core_embedding_probe_epoch15.json; SHA-256 1c303c9ecbd282442b6285f0a7136b17424f8c7f0b8552d1b741dfedec44b219",
+    "Production command and limits in .proof-experiments/20260721-161659-700d02; cold audit in .proof-experiments/20260721-162745-91d1f9."
+  ],
+  "next_steps": [
+    "Remove the source-specific Hamming constraint before quotienting, because it is not invariant under permutations of the destroyed labels.",
+    "Encode lexicographically nondecreasing 30-bit frozen-core rows for the 12 destroyed vertices and exhaustively verify orbit coverage on small distinct-row and tied-row controls.",
+    "Run one predeclared symmetry-normalized production first-model gate only after the coverage test passes."
+  ],
+  "citations": [
+    "https://www.cs.rit.edu/~spr/ElJC/sur.pdf",
+    "https://users.cecs.anu.edu.au/~bdm/data/ramsey.html",
+    "https://doi.org/10.1002/jgt.70029"
+  ],
+  "techniques": [
+    "incremental SAT",
+    "counterexample-guided assignment blocking",
+    "exact DIMACS model evaluation",
+    "full five-subset enumeration",
+    "recursive bitset clique checking",
+    "nauty canonical labeling",
+    "NetworkX graph isomorphism",
+    "group-action normal forms",
+    "artifact hashing"
+  ],
+  "research_mode": "computational",
+  "experiments": [
+    ".proof-experiments/20260721-161659-700d02: 64 models in 609.167 seconds, 152472 KiB peak child RSS, no canonical nonmember.",
+    ".proof-experiments/20260721-162745-91d1f9: independent cold audit passed in 133.875 seconds, 79512 KiB peak child RSS.",
+    ".proof-experiments/20260721-164245-525153: exact two-host induced-core cost probe; the negative complement control took 10.631 seconds."
+  ],
+  "independent_checker": "checkers/novel42_labelled_cegar_audit.py imports no producer. It independently maps primary edges, evaluates every base clause and prior block, validates graph/core/distance semantics, runs NetworkX clique scans, and verifies NetworkX isomorphism to the nauty-identified target. Production additionally required exact agreement between checkers/checker_a.py and the separately implemented checkers/checker_b.c.",
+  "transfer_insights": [
+    "CEGAR assignment blocking -> if supplied rediscovery is driven by only a few labelled completions, 64 blocks should expose more classes or novelty -> 64 vectors reached only six supplied classes.",
+    "Symmetry quotienting -> if destroyed-label permutations dominate the loop, sorting their distinct core rows should merge many models -> the independently computed normal form reduced 64 vectors to eight."
+  ],
+  "established_facts": [
+    {
+      "claim": "The retained frozen order-30 core has compatible valid completions in at least six supplied source classes.",
+      "evidence": "Retained graph6 witnesses and independent target isomorphisms in artifacts/novel42_labelled_cegar64_cold_audit.json.",
+      "scope": "The six observed classes only; not a complete embedding census.",
+      "status": "computed"
+    },
+    {
+      "claim": "The 64 retained labelled primary vectors occupy eight destroy-permutation normal forms.",
+      "evidence": "Independent row reconstruction and normal-form hashes in artifacts/novel42_labelled_cegar64_cold_audit.json.",
+      "scope": "Exactly the retained 64 models, all of which have distinct core-neighborhood rows.",
+      "status": "computed"
+    }
+  ],
+  "ruled_out": [
+    {
+      "claim_or_route": "Continue the identical record-21 labelled-blocking loop with a larger arbitrary model cutoff.",
+      "scope": "The immutable base, CaDiCaL incremental configuration, and one-primary-vector blocks.",
+      "reason": "The declared 64 vectors yielded no novel class and collapsed to eight S_12 normal forms, while labelled blocks cannot exclude an isomorphism class.",
+      "evidence": "Production and cold reports with the hashes above.",
+      "reopen_condition": "Install a proved class-level block or sound symmetry quotient, or demonstrate an artifact defect."
+    }
+  ],
+  "open_leads": [
+    {
+      "description": "Quotient the frozen boundary by sorting destroyed vertices on their frozen-core adjacency rows.",
+      "rationale": "Every completion has a row-sorted representative, and the current sample shows an exact 64-to-8 redundancy reduction when rows are distinct.",
+      "next_experiment": "Implement the lex CNF without the non-invariant Hamming constraint and exhaustively test small tied-row orbit coverage before one production solve.",
+      "priority": "high",
+      "status": "open"
+    }
+  ],
+  "blocker": "One 426-literal clause excludes only one labelled vector; the run has no checked isomorphism-class block or exhaustive boundary certificate.",
+  "reopen_condition": "A sound class-level block, an exhaustively validated boundary symmetry quotient, or a demonstrated source/mapping/checker defect.",
+  "reopen_evidence": "The former need for replayable primary model blocking was satisfied by the 64-model incremental packet; it exposed label symmetry as the next blocker.",
+  "continuation": {
+    "objective": "Test a sound destroy-label quotient before granting more boundary-search budget.",
+    "first_action": "Implement lex ordering of destroyed-vertex 30-bit core rows after removing the Hamming counter, then enumerate every small control orbit including tied rows to verify coverage.",
+    "stop_condition": "Stop on a coverage defect, a checker discrepancy, one dual-checked supplied-corpus novel graph, or the predeclared normal-form budget."
+  },
+  "campaign_assessment": {
+    "decision": "continue",
+    "close_signal": "A measured 64-to-8 redundancy reduction identifies a concrete sound quotient target; it is not evidence that the exact Ramsey value is near resolution.",
+    "reason": "One bounded pass remains information-rich because it tests a proved group action rather than enlarging an arbitrary cutoff."
+  },
+  "strategy_proposals": [
+    {
+      "family": "symmetry-normalized exact boundary repair",
+      "mechanism": "Remove the source Hamming counter and impose lex order on the destroyed vertices' frozen-core rows, with explicit tied-row coverage controls.",
+      "hypothesis": "The quotient avoids the measured label redundancy and changes the first-model supplied-class distribution.",
+      "discriminating_test": "Exhaustive small orbit-coverage gate followed by one predeclared production first model.",
+      "rationale": "It targets the exact 64-to-8 redundancy measured by the cold audit and has a direct coverage proof by sorting."
+    }
+  ],
+  "candidate_profile": {
+    "contribution_class": "research_artifact",
+    "scholarly_question": "Can exact labelled blocking within one known order-42 frozen boundary reach a supplied-corpus-novel Ramsey graph?",
+    "meaningful_delta": "Extends the prior one-model boundary check to a replayable 64-model incremental ledger and diagnoses an eight-normal-form symmetry bottleneck.",
+    "acceptance_test": "Accept only the exact 64-model/cold-audit scope and retained corpus-local witnesses; do not accept a class exclusion, exhaustive boundary result, or Ramsey bound.",
+    "closest_prior_work": [
+      {
+        "url": "https://users.cecs.anu.edu.au/~bdm/data/ramsey.html",
+        "difference": "The authoritative source supplies the 328 graphs and complements but not this frozen-core completion ledger."
+      },
+      {
+        "url": "https://doi.org/10.1002/jgt.70029",
+        "difference": "The upper-bound work establishes R(5,5) <= 46; this bounded order-42 search neither strengthens nor reproduces that bound."
+      }
+    ],
+    "novelty_searches": [
+      {
+        "source": "Dynamic Survey of Small Ramsey Numbers, revision 18",
+        "query": "R(5,5), order-42 supplied graphs, and current bound",
+        "url": "https://www.cs.rit.edu/~spr/ElJC/sur.pdf",
+        "finding": "The exact value remains open and the supplied order-42 graphs are evidence, not a complete classification."
+      }
+    ],
+    "external_channel": {
+      "recipient": "",
+      "url": "",
+      "acceptance_path": "No external submission is justified for this bounded internal route diagnostic."
+    },
+    "independent_validations": [],
+    "relevance": {
+      "settles_exact_open_target": false,
+      "improves_best_known_result": false,
+      "source_explicitly_requests_result": false,
+      "expert_interest_confirmed": false,
+      "new_structural_result": false,
+      "evidence_url": ""
+    },
+    "arbitrary_cutoff_extension": true
+  },
+  "tool_disclosure": "GPT-5.6 Sol was principal investigator. Supplied GPT-5.6 Terra literature-strategy and experiment-verification delegates were advisory and promoted with provenance; Sol audited their claims and no new subagent was spawned. Deterministic tools were Python 3.12.3, GCC/G++ 13.3.0, CaDiCaL library 1.7.4, nauty labelg, NetworkX 3.3, gzip, SHA-256, and the computational-researcher experiment harness. Ubuntu libcadical-dev 1.7.4-1 was installed and recorded. No CAS, proof assistant, external publication, or remote account was used."
+}

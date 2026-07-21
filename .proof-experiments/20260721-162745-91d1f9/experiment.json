@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "20260721-162745-91d1f9",
+  "name": "novel42-labelled-cegar64-cold-audit",
+  "hypothesis": "Every retained total model satisfies the immutable base CNF and prior primary blocks, maps to a valid frozen-core Ramsey(5,5,42) graph, and is isomorphic to its recorded supplied target.",
+  "expected_signal": "Independent reconstruction accepts all 64 models and rejects any block-polarity, model-map, clique, distance, or target-isomorphism discrepancy.",
+  "command": [
+    "python3",
+    "checkers/novel42_labelled_cegar_audit.py",
+    "sources/r55_42some.g6",
+    "artifacts/authenticated_corpus_report.json",
+    "artifacts/novel42_labelled_cegar64_report.json",
+    "artifacts/novel42_labelled_cegar64",
+    "artifacts/novel42_labelled_cegar64_cold_audit.json"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 900,
+  "memory_limit_mb": 1024,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-21T16:27:45.978241+00:00",
+  "finished_at": "2026-07-21T16:29:59.853294+00:00",
+  "duration_seconds": 133.875,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "e7689b77c7641395d7b1700b7528499164116cc6",
+  "source_urls": [
+    "https://users.cecs.anu.edu.au/~bdm/data/ramsey.html"
+  ],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/novel42_labelled_cegar_audit.py": "5bc022197143b7f7a2fa8ce13e0c71a3f42a3603f55715ec080c3803eb84effb",
+    "/root/proof-factory/research/ramsey-r55/workspace/sources/r55_42some.g6": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/authenticated_corpus_report.json": "0d9b1801434edcc12f34e73cea6c98d911f0e0c6f0884f8f03d96a46eca1344c",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/novel42_labelled_cegar64_report.json": "8cd3f5b16649f5fab092c5624f345cca9b305e5ac6cac789152677720b6c332e"
+  },
+  "peak_child_memory_rusage": 79512,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "71f7de02d0b9a8cf328d12105b2b940510da4bb3cd67e5b8c986b31835742de9",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

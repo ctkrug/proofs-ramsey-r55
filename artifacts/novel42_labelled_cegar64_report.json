@@ -1,0 +1,1959 @@
+{
+  "base_cnf": {
+    "clauses": 508157,
+    "input_path": "artifacts/novel42_boundary_repair/trial-01-record-0021/repair.cnf.gz",
+    "logical_sha256": "2f1c3b2ac59e4c4b6e2873d2d5ebb2d2eba4fd908a2927f2a30d1936bc3d1072",
+    "primary_variables": 426,
+    "retained_copy": "artifacts/novel42_labelled_cegar64/base.cnf.gz",
+    "variables": 155976
+  },
+  "blocks_path": "artifacts/novel42_labelled_cegar64/blocks.dimacs",
+  "blocks_sha256": "067cc2e42bee9fb40325865637621f69724bf40832408295548dff49d1a59fb1",
+  "boundary": {
+    "destroy_vertices": [
+      2,
+      3,
+      10,
+      12,
+      14,
+      25,
+      27,
+      30,
+      36,
+      37,
+      38,
+      41
+    ],
+    "fixed_vertices": 30,
+    "minimum_hamming_distance": 60,
+    "source_record": 21,
+    "variable_edges": 426
+  },
+  "claim_limit": "each 426-literal block excludes one labelled completion only; it is not an isomorphism-class block or a boundary exclusion",
+  "corpus": {
+    "canonical_classes": 656,
+    "path": "sources/r55_42some.g6",
+    "sha256": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb"
+  },
+  "delegate_memo_correction": {
+    "artifact_value": "2f1c3b2ac59e4c4b6e2873d2d5ebb2d2eba4fd908a2927f2a30d1936bc3d1072",
+    "memo_value": "2f1c3b2ac59e28c4b6e2873d2d5ebb2d2eba4fd908a2927f2a30d1936bc3d1072",
+    "resolution": "used the retained artifact and production report; the experiment-verification memo contains a transcription error"
+  },
+  "distinct_primary_vectors": 64,
+  "distinct_supplied_targets": 6,
+  "embedding_census": {
+    "naive_deleted_subsets_per_control": 11058116888,
+    "reason": "exact negative induced-subgraph probes were already slower than a SAT model and yielded no compact all-embedding class block; census is interpretive, not required for labelled blocking",
+    "status": "not_completed"
+  },
+  "hypothesis": "within 64 verified labelled completions, the retained boundary yields a valid Ramsey(5,5,42) graph absent from the supplied 656 classes",
+  "incremental_protocol": {
+    "base_parsed_once": true,
+    "block_literals": 426,
+    "blocks_appended": 64,
+    "learned_clauses_reused_within_boundary": true,
+    "model_budget": 64,
+    "per_solve_wall_limit_seconds": 60,
+    "seed": 1
+  },
+  "independence": {
+    "checker_a": {
+      "path": "checkers/checker_a.py",
+      "sha256": "b7f28adfec792139acce538ca879b775a0180467763b413e1a464672acddd259"
+    },
+    "checker_b": {
+      "path": "checkers/checker_b.c",
+      "sha256": "40f719bb36f8d7d3db3a4b949dce8b20abd49499f57f7d5b651b718658014d2e"
+    },
+    "enumerator_source": {
+      "path": "tools/novel42_incremental_enumerator.cpp",
+      "sha256": "2b9a03d4bca828af1243485eb450d73e99f1f966931b77a6042bcd938867a55f"
+    },
+    "per_model_gates": [
+      "full base DIMACS evaluation",
+      "all prior block evaluation",
+      "Python five-subset scan",
+      "C recursive-bitset scan",
+      "nauty canonical membership"
+    ],
+    "producer": "/root/proof-factory/research/ramsey-r55/workspace/scripts/run_novel42_labelled_cegar.py"
+  },
+  "models": [
+    {
+      "actual_boundary_hamming_distance": 207,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "1d79c53f527185f0b3a750648a7420a8f84d8d5496130247ff2ea25978e43223",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "862ea9a34ad42cfd8c21a0731f035866663282a56aa07519ec2fe012fc48182b",
+      "candidate_path": "novel42_labelled_cegar64/candidate-001.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-001.canonical.g6",
+      "canonical_sha256": "dc784729ad845e8eb7bebe4b02f810ccb5c1cf217c8a32349144498254b37c43",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-001.bits",
+      "model_bits_sha256": "51a679ee8d066ba294307af5b4529f971cbf9edab82d0a118da1a56bd4d6ea84",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "9c42cdb6f3c453eca7b3aa1c8c71e83f2527d770a145459bf1e12e15da69ccf3",
+      "prior_blocks_satisfied": 0,
+      "python_direct_five_subset_scan": true,
+      "round": 1,
+      "solver_library": "1.7.3",
+      "solver_seconds": 10.1237,
+      "supplied_target": {
+        "kind": "source",
+        "record": 18
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 225,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "0a9d99b9224d401831b5bd86cb56430985b2f67a5fd292f4d87e9ea205adb89f",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "df3c54409959705ffea2b191901763032318a8641429df3988175b40e19c40da",
+      "candidate_path": "novel42_labelled_cegar64/candidate-002.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-002.canonical.g6",
+      "canonical_sha256": "dc784729ad845e8eb7bebe4b02f810ccb5c1cf217c8a32349144498254b37c43",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-002.bits",
+      "model_bits_sha256": "cadf9806239649685ef71c8e4029eaf936d958085a7f940f7acc43b295201110",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "4ede84b5a60ba1ab9e70463ef25a779f5b81161b7aa5fdfa31ae0f8202257af0",
+      "prior_blocks_satisfied": 1,
+      "python_direct_five_subset_scan": true,
+      "round": 2,
+      "solver_library": "1.7.3",
+      "solver_seconds": 5.26692,
+      "supplied_target": {
+        "kind": "source",
+        "record": 18
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 226,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "1878898875da4453045aaca042bc23437a38cc56c703e8ccfcd1043a63e69761",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "ca54ef415879f1dfc362e583ca9137ea7bec9db38ecbcc243d63ddb5d8ecedb3",
+      "candidate_path": "novel42_labelled_cegar64/candidate-003.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-003.canonical.g6",
+      "canonical_sha256": "0fddb2bb6a619badd2020d596f0c4481500f71b494a849946d71c9cc00ee19d2",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-003.bits",
+      "model_bits_sha256": "4fb2844313e5cec3fb1daa5bae766a0ec1b1f8d4618f34e5e9a3cc70bedf2d79",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "845ca0585107d46afff26220153e6fc1786068e164155c76fda6d1196e005c0a",
+      "prior_blocks_satisfied": 2,
+      "python_direct_five_subset_scan": true,
+      "round": 3,
+      "solver_library": "1.7.3",
+      "solver_seconds": 8.30846,
+      "supplied_target": {
+        "kind": "source",
+        "record": 25
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 222,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "504adcba495a48d67136f8b05263f7308fdb97cb23b02b53f0da6c5b8ea4d5a1",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "09813b40a11299d17831300184cdca3ebcb7144cb5e044e8cef09e2a458346a5",
+      "candidate_path": "novel42_labelled_cegar64/candidate-004.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-004.canonical.g6",
+      "canonical_sha256": "0fddb2bb6a619badd2020d596f0c4481500f71b494a849946d71c9cc00ee19d2",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-004.bits",
+      "model_bits_sha256": "eb9d10a6c0c0a5622fc056b19a05d06b797e6192c221a08f9dedff2d346abd39",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "096542311218ead114305a305a10d8682825df07ca09555cd1b34be07fbddb4c",
+      "prior_blocks_satisfied": 3,
+      "python_direct_five_subset_scan": true,
+      "round": 4,
+      "solver_library": "1.7.3",
+      "solver_seconds": 10.9184,
+      "supplied_target": {
+        "kind": "source",
+        "record": 25
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 221,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "99b0de78d9843d1716ecd7aeafce49c237d3b739914948384c23d933ce1562c0",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "26a69e601da085ca8e9942bb1589b54c8c6fd3fe45db5f111c1e5c485d8c0b8e",
+      "candidate_path": "novel42_labelled_cegar64/candidate-005.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-005.canonical.g6",
+      "canonical_sha256": "dc784729ad845e8eb7bebe4b02f810ccb5c1cf217c8a32349144498254b37c43",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-005.bits",
+      "model_bits_sha256": "ecc0f06a815e8524cb569d2e25ccef582dfa2a44f1ac4a836142905010e6457c",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "f0cd96cf984423cad2674ac8e04f7739ecc0be090f4986652251a09bc9543e80",
+      "prior_blocks_satisfied": 4,
+      "python_direct_five_subset_scan": true,
+      "round": 5,
+      "solver_library": "1.7.3",
+      "solver_seconds": 26.1737,
+      "supplied_target": {
+        "kind": "source",
+        "record": 18
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 148,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "ea9dab0c33c90e0a434adb3fb6ae26b8da660d890cb2a691619c012beb27f8ad",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "31613c4651c9517bc5e6faff5304e53208b6f38078de8683ac42b9bba793eb37",
+      "candidate_path": "novel42_labelled_cegar64/candidate-006.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-006.canonical.g6",
+      "canonical_sha256": "0fddb2bb6a619badd2020d596f0c4481500f71b494a849946d71c9cc00ee19d2",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-006.bits",
+      "model_bits_sha256": "c5e37f82400a53d4ea23cdb2f71261a95e5f322a9f6cf6f6e9227020a9f553cb",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "2e027b351a39c517dccdc74272c6730b19492cbf4f71e54689875663c7235c3d",
+      "prior_blocks_satisfied": 5,
+      "python_direct_five_subset_scan": true,
+      "round": 6,
+      "solver_library": "1.7.3",
+      "solver_seconds": 44.1706,
+      "supplied_target": {
+        "kind": "source",
+        "record": 25
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 149,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "030e6491e1c435dc239dba94955c9d8accbff938033934165e45e549c4f7ce41",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "ae2bf08cb863445e5e4078e49865161f664c4ac927ecdb5ccb7e24f2e45d9c84",
+      "candidate_path": "novel42_labelled_cegar64/candidate-007.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-007.canonical.g6",
+      "canonical_sha256": "dc784729ad845e8eb7bebe4b02f810ccb5c1cf217c8a32349144498254b37c43",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-007.bits",
+      "model_bits_sha256": "f8ab28b58088f6dd23a5d1a25a1d7373bc89cf7c5702cb7b90e1985d660fe3ff",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "75c97c437a27f03ee3335a0ab6f1f02df6f9bcb3d1f9dad32523f5376c068070",
+      "prior_blocks_satisfied": 6,
+      "python_direct_five_subset_scan": true,
+      "round": 7,
+      "solver_library": "1.7.3",
+      "solver_seconds": 0.0309122,
+      "supplied_target": {
+        "kind": "source",
+        "record": 18
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 170,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "3e8c937e6188b2c8256e0be7cba7d2a2079ece05fb7fbb73b1cadab68bd6733b",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "3c58e7577a90fdc6a48cf4881086f95d4bead311c7bb29365e3a5ca589bbfc9c",
+      "candidate_path": "novel42_labelled_cegar64/candidate-008.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-008.canonical.g6",
+      "canonical_sha256": "0fddb2bb6a619badd2020d596f0c4481500f71b494a849946d71c9cc00ee19d2",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-008.bits",
+      "model_bits_sha256": "4bd0aa64043b01bb75ac868f29952b948679b67fa1dcfd65f75c76672ae08e12",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "5a9b4afc3d5b7470dc68a0cc760e7f1e493bba5d5c4e332cb0a860aa1377e17b",
+      "prior_blocks_satisfied": 7,
+      "python_direct_five_subset_scan": true,
+      "round": 8,
+      "solver_library": "1.7.3",
+      "solver_seconds": 0.0196768,
+      "supplied_target": {
+        "kind": "source",
+        "record": 25
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 171,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "548772b0cba1e9a82b17acddb4b0160df920df422a1778d19c9042473780d326",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "6c843fead5b65e03cc43f11ec7f29ac1e452ef00c362923a838156ebd6959008",
+      "candidate_path": "novel42_labelled_cegar64/candidate-009.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-009.canonical.g6",
+      "canonical_sha256": "dc784729ad845e8eb7bebe4b02f810ccb5c1cf217c8a32349144498254b37c43",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-009.bits",
+      "model_bits_sha256": "91e9a2a32b6809660b34d2e4f0078a9450a734d5e256a347d3f18255fe631926",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "b3df2883b64d4e1ad4e6369eab6943bdc475ecf26ad733ca8b525c4e736d3498",
+      "prior_blocks_satisfied": 8,
+      "python_direct_five_subset_scan": true,
+      "round": 9,
+      "solver_library": "1.7.3",
+      "solver_seconds": 0.0173111,
+      "supplied_target": {
+        "kind": "source",
+        "record": 18
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 149,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "eadb7a30ac7e339bfbc77551172eb7ce8ae06228cf0af2cf2ff7138a4ffba737",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "fd01ccf12f868254bdb87d9fba8bfb0d003ff2b2db029b93409feef7d6d3e4c7",
+      "candidate_path": "novel42_labelled_cegar64/candidate-010.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-010.canonical.g6",
+      "canonical_sha256": "76376f83dcfc0ad43a3aab79bc2789c118b23820b248ba8ed2a3496f5b9d8e31",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-010.bits",
+      "model_bits_sha256": "107cb16954199ae8d46598a4025eb7bebbad824f841b850f62c1a4bb143d146d",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "ba89e65b56a2fad9c0f599c83f77b9f17e8a7810142eb86163a8b78d0299003c",
+      "prior_blocks_satisfied": 9,
+      "python_direct_five_subset_scan": true,
+      "round": 10,
+      "solver_library": "1.7.3",
+      "solver_seconds": 0.0223698,
+      "supplied_target": {
+        "kind": "source",
+        "record": 20
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 150,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "5cc3f1e19256fc2be736d0489ab5e46bbd53ea7131b3ad42dd6447cb2e00ace0",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "a57cce1335af5150a4940b5a84914a912034ee195ba52e5622fd1e3d999c315d",
+      "candidate_path": "novel42_labelled_cegar64/candidate-011.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-011.canonical.g6",
+      "canonical_sha256": "0fddb2bb6a619badd2020d596f0c4481500f71b494a849946d71c9cc00ee19d2",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-011.bits",
+      "model_bits_sha256": "f7d3b887373e93a6542aa6c583db53bc19ed0d3cf0bb2721f67ea278234fa023",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "b3cd3290b43ff201c7b7d40aa4ada54e9debf77d94af48d1d9582471877eab0b",
+      "prior_blocks_satisfied": 10,
+      "python_direct_five_subset_scan": true,
+      "round": 11,
+      "solver_library": "1.7.3",
+      "solver_seconds": 0.0182018,
+      "supplied_target": {
+        "kind": "source",
+        "record": 25
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 149,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "8bdb26c07418ab424bb34608d55daf819470149474bf0e77f9bdc504fbf22c5b",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "3a74e0935ffa9567758d0ab81ed69ef7bd6513e3b467ec8d73c4a620f3580cf5",
+      "candidate_path": "novel42_labelled_cegar64/candidate-012.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-012.canonical.g6",
+      "canonical_sha256": "178a11da26efde30a3cc9160580ab5422a3e3aaacf762d3a0f5072ba6d6dbc4d",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-012.bits",
+      "model_bits_sha256": "8e2a662978f2caad5a6211e8773d90714d278e7e450990088792140e5329a3a3",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "5ebcb91f583bef6a1d7acfb45ff9c39601ba197f90cb7545d3db5db5bf56ebcf",
+      "prior_blocks_satisfied": 11,
+      "python_direct_five_subset_scan": true,
+      "round": 12,
+      "solver_library": "1.7.3",
+      "solver_seconds": 0.0261757,
+      "supplied_target": {
+        "kind": "source",
+        "record": 12
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 148,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "41eff51a87a62ccc5132347c81a60e145b4fb0bebcd2bd3929937486e082586c",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "70021d5359a3e294a7d8197b159d46af4198e5afcdefd698d1436e3cc559a6f9",
+      "candidate_path": "novel42_labelled_cegar64/candidate-013.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-013.canonical.g6",
+      "canonical_sha256": "330e5b76df899f5fdb0f9cf5b9f0ea7a95016bb7631f99514016bf434d3ab4da",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-013.bits",
+      "model_bits_sha256": "6adc19ee95b514799e470a3fc86ef2474c5b75c4a737f14e009c5752af527a9a",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "9ffbac3f39a430bfe095f055ecba9a2c7decf26c356cf36b503b30e7b3222634",
+      "prior_blocks_satisfied": 12,
+      "python_direct_five_subset_scan": true,
+      "round": 13,
+      "solver_library": "1.7.3",
+      "solver_seconds": 0.0174435,
+      "supplied_target": {
+        "kind": "source",
+        "record": 21
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 148,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "8e556c08c04117b33d6d0bd1ae006dc95a9a820817dc5b17e5b44c15c9a79909",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "479b8a86c0e131d27e7e718873341393e42a8ed21d977675717b87bb20e49b68",
+      "candidate_path": "novel42_labelled_cegar64/candidate-014.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-014.canonical.g6",
+      "canonical_sha256": "aab0b8eaf5ba01f3d46b73aa370f85e5656148198e073f5dd6f0736efc62fd04",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-014.bits",
+      "model_bits_sha256": "daca70b27f082c0650bb99bf05cf770a619dd50efd179f173a4dbbee87ecc617",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "0266a0b1bda0027aa66e244b05140a23dfb54bd17abe7f84af8da76c675c543d",
+      "prior_blocks_satisfied": 13,
+      "python_direct_five_subset_scan": true,
+      "round": 14,
+      "solver_library": "1.7.3",
+      "solver_seconds": 0.0151734,
+      "supplied_target": {
+        "kind": "source",
+        "record": 19
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 147,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "b9d4c80952f2c84ceaa506847e42162d8ed849cbd6b94ff8692fc3387171901e",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "584900ceeb8a3c6b33358981ccaadb0dffc3d5d3f16cc826dc5cc42777bebdbe",
+      "candidate_path": "novel42_labelled_cegar64/candidate-015.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-015.canonical.g6",
+      "canonical_sha256": "178a11da26efde30a3cc9160580ab5422a3e3aaacf762d3a0f5072ba6d6dbc4d",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-015.bits",
+      "model_bits_sha256": "443d8c24090c22302102b8f7b91212802aa4ec6221cbe26acd5971d9df11d56e",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "bc26836158d690aae54a36c015a768f43bf643d0a44c903a7bbd01b8c39e7198",
+      "prior_blocks_satisfied": 14,
+      "python_direct_five_subset_scan": true,
+      "round": 15,
+      "solver_library": "1.7.3",
+      "solver_seconds": 0.0158316,
+      "supplied_target": {
+        "kind": "source",
+        "record": 12
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 145,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "8148bbfc26ae572a4af038d8cb78750d2eb1ad734f36816704a70a4c6e7c4499",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "cc904f3c6cfc09976af5fe7ca2436212a6c3e134e4ed12e9fbaf50edd7338f08",
+      "candidate_path": "novel42_labelled_cegar64/candidate-016.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-016.canonical.g6",
+      "canonical_sha256": "76376f83dcfc0ad43a3aab79bc2789c118b23820b248ba8ed2a3496f5b9d8e31",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-016.bits",
+      "model_bits_sha256": "82da110f1ceb868c3c6f3f0ba529dc73547ac4e74cfbdf1e21a1a8848180946d",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "1a519b2a08ad7a377fd7cd7c05f9510ae773471b197765b2df8ccee96cb8afe9",
+      "prior_blocks_satisfied": 15,
+      "python_direct_five_subset_scan": true,
+      "round": 16,
+      "solver_library": "1.7.3",
+      "solver_seconds": 36.0741,
+      "supplied_target": {
+        "kind": "source",
+        "record": 20
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 170,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "1a8ed5f357d9db2e2e928e41b22ccca503fe6f1956d2cb78536df675f3d49f8c",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "61d1062dd8dbd2a78a716ccd192b912a603c63fa89fa5cc8adbd8f740c3fa095",
+      "candidate_path": "novel42_labelled_cegar64/candidate-017.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-017.canonical.g6",
+      "canonical_sha256": "0fddb2bb6a619badd2020d596f0c4481500f71b494a849946d71c9cc00ee19d2",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-017.bits",
+      "model_bits_sha256": "c665871e3a297b8e4f5912cef4dde851b919f7375dfa177c443e3efdb76c3c49",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "2df2f74792d6656e62f3c76460af49d129566fb93865d4f8d8c96c46732d96fd",
+      "prior_blocks_satisfied": 16,
+      "python_direct_five_subset_scan": true,
+      "round": 17,
+      "solver_library": "1.7.3",
+      "solver_seconds": 31.8486,
+      "supplied_target": {
+        "kind": "source",
+        "record": 25
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 138,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "b4c2330c4d84085964f8b0a6a91f1f3a4965ac5908ac6d11fde23b63605428f1",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "d0a9b36b612961070937e07454fdf5cfd69da0b03a5de6293adec23e491d8072",
+      "candidate_path": "novel42_labelled_cegar64/candidate-018.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-018.canonical.g6",
+      "canonical_sha256": "0fddb2bb6a619badd2020d596f0c4481500f71b494a849946d71c9cc00ee19d2",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-018.bits",
+      "model_bits_sha256": "3fce675437d6bab107e1350a89bd8ebdaafd1377b9ca454aa5d21515551cb706",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "1ca6272e02024f794197218998d789d35e603023f48f2cbcffe73f23fb3babf1",
+      "prior_blocks_satisfied": 17,
+      "python_direct_five_subset_scan": true,
+      "round": 18,
+      "solver_library": "1.7.3",
+      "solver_seconds": 0.0279936,
+      "supplied_target": {
+        "kind": "source",
+        "record": 25
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 174,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "8ce3b8c2ae81492188b6423b709e96149ea4203c292363259f7f8bbd2e5b616f",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "0877e9faf1dcab876d0c9a1c2e57cbe55e89ef049bffa8e722a28b58b322c22a",
+      "candidate_path": "novel42_labelled_cegar64/candidate-019.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-019.canonical.g6",
+      "canonical_sha256": "0fddb2bb6a619badd2020d596f0c4481500f71b494a849946d71c9cc00ee19d2",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-019.bits",
+      "model_bits_sha256": "58bce78170ce811aa5af0e2de78a0d671ce81049537c2d4a8d6a33b7aeaf62ee",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "f345b9e7b25548b6ae87f0ef6218e0e20ec1b990608de79b6cfeb4ea619822c6",
+      "prior_blocks_satisfied": 18,
+      "python_direct_five_subset_scan": true,
+      "round": 19,
+      "solver_library": "1.7.3",
+      "solver_seconds": 0.0239462,
+      "supplied_target": {
+        "kind": "source",
+        "record": 25
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 173,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "18b76de6f105a96e7cd9d960cfd642d15f030c4bac35bbadbf6111fa5aea1586",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "0f726c8fd94d1d6fd43653938f3a004575aaaa1b3f7d96558712885870ce1131",
+      "candidate_path": "novel42_labelled_cegar64/candidate-020.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-020.canonical.g6",
+      "canonical_sha256": "178a11da26efde30a3cc9160580ab5422a3e3aaacf762d3a0f5072ba6d6dbc4d",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-020.bits",
+      "model_bits_sha256": "27981867d6471bd345a145c97ae8de1ff5d3c6ef825ee592ad2da050966699fa",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "b7319a686a718338f89bbf01794baf6d642b8368d9d967a900010988825d781c",
+      "prior_blocks_satisfied": 19,
+      "python_direct_five_subset_scan": true,
+      "round": 20,
+      "solver_library": "1.7.3",
+      "solver_seconds": 0.0146479,
+      "supplied_target": {
+        "kind": "source",
+        "record": 12
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 172,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "fe7acdc763205568176661852860b7f3ed218cb18c78d76e9a7aa37824e22a02",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "23328d52f97a45221928e932ebda26d277497f48c7f0af04d5ada68edc0048ca",
+      "candidate_path": "novel42_labelled_cegar64/candidate-021.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-021.canonical.g6",
+      "canonical_sha256": "330e5b76df899f5fdb0f9cf5b9f0ea7a95016bb7631f99514016bf434d3ab4da",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-021.bits",
+      "model_bits_sha256": "9eae86b09e39b1917e348320a2f61faa670af0b0a10932df2dc59cfe06333a0e",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "242350f150fbe2077f3a7c34252b4bc205b7ea3adbf33100620c4d193269254e",
+      "prior_blocks_satisfied": 20,
+      "python_direct_five_subset_scan": true,
+      "round": 21,
+      "solver_library": "1.7.3",
+      "solver_seconds": 0.0145161,
+      "supplied_target": {
+        "kind": "source",
+        "record": 21
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 173,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "62a2c5c55f885bf3f5a56df3cb9ead95c9603007cb753b40ee887c1f4afaa2fd",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "cacca5d318a7a3f710b90ba2375ee8eb64393fcd42de8428c29ed44468228ab1",
+      "candidate_path": "novel42_labelled_cegar64/candidate-022.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-022.canonical.g6",
+      "canonical_sha256": "76376f83dcfc0ad43a3aab79bc2789c118b23820b248ba8ed2a3496f5b9d8e31",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-022.bits",
+      "model_bits_sha256": "ebaeb31ee65289708e6bfbd965c5b0f7e45d875c74d1ac76f398ef0e0ffe42fc",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "aa4be5fdca05417a1eed55b5628b65224f7a181d43f7fd279b0f0d55b98218ac",
+      "prior_blocks_satisfied": 21,
+      "python_direct_five_subset_scan": true,
+      "round": 22,
+      "solver_library": "1.7.3",
+      "solver_seconds": 0.013986,
+      "supplied_target": {
+        "kind": "source",
+        "record": 20
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 172,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "dd543df9117ec4b378732a9941ba33c75f0d6f911d5438a957f1294550947ac8",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "0723f6dfb32110890fc36ca236f445d8792cbf6158abe97f7ea1dd9e6d773e6b",
+      "candidate_path": "novel42_labelled_cegar64/candidate-023.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-023.canonical.g6",
+      "canonical_sha256": "0fddb2bb6a619badd2020d596f0c4481500f71b494a849946d71c9cc00ee19d2",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-023.bits",
+      "model_bits_sha256": "bfd5dccfbae392277109b3b6f5ef2e18ecda94474d3e9da87dc57856230e615c",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "e94ec2de2116bc875c855d16f133357880f9f7263b2c949574c090ab7a3f3812",
+      "prior_blocks_satisfied": 22,
+      "python_direct_five_subset_scan": true,
+      "round": 23,
+      "solver_library": "1.7.3",
+      "solver_seconds": 0.0543254,
+      "supplied_target": {
+        "kind": "source",
+        "record": 25
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 171,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "f55a2b86a59537d876a96e83b94da11d0572e336704cbfc3a2d1e06f6d933bb8",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "0c0fd489b8b513eb9c551f8749c11026d8afbf807973c7285b6b370c27797c29",
+      "candidate_path": "novel42_labelled_cegar64/candidate-024.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-024.canonical.g6",
+      "canonical_sha256": "178a11da26efde30a3cc9160580ab5422a3e3aaacf762d3a0f5072ba6d6dbc4d",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-024.bits",
+      "model_bits_sha256": "896205d45c1ad0d9c555d5e82f8ef0acfff486f4651e802f75a8f6b020cac4f6",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "2df4285f0839299240bd487e302c37293eda655d7ea4bfc7240fa76532d95004",
+      "prior_blocks_satisfied": 23,
+      "python_direct_five_subset_scan": true,
+      "round": 24,
+      "solver_library": "1.7.3",
+      "solver_seconds": 0.0848625,
+      "supplied_target": {
+        "kind": "source",
+        "record": 12
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 172,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "856c99664baf7f576d06ed5c831cdf2415bcf20b9b075f9273e014682e6b27c9",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "a1c2f5042ecdad83a14134804c7ccfd9467ab189a0d34cce9d547763cc8e94d9",
+      "candidate_path": "novel42_labelled_cegar64/candidate-025.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-025.canonical.g6",
+      "canonical_sha256": "aab0b8eaf5ba01f3d46b73aa370f85e5656148198e073f5dd6f0736efc62fd04",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-025.bits",
+      "model_bits_sha256": "08662e21535d9af75f936627c21710d1bc845da04b4b82707a961d38723649d2",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "248536c04e1b465ae26dd3c0fb14513aae018f6c692295af3e0d5f949a1d492e",
+      "prior_blocks_satisfied": 24,
+      "python_direct_five_subset_scan": true,
+      "round": 25,
+      "solver_library": "1.7.3",
+      "solver_seconds": 0.010754,
+      "supplied_target": {
+        "kind": "source",
+        "record": 19
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 173,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "9d5e051db8f0a4d8a9e9ecffb6692b9c7e979d15a68fab10c573e5b8dad065d8",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "0d66d662d9753f9b5c40edbe3bf05efcbddc8f1e5af6f28e492780c5bc13e598",
+      "candidate_path": "novel42_labelled_cegar64/candidate-026.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-026.canonical.g6",
+      "canonical_sha256": "dc784729ad845e8eb7bebe4b02f810ccb5c1cf217c8a32349144498254b37c43",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-026.bits",
+      "model_bits_sha256": "4dda5ede55a25131ea5eddd6cff9d509a49926fe57e466f8ff26cb36b4fb8599",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "dfda82287ea9fac07c142273405a9668a51490e96b82ff2b294a6fcb679704c8",
+      "prior_blocks_satisfied": 25,
+      "python_direct_five_subset_scan": true,
+      "round": 26,
+      "solver_library": "1.7.3",
+      "solver_seconds": 0.0504148,
+      "supplied_target": {
+        "kind": "source",
+        "record": 18
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 157,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "96ef25b6b9f79cf028ce701e237b5550dd4d283e6e5bd5eb24e6911525a36767",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "b2ca3d6df743c5154bd3bba74c006ebe86f834fc829d7497f51cb6665397c362",
+      "candidate_path": "novel42_labelled_cegar64/candidate-027.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-027.canonical.g6",
+      "canonical_sha256": "dc784729ad845e8eb7bebe4b02f810ccb5c1cf217c8a32349144498254b37c43",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-027.bits",
+      "model_bits_sha256": "44036a5fea81d7c70ba49ee5c03b9cd89e49397692315fc206fd00a27efcaec0",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "970c13ed9556e01bacfa14ca7a1d7997806674b978ea9d8ca3028278b450d61f",
+      "prior_blocks_satisfied": 26,
+      "python_direct_five_subset_scan": true,
+      "round": 27,
+      "solver_library": "1.7.3",
+      "solver_seconds": 0.0479863,
+      "supplied_target": {
+        "kind": "source",
+        "record": 18
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 156,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "0b0d500caa1c819ef03df64648dd7a36071f169f4cc1917bcf71c7d8f140763e",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "c6328a39bed1736a12b9a426e7adc23dadd1451fe81cbb599fbdee421a3485a7",
+      "candidate_path": "novel42_labelled_cegar64/candidate-028.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-028.canonical.g6",
+      "canonical_sha256": "aab0b8eaf5ba01f3d46b73aa370f85e5656148198e073f5dd6f0736efc62fd04",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-028.bits",
+      "model_bits_sha256": "84ba4333e64628b0a556dfa11db76d18a3b2361c96188d81239531fa853cacc0",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "1c5474306fc490725734cd0c3aa21f53f958369f577208f38c5485b6085a75d5",
+      "prior_blocks_satisfied": 27,
+      "python_direct_five_subset_scan": true,
+      "round": 28,
+      "solver_library": "1.7.3",
+      "solver_seconds": 0.0135805,
+      "supplied_target": {
+        "kind": "source",
+        "record": 19
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 155,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "63212d327be54840264bbf41c4c85661cc979943bad971df5d1ddd85d49dbdd5",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "c04291bc2989c56a35cc34a69d83f01fa6ea0433de1b2e776b5e671538db2850",
+      "candidate_path": "novel42_labelled_cegar64/candidate-029.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-029.canonical.g6",
+      "canonical_sha256": "178a11da26efde30a3cc9160580ab5422a3e3aaacf762d3a0f5072ba6d6dbc4d",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-029.bits",
+      "model_bits_sha256": "a971a17f583e5770e41f4e806b7930980d880cff1d5a7cdae0b65f88954fc33d",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "c061f9b99c38b3c308d6be4c46a9d9e62ef6e3208e98c62f2063fb030cb7a9ff",
+      "prior_blocks_satisfied": 28,
+      "python_direct_five_subset_scan": true,
+      "round": 29,
+      "solver_library": "1.7.3",
+      "solver_seconds": 0.0142438,
+      "supplied_target": {
+        "kind": "source",
+        "record": 12
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 156,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "62e79bfd70358e8a4f35a11bb656fab5be0a03804bcff3cdd329b06888bcb8ef",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "26db88fe87bf07abddd8159a10e6f0ab1b6b2398e94a62ded285234f6b66decd",
+      "candidate_path": "novel42_labelled_cegar64/candidate-030.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-030.canonical.g6",
+      "canonical_sha256": "0fddb2bb6a619badd2020d596f0c4481500f71b494a849946d71c9cc00ee19d2",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-030.bits",
+      "model_bits_sha256": "e67608cfca38a4ae1471a0dfb90cf83e51015e62e96fc52438e36a4284c2e2c5",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "6ed9506aef4cf4b75904ee32f9fa89bf79d877adff845c11e58b49b36e388412",
+      "prior_blocks_satisfied": 29,
+      "python_direct_five_subset_scan": true,
+      "round": 30,
+      "solver_library": "1.7.3",
+      "solver_seconds": 0.0453679,
+      "supplied_target": {
+        "kind": "source",
+        "record": 25
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 157,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "41a000da54ea4c6bca6a9d0ee475001edd3fe2d6b85bdd3bbfca70fc68783a7e",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "735af340586c566b4d0f13a955ce29894622ffd3c65bd27829fb56a32234301f",
+      "candidate_path": "novel42_labelled_cegar64/candidate-031.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-031.canonical.g6",
+      "canonical_sha256": "76376f83dcfc0ad43a3aab79bc2789c118b23820b248ba8ed2a3496f5b9d8e31",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-031.bits",
+      "model_bits_sha256": "129e578e150404c0ac4965f508fe8113eacc51f33a0a286ed6b1bd9820a1c282",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "fef067553a15afd748df070b6456f8792e057309857632d5b556b10616c01930",
+      "prior_blocks_satisfied": 30,
+      "python_direct_five_subset_scan": true,
+      "round": 31,
+      "solver_library": "1.7.3",
+      "solver_seconds": 0.0124584,
+      "supplied_target": {
+        "kind": "source",
+        "record": 20
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 156,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "85160b5bbf7eba8b2124fb88f3c00394f8d33f2992a5b9b694e6144b9d51a1ac",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "ce842967b63aedc4e3503ea03421ad664ed0f022085cf5027cb0d27f61222f53",
+      "candidate_path": "novel42_labelled_cegar64/candidate-032.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-032.canonical.g6",
+      "canonical_sha256": "330e5b76df899f5fdb0f9cf5b9f0ea7a95016bb7631f99514016bf434d3ab4da",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-032.bits",
+      "model_bits_sha256": "0b3b71d196875e91d192b8d0440a837271a153a87d8ac23e65e1d3f7a90ffcdb",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "41383b001be55f21167b6932f3e061fa753204cb6cd4f77b5df34461c3df143b",
+      "prior_blocks_satisfied": 31,
+      "python_direct_five_subset_scan": true,
+      "round": 32,
+      "solver_library": "1.7.3",
+      "solver_seconds": 0.0115851,
+      "supplied_target": {
+        "kind": "source",
+        "record": 21
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 157,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "69d17a9a7352421d3c38ff7b1a3b8b5750f40fc75cbaad5e91accd976f2bd00e",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "38d7006a538ce9e11ecebf68439965d86f1afffbceb621c0a4cd5c43d3fc23d6",
+      "candidate_path": "novel42_labelled_cegar64/candidate-033.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-033.canonical.g6",
+      "canonical_sha256": "178a11da26efde30a3cc9160580ab5422a3e3aaacf762d3a0f5072ba6d6dbc4d",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-033.bits",
+      "model_bits_sha256": "c46709917d52307dae3db00c46b967cb7ab30bb22f54f688d99060d60e5cfdbf",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "3cbf10388ca960b87a9839d53627d26c82bf17375eb23c9d275af7a7dedfccfd",
+      "prior_blocks_satisfied": 32,
+      "python_direct_five_subset_scan": true,
+      "round": 33,
+      "solver_library": "1.7.3",
+      "solver_seconds": 0.0134296,
+      "supplied_target": {
+        "kind": "source",
+        "record": 12
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 158,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "65f168eec4080c9a3dac75fc36ae73d996bb7820ded1b867f08c6bee7b89db99",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "6dcbe280aaa5327de217990f6fe8fce1e58897a7f851268eaaf12e94ae94aa16",
+      "candidate_path": "novel42_labelled_cegar64/candidate-034.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-034.canonical.g6",
+      "canonical_sha256": "0fddb2bb6a619badd2020d596f0c4481500f71b494a849946d71c9cc00ee19d2",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-034.bits",
+      "model_bits_sha256": "2c130b28cc6ad4b8b2d96ffe959b33436115eea3da8f77dba501f649ddd2578d",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "8e4d2e7efdbc8ec03c672cd9130eda2478258b895aa7adb0c2e77e8ba140ff73",
+      "prior_blocks_satisfied": 33,
+      "python_direct_five_subset_scan": true,
+      "round": 34,
+      "solver_library": "1.7.3",
+      "solver_seconds": 0.0105542,
+      "supplied_target": {
+        "kind": "source",
+        "record": 25
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 188,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "621fffab79f4875f8e74dfaf544997ca9665adbd45fbe468032e7055d9266b5b",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "186a5fe6b47a381218d79f0f27cfd616943034a858d3ab9c31b645c3f73011bd",
+      "candidate_path": "novel42_labelled_cegar64/candidate-035.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-035.canonical.g6",
+      "canonical_sha256": "0fddb2bb6a619badd2020d596f0c4481500f71b494a849946d71c9cc00ee19d2",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-035.bits",
+      "model_bits_sha256": "f8563e9134c3d1f66845da37143d2f91b31a158546882274761be27112712fa5",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "1ea515bf5e0d8d5249a3a7ed672cced26ef082e38c05ac7ee526f068999ef1cb",
+      "prior_blocks_satisfied": 34,
+      "python_direct_five_subset_scan": true,
+      "round": 35,
+      "solver_library": "1.7.3",
+      "solver_seconds": 0.0482304,
+      "supplied_target": {
+        "kind": "source",
+        "record": 25
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 187,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "39ab56788e3c39c792f320e1c5c9b42fd426df38d11d7ca7ccf6d3623089d34b",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "10121ac73050deb9c1a63c8e4e73a2dfb6f48fe20150b0541c137cab6e5be0f3",
+      "candidate_path": "novel42_labelled_cegar64/candidate-036.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-036.canonical.g6",
+      "canonical_sha256": "178a11da26efde30a3cc9160580ab5422a3e3aaacf762d3a0f5072ba6d6dbc4d",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-036.bits",
+      "model_bits_sha256": "2dc038b8c818857769d6030101ee4b2d81149301c9a683c553f0edb5747e0af7",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "26b561590d7db4652f3f1770c2671a29b3735df761b09b625a7d9978e97be23b",
+      "prior_blocks_satisfied": 35,
+      "python_direct_five_subset_scan": true,
+      "round": 36,
+      "solver_library": "1.7.3",
+      "solver_seconds": 0.0132649,
+      "supplied_target": {
+        "kind": "source",
+        "record": 12
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 186,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "940c2a17d595e25648b449d7c13e753e87a6734b8260b61d5f942cebe7d9a7e3",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "aff84829671077f59fc04f8c615d6ad905d1f03293f1545aa5488bb6337f4e44",
+      "candidate_path": "novel42_labelled_cegar64/candidate-037.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-037.canonical.g6",
+      "canonical_sha256": "330e5b76df899f5fdb0f9cf5b9f0ea7a95016bb7631f99514016bf434d3ab4da",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-037.bits",
+      "model_bits_sha256": "0f0e1f9196cddcbdbdd6114f719e664c5b05f38d23257d83362e552a0e4fa56a",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "dee19781d056f856eefa3116d8fc7a0a5463a319ccbb087347f484603ea354ef",
+      "prior_blocks_satisfied": 36,
+      "python_direct_five_subset_scan": true,
+      "round": 37,
+      "solver_library": "1.7.3",
+      "solver_seconds": 0.133074,
+      "supplied_target": {
+        "kind": "source",
+        "record": 21
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 187,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "1622134544d12699458740487553801768907b16c7029e765c0d562042d7c6b4",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "9c466c800962d21cfe95ed4c78e5744b321873de3e0297ccd57eb0db81ed0135",
+      "candidate_path": "novel42_labelled_cegar64/candidate-038.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-038.canonical.g6",
+      "canonical_sha256": "76376f83dcfc0ad43a3aab79bc2789c118b23820b248ba8ed2a3496f5b9d8e31",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-038.bits",
+      "model_bits_sha256": "ca0e0e08d42e03f2ab3c0d02d26c89cafaf5a2c8e2c2c115ab3bd9dc6bc0cc4d",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "937d63f5c767d30fe5bf1b5148680f10cd755c95e9b5af574a456c376ad4f7ba",
+      "prior_blocks_satisfied": 37,
+      "python_direct_five_subset_scan": true,
+      "round": 38,
+      "solver_library": "1.7.3",
+      "solver_seconds": 0.0137539,
+      "supplied_target": {
+        "kind": "source",
+        "record": 20
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 186,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "f7daf39cd2d48a2b617f66bcc063193d51320520ecd261cc53e42182e05c7406",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "df01fdb016beb1982f420c16105385179f42142f410a271c9a9a7d68343b5f81",
+      "candidate_path": "novel42_labelled_cegar64/candidate-039.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-039.canonical.g6",
+      "canonical_sha256": "0fddb2bb6a619badd2020d596f0c4481500f71b494a849946d71c9cc00ee19d2",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-039.bits",
+      "model_bits_sha256": "8b8a758c5e0fa97c66d07086ca790ba9fad6e7af422eafedaf2b17a31579e5f2",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "00d702379d4563e8acbe44eeace781e7118b378b7cd4ba5485761015fd6579b8",
+      "prior_blocks_satisfied": 38,
+      "python_direct_five_subset_scan": true,
+      "round": 39,
+      "solver_library": "1.7.3",
+      "solver_seconds": 0.0128319,
+      "supplied_target": {
+        "kind": "source",
+        "record": 25
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 185,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "3784b98e127734b715c764a1a87b4644ccd12444a816326e749e568ff78ed911",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "296ba7904507aa302f901e5e971ef94c6ce1c4fad7e3a046ce2de597353f6891",
+      "candidate_path": "novel42_labelled_cegar64/candidate-040.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-040.canonical.g6",
+      "canonical_sha256": "178a11da26efde30a3cc9160580ab5422a3e3aaacf762d3a0f5072ba6d6dbc4d",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-040.bits",
+      "model_bits_sha256": "e847d78cc08377edfec3bf6f98da725f2a7507c72d87e0a48b2904a114de2e45",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "874de43214d09d210419c335edef30aee6e992212f084aadf81ed2718028039a",
+      "prior_blocks_satisfied": 39,
+      "python_direct_five_subset_scan": true,
+      "round": 40,
+      "solver_library": "1.7.3",
+      "solver_seconds": 0.0159424,
+      "supplied_target": {
+        "kind": "source",
+        "record": 12
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 186,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "7dd4768f6797ae3868e7beeda1950163445894a244a8a581bd103cfdf66d789c",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "0df0f406a16432b98e6f3599c227c7479f011ceedf0e1462ca69aeff114a2f0c",
+      "candidate_path": "novel42_labelled_cegar64/candidate-041.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-041.canonical.g6",
+      "canonical_sha256": "aab0b8eaf5ba01f3d46b73aa370f85e5656148198e073f5dd6f0736efc62fd04",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-041.bits",
+      "model_bits_sha256": "aade3a41729f98027b73ddc51f876b662a78ce169a782a3d0e1b6bdf227bf442",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "4bab9f9b97c34523ad8cf44e0c59a93278104b24771fde295f1bb0e4ea0464c4",
+      "prior_blocks_satisfied": 40,
+      "python_direct_five_subset_scan": true,
+      "round": 41,
+      "solver_library": "1.7.3",
+      "solver_seconds": 0.0136886,
+      "supplied_target": {
+        "kind": "source",
+        "record": 19
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 187,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "480c2146dc60fa63ebbcaa629c8bf541e75ab3d9a67b6de77051af6af6b6888b",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "92921fca12e6bfba6d84c63ea8bae14f7d858238dd01c4a14d6ac363dd3ebc8f",
+      "candidate_path": "novel42_labelled_cegar64/candidate-042.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-042.canonical.g6",
+      "canonical_sha256": "dc784729ad845e8eb7bebe4b02f810ccb5c1cf217c8a32349144498254b37c43",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-042.bits",
+      "model_bits_sha256": "b2539813a6f1d88e6cfdec38f65bb4fa592892127b1277c20e23051cf21a7a71",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "abea7b7087e5f0dc2afc99e4ad7bcd7dce588eafa51af3ce04c7a8eff996c092",
+      "prior_blocks_satisfied": 41,
+      "python_direct_five_subset_scan": true,
+      "round": 42,
+      "solver_library": "1.7.3",
+      "solver_seconds": 0.0135489,
+      "supplied_target": {
+        "kind": "source",
+        "record": 18
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 190,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "b046a77a255b3660af4671351ee936a9ce0db1c106826edc4a1f846d27d1f3b2",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "fc1237a9c10c5f602348792a736bbcdd2503d534efa408ede254079ec413e1f7",
+      "candidate_path": "novel42_labelled_cegar64/candidate-043.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-043.canonical.g6",
+      "canonical_sha256": "0fddb2bb6a619badd2020d596f0c4481500f71b494a849946d71c9cc00ee19d2",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-043.bits",
+      "model_bits_sha256": "1a04e741606b17cc873694c182455be49ede69888ead785659ede6fc259456bb",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "bc413fe0491124095062deb1cafd972a12f7e4438d57c0e828d08ff6bc03cffd",
+      "prior_blocks_satisfied": 42,
+      "python_direct_five_subset_scan": true,
+      "round": 43,
+      "solver_library": "1.7.3",
+      "solver_seconds": 0.0245064,
+      "supplied_target": {
+        "kind": "source",
+        "record": 25
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 191,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "80cfded2e250a36e32f0fd71a432c2dc803dfca229ce7cbade20bc6129e1504b",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "26f62aa57bfb85467f725771df0ec5302f01ba4b221938ae5dd565dfacb0bd08",
+      "candidate_path": "novel42_labelled_cegar64/candidate-044.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-044.canonical.g6",
+      "canonical_sha256": "dc784729ad845e8eb7bebe4b02f810ccb5c1cf217c8a32349144498254b37c43",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-044.bits",
+      "model_bits_sha256": "87dcf8f742ccd6a3f456644dba97c1ea7de2afb7f81797b6e88a3c1345656732",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "cc34db52843aafcb863e056fa4afa4f1d7fc210a0e3f6347e94801233c398a0e",
+      "prior_blocks_satisfied": 43,
+      "python_direct_five_subset_scan": true,
+      "round": 44,
+      "solver_library": "1.7.3",
+      "solver_seconds": 0.0158936,
+      "supplied_target": {
+        "kind": "source",
+        "record": 18
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 192,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "83840807294a9d4e8d395c63e7396e65fd870c3d3e5e344c3fe916b812894fb9",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "0fd1febf341e1ebc7de92268a4878062f12d4462d3495b1b75ab3addcd556109",
+      "candidate_path": "novel42_labelled_cegar64/candidate-045.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-045.canonical.g6",
+      "canonical_sha256": "0fddb2bb6a619badd2020d596f0c4481500f71b494a849946d71c9cc00ee19d2",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-045.bits",
+      "model_bits_sha256": "972ef7aab4adadb98e31a8538249f96448d90d55cf5b0954c4dddbb3ae975e46",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "c6d18d66b3b207b63d52d9eb2aba7b523558afcb07e981972ae0f8d34b669d4a",
+      "prior_blocks_satisfied": 44,
+      "python_direct_five_subset_scan": true,
+      "round": 45,
+      "solver_library": "1.7.3",
+      "solver_seconds": 0.0176354,
+      "supplied_target": {
+        "kind": "source",
+        "record": 25
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 191,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "90a415dd7a711bfccaec3c5457339c14ba17327c932614d56f43bf81e304abb6",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "3480816e738c9a67314c3cc943dbff30bbdbb6de35d6b20947f3ac8d395a72f9",
+      "candidate_path": "novel42_labelled_cegar64/candidate-046.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-046.canonical.g6",
+      "canonical_sha256": "76376f83dcfc0ad43a3aab79bc2789c118b23820b248ba8ed2a3496f5b9d8e31",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-046.bits",
+      "model_bits_sha256": "43ec5309a04d5b81ea2c8fe2b0f5e2a18ba1bb35bf977844be3bcd8303bc2adc",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "07f3aeb1e700402dcf9d1772daa7823edd9911b9802afc352ad9e8834a6bd331",
+      "prior_blocks_satisfied": 45,
+      "python_direct_five_subset_scan": true,
+      "round": 46,
+      "solver_library": "1.7.3",
+      "solver_seconds": 0.0161589,
+      "supplied_target": {
+        "kind": "source",
+        "record": 20
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 136,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "a33f99bc83a850765aacd433e87abaea04545d78d7d0e0b1ef5e0b6b8eb6f922",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "6acda2660b6f5713f3aa4b7eaa9fd9bcf49d4d641c70150a4fb68341bd528577",
+      "candidate_path": "novel42_labelled_cegar64/candidate-047.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-047.canonical.g6",
+      "canonical_sha256": "0fddb2bb6a619badd2020d596f0c4481500f71b494a849946d71c9cc00ee19d2",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-047.bits",
+      "model_bits_sha256": "25101e55257912241e701a64ac683479bd67fb8c9d1bac80ff01a14e2af9d604",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "51a1b8325758881fd47379450ec8af6092d13806f9519a54583faf8466cc8d14",
+      "prior_blocks_satisfied": 46,
+      "python_direct_five_subset_scan": true,
+      "round": 47,
+      "solver_library": "1.7.3",
+      "solver_seconds": 55.0435,
+      "supplied_target": {
+        "kind": "source",
+        "record": 25
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 144,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "98b893f56407b3e1de7ab10be2be41d0873d4d8f6c4c33a1f861354008b79b96",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "c071db355ea7e4be7a86b3c70288ef01a152a2321c341500025b30fc59e3e936",
+      "candidate_path": "novel42_labelled_cegar64/candidate-048.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-048.canonical.g6",
+      "canonical_sha256": "0fddb2bb6a619badd2020d596f0c4481500f71b494a849946d71c9cc00ee19d2",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-048.bits",
+      "model_bits_sha256": "8d6476646960c2a8232b02482899f5cdeca3171b28b3d359e832df4124820da0",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "ffc5506a5b0587a3a181c62af35f75a3db4782aeeaa05b72867a281a517d6b28",
+      "prior_blocks_satisfied": 47,
+      "python_direct_five_subset_scan": true,
+      "round": 48,
+      "solver_library": "1.7.3",
+      "solver_seconds": 42.6538,
+      "supplied_target": {
+        "kind": "source",
+        "record": 25
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 151,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "8ef8cbc80d868f73057a1f1003b162cbecbc7c12e1dbbdf602baf84b0390e3f8",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "091f1c832be3ab51f514e7c140f23058b93839423d32f868f7b93fcb3ac2cc63",
+      "candidate_path": "novel42_labelled_cegar64/candidate-049.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-049.canonical.g6",
+      "canonical_sha256": "178a11da26efde30a3cc9160580ab5422a3e3aaacf762d3a0f5072ba6d6dbc4d",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-049.bits",
+      "model_bits_sha256": "a8cba8bef537323fd7fcdd89d50ec3826a201a4fadeca34c46af4bb1559bb971",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "deb0402e5dd907be3635e17259e720eb552651d614213bc2f2cdb6c9e730f096",
+      "prior_blocks_satisfied": 48,
+      "python_direct_five_subset_scan": true,
+      "round": 49,
+      "solver_library": "1.7.3",
+      "solver_seconds": 10.2469,
+      "supplied_target": {
+        "kind": "source",
+        "record": 12
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 171,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "a2a1eb01bf03cd16a7bf627d3416c2f0667f9f5f0c36567c48aad6b87a05f860",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "8765d1ea15ef92967d2b3c3adad4b29c353e89981826caa3e8d5beb30c41fd94",
+      "candidate_path": "novel42_labelled_cegar64/candidate-050.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-050.canonical.g6",
+      "canonical_sha256": "178a11da26efde30a3cc9160580ab5422a3e3aaacf762d3a0f5072ba6d6dbc4d",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-050.bits",
+      "model_bits_sha256": "62b7ecce332a6eccd7909368643dbb1348a984571274bf97f520a8a6e7f18ef1",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "868ecae8d119d2f900a1f79559d6e0731113f764d73e9339bd6a90ee29deee29",
+      "prior_blocks_satisfied": 49,
+      "python_direct_five_subset_scan": true,
+      "round": 50,
+      "solver_library": "1.7.3",
+      "solver_seconds": 1.78893,
+      "supplied_target": {
+        "kind": "source",
+        "record": 12
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 183,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "c9cbc515d7c97f5edcb955cec4a03341d7b11edf9d0a6cf3a56ef20af775b5e5",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "18e713c80f356e1171a65f047202996e7baf7e58f445ce93f7e146c1e0e4c6f4",
+      "candidate_path": "novel42_labelled_cegar64/candidate-051.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-051.canonical.g6",
+      "canonical_sha256": "178a11da26efde30a3cc9160580ab5422a3e3aaacf762d3a0f5072ba6d6dbc4d",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-051.bits",
+      "model_bits_sha256": "eda8cb10058f235a49b9853514b3dd1d144a5e7b2ab45f84d4da9fc3f40eecad",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "2b43e1afb005eed0a16a0b66119a0ede48b497d4809836bcd501ee459bbc79dc",
+      "prior_blocks_satisfied": 50,
+      "python_direct_five_subset_scan": true,
+      "round": 51,
+      "solver_library": "1.7.3",
+      "solver_seconds": 0.042481,
+      "supplied_target": {
+        "kind": "source",
+        "record": 12
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 182,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "f1771bd476a2469cecda07afa710fcd15c4b8a01d640d3b41889532b509dd484",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "37445c3b7deace96614e57ecc0e3c2a38c546978383fb57c68324497152a5c77",
+      "candidate_path": "novel42_labelled_cegar64/candidate-052.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-052.canonical.g6",
+      "canonical_sha256": "330e5b76df899f5fdb0f9cf5b9f0ea7a95016bb7631f99514016bf434d3ab4da",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-052.bits",
+      "model_bits_sha256": "ca75e94de0f253e7587d12934a3f6e88ae5ce4ed08a34dddf070c22681a9e303",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "1378918221ffd16ce6e12f61b4eb8bf0005ae1fd178249ba6cfcdd47cc80ef91",
+      "prior_blocks_satisfied": 51,
+      "python_direct_five_subset_scan": true,
+      "round": 52,
+      "solver_library": "1.7.3",
+      "solver_seconds": 16.6479,
+      "supplied_target": {
+        "kind": "source",
+        "record": 21
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 183,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "d5c934c3174028e4a23aaa6aab21e5f581de1f9486220b9a8ca4e9449c40b2cc",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "9a333ef9a4d3eec5947c8a5056314c9af5e80e52c4e46bf766d073b531848eba",
+      "candidate_path": "novel42_labelled_cegar64/candidate-053.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-053.canonical.g6",
+      "canonical_sha256": "178a11da26efde30a3cc9160580ab5422a3e3aaacf762d3a0f5072ba6d6dbc4d",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-053.bits",
+      "model_bits_sha256": "e2a3bf8de2a4b577721f125fcbc603de168b5cd51abc39bf942bc77ed1913834",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "d0f10a7419bf7f64683bd7f354330bee9f176a216b84cdd6f636f61539dd8cc1",
+      "prior_blocks_satisfied": 52,
+      "python_direct_five_subset_scan": true,
+      "round": 53,
+      "solver_library": "1.7.3",
+      "solver_seconds": 0.0282438,
+      "supplied_target": {
+        "kind": "source",
+        "record": 12
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 184,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "5e35092bc1219b2ed697c8f76e887a921d56d70caae65dbdc29fbc72b64fa732",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "9d080746dde13a934556403eb23eb70168dd80bfbddac3ab24d1a478b3cadab0",
+      "candidate_path": "novel42_labelled_cegar64/candidate-054.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-054.canonical.g6",
+      "canonical_sha256": "aab0b8eaf5ba01f3d46b73aa370f85e5656148198e073f5dd6f0736efc62fd04",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-054.bits",
+      "model_bits_sha256": "0e377f27b85179063e2db0c9eff89dbf42b575eec388de76a6bf4ac1b11314a9",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "8320f75f39a973e4f2c4888925357a009bf598fd17dd89461ff16902c1244de4",
+      "prior_blocks_satisfied": 53,
+      "python_direct_five_subset_scan": true,
+      "round": 54,
+      "solver_library": "1.7.3",
+      "solver_seconds": 0.017975,
+      "supplied_target": {
+        "kind": "source",
+        "record": 19
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 183,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "ee456036a0a4907efb131e9f992a286e2d9d2dc823bcf2e4d814edb1230da8cb",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "089f5bba047f4a75297fb3c8a3d417a5eb9f655b0b267fb7d8dc1bada1efa2c7",
+      "candidate_path": "novel42_labelled_cegar64/candidate-055.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-055.canonical.g6",
+      "canonical_sha256": "178a11da26efde30a3cc9160580ab5422a3e3aaacf762d3a0f5072ba6d6dbc4d",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-055.bits",
+      "model_bits_sha256": "104b3e593588aec39ee3f6e5a83d075cf7d5c8537ed1c3a5fb389e449235f466",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "9f2dcce8ff83f05db9d1d5d9c11d7cc376317a66e9e7fe05e50da3c0c7927e6f",
+      "prior_blocks_satisfied": 54,
+      "python_direct_five_subset_scan": true,
+      "round": 55,
+      "solver_library": "1.7.3",
+      "solver_seconds": 0.0161866,
+      "supplied_target": {
+        "kind": "source",
+        "record": 12
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 185,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "02ebbc56791ff9da090c6eb3f0080f313c7f14461c5b56ccfbc5e7e01d434add",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "84c26e3db155b3738f996e5edc45e2b03860d38fb7919a01f161d91e6ab2d82a",
+      "candidate_path": "novel42_labelled_cegar64/candidate-056.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-056.canonical.g6",
+      "canonical_sha256": "dc784729ad845e8eb7bebe4b02f810ccb5c1cf217c8a32349144498254b37c43",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-056.bits",
+      "model_bits_sha256": "31d5e87f150b42dcfd73b4fc6def46b653690c7a583567454b7a289100f1f7f6",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "a3806ebd6b8f4c9e5fe819525981b836ed064d01fc40b9917e12faa038dd1ea9",
+      "prior_blocks_satisfied": 55,
+      "python_direct_five_subset_scan": true,
+      "round": 56,
+      "solver_library": "1.7.3",
+      "solver_seconds": 0.0185413,
+      "supplied_target": {
+        "kind": "source",
+        "record": 18
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 184,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "cb8ebd7de004b527227745e5e4d92afd60e58a808ade4f27cc8d45b15d1140e2",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "dab22b140d8a413314a1d2b4c2460471d8775e6b5bff56baa937b368d2005ea1",
+      "candidate_path": "novel42_labelled_cegar64/candidate-057.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-057.canonical.g6",
+      "canonical_sha256": "0fddb2bb6a619badd2020d596f0c4481500f71b494a849946d71c9cc00ee19d2",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-057.bits",
+      "model_bits_sha256": "62b790edb6f2cd7fe8a1609618f46b6dcb47280a8030b766eca6ef164b5b3fc7",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "957c3315fb4f81fbc8f6015679c3214244b9607a30e0bacfdb44d9bf02ad9968",
+      "prior_blocks_satisfied": 56,
+      "python_direct_five_subset_scan": true,
+      "round": 57,
+      "solver_library": "1.7.3",
+      "solver_seconds": 0.0272025,
+      "supplied_target": {
+        "kind": "source",
+        "record": 25
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 183,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "cdd5d3103a135f7c848331b06a6b4cf802741a8347665d0ea7acb18e51094b71",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "449e4d319e312cf10ff4526f19bc312cc08473eaa911e812f522a8ba490b1d10",
+      "candidate_path": "novel42_labelled_cegar64/candidate-058.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-058.canonical.g6",
+      "canonical_sha256": "76376f83dcfc0ad43a3aab79bc2789c118b23820b248ba8ed2a3496f5b9d8e31",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-058.bits",
+      "model_bits_sha256": "e2c3521dfe440ca9ba206986826e18505876daab08d14143988ca77828519e40",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "6ae340cb3d54918b8e561845b8fd79ee4e92c46af2ab88c544b8a9e952173fef",
+      "prior_blocks_satisfied": 57,
+      "python_direct_five_subset_scan": true,
+      "round": 58,
+      "solver_library": "1.7.3",
+      "solver_seconds": 0.0168043,
+      "supplied_target": {
+        "kind": "source",
+        "record": 20
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 184,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "32c93a491a26ee9e6309e03144e81bcfdb7cb6e3bc3a8e2ec5ac4896ed936b05",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "d9410d68e06af85a676acc56ddb6d3a8022c0897d5d940e183d96b87022822b1",
+      "candidate_path": "novel42_labelled_cegar64/candidate-059.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-059.canonical.g6",
+      "canonical_sha256": "0fddb2bb6a619badd2020d596f0c4481500f71b494a849946d71c9cc00ee19d2",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-059.bits",
+      "model_bits_sha256": "56c3e1a341c6edea77b83ee4bad6c4f136a4776d06eb770840a76ff746cde12e",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "dd6b463bc3f43dce685d80c4b117723b814f76c65b13f74f1e6dd0f6a16291c9",
+      "prior_blocks_satisfied": 58,
+      "python_direct_five_subset_scan": true,
+      "round": 59,
+      "solver_library": "1.7.3",
+      "solver_seconds": 0.0168898,
+      "supplied_target": {
+        "kind": "source",
+        "record": 25
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 184,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "a6e2ee62ed29b443c6ee031b7af4d84e10383ec703625ab53d0e6b74f019fee5",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "dc97554497864bb4d5058147db515d2f7bf956e926c3863006033ee18874de21",
+      "candidate_path": "novel42_labelled_cegar64/candidate-060.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-060.canonical.g6",
+      "canonical_sha256": "0fddb2bb6a619badd2020d596f0c4481500f71b494a849946d71c9cc00ee19d2",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-060.bits",
+      "model_bits_sha256": "d70e2212bee46d69f721d1f4ac92e74c1fbc186a0dd851a6ed776f0d42cd8d59",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "40886a802200686c45dbbc56e98390c80a93cfa4d26253ba330d22c3e338e92f",
+      "prior_blocks_satisfied": 59,
+      "python_direct_five_subset_scan": true,
+      "round": 60,
+      "solver_library": "1.7.3",
+      "solver_seconds": 0.0201909,
+      "supplied_target": {
+        "kind": "source",
+        "record": 25
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 183,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "244738bd1b806cd0f415c225c952aad8a26a1b14d36dc468d52569d4633153a4",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "e493bfcd29876bbcb719a2242cca0fbf03dd09dd5b9aa67b70f6e9a7633f32ca",
+      "candidate_path": "novel42_labelled_cegar64/candidate-061.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-061.canonical.g6",
+      "canonical_sha256": "76376f83dcfc0ad43a3aab79bc2789c118b23820b248ba8ed2a3496f5b9d8e31",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-061.bits",
+      "model_bits_sha256": "6cf24bb734f429eb5d869088f4037986756a20bb0ae76c3044eae704fc8b093f",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "24eb709a57e788b2a839e4975437a8389eb1c30c29f9f814082d1c95fd76bb35",
+      "prior_blocks_satisfied": 60,
+      "python_direct_five_subset_scan": true,
+      "round": 61,
+      "solver_library": "1.7.3",
+      "solver_seconds": 0.0199029,
+      "supplied_target": {
+        "kind": "source",
+        "record": 20
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 184,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "4003b3942a162e477cfa3586d8dc45e033e05ca20c22ec97eb80668b56e77284",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "96b33306fba2c7b907fedf869844502d01efd61b65bbd6fa2a2fb5a7a057340f",
+      "candidate_path": "novel42_labelled_cegar64/candidate-062.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-062.canonical.g6",
+      "canonical_sha256": "0fddb2bb6a619badd2020d596f0c4481500f71b494a849946d71c9cc00ee19d2",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-062.bits",
+      "model_bits_sha256": "1d206b63e4217182910c1501e9d4876c55492e8eb3ec74f6215dffbf5f6161b2",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "fdbbb5c90a3e5e88328b6713d5dca2188815d4418be6842ecb2bcb1df488eaf9",
+      "prior_blocks_satisfied": 61,
+      "python_direct_five_subset_scan": true,
+      "round": 62,
+      "solver_library": "1.7.3",
+      "solver_seconds": 0.017868,
+      "supplied_target": {
+        "kind": "source",
+        "record": 25
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 185,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "314f78fb956083fcb5aa3a2f68289688660d12af60b1fdace1b61a56f54f4627",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "a4b3044a21e3283cd7286600e7b090642c8245f09f1c695233b53f55f8af4bc1",
+      "candidate_path": "novel42_labelled_cegar64/candidate-063.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-063.canonical.g6",
+      "canonical_sha256": "dc784729ad845e8eb7bebe4b02f810ccb5c1cf217c8a32349144498254b37c43",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-063.bits",
+      "model_bits_sha256": "d9e6d85bb71fcf428e7b8456f92a2971e632c1dd4786f9c6da4c7125cc0faf90",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "023ec8825ee272dca4bde487ccb7ecd9fb7790b41b167177bc85468db0e4a36e",
+      "prior_blocks_satisfied": 62,
+      "python_direct_five_subset_scan": true,
+      "round": 63,
+      "solver_library": "1.7.3",
+      "solver_seconds": 0.0226996,
+      "supplied_target": {
+        "kind": "source",
+        "record": 18
+      }
+    },
+    {
+      "actual_boundary_hamming_distance": 184,
+      "base_cnf_model": {
+        "clauses": 508157,
+        "satisfied": true,
+        "variables": 155976
+      },
+      "block_scope": "one labelled 426-bit primary assignment",
+      "block_sha256": "4ec0771c4796b0e82837504a1d8fe9f965a25277c71ab50e974d11f8453c799a",
+      "c_recursive_bitset_scan": true,
+      "candidate_graph6_sha256": "8c7d312fbee351e1c370911eff83ab217bb63eede8fb0ff041fe8249c534e8cf",
+      "candidate_path": "novel42_labelled_cegar64/candidate-064.g6",
+      "canonical_path": "novel42_labelled_cegar64/candidate-064.canonical.g6",
+      "canonical_sha256": "aab0b8eaf5ba01f3d46b73aa370f85e5656148198e073f5dd6f0736efc62fd04",
+      "fixed_induced_order_30_equal": true,
+      "model_bits_path": "novel42_labelled_cegar64/model-064.bits",
+      "model_bits_sha256": "ef3313ce14df77673252411b34245a89afdc9e2bb8f5ee5fd5dc92f72d0baa5a",
+      "nauty_canonical_absent_from_supplied_656": false,
+      "primary_vector_sha256": "792d2e99a5f66367404fbbbad84defee274639e8692614f750c01ee4e5dcec89",
+      "prior_blocks_satisfied": 63,
+      "python_direct_five_subset_scan": true,
+      "round": 64,
+      "solver_library": "1.7.3",
+      "solver_seconds": 0.0163004,
+      "supplied_target": {
+        "kind": "source",
+        "record": 19
+      }
+    }
+  ],
+  "result": "model_budget_reached",
+  "schema_version": 1,
+  "scope": "one frozen labelled 30-vertex core from source record 21; at most 64 incrementally enumerated boundary completions",
+  "search_efficiency": {
+    "base_ramsey_five_sets_skipped": 142506,
+    "blocks_added_at_most": 64,
+    "boundary_primary_variables": 426,
+    "chosen_mechanism": "incremental CaDiCaL: parse the base once, retain learned clauses, append one long primary block per verified known model",
+    "frozen_core_edges": 435,
+    "primary_reduction_fraction": 0.5052264808362369,
+    "unfrozen_edge_variables": 861
+  },
+  "status": "novel42_labelled_cegar_complete",
+  "tool_versions": {
+    "g++": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+    "libcadical": "1.7.3",
+    "python": "3.12.3"
+  },
+  "witness": null
+}

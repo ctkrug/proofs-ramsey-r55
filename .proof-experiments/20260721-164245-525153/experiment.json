@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "id": "20260721-164245-525153",
+  "name": "novel42-core-embedding-cost-probe",
+  "hypothesis": "A full 656-control induced-core census is not a cheap prerequisite for labelled blocking: an exact negative host already costs more than a typical incremental SAT model.",
+  "expected_signal": "Identity containment passes, complement containment is decided exactly, and wall times quantify the two-case scope without extrapolation.",
+  "command": [
+    "python3",
+    "scripts/probe_novel42_core_embedding.py",
+    "sources/r55_42some.g6",
+    "artifacts/novel42_core_embedding_probe_epoch15.json"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 90,
+  "memory_limit_mb": 1024,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-21T16:42:45.386015+00:00",
+  "finished_at": "2026-07-21T16:42:56.401231+00:00",
+  "duration_seconds": 11.015,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "e7689b77c7641395d7b1700b7528499164116cc6",
+  "source_urls": [
+    "https://users.cecs.anu.edu.au/~bdm/data/ramsey.html"
+  ],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/scripts/probe_novel42_core_embedding.py": "46de0794b9705668a93aa418db37c2c9ca91d18e10301f9255bb3bb6dcee4c92",
+    "/root/proof-factory/research/ramsey-r55/workspace/sources/r55_42some.g6": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb"
+  },
+  "peak_child_memory_rusage": 32128,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "1c303c9ecbd282442b6285f0a7136b17424f8c7f0b8552d1b741dfedec44b219",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

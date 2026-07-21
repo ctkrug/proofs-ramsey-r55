@@ -1,0 +1,33 @@
+{
+  "epoch": 15,
+  "principal": {
+    "role": "Sol principal investigator",
+    "model": "gpt-5.6-sol"
+  },
+  "delegates": [
+    {
+      "role": "literature-strategy",
+      "model": "gpt-5.6-terra",
+      "ephemeral_path": ".delegates/20260721-160001-e27a34/literature-strategy/memo.md",
+      "ephemeral_sha256": "43da7d9da7402aa5da66a4ff504d6c78d3eb72c65a62d9608cfac0255968fa73",
+      "promoted_summary_path": "docs/delegate-memos/20260721-160001-literature-strategy.md",
+      "promoted_summary_sha256": "a3c001a35145fb558acdfbfbb5a47103d236cfa0fd4d0aedde6b32f5ac0ba401",
+      "use": "Selected the frozen-boundary labelled-model route and identified the class-block terminology hazard."
+    },
+    {
+      "role": "experiment-verification",
+      "model": "gpt-5.6-terra",
+      "ephemeral_path": ".delegates/20260721-160001-e27a34/experiment-verification/memo.md",
+      "ephemeral_sha256": "fda97e7b430ebe67407c2943a6398bc24cc6050607fc5b80c106e3608fd165b7",
+      "promoted_summary_path": "docs/delegate-memos/20260721-160001-experiment-verification.md",
+      "promoted_summary_sha256": "231e51082d733e056290d2a11e9931d5ae30ac0410ee0f899d7647010e86fae3",
+      "use": "Specified primary-vector block polarity, per-model fail-closed checks, and the 64-model stop rule."
+    }
+  ],
+  "principal_audit": [
+    "Verified from the retained DIMACS bytes that the base logical SHA-256 is 2f1c3b2ac59e4c4b6e2873d2d5ebb2d2eba4fd908a2927f2a30d1936bc3d1072; the experiment-verification memo has a transcription error at this field.",
+    "Verified mathematically and in a two-model smoke test that a 426-literal primary clause blocks one labelled boundary assignment and does not block its supplied isomorphism class.",
+    "Rejected a full induced-core embedding census as the production precondition after the naive deletion count and timed exact negative probe showed it was more expensive than the discriminator and yielded no compact class block.",
+    "Implemented the incremental CaDiCaL controller, ran both exact full-graph checkers per model, and wrote a cold auditor that imports no producer code."
+  ]
+}

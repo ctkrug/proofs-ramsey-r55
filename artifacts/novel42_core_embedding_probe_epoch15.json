@@ -1,0 +1,34 @@
+{
+  "conclusion": "The positive identity control is cheap, while even this one exact negative host costs more than a typical incremental SAT model; no full embedding census or class block follows.",
+  "core_order": 30,
+  "destroy_vertices": [
+    2,
+    3,
+    10,
+    12,
+    14,
+    25,
+    27,
+    30,
+    36,
+    37,
+    38,
+    41
+  ],
+  "method": "NetworkX GraphMatcher induced subgraph isomorphism",
+  "naive_deleted_subsets_per_host": 11058116888,
+  "results": [
+    {
+      "case": "source_record_21",
+      "contains_induced_core": true,
+      "seconds": 0.0182733500842005
+    },
+    {
+      "case": "complement_record_21",
+      "contains_induced_core": false,
+      "seconds": 10.63061629398726
+    }
+  ],
+  "scope": "exactly source record 21 and its complement; not the supplied 656",
+  "status": "bounded_core_embedding_cost_probe_complete"
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "id": "20260721-161659-700d02",
+  "name": "novel42-labelled-cegar64",
+  "hypothesis": "Within 64 verified labelled completions of the frozen record-21 boundary, at least one valid Ramsey(5,5,42) graph is absent from the supplied 656 canonical classes.",
+  "expected_signal": "A dual-checked canonical nonmember, or an exact ledger of 64 distinct labelled rediscoveries; stop on UNKNOWN or any checker discrepancy.",
+  "command": [
+    "python3",
+    "scripts/run_novel42_labelled_cegar.py",
+    "sources/r55_42some.g6",
+    "artifacts/authenticated_corpus_report.json",
+    "artifacts/novel42_boundary_repair/trial-01-record-0021/repair.cnf.gz",
+    "checkers/checker_a.py",
+    "checkers/checker_b.c",
+    "tools/novel42_incremental_enumerator.cpp",
+    "artifacts/novel42_labelled_cegar64",
+    "artifacts/novel42_labelled_cegar64_report.json",
+    "64",
+    "60",
+    "1"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 1800,
+  "memory_limit_mb": 2048,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-21T16:16:59.903779+00:00",
+  "finished_at": "2026-07-21T16:27:09.070272+00:00",
+  "duration_seconds": 609.167,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "e7689b77c7641395d7b1700b7528499164116cc6",
+  "source_urls": [
+    "https://www.cs.rit.edu/~spr/ElJC/sur.pdf"
+  ],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/scripts/run_novel42_labelled_cegar.py": "da9549cb91084febdf2b6611db106e16d750d1207a0354bf1d24a3c6ff9bee3f",
+    "/root/proof-factory/research/ramsey-r55/workspace/sources/r55_42some.g6": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/authenticated_corpus_report.json": "0d9b1801434edcc12f34e73cea6c98d911f0e0c6f0884f8f03d96a46eca1344c",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/novel42_boundary_repair/trial-01-record-0021/repair.cnf.gz": "54d4f43553a51c342e3544ddb3b65bdecd90caf9548d4f60edd265748adb3f4a",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/checker_a.py": "b7f28adfec792139acce538ca879b775a0180467763b413e1a464672acddd259",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/checker_b.c": "40f719bb36f8d7d3db3a4b949dce8b20abd49499f57f7d5b651b718658014d2e",
+    "/root/proof-factory/research/ramsey-r55/workspace/tools/novel42_incremental_enumerator.cpp": "2b9a03d4bca828af1243485eb450d73e99f1f966931b77a6042bcd938867a55f"
+  },
+  "peak_child_memory_rusage": 152472,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "127636d211fec1be8d9970c2125c4a967dd653444cd9ab89fa83f0ddfa58a01a",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

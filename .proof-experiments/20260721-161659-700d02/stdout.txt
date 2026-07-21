@@ -1,0 +1,9 @@
+{
+  "distinct_supplied_targets": 6,
+  "models": 64,
+  "report": "artifacts/novel42_labelled_cegar64_report.json",
+  "report_sha256": "8cd3f5b16649f5fab092c5624f345cca9b305e5ac6cac789152677720b6c332e",
+  "result": "model_budget_reached",
+  "status": "novel42_labelled_cegar_complete",
+  "witness": null
+}
