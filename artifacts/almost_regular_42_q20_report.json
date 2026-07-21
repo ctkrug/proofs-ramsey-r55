@@ -1,0 +1,172 @@
+{
+  "conclusion": "A checked SAT model would establish a supplied-corpus-novel almost-regular order-42 graph; a verified UNSAT result would exclude only q=20; unknown changes no mathematical bound.",
+  "corpus_gate": {
+    "almost_regular_count": 0,
+    "min_max_histogram": {
+      "19,22": 656
+    },
+    "networkx_version": "3.3",
+    "parser_agreement": "custom-byte-parser equals NetworkX ordered degrees",
+    "retained_full_gate_report_sha256": "0d9b1801434edcc12f34e73cea6c98d911f0e0c6f0884f8f03d96a46eca1344c",
+    "scope": "supplied 328 records and their derived complements only; not completeness",
+    "source_plus_complements": 656,
+    "source_records": 328,
+    "source_sha256": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb",
+    "spread_histogram": {
+      "3": 656
+    }
+  },
+  "counter_and_profile_gate": {
+    "complement_band_map": {
+      "17": [
+        23,
+        24
+      ],
+      "18": [
+        22,
+        23
+      ],
+      "19": [
+        21,
+        22
+      ],
+      "20": [
+        20,
+        21
+      ],
+      "21": [
+        19,
+        20
+      ],
+      "22": [
+        18,
+        19
+      ],
+      "23": [
+        17,
+        18
+      ]
+    },
+    "counter_input_sizes": [
+      1,
+      6
+    ],
+    "counter_truth_table_cases": 642,
+    "exhaustive_graph_profile_accepted": 3689,
+    "exhaustive_graph_profile_cases": 33867,
+    "q20_self_complementary": true,
+    "representative_q_values": [
+      17,
+      18,
+      19,
+      20
+    ]
+  },
+  "independence": {
+    "c_nested_loop_ledger_source": "f31a8ff22e5c91faee1bdc7ad2df5488d4d382f95873d6741689201764e10a8e",
+    "degree_semantics": "CaDiCaL truth table on every 1..6-bit row and every q",
+    "profile_semantics": "all labeled graphs through order 6",
+    "python_generator": "5fb7a19f4026e69c901ce822298ebff6a28b74343225f983da4b1b394a6618bd",
+    "ramsey_ledger_byte_hash_agreement": true
+  },
+  "mutation_sentinels": {
+    "corrupt_map_detected": true,
+    "negated_ramsey_literal_detected_by_ledger_hash": true,
+    "omitted_ramsey_clause_detected_by_count": true,
+    "shifted_incidence_detected": true,
+    "weakened_bound_detected_by_truth_table": true
+  },
+  "production": {
+    "cnf_audit": {
+      "clause_lines": 1844052,
+      "header_exact": true,
+      "ramsey_prefix_sha256": "c3ed87c4609c629948e6b51715f65fea99efed79af5baacbc96805041e9d1945"
+    },
+    "cnf_storage": {
+      "bytes": 80195686,
+      "gzip_bytes": 18034763,
+      "gzip_path": "q20.cnf.gz",
+      "gzip_sha256": "91cadd86837aa2627c2480ab18d7a9df9e1f1a4688b774e6dea5247c35593d9d",
+      "sha256": "08e7665e8a2da1d03b3e2c52adc182b2eb949081a29646baf622936683ae70be"
+    },
+    "generation_seconds": 13.124402154935524,
+    "generator_summary": {
+      "checker": "python-itertools-sinz-sequential-counter",
+      "clauses": 1844052,
+      "clique_size": 5,
+      "degree_clauses": 142716,
+      "degree_q": 20,
+      "degree_values": [
+        20,
+        21
+      ],
+      "order": 42,
+      "primary_variables": 861,
+      "ramsey_clauses": 1701336,
+      "ramsey_ledger_sha256": "c3ed87c4609c629948e6b51715f65fea99efed79af5baacbc96805041e9d1945",
+      "variables": 71421
+    },
+    "lrat_metadata": null,
+    "model_metadata": null,
+    "proof_storage": {
+      "bytes": 35732187,
+      "gzip_bytes": 12420157,
+      "gzip_path": "q20.partial-or-final.drat.gz",
+      "gzip_sha256": "2e44c2fb9e0de037912bb9436839b64a8846c5d65676cd3367a3dc35f13a840c",
+      "sha256": "005c9cc66314ec7a38abcf7afb0106e429dd50b632c52c58903a0830ecfad93c"
+    },
+    "result": {
+      "proof_file_limit_bytes": 536870912,
+      "qualification": "no exclusion; any partial proof is not a certificate",
+      "returncode": 0,
+      "scope": "q=20 degree band only",
+      "status": "unknown",
+      "timed_out": true
+    },
+    "solver": {
+      "command": [
+        "/usr/bin/cadical",
+        "-q",
+        "-t",
+        "300",
+        "q20.cnf",
+        "q20.partial-or-final.drat"
+      ],
+      "path": "/usr/bin/cadical",
+      "returncode": 0,
+      "version": "1.7.3",
+      "wall_seconds": 300.31929903896526
+    }
+  },
+  "r33_control": {
+    "n5": {
+      "model_full_scan": true,
+      "solver_seconds": 0.005586492130532861,
+      "status": "sat"
+    },
+    "n6": {
+      "certificate": {
+        "check_seconds": 0.040690880035981536,
+        "conversion_seconds": 0.12424770998768508,
+        "drat_bytes": 118,
+        "drat_sha256": "6005d71b011299b273842f9ccfee792f0e85dbb465d4dbf07228baa37bced4c3",
+        "lrat_bytes": 879,
+        "lrat_sha256": "2e97ac0890b46ae736adbbed2c5809715659606ed95d92b0905e8019315eb37f"
+      },
+      "solver_seconds": 0.005589303094893694,
+      "status": "unsat"
+    }
+  },
+  "schema_version": 1,
+  "scope": "Ramsey(5,5,42) graphs with every degree in {20,21}; no symmetry breaking",
+  "source_status": "43 <= R(5,5) <= 46 as checked against DS1.18 revision 18",
+  "status": "almost_regular_42_q20_pilot_complete",
+  "tool_versions": {
+    "cadical": "1.7.3",
+    "compiler": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+    "nauty_complg": "/usr/bin/nauty-complg",
+    "nauty_labelg": "/usr/bin/nauty-labelg",
+    "networkx": "3.3",
+    "python": "3.12.3"
+  }
+}

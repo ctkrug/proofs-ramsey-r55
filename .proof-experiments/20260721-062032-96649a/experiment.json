@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "id": "20260721-062032-96649a",
+  "name": "r55-almost-regular-42-q20-pilot",
+  "hypothesis": "There exists a Ramsey(5,5,42) graph in which every vertex has degree 20 or 21",
+  "expected_signal": "A dual-full-scan SAT model novel to the supplied 656, a DRAT-and-LRAT-checked q=20 exclusion, or an explicitly inconclusive 300-second/1-GiB pilot result",
+  "command": [
+    "python3",
+    "scripts/run_almost_regular_42_pilot.py",
+    "checkers/almost_regular_42_cnf.py",
+    "checkers/almost_regular_42_ledger_b.c",
+    "checkers/checker_b.c",
+    "sources/r55_42some.g6",
+    "artifacts/authenticated_corpus_report.json",
+    "tools/drat-trim/drat-trim.c",
+    "tools/drat-trim/lrat-check.c",
+    "artifacts/almost_regular_42_q20",
+    "artifacts/almost_regular_42_q20_report.json"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 900,
+  "memory_limit_mb": 1024,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-21T06:20:32.536388+00:00",
+  "finished_at": "2026-07-21T06:26:07.866472+00:00",
+  "duration_seconds": 335.33,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "bc078a081c8eed5d4d3aa995ebe33a1ad8ee32d3",
+  "source_urls": [
+    "https://www.cs.rit.edu/~spr/PUBL/sur14.pdf",
+    "https://www.cs.rit.edu/~spr/ElJC/sur.pdf",
+    "https://users.cecs.anu.edu.au/~bdm/data/ramsey.html"
+  ],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/scripts/run_almost_regular_42_pilot.py": "7c81d1c831158fd8ccb9f229f57b0562e4afe4d627186ee5e1b6e7b417e8b565",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/almost_regular_42_cnf.py": "5fb7a19f4026e69c901ce822298ebff6a28b74343225f983da4b1b394a6618bd",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/almost_regular_42_ledger_b.c": "f31a8ff22e5c91faee1bdc7ad2df5488d4d382f95873d6741689201764e10a8e",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/checker_b.c": "40f719bb36f8d7d3db3a4b949dce8b20abd49499f57f7d5b651b718658014d2e",
+    "/root/proof-factory/research/ramsey-r55/workspace/sources/r55_42some.g6": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/authenticated_corpus_report.json": "0d9b1801434edcc12f34e73cea6c98d911f0e0c6f0884f8f03d96a46eca1344c",
+    "/root/proof-factory/research/ramsey-r55/workspace/tools/drat-trim/drat-trim.c": "d834b649f437e091597f5347f259b9f681087f89ca0844d0cee250a1a1a0c2ee",
+    "/root/proof-factory/research/ramsey-r55/workspace/tools/drat-trim/lrat-check.c": "bf07c2ac96b9035da1ebcc578cb95e956a2b795629d613154cdb307f8a8f4a95"
+  },
+  "peak_child_memory_rusage": 582876,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "a1a4633c588de022495ecf68006ca45df700acf5ac23740623b9f1e4e0243941",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

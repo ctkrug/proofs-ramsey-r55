@@ -1,0 +1,15 @@
+{
+  "cnf_clauses": 1844052,
+  "cnf_variables": 71421,
+  "production_result": {
+    "proof_file_limit_bytes": 536870912,
+    "qualification": "no exclusion; any partial proof is not a certificate",
+    "returncode": 0,
+    "scope": "q=20 degree band only",
+    "status": "unknown",
+    "timed_out": true
+  },
+  "report": "/root/proof-factory/research/ramsey-r55/workspace/artifacts/almost_regular_42_q20_report.json",
+  "report_sha256": "1c93796ebf27f29d428194d5910ecb2e59e72598d506dc365021ddbdf7ad53fe",
+  "status": "almost_regular_42_q20_pilot_complete"
+}

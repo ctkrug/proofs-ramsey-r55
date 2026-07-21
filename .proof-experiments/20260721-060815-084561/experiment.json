@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "20260721-060815-084561",
+  "name": "r55-almost-regular-corpus-replay",
+  "hypothesis": "The authenticated supplied 328 order-42 graphs and their complements remain valid controls and all have degree spread three",
+  "expected_signal": "The full corpus gate passes 656 graphs and a fresh report independently yields spread histogram {3:656}",
+  "command": [
+    "python3",
+    "scripts/run_corpus_gate.py",
+    "checkers/checker_a.py",
+    "checkers/checker_b.c",
+    "sources/r55_42some.g6",
+    "artifacts/almost_regular_42_corpus_replay.json"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 180,
+  "memory_limit_mb": 1024,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-21T06:08:15.364404+00:00",
+  "finished_at": "2026-07-21T06:11:15.378618+00:00",
+  "duration_seconds": 180.014,
+  "returncode": 124,
+  "timed_out": true,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "bc078a081c8eed5d4d3aa995ebe33a1ad8ee32d3",
+  "source_urls": [
+    "https://users.cecs.anu.edu.au/~bdm/data/ramsey.html"
+  ],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/scripts/run_corpus_gate.py": "ea8cc894bcc0597aac9eb459cead427fd5282082f35e3a27b5dda299c2065d23",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/checker_a.py": "b7f28adfec792139acce538ca879b775a0180467763b413e1a464672acddd259",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/checker_b.c": "40f719bb36f8d7d3db3a4b949dce8b20abd49499f57f7d5b651b718658014d2e",
+    "/root/proof-factory/research/ramsey-r55/workspace/sources/r55_42some.g6": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb"
+  },
+  "peak_child_memory_rusage": 31456,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

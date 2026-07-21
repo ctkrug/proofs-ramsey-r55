@@ -28,6 +28,15 @@ turn and excludes all 20 unsymmetrized burden-zero slices using dual-derived
 CNFs and independently checked DRAT/LRAT proofs. See `CHECKPOINT.md` for the
 exact scope and evidence.
 
+The epoch-10 almost-regular pilot is a separate bounded research-software
+artifact. It encodes the order-42 degree band `{20,21}` without symmetry
+breaking, validates the sequential degree counter on every 1-to-6-bit row,
+validates the union-of-bands predicate on all 33,867 labelled graphs through
+order 6, checks `R(3,3,5)` SAT and `R(3,3,6)` UNSAT with DRAT/LRAT, and
+independently regenerates the production Ramsey-clause ledger in C. CaDiCaL
+1.7.3 returned `UNKNOWN` at 300 seconds; there is no witness or exclusion. The
+retained partial DRAT stream is rejected as a certificate by the cold audit.
+
 `scripts/run_corpus_gate.py` freezes the mirror acquisition discriminator
 for that corpus (47,888 bytes, SHA-256
 `067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb`).  It
@@ -75,6 +84,35 @@ python3 scripts/run_publisher_radius1_gate.py \
 
 This proves only the exact radius-1 statements recorded in the report; it is
 not a witness, global optimum, or Ramsey bound.
+
+Replay the no-symmetry almost-regular `q=20` pilot to fresh output paths with:
+
+```bash
+python3 /root/proof-factory/skills/computational-researcher/scripts/run_experiment.py \
+  --name r55-almost-regular-42-q20-replay \
+  --hypothesis "There exists a Ramsey(5,5,42) graph with all degrees 20 or 21" \
+  --expected-signal "checked SAT, checked UNSAT, or an explicit 300-second unknown" \
+  --timeout 900 --memory-mb 1024 \
+  --source-url https://www.cs.rit.edu/~spr/PUBL/sur14.pdf \
+  -- python3 scripts/run_almost_regular_42_pilot.py \
+  checkers/almost_regular_42_cnf.py \
+  checkers/almost_regular_42_ledger_b.c checkers/checker_b.c \
+  sources/r55_42some.g6 artifacts/authenticated_corpus_report.json \
+  tools/drat-trim/drat-trim.c tools/drat-trim/lrat-check.c \
+  artifacts/almost_regular_42_q20.replay \
+  artifacts/almost_regular_42_q20_report.replay.json
+```
+
+Cold-audit the frozen packet to a fresh report path with:
+
+```bash
+python3 scripts/audit_almost_regular_42_pilot.py \
+  artifacts/almost_regular_42_q20_report.json \
+  artifacts/almost_regular_42_q20 \
+  checkers/almost_regular_42_ledger_b.c \
+  tools/drat-trim/drat-trim.c \
+  artifacts/almost_regular_42_q20_audit.replay.json
+```
 
 Replay the complete radius-2 gate with:
 

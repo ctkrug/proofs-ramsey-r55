@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "epoch": 10,
+  "principal": {
+    "role": "Sol principal investigator",
+    "model": "GPT-5.6 Sol",
+    "actions": "Independently audited primary sources and hashes, selected the corrected q=20 pilot scope, implemented and ran the encoding, and limited the result to UNKNOWN at the declared budget."
+  },
+  "delegates": [
+    {
+      "role": "literature-strategy",
+      "model": "gpt-5.6-terra",
+      "effort": "high",
+      "completion_memo": ".delegates/20260721-060002-41a1b0/literature-strategy/memo.md",
+      "completion_memo_sha256": "535249fc9e2a07cb964e0ba2ec882b9fef805dbdcd3ee069485b38f0c5d530e9",
+      "promoted_memo": "docs/delegate-memos/20260721-060002-literature-strategy.md",
+      "promoted_memo_sha256": "bbc6f593cd996ec5fc5ea6570f36892355dd98109fd4c6d10737d2719690e13b"
+    },
+    {
+      "role": "experiment-verification",
+      "model": "gpt-5.6-terra",
+      "effort": "high",
+      "completion_memo": ".delegates/20260721-060002-41a1b0/experiment-verification/memo.md",
+      "completion_memo_sha256": "fceea1fd0f57847e938e491a82545470a33d387f86e8184703a8acd7f8962aed",
+      "promoted_memo": "docs/delegate-memos/20260721-060002-experiment-verification.md",
+      "promoted_memo_sha256": "de857f7b64313993bc5715bdc58c285ba9df331febc8b4b6e6c66acd166e5248"
+    }
+  ],
+  "audit_decisions": [
+    "Accepted the almost-regular order-42 feasibility route after checking its 2014 primary-source conjecture and the maintained 2026 status.",
+    "Accepted the experiment-verification correction that complementation reduces q=17..23 to q=17..20 representatives.",
+    "Selected only the self-complementary q=20 branch for the declared 300-second pilot.",
+    "Rejected any inference from solver UNKNOWN, the partial DRAT stream, or the supplied 656 controls to existence, nonexistence, completeness, or a Ramsey bound.",
+    "Did not spawn new subagents in the Sol pass."
+  ]
+}

@@ -1,4 +1,127 @@
-# R(5,5) research checkpoint — epoch 9
+# R(5,5) research checkpoint — epoch 10
+
+Recorded: 2026-07-21 06:30 UTC
+
+## Epoch-10 outcome: exact encoding, inconclusive q=20 pilot
+
+The saved almost-regular lead was operationalized at its cheapest
+complement-representative branch. The production formula asks for an order-42
+graph with no clique or independent set of order 5 and
+
+```text
+d(v) in {20,21} for every vertex v.
+```
+
+No symmetry breaking was used. CaDiCaL 1.7.3 returned `UNKNOWN` at its
+predeclared 300-second wall-clock limit. Consequently this epoch found no
+witness, proved no exclusion, and changed no Ramsey bound. The maintained
+status remains `43 <= R(5,5) <= 46`.
+
+The exact cost result is replayable:
+
+- experiment `.proof-experiments/20260721-062032-96649a` returned 0 from the
+  orchestrator in 335.330 seconds and used peak child RSS 582,876 KiB;
+- the formula has 71,421 variables, comprising 861 edge variables and 70,560
+  sequential-counter auxiliaries;
+- it has 1,844,052 clauses: both colors for all
+  `C(42,5)=850,668` five-sets (1,701,336 clauses) plus 142,716 exact row-bound
+  clauses;
+- the uncompressed CNF has SHA-256
+  `08e7665e8a2da1d03b3e2c52adc182b2eb949081a29646baf622936683ae70be`
+  and 80,195,686 bytes; retained `q20.cnf.gz` has SHA-256
+  `91cadd86837aa2627c2480ab18d7a9df9e1f1a4688b774e6dea5247c35593d9d`;
+- the solver's 35,732,187-byte partial DRAT stream is retained compressed, but
+  it is not a certificate and is never evidence of UNSAT;
+- main report `artifacts/almost_regular_42_q20_report.json` has SHA-256
+  `1c93796ebf27f29d428194d5910ecb2e59e72598d506dc365021ddbdf7ad53fe`.
+
+## Preconditions and controls
+
+The attempted full corpus replay
+`.proof-experiments/20260721-060815-084561` timed out at 180 seconds before
+output. This is a resource failure only; the previous successful full gate
+took 997.687 seconds. The exact preflight needed by this pilot was repaired
+with two independent degree parsers while retaining the frozen full-gate
+report:
+
+- source `sources/r55_42some.g6` remains SHA-256
+  `067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb`;
+- retained full corpus report remains SHA-256
+  `0d9b1801434edcc12f34e73cea6c98d911f0e0c6f0884f8f03d96a46eca1344c`;
+- a custom byte-level graph6 parser and NetworkX 3.3 agree on every ordered
+  degree vector for the 328 records; deriving complements gives 656 controls;
+- all 656 have `(minimum degree, maximum degree)=(19,22)`, hence spread 3;
+  none is almost regular. This is supplied-corpus control, not completeness.
+
+The degree encoding passed 642 CaDiCaL truth-table cases covering every
+1-to-6-bit row and local band. The union-of-bands identity was also checked on
+all 33,867 labelled graphs through order 6. Complementation maps the seven
+possible order-42 bands as
+
+```text
+17 <-> 23, 18 <-> 22, 19 <-> 21, 20 <-> 20,
+```
+
+where each number is the lower endpoint `q`. Thus `q=17,18,19,20` represent
+the full almost-regular slice, but only `q=20` was attempted.
+
+The same stack generated both colors of every triple for small controls:
+`R(3,3,5)` decoded SAT and passed a direct scan, while `R(3,3,6)` was UNSAT
+with checked DRAT and LRAT. A separately written C nested-loop generator
+reproduced the production Ramsey-clause ledger SHA-256
+`c3ed87c4609c629948e6b51715f65fea99efed79af5baacbc96805041e9d1945`.
+
+## Cold adversarial audit
+
+Experiment `.proof-experiments/20260721-062806-06f812` completed in 16.186
+seconds. `scripts/audit_almost_regular_42_pilot.py` independently decompressed
+and reconstructed formula counts and hashes, reran the C ledger, and sent the
+timeout stream to freshly compiled `drat-trim`. `drat-trim` returned 1 and did
+not verify it. Audit report `artifacts/almost_regular_42_q20_audit.json` has
+SHA-256 `cda1950a6c673a1335ed90ea1f529905ce6d9ae8715bc6adfac75ec9141f33cc`.
+
+## Route disposition and exact continuation
+
+The almost-regular route remains active, but repeating the same unsymmetrized
+q=20 formula under the same 300-second CaDiCaL budget is blocked: it would add
+no information. Reopen that exact configuration only with a solver or encoding
+change, a justified larger budget, or a defect in the retained packet.
+
+The next cheapest discriminator is a sound symmetry-normalized q=20 replay.
+For any graph with all degrees in `{20,21}`, either it has a degree-20 vertex,
+or its complement has all degrees 20. Relabel a degree-20 vertex to 0 and its
+20 neighbors to vertices 1 through 20. Hence every orbit under vertex
+relabeling and complementation has a representative satisfying
+
+```text
+x_{0,i}=1 for i=1..20; x_{0,i}=0 for i=21..41.
+```
+
+Next epoch first action: add exactly these 41 unit clauses as a separately
+declared normalization, prove its coverage in the report, rerun the small
+controls and formula audit, then give only this normalized q=20 branch one
+300-second/1-GiB proof-logging pilot. Stop on any mapping, coverage, model, or
+proof mismatch; otherwise stop at checked SAT, checked UNSAT, or timeout. Do
+not run q=17..19 or extend to order 43 merely because normalized q=20 is
+inconclusive.
+
+## Epoch-10 reproduction and disclosure
+
+The exact production and cold-audit commands are in `README.md`; both require
+fresh output paths. GPT-5.6 Sol was principal investigator. Supplied GPT-5.6
+Terra literature-strategy and experiment-verification memos were advisory;
+their promoted files and hashes are in
+`records/delegate-provenance-epoch10.json`. Sol independently checked sources,
+selected the corrected one-branch scope, implemented the Python encoding and C
+ledger, ran the experiments, and performed the cold audit. No new subagent was
+spawned. Deterministic tools were Python 3.12.3, GCC 13.3.0, NetworkX 3.3,
+CaDiCaL 1.7.3, Debian nauty, pinned `drat-trim` and `lrat-check`, SHA-256, and
+the computational-researcher experiment harness. No CAS, proof assistant, or
+external publishing action was used.
+
+---
+
+# Prior checkpoint — epoch 9
 
 Recorded: 2026-07-21 04:30 UTC
 

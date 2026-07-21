@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "20260721-062806-06f812",
+  "name": "r55-almost-regular-42-q20-cold-audit",
+  "hypothesis": "The retained q=20 pilot packet exactly matches its declared formula, manifests, and inconclusive solver status",
+  "expected_signal": "Independent count/hash reconstruction and C ledger agreement pass, while drat-trim rejects the timeout proof stream",
+  "command": [
+    "python3",
+    "scripts/audit_almost_regular_42_pilot.py",
+    "artifacts/almost_regular_42_q20_report.json",
+    "artifacts/almost_regular_42_q20",
+    "checkers/almost_regular_42_ledger_b.c",
+    "tools/drat-trim/drat-trim.c",
+    "artifacts/almost_regular_42_q20_audit.json"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 420,
+  "memory_limit_mb": 1024,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-21T06:28:06.050408+00:00",
+  "finished_at": "2026-07-21T06:28:22.236177+00:00",
+  "duration_seconds": 16.186,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "bc078a081c8eed5d4d3aa995ebe33a1ad8ee32d3",
+  "source_urls": [
+    "https://github.com/marijnheule/drat-trim"
+  ],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/scripts/audit_almost_regular_42_pilot.py": "19496d1ec8a9f436777601c5ba3da0cb1e57470e120d9ebda30924c34a3ffdbd",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/almost_regular_42_q20_report.json": "1c93796ebf27f29d428194d5910ecb2e59e72598d506dc365021ddbdf7ad53fe",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/almost_regular_42_ledger_b.c": "f31a8ff22e5c91faee1bdc7ad2df5488d4d382f95873d6741689201764e10a8e",
+    "/root/proof-factory/research/ramsey-r55/workspace/tools/drat-trim/drat-trim.c": "d834b649f437e091597f5347f259b9f681087f89ca0844d0cee250a1a1a0c2ee"
+  },
+  "peak_child_memory_rusage": 231808,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "cba2299899425b87cc65e6152cbccc687f94ac15325775d073bce1314458bb98",
+    "stderr.txt": "4146d998b81307fe25ce4d787046fd35da44d02a8dd64a5a47a212344ba4e127"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "audit_report": "/root/proof-factory/research/ramsey-r55/workspace/artifacts/almost_regular_42_q20_audit.json",
+  "audit_report_sha256": "cda1950a6c673a1335ed90ea1f529905ce6d9ae8715bc6adfac75ec9141f33cc",
+  "clauses": 1844052,
+  "partial_proof_verified": false,
+  "status": "almost_regular_42_q20_cold_audit_pass"
+}

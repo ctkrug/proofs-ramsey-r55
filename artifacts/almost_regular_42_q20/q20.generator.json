@@ -1,0 +1,16 @@
+{
+  "checker": "python-itertools-sinz-sequential-counter",
+  "clauses": 1844052,
+  "clique_size": 5,
+  "degree_clauses": 142716,
+  "degree_q": 20,
+  "degree_values": [
+    20,
+    21
+  ],
+  "order": 42,
+  "primary_variables": 861,
+  "ramsey_clauses": 1701336,
+  "ramsey_ledger_sha256": "c3ed87c4609c629948e6b51715f65fea99efed79af5baacbc96805041e9d1945",
+  "variables": 71421
+}

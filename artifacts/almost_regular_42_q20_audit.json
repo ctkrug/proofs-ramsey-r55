@@ -1,0 +1,21 @@
+{
+  "cnf": {
+    "clauses": 1844052,
+    "independent_count_formulas": true,
+    "ramsey_prefix_sha256": "c3ed87c4609c629948e6b51715f65fea99efed79af5baacbc96805041e9d1945",
+    "uncompressed_bytes": 80195686,
+    "uncompressed_sha256": "08e7665e8a2da1d03b3e2c52adc182b2eb949081a29646baf622936683ae70be"
+  },
+  "independent_c_nested_loop_ramsey_ledger": true,
+  "main_report_sha256": "1c93796ebf27f29d428194d5910ecb2e59e72598d506dc365021ddbdf7ad53fe",
+  "partial_proof": {
+    "bytes": 35732187,
+    "drat_trim_returncode": 1,
+    "qualification": "expected non-certificate from a solver timeout",
+    "sha256": "005c9cc66314ec7a38abcf7afb0106e429dd50b632c52c58903a0830ecfad93c",
+    "verified": false
+  },
+  "schema_version": 1,
+  "scope": "artifact integrity and encoding/cost audit only; no SAT or UNSAT claim",
+  "status": "almost_regular_42_q20_cold_audit_pass"
+}
