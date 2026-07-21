@@ -1,0 +1,53 @@
+{
+  "active_five_sets_sha256": "716700a8e0664ef57ef379f5f8921071d16c51cd0c555dc6c7b9489adb4f4a2a",
+  "base_variable_occurrence_max": 42,
+  "base_variable_occurrence_min": 23,
+  "base_variables": 86,
+  "blocked_base_words": 0,
+  "cardinality": {
+    "counter_clauses": 8167,
+    "counter_variables": 3268
+  },
+  "cardinality_encoding": "sequential",
+  "cnf_clauses": 31222,
+  "cnf_path": "artifacts/two_orbit_certificates/distance-06-02/burden2-second-orbit-changed.cnf",
+  "cnf_sha256": "80855a4b168e7a7c32e0f76bcdaf5d0b6d6d3fdd26556364b83aac170cb6ac8c",
+  "cnf_variables": 8558,
+  "distances": [
+    6,
+    2
+  ],
+  "five_set_accounting": {
+    "five_sets_examined": 962598,
+    "inactive_fixed_both_colors": 960964,
+    "one_active": 43,
+    "single_active": 1634,
+    "zero_active": 1591
+  },
+  "generator": "self-contained all-C(43,5) cyclic-orbit CNF generator",
+  "matrix_path": "sources/retrievals/springer_supplementary_data4_audit1.txt",
+  "matrix_sha256": "c2429869f6fa47ab7388134b580b014efae01e6f0e474f5bab2233afb1ef6990",
+  "max_burden": 2,
+  "orbit_change_clause_count": 1,
+  "primal_min_fill_width_upper_bound": 49,
+  "raw_active_five_sets": 1634,
+  "raw_clause_length_histogram": {
+    "1": 516,
+    "2": 1075,
+    "3": 43
+  },
+  "relaxation_variables": 1634,
+  "required_changed_orbit_indices": [
+    1
+  ],
+  "rotation_lex_leader": true,
+  "schema_version": 1,
+  "symmetry": {
+    "coverage_argument": "every finite common-rotation orbit contains a lexicographically least concatenated orbit word; the CNF admits exactly the least word(s), including periodic ties",
+    "group": "common Z_43 rotation on all released edge orbits",
+    "lex_clauses": 21420,
+    "lex_variables": 3570
+  },
+  "unique_raw_clauses": 473,
+  "variable_mapping": "1 + 43*orbit_index + u encodes edge {u,u+distance[orbit_index] mod 43}"
+}
