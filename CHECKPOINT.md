@@ -1,4 +1,85 @@
-# R(5,5) research checkpoint — epoch 15
+# R(5,5) research checkpoint — epoch 16
+
+Recorded: 2026-07-21 17:24 UTC
+
+## Epoch-16 outcome: sound local `S_12` quotient, then another supplied class
+
+The saved `strategy-a230b66ef386` discriminator is complete.  The old
+source-relative Hamming counter was removed.  The source-record-21 order-30
+core remains fixed, leaving 426 boundary primaries.  Eleven exact adjacent-row
+comparators impose nondecreasing 30-bit destroyed-to-core rows.
+
+Coverage was tested on every one of the `2^21` labelled graphs with four core
+and three destroyed vertices.  Explicit destroy relabelling preserved the
+core and ordered the rows in all 2,097,152 cases, including 368,640 one-tied-
+pair and 8,192 all-tied cases.  The comparator truth table accepted exactly
+the 136 ordered four-bit row pairs, each with a unique prefix assignment.
+
+The quotient reduces the exact primary universe from `2^426` to
+`2^66*C(2^30+11,12)`, a factor of
+`2^360/C(2^30+11,12) = 479001570.5570708...`.  This is slightly below `12!`
+because tied rows retain multiple representatives; coverage is still exact.
+
+The regenerated formula has 196,998 raw Ramsey clauses, 319 prefix
+auxiliaries, and 1,914 lex clauses.  The delegates' 175-clause comparator
+projection was corrected to 174 by exact reconstruction and truth-table
+testing.  The row-sorted record-21 source satisfies all 198,912 base clauses.
+After blocking exactly that one 426-bit vector, the physical formula has 745
+variables and 198,913 clauses.
+
+CaDiCaL 1.7.3 seed 1 found the single permitted post-block model in 4.849
+seconds.  Both full five-set checkers accepted it, but nauty and independent
+NetworkX isomorphism identify it as supplied source record 12.  Per the
+predeclaration, no second model was requested.  This does not exclude a class
+or boundary and does not change `43 <= R(5,5) <= 46`.
+
+The cold checker independently reconstructed the raw clauses and every lex
+gadget, evaluated all 198,913 physical clauses, obtained clique number four in
+both colours, and confirmed the record-12 target.  An adversarial destroy-label
+swap preserved all raw clauses and the core while being rejected by lex order.
+
+```text
+production experiment  .proof-experiments/20260721-172006-427f4a
+adversarial audit       .proof-experiments/20260721-172356-d34034
+production report       b3dba7917002fc7f49fdaefe25bc65e79a51f461878405f38233bd467f7e33ee
+cold audit v2           edcde85e7fff664770a7e26f32d531cab9cb338c5814842901cff132923ec7ab
+physical CNF            92eb867d7e523e673de1b9ea2b848600abf793eacad0b59cce7861cfc94fbe41
+candidate graph6        26b331eb29478b6920883bd72d389c98952171026871143829435c87ae8ba5ce
+```
+
+### Exact continuation
+
+Do not grant this boundary an arbitrary row-normal-form budget.  Row sorting
+is sound but is not an isomorphism-class block; the first source-blocked model
+is still a supplied class.  Redirect to
+`strategy-r55-two-orbit-proof-compression`.
+
+First action: select one retained burden-zero two-orbit CNF, strip all SAT
+auxiliaries, and deletion-minimize its raw K5 clauses while checking UNSAT at
+every deletion.  Stop immediately if the first exact core has more than 20
+clauses; that falsifies the route's first threshold and avoids an atlas.  If it
+has at most 20, independently verify every clause maps to a declared K43
+five-set before testing whether all 20 distances collapse to at most five
+signed-incidence templates.
+
+Full details and replay commands are in `docs/novel42-lex-quotient.md`.
+
+## Epoch-16 disclosure
+
+GPT-5.6 Sol was principal investigator.  Supplied GPT-5.6 Terra
+literature-strategy and experiment-verification memos were advisory and are
+promoted under `docs/delegate-memos/` with provenance in
+`records/delegate-provenance-epoch16.json`.  Sol corrected the comparator
+count, audited primary sources, implemented and ran the producer, and wrote
+the independent/adversarial cold checker.  No new subagent was spawned.
+Deterministic tools were Python 3.12.3, GCC 13.3.0, CaDiCaL 1.7.3, nauty,
+NetworkX 3.3, curl, pdftotext, jq, SHA-256, and the experiment harness.  No
+CAS, proof assistant, external publication, remote account, or system change
+was used.
+
+---
+
+# Prior checkpoint — epoch 15
 
 Recorded: 2026-07-21 16:43 UTC
 

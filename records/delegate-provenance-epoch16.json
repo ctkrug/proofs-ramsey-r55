@@ -1,0 +1,25 @@
+{
+  "epoch": 16,
+  "recorded_at": "2026-07-21T17:24:06.104382+00:00",
+  "orchestration": "gpt-5.6-sol principal with supplied gpt-5.6-terra delegates",
+  "delegates": [
+    {
+      "role": "literature-strategy",
+      "source_path": ".delegates/20260721-170623-293a10/literature-strategy/memo.md",
+      "source_sha256": "7eaa37b1f7dc75f2cb2d0bd0220a6abf9b53ae6cfc5eb65fa83ee5cb77e9f45a",
+      "promoted_path": "docs/delegate-memos/20260721-170623-literature-strategy.md",
+      "promoted_kind": "expanded Sol-audited preflight note; not byte-identical to the delegate memo",
+      "use": "advisory prior-art and stop-condition design"
+    },
+    {
+      "role": "experiment-verification",
+      "source_path": ".delegates/20260721-170623-293a10/experiment-verification/memo.md",
+      "source_sha256": "ac6d72a3c699d8bd2b3eb910ab631add5752085da07c2a20bc968ef178da1eb6",
+      "promoted_path": "docs/delegate-memos/20260721-170623-experiment-verification.md",
+      "promoted_kind": "verbatim memo",
+      "use": "advisory encoding dimensions, exhaustive-control design, and verification conditions"
+    }
+  ],
+  "principal_audit": "Sol independently checked primary sources, corrected the comparator count from 175 to 174 clauses, implemented the producer and cold checker, and ran all experiments. No new subagent was spawned."
+}
+

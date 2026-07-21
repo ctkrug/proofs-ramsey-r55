@@ -35,10 +35,10 @@
   "contribution_score": 5,
   "review_cost": 5,
   "novelty_risk": 3,
-  "attempt_count": 14,
-  "research_attempt_count": 13,
+  "attempt_count": 15,
+  "research_attempt_count": 14,
   "created_at": "2026-07-20T20:24:00+00:00",
-  "last_attempt_at": "2026-07-21T16:46:50.059737+00:00",
+  "last_attempt_at": "2026-07-21T17:37:38.498366+00:00",
   "accepted_result": false,
   "priority": 100
 }

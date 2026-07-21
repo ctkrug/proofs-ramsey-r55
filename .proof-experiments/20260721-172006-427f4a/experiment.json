@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "20260721-172006-427f4a",
+  "name": "r55-record21-lex-quotient",
+  "hypothesis": "The S_12 row-order quotient retains every small tied-row orbit, the row-sorted record-21 source satisfies the no-Hamming CNF, and one post-source-block model is exactly checkable.",
+  "expected_signal": "The 2^21 small gate and 256-pair gadget gate pass; the source control satisfies 198912 base clauses; one seed-1 30-second solve returns a dual-checked classified model or an explicit bounded stop.",
+  "command": [
+    "python3",
+    "scripts/run_novel42_lex_quotient.py",
+    "sources/r55_42some.g6",
+    "artifacts/authenticated_corpus_report.json",
+    "checkers/checker_a.py",
+    "checkers/checker_b.c",
+    "artifacts/novel42_lex_quotient",
+    "artifacts/novel42_lex_quotient_report.json",
+    "30",
+    "1",
+    "21"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 240,
+  "memory_limit_mb": 2048,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-21T17:20:06.057059+00:00",
+  "finished_at": "2026-07-21T17:22:23.575906+00:00",
+  "duration_seconds": 137.519,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "8092a5e85051221b5e7867d638725e3fe143e139",
+  "source_urls": [
+    "https://users.cecs.anu.edu.au/~bdm/papers/r55.pdf"
+  ],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/scripts/run_novel42_lex_quotient.py": "67d248f3f25232a02ffa5c7c5ec413c1968a024f421e90fdf733766e94d163a8",
+    "/root/proof-factory/research/ramsey-r55/workspace/sources/r55_42some.g6": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/authenticated_corpus_report.json": "0d9b1801434edcc12f34e73cea6c98d911f0e0c6f0884f8f03d96a46eca1344c",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/checker_a.py": "b7f28adfec792139acce538ca879b775a0180467763b413e1a464672acddd259",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/checker_b.c": "40f719bb36f8d7d3db3a4b949dce8b20abd49499f57f7d5b651b718658014d2e"
+  },
+  "peak_child_memory_rusage": 84864,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "e94aeb49ea82b6933596baa09c22c51cf465cccf820f951acd301bd891b1099c",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

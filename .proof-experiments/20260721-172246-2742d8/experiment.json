@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "20260721-172246-2742d8",
+  "name": "r55-record21-lex-quotient-cold-audit",
+  "hypothesis": "An independent reconstruction accepts the physical 745-variable quotient CNF, source block, and single post-block graph.",
+  "expected_signal": "The cold checker reconstructs exactly 196998 raw clauses, checks 1914 lex clauses, verifies all 198913 physical clauses, and confirms the supplied target by NetworkX isomorphism.",
+  "command": [
+    "python3",
+    "checkers/novel42_lex_quotient_audit.py",
+    "sources/r55_42some.g6",
+    "artifacts/authenticated_corpus_report.json",
+    "artifacts/novel42_lex_quotient_report.json",
+    "artifacts/novel42_lex_quotient",
+    "artifacts/novel42_lex_quotient_cold_audit.json"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 180,
+  "memory_limit_mb": 2048,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-21T17:22:46.142791+00:00",
+  "finished_at": "2026-07-21T17:22:55.226332+00:00",
+  "duration_seconds": 9.084,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "8092a5e85051221b5e7867d638725e3fe143e139",
+  "source_urls": [
+    "https://users.cecs.anu.edu.au/~bdm/papers/r55.pdf"
+  ],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/novel42_lex_quotient_audit.py": "602285f987aa1c990180c099fa47f6bf88afafa0819d022ea54f0a33d571626e",
+    "/root/proof-factory/research/ramsey-r55/workspace/sources/r55_42some.g6": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/authenticated_corpus_report.json": "0d9b1801434edcc12f34e73cea6c98d911f0e0c6f0884f8f03d96a46eca1344c",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/novel42_lex_quotient_report.json": "b3dba7917002fc7f49fdaefe25bc65e79a51f461878405f38233bd467f7e33ee"
+  },
+  "peak_child_memory_rusage": 167240,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "e163f1e6afa06af704e98df75adf559f4d7398d52b5b99758c8b741e54342fe5",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

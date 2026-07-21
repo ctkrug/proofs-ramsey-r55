@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "20260721-172356-d34034",
+  "name": "r55-record21-lex-quotient-adversarial-cold-audit",
+  "hypothesis": "The physical lex gadgets equal a separate reconstruction, and a destroy-label transposition preserves all raw Ramsey clauses while being rejected solely by row order.",
+  "expected_signal": "The checker matches all 11 gadgets, the transposed source satisfies 196998 raw clauses, and the lex clauses reject its unsorted distinct rows.",
+  "command": [
+    "python3",
+    "checkers/novel42_lex_quotient_audit.py",
+    "sources/r55_42some.g6",
+    "artifacts/authenticated_corpus_report.json",
+    "artifacts/novel42_lex_quotient_report.json",
+    "artifacts/novel42_lex_quotient",
+    "artifacts/novel42_lex_quotient_cold_audit_v2.json"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 180,
+  "memory_limit_mb": 2048,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-21T17:23:56.313433+00:00",
+  "finished_at": "2026-07-21T17:24:06.104382+00:00",
+  "duration_seconds": 9.791,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "8092a5e85051221b5e7867d638725e3fe143e139",
+  "source_urls": [
+    "https://users.cecs.anu.edu.au/~bdm/papers/r55.pdf"
+  ],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/novel42_lex_quotient_audit.py": "89f92a8ec8577be526cab98b2153b848d5a4c7809b280dab870c7a154739778c",
+    "/root/proof-factory/research/ramsey-r55/workspace/sources/r55_42some.g6": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/authenticated_corpus_report.json": "0d9b1801434edcc12f34e73cea6c98d911f0e0c6f0884f8f03d96a46eca1344c",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/novel42_lex_quotient_report.json": "b3dba7917002fc7f49fdaefe25bc65e79a51f461878405f38233bd467f7e33ee"
+  },
+  "peak_child_memory_rusage": 167280,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "0984b93f50f67bb734d8874bf72a79572df8b0fac7b447c1c44c76299a56f510",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}
