@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "20260721-022215-e19ede",
+  "name": "r55-two-orbit-adversarial-lrat-semantic-audit",
+  "hypothesis": "The retained 20 UNSAT proofs and variable-to-edge mappings survive materially different proof and full-graph checks",
+  "expected_signal": "All DRAT proofs convert to LRAT and pass lrat-check; full origin-ledger violations match independent full K5 identity scans on seed and patterned assignments",
+  "command": [
+    "python3",
+    "scripts/audit_two_orbit_slices.py",
+    "artifacts/two_orbit_slice_exact_report.json",
+    "artifacts/two_orbit_slices",
+    "sources/retrievals/springer_supplementary_data4_audit1.txt",
+    "checkers/publisher_radius1_a.py",
+    "checkers/publisher_radius1_b.c",
+    "tools/drat-trim/drat-trim.c",
+    "tools/drat-trim/lrat-check.c",
+    "artifacts/two_orbit_lrat",
+    "artifacts/two_orbit_slice_adversarial_audit.json"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 600,
+  "memory_limit_mb": 1024,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-21T02:22:15.203955+00:00",
+  "finished_at": "2026-07-21T02:22:26.883552+00:00",
+  "duration_seconds": 11.68,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "428e139bed1a756f3a4b642ed6b18e94ab336272",
+  "source_urls": [
+    "https://github.com/marijnheule/drat-trim",
+    "https://doi.org/10.1038/s41467-018-07327-2"
+  ],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/scripts/audit_two_orbit_slices.py": "452a51f88b50780876d3718b4737288f9c2789def5229ae5e328332533e21a07",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/two_orbit_slice_exact_report.json": "0456c5764898ab28d248d20912f26fd6708cac5d283151e1673110ce73690627",
+    "/root/proof-factory/research/ramsey-r55/workspace/sources/retrievals/springer_supplementary_data4_audit1.txt": "c2429869f6fa47ab7388134b580b014efae01e6f0e474f5bab2233afb1ef6990",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/publisher_radius1_a.py": "f34ea148c36ab74b0c11784f9b4d333dc915ef0a6bd3d70c7ef9c2aa03f5a535",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/publisher_radius1_b.c": "b1bfd2a51511ae0f3e6caccbaa29235cf65df2f8a3cae7ccdfce934af1f5914a",
+    "/root/proof-factory/research/ramsey-r55/workspace/tools/drat-trim/drat-trim.c": "d834b649f437e091597f5347f259b9f681087f89ca0844d0cee250a1a1a0c2ee",
+    "/root/proof-factory/research/ramsey-r55/workspace/tools/drat-trim/lrat-check.c": "bf07c2ac96b9035da1ebcc578cb95e956a2b795629d613154cdb307f8a8f4a95"
+  },
+  "peak_child_memory_rusage": 64256,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "e2ceb4da3038db74be0494deded5d68ddc2ddd7481d3eb80617039381eaccb36",
+    "stderr.txt": "4fe0714f4304b953bd26c049e12e495d8eae6b00019d071d950f7a2addda45a8"
+  }
+}

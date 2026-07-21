@@ -1,0 +1,31 @@
+{
+  "classification": {
+    "step27_cyclic_interval_length_24": 43,
+    "step27_cyclic_interval_length_25": 43
+  },
+  "direct_full_k5_rescans": 6,
+  "minimum_burden": 2,
+  "minimum_model_count": 86,
+  "normal_form": {
+    "negative_triple_shapes": [
+      [
+        0,
+        5,
+        24
+      ]
+    ],
+    "positive_pair_shapes": [
+      [
+        0,
+        18
+      ],
+      [
+        0,
+        20
+      ]
+    ]
+  },
+  "report": "/tmp/r55-epoch8-distance6-report.json",
+  "report_sha256": "86bb25883aeb1470c7170a4da40bafa1710374a07cd18eedaf14dd37f289b969",
+  "status": "distance6_slice_exact_pass"
+}

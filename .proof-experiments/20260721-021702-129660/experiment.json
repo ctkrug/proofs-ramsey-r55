@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "id": "20260721-021702-129660",
+  "name": "r55-two-orbit-domain-wall-exact-sweep",
+  "hypothesis": "At least one slice freeing distance 6 and one other cyclic distance contains a burden-zero R(5,5,43) coloring",
+  "expected_signal": "Either a SAT model passes both full K5 checkers, or every UNSAT slice has byte-identical independent derivations and an independently verified DRAT proof",
+  "command": [
+    "python3",
+    "scripts/run_two_orbit_slice_gate.py",
+    "checkers/two_orbit_slice_a.py",
+    "checkers/two_orbit_slice_b.c",
+    "checkers/publisher_radius1_a.py",
+    "checkers/publisher_radius1_b.c",
+    "sources/retrievals/springer_supplementary_data4_audit1.txt",
+    "sources/retrievals/springer_supplementary_data4_audit2.txt",
+    "artifacts/publisher_seed_radius2_report.json",
+    "artifacts/distance6_slice_exact_report.json",
+    "tools/drat-trim/drat-trim.c",
+    "artifacts/two_orbit_slices",
+    "artifacts/two_orbit_slice_exact_report.json"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 900,
+  "memory_limit_mb": 1024,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-21T02:17:02.902799+00:00",
+  "finished_at": "2026-07-21T02:19:07.907903+00:00",
+  "duration_seconds": 125.005,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "428e139bed1a756f3a4b642ed6b18e94ab336272",
+  "source_urls": [
+    "https://doi.org/10.1038/s41467-018-07327-2",
+    "https://www.cs.rit.edu/~spr/ElJC/sur.pdf"
+  ],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/scripts/run_two_orbit_slice_gate.py": "0878a3a26629a21e22773605c17a55f287e5ab950195b8b8d5bb3e73efa801d5",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/two_orbit_slice_a.py": "c72ea17ca7077135cb8f306466fcc1884fa70a944d98918fa871ec7cd5c82d26",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/two_orbit_slice_b.c": "5725eab88a5aafa4c90b03d44dc45b4a50378b3acd0f409cedc15878e3daa99a",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/publisher_radius1_a.py": "f34ea148c36ab74b0c11784f9b4d333dc915ef0a6bd3d70c7ef9c2aa03f5a535",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/publisher_radius1_b.c": "b1bfd2a51511ae0f3e6caccbaa29235cf65df2f8a3cae7ccdfce934af1f5914a",
+    "/root/proof-factory/research/ramsey-r55/workspace/sources/retrievals/springer_supplementary_data4_audit1.txt": "c2429869f6fa47ab7388134b580b014efae01e6f0e474f5bab2233afb1ef6990",
+    "/root/proof-factory/research/ramsey-r55/workspace/sources/retrievals/springer_supplementary_data4_audit2.txt": "c2429869f6fa47ab7388134b580b014efae01e6f0e474f5bab2233afb1ef6990",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/publisher_seed_radius2_report.json": "ee32f396c898894d32ffcbe69987caded6731f32398ce3be28cfde1d1b9c107a",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/distance6_slice_exact_report.json": "8c8c64a82c84913222578fad537cc9beb73e74de5260a84090b9406f798a9fb1",
+    "/root/proof-factory/research/ramsey-r55/workspace/tools/drat-trim/drat-trim.c": "d834b649f437e091597f5347f259b9f681087f89ca0844d0cee250a1a1a0c2ee"
+  },
+  "peak_child_memory_rusage": 64256,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "4b9993143ac3c022f9baf05e0d267707ad71a6694260a4c81373bfb98140ef6f",
+    "stderr.txt": "4146d998b81307fe25ce4d787046fd35da44d02a8dd64a5a47a212344ba4e127"
+  }
+}

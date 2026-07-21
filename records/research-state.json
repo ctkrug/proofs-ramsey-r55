@@ -14,8 +14,8 @@
     "The 656 known order-42 graphs are not a proved complete census.",
     "A candidate is not a solution until independent and human review are recorded."
   ],
-  "epoch_count": 6,
-  "last_updated": "2026-07-21T00:18:47.104341+00:00",
+  "epoch_count": 8,
+  "last_updated": "2026-07-21T02:34:27.831856+00:00",
   "baseline_review": {
     "status": "complete",
     "reviewed_at": "2026-07-20T12:53:00-06:00",
@@ -26,7 +26,7 @@
     "leads_recorded": 7,
     "requirement": "Repeat when the maintained survey or primary-source status changes materially."
   },
-  "synthesis_summary": "The two authenticated 3812-byte Springer bodies agree at SHA-256 c2429869f6fa47ab7388134b580b014efae01e6f0e474f5bab2233afb1ef6990. The seed has exactly two all-zero K5s, [6,12,17,36,42] and [6,12,31,36,42], and no all-one K5. All 903 single-edge flips were exhausted. The global radius-1 minimum burden is 2, attained by flips (6,12) and (36,42). Among the 741 flips avoiding vertices {6,12,36,42}, the minimum is 3, attained by seven recorded edges. No witness or global Ramsey bound was obtained.",
+  "synthesis_summary": "The hypothesis was falsified at its exact scope. Every second distance in {1,...,21} minus {6} is UNSAT. Complete Python and C origin ledgers and CNFs agree byte-for-byte. All 20 DRAT proofs pass drat-trim, all LRAT conversions pass lrat-check, and full-graph semantic controls agree. This excludes only the specified fixed-background two-orbit union and changes no Ramsey bound.",
   "established_facts": [
     {
       "claim": "The maintained Dynamic Survey records 43 <= R(5,5) <= 46.",
@@ -185,6 +185,69 @@
       "status": "computed",
       "source_attempt_id": "ramsey-r55-20260721-001847-bbfd27",
       "updated_at": "2026-07-21T00:18:47.104341+00:00"
+    },
+    {
+      "claim": "Every one of the 407253 distinct two-edge flips of the authenticated publisher seed has monochromatic-K5 burden at least 2; the deletion-remainder-change subfamily of 403809 pairs has the same minimum.",
+      "evidence": "artifacts/publisher_seed_radius2_report.json and artifacts/publisher_seed_radius2_scores.u16le in the R55 problem workspace",
+      "scope": "Hamming distance exactly two from the frozen 43-vertex seed",
+      "status": "computed",
+      "source_attempt_id": "manual-local-radius2-domain-wall-2026-07-20",
+      "updated_at": "2026-07-20T19:10:03-06:00"
+    },
+    {
+      "claim": "The only two radius-2 minimizers are edits {(6,12),(9,15)} and {(33,39),(36,42)}, and both edited graphs are the seed relabeled by vertex rotations -27 and +27 modulo 43.",
+      "evidence": "Dual exact minimizer identities in artifacts/publisher_seed_radius2_report.json; nauty canonical labels and explicit NetworkX isomorphism mappings recorded in CHECKPOINT.md",
+      "scope": "The complete radius-2 minimum set of the authenticated seed",
+      "status": "computed",
+      "source_attempt_id": "manual-local-radius2-domain-wall-2026-07-20",
+      "updated_at": "2026-07-20T19:10:03-06:00"
+    },
+    {
+      "claim": "Freezing the publisher seed's 20 constant cyclic-distance orbits and varying all 43 distance-6 edges yields minimum burden 2 over all 2^43 assignments. Exactly 86 assignments attain it: every rotation of a step-27 interval of 24 ones or 25 ones.",
+      "evidence": "Independent Python/Z3 and custom C DPLL complete model-set agreement in artifacts/distance6_slice_exact_report.json",
+      "scope": "The exact 43-variable distance-6 slice only, not the full 903-edge space",
+      "status": "computed",
+      "source_attempt_id": "manual-local-radius2-domain-wall-2026-07-20",
+      "updated_at": "2026-07-20T19:10:03-06:00"
+    },
+    {
+      "claim": "For adjacency rows a_u and a_v of any (5,5,n) graph, d_H(a_u,a_v)=d(u)+d(v)-2|N(u) intersect N(v)|. If uv is an edge then the common-neighbor set has size at most 13; if uv is a nonedge then the common-nonneighbor set has size at most 13.",
+      "evidence": "Direct neighborhood argument using R(3,5)=14: an adjacent pair's common neighbors contain neither a K3 nor an independent 5-set; the complement of a nonadjacent pair's common-nonneighbor graph has the same prohibition. R(3,5)=14 is recorded in Dynamic Survey DS1.18, https://www.cs.rit.edu/~spr/ElJC/ejcram18.pdf.",
+      "scope": "All hypothetical and known (5,5,n) graphs; this is a pairwise row-code constraint, not an existence or nonexistence result.",
+      "status": "proved",
+      "updated_at": "2026-07-20T18:02:09-06:00"
+    },
+    {
+      "claim": "A 2026-07-20 primary-source and public-code audit found mechanism-level Ramsey precedents for two parts of the proposed trapping-set route: Molnar et al. use adaptive weights on unsatisfied R(5,5) clauses, and AlphaEvolve's public ramsey_4_13_138.py performs a violation-focused induced-subgraph hill climb and graft after stagnation. No inspected source canonicalizes recurrent R55 failure cores, builds an isomorphism-type atlas, or tests exact core-conditioned templates on held-out trajectories.",
+      "evidence": "https://doi.org/10.1038/s41467-018-07327-2 and https://github.com/google-research/google-research/blob/master/ramsey_number_bounds/code/ramsey_4_13_138.py",
+      "scope": "Public indexed literature and repositories inspected in DOSSIER S16; absence is not proof of historical nonuse.",
+      "status": "audited-partial-precedent",
+      "source_attempt_id": "manual-prior-art-audit-2026-07-20",
+      "updated_at": "2026-07-20T18:30:56-06:00"
+    },
+    {
+      "claim": "Evolutionary search is established in Ramsey work: Kunkel used a standard population GA and one-point crossover directly on R(5,5), while AlphaEvolve's public ramsey_4_15_158.py uses marginal edge/orbit success frequencies as a gene pool. No GOMEA, linkage tree, mutual-information linkage model, donor-subset optimal mixing, or exact greedy block acceptance was located in the inspected Ramsey sources or nine public AlphaEvolve programs.",
+      "evidence": "https://www.micsymposium.org/mics_2003/Kunkel.PDF and https://github.com/google-research/google-research/blob/master/ramsey_number_bounds/code/ramsey_4_15_158.py",
+      "scope": "Public indexed literature and repositories inspected in DOSSIER S16; the unlocated component is learned multi-edge linkage plus optimal mixing, not generic genetic search or gene-pool memory.",
+      "status": "audited-adjacent-precedent",
+      "source_attempt_id": "manual-prior-art-audit-2026-07-20",
+      "updated_at": "2026-07-20T18:30:56-06:00"
+    },
+    {
+      "claim": "The adjacency-row Hamming identity is published general graph theory, and LP/subgraph-count machinery has already been applied directly to R(5,5); flag-algebra SDP has been applied to other small Ramsey numbers. No inspected R55 source applies a Schrijver/Terwilliger triple-distance relaxation to adjacency rows while retaining matrix symmetry, zero diagonal, and edge/nonedge pair colors.",
+      "evidence": "https://doi.org/10.1088/1742-6596/1255/1/012044, https://www.cs.rit.edu/~spr/PUBL/paper29.pdf, https://users.cecs.anu.edu.au/~bdm/papers/r55.pdf, https://arxiv.org/abs/2409.15709, and https://arxiv.org/abs/1704.03592",
+      "scope": "Public indexed literature inspected in DOSSIER S16; the pair identity and generic LP/SDP framing are not novelty claims.",
+      "status": "audited-adjacent-precedent",
+      "source_attempt_id": "manual-prior-art-audit-2026-07-20",
+      "updated_at": "2026-07-20T18:30:56-06:00"
+    },
+    {
+      "claim": "All 20 fixed-background two-orbit slices are burden-zero UNSAT.",
+      "evidence": "artifacts/two_orbit_slice_exact_report.json and artifacts/two_orbit_slice_adversarial_audit.json",
+      "scope": "Distance 6 plus exactly one distance d in {1,...,21} minus {6}, with the other 19 distance orbits frozen to publisher source SHA-256 c2429869f6fa47ab7388134b580b014efae01e6f0e474f5bab2233afb1ef6990.",
+      "status": "computed",
+      "source_attempt_id": "ramsey-r55-20260721-023427-94891a",
+      "updated_at": "2026-07-21T02:34:27.831856+00:00"
     }
   ],
   "strategies": [
@@ -345,20 +408,129 @@
         "strategy-r55twocore2026"
       ],
       "updated_at": "2026-07-21T00:18:47.104341+00:00"
+    },
+    {
+      "id": "strategy-r55-trapping-atlas",
+      "family": "decoder trapping-set analysis transferred from LDPC error-floor research",
+      "fingerprint": "r55trappingatlas2026",
+      "title": "Canonicalize recurrent Ramsey failure cores before designing escape moves",
+      "mechanism": "Treat the 903 edge bits as variable nodes and monochromatic or one-flip-from-monochromatic 5-sets as active check nodes. From deterministic failed K43 trajectories, retain the edges that oscillate or remain in active checks over the final window, build a colored bipartite core, canonicalize it under vertex relabeling, and cluster recurrent core types. For each frequent type, solve a small exact core-plus-boundary MaxSAT neighborhood to obtain an escape template; apply templates only as move proposals and re-evaluate the complete graph exactly.",
+      "status": "proposed",
+      "hypothesis": "A small number of canonical active-core types explain a disproportionate share of low-energy search stalls, and exact core-conditioned escape templates transfer to held-out trajectories better than generic persistent-conflict weighting.",
+      "discriminating_test": "Run a fixed-seed trace corpus on damaged held-out order-42 controls and low-burden K43 starts. Continue only if canonical cores recur above label-shuffled controls and templates learned on one split improve paired held-out time-to-escape or best exact burden under the same evaluator-call budget; otherwise discard the analogy.",
+      "blocker": "Needs trace capture, colored-core canonicalization, and a matched exact-delta baseline; the authenticated order-42 controls and publisher K43 seed are now available.",
+      "prior_art_status": "Partial precedent; no located full R55 application as of the 2026-07-20 public-source audit.",
+      "closest_prior_work": "Molnar et al. adaptively weight unsatisfied R55 clauses; Piwakowski uses Ramsey tabu memory; AlphaEvolve ramsey_4_13_138.py selects high-violation vertices, hill-climbs their induced subgraph, and grafts it back after stagnation.",
+      "novelty_boundary": "Do not claim violation-local repair as new. Test only whether isomorphism-canonical recurrent-core types plus exact core-boundary templates transfer on held-out runs beyond persistent weighting and AlphaEvolve-style subgraph graft baselines.",
+      "reopen_condition": "",
+      "last_attempt_id": "",
+      "attempts": 0,
+      "parent_ids": [
+        "strategy-r55-breakout",
+        "strategy-r55twocore2026"
+      ],
+      "sources": [
+        "https://web.stanford.edu/class/ee388/papers/ErrorFloors.pdf",
+        "https://doi.org/10.1038/s41467-018-07327-2",
+        "https://doi.org/10.37236/1230",
+        "https://github.com/google-research/google-research/blob/master/ramsey_number_bounds/code/ramsey_4_13_138.py"
+      ],
+      "updated_at": "2026-07-20T18:30:56-06:00"
+    },
+    {
+      "id": "strategy-r55-linkage-mixing",
+      "family": "linkage-tree gene-pool optimal mixing for gray-box Ramsey MaxSAT",
+      "fingerprint": "r55linkagemixing2026",
+      "title": "Learn and transfer interacting edge blocks instead of crossing whole graph bitstrings",
+      "mechanism": "Maintain a diverse population of exact low-burden colorings. Rebuild a linkage tree each generation from elite-population mutual information, active-K5 co-occurrence, or a hybrid of both. Traverse its edge subsets from small to large, copy one subset from a donor, and accept only moves that pass the exact incremental burden evaluator and the archive's diversity rule. Compare learned, gray-box, hybrid, univariate, and uniform-crossover masks rather than assuming the visible K5 factorization is the best linkage model.",
+      "status": "proposed",
+      "hypothesis": "Dynamic linkage learning identifies epistatic edge blocks whose coordinated transfer preserves useful partial structure and escapes single-edge stalls more reliably than uniform crossover or univariate mixing.",
+      "discriminating_test": "Split complement pairs and isomorphism families before constructing 6-to-12-edge-damaged order-42 controls. Under identical evaluator calls and seeds, require learned or hybrid masks to improve held-out valid-42 recovery and median exact burden over univariate mixing, uniform crossover, and exact-delta tabu before spending any K43 budget.",
+      "blocker": "Needs an exact incremental evaluator, population-diversity guard, leakage-safe held-out controls, and a small linkage-tree implementation.",
+      "prior_art_status": "Adjacent evolutionary precedent; no located Ramsey GOMEA/linkage-tree optimal-mixing application as of the 2026-07-20 public-source audit.",
+      "closest_prior_work": "Kunkel applies point mutation and standard one-point crossover directly to R55. AlphaEvolve ramsey_4_15_158.py retains marginal edge and distance-orbit success frequencies as a gene pool. GOMEA/LTGA is established on generic MAX-SAT.",
+      "novelty_boundary": "Population search, crossover, and marginal gene-pool memory are already applied. Credit only learned multi-edge linkage, donor-subset traversal, and exact optimal-mixing acceptance if they beat those named baselines.",
+      "reopen_condition": "",
+      "last_attempt_id": "",
+      "attempts": 0,
+      "parent_ids": [
+        "strategy-r55-program-evolution",
+        "strategy-r55-breakout"
+      ],
+      "sources": [
+        "https://ir.cwi.nl/pub/22078",
+        "https://arxiv.org/abs/2109.05259",
+        "https://www.micsymposium.org/mics_2003/Kunkel.PDF",
+        "https://github.com/google-research/google-research/blob/master/ramsey_number_bounds/code/ramsey_4_15_158.py"
+      ],
+      "updated_at": "2026-07-20T18:30:56-06:00"
+    },
+    {
+      "id": "strategy-r55-row-code-sdp",
+      "family": "coding-theory distance distributions and Terwilliger moment bounds",
+      "fingerprint": "r55rowcodesdp2026",
+      "title": "Use adjacency rows as a constrained binary code to search for exact profile exclusions",
+      "mechanism": "Represent the n adjacency rows as binary words with weights equal to degrees and pairwise distances d(u)+d(v)-2c(u,v). Add the proved edge/common-neighbor and nonedge/common-nonneighbor bounds from R(3,5)=14, then test a hierarchy: exact rational pair-distance LP first, Schrijver-style triple-intersection positive-semidefinite moments second, and colored edge/nonedge moments only if the relaxed stages cut a profile. Known order-42 graphs are mandatory positive controls; every numerical dual must be rationalized into an exact inequality or checked pseudo-Boolean certificate.",
+      "status": "proposed",
+      "hypothesis": "The adjacency-row pair and triple moment cone excludes at least one degree/common-neighbor profile still admitted by scalar degree and excess constraints, supplying a new structural reduction for an upper-bound slice.",
+      "discriminating_test": "Generate exact row weight/intersection distributions for all authenticated controls and enumerate the current hypothetical profiles. Park the route immediately if the rational pair-moment relaxation cuts no new profile; escalate to SDP only after a nonempty exact cut, and reject any cut that fails a known control or cannot be rationalized.",
+      "blocker": "The off-the-shelf code bound does not encode adjacency symmetry or the edge/nonedge relation; the first relaxed LP must show information gain before a custom colored moment system is justified.",
+      "prior_art_status": "Most precedent-adjacent; no located R55 adjacency-row Terwilliger formulation as of the 2026-07-20 public-source audit.",
+      "closest_prior_work": "The adjacency-row Hamming identity is Theorem 2.1 of Ali-Suwilo-Mardiningsih (2019). R55 upper bounds already use integer/linear programming and degree, neighborhood, triangle, and induced-subgraph counts. Flag-algebra SDP has proved other small Ramsey numbers; Schrijver supplies the coding SDP.",
+      "novelty_boundary": "Neither the row identity nor generic LP/SDP is new. Treat this as a cheap filter unless a colored row-moment inequality cuts a profile missed by the established R55 subgraph LP and is rationalized exactly.",
+      "reopen_condition": "",
+      "last_attempt_id": "",
+      "attempts": 0,
+      "parent_ids": [
+        "strategy-r55-inequality"
+      ],
+      "sources": [
+        "https://ir.cwi.nl/pub/14098",
+        "https://www.cs.rit.edu/~spr/ElJC/ejcram18.pdf",
+        "https://doi.org/10.1088/1742-6596/1255/1/012044",
+        "https://www.cs.rit.edu/~spr/PUBL/paper29.pdf",
+        "https://users.cecs.anu.edu.au/~bdm/papers/r55.pdf",
+        "https://arxiv.org/abs/2409.15709",
+        "https://arxiv.org/abs/1704.03592"
+      ],
+      "updated_at": "2026-07-20T18:30:56-06:00"
+    },
+    {
+      "id": "strategy-r55twoorbitdomainwall2026",
+      "family": "certificate-carrying two-orbit SAT",
+      "fingerprint": "r55twoorbitdomainwall2026",
+      "title": "Proof-carrying burden-zero sweep of all 20 two-orbit cyclic domain-wall slices around the authenticated Springer K43 seed.",
+      "mechanism": "Free cyclic distance 6 and one other distance orbit, independently derive the exact K5 CNF in Python and C without symmetry reduction, solve it, and verify DRAT/LRAT proofs and variable-to-graph semantics.",
+      "status": "active",
+      "hypothesis": "At least one of the 20 slices contains a burden-zero R(5,5,43) coloring.",
+      "discriminating_test": "Solve every unsymmetrized 86-variable slice; accept SAT only after two full K5 scans, and accept UNSAT only after dual clause derivation and independent proof checking.",
+      "blocker": "The burden-zero witness question is closed for this family, but exact slice minima remain unknown because burden one has not yet been encoded with raw-origin multiplicity.",
+      "reopen_condition": "Reopen the burden-zero witness route only after a concrete defect in source provenance, encoding, mapping, proof verification, or slice coverage.",
+      "reopen_evidence": "The saved radius-two and distance-6 prerequisite gates replayed successfully before the new sweep.",
+      "last_attempt_id": "ramsey-r55-20260721-023427-94891a",
+      "attempts": 1,
+      "parent_ids": [
+        "strategy-r55twocore2026",
+        "strategy-r55-certified-pilot"
+      ],
+      "updated_at": "2026-07-21T02:34:27.831856+00:00"
     }
   ],
   "open_leads": [
     {
+      "description": "Sweep the 20 exact two-orbit domain-wall slices obtained by releasing cyclic distance 6 with one additional distance orbit.",
+      "rationale": "Radius 2 contains only translations of the one-dimensional defect, while the full one-orbit family is exactly closed at burden 2. Any structured escape must couple the defect to at least one more orbit.",
+      "next_experiment": "For each second distance, derive the 86-variable K5 CNF, quotient the common rotation action, ask first for burden 0, dual-check every SAT model, and retain proof logs before treating any UNSAT slice as certified. Rank nonzero slices by exact minimum and factor-graph width.",
+      "priority": "high",
+      "status": "open",
+      "id": "lead-r55-two-orbit-domain-wall",
+      "strategy_id": "strategy-r55-two-orbit-domain-wall",
+      "updated_at": "2026-07-20T19:10:03-06:00"
+    },
+    {
       "description": "Authenticate the 656 order-42 control corpus and reproduce the 13- and 9-conflict K43 constructions.",
       "rationale": "Every search claim depends on trusted inputs, independent evaluators, and canonical IDs.",
       "next_experiment": "Mirror and hash r55_42some.g6; write transparent combination and independent bitset checkers; reproduce edge, degree, complement, and violation identities.",
-      "priority": "high",
-      "status": "open"
-    },
-    {
-      "description": "Recover the exact published two-conflict K43 artifact and its six-vertex conflict core.",
-      "rationale": "It is the strongest located direct seed and supplies at least four valid order-42 deletions plus a sharply bounded repair neighborhood.",
-      "next_experiment": "Obtain the supplementary graph, hash and dual-check it, list both bad K5s, canonicalize all valid vertex deletions against the 656, and archive provenance.",
       "priority": "high",
       "status": "open"
     },
@@ -438,34 +610,44 @@
       "updated_at": "2026-07-20T21:17:02.574731+00:00"
     },
     {
-      "description": "Authenticate Springer Supplementary Data 4 after the corpus passes.",
-      "rationale": "It is the strongest published repair seed, but the local transcription lacks publisher provenance.",
-      "next_experiment": "Retrieve the unchanged TXT, determine its color convention, and require exact violation identities under both checkers.",
+      "description": "Build an LDPC-style atlas of recurrent active failure cores in low-burden Ramsey search trajectories.",
+      "rationale": "Violation-focused repair is already present in Molnar-style adaptive weights and an AlphaEvolve induced-subgraph graft. This lead earns compute only if canonical recurrent types and exact templates add held-out transfer beyond those baselines.",
+      "next_experiment": "Instrument deterministic damaged-42 and authenticated-seed K43 runs; define active checks as violated and 9:1 five-sets; canonicalize final-window colored bipartite cores; compare recurrence against shuffled controls, persistent clause weighting, and AlphaEvolve-style high-violation induced-subgraph grafts; test exact templates only on held-out runs.",
       "priority": "high",
       "status": "open",
-      "id": "lead-53ab7b79b6",
-      "strategy_id": "strategy-r55controls2026",
-      "updated_at": "2026-07-20T21:17:02.574731+00:00"
+      "id": "lead-r55-trapping-atlas",
+      "strategy_id": "strategy-r55-trapping-atlas",
+      "updated_at": "2026-07-20T18:30:56-06:00"
     },
     {
-      "description": "Authenticate Springer Supplementary Data 4.",
-      "rationale": "It is the strongest published K43 repair seed and the remaining source gate before conflict-core work.",
-      "next_experiment": "Run the bounded direct-HTTPS retrieval command in CHECKPOINT.md and retain publisher body, raw headers, transfer metadata, and hashes.",
+      "description": "Benchmark linkage-tree optimal mixing on leakage-safe damaged order-42 controls before using it at 43.",
+      "rationale": "Standard R55 crossover and marginal edge/orbit gene-pool memory already exist. This lead earns compute only if learned multi-edge linkage and optimal mixing improve on both precedents under leakage-safe evaluation.",
+      "next_experiment": "Implement Kunkel-style crossover, AlphaEvolve-style marginal edge/orbit memory, univariate mixing, mutual-information linkage, factor-derived linkage, and hybrid masks; split complement/isomorphism families; compare exact recovery rate and burden under paired seeds and matched evaluator calls.",
       "priority": "high",
       "status": "open",
-      "id": "lead-3a1dd469bb",
-      "strategy_id": "strategy-r55controls2026",
-      "updated_at": "2026-07-20T22:46:31.902547+00:00"
+      "id": "lead-r55-linkage-mixing",
+      "strategy_id": "strategy-r55-linkage-mixing",
+      "updated_at": "2026-07-20T18:30:56-06:00"
     },
     {
-      "description": "Exhaust the complete radius-2 neighborhood and its deletion-remainder-change slice.",
-      "rationale": "Only 407253 unordered pairs remain, small enough for an explicit score certificate and independent replay.",
-      "next_experiment": "Implement lexicographically ordered C and Python radius-2 evaluators, retain every pair score and every minimizer identity, and stop at the first mismatch.",
+      "description": "Test the cheapest adjacency-row coding-theory relaxation before building a custom SDP.",
+      "rationale": "The row identity and generic LP/SDP are established prior art. A small rational LP is justified only as a cheap information-gain test against the existing R55 subgraph-count LP.",
+      "next_experiment": "Reproduce the published adjacency-row Hamming identity and current R55 degree/subgraph constraints; extract exact distributions from all controls; formulate the pair-distance LP for n=43..45; count only profiles not already excluded by the established LP, and stop before SDP if there are none.",
+      "priority": "normal",
+      "status": "open",
+      "id": "lead-r55-row-code-sdp",
+      "strategy_id": "strategy-r55-row-code-sdp",
+      "updated_at": "2026-07-20T18:30:56-06:00"
+    },
+    {
+      "description": "Decide whether any of the 20 two-orbit slices has burden one.",
+      "rationale": "The publisher assignment has burden two in every slice, so checked burden-at-most-one exclusions would establish exact minimum two and fully close this structured family.",
+      "next_experiment": "Add raw-origin relaxation variables and an independently derived at-most-one encoding, validate it on the one-orbit control, then run all 20 cases with proof logging.",
       "priority": "high",
       "status": "open",
-      "id": "lead-f8d8033687",
-      "strategy_id": "strategy-r55twocore2026",
-      "updated_at": "2026-07-21T00:18:47.104341+00:00"
+      "id": "lead-365cf4cbff",
+      "strategy_id": "strategy-r55twoorbitdomainwall2026",
+      "updated_at": "2026-07-21T02:34:27.831856+00:00"
     }
   ],
   "ruled_out": [
@@ -607,21 +789,48 @@
       "reopen_condition": "Use at least two coordinated edits or a materially different seed.",
       "attempt_id": "ramsey-r55-20260721-001847-bbfd27",
       "updated_at": "2026-07-21T00:18:47.104341+00:00"
+    },
+    {
+      "claim_or_route": "Repair the authenticated publisher seed using exactly two distinct edge flips.",
+      "scope": "All C(903,2)=407253 pairs, including the 403809-pair deletion-remainder-change slice",
+      "reason": "The exact minimum burden remains 2; the only two minimizers are isomorphic rotations of the seed.",
+      "evidence": "artifacts/publisher_seed_radius2_report.json and the complete compact score ledger",
+      "reopen_condition": "Demonstrate a source, ordering, or checker defect; larger edit sets or released orbit families are different routes.",
+      "attempt_id": "manual-local-radius2-domain-wall-2026-07-20",
+      "updated_at": "2026-07-20T19:10:03-06:00"
+    },
+    {
+      "claim_or_route": "Find a K43 witness by varying only the 43 cyclic-distance-6 edges of the authenticated seed.",
+      "scope": "All 2^43 words with the other 20 cyclic-distance orbits frozen",
+      "reason": "Independent complete enumerators prove minimum burden 2 and classify all 86 optima.",
+      "evidence": "artifacts/distance6_slice_exact_report.json",
+      "reopen_condition": "Only after a defect is found in the reduced-clause derivation or either complete model-set check; releasing another orbit is a different family.",
+      "attempt_id": "manual-local-radius2-domain-wall-2026-07-20",
+      "updated_at": "2026-07-20T19:10:03-06:00"
+    },
+    {
+      "claim_or_route": "Find a K43 Ramsey witness in the authenticated seed's two-released-orbit domain-wall family.",
+      "scope": "The union of all 20 archived unsymmetrized 86-variable slices.",
+      "reason": "Every exact burden-zero CNF has independently checked DRAT and LRAT evidence of UNSAT.",
+      "evidence": "artifacts/two_orbit_slices, artifacts/two_orbit_lrat, and the two retained reports",
+      "reopen_condition": "Demonstrate a source, clause-derivation, variable-mapping, proof-checker, or 20-distance coverage defect; freeing a third orbit is a different route.",
+      "attempt_id": "ramsey-r55-20260721-023427-94891a",
+      "updated_at": "2026-07-21T02:34:27.831856+00:00"
     }
   ],
   "unresolved_questions": [
-    "Can the two-conflict K43 supplementary graph be recovered in a stable machine-readable form and independently verified?",
+    "Does releasing distance 6 together with any one additional cyclic-distance orbit permit burden below 2?",
     "Can the reported distance-six exclusion around the 656 be replayed or obtained with a coverage manifest?",
     "Does the almost-regular order-42 slice contain a new Ramsey graph?",
     "Which exact subgraph-count or small-graph SDP ideas can be converted into a human/checkable order-45 restriction?",
     "Can proof logs for useful bounded R55 subcases fit the hard-lane retention and replay budget?"
   ],
   "next_session": {
-    "recommended_strategy_id": "strategy-r55twocore2026",
-    "objective": "Exhaust and independently verify the publisher seed's complete radius-2 edge neighborhood.",
-    "first_action": "Run the cold replay command in CHECKPOINT.md, then enumerate the 407253 lexicographically ordered unordered edge pairs under separate C and Python implementations.",
-    "stop_condition": "Stop on any source, parser, ordering, score, or identity mismatch; otherwise stop after every pair is retained and agreed. A zero must pass both complete checkers.",
-    "source_attempt_id": "ramsey-r55-20260721-001847-bbfd27"
+    "recommended_strategy_id": "strategy-r55twoorbitdomainwall2026",
+    "objective": "Determine whether any two-orbit slice lowers the exact monochromatic-K5 burden from two to one.",
+    "first_action": "Extend both generators with one relaxation variable per raw origin and independently derived at-most-one constraints; validate first on the retained distance-6 slice.",
+    "stop_condition": "Stop on any source, multiplicity, specialization, dual-CNF, proof, or full-scan mismatch; otherwise stop after a checked burden-one model or 20 checked UNSAT results.",
+    "source_attempt_id": "ramsey-r55-20260721-023427-94891a"
   },
   "recent_attempt_ids": [
     "ramsey-r55-20260720-194611-f14832",
@@ -629,6 +838,8 @@
     "ramsey-r55-20260720-211702-50a040",
     "ramsey-r55-20260720-224631-ebf6f8",
     "ramsey-r55-20260720-235107-8e574c",
-    "ramsey-r55-20260721-001847-bbfd27"
+    "ramsey-r55-20260721-001847-bbfd27",
+    "manual-local-radius2-domain-wall-2026-07-20",
+    "ramsey-r55-20260721-023427-94891a"
   ]
 }

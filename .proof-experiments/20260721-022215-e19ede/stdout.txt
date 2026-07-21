@@ -1,0 +1,14 @@
+{
+  "lrat_proofs_verified": 20,
+  "python_full_enumerator_distances": [
+    1,
+    3,
+    10,
+    20,
+    21
+  ],
+  "report": "/root/proof-factory/research/ramsey-r55/workspace/artifacts/two_orbit_slice_adversarial_audit.json",
+  "report_sha256": "38f2b91ca963760dc1fed0107be7fef0c40d41d3fd7da2a7104103447c6b36c8",
+  "semantic_slices_checked": 20,
+  "status": "two_orbit_slice_adversarial_audit_pass"
+}

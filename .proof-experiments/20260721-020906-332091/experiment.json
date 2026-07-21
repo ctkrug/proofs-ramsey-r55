@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "id": "20260721-020906-332091",
+  "name": "r55-epoch8-distance6-prerequisite-replay",
+  "hypothesis": "The retained exact distance-six one-orbit classification still reproduces",
+  "expected_signal": "Independent Z3 and custom C enumerators agree on minimum burden 2 and exactly 86 interval optima",
+  "command": [
+    "python3",
+    "scripts/run_distance6_slice_gate.py",
+    "checkers/distance6_slice_a.py",
+    "checkers/distance6_slice_b.c",
+    "checkers/publisher_radius1_a.py",
+    "checkers/publisher_radius1_b.c",
+    "sources/retrievals/springer_supplementary_data4_audit1.txt",
+    "sources/retrievals/springer_supplementary_data4_audit2.txt",
+    "artifacts/publisher_seed_radius2_report.json",
+    "/tmp/r55-epoch8-distance6-report.json"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 180,
+  "memory_limit_mb": 1024,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-21T02:09:06.986902+00:00",
+  "finished_at": "2026-07-21T02:09:21.868545+00:00",
+  "duration_seconds": 14.882,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "428e139bed1a756f3a4b642ed6b18e94ab336272",
+  "source_urls": [
+    "https://doi.org/10.1038/s41467-018-07327-2"
+  ],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/scripts/run_distance6_slice_gate.py": "54ca27ad729e683418ee3d31cc63f2bbb6b8d76faddd4d1bafc06e84ab5d20a7",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/distance6_slice_a.py": "e0151793d29fdf996d6eca094580a71b7287c9b967e8be4c8be3939c0650d833",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/distance6_slice_b.c": "b434320953a49f5ddf5979b5c5b09d7e4d4c4691cf189192156312ccecee7c71",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/publisher_radius1_a.py": "f34ea148c36ab74b0c11784f9b4d333dc915ef0a6bd3d70c7ef9c2aa03f5a535",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/publisher_radius1_b.c": "b1bfd2a51511ae0f3e6caccbaa29235cf65df2f8a3cae7ccdfce934af1f5914a",
+    "/root/proof-factory/research/ramsey-r55/workspace/sources/retrievals/springer_supplementary_data4_audit1.txt": "c2429869f6fa47ab7388134b580b014efae01e6f0e474f5bab2233afb1ef6990",
+    "/root/proof-factory/research/ramsey-r55/workspace/sources/retrievals/springer_supplementary_data4_audit2.txt": "c2429869f6fa47ab7388134b580b014efae01e6f0e474f5bab2233afb1ef6990",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/publisher_seed_radius2_report.json": "ee32f396c898894d32ffcbe69987caded6731f32398ce3be28cfde1d1b9c107a"
+  },
+  "peak_child_memory_rusage": 60776,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "4e1534c9135b96fc07d6834d6f718a405ca096b90eda5fa6df853bc41024fd28",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

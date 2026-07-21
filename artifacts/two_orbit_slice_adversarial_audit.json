@@ -1,0 +1,362 @@
+{
+  "claim_scope": "the retained 20 two-orbit CNFs/proofs and their declared variable-to-edge mapping only",
+  "conclusion": "Every archived UNSAT proof also passes an LRAT check, and every slice's declared mapping agrees with a full graph/complement K5 enumeration on an independent patterned assignment plus the seed assignment.",
+  "main_report": {
+    "path": "/root/proof-factory/research/ramsey-r55/workspace/artifacts/two_orbit_slice_exact_report.json",
+    "sha256": "0456c5764898ab28d248d20912f26fd6708cac5d283151e1673110ce73690627"
+  },
+  "proof_audit": {
+    "all_verified": true,
+    "compiled_drat_trim_sha256": "8b49df2cde411d9e551ae1dd9f818a3bfd7411722ad40a84ac45c661042e3e36",
+    "compiled_lrat_check_sha256": "72515efb60a808914edc32fc1c576962138df0765c45b7fcc43641cf3875611b",
+    "drat_trim_source_sha256": "d834b649f437e091597f5347f259b9f681087f89ca0844d0cee250a1a1a0c2ee",
+    "lrat_check_source_sha256": "bf07c2ac96b9035da1ebcc578cb95e956a2b795629d613154cdb307f8a8f4a95",
+    "method": "convert each archived binary DRAT proof to textual LRAT, then check with separately compiled lrat-check",
+    "results": {
+      "1": {
+        "bytes": 3039,
+        "drat_to_lrat_seconds": 0.1509403281379491,
+        "lrat_check": "verified",
+        "lrat_check_seconds": 0.042633002158254385,
+        "sha256": "af07039f1f4210db16b7d77420acfe03a4d4b9deada34220cac8d7ac85e38fa6"
+      },
+      "2": {
+        "bytes": 2170,
+        "drat_to_lrat_seconds": 0.10972008900716901,
+        "lrat_check": "verified",
+        "lrat_check_seconds": 0.03426696499809623,
+        "sha256": "f77779af2f07480d64a70a2e987beb990fb04c3eb222b9ef56675ca065314e8a"
+      },
+      "3": {
+        "bytes": 1991,
+        "drat_to_lrat_seconds": 0.1371357338503003,
+        "lrat_check": "verified",
+        "lrat_check_seconds": 0.038672990864142776,
+        "sha256": "80863eaa1e6714c6ed3288be610f961227836c8dd84124249c5dfad88e543e9d"
+      },
+      "4": {
+        "bytes": 7339,
+        "drat_to_lrat_seconds": 0.13148296205326915,
+        "lrat_check": "verified",
+        "lrat_check_seconds": 0.03428753302432597,
+        "sha256": "b505dc1594d57d9abe6f7abc3895a75a55c166a6582055229bed9bc8cf39cc01"
+      },
+      "5": {
+        "bytes": 6128,
+        "drat_to_lrat_seconds": 0.14853032701648772,
+        "lrat_check": "verified",
+        "lrat_check_seconds": 0.03656568005681038,
+        "sha256": "2d7e5f5330f4b4c2b9fb3d514e56684093a33a54bbc6e9a015932e84f08c94f8"
+      },
+      "7": {
+        "bytes": 3459,
+        "drat_to_lrat_seconds": 0.12390010198578238,
+        "lrat_check": "verified",
+        "lrat_check_seconds": 0.03826467297039926,
+        "sha256": "04fdc2b468a60827bdbcdd875527d28335912655a207335db06cb8709e9c2122"
+      },
+      "8": {
+        "bytes": 1993,
+        "drat_to_lrat_seconds": 0.12952206609770656,
+        "lrat_check": "verified",
+        "lrat_check_seconds": 0.038196171866729856,
+        "sha256": "53f9f7b863965a5760f3c854fee7a4b18cf8f74707be74a12f332ad2af7b2746"
+      },
+      "9": {
+        "bytes": 2848,
+        "drat_to_lrat_seconds": 0.12862560292705894,
+        "lrat_check": "verified",
+        "lrat_check_seconds": 0.03362882789224386,
+        "sha256": "7493147f96e3a5572dd2f41f6dec0e53e75f8019af5efd576fe3479d5df1582a"
+      },
+      "10": {
+        "bytes": 3205,
+        "drat_to_lrat_seconds": 0.1529958478640765,
+        "lrat_check": "verified",
+        "lrat_check_seconds": 0.038033707067370415,
+        "sha256": "c190705fe31602059c1e81339364f535d669e3bf3e4f597f1d32ffb75ac609d3"
+      },
+      "11": {
+        "bytes": 7275,
+        "drat_to_lrat_seconds": 0.11086268001236022,
+        "lrat_check": "verified",
+        "lrat_check_seconds": 0.033771649934351444,
+        "sha256": "f52055d0d0916446593da9c033158674b849437d1bf823c638fa7ac87c6d2225"
+      },
+      "12": {
+        "bytes": 7126,
+        "drat_to_lrat_seconds": 0.12783829891122878,
+        "lrat_check": "verified",
+        "lrat_check_seconds": 0.03937602508813143,
+        "sha256": "b5a875572464212a00aed0a451ea436207e6968eb9d39ff70049a09b76a53194"
+      },
+      "13": {
+        "bytes": 4362,
+        "drat_to_lrat_seconds": 0.1378611319232732,
+        "lrat_check": "verified",
+        "lrat_check_seconds": 0.03821711800992489,
+        "sha256": "f9102efd6681896b289a19277bbc8ed2710c36c928831f67b171b4cef34405bd"
+      },
+      "14": {
+        "bytes": 2345,
+        "drat_to_lrat_seconds": 0.1103787929750979,
+        "lrat_check": "verified",
+        "lrat_check_seconds": 0.030674320878461003,
+        "sha256": "4da3cb83c6596e68a7e368d747b0780afaeabdb70554d34d19c58668597adabf"
+      },
+      "15": {
+        "bytes": 2875,
+        "drat_to_lrat_seconds": 0.1279354931320995,
+        "lrat_check": "verified",
+        "lrat_check_seconds": 0.03134281397797167,
+        "sha256": "ed28c06c8511fda4b2548ea3e55524986d21458f62d83a3fbdb2d3147fa90b37"
+      },
+      "16": {
+        "bytes": 2703,
+        "drat_to_lrat_seconds": 0.1323809630703181,
+        "lrat_check": "verified",
+        "lrat_check_seconds": 0.03478588908910751,
+        "sha256": "0b9a241ee8d66cc4b355f17e85419e9002e575c55f98825aac83330ef4fe9bca"
+      },
+      "17": {
+        "bytes": 3901,
+        "drat_to_lrat_seconds": 0.11778812110424042,
+        "lrat_check": "verified",
+        "lrat_check_seconds": 0.033393502002581954,
+        "sha256": "40b1588b0e43723fa9a5fbb990623f51445caf3866d20de22fa6a129888d8ee3"
+      },
+      "18": {
+        "bytes": 3846,
+        "drat_to_lrat_seconds": 0.11263992683961987,
+        "lrat_check": "verified",
+        "lrat_check_seconds": 0.032581957057118416,
+        "sha256": "9eab662e9e0e9f9de377fbe8266f9168cce2f8d341dc4af643fea42c1b3b39e2"
+      },
+      "19": {
+        "bytes": 4599,
+        "drat_to_lrat_seconds": 0.11431796592660248,
+        "lrat_check": "verified",
+        "lrat_check_seconds": 0.03309846483170986,
+        "sha256": "183c783ec2ba8ae172904c2151725258fdec8b4020ab5465014410f5f29e2930"
+      },
+      "20": {
+        "bytes": 8199,
+        "drat_to_lrat_seconds": 0.15235351002775133,
+        "lrat_check": "verified",
+        "lrat_check_seconds": 0.04452557489275932,
+        "sha256": "542aebaf0136aa0a035eb5ba5c2bb4448a660d132468cff5312d1b48330ea134"
+      },
+      "21": {
+        "bytes": 1827,
+        "drat_to_lrat_seconds": 0.14224999002180994,
+        "lrat_check": "verified",
+        "lrat_check_seconds": 0.03612731001339853,
+        "sha256": "6e786423a448a0cc4eb1490a9d14903e602ce8ced38f592103a889b08fbf4a97"
+      }
+    }
+  },
+  "schema_version": 1,
+  "semantic_audit": {
+    "all_20_checked_with_c_full_enumerator": true,
+    "method": "evaluate every full origin ledger on the publisher assignment and on a fixed arithmetic 86-bit pattern, materialize the corresponding 43x43 graph independently, and compare exact K5 identity lists",
+    "python_full_enumerator_distances": [
+      1,
+      3,
+      10,
+      20,
+      21
+    ],
+    "results": {
+      "1": {
+        "c_full_checker_seconds": 0.002469697967171669,
+        "c_full_identity_agreement": true,
+        "one_k5": 11,
+        "pattern_assignment_sha256": "5f0b76f5280c19586ea1327c2ae5aad0f601ff0ad7b6b8ed2227e9bb1018e779",
+        "python_full_checker_seconds": 1.2339869837742299,
+        "python_full_identity_agreement": true,
+        "seed_identity_agreement": true,
+        "zero_k5": 359
+      },
+      "2": {
+        "c_full_checker_seconds": 0.0024949240032583475,
+        "c_full_identity_agreement": true,
+        "one_k5": 11,
+        "pattern_assignment_sha256": "c1e1c1c07240a5c46a4bd3c4b9e44af78fbfe4a7be1cfcee6a15efb1892f1b24",
+        "seed_identity_agreement": true,
+        "zero_k5": 624
+      },
+      "3": {
+        "c_full_checker_seconds": 0.005269133951514959,
+        "c_full_identity_agreement": true,
+        "one_k5": 0,
+        "pattern_assignment_sha256": "36b6aebaa2aba6958d884f73d0bf445c80f5ad6fe1e0826d6e8db96f6a77b80b",
+        "python_full_checker_seconds": 1.0994708889629692,
+        "python_full_identity_agreement": true,
+        "seed_identity_agreement": true,
+        "zero_k5": 311
+      },
+      "4": {
+        "c_full_checker_seconds": 0.0026354938745498657,
+        "c_full_identity_agreement": true,
+        "one_k5": 346,
+        "pattern_assignment_sha256": "3b501693b21380b11f82296afc02c1535a881b70efbac80e97f471392c6eeff4",
+        "seed_identity_agreement": true,
+        "zero_k5": 56
+      },
+      "5": {
+        "c_full_checker_seconds": 0.002717886818572879,
+        "c_full_identity_agreement": true,
+        "one_k5": 451,
+        "pattern_assignment_sha256": "5b21a836763daeb292c335554bbe3e455515c9ebb23dcb2848c44c81491f320d",
+        "seed_identity_agreement": true,
+        "zero_k5": 19
+      },
+      "7": {
+        "c_full_checker_seconds": 0.006508362013846636,
+        "c_full_identity_agreement": true,
+        "one_k5": 361,
+        "pattern_assignment_sha256": "b47ca3c7b878d177eb5021e58e4d559d06438453dbd932f2bd87f6da20e9aa25",
+        "seed_identity_agreement": true,
+        "zero_k5": 46
+      },
+      "8": {
+        "c_full_checker_seconds": 0.00242730719037354,
+        "c_full_identity_agreement": true,
+        "one_k5": 11,
+        "pattern_assignment_sha256": "e9fe6288c03bf74ecc4daa85ca66a14590b8402d031d8ad0d85cd5b07f5ef471",
+        "seed_identity_agreement": true,
+        "zero_k5": 725
+      },
+      "9": {
+        "c_full_checker_seconds": 0.007628906983882189,
+        "c_full_identity_agreement": true,
+        "one_k5": 3,
+        "pattern_assignment_sha256": "a6c7e61d424c9f4a073d14e1bac93e58ab12558c98a0abbdd7114e4ddb688b1a",
+        "seed_identity_agreement": true,
+        "zero_k5": 1031
+      },
+      "10": {
+        "c_full_checker_seconds": 0.0028176698833703995,
+        "c_full_identity_agreement": true,
+        "one_k5": 11,
+        "pattern_assignment_sha256": "5c577d0c2424c0c3cfc5b2136f082c6fc8211e7c8419645cf471cb18a8efd71b",
+        "python_full_checker_seconds": 1.0868542669340968,
+        "python_full_identity_agreement": true,
+        "seed_identity_agreement": true,
+        "zero_k5": 377
+      },
+      "11": {
+        "c_full_checker_seconds": 0.002233459148555994,
+        "c_full_identity_agreement": true,
+        "one_k5": 581,
+        "pattern_assignment_sha256": "87cfd1b560dca485ca277095a9d82a1dec5f680d04916b186e1149300074fba8",
+        "seed_identity_agreement": true,
+        "zero_k5": 35
+      },
+      "12": {
+        "c_full_checker_seconds": 0.002591931028291583,
+        "c_full_identity_agreement": true,
+        "one_k5": 6,
+        "pattern_assignment_sha256": "09da0f0f826bb09faa4592eb96bcdba5ccc5e6fb79e5a47e2a974532db78d532",
+        "seed_identity_agreement": true,
+        "zero_k5": 1114
+      },
+      "13": {
+        "c_full_checker_seconds": 0.0018777360673993826,
+        "c_full_identity_agreement": true,
+        "one_k5": 311,
+        "pattern_assignment_sha256": "bf79ac42d9a0d098a98ed8ef100084f1453b34f05386d6f582468d6179f0016d",
+        "seed_identity_agreement": true,
+        "zero_k5": 5
+      },
+      "14": {
+        "c_full_checker_seconds": 0.001957107800990343,
+        "c_full_identity_agreement": true,
+        "one_k5": 11,
+        "pattern_assignment_sha256": "5f0b76f5280c19586ea1327c2ae5aad0f601ff0ad7b6b8ed2227e9bb1018e779",
+        "seed_identity_agreement": true,
+        "zero_k5": 409
+      },
+      "15": {
+        "c_full_checker_seconds": 0.001607104204595089,
+        "c_full_identity_agreement": true,
+        "one_k5": 142,
+        "pattern_assignment_sha256": "c1e1c1c07240a5c46a4bd3c4b9e44af78fbfe4a7be1cfcee6a15efb1892f1b24",
+        "seed_identity_agreement": true,
+        "zero_k5": 56
+      },
+      "16": {
+        "c_full_checker_seconds": 0.0018938090652227402,
+        "c_full_identity_agreement": true,
+        "one_k5": 135,
+        "pattern_assignment_sha256": "36b6aebaa2aba6958d884f73d0bf445c80f5ad6fe1e0826d6e8db96f6a77b80b",
+        "seed_identity_agreement": true,
+        "zero_k5": 56
+      },
+      "17": {
+        "c_full_checker_seconds": 0.0019599359948188066,
+        "c_full_identity_agreement": true,
+        "one_k5": 11,
+        "pattern_assignment_sha256": "3b501693b21380b11f82296afc02c1535a881b70efbac80e97f471392c6eeff4",
+        "seed_identity_agreement": true,
+        "zero_k5": 495
+      },
+      "18": {
+        "c_full_checker_seconds": 0.002030998934060335,
+        "c_full_identity_agreement": true,
+        "one_k5": 272,
+        "pattern_assignment_sha256": "5b21a836763daeb292c335554bbe3e455515c9ebb23dcb2848c44c81491f320d",
+        "seed_identity_agreement": true,
+        "zero_k5": 16
+      },
+      "19": {
+        "c_full_checker_seconds": 0.001883980119600892,
+        "c_full_identity_agreement": true,
+        "one_k5": 392,
+        "pattern_assignment_sha256": "104a5b41c6640a2eadcd3cca16908d8813625da216a56e5e09242094f9be824c",
+        "seed_identity_agreement": true,
+        "zero_k5": 1
+      },
+      "20": {
+        "c_full_checker_seconds": 0.0025860730092972517,
+        "c_full_identity_agreement": true,
+        "one_k5": 659,
+        "pattern_assignment_sha256": "b47ca3c7b878d177eb5021e58e4d559d06438453dbd932f2bd87f6da20e9aa25",
+        "python_full_checker_seconds": 1.3581861481070518,
+        "python_full_identity_agreement": true,
+        "seed_identity_agreement": true,
+        "zero_k5": 56
+      },
+      "21": {
+        "c_full_checker_seconds": 0.0019140350632369518,
+        "c_full_identity_agreement": true,
+        "one_k5": 11,
+        "pattern_assignment_sha256": "e9fe6288c03bf74ecc4daa85ca66a14590b8402d031d8ad0d85cd5b07f5ef471",
+        "python_full_checker_seconds": 1.0942595561500639,
+        "python_full_identity_agreement": true,
+        "seed_identity_agreement": true,
+        "zero_k5": 293
+      }
+    },
+    "seed_identity": {
+      "one_k5": [],
+      "zero_k5": [
+        [
+          6,
+          12,
+          17,
+          36,
+          42
+        ],
+        [
+          6,
+          12,
+          31,
+          36,
+          42
+        ]
+      ]
+    }
+  },
+  "status": "two_orbit_slice_adversarial_audit_pass"
+}

@@ -23,7 +23,10 @@ those bytes and exhausts all 903 one-edge flips with two independent raw parsers
 and exact evaluators. A second gate exhausts all 407,253 distinct two-edge
 flips. A third gate reduces the seed's sole nonconstant cyclic-distance orbit
 to a 43-variable CSP and exactly classifies all `2^43` assignments in that
-slice. See `CHECKPOINT.md` for the exact scope and evidence.
+slice. A fourth gate releases distance 6 with each other cyclic distance in
+turn and excludes all 20 unsymmetrized burden-zero slices using dual-derived
+CNFs and independently checked DRAT/LRAT proofs. See `CHECKPOINT.md` for the
+exact scope and evidence.
 
 `scripts/run_corpus_gate.py` freezes the mirror acquisition discriminator
 for that corpus (47,888 bytes, SHA-256
@@ -100,6 +103,25 @@ python3 scripts/run_distance6_slice_gate.py \
 The radius-2 result is only a Hamming-neighborhood statement. The distance-6
 result fixes the other 20 cyclic-distance orbits and therefore is only a
 structured-slice classification. Neither changes the Ramsey bound.
+
+Replay the proof-carrying two-orbit burden-zero sweep to fresh output paths:
+
+```bash
+python3 scripts/run_two_orbit_slice_gate.py \
+  checkers/two_orbit_slice_a.py checkers/two_orbit_slice_b.c \
+  checkers/publisher_radius1_a.py checkers/publisher_radius1_b.c \
+  sources/retrievals/springer_supplementary_data4_audit1.txt \
+  sources/retrievals/springer_supplementary_data4_audit2.txt \
+  artifacts/publisher_seed_radius2_report.json \
+  artifacts/distance6_slice_exact_report.json \
+  tools/drat-trim/drat-trim.c \
+  artifacts/two_orbit_slices.replay \
+  artifacts/two_orbit_slice_exact_report.replay.json
+```
+
+The retained result covers exactly distance 6 plus one other cyclic distance,
+with the remaining 19 orbits frozen. It finds no witness and does not yet prove
+that each slice has minimum burden two; burden one is the next saved test.
 
 The graph6 plumbing itself has a smaller cold-start control that does not need
 the historical corpus.  It generates all 1,044 order-7 isomorphism classes with

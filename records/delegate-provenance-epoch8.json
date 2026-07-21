@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "epoch": 8,
+  "principal": {
+    "role": "Sol principal investigator",
+    "model": "gpt-5.6-sol"
+  },
+  "delegates": [
+    {
+      "role": "literature-strategy",
+      "model": "gpt-5.6-terra",
+      "status": "completed before the Sol pass",
+      "ephemeral_memo_path": ".delegates/20260721-020002-09ed64/literature-strategy/memo.md",
+      "ephemeral_memo_sha256": "ef4831c2816cd1ce58e232f041c57f44b7b4ca9703a0dc00450bebf638653848",
+      "promoted_summary_path": "docs/delegate-memos/20260721-020002-literature-strategy.md",
+      "promoted_summary_sha256": "4643b0f17a4e902975e3626c5ee7b5992872442be3b16374f03b937c3476b189",
+      "use": "Advisory status and route triage. Sol independently replayed the retained gates and generated all decisive artifacts."
+    },
+    {
+      "role": "experiment-verification",
+      "model": "gpt-5.6-terra",
+      "status": "completed before the Sol pass",
+      "ephemeral_memo_path": ".delegates/20260721-020002-09ed64/experiment-verification/memo.md",
+      "ephemeral_memo_sha256": "062330e7cd7cb90421c3c2f357633be8cc26ac2c54515bf56e4d440927727fab",
+      "promoted_summary_path": "docs/delegate-memos/20260721-020002-experiment-verification.md",
+      "promoted_summary_sha256": "2d4856736eb45be4d2a50fc1758eccb9a259b7e3b19fc4d0eb35d27e87f25b2e",
+      "use": "Advisory fail-closed acceptance plan. Sol implemented separate Python/C derivations, proof checks, and semantic audits."
+    }
+  ],
+  "qualification": "Delegate memos are provenance and design advice, not mathematical evidence. Accepted evidence is the raw source, deterministic generators, archived CNF/DRAT/LRAT files, proof checks, and full-graph semantic audit."
+}

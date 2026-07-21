@@ -1,6 +1,7 @@
 # R(5,5) research dossier
 
-> Status audited: 2026-07-20. This is operational research memory, not a proof or originality claim.
+> Status audited: 2026-07-20; cross-field method scan integrated 2026-07-20. This is operational
+> research memory, not a proof or originality claim.
 > Every automated epoch should use the compact map in `data/research_states/ramsey-r55.json` first,
 > then consult this dossier for the source trail and fuller context before opening a new route.
 
@@ -157,31 +158,6 @@ recorded conflicts, yielding at least four valid 42-vertex deletions to canonica
 
 Treat 13 and 9 as immediately reconstructible public controls. Treat 2 as a published seed requiring
 artifact recovery and independent verification, not as an independently established minimum.
-
-The publisher artifact has now been recovered and authenticated twice at SHA-256
-`c2429869f6fa47ab7388134b580b014efae01e6f0e474f5bab2233afb1ef6990`. Two independent exact
-implementations confirm its two zero K5s and exhaust all 903 one-edge flips and all 407,253 distinct
-two-edge flips. Neither radius contains a burden below two. The only two radius-2 minimizers are
-rotations of the seed by `+27` and `-27` modulo 43, so the apparent conflict relocation is a symmetry
-motion, not a new isomorphism class.
-
-The seed also has an exact one-dimensional representation. Twenty cyclic-distance edge orbits are
-constant; only the 43 distance-6 edges vary. In coordinates `u=27t mod 43`, the seed word is a single
-cyclic interval of 24 ones. Freezing the other 20 orbits reduces every active K5 to translations of
-
-```text
-x_t or x_(t+18),
-x_t or x_(t+20),
-not x_t or not x_(t+5) or not x_(t+24).
-```
-
-The positive clauses occur with multiplicity two and the negative clauses with multiplicity one.
-Independent Z3 and custom C DPLL enumerations exhaust the resulting `2^43` slice: minimum burden two,
-with exactly 86 optima, namely all rotations of intervals of length 24 or 25. This is a replicated
-structured-slice classification, not a proof that two is globally minimal. It supports a sharper next
-experiment: release distance 6 jointly with one additional cyclic orbit and sweep the 20 resulting
-86-variable slices before attempting an unstructured radius-3 enumeration. No literature novelty is
-claimed for this internal classification until a targeted external audit is performed.
 
 This suggests a useful burden vector for a 43-vertex candidate:
 
@@ -343,6 +319,13 @@ and stop when the discriminator resolves it.
 - **Discriminator:** certified optimum inside each bounded neighborhood plus matched-budget comparison
   with tabu/annealing. A local optimum of two is not a global lower bound.
 
+**2026-07-21 UTC update:** two direct Springer retrievals of Supplementary Data 4 agreed byte-for-byte
+at 3,812 bytes and SHA-256 `c2429869f6fa47ab7388134b580b014efae01e6f0e474f5bab2233afb1ef6990`.
+Independent Python and C checks found exactly the two reported all-zero `K5`s and no all-one `K5`.
+All 903 radius-1 edge flips were exhausted; the minimum burden remains two. The source blocker is closed,
+but this is only a certified radius-1 result, not a witness or global bound. The saved next discriminator is
+the complete 407,253-pair radius-2 neighborhood under two independent implementations.
+
 ### S5. Incremental exact-delta local search
 
 - **Hypothesis:** moves chosen by exact change in the overlapping violation hypergraph outperform raw
@@ -418,6 +401,188 @@ and stop when the discriminator resolves it.
 - **Terminal meaning:** a zero witness proves `R(5,5)>=44`; a checked global lower bound of one proves
   `R(5,5)=43`. Anything else is a scoped multiplicity result.
 
+### S13. LDPC trapping-set atlas for recurrent Ramsey failure cores
+
+**Transfer source.** In iterative error-correcting-code decoding, the global error floor can be dominated
+by small, recurrent, decoder-dependent subgraphs called trapping sets. Richardson's original workflow is
+especially relevant: enumerate candidate failure cores up to symmetry, measure which cores dominate, and
+study overlapping clusters rather than treating every failed trajectory as unrelated. This is an analogy,
+not a claim that Ramsey constraints are parity checks.
+
+- **Ramsey representation:** use the 903 edge-color bits at `n=43` as variable nodes. Use violated `K5`
+  checks and one-flip-from-violated `9:1` five-sets as colored active check nodes. From the final window of
+  each failed deterministic run, retain edges that oscillate or remain incident to active checks and
+  canonicalize the resulting colored bipartite core under vertex relabeling.
+- **Hypothesis:** a small number of canonical active-core types account for a disproportionate fraction of
+  low-energy stalls. Small exact MaxSAT solves on a core plus its boundary can then produce escape
+  templates that transfer to held-out trajectories.
+- **Cheapest discriminator:** collect fixed-seed traces from damaged held-out order-42 controls before a
+  frontier run. Compare core recurrence with label-shuffled controls, then train templates on one split and
+  require improved paired held-out time-to-escape or best exact burden under identical evaluator calls.
+- **Stop conditions:** discard the transfer if active cores almost always percolate, are nearly unique, or
+  template moves merely cycle. Never use a core score as witness validation; the full exact checkers remain
+  the validity gate.
+
+Primary source: https://web.stanford.edu/class/ee388/papers/ErrorFloors.pdf
+
+### S14. Linkage-tree optimal mixing for overlapping edge epistasis
+
+**Transfer source.** Gene-pool Optimal Mixing Evolutionary Algorithms learn which variables should be moved
+together and greedily test donor subsets. Direct MAX-SAT experiments found that dynamically learned linkage
+can outperform a fixed decomposition even when the visible factor structure is known. That warning fits
+Ramsey search: every edge belongs to many overlapping five-set constraints, so “same `K5`” is not
+automatically the best recombination block.
+
+- **Mechanism:** retain a diverse population of exact low-burden colorings. Each generation, build separate
+  linkage trees from elite-population mutual information, active-constraint co-occurrence, and a hybrid of
+  the two. Traverse subsets from small to large, copy a subset from a donor, and retain it only when the
+  exact incremental evaluator and an explicit archive-diversity rule accept it. Include univariate and
+  uniform-crossover arms as negative controls.
+- **Hypothesis:** learned multi-edge blocks preserve useful epistatic partial structures and escape
+  single-edge local minima more reliably than ordinary crossover or exact-delta tabu.
+- **Cheapest discriminator:** split complement pairs and isomorphism families before creating 6-to-12-edge
+  damaged order-42 controls. Under paired seeds and equal evaluator calls, require higher held-out valid-42
+  recovery and lower median burden than univariate mixing, uniform crossover, and tabu before using K43
+  budget.
+- **Failure modes:** near-clonal populations produce false linkage; dense overlap collapses the tree into
+  unhelpful giant blocks; greedy acceptance forbids necessary uphill moves; damaged-42 recovery fails to
+  predict K43 behavior. Treat each as an ablation, not a tuning excuse.
+
+Primary sources: https://ir.cwi.nl/pub/22078 and https://arxiv.org/abs/2109.05259
+
+### S15. Adjacency-row code moments and a Terwilliger-style upper-route filter
+
+**Transfer source.** Coding theory bounds a binary code through exact weight, distance, and triple-
+intersection distributions; Schrijver's Terwilliger-algebra SDP strengthens pairwise Delsarte bounds and has
+a constant-weight form. A Ramsey adjacency matrix supplies a constrained binary code—its rows—but not an
+ordinary free code, so off-the-shelf numerical bounds are only a first relaxation.
+
+For adjacency rows `a_u,a_v`, degrees `d_u,d_v`, and `c_uv=|N(u) intersect N(v)|`, the exact identity is
+
+```text
+d_H(a_u,a_v) = d_u + d_v - 2 c_uv.
+```
+
+There is also an elementary pair constraint from `R(3,5)=14`:
+
+- if `uv` is an edge, its common-neighbor graph contains neither a triangle (which would complete a `K5`
+  with `u,v`) nor an independent 5-set, so `c_uv<=13`;
+- if `uv` is a nonedge, its common-nonneighbor graph contains neither an independent triple (which would
+  complete an independent 5-set with `u,v`) nor a `K5`, so that set also has size at most 13.
+
+This is a proved input constraint, not a new Ramsey bound.
+
+- **Hypothesis:** pair and triple row-code moments exclude at least one degree/common-neighbor profile that
+  survives the current scalar degree and excess constraints.
+- **Cheapest discriminator:** extract exact row weight/intersection distributions from all authenticated
+  order-42 controls. First solve a rational pair-distance LP for hypothetical `n=43..45` profiles. Stop and
+  archive the negative result if it cuts nothing new. Only after a nonempty exact cut, add Schrijver-style
+  triple-intersection PSD blocks and finally a colored edge/nonedge refinement.
+- **Validity gate:** every known control must remain feasible. Floating-point duals are conjecture generators
+  only; rationalize any useful dual into an exact inequality or checked pseudo-Boolean certificate.
+- **Main risk:** an ordinary code relaxation loses adjacency symmetry, the zero diagonal, and the edge/
+  nonedge pair color. Do not invest in the custom coherent-configuration model unless the cheap relaxation
+  changes at least one profile decision.
+
+Primary sources: https://ir.cwi.nl/pub/14098 and the `R(3,5)=14` entry in
+https://www.cs.rit.edu/~spr/ElJC/ejcram18.pdf
+
+### S16. Prior-art audit of the three cross-field routes (2026-07-20)
+
+**Claim discipline.** This audit can establish located precedents, but a negative literature search
+cannot establish that nobody has ever tried a method privately or under different terminology. The safe
+labels below are therefore **previously applied**, **partial/adjacent precedent**, and **no located full
+application**. Do not describe any route as historically novel without an expert literature check.
+
+| Route | Direct and mechanism-equivalent precedents located | What was not located | Audit verdict |
+|---|---|---|---|
+| LDPC-style trapping-set atlas | At `R(5,5)`, Molnar et al. already use time-dependent weights for persistently unsatisfied Ramsey clauses and report the two-conflict K43 core on six vertices. Piwakowski uses a tabu list in Ramsey search. In a different Ramsey cell, the public AlphaEvolve file `ramsey_4_13_138.py` identifies high-violation vertices, hill-climbs the induced subgraph, and grafts it back after stagnation. | No inspected R55 paper, current survey, or public Ramsey code canonicalizes final-window variable/check cores under graph isomorphism, measures type recurrence against shuffled controls, or learns exact core-plus-boundary repair templates and tests their transfer on held-out runs. | **Partial precedent; no located full R55 application.** The violation-local repair idea is already present. The defensible new test is the canonical recurrent-core atlas plus exact, held-out template transfer—not “repair a bad local subgraph.” |
+| GOMEA/linkage-tree optimal mixing | Kunkel applied a population GA directly to R55 using point mutation and standard one-point crossover. The public AlphaEvolve file `ramsey_4_15_158.py` keeps marginal edge and distance-orbit success frequencies called a “gene pool” and uses them for initialization and move scoring. GOMEA/LTGA itself has been tested on generic MAX-SAT and overlapping interaction structures. | Across the inspected Ramsey papers and all nine public AlphaEvolve Ramsey programs, no GOMEA, linkage tree, mutual-information linkage model, donor-subset optimal-mixing traversal, or exact greedy block acceptance was located. | **Adjacent evolutionary precedent; no located Ramsey GOMEA application.** Population search, crossover, and marginal gene-pool memory are not new here. The untested component is learned multi-edge linkage plus donor-block optimal mixing, with exact burden and diversity gates. |
+| Adjacency-row code/Terwilliger moments | The row identity `d_H(a_u,a_v)=d(u)+d(v)-2|N(u) intersect N(v)|` appears as Theorem 2.1 in Ali–Suwilo–Mardiningsih (2019), so it is not new. Integer/linear programming and degree, triangle, neighborhood, and induced-subgraph identities have been applied directly to R55 since McKay–Radziszowski and remain central to the `R(5,5)<=46` proof. Flag-algebra SDP has also proved other small exact Ramsey numbers. Schrijver's Terwilliger SDP supplies the coding-theory machinery. | No inspected R55 source applies Schrijver's Hamming-scheme/Terwilliger triple distribution to the set of adjacency rows, with the row/column symmetry, zero diagonal, and edge/nonedge pair colors retained. | **Most precedent-adjacent; no located exact formulation.** Neither “use LP/SDP” nor the pair identity is new. The only defensible research contribution would be a Ramsey-specific colored row-moment inequality that cuts a profile missed by the established subgraph LP. |
+
+#### Consequences for experiments
+
+1. **Rename the trapping experiment internally as an atlas/transfer ablation.** Include AlphaEvolve's
+   violation-focused induced-subgraph graft and Molnar-style persistent clause weighting as baselines. If
+   canonicalization plus learned templates does not beat them on held-out controls, the cross-field
+   transfer has added nothing.
+2. **Make marginal gene-pool memory a required GOMEA baseline.** Compare against the AlphaEvolve-style
+   edge/orbit frequencies as well as Kunkel-style uniform/one-point crossover, univariate mixing, and
+   exact-delta tabu. Credit only the learned block model and optimal-mixing acceptance for any gain.
+3. **Downgrade the row-code route from a novelty claim to a cheap filter.** First reproduce the known
+   adjacency-row identity and existing R55 degree/subgraph constraints. Run the rational pair LP. Escalate
+   only if it excludes a profile not excluded by the established LP; then compare any triple-moment cut
+   with flag-algebra/subgraph-count consequences before claiming new information.
+
+#### Search trail and coverage
+
+The audit inspected the current small-Ramsey survey; the primary R55 papers on integer/linear programming,
+subgraph identities, MaxSAT, genetic search, and the current 46 upper bound; Piwakowski's Ramsey tabu
+paper; the AlphaEvolve Ramsey paper and all nine public construction programs; the primary GOMEA MAX-SAT
+paper; Schrijver's Terwilliger paper; and the small-Ramsey flag-algebra SDP paper. Exact-name and
+mechanism searches included `Ramsey GOMEA`, `Ramsey linkage tree`, `Ramsey optimal mixing`, `Ramsey
+trapping set`, `Ramsey failure core`, `R(5,5) Terwilliger`, `R(5,5) Delsarte`, `R(5,5) association
+scheme`, and adjacency-row/Hamming-code variants. Global public GitHub code searches found no Ramsey
+occurrence of GOMEA, linkage-tree optimal mixing, trapping-set terminology, or R55 Terwilliger code;
+the official AlphaEvolve tree was then inspected directly because repository code uses idiosyncratic
+names. The negative findings remain bounded by public, indexed literature and repositories.
+
+Additional primary sources:
+
+- AlphaEvolve violation-focused subgraph graft (`ramsey_4_13_138.py`):
+  https://github.com/google-research/google-research/blob/master/ramsey_number_bounds/code/ramsey_4_13_138.py
+- AlphaEvolve marginal edge/orbit gene pool (`ramsey_4_15_158.py`):
+  https://github.com/google-research/google-research/blob/master/ramsey_number_bounds/code/ramsey_4_15_158.py
+- Ali–Suwilo–Mardiningsih, adjacency-row Hamming identity:
+  https://doi.org/10.1088/1742-6596/1255/1/012044
+- McKay–Radziszowski, *Linear Programming in Some Ramsey Problems*:
+  https://www.cs.rit.edu/~spr/PUBL/paper29.pdf
+- Lidicky–Pfender, *Semidefinite Programming and Ramsey Numbers*:
+  https://arxiv.org/abs/1704.03592
+
+### S17. Exact radius-two isolation and the cyclic domain-wall reduction (2026-07-20)
+
+The authenticated Springer K43 seed has now passed two further bounded exact experiments in the problem
+workspace at `research/ramsey-r55/workspace/`.
+
+**Complete radius 2.** Independent Python five-set contribution arithmetic and a C evaluator that
+recursively enumerates graph/complement K5s afresh agree on all `C(903,2)=407253` pair burdens. The
+global and 403,809-pair deletion-remainder-change minima are both 2. Exactly two pairs attain the
+minimum: `{(6,12),(9,15)}` and `{(33,39),(36,42)}`. Nauty labels and explicit NetworkX mappings show
+that the results are the original seed rotated by `-27` and `+27` modulo 43. Thus the apparent
+two-conflict relocation is only a symmetry motion. The compact complete ledger is
+`artifacts/publisher_seed_radius2_scores.u16le`; the gate report is
+`artifacts/publisher_seed_radius2_report.json`.
+
+**One-dimensional exact slice.** Twenty of the 21 cyclic-distance edge orbits are constant. Only the
+43 edges `{u,u+6 mod 43}` vary. Writing their bits as `x_u` and changing coordinate to `u=27t mod 43`
+reduces all active K5s to translations of three constraint shapes:
+
+```text
+x_t or x_(t+18)                          multiplicity 2
+x_t or x_(t+20)                          multiplicity 2
+not x_t or not x_(t+5) or not x_(t+24)  multiplicity 1
+```
+
+There are 215 active five-sets and 129 unique constraints. A Python/Z3 pseudo-Boolean enumeration and
+an independently derived custom C relaxation-case DPLL agree on the complete model set: burdens 0 and
+1 are UNSAT; minimum burden is 2; exactly 86 words attain it. Those words are precisely all 43
+rotations of a step-27 interval of 24 ones and all 43 rotations of an interval of 25 ones. The
+publisher seed is a length-24 interval. Six reconstructed matrices spanning optimum and nonoptimum
+words pass dual full K5 identity rescans. The retained report is
+`artifacts/distance6_slice_exact_report.json`.
+
+**Scope and next discriminator.** These computations change no Ramsey bound and do not prove global
+multiplicity two. They close radius 2 and the entire `2^43` one-orbit ansatz. The trapping-set analogy
+has nevertheless paid off structurally: the core is a one-dimensional domain wall whose only cheapest
+moves translate its endpoints. The next test should release distance 6 jointly with exactly one other
+cyclic-distance orbit, giving 20 deterministic 86-variable slices. Ask each first for burden 0,
+symmetry-break the common rotation action soundly, dual-check every SAT model, and retain checked proof
+logs before upgrading any UNSAT slice from a discriminator to a certificate. If all 20 certified
+minima remain 2 and contain only symmetry copies, close the near-circulant family and redirect to
+multi-orbit or nonlocal surgery. No external novelty claim is made for this internal classification;
+a targeted literature/expert audit is required before publication framing.
+
 ## 9. Combining ideas without making analogy soup
 
 Use at most three transfers in one epoch and attach a prediction to each:
@@ -432,7 +597,10 @@ Use at most three transfers in one epoch and attach a prediction to each:
 | Violation hypergraph + hitting set | High-overlap violation transversals identify productive compound moves | Compare predicted versus actual burden delta on controls. |
 | Almost-regular conjecture + unknown-42 implication | A constrained 42 search reaches a basin absent from the 656 | SAT/MaxSAT at 42 with explicit degree-spread constraint and canonical novelty checks. |
 | Two-conflict core + exact local branching | Small nonlocal repair neighborhoods reveal whether the best seed is locally rigid | Certify success or minimum two for increasing destroy sets. |
-| One-dimensional domain walls + cyclic CSPs | The published defect must couple to another distance orbit before burden can fall | Release distance 6 plus one orbit, quotient rotations, and solve all 20 exact slices. |
+| LDPC trapping sets + exact core MaxSAT | A few canonical active cores dominate stalled trajectories | Recurrence versus shuffled cores, then held-out template escape under matched calls. |
+| GOMEA linkage learning + exact delta evaluation | Learned edge blocks transfer useful epistatic structure better than whole-bitstring crossover | Leakage-safe damaged-42 recovery tournament before K43. |
+| Coding-theory moments + adjacency-row identities | Pair/triple distributions remove profiles missed by scalar counts | Rational pair LP first; stop before SDP if it cuts nothing. |
+| One-dimensional domain walls + cyclic CSPs | The authenticated defect must couple to another distance orbit before burden can fall | Release distance 6 plus one orbit, quotient rotations, and solve all 20 exact slices. |
 
 Discard a transfer when the stated prediction fails. Do not preserve it as inspirational prose.
 
@@ -543,6 +711,17 @@ is appropriate.
 - Engström, subgraph-count identities as an inequality source:
   https://arxiv.org/abs/1002.4304
 
+### Cross-field method sources
+
+- Richardson, *Error Floors of LDPC Codes* (trapping-set enumeration and clustered failure cores):
+  https://web.stanford.edu/class/ee388/papers/ErrorFloors.pdf
+- Sadowski–Bosman–Thierens, *On the Usefulness of Linkage Processing for Solving MAX-SAT*:
+  https://ir.cwi.nl/pub/22078
+- Dushatskiy et al., *Parameterless Gene-pool Optimal Mixing Evolutionary Algorithms*:
+  https://arxiv.org/abs/2109.05259
+- Schrijver, *New Code Upper Bounds from the Terwilliger Algebra and Semidefinite Programming*:
+  https://ir.cwi.nl/pub/14098
+
 ### Upper bounds and computational proof
 
 - Angeltveit–McKay, `R(5,5)<=46`: https://arxiv.org/abs/2409.15709
@@ -578,6 +757,7 @@ Before original search:
 4. Reconstruct and verify the public 13- and 9-violation K43 controls from the Exoo study.
 5. Record the first mismatch and stop; do not silently repair source data.
 
-Only after these controls pass should the engine choose among S3–S12. The default first constructive
-route is S3 (unknown-42 basin), with S4 (the verified two-conflict core) as the highest-value direct
-K43 experiment.
+The controls now pass, the complete radius-2 enumeration is retained, and the seed's full one-orbit
+distance-6 family is exactly classified at minimum burden two. The next direct K43 discriminator is S17's
+20-slice two-orbit sweep; S3 remains the default route into a genuinely unknown order-42 basin. None of
+the control, local-neighborhood, or structured-slice results changes the Ramsey bound.

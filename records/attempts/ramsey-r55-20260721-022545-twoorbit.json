@@ -1,0 +1,75 @@
+{
+  "id": "ramsey-r55-20260721-022545-twoorbit",
+  "problem_id": "ramsey-r55",
+  "finished_at": "2026-07-21T02:25:45+00:00",
+  "lane": "hard",
+  "phase": "technical",
+  "model": "gpt-5.6-sol",
+  "outcome": "progress",
+  "approach": "Proof-carrying burden-zero sweep of all 20 two-orbit domain-wall slices around the authenticated Springer K43 seed.",
+  "strategy": {
+    "family": "certificate-carrying two-orbit SAT",
+    "fingerprint": "r55twoorbitdomainwall2026",
+    "mechanism": "Free cyclic distance 6 and one other distance orbit, derive the exact K5 CNF twice without symmetry reduction, solve, and independently check DRAT/LRAT plus generator-to-graph semantics.",
+    "parent_ids": ["strategy-r55twocore2026", "strategy-r55-certified-pilot"]
+  },
+  "hypothesis": "At least one of the 20 two-orbit slices contains a burden-zero R(5,5,43) coloring.",
+  "discriminating_test": "Solve all 20 unsymmetrized 86-variable CNFs; accept SAT only after two full K5 scans, and accept a slice exclusion only after dual derivation and checked proof.",
+  "strategy_status": "active",
+  "summary": "The hypothesis was falsified at its exact scope. Every second distance d in {1,...,21} minus {6} is UNSAT. Each CNF and full origin ledger was independently derived in Python and C and agrees byte-for-byte. All 20 DRAT proofs pass drat-trim; their LRAT conversions pass lrat-check. Full-graph semantic controls agree for every distance. This excludes only the fixed-background two-orbit union and changes no Ramsey bound.",
+  "rationale": "The 20 distances exhaust the declared family without symmetry breaking. Proofs certify the archived CNFs, dual derivations and specialization controls tie those CNFs to the source matrix, and full K5 identity scans attack the declared variable-to-edge correspondence.",
+  "claims": [
+    "No (5,5,43) coloring occurs when exactly the distance-6 orbit and one other cyclic-distance orbit are free and the remaining 19 orbits equal the authenticated publisher seed."
+  ],
+  "evidence": [
+    "artifacts/two_orbit_slice_exact_report.json; SHA-256 0456c5764898ab28d248d20912f26fd6708cac5d283151e1673110ce73690627",
+    "artifacts/two_orbit_slice_adversarial_audit.json; SHA-256 38f2b91ca963760dc1fed0107be7fef0c40d41d3fd7da2a7104103447c6b36c8",
+    ".proof-experiments/20260721-021702-129660; return code 0; 125.005 seconds; experiment JSON SHA-256 58ea5e5ed83621756e8bfa9a10438a19d2cb39c4dfe5478a79bf059979f08b46",
+    ".proof-experiments/20260721-022215-e19ede; return code 0; 11.68 seconds; experiment JSON SHA-256 437ed626de65c0386eb46f58f8faff5134ab6247c001dec337463fdd03a3cbe2"
+  ],
+  "experiments": [
+    ".proof-experiments/20260721-020906-1ea617: radius-2 prerequisite replay passed",
+    ".proof-experiments/20260721-020906-332091: distance-6 prerequisite replay passed",
+    ".proof-experiments/20260721-021702-129660: decisive 20-slice sweep; all 20 UNSAT proofs checked",
+    ".proof-experiments/20260721-022215-e19ede: all 20 LRAT checks and all 20 semantic controls passed"
+  ],
+  "independent_checker": "Python itertools and C nested-loop generators independently parse the raw matrix and derive complete five-set origin ledgers. CaDiCaL proofs are checked first by drat-trim and then after conversion by lrat-check. A separate audit compares ledger violations with full graph/complement K5 enumerators on all 20 patterned assignments; the Python full enumerator also checks five representative distances.",
+  "established_facts": [
+    {
+      "claim": "All 20 fixed-background two-orbit slices are burden-zero UNSAT.",
+      "evidence": "artifacts/two_orbit_slice_exact_report.json and artifacts/two_orbit_slice_adversarial_audit.json",
+      "scope": "Distance 6 plus exactly one d in {1,...,21} minus {6}; other 19 distance orbits frozen to source SHA-256 c2429869...",
+      "status": "computed"
+    }
+  ],
+  "ruled_out": [
+    {
+      "claim_or_route": "Find a K43 Ramsey witness in the authenticated seed's two-released-orbit domain-wall family.",
+      "scope": "The union of the 20 explicitly archived 86-variable slices, with no symmetry breaking.",
+      "reason": "Every slice has a checked UNSAT proof.",
+      "evidence": "artifacts/two_orbit_slices and artifacts/two_orbit_lrat",
+      "reopen_condition": "A source, clause, variable-mapping, proof-checker, or 20-distance coverage defect is demonstrated; freeing a third orbit is a different route."
+    }
+  ],
+  "open_leads": [
+    {
+      "description": "Decide whether any two-orbit slice has burden one.",
+      "rationale": "The publisher assignment gives burden two in every slice; proof-checked burden-at-most-one UNSAT would establish exact minimum two and close the structured family rather than only its witness question.",
+      "next_experiment": "Encode raw-origin multiplicities with relaxation variables and a checked at-most-one constraint, dual-derive the 20 CNFs, and require LRAT checks or two full K5 scans for SAT.",
+      "priority": "high",
+      "status": "open"
+    }
+  ],
+  "continuation": {
+    "objective": "Determine whether any of the 20 two-orbit slices lowers the exact monochromatic-K5 burden from two to one.",
+    "first_action": "Extend the dual generators with one relaxation variable per raw origin and an independently checked at-most-one encoding; validate it first on the retained one-orbit slice where burden<=1 is known UNSAT.",
+    "stop_condition": "Stop on any dual-CNF, multiplicity, specialization, proof, or full-scan mismatch; otherwise stop after a checked burden-one model or 20 checked UNSAT results."
+  },
+  "citations": [
+    "https://www.cs.rit.edu/~spr/ElJC/sur.pdf",
+    "https://arxiv.org/abs/2409.15709",
+    "https://doi.org/10.1038/s41467-018-07327-2",
+    "https://github.com/marijnheule/drat-trim"
+  ],
+  "tool_disclosure": "GPT-5.6 Sol was principal. Two precomputed GPT-5.6 Terra delegates supplied advisory memos only. Deterministic tools: Python 3.12.3, GCC 13.3.0, CaDiCaL 1.7.3, drat-trim and lrat-check at upstream revision 2e3b2dc0ecf938addbd779d42877b6ed69d9a985, SHA-256, Git diagnostics, and the computational-researcher experiment harness. No new subagent, CAS, or proof assistant was used."
+}
