@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "compression": "gzip -n -9",
+  "qualification": "CNF logical SHA-256 values are in the production report; these are hashes of the retained compressed bytes and total-model streams.",
+  "files": [
+    {"trial": 1, "cnf_gzip_bytes": 2623295, "cnf_gzip_sha256": "54d4f43553a51c342e3544ddb3b65bdecd90caf9548d4f60edd265748adb3f4a", "model_gzip_bytes": 387292, "model_gzip_sha256": "7c6365ebe924b517d132ed2591fbc9da24d6d3705d36d3a73c0cd0e9790d1320"},
+    {"trial": 2, "cnf_gzip_bytes": 2682127, "cnf_gzip_sha256": "5beaa3f9018a6603bfe5f026caac27ecb7e81eda785012144e16cc0bdfb16ae0", "model_gzip_bytes": 385581, "model_gzip_sha256": "0cdc08243c6f36776632bfd45f29720cfc515d26220987613860a787093148d8"},
+    {"trial": 3, "cnf_gzip_bytes": 2654190, "cnf_gzip_sha256": "ca21aefd2637d680728c5fa37ba708c77afb40654af41fc515b40c3efedc63a7", "model_gzip_bytes": 386443, "model_gzip_sha256": "e800530f82de3f094f7e9854667f6aaef343efa5d927e889c52ea2542fe31c7a"},
+    {"trial": 4, "cnf_gzip_bytes": 2625532, "cnf_gzip_sha256": "2db7e443dfa6b53a84d90fc51174797ae97b1986f9fdb8bc6aad994fe3fd9668", "model_gzip_bytes": 385497, "model_gzip_sha256": "e5ef41f5605f49adffc7c6eda8c0935e6a07b683fa2f5d2178cf3114cfc585eb"},
+    {"trial": 5, "cnf_gzip_bytes": 2622715, "cnf_gzip_sha256": "30a65c9027fca9d5bab49a92baad6d2e0be36f9931a8908d037e1cb4376a86c4", "model_gzip_bytes": 393182, "model_gzip_sha256": "cc0f07a7ea0b72c5bedd4de2008e4a37c9b21fa64d2aa773a2f8fda0c2db1730"},
+    {"trial": 6, "cnf_gzip_bytes": 2694010, "cnf_gzip_sha256": "b42019bdf610dc1e3cb2c4c5789f094f0ad79caa0e67f54acf64858ec6b0de4d", "model_gzip_bytes": 386856, "model_gzip_sha256": "a55c2a838c116b02c598c7cf68fa424b3d9b37f57fc4059210b84758e9196a2f"},
+    {"trial": 7, "cnf_gzip_bytes": 2684408, "cnf_gzip_sha256": "2bf859795ee0ad9cfcfb012671ddb0ca1dbc4f5f5d62ff498a4a2ea45cc2e194", "model_gzip_bytes": 385136, "model_gzip_sha256": "8f170f28b7279740a18135565dbb57ae0538aa4d4d4a5702fe03dc048b75bb49"},
+    {"trial": 8, "cnf_gzip_bytes": 2656378, "cnf_gzip_sha256": "b7a3a6d5a74c40ed061cf3d19e0c2dedc71fa03d00d0bdfb24778d6e05ee1976", "model_gzip_bytes": 385196, "model_gzip_sha256": "ad7ed99773d1a03734e3ccecb84c94384771a60916e033908c72e388af64abc2"}
+  ]
+}

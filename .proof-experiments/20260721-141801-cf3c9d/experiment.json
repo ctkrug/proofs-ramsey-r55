@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "20260721-141801-cf3c9d",
+  "name": "novel42-boundary-repair-cold-audit",
+  "hypothesis": "Every retained boundary-repair SAT model satisfies its full physical CNF, is a valid Ramsey(5,5,42) graph, preserves the declared order-30 induced graph, and is isomorphic to a specific supplied control class.",
+  "expected_signal": "Independent NetworkX parsing, clique scans, isomorphism, and direct DIMACS evaluation accept all eight models and two semantic mutations are rejected.",
+  "command": [
+    "python3",
+    "checkers/novel42_boundary_audit.py",
+    "sources/r55_42some.g6",
+    "artifacts/authenticated_corpus_report.json",
+    "artifacts/novel42_boundary_repair_report.json",
+    "artifacts/novel42_boundary_repair",
+    "artifacts/novel42_boundary_repair_cold_audit.json"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 600,
+  "memory_limit_mb": 1536,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-21T14:18:01.003347+00:00",
+  "finished_at": "2026-07-21T14:18:17.091854+00:00",
+  "duration_seconds": 16.089,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "7175168f112e5ce994b71121a06597f4e87a8fb6",
+  "source_urls": [
+    "https://www.cs.rit.edu/~spr/ElJC/sur.pdf"
+  ],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/novel42_boundary_audit.py": "a93d09c5e03b60ff2c8829007d36e21f749680c9ed986a3a6a8f2aa2b8954838",
+    "/root/proof-factory/research/ramsey-r55/workspace/sources/r55_42some.g6": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/authenticated_corpus_report.json": "0d9b1801434edcc12f34e73cea6c98d911f0e0c6f0884f8f03d96a46eca1344c",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/novel42_boundary_repair_report.json": "3d1377f1df4e19a64933fb0c450eca5fcc1b6e3c8ffabf3ac38d94f0546650bb"
+  },
+  "peak_child_memory_rusage": 156368,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "5c983879c3303cc46385f6cc6648efbfc9bedc3ddf885b7475e4ba42e38852f2",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

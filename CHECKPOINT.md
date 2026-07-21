@@ -1,4 +1,109 @@
-# R(5,5) research checkpoint — epoch 13
+# R(5,5) research checkpoint — epoch 14
+
+Recorded: 2026-07-21 14:23 UTC
+
+## Epoch-14 outcome: exact boundary repair rediscovered only supplied classes
+
+The Terra archive audit was accepted only as route advice after primary-source
+checking.  The 1997 paper defines general identities I2/I3 but applies its
+displayed LP to `R(4,6)<=41`; the current `R(5,5)<=46` proof is a different
+argument.  The authoritative ANU data page says `r45extreme` contains complete
+sets only for the smallest and largest few edge counts, so subset extrema from
+that archive cannot provide universal I3 bounds for missing interior layers.
+The proposed “published order-45 I2/I3 baseline reconstruction” is therefore
+blocked until complete catalogues or proved global feature bounds exist.
+
+The saved live route `strategy-r55-novel42` was tested with one bounded,
+predeclared discriminator.  Eight source-side control records
+
+```text
+21, 36, 41, 83, 126, 128, 192, 216
+```
+
+were selected before solver output by SHA-256 ranking under fingerprint
+`r55novel42basin2026`; complement partners were excluded from trial selection.
+For each record, a fingerprint-selected set of 12 vertices was destroyed.  All
+426 incident/internal edges became SAT variables, the induced order-30 graph
+was frozen, exact Ramsey clauses were emitted for all relevant five-sets, and
+a Sinz counter forced labelled boundary distance at least 60.  The first valid
+model per boundary was the declared novelty discriminator.
+
+All eight formulas were SAT in 5.3--15.3 seconds.  Both the direct Python
+five-subset checker and separate C recursive-bitset checker accepted every
+decoded graph.  Actual boundary distances were 178--232.  However, nauty
+canonical membership and independent NetworkX isomorphism showed that every
+candidate was already one of the supplied 656:
+
+```text
+source 21  -> source 18       distance 207
+source 36  -> source 56       distance 203
+source 41  -> complement 101  distance 203
+source 83  -> source 220      distance 230
+source 126 -> source 185      distance 197
+source 128 -> source 1        distance 178
+source 192 -> source 194      distance 232
+source 216 -> source 217      distance 227
+```
+
+This falsifies the supplied-corpus-novel first-model hypothesis over exactly
+the eight declared boundaries.  It does not exclude novel solutions within
+any boundary and does not make the supplied corpus exhaustive.  The exact
+positive, corpus-local fact is that these eight pairs of distinct control
+classes share an induced order-30 graph, witnessed by the retained 12-vertex
+rewirings.
+
+The cold auditor imports none of the producer.  It uses NetworkX graph6
+parsing, maximal-clique enumeration in each graph and complement, NetworkX
+isomorphism, and a direct satisfaction scan of all 4,061,806 physical clauses.
+It rederived every destroy set, fixed induced graph, and distance and rejected
+forced clique/independent-set mutations.  After deterministic gzip storage,
+the compression-aware replay emitted a byte-identical report.
+
+Key retained hashes:
+
+```text
+production report  3d1377f1df4e19a64933fb0c450eca5fcc1b6e3c8ffabf3ac38d94f0546650bb
+cold audit/replay  8e6669dd46361d893900d12b6cec71b7c652aae540e3d216f35128e181c46e31
+corpus              067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb
+```
+
+The accepted production experiment is
+`.proof-experiments/20260721-141324-22844d`; the cold audit is
+`.proof-experiments/20260721-141801-cf3c9d`; the compressed replay is
+`.proof-experiments/20260721-142133-c076d7`.  The initial preflight
+`.proof-experiments/20260721-141228-a33851` failed before SAT because temporary
+graph6 records lacked separators and supports no claim.
+
+### Exact continuation
+
+Do not repeat the same one-model-per-boundary portfolio with arbitrary new
+seeds.  The next discriminating experiment is canonical CEGAR within one
+frozen boundary: solve, dual-check, canonicalize, and whenever the model is a
+supplied class, add a blocking clause for that complete labelled boundary
+assignment.  Predeclare a model/evaluator budget and stop on a dual-checked
+novel class or the exact budget.  An exhaustive boundary exclusion would need
+a checked final UNSAT certificate and a verified correspondence for every
+block; this packet does not provide one.
+
+Full formulation, replay, limits, and source links are in
+`docs/novel42-boundary-repair.md`.
+
+## Epoch-14 disclosure
+
+GPT-5.6 Sol was principal investigator.  The supplied GPT-5.6 Terra
+literature-strategy and experiment-verification memos were advisory and are
+promoted under `docs/delegate-memos/` with provenance in
+`records/delegate-provenance-epoch14.json`.  Sol audited the primary sources,
+designed and repaired the harness, ran every experiment, and wrote the cold
+auditor.  No new subagent was spawned.  Deterministic tools were Python 3.12.3,
+GCC 13.3.0, CaDiCaL 1.7.3, nauty `labelg`, NetworkX, gzip, SHA-256, jq,
+pdftotext, and the computational-researcher experiment harness.  No CAS,
+numerical optimizer, proof assistant, external publication, or system-level
+change was used.
+
+---
+
+# Prior checkpoint — epoch 13
 
 Recorded: 2026-07-21 12:35 UTC
 

@@ -1,0 +1,8 @@
+{
+  "report": "artifacts/novel42_boundary_repair_report.json",
+  "report_sha256": "3d1377f1df4e19a64933fb0c450eca5fcc1b6e3c8ffabf3ac38d94f0546650bb",
+  "result": "no_novel_witness_in_executed_trials",
+  "status": "novel42_boundary_repair_complete",
+  "trials_executed": 8,
+  "witness": null
+}

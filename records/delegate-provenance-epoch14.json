@@ -1,0 +1,33 @@
+{
+  "epoch": 14,
+  "principal": {
+    "role": "Sol principal investigator",
+    "model": "gpt-5.6-sol"
+  },
+  "delegates": [
+    {
+      "role": "literature-strategy",
+      "model": "gpt-5.6-terra",
+      "ephemeral_path": ".delegates/20260721-140005-91f9ed/literature-strategy/memo.md",
+      "ephemeral_sha256": "409c11ba35d95b2335020f8faed02065703456398e37423f55c97428ebcf7a8b",
+      "promoted_summary_path": "docs/delegate-memos/20260721-140005-literature-strategy.md",
+      "promoted_summary_sha256": "cddbc2685fd49221b9d1bc1bea48b7cf62fe3c6f781bd0eb98a2059954407a19",
+      "use": "Rejected the unsupported order-45 archive baseline and selected the exact novel-order-42 discriminator."
+    },
+    {
+      "role": "experiment-verification",
+      "model": "gpt-5.6-terra",
+      "ephemeral_path": ".delegates/20260721-140005-91f9ed/experiment-verification/memo.md",
+      "ephemeral_sha256": "8c55ace9d993dca7257cee407e7557cb027d2f8039c0a7f1594ecd50a81a580f",
+      "promoted_summary_path": "docs/delegate-memos/20260721-140005-experiment-verification.md",
+      "promoted_summary_sha256": "778d2eb966451851e24db225743c2b301c5f0c9a76631bc1606ae00cae80aa72",
+      "use": "Required leakage-safe control selection, dual exact checking, and canonical novelty as the discovery gate."
+    }
+  ],
+  "principal_audit": [
+    "Verified from the 1997 primary paper that I2/I3 are general identities and the displayed LP application proves R(4,6)<=41, not an order-45 R(5,5) baseline.",
+    "Verified from the authoritative ANU data page that r45extreme supplies only the smallest and largest few edge layers and that the 656 order-42 graphs are not advertised as complete.",
+    "Designed and executed the deterministic exact-boundary SAT benchmark rather than relying on delegate computation.",
+    "Accepted only full graph checks, canonical membership, independent NetworkX isomorphism, direct CNF evaluation, mutation controls, and byte-identical compressed replay."
+  ]
+}

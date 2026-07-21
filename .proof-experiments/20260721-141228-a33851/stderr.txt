@@ -1,0 +1,10 @@
+>E readgg: truncated graph6 line
+Traceback (most recent call last):
+  File "/root/proof-factory/research/ramsey-r55/workspace/scripts/run_novel42_boundary_repair.py", line 399, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/root/proof-factory/research/ramsey-r55/workspace/scripts/run_novel42_boundary_repair.py", line 250, in main
+    subprocess.run([labelg, "-q", str(controls_g6), str(canonical_controls_path)], check=True)
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/usr/bin/nauty-labelg', '-q', '/tmp/r55-novel42-e7_u2wys/controls.g6', '/tmp/r55-novel42-e7_u2wys/controls.canonical.g6']' returned non-zero exit status 1.

@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "20260721-141324-22844d",
+  "name": "novel42-boundary-repair-repaired-preflight",
+  "hypothesis": "At least one of eight predeclared 12-vertex boundaries of authenticated source-side order-42 controls admits a valid repair at Hamming distance at least 60 outside all supplied 656 canonical classes.",
+  "expected_signal": "A graph6 model passing independent Python and C forbidden-five-set scans, fixed-boundary and distance checks, and nauty canonical nonmembership; otherwise exact per-trial SAT status within the declared portfolio.",
+  "command": [
+    "python3",
+    "scripts/run_novel42_boundary_repair.py",
+    "sources/r55_42some.g6",
+    "artifacts/authenticated_corpus_report.json",
+    "checkers/checker_a.py",
+    "checkers/checker_b.c",
+    "artifacts/novel42_boundary_repair",
+    "artifacts/novel42_boundary_repair_report.json",
+    "30"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 900,
+  "memory_limit_mb": 1536,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-21T14:13:24.907753+00:00",
+  "finished_at": "2026-07-21T14:15:51.141656+00:00",
+  "duration_seconds": 146.234,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "7175168f112e5ce994b71121a06597f4e87a8fb6",
+  "source_urls": [
+    "https://www.cs.rit.edu/~spr/ElJC/sur.pdf"
+  ],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/scripts/run_novel42_boundary_repair.py": "ded2cd1e2e72e514c42baa5f9c4efd9bf94626d30729a7d19bb3c6255c96e264",
+    "/root/proof-factory/research/ramsey-r55/workspace/sources/r55_42some.g6": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/authenticated_corpus_report.json": "0d9b1801434edcc12f34e73cea6c98d911f0e0c6f0884f8f03d96a46eca1344c",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/checker_a.py": "b7f28adfec792139acce538ca879b775a0180467763b413e1a464672acddd259",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/checker_b.c": "40f719bb36f8d7d3db3a4b949dce8b20abd49499f57f7d5b651b718658014d2e"
+  },
+  "peak_child_memory_rusage": 153764,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "432b235fd19ea08da8b67cd352e4082af18939fafa23b48d0c5bb5c09df5e149",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

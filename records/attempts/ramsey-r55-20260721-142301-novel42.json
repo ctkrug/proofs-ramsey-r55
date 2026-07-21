@@ -1,0 +1,175 @@
+{
+  "id": "ramsey-r55-20260721-142301-novel42",
+  "problem_id": "ramsey-r55",
+  "started_at": "2026-07-21T14:00:05+00:00",
+  "finished_at": "2026-07-21T14:23:01+00:00",
+  "duration_seconds": 1376,
+  "lane": "hard",
+  "phase": "technical",
+  "model": "gpt-5.6-sol",
+  "outcome": "progress",
+  "approach": "Leakage-safe exact 12-vertex boundary repair on eight authenticated order-42 controls with canonical novelty as the fail-closed gate.",
+  "strategy": {
+    "family": "novel order-42 basin discovery",
+    "fingerprint": "r55novel42basin2026",
+    "mechanism": "Freeze a fingerprint-selected induced order-30 graph, solve all 426 boundary edges exactly subject to Ramsey clauses and minimum Hamming distance 60, then dual-check and canonicalize the first model.",
+    "parent_ids": [
+      "strategy-r55controls2026"
+    ]
+  },
+  "hypothesis": "At least one of eight predeclared 12-vertex boundaries admits a valid Ramsey(5,5,42) first SAT model at labelled distance at least 60 outside all supplied 656 canonical classes.",
+  "discriminating_test": "Accept discovery only if a decoded graph passes independent Python and C forbidden-five-set scans, preserves the fixed boundary scope, and its nauty canonical label is absent from all 656 controls.",
+  "strategy_status": "active",
+  "summary": "All eight formulas were SAT and yielded valid graphs at boundary distances 178--232, but all eight canonicalized to distinct supplied classes. A separate NetworkX/DIMACS cold audit confirmed all 4,061,806 physical clauses, graph and complement clique number four, every fixed induced order-30 graph, and exact isomorphism to the identified control. No new graph or Ramsey bound was obtained.",
+  "rationale": "Canonical membership was the predeclared discovery gate, so eight rediscoveries falsify the one-model-per-boundary hypothesis at exactly its declared scope. The models nevertheless provide exact witnesses for eight transitions between distinct supplied classes through common induced order-30 graphs.",
+  "claims": [
+    "The first exact SAT model in each of eight declared 12-vertex boundaries is a valid Ramsey(5,5,42) graph and a supplied-corpus rediscovery.",
+    "The eight source/target class pairs listed in the cold report share an induced order-30 graph, witnessed by retained boundary assignments at labelled distances 178--232.",
+    "The public selected-layer r45extreme archive cannot by itself supply universal interior-layer I3 feature bounds, and the 1997 displayed I2/I3 LP is applied there to R(4,6), not published as an order-45 R(5,5) baseline."
+  ],
+  "evidence": [
+    "artifacts/novel42_boundary_repair_report.json; SHA-256 3d1377f1df4e19a64933fb0c450eca5fcc1b6e3c8ffabf3ac38d94f0546650bb",
+    "artifacts/novel42_boundary_repair_cold_audit.json and .replay.json; common SHA-256 8e6669dd46361d893900d12b6cec71b7c652aae540e3d216f35128e181c46e31",
+    "artifacts/novel42_boundary_repair_storage.json; SHA-256 b34a85d95a8b1537b7579d3708269180080c76df24444f8ade4212636528dfbb",
+    "artifacts/novel42_boundary_repair/* contains eight graph6 witnesses, canonical labels, compressed physical CNFs, and compressed total models.",
+    "docs/novel42-boundary-repair.md contains the formulation, transition table, limitations, hashes, and replay commands.",
+    "sources/rowpair/subgraph-counting-r55.pdf and https://users.cecs.anu.edu.au/~bdm/data/ramsey.html support the I2/I3 route rejection."
+  ],
+  "next_steps": [
+    "Implement canonical counterexample-guided boundary-model blocking on retained trial 1.",
+    "Predeclare a 64-model budget; dual-check and canonicalize every model, and block each supplied-known 426-edge assignment before continuing.",
+    "Do not repeat the same unblocked one-model portfolio with arbitrary additional seeds."
+  ],
+  "citations": [
+    "https://www.cs.rit.edu/~spr/ElJC/sur.pdf",
+    "https://doi.org/10.1002/jgt.70029",
+    "https://users.cecs.anu.edu.au/~bdm/data/ramsey.html",
+    "https://users.cecs.anu.edu.au/~bdm/papers/r55.pdf"
+  ],
+  "techniques": [
+    "deterministic graph6 parsing",
+    "exact SAT boundary repair",
+    "Sinz sequential cardinality encoding",
+    "full five-subset enumeration",
+    "recursive bitset clique enumeration",
+    "nauty canonical labeling",
+    "NetworkX maximal-clique enumeration and isomorphism",
+    "direct physical DIMACS model checking",
+    "semantic mutation testing",
+    "deterministic compression and SHA-256"
+  ],
+  "research_mode": "computational",
+  "experiments": [
+    ".proof-experiments/20260721-141228-a33851: failed closed before SAT because temporary graph6 records lacked separators; no claim.",
+    ".proof-experiments/20260721-141324-22844d: accepted production, eight SAT-valid supplied-class rediscoveries in 146.234 seconds total.",
+    ".proof-experiments/20260721-141801-cf3c9d: independent cold audit passed in 16.089 seconds.",
+    ".proof-experiments/20260721-142133-c076d7: compressed replay passed in 12.833 seconds and emitted a byte-identical audit report."
+  ],
+  "independent_checker": "checkers/novel42_boundary_audit.py imports none of the producer and uses NetworkX graph6 parsing, maximal-clique enumeration in graph and complement, NetworkX isomorphism to the manifest target, and direct evaluation of every DIMACS clause under each total model. The producer also required byte-identical outputs from checkers/checker_a.py and independently implemented checkers/checker_b.c.",
+  "transfer_insights": [
+    "Exact destroy-and-repair -> nonlocal rewiring should escape a known order-42 basin -> eight first models instead traversed to eight other supplied classes, showing large labelled distance is not a novelty proxy.",
+    "Counterexample-guided synthesis -> retain each known-class rediscovery as a concrete counterexample -> next test should block complete labelled boundary assignments within one fixed CNF rather than add seeds."
+  ],
+  "established_facts": [
+    {
+      "claim": "Eight predeclared exact boundary first models are valid supplied-corpus rediscoveries.",
+      "evidence": "Production report plus byte-identical cold-audit replay.",
+      "scope": "Exactly source records 21,36,41,83,126,128,192,216 and their fingerprint-selected 12-vertex boundaries.",
+      "status": "computed"
+    },
+    {
+      "claim": "Eight distinct source/target supplied-class pairs share an induced order-30 graph.",
+      "evidence": "The frozen-boundary checks and independent target isomorphisms in artifacts/novel42_boundary_repair_cold_audit.json.",
+      "scope": "Exactly the eight retained transitions, not the full corpus.",
+      "status": "computed"
+    }
+  ],
+  "ruled_out": [
+    {
+      "claim_or_route": "Use the first unblocked SAT model from the same eight boundaries as a supplied-corpus-novel discovery mechanism.",
+      "scope": "The exact formulas, solver seeds, and first models retained in this packet.",
+      "reason": "Every first model is a valid supplied class.",
+      "evidence": "Production and cold-audit reports.",
+      "reopen_condition": "Add canonical model blocking or a materially different novelty-enforcing mechanism."
+    },
+    {
+      "claim_or_route": "Treat r45extreme selected-layer feature extrema as universal order-45 I3 bounds.",
+      "scope": "The public selected-layer archive.",
+      "reason": "The archive omits interior edge layers required for universal fixed-order/fixed-edge extrema.",
+      "evidence": "Authoritative ANU data index and the primary I2/I3 paper.",
+      "reopen_condition": "Supply complete catalogues or proved global feature bounds for the missing layers."
+    }
+  ],
+  "open_leads": [
+    {
+      "description": "Canonical counterexample-guided exact repair within one retained boundary.",
+      "rationale": "Each rediscovery supplies an exact boundary assignment to block, directly addressing the observed failure mode.",
+      "next_experiment": "Enumerate at most 64 trial-1 models, block each supplied-known 426-edge assignment, and require dual checking plus canonical novelty for success.",
+      "priority": "high",
+      "status": "open"
+    }
+  ],
+  "blocker": "Unblocked exact solving preferentially returns supplied classes, and the packet has no isomorphism-class blocking encoding or exhaustive boundary certificate.",
+  "reopen_condition": "Install checked boundary-model blocking with a predeclared model budget; a global boundary exclusion additionally requires a completed checked UNSAT proof.",
+  "reopen_evidence": "The exact boundary CNFs, authenticated controls, dual full graph checkers, canonical membership gate, and cold model checker now exist.",
+  "continuation": {
+    "objective": "Test whether canonical counterexample-guided blocking escapes the supplied classes within retained trial 1.",
+    "first_action": "Extend the producer or add a replayable enumerator that appends a 426-literal block for each verified known boundary assignment and retains every model/canonical label up to a budget of 64.",
+    "stop_condition": "Stop on a dual-checked supplied-corpus-novel graph, 64 verified rediscoveries, any checker discrepancy, or an uncertified solver conclusion."
+  },
+  "strategy_proposals": [
+    {
+      "family": "canonical counterexample-guided exact repair",
+      "mechanism": "Iteratively solve one frozen boundary, canonicalize each valid model, and block its complete labelled 426-edge assignment when it is supplied-known.",
+      "hypothesis": "After finitely many supplied-class assignments are blocked, the same exact boundary yields a valid graph outside all 656 controls.",
+      "discriminating_test": "A predeclared 64-model run produces a dual-checked canonical-novel graph or an exact known-class rediscovery ledger.",
+      "rationale": "It responds to the measured failure mode and changes the solver's admissible model set rather than merely its random seed."
+    }
+  ],
+  "candidate_profile": {
+    "contribution_class": "research_artifact",
+    "scholarly_question": "Can an exact nonlocal boundary repair of known Ramsey(5,5,42) graphs reach a supplied-corpus-novel order-42 basin?",
+    "meaningful_delta": "The packet gives the first internally audited exact boundary-repair benchmark in this campaign and eight explicit cross-class order-30 overlap witnesses; it does not claim historical novelty.",
+    "acceptance_test": "A third party replays the compressed packet, obtains the same cold-audit hash, and confirms the exact transition table and scope.",
+    "closest_prior_work": [
+      {
+        "url": "https://users.cecs.anu.edu.au/~bdm/data/ramsey.html",
+        "difference": "The authoritative page supplies the 656 controls; this packet records exact boundary transitions among eight of their classes, not a new census member."
+      },
+      {
+        "url": "https://users.cecs.anu.edu.au/~bdm/papers/r55.pdf",
+        "difference": "The historical work constructs and studies order-42 graphs; this bounded benchmark tests one exact nonlocal repair mechanism with explicit fail-closed novelty."
+      }
+    ],
+    "novelty_searches": [
+      {
+        "source": "Authoritative ANU Ramsey data page",
+        "query": "largest known Ramsey(5,5)-graphs",
+        "url": "https://users.cecs.anu.edu.au/~bdm/data/ramsey.html",
+        "finding": "The page says the 656 are supplied examples and more order-42 graphs could exist; it does not advertise this boundary-transition dataset."
+      },
+      {
+        "source": "Maintained Dynamic Survey and 2026 primary upper-bound paper",
+        "query": "current R(5,5) status",
+        "url": "https://doi.org/10.1002/jgt.70029",
+        "finding": "The maintained bound remains 43 <= R(5,5) <= 46; this packet changes neither endpoint."
+      }
+    ],
+    "external_channel": {
+      "recipient": "None; internal research packet",
+      "url": "",
+      "acceptance_path": "Seek specialist interest only after canonical CEGAR produces a new graph or a theorem-strength bounded exclusion."
+    },
+    "independent_validations": [],
+    "relevance": {
+      "settles_exact_open_target": false,
+      "improves_best_known_result": false,
+      "source_explicitly_requests_result": false,
+      "expert_interest_confirmed": false,
+      "new_structural_result": false,
+      "evidence_url": "https://doi.org/10.1002/jgt.70029"
+    },
+    "arbitrary_cutoff_extension": false
+  },
+  "tool_disclosure": "GPT-5.6 Sol acted as principal investigator. Supplied GPT-5.6 Terra literature-strategy and experiment-verification memos were advisory and promoted with provenance; no new subagent was spawned. Deterministic tools were Python 3.12.3, GCC 13.3.0, CaDiCaL 1.7.3, nauty labelg, NetworkX, gzip, SHA-256, jq, pdftotext, web search of primary/authoritative sources, and the computational-researcher experiment harness. No CAS, numerical optimizer, proof assistant, external publication, or system-level change was used."
+}

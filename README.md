@@ -1,5 +1,28 @@
 # R(5,5) control packet
 
+## Epoch-14 exact boundary-repair discriminator
+
+Eight predeclared 12-vertex exact SAT repairs of authenticated order-42
+controls all produced valid Ramsey graphs, at labelled boundary Hamming
+distances 178--232, but all eight were supplied-corpus rediscoveries.  The
+independent cold audit evaluated every one of the 4,061,806 retained physical
+clauses, used NetworkX maximal-clique scans and isomorphism independently of
+the producer, and identifies eight distinct source-to-control transitions
+through a common induced order-30 graph.  This is a bounded negative discovery
+result and corpus-local structural dataset, not a new Ramsey graph or bound.
+See `docs/novel42-boundary-repair.md` for the exact scope and replay commands.
+
+Replay the retained compressed packet with:
+
+```bash
+python3 checkers/novel42_boundary_audit.py \
+  sources/r55_42some.g6 \
+  artifacts/authenticated_corpus_report.json \
+  artifacts/novel42_boundary_repair_report.json \
+  artifacts/novel42_boundary_repair \
+  artifacts/novel42_boundary_repair_cold_audit.replay2.json
+```
+
 ## Epoch-13 rowpair-v1 null certificate
 
 The uncoloured union-support adjacency-row Delsarte pair relaxation cuts none

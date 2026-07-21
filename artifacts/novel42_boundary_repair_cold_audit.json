@@ -1,0 +1,168 @@
+{
+  "all_source_target_classes_differ": true,
+  "conclusion": "All eight exact boundary models are valid but rediscover eight distinct supplied classes; this is not a novel order-42 graph or an exhaustive boundary exclusion.",
+  "corpus_sha256": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb",
+  "distinct_reached_control_classes": 8,
+  "independent_methods": [
+    "NetworkX graph6 parser",
+    "NetworkX maximal-clique enumeration in graph and complement",
+    "NetworkX VF2-style graph isomorphism to the nauty-identified manifest target",
+    "direct full DIMACS assignment evaluation"
+  ],
+  "mutation_sentinels": {
+    "forced_first_five_clique_detected": true,
+    "forced_first_five_independent_detected": true
+  },
+  "predeclared_records_rederived": [
+    21,
+    36,
+    41,
+    83,
+    126,
+    128,
+    192,
+    216
+  ],
+  "production_report_sha256": "3d1377f1df4e19a64933fb0c450eca5fcc1b6e3c8ffabf3ac38d94f0546650bb",
+  "schema_version": 1,
+  "scope": "the eight retained SAT models and exact CNFs only",
+  "status": "novel42_boundary_repair_cold_audit_pass",
+  "trials": [
+    {
+      "boundary_hamming_distance": 207,
+      "cnf_model": {
+        "all_clauses_satisfied": true,
+        "clauses": 508157,
+        "variables": 155976
+      },
+      "complement_clique_number": 4,
+      "fixed_induced_order_30_equal": true,
+      "graph_clique_number": 4,
+      "networkx_isomorphic_to_manifest_target": true,
+      "source_and_target_class_differ": true,
+      "source_record": 21,
+      "target_kind": "source",
+      "target_record": 18,
+      "trial": 1
+    },
+    {
+      "boundary_hamming_distance": 203,
+      "cnf_model": {
+        "all_clauses_satisfied": true,
+        "clauses": 507581,
+        "variables": 155976
+      },
+      "complement_clique_number": 4,
+      "fixed_induced_order_30_equal": true,
+      "graph_clique_number": 4,
+      "networkx_isomorphic_to_manifest_target": true,
+      "source_and_target_class_differ": true,
+      "source_record": 36,
+      "target_kind": "source",
+      "target_record": 56,
+      "trial": 2
+    },
+    {
+      "boundary_hamming_distance": 203,
+      "cnf_model": {
+        "all_clauses_satisfied": true,
+        "clauses": 508163,
+        "variables": 155976
+      },
+      "complement_clique_number": 4,
+      "fixed_induced_order_30_equal": true,
+      "graph_clique_number": 4,
+      "networkx_isomorphic_to_manifest_target": true,
+      "source_and_target_class_differ": true,
+      "source_record": 41,
+      "target_kind": "complement",
+      "target_record": 101,
+      "trial": 3
+    },
+    {
+      "boundary_hamming_distance": 230,
+      "cnf_model": {
+        "all_clauses_satisfied": true,
+        "clauses": 508157,
+        "variables": 155976
+      },
+      "complement_clique_number": 4,
+      "fixed_induced_order_30_equal": true,
+      "graph_clique_number": 4,
+      "networkx_isomorphic_to_manifest_target": true,
+      "source_and_target_class_differ": true,
+      "source_record": 83,
+      "target_kind": "source",
+      "target_record": 220,
+      "trial": 4
+    },
+    {
+      "boundary_hamming_distance": 197,
+      "cnf_model": {
+        "all_clauses_satisfied": true,
+        "clauses": 506927,
+        "variables": 155976
+      },
+      "complement_clique_number": 4,
+      "fixed_induced_order_30_equal": true,
+      "graph_clique_number": 4,
+      "networkx_isomorphic_to_manifest_target": true,
+      "source_and_target_class_differ": true,
+      "source_record": 126,
+      "target_kind": "source",
+      "target_record": 185,
+      "trial": 5
+    },
+    {
+      "boundary_hamming_distance": 178,
+      "cnf_model": {
+        "all_clauses_satisfied": true,
+        "clauses": 508049,
+        "variables": 155976
+      },
+      "complement_clique_number": 4,
+      "fixed_induced_order_30_equal": true,
+      "graph_clique_number": 4,
+      "networkx_isomorphic_to_manifest_target": true,
+      "source_and_target_class_differ": true,
+      "source_record": 128,
+      "target_kind": "source",
+      "target_record": 1,
+      "trial": 6
+    },
+    {
+      "boundary_hamming_distance": 232,
+      "cnf_model": {
+        "all_clauses_satisfied": true,
+        "clauses": 507587,
+        "variables": 155976
+      },
+      "complement_clique_number": 4,
+      "fixed_induced_order_30_equal": true,
+      "graph_clique_number": 4,
+      "networkx_isomorphic_to_manifest_target": true,
+      "source_and_target_class_differ": true,
+      "source_record": 192,
+      "target_kind": "source",
+      "target_record": 194,
+      "trial": 7
+    },
+    {
+      "boundary_hamming_distance": 227,
+      "cnf_model": {
+        "all_clauses_satisfied": true,
+        "clauses": 507185,
+        "variables": 155976
+      },
+      "complement_clique_number": 4,
+      "fixed_induced_order_30_equal": true,
+      "graph_clique_number": 4,
+      "networkx_isomorphic_to_manifest_target": true,
+      "source_and_target_class_differ": true,
+      "source_record": 216,
+      "target_kind": "source",
+      "target_record": 217,
+      "trial": 8
+    }
+  ]
+}

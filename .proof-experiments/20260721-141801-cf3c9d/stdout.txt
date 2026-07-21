@@ -1,0 +1,6 @@
+{
+  "distinct_reached_control_classes": 8,
+  "report": "artifacts/novel42_boundary_repair_cold_audit.json",
+  "report_sha256": "8e6669dd46361d893900d12b6cec71b7c652aae540e3d216f35128e181c46e31",
+  "status": "novel42_boundary_repair_cold_audit_pass"
+}
