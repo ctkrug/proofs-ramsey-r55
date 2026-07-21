@@ -1,0 +1,17 @@
+{
+  "event": "configuration_updated",
+  "recorded_at": "2026-07-21T20:27:58.077756+00:00",
+  "job_id": "lab-ramsey-r55-872a7c3ee855",
+  "problem_id": "ramsey-r55",
+  "status": "configuration_updated",
+  "configuration_change": {
+    "changed_at": "2026-07-21T20:27:58.071625+00:00",
+    "actor": "remediation-2026-07-21",
+    "field": "review_every_segments",
+    "old": 16,
+    "new": 256,
+    "reason": "Segments 2-49 passed exact dual-stream and checkpoint gates; 16-segment tranches take minutes while model synthesis takes about 20 minutes, so 256 preserves immediate per-segment safety stops while reducing periodic review overhead.",
+    "at_segment": 49
+  },
+  "spec_sha256": "d8edfb60bfb9af68cac9a9cbba2a108450ef670fc973d17af48d7b8bd1e2ea37"
+}
