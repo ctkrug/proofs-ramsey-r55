@@ -158,6 +158,31 @@ recorded conflicts, yielding at least four valid 42-vertex deletions to canonica
 Treat 13 and 9 as immediately reconstructible public controls. Treat 2 as a published seed requiring
 artifact recovery and independent verification, not as an independently established minimum.
 
+The publisher artifact has now been recovered and authenticated twice at SHA-256
+`c2429869f6fa47ab7388134b580b014efae01e6f0e474f5bab2233afb1ef6990`. Two independent exact
+implementations confirm its two zero K5s and exhaust all 903 one-edge flips and all 407,253 distinct
+two-edge flips. Neither radius contains a burden below two. The only two radius-2 minimizers are
+rotations of the seed by `+27` and `-27` modulo 43, so the apparent conflict relocation is a symmetry
+motion, not a new isomorphism class.
+
+The seed also has an exact one-dimensional representation. Twenty cyclic-distance edge orbits are
+constant; only the 43 distance-6 edges vary. In coordinates `u=27t mod 43`, the seed word is a single
+cyclic interval of 24 ones. Freezing the other 20 orbits reduces every active K5 to translations of
+
+```text
+x_t or x_(t+18),
+x_t or x_(t+20),
+not x_t or not x_(t+5) or not x_(t+24).
+```
+
+The positive clauses occur with multiplicity two and the negative clauses with multiplicity one.
+Independent Z3 and custom C DPLL enumerations exhaust the resulting `2^43` slice: minimum burden two,
+with exactly 86 optima, namely all rotations of intervals of length 24 or 25. This is a replicated
+structured-slice classification, not a proof that two is globally minimal. It supports a sharper next
+experiment: release distance 6 jointly with one additional cyclic orbit and sweep the 20 resulting
+86-variable slices before attempting an unstructured radius-3 enumeration. No literature novelty is
+claimed for this internal classification until a targeted external audit is performed.
+
 This suggests a useful burden vector for a 43-vertex candidate:
 
 ```text
@@ -407,6 +432,7 @@ Use at most three transfers in one epoch and attach a prediction to each:
 | Violation hypergraph + hitting set | High-overlap violation transversals identify productive compound moves | Compare predicted versus actual burden delta on controls. |
 | Almost-regular conjecture + unknown-42 implication | A constrained 42 search reaches a basin absent from the 656 | SAT/MaxSAT at 42 with explicit degree-spread constraint and canonical novelty checks. |
 | Two-conflict core + exact local branching | Small nonlocal repair neighborhoods reveal whether the best seed is locally rigid | Certify success or minimum two for increasing destroy sets. |
+| One-dimensional domain walls + cyclic CSPs | The published defect must couple to another distance orbit before burden can fall | Release distance 6 plus one orbit, quotient rotations, and solve all 20 exact slices. |
 
 Discard a transfer when the stated prediction fails. Do not preserve it as inspirational prose.
 

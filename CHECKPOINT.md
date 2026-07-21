@@ -1,14 +1,17 @@
-# R(5,5) research checkpoint — epoch 6
+# R(5,5) research checkpoint — epoch 7
 
-Recorded: 2026-07-21 00:08:55 UTC
+Recorded: 2026-07-21 01:10:03 UTC
 
 ## Outcome and exact scope
 
 Springer Supplementary Data 4 is now authenticated as the published
 two-conflict K43 seed, and its complete Hamming-radius-1 edge neighborhood is
-exhausted. This is a reproducible local-landscape result and research artifact,
-not a Ramsey witness, bound, global multiplicity optimum, or order-42 census.
-The maintained published status remains `43 <= R(5,5) <= 46`.
+exhausted through radius 2.  The seed's only two radius-2 minimizers are
+isomorphic translations of the seed, and the complete 43-bit cyclic-distance-6
+slice containing it is exactly classified. These are reproducible local and
+structured-slice results, not a Ramsey witness, bound, global multiplicity
+optimum, or order-42 census. The maintained published status remains
+`43 <= R(5,5) <= 46`.
 
 For exactly the frozen 43-vertex matrix with SHA-256
 `c2429869f6fa47ab7388134b580b014efae01e6f0e474f5bab2233afb1ef6990`:
@@ -25,6 +28,11 @@ For exactly the frozen 43-vertex matrix with SHA-256
   `{6,12,36,42}`, the exact minimum is 3, attained by
   `(0,37)`, `(5,11)`, `(10,16)`, `(16,22)`, `(21,27)`, `(26,32)`, and
   `(32,38)`.
+- all `C(903,2)=407253` distinct two-edge flips have burden at least 2;
+- exactly two radius-2 pairs attain 2:
+  `{(6,12),(9,15)}` and `{(33,39),(36,42)}`;
+- the 403,809-pair deletion-remainder-change slice also has minimum 2 at
+  exactly those two pairs.
 
 The last predicate is a strict non-star firewall: its changed edge remains in
 the graph after deleting any of the four shared conflict vertices. It therefore
@@ -97,6 +105,67 @@ was discarded, the recurrence was corrected, and the official experiment was
 run only after complete identity agreement. This failure is preserved here to
 prevent reintroducing the defect.
 
+## Complete radius 2
+
+Experiment: `.proof-experiments/20260721-005729-caca87`
+
+- Return code 0; duration 39.595 s; peak child RSS 124,698,624 bytes.
+- Report: `artifacts/publisher_seed_radius2_report.json`, SHA-256
+  `ee32f396c898894d32ffcbe69987caded6731f32398ce3be28cfde1d1b9c107a`.
+- Compact complete score ledger:
+  `artifacts/publisher_seed_radius2_scores.u16le`, 814,506 bytes, SHA-256
+  `60ba5158f8d7579785e026a9f00f0722a61fb8d47ed4d279ae128c419c524edb`.
+
+Checker A scans all `C(43,5)` five-sets once and applies exact two-edit
+contribution cases. Checker B toggles each pair in C and recursively enumerates
+K5s in the graph and complement afresh. They agree entry-for-entry on all
+407,253 burdens and on every minimizer identity. Eight independently selected
+pairs were also rescanned for full identities.
+
+The only radius-2 minimizers merely relocate the two conflicts:
+
+- `{(6,12),(9,15)}` leaves zero K5s `[4,9,15,22,28]` and
+  `[9,15,22,28,33]`;
+- `{(33,39),(36,42)}` leaves zero K5s `[1,20,26,33,39]` and
+  `[15,20,26,33,39]`.
+
+Nauty canonical labels and explicit NetworkX mappings show that these are the
+seed relabeled by vertex rotations `u -> u-27` and `u -> u+27` modulo 43,
+respectively. Thus radius 2 exposes no new burden-2 isomorphism class.
+
+## Exact distance-6 slice classification
+
+Experiment: `.proof-experiments/20260721-010952-d08716`
+
+- Return code 0; duration 10.882 s; peak child RSS 66,306,048 bytes.
+- Report: `artifacts/distance6_slice_exact_report.json`, SHA-256
+  `8c8c64a82c84913222578fad537cc9beb73e74de5260a84090b9406f798a9fb1`.
+
+Twenty of the seed's 21 cyclic-distance edge orbits are constant. The sole
+exception is distance 6. If `x_u` colors edge `{u,u+6 mod 43}` and coordinates
+are changed to `u=27t mod 43`, every potentially monochromatic K5 in this
+43-variable slice reduces to translations of only three constraint shapes:
+
+```text
+x_t or x_(t+18)                 (multiplicity 2)
+x_t or x_(t+20)                 (multiplicity 2)
+not x_t or not x_(t+5) or not x_(t+24)  (multiplicity 1)
+```
+
+There are 215 active five-sets and 129 unique constraints. An independent
+Python/Z3 pseudo-Boolean enumeration and a custom C relaxation-case DPLL agree
+that burdens 0 and 1 are UNSAT, burden 2 is attainable, and there are exactly
+86 optima. They are precisely:
+
+- 43 rotations of one step-27 cyclic interval of 24 ones;
+- 43 rotations of one step-27 cyclic interval of 25 ones.
+
+The publisher seed is one length-24 interval. Its distance-6 word is
+`0111000111001110011100011100111001110001110` in vertex order and
+`0000001111111111111111111111110000000000000` in step-27 order. Six full
+graph/complement K5 rescans agree with the reduced burdens. This exhausts all
+`2^43` assignments in this one-orbit ansatz, not the whole graph space.
+
 ## Deletion and novelty firewall
 
 The two conflicts intersect in `{6,12,36,42}`. Deleting any member yields a
@@ -142,46 +211,42 @@ on any source, parser, mutation, canonical, or ledger mismatch.
 
 ## Exact continuation
 
-Continue strategy `strategy-r55-conflict-core`, fingerprint `r55twocore2026`.
-The next discriminator is the full Hamming-radius-2 neighborhood:
-`C(903,2)=407253` unordered two-edge flips.
+Continue the conflict-core route as a cyclic-domain-wall CSP rather than an
+unstructured Hamming-ball search. The first discriminator is the 20-slice
+sweep obtained by releasing distance 6 together with exactly one of the other
+20 cyclic-distance orbits, leaving the remaining 19 orbits frozen.
 
-Implement two materially different evaluators:
+For each 86-variable slice:
 
-1. a C evaluator that toggles each lexicographically ordered edge pair and
-   recursively enumerates K5s in the graph and complement;
-2. a Python evaluator that scans each 5-set and accounts exactly for whether
-   zero, one, or both edited edges lie in that 5-set.
+1. derive every active K5 clause directly from the frozen matrix;
+2. symmetry-break the common vertex-rotation action without excluding an
+   orbit of assignments;
+3. ask first for burden 0, then minimum burden only when the SAT question is
+   resolved;
+4. decode every SAT model to a 43-vertex matrix and require both complete K5
+   checkers before retaining it;
+5. treat an UNSAT response as a search discriminator unless a deterministic
+   CNF and independently checked proof log are retained.
 
-Retain a compact complete pair-score ledger and full identities for every
-minimizer. Separately report the deletion-remainder-change slice defined by:
-
-```text
-for every v in {6,12,36,42}, at least one edited edge is not incident to v.
-```
-
-This predicate ensures the two-edge edit changes each of the four known
-deletion remainders. It is broader than requiring one edge to avoid the whole
-intersection.
-
-Stop on the first provenance, parser, ordering, score, or identity mismatch.
-Otherwise stop after all 407,253 pairs are recorded and independently agreed.
-A zero must pass both complete exact checkers. A nonzero minimum is only a
-radius-2 statement; it is not a Ramsey bound. Do not start radius 3 or a
-MaxSAT/UNSAT claim in the same pass unless radius 2 changes the decision and a
-new explicit certificate contract is written.
+Rank second orbits by achieved exact burden and by factor-graph width. The
+prediction is concrete: if the one-dimensional defect must escape by coupling
+to another orbit, at least one two-orbit slice should beat burden 2 or expose a
+small recurrent obstruction suitable for a transfer-matrix or trapping-set
+lemma. If all 20 slices have certified minimum 2 and only symmetry copies,
+close this near-circulant family and redirect compute to multi-orbit/nonlocal
+surgery. Do not launch all `C(903,3)` flips first; radius 2 already shows that
+the apparent local moves only translate the domain wall.
 
 ## Tool and delegate disclosure
 
-GPT-5.6 Sol was principal investigator. Two precomputed GPT-5.6 Terra delegates
-provided advisory literature-strategy and experiment-verification memos. Sol
-hash-verified their original memo files, independently inspected the primary
-bytes and experiment records, implemented the retained checkers/gate, caught a
-delta-checker defect through cross-encoding disagreement, and ran the official
-experiment. No new subagent was spawned.
+GPT-5.6 Sol performed the epoch-7 local work without spawning a subagent. It
+implemented both radius-2 evaluators, the exact slice encodings, the custom C
+DPLL, the fail-closed gates, direct rescans, and the cyclic/isomorphism
+analysis. Earlier epoch-6 delegate memos remain advisory provenance only.
 
-Deterministic tools used: Python 3.12.3, C/GCC 13.3.0, nauty `labelg`, curl
-8.5.0 with OpenSSL 3.0.13, SHA-256, jq, Git diagnostics, AddressSanitizer,
-UndefinedBehaviorSanitizer, an attempted AddressSanitizer run limited by the
-harness address-space cap, and the computational-researcher experiment harness.
-No SAT solver, CAS, or proof assistant was used.
+Deterministic tools added in this epoch: Python 3.14.6, C/Apple Clang 17,
+Z3 4.15.4, remote Debian nauty `labelg`, NetworkX explicit isomorphism maps,
+SHA-256, Git diagnostics, and the computational-researcher experiment harness.
+Z3 and the custom DPLL independently enumerated the complete optimum model set;
+no global Ramsey SAT/UNSAT claim, CAS result, or proof-assistant theorem was
+made.

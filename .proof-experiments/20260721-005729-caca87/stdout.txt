@@ -1,0 +1,62 @@
+{
+  "direct_rescans": 8,
+  "families": {
+    "all_two_edge_flips": {
+      "minimizers": [
+        [
+          [
+            6,
+            12
+          ],
+          [
+            9,
+            15
+          ]
+        ],
+        [
+          [
+            33,
+            39
+          ],
+          [
+            36,
+            42
+          ]
+        ]
+      ],
+      "minimum": 2,
+      "pairs": 407253
+    },
+    "deletion_remainder_change_for_every_valid_deletion": {
+      "minimizers": [
+        [
+          [
+            6,
+            12
+          ],
+          [
+            9,
+            15
+          ]
+        ],
+        [
+          [
+            33,
+            39
+          ],
+          [
+            36,
+            42
+          ]
+        ]
+      ],
+      "minimum": 2,
+      "pairs": 403809
+    }
+  },
+  "ledger": "/Users/Krug/Desktop/ChatGPT/proofs/research/ramsey-r55/workspace/artifacts/publisher_seed_radius2_scores.u16le",
+  "ledger_sha256": "60ba5158f8d7579785e026a9f00f0722a61fb8d47ed4d279ae128c419c524edb",
+  "report": "/Users/Krug/Desktop/ChatGPT/proofs/research/ramsey-r55/workspace/artifacts/publisher_seed_radius2_report.json",
+  "report_sha256": "ee32f396c898894d32ffcbe69987caded6731f32398ce3be28cfde1d1b9c107a",
+  "status": "publisher_seed_radius2_pass"
+}

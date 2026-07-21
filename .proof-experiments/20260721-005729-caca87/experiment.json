@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "20260721-005729-caca87",
+  "name": "r55-publisher-seed-radius2",
+  "hypothesis": "Every distinct two-edge flip of the authenticated Springer K43 seed has monochromatic-K5 burden at least 2, including the deletion-remainder-change slice",
+  "expected_signal": "Two independent exact evaluators agree on all 407253 scores and minimizer identities; both global and deletion-remainder slice minima are 2",
+  "command": [
+    "python3",
+    "scripts/run_publisher_radius2_gate.py",
+    "checkers/publisher_radius2_a.py",
+    "checkers/publisher_radius2_b.c",
+    "sources/retrievals/springer_supplementary_data4_audit1.txt",
+    "sources/retrievals/springer_supplementary_data4_audit2.txt",
+    "artifacts/publisher_seed_radius1_report.json",
+    "artifacts/publisher_seed_radius2_scores.u16le",
+    "artifacts/publisher_seed_radius2_report.json"
+  ],
+  "cwd": "/Users/Krug/Desktop/ChatGPT/proofs/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 240,
+  "memory_limit_mb": 1024,
+  "memory_limit_enforced": false,
+  "started_at": "2026-07-21T00:57:29.220260+00:00",
+  "finished_at": "2026-07-21T00:58:08.815375+00:00",
+  "duration_seconds": 39.595,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.14.6",
+  "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+  "git_commit": "369c70ece78faf5e8dea6b68256f6d9b9242448a",
+  "source_urls": [
+    "https://doi.org/10.1038/s41467-018-07327-2",
+    "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-018-07327-2/MediaObjects/41467_2018_7327_MOESM6_ESM.txt"
+  ],
+  "input_artifacts": {
+    "/Users/Krug/Desktop/ChatGPT/proofs/research/ramsey-r55/workspace/scripts/run_publisher_radius2_gate.py": "798ed8ec81efa198bec47b56198e7a77ef3dac5e2b2f993ce78f811c0575f543",
+    "/Users/Krug/Desktop/ChatGPT/proofs/research/ramsey-r55/workspace/checkers/publisher_radius2_a.py": "cf644b78bb0646fe5771c270953f2b4bd48293e16591f3b6342d55d289ec1962",
+    "/Users/Krug/Desktop/ChatGPT/proofs/research/ramsey-r55/workspace/checkers/publisher_radius2_b.c": "06443bb97a0340d737527bd1d7f882ad65dcbd22407f2de4e022b6127eb5ceb4",
+    "/Users/Krug/Desktop/ChatGPT/proofs/research/ramsey-r55/workspace/sources/retrievals/springer_supplementary_data4_audit1.txt": "c2429869f6fa47ab7388134b580b014efae01e6f0e474f5bab2233afb1ef6990",
+    "/Users/Krug/Desktop/ChatGPT/proofs/research/ramsey-r55/workspace/sources/retrievals/springer_supplementary_data4_audit2.txt": "c2429869f6fa47ab7388134b580b014efae01e6f0e474f5bab2233afb1ef6990",
+    "/Users/Krug/Desktop/ChatGPT/proofs/research/ramsey-r55/workspace/artifacts/publisher_seed_radius1_report.json": "0db3cca75888b70850b60e1b891d8e08349ab0bec6196cd8f4c528603fa04fe9"
+  },
+  "peak_child_memory_rusage": 124698624,
+  "peak_child_memory_unit": "bytes",
+  "artifacts": {
+    "stdout.txt": "7f3eed6e8a1277ec30847c589d9bae16955179018985270d3aa13bfe328e8d93",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

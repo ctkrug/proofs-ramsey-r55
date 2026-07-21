@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "20260721-010952-d08716",
+  "name": "r55-distance6-slice-exact",
+  "hypothesis": "With all cyclic-distance orbits except distance 6 frozen to the authenticated Springer seed, no assignment of the 43 remaining edges has burden below 2, and every optimum is a step-27 cyclic interval of length 24 or 25",
+  "expected_signal": "Independent Z3 and custom C DPLL enumerators agree on the 215 active K5 constraints, UNSAT burdens 0 and 1, exactly 86 burden-2 words, and the complete interval classification",
+  "command": [
+    "python3",
+    "scripts/run_distance6_slice_gate.py",
+    "checkers/distance6_slice_a.py",
+    "checkers/distance6_slice_b.c",
+    "checkers/publisher_radius1_a.py",
+    "checkers/publisher_radius1_b.c",
+    "sources/retrievals/springer_supplementary_data4_audit1.txt",
+    "sources/retrievals/springer_supplementary_data4_audit2.txt",
+    "artifacts/publisher_seed_radius2_report.json",
+    "artifacts/distance6_slice_exact_report.json"
+  ],
+  "cwd": "/Users/Krug/Desktop/ChatGPT/proofs/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 180,
+  "memory_limit_mb": 1024,
+  "memory_limit_enforced": false,
+  "started_at": "2026-07-21T01:09:52.499277+00:00",
+  "finished_at": "2026-07-21T01:10:03.381208+00:00",
+  "duration_seconds": 10.882,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.14.6",
+  "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+  "git_commit": "369c70ece78faf5e8dea6b68256f6d9b9242448a",
+  "source_urls": [
+    "https://doi.org/10.1038/s41467-018-07327-2",
+    "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-018-07327-2/MediaObjects/41467_2018_7327_MOESM6_ESM.txt"
+  ],
+  "input_artifacts": {
+    "/Users/Krug/Desktop/ChatGPT/proofs/research/ramsey-r55/workspace/scripts/run_distance6_slice_gate.py": "54ca27ad729e683418ee3d31cc63f2bbb6b8d76faddd4d1bafc06e84ab5d20a7",
+    "/Users/Krug/Desktop/ChatGPT/proofs/research/ramsey-r55/workspace/checkers/distance6_slice_a.py": "e0151793d29fdf996d6eca094580a71b7287c9b967e8be4c8be3939c0650d833",
+    "/Users/Krug/Desktop/ChatGPT/proofs/research/ramsey-r55/workspace/checkers/distance6_slice_b.c": "b434320953a49f5ddf5979b5c5b09d7e4d4c4691cf189192156312ccecee7c71",
+    "/Users/Krug/Desktop/ChatGPT/proofs/research/ramsey-r55/workspace/checkers/publisher_radius1_a.py": "f34ea148c36ab74b0c11784f9b4d333dc915ef0a6bd3d70c7ef9c2aa03f5a535",
+    "/Users/Krug/Desktop/ChatGPT/proofs/research/ramsey-r55/workspace/checkers/publisher_radius1_b.c": "b1bfd2a51511ae0f3e6caccbaa29235cf65df2f8a3cae7ccdfce934af1f5914a",
+    "/Users/Krug/Desktop/ChatGPT/proofs/research/ramsey-r55/workspace/sources/retrievals/springer_supplementary_data4_audit1.txt": "c2429869f6fa47ab7388134b580b014efae01e6f0e474f5bab2233afb1ef6990",
+    "/Users/Krug/Desktop/ChatGPT/proofs/research/ramsey-r55/workspace/sources/retrievals/springer_supplementary_data4_audit2.txt": "c2429869f6fa47ab7388134b580b014efae01e6f0e474f5bab2233afb1ef6990",
+    "/Users/Krug/Desktop/ChatGPT/proofs/research/ramsey-r55/workspace/artifacts/publisher_seed_radius2_report.json": "ee32f396c898894d32ffcbe69987caded6731f32398ce3be28cfde1d1b9c107a"
+  },
+  "peak_child_memory_rusage": 66306048,
+  "peak_child_memory_unit": "bytes",
+  "artifacts": {
+    "stdout.txt": "417ac13fb89ba06c6f3647ebfe21f2b71a436b0299eec4f90103991049b64568",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

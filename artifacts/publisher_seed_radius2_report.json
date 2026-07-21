@@ -1,0 +1,645 @@
+{
+  "checker_a": {
+    "complete_ledger_seconds": 14.022937249974348,
+    "method": "python-five-set-contributions",
+    "path": "/Users/Krug/Desktop/ChatGPT/proofs/research/ramsey-r55/workspace/checkers/publisher_radius2_a.py",
+    "sha256": "cf644b78bb0646fe5771c270953f2b4bd48293e16591f3b6342d55d289ec1962"
+  },
+  "checker_b": {
+    "compile_command": [
+      "/usr/bin/gcc",
+      "-std=c11",
+      "-O3",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "/Users/Krug/Desktop/ChatGPT/proofs/research/ramsey-r55/workspace/checkers/publisher_radius2_b.c",
+      "-o",
+      "<temporary>/publisher_radius2_b"
+    ],
+    "compiled_binary_sha256": "f2971d12407c3d8e8e977298f9be0c68660c02ae6db13a1440a25f4fc524864b",
+    "compiler_version": "Apple clang version 21.0.0 (clang-2100.1.1.101)",
+    "complete_ledger_seconds": 8.399686583026778,
+    "method": "c-fresh-recursive-enumeration",
+    "path": "/Users/Krug/Desktop/ChatGPT/proofs/research/ramsey-r55/workspace/checkers/publisher_radius2_b.c",
+    "source_sha256": "06443bb97a0340d737527bd1d7f882ad65dcbd22407f2de4e022b6127eb5ceb4"
+  },
+  "claim_scope": "the frozen Springer Supplementary Data 4 K43 seed and exactly all C(903,2)=407253 two-distinct-edge flips; not a larger Hamming ball, global optimum, Ramsey witness, bound, or complete order-42 census",
+  "complete_pair_score_ledger": {
+    "bytes": 814506,
+    "edge_order": "(u,v) lexicographic for 0 <= u < v < 43",
+    "encoding": "407253 little-endian unsigned 16-bit burdens",
+    "independent_exact_score_agreement": true,
+    "pair_order": "(first_edge_index,second_edge_index) lexicographic with first < second",
+    "path": "/Users/Krug/Desktop/ChatGPT/proofs/research/ramsey-r55/workspace/artifacts/publisher_seed_radius2_scores.u16le",
+    "sha256": "60ba5158f8d7579785e026a9f00f0722a61fb8d47ed4d279ae128c419c524edb"
+  },
+  "conclusion": "No distinct two-edge flip lowers the authenticated seed below burden 2. This is a complete radius-two local-isolation statement only and changes no Ramsey bound.",
+  "direct_rescan_controls": {
+    "count": 8,
+    "results": [
+      {
+        "burden": 34,
+        "edge_indices": [
+          0,
+          1
+        ],
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "identity_agreement": true
+      },
+      {
+        "burden": 27,
+        "edge_indices": [
+          0,
+          902
+        ],
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            41,
+            42
+          ]
+        ],
+        "identity_agreement": true
+      },
+      {
+        "burden": 29,
+        "edge_indices": [
+          1,
+          2
+        ],
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "identity_agreement": true
+      },
+      {
+        "burden": 2,
+        "edge_indices": [
+          242,
+          347
+        ],
+        "edges": [
+          [
+            6,
+            12
+          ],
+          [
+            9,
+            15
+          ]
+        ],
+        "identity_agreement": true
+      },
+      {
+        "burden": 27,
+        "edge_indices": [
+          451,
+          452
+        ],
+        "edges": [
+          [
+            12,
+            26
+          ],
+          [
+            12,
+            27
+          ]
+        ],
+        "identity_agreement": true
+      },
+      {
+        "burden": 33,
+        "edge_indices": [
+          451,
+          902
+        ],
+        "edges": [
+          [
+            12,
+            26
+          ],
+          [
+            41,
+            42
+          ]
+        ],
+        "identity_agreement": true
+      },
+      {
+        "burden": 2,
+        "edge_indices": [
+          863,
+          887
+        ],
+        "edges": [
+          [
+            33,
+            39
+          ],
+          [
+            36,
+            42
+          ]
+        ],
+        "identity_agreement": true
+      },
+      {
+        "burden": 31,
+        "edge_indices": [
+          901,
+          902
+        ],
+        "edges": [
+          [
+            40,
+            42
+          ],
+          [
+            41,
+            42
+          ]
+        ],
+        "identity_agreement": true
+      }
+    ],
+    "selection": "ledger boundaries, interior controls, the two predicted conflict-repair pairs, and every recorded minimizer"
+  },
+  "families": {
+    "all_two_edge_flips": {
+      "minimizers": [
+        {
+          "edge_indices": [
+            242,
+            347
+          ],
+          "edges": [
+            [
+              6,
+              12
+            ],
+            [
+              9,
+              15
+            ]
+          ],
+          "one_k5": [],
+          "total_burden": 2,
+          "zero_k5": [
+            [
+              4,
+              9,
+              15,
+              22,
+              28
+            ],
+            [
+              9,
+              15,
+              22,
+              28,
+              33
+            ]
+          ]
+        },
+        {
+          "edge_indices": [
+            863,
+            887
+          ],
+          "edges": [
+            [
+              33,
+              39
+            ],
+            [
+              36,
+              42
+            ]
+          ],
+          "one_k5": [],
+          "total_burden": 2,
+          "zero_k5": [
+            [
+              1,
+              20,
+              26,
+              33,
+              39
+            ],
+            [
+              15,
+              20,
+              26,
+              33,
+              39
+            ]
+          ]
+        }
+      ],
+      "minimum_total_burden": 2,
+      "pairs": 407253,
+      "predicate": "two distinct edges from K43",
+      "score_histogram": {
+        "10": 1652,
+        "11": 2317,
+        "12": 3160,
+        "13": 4374,
+        "14": 5351,
+        "15": 6218,
+        "16": 6854,
+        "17": 7802,
+        "18": 9245,
+        "19": 10701,
+        "2": 2,
+        "20": 11830,
+        "21": 12168,
+        "22": 11618,
+        "23": 11986,
+        "24": 11945,
+        "25": 13077,
+        "26": 14657,
+        "27": 15722,
+        "28": 14381,
+        "29": 12053,
+        "3": 16,
+        "30": 11462,
+        "31": 13558,
+        "32": 14824,
+        "33": 11540,
+        "34": 10418,
+        "35": 10178,
+        "36": 7013,
+        "37": 10214,
+        "38": 11131,
+        "39": 6662,
+        "4": 57,
+        "40": 8713,
+        "41": 9397,
+        "42": 6435,
+        "43": 8513,
+        "44": 8499,
+        "45": 5038,
+        "46": 6410,
+        "47": 7219,
+        "48": 4645,
+        "49": 4364,
+        "5": 128,
+        "50": 4819,
+        "51": 3797,
+        "52": 3921,
+        "53": 3862,
+        "54": 3163,
+        "55": 2955,
+        "56": 2523,
+        "57": 2540,
+        "58": 1855,
+        "59": 1312,
+        "6": 290,
+        "60": 1522,
+        "61": 1342,
+        "62": 684,
+        "63": 800,
+        "64": 664,
+        "65": 491,
+        "66": 860,
+        "67": 627,
+        "68": 540,
+        "69": 336,
+        "7": 452,
+        "70": 570,
+        "71": 384,
+        "72": 412,
+        "73": 136,
+        "74": 268,
+        "75": 262,
+        "76": 115,
+        "77": 66,
+        "78": 73,
+        "79": 132,
+        "8": 690,
+        "80": 48,
+        "81": 20,
+        "82": 33,
+        "83": 32,
+        "84": 6,
+        "85": 10,
+        "86": 12,
+        "87": 8,
+        "88": 3,
+        "9": 1064,
+        "91": 4,
+        "92": 3
+      }
+    },
+    "deletion_remainder_change_for_every_valid_deletion": {
+      "minimizers": [
+        {
+          "edge_indices": [
+            242,
+            347
+          ],
+          "edges": [
+            [
+              6,
+              12
+            ],
+            [
+              9,
+              15
+            ]
+          ],
+          "one_k5": [],
+          "total_burden": 2,
+          "zero_k5": [
+            [
+              4,
+              9,
+              15,
+              22,
+              28
+            ],
+            [
+              9,
+              15,
+              22,
+              28,
+              33
+            ]
+          ]
+        },
+        {
+          "edge_indices": [
+            863,
+            887
+          ],
+          "edges": [
+            [
+              33,
+              39
+            ],
+            [
+              36,
+              42
+            ]
+          ],
+          "one_k5": [],
+          "total_burden": 2,
+          "zero_k5": [
+            [
+              1,
+              20,
+              26,
+              33,
+              39
+            ],
+            [
+              15,
+              20,
+              26,
+              33,
+              39
+            ]
+          ]
+        }
+      ],
+      "minimum_total_burden": 2,
+      "pairs": 403809,
+      "predicate": "for every v in {6,12,36,42}, at least one edited edge is not incident to v",
+      "score_histogram": {
+        "10": 1634,
+        "11": 2287,
+        "12": 3122,
+        "13": 4324,
+        "14": 5307,
+        "15": 6190,
+        "16": 6770,
+        "17": 7702,
+        "18": 9161,
+        "19": 10609,
+        "2": 2,
+        "20": 11740,
+        "21": 12088,
+        "22": 11494,
+        "23": 11864,
+        "24": 11817,
+        "25": 12941,
+        "26": 14557,
+        "27": 15606,
+        "28": 14261,
+        "29": 11925,
+        "3": 16,
+        "30": 11372,
+        "31": 13446,
+        "32": 14740,
+        "33": 11448,
+        "34": 10322,
+        "35": 10082,
+        "36": 6941,
+        "37": 10114,
+        "38": 11057,
+        "39": 6594,
+        "4": 55,
+        "40": 8659,
+        "41": 9339,
+        "42": 6379,
+        "43": 8451,
+        "44": 8443,
+        "45": 4974,
+        "46": 6362,
+        "47": 7167,
+        "48": 4617,
+        "49": 4324,
+        "5": 126,
+        "50": 4783,
+        "51": 3773,
+        "52": 3899,
+        "53": 3842,
+        "54": 3143,
+        "55": 2943,
+        "56": 2503,
+        "57": 2526,
+        "58": 1843,
+        "59": 1304,
+        "6": 290,
+        "60": 1516,
+        "61": 1324,
+        "62": 682,
+        "63": 796,
+        "64": 656,
+        "65": 481,
+        "66": 854,
+        "67": 621,
+        "68": 534,
+        "69": 334,
+        "7": 442,
+        "70": 568,
+        "71": 382,
+        "72": 410,
+        "73": 136,
+        "74": 262,
+        "75": 254,
+        "76": 113,
+        "77": 66,
+        "78": 73,
+        "79": 126,
+        "8": 682,
+        "80": 48,
+        "81": 20,
+        "82": 33,
+        "83": 30,
+        "84": 6,
+        "85": 8,
+        "86": 12,
+        "87": 8,
+        "88": 3,
+        "9": 1044,
+        "91": 4,
+        "92": 3
+      }
+    }
+  },
+  "global_minimizer_identity_agreement": true,
+  "independence": "Checker A parses the frozen spaced matrix in Python and scans each C(43,5) subset once, applying exact two-edit contribution cases. Checker B separately parses the publisher rows in C, toggles each lexicographic edge pair, and recursively enumerates graph and complement K5s afresh for every one of the 407253 edited graphs.",
+  "parser_rejections": {
+    "asymmetric": {
+      "checker_a": "ValueError: matrix must be symmetric",
+      "checker_b": "matrix must be symmetric"
+    },
+    "nonbinary": {
+      "checker_a": "ValueError: row 0 is not exactly 43 single-space-delimited bits",
+      "checker_b": "matrix must contain only 0 and 1"
+    },
+    "substituted_gist": {
+      "checker_a": "ValueError: publisher title or row count mismatch",
+      "checker_b": "publisher title mismatch"
+    }
+  },
+  "schema_version": 1,
+  "seed": {
+    "conflict_intersection": [
+      6,
+      12,
+      36,
+      42
+    ],
+    "edges": 454,
+    "one_k5": [],
+    "order": 43,
+    "zero_k5": [
+      [
+        6,
+        12,
+        17,
+        36,
+        42
+      ],
+      [
+        6,
+        12,
+        31,
+        36,
+        42
+      ]
+    ]
+  },
+  "source": {
+    "authority": "Springer publisher-controlled static-content URL",
+    "body_bytes": 3812,
+    "body_sha256": "c2429869f6fa47ab7388134b580b014efae01e6f0e474f5bab2233afb1ef6990",
+    "dual_retrieval_byte_identity": true,
+    "retrievals": [
+      {
+        "body": {
+          "bytes": 3812,
+          "path": "sources/retrievals/springer_supplementary_data4_audit1.txt",
+          "sha256": "c2429869f6fa47ab7388134b580b014efae01e6f0e474f5bab2233afb1ef6990"
+        },
+        "experiment": {
+          "id": "20260720-235158-0cfef1",
+          "path": ".proof-experiments/20260720-235158-0cfef1/experiment.json",
+          "sha256": "ed93b112680e9bbb970464d1888ed217f9b75131083f2ff2a244ca99b2a6a9f7"
+        },
+        "headers": {
+          "bytes": 886,
+          "path": "sources/retrievals/springer_supplementary_data4_audit1.headers",
+          "sha256": "812897cabc7983657512723c9063a05844bc3001a003dcdb2fcf45a4b8534b1b"
+        },
+        "transfer": {
+          "path": ".proof-experiments/20260720-235158-0cfef1/stdout.txt",
+          "selected_fields": {
+            "content_type": "application/octet-stream",
+            "http_code": 200,
+            "num_redirects": 0,
+            "proxy_ssl_verify_result": 0,
+            "response_code": 200,
+            "scheme": "HTTPS",
+            "size_download": 3812,
+            "ssl_verify_result": 0,
+            "url_effective": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-018-07327-2/MediaObjects/41467_2018_7327_MOESM6_ESM.txt"
+          },
+          "sha256": "5d885accd3f22be27f69ea87d8c4d48df48d5c68094120aa3894fb8fc04eb1ca"
+        }
+      },
+      {
+        "body": {
+          "bytes": 3812,
+          "path": "sources/retrievals/springer_supplementary_data4_audit2.txt",
+          "sha256": "c2429869f6fa47ab7388134b580b014efae01e6f0e474f5bab2233afb1ef6990"
+        },
+        "experiment": {
+          "id": "20260720-235208-a7e84e",
+          "path": ".proof-experiments/20260720-235208-a7e84e/experiment.json",
+          "sha256": "a73b7886b1512efe823143de17bc45327b1588ae016242849e6d7bdf121bf052"
+        },
+        "headers": {
+          "bytes": 888,
+          "path": "sources/retrievals/springer_supplementary_data4_audit2.headers",
+          "sha256": "e918b8b4cf10807af426a63c775f47bf2ecaaae0acea1d4e52fda6c62536f7f6"
+        },
+        "transfer": {
+          "path": ".proof-experiments/20260720-235208-a7e84e/stdout.txt",
+          "selected_fields": {
+            "content_type": "application/octet-stream",
+            "http_code": 200,
+            "num_redirects": 0,
+            "proxy_ssl_verify_result": 0,
+            "response_code": 200,
+            "scheme": "HTTPS",
+            "size_download": 3812,
+            "ssl_verify_result": 0,
+            "url_effective": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-018-07327-2/MediaObjects/41467_2018_7327_MOESM6_ESM.txt"
+          },
+          "sha256": "d874ded0b3d4109577717cf06dcaf8d4f59fe44a72ddb98ab4795b362831fb23"
+        }
+      }
+    ],
+    "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-018-07327-2/MediaObjects/41467_2018_7327_MOESM6_ESM.txt"
+  },
+  "status": "publisher_seed_radius2_pass",
+  "upstream_radius1_gate": {
+    "path": "/Users/Krug/Desktop/ChatGPT/proofs/research/ramsey-r55/workspace/artifacts/publisher_seed_radius1_report.json",
+    "sha256": "0db3cca75888b70850b60e1b891d8e08349ab0bec6196cd8f4c528603fa04fe9",
+    "status": "publisher_seed_radius1_pass"
+  }
+}

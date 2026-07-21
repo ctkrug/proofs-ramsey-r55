@@ -20,7 +20,10 @@ transcription and remain only parser/evaluator controls.  The actual Springer
 Supplementary Data 4 bytes are retained under `sources/retrievals/` with two
 independent raw retrieval records.  The dedicated publisher gate authenticates
 those bytes and exhausts all 903 one-edge flips with two independent raw parsers
-and exact evaluators.  See `CHECKPOINT.md` for the exact scope and evidence.
+and exact evaluators. A second gate exhausts all 407,253 distinct two-edge
+flips. A third gate reduces the seed's sole nonconstant cyclic-distance orbit
+to a 43-variable CSP and exactly classifies all `2^43` assignments in that
+slice. See `CHECKPOINT.md` for the exact scope and evidence.
 
 `scripts/run_corpus_gate.py` freezes the mirror acquisition discriminator
 for that corpus (47,888 bytes, SHA-256
@@ -69,6 +72,34 @@ python3 scripts/run_publisher_radius1_gate.py \
 
 This proves only the exact radius-1 statements recorded in the report; it is
 not a witness, global optimum, or Ramsey bound.
+
+Replay the complete radius-2 gate with:
+
+```bash
+python3 scripts/run_publisher_radius2_gate.py \
+  checkers/publisher_radius2_a.py checkers/publisher_radius2_b.c \
+  sources/retrievals/springer_supplementary_data4_audit1.txt \
+  sources/retrievals/springer_supplementary_data4_audit2.txt \
+  artifacts/publisher_seed_radius1_report.json \
+  artifacts/publisher_seed_radius2_scores.replay.u16le \
+  artifacts/publisher_seed_radius2_report.replay.json
+```
+
+Replay the exact cyclic-distance-6 slice classification with:
+
+```bash
+python3 scripts/run_distance6_slice_gate.py \
+  checkers/distance6_slice_a.py checkers/distance6_slice_b.c \
+  checkers/publisher_radius1_a.py checkers/publisher_radius1_b.c \
+  sources/retrievals/springer_supplementary_data4_audit1.txt \
+  sources/retrievals/springer_supplementary_data4_audit2.txt \
+  artifacts/publisher_seed_radius2_report.json \
+  artifacts/distance6_slice_exact_report.replay.json
+```
+
+The radius-2 result is only a Hamming-neighborhood statement. The distance-6
+result fixes the other 20 cyclic-distance orbits and therefore is only a
+structured-slice classification. Neither changes the Ramsey bound.
 
 The graph6 plumbing itself has a smaller cold-start control that does not need
 the historical corpus.  It generates all 1,044 order-7 isomorphism classes with
