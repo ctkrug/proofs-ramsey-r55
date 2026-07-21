@@ -1,0 +1,53 @@
+{
+  "id": "manual-rowpair-v1-2026-07-21",
+  "problem_id": "ramsey-r55",
+  "epoch": 13,
+  "strategy_id": "strategy-r55-row-code-sdp",
+  "fingerprint": "r55rowcodesdp2026",
+  "outcome": "progress",
+  "strategy_status": "blocked",
+  "hypothesis": "The uncoloured union-support adjacency-row Delsarte pair LP excludes at least one scalar-admissible degree histogram at n=43,44,45.",
+  "result": "Falsified over the complete declared domain: an exact central-distance feasible template covers all 8,052,576 profiles.",
+  "scope_limits": [
+    "No edge/nonedge colour variables or edge-degree marginals",
+    "No full adjacency-matrix symmetry or zero-diagonal coordinate constraints",
+    "No triple moments or SDP",
+    "No graph existence or nonexistence conclusion"
+  ],
+  "experiments": [
+    {
+      "path": ".proof-experiments/20260721-121817-c060be",
+      "status": "failed-closed",
+      "finding": "Complement control exposed an endpoint-excluding common-nonneighbour off-by-two bug in the new ledger."
+    },
+    {
+      "path": ".proof-experiments/20260721-122138-bd5745",
+      "status": "pass",
+      "finding": "Exact all-profile certificate and byte-identical Python/C control ledgers."
+    },
+    {
+      "path": ".proof-experiments/20260721-122217-a1e4eb",
+      "status": "pass",
+      "finding": "Independent recurrence/DP replay, 33,867 small-graph controls, and seven rejected mutations."
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "artifacts/rowpair_v1/rowpair_v1_report.json",
+      "sha256": "ef8171abecd9e53ff4915c1e17b594f167829669a02e6fb42e7d0c77ddf14ce3"
+    },
+    {
+      "path": "artifacts/rowpair_v1/rowpair_v1_cold_audit.json",
+      "sha256": "35c1135b3b26f68a2281e496cd060029177c3ede53271705988b2858b1aa952d"
+    },
+    {
+      "path": "artifacts/rowpair_v1/control_ledger_python.tsv",
+      "sha256": "48df90ead7bfec093a33e14dad2906eb070413c1d4c2cd9d99e6e8ced3c1f9cc"
+    },
+    {
+      "path": "artifacts/rowpair_v1/control_ledger_c.tsv",
+      "sha256": "48df90ead7bfec093a33e14dad2906eb070413c1d4c2cd9d99e6e8ced3c1f9cc"
+    }
+  ],
+  "updated_at": "2026-07-21T12:35:00+00:00"
+}

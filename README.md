@@ -1,5 +1,41 @@
 # R(5,5) control packet
 
+## Epoch-13 rowpair-v1 null certificate
+
+The uncoloured union-support adjacency-row Delsarte pair relaxation cuts none
+of the 8,052,576 handshake-parity degree histograms at orders 43--45.  The
+retained exact certificate assigns one central distance according only to the
+parity of the two row weights and checks every Krawtchouk inequality.  This is
+a negative result about that relaxation only, not a Ramsey bound and not a
+result about a coloured adjacency-aware LP or SDP.  See
+`docs/rowpair-v1.md` for the precise formulation.
+
+Rebuild the independent C ledger producer and replay the accepted gate with:
+
+```bash
+mkdir -p tools/rowpair artifacts/rowpair_v1
+gcc -std=c11 -O2 -Wall -Wextra -Werror \
+  -fsanitize=undefined -fno-sanitize-recover=undefined \
+  checkers/rowpair_ledger_b.c -o tools/rowpair/rowpair_ledger_b
+python3 scripts/run_rowpair_v1_gate.py \
+  --corpus sources/r55_42some.g6 \
+  --python-ledger artifacts/rowpair_v1/control_ledger_python.replay.tsv \
+  --c-ledger artifacts/rowpair_v1/control_ledger_c.replay.tsv \
+  --c-checker tools/rowpair/rowpair_ledger_b \
+  --output artifacts/rowpair_v1/rowpair_v1_report.replay.json \
+  --source sources/rowpair/provenance.json \
+  --source sources/rowpair/dynamic-survey-revision18.pdf \
+  --source sources/rowpair/2409.15709v2.tar.gz \
+  --source sources/rowpair/subgraph-counting-r55.pdf \
+  --source sources/rowpair/linear-programming-ramsey-paper29.pdf
+python3 checkers/rowpair_certificate.py \
+  --report artifacts/rowpair_v1/rowpair_v1_report.replay.json \
+  --python-ledger artifacts/rowpair_v1/control_ledger_python.replay.tsv \
+  --c-ledger artifacts/rowpair_v1/control_ledger_c.replay.tsv \
+  --corpus sources/r55_42some.g6 \
+  --output artifacts/rowpair_v1/rowpair_v1_cold_audit.replay.json
+```
+
 This workspace contains a fail-closed, dual-checker control gate for `(5,5,n)`
 Ramsey graphs.  It does **not** claim a new Ramsey bound and it does not treat the
 known 656 order-42 graphs as a complete census.

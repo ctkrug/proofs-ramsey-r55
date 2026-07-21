@@ -1,4 +1,116 @@
-# R(5,5) research checkpoint — epoch 12
+# R(5,5) research checkpoint — epoch 13
+
+Recorded: 2026-07-21 12:35 UTC
+
+## Epoch-13 outcome: exact null certificate for the uncoloured row-pair LP
+
+The saved `strategy-r55-row-code-sdp` first discriminator is complete and
+negative.  The tested model is exactly the uncoloured union-support pair LP:
+fixed degree-pair totals, off-diagonal Hamming distances allowed by the union
+of the edge and nonedge `R(3,5)=14` bounds, diagonal mass retained explicitly,
+and all ordinary binary Krawtchouk inequalities.  It does not retain the edge
+colour of a pair, edge-degree marginals, full adjacency symmetry, or triple
+moments.
+
+The exact profile counts are:
+
+```text
+n=43, degrees 18..24: 6,992,920
+n=44, degrees 19..24:   953,580
+n=45, degrees 20..24:   106,076
+total:                 8,052,576
+```
+
+All counts impose both total order and handshake parity.  Applying the
+published exact `R(4,5,m)` edge extrema to the doubled `m=2` excess identity
+gives a contribution interval that strictly straddles zero at every allowed
+degree, so this scalar interval baseline removes zero profiles.
+
+More decisively, every one of the 8,052,576 profiles has an explicit feasible
+point in the uncoloured Delsarte LP.  Put every off-diagonal degree-pair mass at
+distance 22 when the two degrees have even sum.  For odd sum use distance 21
+at order 43 and distance 23 at orders 44 and 45.  Every selected distance lies
+in the exact edge/nonedge union support.  If `s` vertices have even degree, the
+complete Delsarte sum is
+
+```text
+n K_k(0)
++ [s(s-1)+(n-s)(n-s-1)] K_k(h_even)
++ 2s(n-s) K_k(h_odd).
+```
+
+The retained integer certificate checks this for every `s=0..n` and
+`k=0..n`; the minima for orders 43, 44, and 45 are respectively 1, 0, and 1.
+Thus zero profiles are cut, without reliance on a numerical LP solver.
+
+## Controls, repair, and cold audit
+
+Fresh Python and C/bitset graph6 implementations emitted byte-identical
+2.8-MiB ledgers (SHA-256
+`48df90ead7bfec093a33e14dad2906eb070413c1d4c2cd9d99e6e8ced3c1f9cc`)
+for all 328 supplied graphs and their complements.  The controls reproduce 194
+degree histograms, off-diagonal distances 12--28, and the sharp counts 12,144
+ordered edge pairs with 13 common neighbours and 12,144 ordered nonedge pairs
+with 13 common nonneighbours.  The supplied corpus remains SHA-256
+`067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb`.
+
+The first recorded gate `.proof-experiments/20260721-121817-c060be` failed
+closed on the complement transformation.  This exposed an endpoint convention
+bug in the new ledger only: for arbitrary pairs the number of common
+nonneighbours excluding both endpoints is
+`n-2-d(u)-d(v)+2*epsilon+c`.  The correction was made in both implementations;
+no output from the failed run is evidence.
+
+The accepted gate `.proof-experiments/20260721-122138-bd5745` completed in
+29.588 seconds with 42,136 KiB peak child RSS.  Main report
+`artifacts/rowpair_v1/rowpair_v1_report.json` has SHA-256
+`ef8171abecd9e53ff4915c1e17b594f167829669a02e6fb42e7d0c77ddf14ce3`.
+The cold audit `.proof-experiments/20260721-122217-a1e4eb` completed in 5.800
+seconds with 54,484 KiB peak child RSS.  It used an integer three-term
+Krawtchouk recurrence and dynamic-programming profile counter, exhausted all
+33,867 labelled graphs through order 6, and rejected seven mutations.  Cold
+report `artifacts/rowpair_v1/rowpair_v1_cold_audit.json` has SHA-256
+`35c1135b3b26f68a2281e496cd060029177c3ede53271705988b2858b1aa952d`.
+
+## Route disposition and exact continuation
+
+The hypothesis that the uncoloured pair relaxation cuts a scalar-admissible
+profile is falsified over its entire declared domain.  Per the predeclared stop
+rule, park `strategy-r55-row-code-sdp` and do not build a custom Terwilliger SDP
+from this result.  Reopen the same stage only for an artifact defect.  A
+coloured adjacency-aware model is a materially stronger new mechanism, not an
+inference from this packet; before receiving compute it must preserve
+edge-degree marginals and aggregate common-neighbour identities and identify a
+frozen published baseline stronger than the vacuous extremal interval.
+
+The recommended next family is `strategy-r55-inequality`: authenticate the
+public edge-extremal `(4,5,n)` archives and determine whether the published
+`I2/I3` feature bounds needed for a genuinely stronger order-45 scalar
+baseline can be reconstructed.  First fetch and hash the archive index and
+`r45extreme.tar.gz`, inspect its exact scope, and stop if the data do not expose
+the triangle/pointed features required by `I3` or merely reproduce the already
+published extrema.  Do not enumerate 8 million profiles under the vacuous
+baseline.
+
+Replay commands and the exact mathematical scope are in `README.md` and
+`docs/rowpair-v1.md`.
+
+## Epoch-13 disclosure
+
+GPT-5.6 Sol was principal investigator.  The supplied GPT-5.6 Terra
+literature-strategy and experiment-verification memos were advisory; Sol
+audited the primary sources, rejected the suggestion that the uncoloured LP
+retains edge colour, found and repaired the endpoint off-by-two ledger bug,
+derived the central-distance certificate, implemented the producer, and ran
+the independent cold checker.  No new subagent was spawned.  Deterministic
+tools were Python 3.12.3, GCC 13.3.0 with UndefinedBehaviorSanitizer, exact
+Python integers, SHA-256, jq, curl, pdftotext, and the computational-researcher
+experiment harness.  No CAS, SAT solver, numerical LP solver, proof assistant,
+external publishing action, or system-level change was used.
+
+---
+
+# Prior checkpoint — epoch 12
 
 Recorded: 2026-07-21 10:27 UTC
 

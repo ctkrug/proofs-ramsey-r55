@@ -1,0 +1,40 @@
+{
+  "retrieved_at_utc": "2026-07-21T12:30:00Z",
+  "purpose": "Primary-source gate for the rowpair-v1 adjacency-row discriminator",
+  "sources": [
+    {
+      "path": "sources/rowpair/dynamic-survey-revision18.pdf",
+      "url": "https://www.cs.rit.edu/~spr/ElJC/sur.pdf",
+      "sha256": "fc7df6ab2aae870f8b27039a336f368a1234bf4eb9325e80bf20510aba79f2d2",
+      "use": "Maintained status and revision date; records 43 <= R(5,5) <= 46."
+    },
+    {
+      "path": "sources/rowpair/2409.15709v2.tar.gz",
+      "url": "https://export.arxiv.org/e-print/2409.15709v2",
+      "sha256": "49cc6669c526908b713108f580a014a0fd2f56ba2260c5ed427da5c15a6808b6",
+      "use": "Author TeX source for the 2026 upper-bound paper and its exact R(4,5,n) edge-extremal table."
+    },
+    {
+      "path": "sources/rowpair/subgraph-counting-r55.pdf",
+      "url": "https://users.cecs.anu.edu.au/~bdm/papers/r55.pdf",
+      "sha256": "b7e73035707628711563d91c46f0bc2df1d7fbe34cac0cccf10f99d5ba0212a7",
+      "use": "McKay-Radziszowski subgraph-counting identities, including the m=2 excess identity."
+    },
+    {
+      "path": "sources/rowpair/linear-programming-ramsey-paper29.pdf",
+      "url": "https://www.cs.rit.edu/~spr/PUBL/paper29.pdf",
+      "sha256": "ae58d774420a224b62a65e3616c548b9530e22553d5570a90dfebe18826b0f6f",
+      "use": "Historical Ramsey LP formulation and exact-rational verification discussion."
+    }
+  ],
+  "current_publication": {
+    "url": "https://doi.org/10.1002/jgt.70029",
+    "first_published": "2026-03-20",
+    "finding": "The journal article proves only R(5,5) <= 46; no newer exact determination was found in the recorded 2026-07-21 search."
+  },
+  "novelty_queries": [
+    "\"R(5,5)\" Ramsey 2026 exact 43 44 45 46",
+    "\"R(5,5)\" \"Terwilliger\"",
+    "\"R(5,5)\" Delsarte adjacency rows"
+  ]
+}

@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/root/proof-factory/research/ramsey-r55/workspace/scripts/run_rowpair_v1_gate.py", line 337, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/root/proof-factory/research/ramsey-r55/workspace/scripts/run_rowpair_v1_gate.py", line 268, in main
+    check_complement_pair(graphs[offset], graphs[offset + 1])
+  File "/root/proof-factory/research/ramsey-r55/workspace/scripts/run_rowpair_v1_gate.py", line 184, in check_complement_pair
+    raise ValueError("complement row-distance transformation failure")
+ValueError: complement row-distance transformation failure

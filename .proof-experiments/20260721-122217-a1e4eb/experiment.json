@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "id": "20260721-122217-a1e4eb",
+  "name": "r55-rowpair-v1-cold-audit",
+  "hypothesis": "The retained central-distance all-profile certificate and dual control ledgers pass a materially independent exact reconstruction and adversarial mutations fail closed",
+  "expected_signal": "PASS on exact recurrence/DP reconstruction and all 33867 labelled graphs through order 6; rejection of seven mutations",
+  "command": [
+    "python3",
+    "checkers/rowpair_certificate.py",
+    "--report",
+    "artifacts/rowpair_v1/rowpair_v1_report.json",
+    "--python-ledger",
+    "artifacts/rowpair_v1/control_ledger_python.tsv",
+    "--c-ledger",
+    "artifacts/rowpair_v1/control_ledger_c.tsv",
+    "--corpus",
+    "sources/r55_42some.g6",
+    "--output",
+    "artifacts/rowpair_v1/rowpair_v1_cold_audit.json"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 600,
+  "memory_limit_mb": 1024,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-21T12:22:17.612780+00:00",
+  "finished_at": "2026-07-21T12:22:23.412568+00:00",
+  "duration_seconds": 5.8,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "3c16fe4fa2606af5009294895b9584cc1b7072aa",
+  "source_urls": [
+    "https://doi.org/10.1002/jgt.70029"
+  ],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/rowpair_certificate.py": "9852b91b1ac49bbf6cdc6ed0a9a2049a5c0d951823d66d35fe6324fcbdb6db7e",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/rowpair_v1/rowpair_v1_report.json": "ef8171abecd9e53ff4915c1e17b594f167829669a02e6fb42e7d0c77ddf14ce3",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/rowpair_v1/control_ledger_python.tsv": "48df90ead7bfec093a33e14dad2906eb070413c1d4c2cd9d99e6e8ced3c1f9cc",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/rowpair_v1/control_ledger_c.tsv": "48df90ead7bfec093a33e14dad2906eb070413c1d4c2cd9d99e6e8ced3c1f9cc",
+    "/root/proof-factory/research/ramsey-r55/workspace/sources/r55_42some.g6": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb"
+  },
+  "peak_child_memory_rusage": 54484,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "33546f25ac2f5c6425106e93802bddb68982b59ab991d8d43af61fbdd87e80d3",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

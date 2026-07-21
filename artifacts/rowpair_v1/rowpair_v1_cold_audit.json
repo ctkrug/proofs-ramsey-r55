@@ -1,0 +1,29 @@
+{
+  "krawtchouk_implementation": "three-term integer recurrence",
+  "labelled_graphs_through_order_6": 33867,
+  "ledger_sha256": "48df90ead7bfec093a33e14dad2906eb070413c1d4c2cd9d99e6e8ced3c1f9cc",
+  "ledger_stats": {
+    "distance_range": [
+      12,
+      28
+    ],
+    "edge13": 12144,
+    "graphs": 656,
+    "histograms": 194,
+    "minimum_kraw": 4,
+    "nonedge13": 12144
+  },
+  "profile_counter": "dynamic programming over multiplicities and handshake parity",
+  "rejected_mutations": [
+    "central-distance",
+    "certificate-coefficient",
+    "profile-count",
+    "ledger-count",
+    "degree-label",
+    "common-bound-12",
+    "corpus-bit"
+  ],
+  "report_sha256": "ef8171abecd9e53ff4915c1e17b594f167829669a02e6fb42e7d0c77ddf14ce3",
+  "schema": "rowpair-v1-cold-audit",
+  "status": "PASS"
+}

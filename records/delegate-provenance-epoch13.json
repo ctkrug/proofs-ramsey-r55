@@ -1,0 +1,35 @@
+{
+  "epoch": 13,
+  "principal": {
+    "role": "Sol principal investigator",
+    "model": "gpt-5.6-sol"
+  },
+  "delegates": [
+    {
+      "role": "literature-strategy",
+      "model": "gpt-5.6-terra",
+      "ephemeral_path": ".delegates/20260721-120002-b7c5a2/literature-strategy/memo.md",
+      "ephemeral_sha256": "10e57f0eb4f8db3669a4c883c36674bc45f6b8aba8a512614d28f3770b6e95dc",
+      "promoted_summary_path": "docs/delegate-memos/20260721-120002-literature-strategy.md",
+      "promoted_summary_sha256": "aaea2eab89cb19ba851999dcaa95685b52d9e0cf628710eff171c5e80d564588",
+      "use": "Route selection, source-baseline warning, complement off-by-two warning, and predeclared stop condition."
+    },
+    {
+      "role": "experiment-verification",
+      "model": "gpt-5.6-terra",
+      "ephemeral_path": ".delegates/20260721-120002-b7c5a2/experiment-verification/memo.md",
+      "ephemeral_sha256": "51c566984778ef43294bfb1ed7c81bce8b6a03ea08012510ae63757a6f24fc41",
+      "promoted_summary_path": "docs/delegate-memos/20260721-120002-experiment-verification.md",
+      "promoted_summary_sha256": "82c5367790b91f42dcf0c8959d4b62fd8276253d4e7c90fde2850d1c05a4515f",
+      "use": "Independent-ledger design, union-support scope, profile counts to reproduce, and mutation controls."
+    }
+  ],
+  "principal_audit": [
+    "Verified current status against Dynamic Survey revision 18, the 2026 journal article, and the author TeX source.",
+    "Reconstructed the m=2 excess interval from the published exact R(4,5,n) edge extrema.",
+    "Rejected any description of union support as a coloured adjacency relaxation.",
+    "Found an exact all-profile central-distance feasible template instead of launching millions of numerical LPs.",
+    "Caught and repaired the endpoint-excluding common-nonneighbour off-by-two bug through the complement control.",
+    "Accepted only the corrected recorded gate and independent cold audit."
+  ]
+}
