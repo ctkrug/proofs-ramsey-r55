@@ -1,0 +1,11 @@
+{
+  "event": "validated",
+  "id": "lab-ramsey-r55-census-v2-canary",
+  "review": {
+    "decision": "validate",
+    "reason": "Fresh host 0 completed in 20.327 seconds; the manifest records 19.248 host seconds below the 30-second aggregate gate; protected hashes match; stderr is empty; and the independently decompressed artifact has exact bitset/VF2 count and stream agreement.",
+    "reviewer": "remediation-phase5-operator",
+    "reviewed_at": "2026-07-21T22:52:04.214708+00:00",
+    "segment": 1
+  }
+}
