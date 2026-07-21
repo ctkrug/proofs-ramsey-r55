@@ -31,7 +31,13 @@ def main() -> int:
     if [row["host_index"] for row in rows] != expected:
         raise AssertionError("manifest does not cover each of 656 hosts exactly once in canonical order")
     keys = ("embedding_count", "mapping_stream_sha256", "vector_occurrences", "unique_vector_count", "vector_stream_sha256")
+    max_host_seconds = 0.0
     for row in rows:
+        host_seconds = float(row.get("host_seconds") or 0)
+        host_gate = float(row.get("host_gate_seconds") or 0)
+        if host_seconds <= 0 or host_gate != 30.0 or host_seconds > host_gate:
+            raise AssertionError(f"invalid aggregate host gate receipt: {row['host_index']}")
+        max_host_seconds = max(max_host_seconds, host_seconds)
         artifact = Path(row["artifact"])
         if not artifact.is_absolute():
             artifact = manifest.parent / artifact
@@ -44,7 +50,10 @@ def main() -> int:
             raise AssertionError(f"summary mismatch: {row['host_index']}")
         if stream_digest(left["unique_vectors"]) != row["vector_stream_sha256"]:
             raise AssertionError(f"vector stream mismatch: {row['host_index']}")
-    print(json.dumps({"status": "valid", "hosts": len(rows), "manifest_sha256": digest(manifest)}))
+    print(json.dumps({
+        "status": "valid", "hosts": len(rows), "manifest_sha256": digest(manifest),
+        "aggregate_host_gate_seconds": 30.0, "max_observed_host_seconds": max_host_seconds,
+    }))
     return 0
 
 

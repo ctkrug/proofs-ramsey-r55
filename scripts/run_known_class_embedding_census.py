@@ -8,6 +8,7 @@ import gzip
 import hashlib
 import json
 import os
+import signal
 import sys
 import time
 from pathlib import Path
@@ -42,10 +43,17 @@ def main() -> int:
     parser.add_argument("--output", required=True)
     parser.add_argument("--hosts-per-segment", type=int, default=1)
     parser.add_argument("--case-seconds", type=int, default=900)
+    parser.add_argument("--host-seconds", type=float, default=30.0,
+                        help="aggregate wall-clock cap across both enumerators for one host")
     parser.add_argument("--total-hosts", type=int, default=656, help="656 for the complete supplied corpus; lower only for lifecycle canaries")
     args = parser.parse_args()
-    if not 1 <= args.total_hosts <= 656 or args.hosts_per_segment < 1:
+    if not 1 <= args.total_hosts <= 656 or args.hosts_per_segment < 1 or args.host_seconds <= 0:
         raise SystemExit("invalid host bounds")
+
+    def host_timeout(_signum: int, _frame: object) -> None:
+        raise TimeoutError(f"aggregate host gate exceeded {args.host_seconds:g} seconds")
+
+    signal.signal(signal.SIGALRM, host_timeout)
 
     corpus = Path(args.corpus)
     checkpoint_path = Path(args.checkpoint)
@@ -74,13 +82,21 @@ def main() -> int:
     segment_start = checkpoint["next_host"]
     stop = min(args.total_hosts, segment_start + args.hosts_per_segment)
     for index in range(segment_start, stop):
+        host_started = time.monotonic()
         source_index = index % 328
         complemented = index >= 328
         name = ("complement" if complemented else "source") + f"_record_{source_index + 1}"
         bit_host = bitset.complement(bit_graphs[source_index]) if complemented else bit_graphs[source_index]
         nx_host = nx.complement(nx_graphs[source_index]) if complemented else nx_graphs[source_index]
-        left = bitset.run_case(name, bit_pattern, bit_host, args.case_seconds)
-        right = nximpl.process_case(name, nx_pattern, nx_host, args.case_seconds)
+        left_limit = min(float(args.case_seconds), args.host_seconds)
+        left = bitset.run_case(name, bit_pattern, bit_host, left_limit)
+        remaining = args.host_seconds - (time.monotonic() - host_started)
+        if remaining <= 0:
+            raise TimeoutError(f"aggregate host gate exceeded for {name} after the bitset implementation")
+        right = nximpl.process_case(name, nx_pattern, nx_host, min(float(args.case_seconds), remaining))
+        host_elapsed = time.monotonic() - host_started
+        if host_elapsed > args.host_seconds:
+            raise TimeoutError(f"aggregate host gate exceeded for {name}")
         keys = ("embedding_count", "mapping_stream_sha256", "vector_occurrences", "unique_vector_count", "vector_stream_sha256")
         if any(left[key] != right[key] for key in keys) or left["unique_vectors"] != right["unique_vectors"]:
             raise AssertionError(f"implementation mismatch for {name}")
@@ -94,6 +110,7 @@ def main() -> int:
             "host_index": index, "case": name, **{key: left[key] for key in keys},
             "artifact": artifact.relative_to(output).as_posix(), "artifact_sha256": sha256(artifact),
             "bitset_seconds": left["seconds"], "networkx_seconds": right["seconds"],
+            "host_seconds": host_elapsed, "host_gate_seconds": args.host_seconds,
         }
         with manifest.open("a", encoding="utf-8") as handle:
             handle.write(json.dumps(row, sort_keys=True, separators=(",", ":")) + "\n")
