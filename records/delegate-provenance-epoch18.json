@@ -1,0 +1,22 @@
+{
+  "epoch": 18,
+  "recorded_at": "2026-07-21T19:48:32Z",
+  "orchestration": "gpt-5.6-sol principal with supplied gpt-5.6-terra delegates",
+  "delegates": [
+    {
+      "role": "challenger-prior-art",
+      "source_path": ".delegates/20260721-193743-1d1e25/challenger-prior-art/memo.md",
+      "source_sha256": "1a807594365db6d55a79705df9ea0f5f36e95c126a3a441f07e7205d4e1d1976",
+      "promoted_path": "docs/delegate-memos/20260721-193743-challenger-prior-art.md",
+      "use": "scope guard and fallback discriminator only; no delegate claim used as evidence"
+    },
+    {
+      "role": "experiment-verification",
+      "source_path": ".delegates/20260721-193743-1d1e25/experiment-verification/memo.md",
+      "source_sha256": "67519406d18ce6578b75651e0b8534d3a15180e80a1b0d5c9795545d11236085",
+      "promoted_path": "docs/delegate-memos/20260721-193743-experiment-verification.md",
+      "use": "adversarial audit design; Sol independently inspected and tested every relied-on condition"
+    }
+  ],
+  "principal_audit": "Sol inspected the durable lab state, segment-33 run metadata and logs, all 33 artifacts, the production driver, maintained data page, current upper-bound paper, and primary 656-class paper; then wrote and ran the cold prefix auditor. No new subagent was spawned."
+}

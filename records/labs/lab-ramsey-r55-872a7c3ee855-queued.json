@@ -3,9 +3,9 @@
   "id": "lab-ramsey-r55-872a7c3ee855",
   "review": {
     "decision": "continue",
-    "reason": "Independent replay accepted all 17 ordered host receipts and compressed hashes; exact bitset/NetworkX summaries agree, throughput remains above floor, artifact growth is negligible, and host memory/disk reserves remained healthy.",
-    "reviewer": "resource-audit-2026-07-21",
-    "reviewed_at": "2026-07-21T19:27:42.845486+00:00",
-    "segment": 17
+    "reason": "Segment 33 exited cleanly, passed all continuation thresholds, and survived an independent cold audit of every positive mapping stream, all saved pullbacks, an empty control, two exact graph checkers, and four corruption gates. Its scope remains explicitly limited to hosts 0 through 32.",
+    "reviewer": "proof-factory:ramsey-r55-20260721-195309-1f8700",
+    "reviewed_at": "2026-07-21T19:53:12.220061+00:00",
+    "segment": 33
   }
 }

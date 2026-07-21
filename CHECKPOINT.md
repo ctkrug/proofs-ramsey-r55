@@ -1,4 +1,105 @@
-# R(5,5) research checkpoint — epoch 17
+# R(5,5) research checkpoint — epoch 18
+
+Recorded: 2026-07-21 19:48 UTC
+
+## Epoch-18 outcome: segment 33 cold-audited; continue the census
+
+Lab job `lab-ramsey-r55-872a7c3ee855` reached its mandatory review boundary
+after canonical hosts `0..32` of `656`.  The durable segment-33 receipt records
+return code 0, 22.875 seconds runner duration, 53,576 KiB peak child RSS,
+throughput `0.043469134241336894` host/s, 817 bytes of artifact growth, and no
+threshold failure.  The checkpoint, progress, and manifest hashes are:
+
+```text
+checkpoint  2d386e367ff62f257079f888f4b5bdaca4efe0ef4e11d8a5ebcb7c5f24142964
+progress    8e922b853a4e84ab52db9cb662c876fda7e234ee5fbb9bc0e218de31c90e591f
+manifest    f5f463acec4b11bcaf86fd156a701862437122bd6511b02900faa9c2719e2fdf
+```
+
+The standalone prefix auditor imports neither production enumerator.  It
+reparsed the frozen corpus (SHA-256
+`067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb`),
+verified canonical manifest/checkpoint coverage and all 33 gzip hashes and
+summaries, and recomputed the exact 29,329-byte artifact total.
+
+Six hosts contain embeddings:
+
+```text
+host index  case              embeddings  unique vectors
+11          source_record_12           2               2
+17          source_record_18           2               1
+18          source_record_19           2               1
+19          source_record_20           2               1
+20          source_record_21           2               1
+24          source_record_25           2               2
+```
+
+For all 12 saved embeddings, the audit checked the induced order-30 map,
+complete tied-row order set, 426-bit pullback, and full host equality.  Fresh
+NetworkX 3.3 VF2 runs regenerated the exact sorted mapping-stream SHA-256 for
+each of the six positive hosts; a cold empty control at host 0 returned zero.
+The eight distinct vectors reconstructed eight labelled Ramsey(5,5,42)
+graphs, all accepted by the direct-combinations Python checker and recursive-
+bitset C checker.  A boundary-edge flip, map transposition, residual-order
+deletion, and manifest-hash alteration were all rejected.
+
+The decisive cold-audit artifacts are:
+
+```text
+checker       69d01e8bd189498c70390404de034b354023ffe2fae812ee7c287c64b7c46687
+audit JSON    4bfbbedcc0dd23a688431969693274915e19c892f56c3b84139f43f04a872c98
+eight graphs  4e99010340746b1c2ffdd81fec3da6b51342891d8cd906d8669fe1ac27053bcf
+experiment    f0e89bcdf5d91ba5db08a8da207385d90f8a5e7ec2dc103495d664c1a8af92e2
+```
+
+The strengthened audit took 139.167 seconds, slightly above the two-minute
+interactive threshold.  Future cold tranche audits must therefore be queued
+as checkpointed lab work rather than run interactively.
+
+This establishes only the exact 33-host supplied-corpus prefix.  It emits no
+block, proves no completeness statement about the 656 controls, excludes no
+unknown order-42 class, and leaves `43 <= R(5,5) <= 46` unchanged.  The lab
+review decision is `continue`.
+
+### Exact continuation
+
+After the epoch receipt applies the review, inspect
+`/root/proof-factory/state/labs/jobs/lab-ramsey-r55-872a7c3ee855.json` and
+confirm that execution resumes from `next_host = 33` without an input-hash or
+threshold failure.  At the next `completed_awaiting_review` boundary, verify
+the new immutable receipt and hashes before another decision.  Do not emit a
+known-class block or run residual SAT until all 656 hosts are present in
+canonical order and a final cold audit has:
+
+1. regenerated the complete mapping stream of every positive host;
+2. cold-enumerated at least 32 predeclared empty hosts stratified across source
+   and complement halves;
+3. replayed every tied-row order and 426-bit pullback;
+4. run both exact five-set checkers on every distinct retained vector; and
+5. passed the four mutation gates.
+
+Stop and redirect on any mismatch, host timeout, throughput below `0.001`
+host/s, segment growth above 200 MB, or loss of decision value.  If stopped,
+run the saved challenger discriminator: deletion-minimize one certified
+two-orbit raw K5-clause core and close that route if its first exact core
+exceeds 20 clauses.
+
+## Epoch-18 disclosure
+
+GPT-5.6 Sol was principal investigator.  Supplied GPT-5.6 Terra
+challenger-prior-art and experiment-verification memos were advisory; their
+scoped promotions and hashes are recorded in
+`records/delegate-provenance-epoch18.json`.  No new subagent was spawned.
+Deterministic tools were Python 3.12.3, NetworkX 3.3, GCC 13.3.0, the existing
+Python and C exact graph checkers, SHA-256, and the computational-researcher
+experiment harness.  Web review used the maintained McKay data page, the
+Angeltveit--McKay `R(5,5) <= 46` paper, and the McKay--Radziszowski primary
+656-control paper.  No SAT solver, CAS, proof assistant, package installation,
+system change, external publication, or remote account was used.
+
+---
+
+# Prior checkpoint — epoch 17
 
 Recorded: 2026-07-21 18:31 UTC
 

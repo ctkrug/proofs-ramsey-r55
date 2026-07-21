@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "id": "20260721-194527-481cfe",
+  "name": "r55-known-class-census-tranche33-full-cold-audit",
+  "hypothesis": "The canonical 33-host prefix is hash-consistent; fresh VF2 exactly regenerates every positive mapping stream and a fixed empty control; every saved pullback reconstructs; all distinct vectors pass two exact five-set checkers; four mutations fail.",
+  "expected_signal": "Audit JSON reports prefix pass, six cold positive stream hashes equal the manifest, cold host 0 count zero, twelve replayed embeddings, eight dual-checked vectors, and four rejected mutations.",
+  "command": [
+    "python3",
+    "checkers/known_class_embedding_tranche_audit.py",
+    "sources/r55_42some.g6",
+    "artifacts/known-class-embedding-census/output/manifest.jsonl",
+    "artifacts/known-class-embedding-census/checkpoint.json",
+    "artifacts/known-class-embedding-census/progress.json",
+    "33",
+    "checkers/checker_a.py",
+    "checkers/checker_b.c",
+    "artifacts/known_class_embedding_tranche33_audit.json"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 180,
+  "memory_limit_mb": 1000,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-21T19:45:27.541313+00:00",
+  "finished_at": "2026-07-21T19:47:46.708741+00:00",
+  "duration_seconds": 139.167,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "43fdcc4085c8ad3e401dbc964340f53b30cd64c9",
+  "source_urls": [
+    "https://users.cecs.anu.edu.au/~bdm/data/ramsey.html"
+  ],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/known_class_embedding_tranche_audit.py": "69d01e8bd189498c70390404de034b354023ffe2fae812ee7c287c64b7c46687",
+    "/root/proof-factory/research/ramsey-r55/workspace/sources/r55_42some.g6": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/known-class-embedding-census/output/manifest.jsonl": "f5f463acec4b11bcaf86fd156a701862437122bd6511b02900faa9c2719e2fdf",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/known-class-embedding-census/checkpoint.json": "2d386e367ff62f257079f888f4b5bdaca4efe0ef4e11d8a5ebcb7c5f24142964",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/known-class-embedding-census/progress.json": "8e922b853a4e84ab52db9cb662c876fda7e234ee5fbb9bc0e218de31c90e591f",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/checker_a.py": "b7f28adfec792139acce538ca879b775a0180467763b413e1a464672acddd259",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/checker_b.c": "40f719bb36f8d7d3db3a4b949dce8b20abd49499f57f7d5b651b718658014d2e",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/known_class_embedding_tranche33_audit.json": "fc33e05be0326857531a25f4049cce256a21bace5f5503432b591904705b54e6"
+  },
+  "peak_child_memory_rusage": 39416,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "2d4ec4e6cf3101ce1c5610b279e79f81028b2813efa51741d0c3dffc81c21e2a",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

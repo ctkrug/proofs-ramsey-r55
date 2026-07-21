@@ -1,0 +1,331 @@
+{
+  "schema_version": 1,
+  "kind": "proof-factory-attempt-delta-manifest",
+  "attempt_id": "ramsey-r55-20260721-195309-1f8700",
+  "created_at": "2026-07-21T19:53:12.125426+00:00",
+  "workspace": "/root/proof-factory/research/ramsey-r55/workspace",
+  "mutable_projection_patterns": [
+    ".delegates/**",
+    ".git/**",
+    ".pytest_cache/**",
+    ".venv/**",
+    "CHECKPOINT.md",
+    "README.md",
+    "__pycache__/**",
+    "docs/DOSSIER.md",
+    "lab-archive/**",
+    "lab-queue/**",
+    "records/problem.json",
+    "records/research-state.json",
+    "venv/**"
+  ],
+  "claimed_evidence_paths": [
+    ".proof-experiments/20260721-194527-481cfe/experiment.json",
+    ".proof-experiments/20260721-194527-481cfe/stdout.txt",
+    "artifacts/known_class_embedding_tranche33_audit.json",
+    "artifacts/known_class_embedding_tranche33_graphs.g6",
+    "checkers/checker_a.py",
+    "checkers/checker_b.c",
+    "checkers/known_class_embedding_tranche_audit.py",
+    "records/labs/lab-ramsey-r55-872a7c3ee855-completed-awaiting-review-segment-33.json",
+    "scripts/run_known_class_embedding_census.py",
+    "sources/r55_42some.g6"
+  ],
+  "artifact_count": 23,
+  "artifacts": [
+    {
+      "path": ".delegates/20260721-193743-1d1e25/challenger-prior-art/memo.md",
+      "role": "immutable_artifact",
+      "change": "added",
+      "claimed_evidence": false,
+      "after": {
+        "kind": "file",
+        "sha256": "1a807594365db6d55a79705df9ea0f5f36e95c126a3a441f07e7205d4e1d1976",
+        "size": 619
+      }
+    },
+    {
+      "path": ".delegates/20260721-193743-1d1e25/experiment-verification/memo.md",
+      "role": "immutable_artifact",
+      "change": "added",
+      "claimed_evidence": false,
+      "after": {
+        "kind": "file",
+        "sha256": "67519406d18ce6578b75651e0b8534d3a15180e80a1b0d5c9795545d11236085",
+        "size": 3667
+      }
+    },
+    {
+      "path": ".git/logs/refs/remotes/origin/main",
+      "role": "immutable_artifact",
+      "change": "modified",
+      "claimed_evidence": false,
+      "before": {
+        "kind": "file",
+        "sha256": "01fd9848ae7e9e92db71b80b6704b56080062bc1c995e06fabb7fd2ce5747f60",
+        "size": 2810
+      },
+      "after": {
+        "kind": "file",
+        "sha256": "504d0b0fda99ece49e2eb6be2b5968b899e89bb2eb5ef375e8224b889a51660c",
+        "size": 2954
+      }
+    },
+    {
+      "path": ".git/refs/remotes/origin/main",
+      "role": "immutable_artifact",
+      "change": "modified",
+      "claimed_evidence": false,
+      "before": {
+        "kind": "file",
+        "sha256": "85d07995696063e62277b6dd55543a87a0454da945f8aaacb4808b18523feff3",
+        "size": 41
+      },
+      "after": {
+        "kind": "file",
+        "sha256": "5b30851767cce299840752a311aeec1a278d009244e2731545138886b339a0ec",
+        "size": 41
+      }
+    },
+    {
+      "path": ".proof-experiments/20260721-194331-020393/experiment.json",
+      "role": "immutable_artifact",
+      "change": "added",
+      "claimed_evidence": false,
+      "after": {
+        "kind": "file",
+        "sha256": "4aa5d0876f3948b774f9a58e6c9fb35a43d633934ae0b6025e17c2a564f3e2b3",
+        "size": 3022
+      }
+    },
+    {
+      "path": ".proof-experiments/20260721-194331-020393/stderr.txt",
+      "role": "immutable_artifact",
+      "change": "added",
+      "claimed_evidence": false,
+      "after": {
+        "kind": "file",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size": 0
+      }
+    },
+    {
+      "path": ".proof-experiments/20260721-194331-020393/stdout.txt",
+      "role": "immutable_artifact",
+      "change": "added",
+      "claimed_evidence": false,
+      "after": {
+        "kind": "file",
+        "sha256": "94b26e0c90b8901cbae630f093629eb688ee404b9094f623a32fe64187af06c2",
+        "size": 1840
+      }
+    },
+    {
+      "path": ".proof-experiments/20260721-194527-481cfe/experiment.json",
+      "role": "immutable_artifact",
+      "change": "added",
+      "claimed_evidence": true,
+      "after": {
+        "kind": "file",
+        "sha256": "f0e89bcdf5d91ba5db08a8da207385d90f8a5e7ec2dc103495d664c1a8af92e2",
+        "size": 3238
+      }
+    },
+    {
+      "path": ".proof-experiments/20260721-194527-481cfe/stderr.txt",
+      "role": "immutable_artifact",
+      "change": "added",
+      "claimed_evidence": false,
+      "after": {
+        "kind": "file",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size": 0
+      }
+    },
+    {
+      "path": ".proof-experiments/20260721-194527-481cfe/stdout.txt",
+      "role": "immutable_artifact",
+      "change": "added",
+      "claimed_evidence": true,
+      "after": {
+        "kind": "file",
+        "sha256": "2d4ec4e6cf3101ce1c5610b279e79f81028b2813efa51741d0c3dffc81c21e2a",
+        "size": 2679
+      }
+    },
+    {
+      "path": "CHECKPOINT.md",
+      "role": "mutable_projection",
+      "change": "modified",
+      "claimed_evidence": false,
+      "before": {
+        "kind": "file",
+        "sha256": "d1c1f78a9f0178f305a95f89d133cdf6c17b3e3388fa867872b4b6ba9bd66592",
+        "size": 68689
+      },
+      "after": {
+        "kind": "file",
+        "sha256": "e0442af551092cca12881e7ed897b622a540b85f469eec9fb38d4dce79fa31aa",
+        "size": 73531
+      }
+    },
+    {
+      "path": "artifacts/known_class_embedding_tranche33_audit.json",
+      "role": "immutable_artifact",
+      "change": "added",
+      "claimed_evidence": true,
+      "after": {
+        "kind": "file",
+        "sha256": "4bfbbedcc0dd23a688431969693274915e19c892f56c3b84139f43f04a872c98",
+        "size": 3313
+      }
+    },
+    {
+      "path": "artifacts/known_class_embedding_tranche33_graphs.g6",
+      "role": "immutable_artifact",
+      "change": "added",
+      "claimed_evidence": true,
+      "after": {
+        "kind": "file",
+        "sha256": "4e99010340746b1c2ffdd81fec3da6b51342891d8cd906d8669fe1ac27053bcf",
+        "size": 1168
+      }
+    },
+    {
+      "path": "checkers/__pycache__/known_class_embedding_tranche_audit.cpython-312.pyc",
+      "role": "mutable_projection",
+      "change": "added",
+      "claimed_evidence": false,
+      "after": {
+        "kind": "file",
+        "sha256": "38813b31deed6340a1385f71bcf9f434ed9993e733373f255d97dd1fc7639026",
+        "size": 31826
+      }
+    },
+    {
+      "path": "checkers/checker_a.py",
+      "role": "immutable_artifact",
+      "change": "unchanged",
+      "claimed_evidence": true,
+      "before": {
+        "kind": "file",
+        "sha256": "b7f28adfec792139acce538ca879b775a0180467763b413e1a464672acddd259",
+        "size": 6681
+      },
+      "after": {
+        "kind": "file",
+        "sha256": "b7f28adfec792139acce538ca879b775a0180467763b413e1a464672acddd259",
+        "size": 6681
+      }
+    },
+    {
+      "path": "checkers/checker_b.c",
+      "role": "immutable_artifact",
+      "change": "unchanged",
+      "claimed_evidence": true,
+      "before": {
+        "kind": "file",
+        "sha256": "40f719bb36f8d7d3db3a4b949dce8b20abd49499f57f7d5b651b718658014d2e",
+        "size": 13864
+      },
+      "after": {
+        "kind": "file",
+        "sha256": "40f719bb36f8d7d3db3a4b949dce8b20abd49499f57f7d5b651b718658014d2e",
+        "size": 13864
+      }
+    },
+    {
+      "path": "checkers/known_class_embedding_tranche_audit.py",
+      "role": "immutable_artifact",
+      "change": "added",
+      "claimed_evidence": true,
+      "after": {
+        "kind": "file",
+        "sha256": "69d01e8bd189498c70390404de034b354023ffe2fae812ee7c287c64b7c46687",
+        "size": 21473
+      }
+    },
+    {
+      "path": "docs/delegate-memos/20260721-193743-challenger-prior-art.md",
+      "role": "immutable_artifact",
+      "change": "added",
+      "claimed_evidence": false,
+      "after": {
+        "kind": "file",
+        "sha256": "1cff6203f0dd14069ddc7d6297d13bc60302bc2737ccf37055bc78142c436b3f",
+        "size": 766
+      }
+    },
+    {
+      "path": "docs/delegate-memos/20260721-193743-experiment-verification.md",
+      "role": "immutable_artifact",
+      "change": "added",
+      "claimed_evidence": false,
+      "after": {
+        "kind": "file",
+        "sha256": "a930028792cc57f14ed1e13b7e3b839cf7b6b9f4d7fdc286c9ab2574b86cd4de",
+        "size": 954
+      }
+    },
+    {
+      "path": "records/delegate-provenance-epoch18.json",
+      "role": "immutable_artifact",
+      "change": "added",
+      "claimed_evidence": false,
+      "after": {
+        "kind": "file",
+        "sha256": "cf832d6cd04d195cf54a26212f70c9afc461913e500cd1aa5d7e5ce49d8da7c1",
+        "size": 1289
+      }
+    },
+    {
+      "path": "records/labs/lab-ramsey-r55-872a7c3ee855-completed-awaiting-review-segment-33.json",
+      "role": "immutable_artifact",
+      "change": "unchanged",
+      "claimed_evidence": true,
+      "before": {
+        "kind": "file",
+        "sha256": "be5bd6c50ee33ea761ad8324949142ac19fe119387d063293ac65e53ce273114",
+        "size": 8270
+      },
+      "after": {
+        "kind": "file",
+        "sha256": "be5bd6c50ee33ea761ad8324949142ac19fe119387d063293ac65e53ce273114",
+        "size": 8270
+      }
+    },
+    {
+      "path": "scripts/run_known_class_embedding_census.py",
+      "role": "immutable_artifact",
+      "change": "unchanged",
+      "claimed_evidence": true,
+      "before": {
+        "kind": "file",
+        "sha256": "eac4d6f6f71abcc9eec0491a3a384acca73c0bbbe559e4906e9f4faa98028e78",
+        "size": 5988
+      },
+      "after": {
+        "kind": "file",
+        "sha256": "eac4d6f6f71abcc9eec0491a3a384acca73c0bbbe559e4906e9f4faa98028e78",
+        "size": 5988
+      }
+    },
+    {
+      "path": "sources/r55_42some.g6",
+      "role": "immutable_artifact",
+      "change": "unchanged",
+      "claimed_evidence": true,
+      "before": {
+        "kind": "file",
+        "sha256": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb",
+        "size": 47888
+      },
+      "after": {
+        "kind": "file",
+        "sha256": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb",
+        "size": 47888
+      }
+    }
+  ],
+  "content_sha256": "b448f075b1d4d03a5786b9499325b20e1ffbc49b194e6e182b430f4c9e15210b"
+}

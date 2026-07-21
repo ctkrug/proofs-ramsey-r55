@@ -1,0 +1,3 @@
+Memo saved: [memo.md](/root/proof-factory/research/ramsey-r55/workspace/.delegates/20260721-193743-1d1e25/challenger-prior-art/memo.md)
+
+Best challenger: raw-origin proof-core compression, with a one-slice ≤20-origin discriminator. The incumbent census remains useful but only for supplied classes within its frozen-core boundary; at 33/656 it supports no complete block. Historical methods already saturated the 656 controls, which remain conjectural rather than exhaustive. [McKay–Radziszowski](https://users.cecs.anu.edu.au/~bdm/papers/r55.pdf) [Dynamic Survey rev. 18](https://www.cs.rit.edu/~spr/ElJC/sur.pdf)

@@ -1,0 +1,108 @@
+{
+  "archive_limit": "Production artifacts preserve the full custom-DFS stream but only the NetworkX summary; this audit cold-reruns and exactly hashes VF2 streams for every positive prefix host, plus the named empty sample.",
+  "cold_empty_sample": {
+    "indices": [
+      0
+    ],
+    "networkx_version": "3.3",
+    "vf2_counts": {
+      "0": 0
+    }
+  },
+  "cold_positive_streams": {
+    "hosts": {
+      "11": {
+        "embedding_count": 2,
+        "mapping_stream_sha256": "f1002075411fa2c16d65031ae5ea1baa3fa345a4468099b71fd2af43ad674598"
+      },
+      "17": {
+        "embedding_count": 2,
+        "mapping_stream_sha256": "1a0617c1a93ea6927e384c2f4379ca6740c0f95a868cb8b9da7da32de026927a"
+      },
+      "18": {
+        "embedding_count": 2,
+        "mapping_stream_sha256": "f05c56651357b3d4c4d6c096e2669a49a7cbabc43c2ed8c968833c97f12d8b24"
+      },
+      "19": {
+        "embedding_count": 2,
+        "mapping_stream_sha256": "1cb4e5aecc64478abdcacfb754c880506385993615247c2b4beee1f6cd289c3b"
+      },
+      "20": {
+        "embedding_count": 2,
+        "mapping_stream_sha256": "3c056f6eb5ef90f55ee7b882ff5da4cd4ad08009516409513f3b0f7e6a428a3f"
+      },
+      "24": {
+        "embedding_count": 2,
+        "mapping_stream_sha256": "93082a997b34ab097bde092b6abb1d00d5e5bde04851795f51a19864697c680f"
+      }
+    },
+    "networkx_version": "3.3"
+  },
+  "coverage": {
+    "artifact_bytes": 29329,
+    "distinct_vectors": 8,
+    "hosts": 33,
+    "positive_embedding_total": 12,
+    "positive_hosts": [
+      {
+        "case": "source_record_12",
+        "embedding_count": 2,
+        "host_index": 11,
+        "unique_vector_count": 2
+      },
+      {
+        "case": "source_record_18",
+        "embedding_count": 2,
+        "host_index": 17,
+        "unique_vector_count": 1
+      },
+      {
+        "case": "source_record_19",
+        "embedding_count": 2,
+        "host_index": 18,
+        "unique_vector_count": 1
+      },
+      {
+        "case": "source_record_20",
+        "embedding_count": 2,
+        "host_index": 19,
+        "unique_vector_count": 1
+      },
+      {
+        "case": "source_record_21",
+        "embedding_count": 2,
+        "host_index": 20,
+        "unique_vector_count": 1
+      },
+      {
+        "case": "source_record_25",
+        "embedding_count": 2,
+        "host_index": 24,
+        "unique_vector_count": 2
+      }
+    ]
+  },
+  "dual_five_set_check": {
+    "all_one_k5": true,
+    "all_zero_k5": true,
+    "checker_a": "A-direct-combinations",
+    "checker_b": "B-recursive-bitsets",
+    "graphs": 8
+  },
+  "hashes": {
+    "checkpoint": "2d386e367ff62f257079f888f4b5bdaca4efe0ef4e11d8a5ebcb7c5f24142964",
+    "corpus": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb",
+    "graph6": "4e99010340746b1c2ffdd81fec3da6b51342891d8cd906d8669fe1ac27053bcf",
+    "manifest": "f5f463acec4b11bcaf86fd156a701862437122bd6511b02900faa9c2719e2fdf",
+    "progress": "8e922b853a4e84ab52db9cb662c876fda7e234ee5fbb9bc0e218de31c90e591f"
+  },
+  "mutations": {
+    "boundary_edge_flip_rejected": true,
+    "manifest_hash_alteration_rejected": true,
+    "map_transposition_rejected": true,
+    "residual_order_deletion_rejected": true
+  },
+  "schema_version": 1,
+  "scope": "exactly canonical hosts 0..32 of 656",
+  "status": "known_class_embedding_prefix_audit_pass"
+}
