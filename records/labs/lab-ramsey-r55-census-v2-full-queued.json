@@ -1,0 +1,11 @@
+{
+  "event": "queued",
+  "id": "lab-ramsey-r55-census-v2-full",
+  "review": {
+    "decision": "continue",
+    "reason": "Fresh full-run pilot host 0 completed in 21.308 seconds with 20.033 aggregate host seconds below the 30-second gate; immutable inputs match; stderr is empty; checkpoint and progress are durable; compressed artifact hash matches the manifest; and bitset/VF2 counts plus mapping/vector stream hashes agree exactly.",
+    "reviewer": "remediation-phase5-operator",
+    "reviewed_at": "2026-07-21T22:55:30.055747+00:00",
+    "segment": 1
+  }
+}
