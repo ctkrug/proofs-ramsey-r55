@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "id": "20260721-041804-395e81",
+  "name": "r55-two-orbit-burden-one-sweep",
+  "hypothesis": "At least one of the 20 fixed-background two-orbit slices has raw monochromatic-K5 burden at most one",
+  "expected_signal": "Either a dual-full-scan-checked burden-one model or 40 independently DRAT-checked UNSAT encodings after raw-origin and specialization controls",
+  "command": [
+    "python3",
+    "scripts/run_two_orbit_burden_one_gate.py",
+    "checkers/two_orbit_burden_a.py",
+    "checkers/two_orbit_burden_b.c",
+    "checkers/publisher_radius1_a.py",
+    "checkers/publisher_radius1_b.c",
+    "sources/retrievals/springer_supplementary_data4_audit1.txt",
+    "sources/retrievals/springer_supplementary_data4_audit2.txt",
+    "artifacts/two_orbit_slice_exact_report.json",
+    "artifacts/two_orbit_slice_adversarial_audit.json",
+    "artifacts/distance6_slice_exact_report.json",
+    "tools/drat-trim/drat-trim.c",
+    "artifacts/two_orbit_burden_one",
+    "artifacts/two_orbit_burden_one_exact_report.json"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 1800,
+  "memory_limit_mb": 1024,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-21T04:18:04.924592+00:00",
+  "finished_at": "2026-07-21T04:20:35.252560+00:00",
+  "duration_seconds": 150.328,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "25e01f9b520bbd09447b118c18665f90dcf27cad",
+  "source_urls": [
+    "https://doi.org/10.1038/s41467-018-07327-2"
+  ],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/scripts/run_two_orbit_burden_one_gate.py": "168a299b6e9be5ba37ce47dbe6d1e73724fe62992490332dca70092e26f43574",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/two_orbit_burden_a.py": "2c226cddcbbe70e88cd7f66edb6f1f0e319d197803ad72fb415c821512b32a18",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/two_orbit_burden_b.c": "ebcf158bd725d59e289d8dde99bb6954e853458f05a4eec241dde6775b87f22d",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/publisher_radius1_a.py": "f34ea148c36ab74b0c11784f9b4d333dc915ef0a6bd3d70c7ef9c2aa03f5a535",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/publisher_radius1_b.c": "b1bfd2a51511ae0f3e6caccbaa29235cf65df2f8a3cae7ccdfce934af1f5914a",
+    "/root/proof-factory/research/ramsey-r55/workspace/sources/retrievals/springer_supplementary_data4_audit1.txt": "c2429869f6fa47ab7388134b580b014efae01e6f0e474f5bab2233afb1ef6990",
+    "/root/proof-factory/research/ramsey-r55/workspace/sources/retrievals/springer_supplementary_data4_audit2.txt": "c2429869f6fa47ab7388134b580b014efae01e6f0e474f5bab2233afb1ef6990",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/two_orbit_slice_exact_report.json": "0456c5764898ab28d248d20912f26fd6708cac5d283151e1673110ce73690627",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/two_orbit_slice_adversarial_audit.json": "38f2b91ca963760dc1fed0107be7fef0c40d41d3fd7da2a7104103447c6b36c8",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/distance6_slice_exact_report.json": "8c8c64a82c84913222578fad537cc9beb73e74de5260a84090b9406f798a9fb1",
+    "/root/proof-factory/research/ramsey-r55/workspace/tools/drat-trim/drat-trim.c": "d834b649f437e091597f5347f259b9f681087f89ca0844d0cee250a1a1a0c2ee"
+  },
+  "peak_child_memory_rusage": 65024,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "9093bf70d2d710457549388f9e74842f9db4d72834a79c285fb686969a9f2dfa",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

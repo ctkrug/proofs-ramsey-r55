@@ -1,0 +1,7 @@
+{
+  "proofs_verified": 2,
+  "raw_active_origins": 215,
+  "report": "/root/proof-factory/research/ramsey-r55/workspace/artifacts/two_orbit_burden_one_pilot_report.json",
+  "report_sha256": "8e6610227477cd6fc1f2433817cc3e3ffd18982bff4c34e2440d5c4641ec237a",
+  "status": "two_orbit_burden_one_pilot_pass"
+}

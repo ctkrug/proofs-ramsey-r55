@@ -1,0 +1,40 @@
+{
+  "conclusion": "Both independent raw-origin encodings prove the known distance-6 slice has no assignment of burden at most one.",
+  "exact_formula_audits": true,
+  "generator_hashes": {
+    "c_binary": "58641ed373f7813a1a5dcee4b5c80cc3024f332b3625ce89560e9f56a6f8e859",
+    "c_source": "ebcf158bd725d59e289d8dde99bb6954e853458f05a4eec241dde6775b87f22d",
+    "python": "2c226cddcbbe70e88cd7f66edb6f1f0e319d197803ad72fb415c821512b32a18"
+  },
+  "origin_mapping_byte_identity": true,
+  "origin_mapping_sha256": "2580c7d0f64ee66ab6a8c28ced0363a270c22d0c42693de7d4e7280d3542ce84",
+  "proof_checker": {
+    "binary_sha256": "8b49df2cde411d9e551ae1dd9f818a3bfd7411722ad40a84ac45c661042e3e36",
+    "source_sha256": "d834b649f437e091597f5347f259b9f681087f89ca0844d0cee250a1a1a0c2ee"
+  },
+  "raw_active_origins": 215,
+  "raw_ledger_byte_identity": true,
+  "raw_ledger_sha256": "c84b2ad1bfb7b30d7b19d4f0e27cf22ee394e6d20118f755b1eb270c1bd77bfa",
+  "results": {
+    "c_suffix": {
+      "independent_drat_check": "verified",
+      "proof_bytes": 1823,
+      "proof_checker_seconds": 0.13534365687519312,
+      "proof_sha256": "dde3b00f6b7e6f9309c19838c3215a63ab6b0996c6873e55c9d57c04b97f1836",
+      "solver_seconds": 0.007881058845669031,
+      "status": "unsat"
+    },
+    "python_prefix": {
+      "independent_drat_check": "verified",
+      "proof_bytes": 44523,
+      "proof_checker_seconds": 0.13836317183449864,
+      "proof_sha256": "85a804bbf848ac3f66f5609a181ed39b239e03e66216741b72cef1828af2aaae",
+      "solver_seconds": 0.011698364047333598,
+      "status": "unsat"
+    }
+  },
+  "schema_version": 1,
+  "scope": "distance-6-only slice, raw monochromatic-K5 burden at most one",
+  "source_sha256": "c2429869f6fa47ab7388134b580b014efae01e6f0e474f5bab2233afb1ef6990",
+  "status": "two_orbit_burden_one_pilot_pass"
+}

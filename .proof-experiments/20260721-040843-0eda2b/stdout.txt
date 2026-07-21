@@ -1,0 +1,62 @@
+{
+  "direct_rescans": 8,
+  "families": {
+    "all_two_edge_flips": {
+      "minimizers": [
+        [
+          [
+            6,
+            12
+          ],
+          [
+            9,
+            15
+          ]
+        ],
+        [
+          [
+            33,
+            39
+          ],
+          [
+            36,
+            42
+          ]
+        ]
+      ],
+      "minimum": 2,
+      "pairs": 407253
+    },
+    "deletion_remainder_change_for_every_valid_deletion": {
+      "minimizers": [
+        [
+          [
+            6,
+            12
+          ],
+          [
+            9,
+            15
+          ]
+        ],
+        [
+          [
+            33,
+            39
+          ],
+          [
+            36,
+            42
+          ]
+        ]
+      ],
+      "minimum": 2,
+      "pairs": 403809
+    }
+  },
+  "ledger": "/tmp/r55-epoch9-radius2-scores.u16le",
+  "ledger_sha256": "60ba5158f8d7579785e026a9f00f0722a61fb8d47ed4d279ae128c419c524edb",
+  "report": "/tmp/r55-epoch9-radius2-report.json",
+  "report_sha256": "0811fba0e727d7ba9ccdf8a4d7b421ab3ecdf1be2f56106a658208ccf77f5fe6",
+  "status": "publisher_seed_radius2_pass"
+}

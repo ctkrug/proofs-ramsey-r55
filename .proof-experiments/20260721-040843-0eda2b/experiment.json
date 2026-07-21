@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "id": "20260721-040843-0eda2b",
+  "name": "r55-epoch9-radius2-prerequisite",
+  "hypothesis": "The retained radius-two exact minimum and minimizer classification replay under the frozen publisher bytes",
+  "expected_signal": "Both implementations reproduce all 407253 scores and the exact retained report facts",
+  "command": [
+    "python3",
+    "scripts/run_publisher_radius2_gate.py",
+    "checkers/publisher_radius2_a.py",
+    "checkers/publisher_radius2_b.c",
+    "sources/retrievals/springer_supplementary_data4_audit1.txt",
+    "sources/retrievals/springer_supplementary_data4_audit2.txt",
+    "artifacts/publisher_seed_radius1_report.json",
+    "/tmp/r55-epoch9-radius2-scores.u16le",
+    "/tmp/r55-epoch9-radius2-report.json"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 180,
+  "memory_limit_mb": 1024,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-21T04:08:43.236251+00:00",
+  "finished_at": "2026-07-21T04:09:55.550437+00:00",
+  "duration_seconds": 72.314,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "25e01f9b520bbd09447b118c18665f90dcf27cad",
+  "source_urls": [
+    "https://doi.org/10.1038/s41467-018-07327-2"
+  ],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/scripts/run_publisher_radius2_gate.py": "798ed8ec81efa198bec47b56198e7a77ef3dac5e2b2f993ce78f811c0575f543",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/publisher_radius2_a.py": "cf644b78bb0646fe5771c270953f2b4bd48293e16591f3b6342d55d289ec1962",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/publisher_radius2_b.c": "06443bb97a0340d737527bd1d7f882ad65dcbd22407f2de4e022b6127eb5ceb4",
+    "/root/proof-factory/research/ramsey-r55/workspace/sources/retrievals/springer_supplementary_data4_audit1.txt": "c2429869f6fa47ab7388134b580b014efae01e6f0e474f5bab2233afb1ef6990",
+    "/root/proof-factory/research/ramsey-r55/workspace/sources/retrievals/springer_supplementary_data4_audit2.txt": "c2429869f6fa47ab7388134b580b014efae01e6f0e474f5bab2233afb1ef6990",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/publisher_seed_radius1_report.json": "0db3cca75888b70850b60e1b891d8e08349ab0bec6196cd8f4c528603fa04fe9"
+  },
+  "peak_child_memory_rusage": 134504,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "75ac3af7a426eebc7f04afb922a6e00f6c39696204f52d4a458a763fc179bb3b",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "20260721-041736-6aa1db",
+  "name": "r55-two-orbit-burden-one-pilot",
+  "hypothesis": "The retained distance-6 slice has no assignment with raw monochromatic-K5 burden at most one",
+  "expected_signal": "Independent 215-origin prefix and suffix AMO encodings are UNSAT and both DRAT proofs verify within 120 seconds and 1 GiB",
+  "command": [
+    "python3",
+    "scripts/run_two_orbit_burden_one_pilot.py",
+    "checkers/two_orbit_burden_a.py",
+    "checkers/two_orbit_burden_b.c",
+    "sources/retrievals/springer_supplementary_data4_audit1.txt",
+    "sources/retrievals/springer_supplementary_data4_audit2.txt",
+    "tools/drat-trim/drat-trim.c",
+    "artifacts/two_orbit_burden_one_pilot_report.json"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 120,
+  "memory_limit_mb": 1024,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-21T04:17:36.546188+00:00",
+  "finished_at": "2026-07-21T04:17:43.805470+00:00",
+  "duration_seconds": 7.259,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "25e01f9b520bbd09447b118c18665f90dcf27cad",
+  "source_urls": [
+    "https://doi.org/10.1038/s41467-018-07327-2"
+  ],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/scripts/run_two_orbit_burden_one_pilot.py": "e64c62ed59225f74ffb9f064e578a628a93dfb5e2c60712f6dba0074708f9003",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/two_orbit_burden_a.py": "2c226cddcbbe70e88cd7f66edb6f1f0e319d197803ad72fb415c821512b32a18",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/two_orbit_burden_b.c": "ebcf158bd725d59e289d8dde99bb6954e853458f05a4eec241dde6775b87f22d",
+    "/root/proof-factory/research/ramsey-r55/workspace/sources/retrievals/springer_supplementary_data4_audit1.txt": "c2429869f6fa47ab7388134b580b014efae01e6f0e474f5bab2233afb1ef6990",
+    "/root/proof-factory/research/ramsey-r55/workspace/sources/retrievals/springer_supplementary_data4_audit2.txt": "c2429869f6fa47ab7388134b580b014efae01e6f0e474f5bab2233afb1ef6990",
+    "/root/proof-factory/research/ramsey-r55/workspace/tools/drat-trim/drat-trim.c": "d834b649f437e091597f5347f259b9f681087f89ca0844d0cee250a1a1a0c2ee"
+  },
+  "peak_child_memory_rusage": 64256,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "a4c55a8795367f97cc8c72815afc01c22520a046582806b79a9699a17d891331",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

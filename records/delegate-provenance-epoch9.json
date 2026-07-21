@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "epoch": 9,
+  "orchestration": "sol-terra",
+  "principal": {
+    "role": "Sol principal investigator",
+    "model": "gpt-5.6-sol",
+    "responsibility": "Selected and implemented the discriminator, replayed prerequisites, wrote both encodings and the independent audit, executed all proof checks, interpreted scope, and updated durable state."
+  },
+  "delegates": [
+    {
+      "role": "literature-strategy",
+      "model": "gpt-5.6-terra",
+      "original_path": ".delegates/20260721-040002-345120/literature-strategy/memo.md",
+      "original_sha256": "110718d9e81d52d07a4f185c51baafb524349bced97131d2aec73c72af07c40a",
+      "promoted_path": "docs/delegate-memos/20260721-040002-literature-strategy.md",
+      "promoted_sha256": "110718d9e81d52d07a4f185c51baafb524349bced97131d2aec73c72af07c40a",
+      "use": "Advisory route selection and failure-mode checklist; every relied-on claim was independently checked."
+    },
+    {
+      "role": "experiment-verification",
+      "model": "gpt-5.6-terra",
+      "original_path": ".delegates/20260721-040002-345120/experiment-verification/memo.md",
+      "original_sha256": "2c253f4e5720272cdeba81a8aaf438bf309573b215aed3091ea4fac6ee06cc03",
+      "promoted_path": "docs/experiment-verification-burden-one.md",
+      "promoted_sha256": "c2de6a519ca33873ab8ddd64bd37c066e2b46e41dd956600640d583d29047db8",
+      "use": "Advisory encoding sizes, duplicate-origin sentinel, controls, and resource stops; Sol independently implemented and audited them."
+    }
+  ],
+  "evidence_rule": "Delegate agreement was not treated as evidence. Deterministic source hashes, dual raw-origin encodings, SAT certificates, LRAT checking, full K5 scans, and mutation controls are the evidence."
+}
