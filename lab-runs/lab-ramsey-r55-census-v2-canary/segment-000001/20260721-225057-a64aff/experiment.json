@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "id": "20260721-225057-a64aff",
+  "name": "R55 locked census v2 host-0 canary segment 1/1",
+  "hypothesis": "the fresh host-0 segment completes under the aggregate 30-second host gate with exact bitset/VF2 stream agreement",
+  "expected_signal": "one fresh canonical host receipt, exact dual-stream agreement, host_seconds <= 30, and a hash-addressed manifest/checkpoint",
+  "command": [
+    "scripts/run_known_class_embedding_census_locked.sh",
+    "--corpus",
+    "sources/r55_42some.g6",
+    "--checkpoint",
+    "artifacts/known-class-embedding-census-v2-canary/checkpoint.json",
+    "--progress",
+    "artifacts/known-class-embedding-census-v2-canary/progress.json",
+    "--output",
+    "artifacts/known-class-embedding-census-v2-canary/output",
+    "--hosts-per-segment",
+    "1",
+    "--case-seconds",
+    "900",
+    "--total-hosts",
+    "1"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 60,
+  "memory_limit_mb": 1000,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-21T22:50:57.906940+00:00",
+  "finished_at": "2026-07-21T22:51:18.135584+00:00",
+  "duration_seconds": 20.229,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "09eaefc9ce2212f006630e525939936ed50386c8",
+  "source_urls": [],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/scripts/run_known_class_embedding_census_locked.sh": "4641fae36fd53c1b196696cee54cb5d846fcd6907b4a5a65ebb6c723b1c867a7",
+    "/root/proof-factory/research/ramsey-r55/workspace/sources/r55_42some.g6": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb"
+  },
+  "peak_child_memory_rusage": 53500,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "0579684feb9a26f93209535665a995a2adabc3ea1a582a269bdb733965c6eb93",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}
