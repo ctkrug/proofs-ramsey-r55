@@ -1,4 +1,5 @@
 {
+  "event": "checkpointed",
   "schema_version": 2,
   "id": "lab-ramsey-r55-census-v2-full",
   "problem_id": "ramsey-r55",
@@ -43,7 +44,7 @@
   "segment_seconds": 120,
   "memory_mb": 1000,
   "max_segments": 0,
-  "segment": 116,
+  "segment": 115,
   "pilot_segments": 1,
   "review_every_segments": 256,
   "checkpoint_path": "artifacts/known-class-embedding-census-v2/checkpoint.json",
@@ -62,5 +63,30 @@
     "scripts/enumerate_core_embeddings_networkx.py": "c4491591b16394e11d3bf0b907eea8c65a73308e8a2a366e5d594532c7010aaf",
     "sources/r55_42some.g6": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb"
   },
-  "spec_sha256": "43e797eb819b3f0483bb9f7253ad89c8b12a32e43c98ace697c0b381ee1de162"
+  "spec_sha256": "43e797eb819b3f0483bb9f7253ad89c8b12a32e43c98ace697c0b381ee1de162",
+  "recorded_at": "2026-07-21T23:39:57.069892+00:00",
+  "job_id": "lab-ramsey-r55-census-v2-full",
+  "returncode": 0,
+  "duration_seconds": 17.409093,
+  "checkpoint_exists": true,
+  "checkpoint_sha256": "b521b9efec253e0ce00e1f9eea252f47cbb41f6c99c650822ab3a160de383f34",
+  "progress": {
+    "path": "artifacts/known-class-embedding-census-v2/progress.json",
+    "sha256": "24ed9ce48380c1f188a075b3ddf25222543f58e8bfc4ea62bf9a942f876b508c",
+    "completed_units": 115.0,
+    "total_units": 656.0,
+    "delta_units": 1.0,
+    "throughput_per_second": 0.057441246364758926,
+    "artifact_bytes": 103195,
+    "artifact_growth_bytes": 881,
+    "complete": false,
+    "correctness_checks_passed": true,
+    "decision_value_active": true,
+    "message": "reconciled 115/656 hosts with exact stream agreement"
+  },
+  "threshold_failures": [],
+  "runner_result": "{\n  \"experiment_dir\": \"/root/proof-factory/research/ramsey-r55/workspace/lab-runs/lab-ramsey-r55-census-v2-full/segment-000115/20260721-233939-2f7c2a\",\n  \"schema_version\": 1,\n  \"id\": \"20260721-233939-2f7c2a\",\n  \"name\": \"R55 locked full supplied-class embedding census v2 segment 115/open\",\n  \"hypothesis\": \"all induced fixed-core pullbacks over 328 supplied graphs and 328 complements can be exhaustively reconciled by two independent implementations under the aggregate per-host gate\",\n  \"expected_signal\": \"656 canonical host receipts with exact bitset/VF2 mapping and vector-stream agreement, bounded host times, and a hash-addressed compressed manifest\",\n  \"command\": [\n    \"scripts/run_known_class_embedding_census_locked.sh\",\n    \"--corpus\",\n    \"sources/r55_42some.g6\",\n    \"--checkpoint\",\n    \"artifacts/known-class-embedding-census-v2/checkpoint.json\",\n    \"--progress\",\n    \"artifacts/known-class-embedding-census-v2/progress.json\",\n    \"--output\",\n    \"artifacts/known-class-embedding-census-v2/output\",\n    \"--hosts-per-segment\",\n    \"1\",\n    \"--case-seconds\",\n    \"900\",\n    \"--total-hosts\",\n    \"656\"\n  ],\n  \"cwd\": \"/root/proof-factory/research/ramsey-r55/workspace\",\n  \"seed\": 0,\n  \"timeout_seconds\": 120,\n  \"memory_limit_mb\": 1000,\n  \"memory_limit_enforced\": true,\n  \"started_at\": \"2026-07-21T23:39:39.713619+00:00\",\n  \"finished_at\": \"2026-07-21T23:39:57.052647+00:00\",\n  \"duration_seconds\": 17.339,\n  \"returncode\": 0,\n  \"timed_out\": false,\n  \"python\": \"3.12.3\",\n  \"platform\": \"Linux-6.8.0-124-generic-x86_64-with-glibc2.39\",\n  \"git_commit\": \"367614f6da389bf57d9d717704e422b58ec2c1f6\",\n  \"source_urls\": [],\n  \"input_artifacts\": {\n    \"/root/proof-factory/research/ramsey-r55/workspace/scripts/run_known_class_embedding_census_locked.sh\": \"4641fae36fd53c1b196696cee54cb5d846fcd6907b4a5a65ebb6c723b1c867a7\",\n    \"/root/proof-factory/research/ramsey-r55/workspace/sources/r55_42some.g6\": \"067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb\",\n    \"/root/proof-factory/research/ramsey-r55/workspace/artifacts/known-class-embedding-census-v2/checkpoint.json\": \"c0637f633728b96fe93a889371059dd1e5312be7c9a376c3401a35f7fb6f009a\",\n    \"/root/proof-factory/research/ramsey-r55/workspace/artifacts/known-class-embedding-census-v2/progress.json\": \"d3abb834ee8a9650dab20555b158736fd65b3f9b7ee78392aefd267c35b03610\"\n  },\n  \"peak_child_memory_rusage\": 53876,\n  \"peak_child_memory_unit\": \"kilobytes\",\n  \"artifacts\": {\n    \"stdout.txt\": \"83bd29d45e34cd952e22bee78d8bb1b551064d78a073cf97419db93d75877dbf\",\n    \"stderr.txt\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\"\n  }\n}\n",
+  "runner_error": "",
+  "output_root": "lab-runs/lab-ramsey-r55-census-v2-full/segment-000115",
+  "research_event_id": "event-ramsey-r55-a9ff29cee2d6"
 }
