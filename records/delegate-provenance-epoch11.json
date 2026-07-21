@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "epoch": 11,
+  "principal": {
+    "role": "Sol principal investigator",
+    "model": "GPT-5.6 Sol",
+    "actions": "Independently audited the delegate route, implemented and checked the 41-unit normalization, ran the bounded proof-logging experiment and cold audit, and limited the result to UNKNOWN."
+  },
+  "delegates": [
+    {
+      "role": "literature-strategy",
+      "model": "gpt-5.6-terra",
+      "effort": "high",
+      "completion_memo": ".delegates/20260721-080003-b9887c/literature-strategy/memo.md",
+      "completion_memo_sha256": "bde2ce6754d30e345be38c06e387b00f7f5639632efb74141a013ade0ebaff45",
+      "promoted_memo": "docs/delegate-memos/20260721-080003-literature-strategy.md",
+      "promoted_memo_sha256": "34dc3a9a7471c1ac4ed4c91a81bb30842bd28532998a699d11ec064ab86ad9c6"
+    },
+    {
+      "role": "experiment-verification",
+      "model": "gpt-5.6-terra",
+      "effort": "high",
+      "completion_memo": ".delegates/20260721-080003-b9887c/experiment-verification/memo.md",
+      "completion_memo_sha256": "6afe6b415eeecf6e14eb01c2c89538b584d03d47bd1de64d58f98fc26cf35ea2",
+      "promoted_memo": "docs/delegate-memos/20260721-080003-experiment-verification.md",
+      "promoted_memo_sha256": "29cf7cf71db546ef697682ae660b2224c8dabe7dfd135d0d1d7ad6003657f927"
+    }
+  ],
+  "audit_decisions": [
+    "Accepted the fixed-root q=20 route only after independently rederiving its complement/relabel coverage lemma.",
+    "Required the new CNF to be exactly the retained unsymmetrized body plus 41 unit clauses and verified that identity with a standalone checker.",
+    "Accepted the order-6 exhaustive property test and normalized R(3,3,6) DRAT/LRAT control as semantic controls, not as proof of the general lemma.",
+    "Rejected any inference from UNKNOWN, partial DRAT size, supplied-corpus comparison, or almost-regularity to the value of R(5,5).",
+    "Rejected immediate q=17--19 runs after the normalized q=20 monolith also timed out.",
+    "Did not spawn new subagents in the Sol pass."
+  ]
+}

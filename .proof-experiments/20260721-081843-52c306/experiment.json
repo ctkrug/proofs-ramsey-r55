@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "20260721-081843-52c306",
+  "name": "r55-almost-regular-42-q20-normalized-cold-audit",
+  "hypothesis": "The retained normalized packet is exactly the unsymmetrized formula plus 41 audited root units, and its timeout proof stream is not a certificate",
+  "expected_signal": "independent formula replay passes and fresh drat-trim rejects the partial stream",
+  "command": [
+    "python3",
+    "scripts/audit_almost_regular_42_q20_normalized.py",
+    "artifacts/almost_regular_42_q20_normalized_report.json",
+    "artifacts/almost_regular_42_q20_normalized",
+    "artifacts/almost_regular_42_q20/q20.cnf.gz",
+    "checkers/almost_regular_42_normalization_a.py",
+    "checkers/almost_regular_42_ledger_b.c",
+    "tools/drat-trim/drat-trim.c",
+    "artifacts/almost_regular_42_q20_normalized_cold_audit.json",
+    "artifacts/almost_regular_42_q20_normalized/q20-normalized.audit-cold.json"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 600,
+  "memory_limit_mb": 1024,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-21T08:18:43.861054+00:00",
+  "finished_at": "2026-07-21T08:19:06.332822+00:00",
+  "duration_seconds": 22.472,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "8774ffd261edff23648e6d090320a61f9d1f18e8",
+  "source_urls": [
+    "https://www.cs.rit.edu/~spr/PUBL/sur14.pdf"
+  ],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/scripts/audit_almost_regular_42_q20_normalized.py": "3588d27e20ac79ae50c8fe31e645d55b0f4c767d370d6542bedf636ba6ec8985",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/almost_regular_42_q20_normalized_report.json": "c0ee1711e81b6db391bf68a517662e55bd7a92dab3cdd2fab6f6e090a46c5a01",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/almost_regular_42_q20/q20.cnf.gz": "91cadd86837aa2627c2480ab18d7a9df9e1f1a4688b774e6dea5247c35593d9d",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/almost_regular_42_normalization_a.py": "5b6f737c876ea2645a57a9544e4df2fe76403ef4ce7599bdae5a15a03a53177e",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/almost_regular_42_ledger_b.c": "f31a8ff22e5c91faee1bdc7ad2df5488d4d382f95873d6741689201764e10a8e",
+    "/root/proof-factory/research/ramsey-r55/workspace/tools/drat-trim/drat-trim.c": "d834b649f437e091597f5347f259b9f681087f89ca0844d0cee250a1a1a0c2ee"
+  },
+  "peak_child_memory_rusage": 257024,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "b1010371206fd891b107d062b9530f09038879979a7a6213b98b95587ca66407",
+    "stderr.txt": "4146d998b81307fe25ce4d787046fd35da44d02a8dd64a5a47a212344ba4e127"
+  }
+}

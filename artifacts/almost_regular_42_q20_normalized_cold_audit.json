@@ -1,0 +1,29 @@
+{
+  "cnf": {
+    "bytes": 80195935,
+    "clauses": 1844093,
+    "cold_normalization_audit_sha256": "7b5c4d6d3423068e4eef8f8352f55abbf628f6623312d5d46e9595a516f2be39",
+    "exactly_base_plus_41_units": true,
+    "sha256": "87b70753dd07b3fc04ddb62799701a8a379efb2cd5c9ea9ddbd026f6679865dd",
+    "variables": 71421
+  },
+  "independent_c_nested_loop_ramsey_ledger": true,
+  "main_report_sha256": "c0ee1711e81b6db391bf68a517662e55bd7a92dab3cdd2fab6f6e090a46c5a01",
+  "normalization_mutation_replay": {
+    "auxiliary_variable_unit": true,
+    "extra_unit": true,
+    "missing_unit": true,
+    "reversed_unit": true,
+    "shifted_root_variable": true
+  },
+  "partial_proof": {
+    "bytes": 60558002,
+    "drat_trim_returncode": 1,
+    "qualification": "expected non-certificate from a solver timeout",
+    "sha256": "9f62127fecf1f9ebd1b616e4768b7ea20d940da368d59f41c4a2ceca69f22a66",
+    "verified": false
+  },
+  "schema_version": 1,
+  "scope": "artifact integrity, normalization, and bounded-cost audit only; no SAT or UNSAT claim",
+  "status": "almost_regular_42_q20_normalized_cold_audit_pass"
+}

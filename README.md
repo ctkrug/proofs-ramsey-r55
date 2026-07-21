@@ -37,6 +37,14 @@ independently regenerates the production Ramsey-clause ledger in C. CaDiCaL
 1.7.3 returned `UNKNOWN` at 300 seconds; there is no witness or exclusion. The
 retained partial DRAT stream is rejected as a certificate by the cold audit.
 
+The epoch-11 follow-up adds the proved fixed-root representative
+`N(0)={1,...,20}` to the same q=20 band. A standalone checker independently
+reconstructs all 41 unit literals, proves that the normalized CNF is exactly
+the retained unsymmetrized body plus those units, tests the complement/relabel
+convention on all labelled order-6 graphs, and rejects five unit-ledger
+mutations. CaDiCaL 1.7.3 again returned `UNKNOWN` at 300 seconds. The cold
+audit rejects its partial proof stream; this remains a cost result only.
+
 `scripts/run_corpus_gate.py` freezes the mirror acquisition discriminator
 for that corpus (47,888 bytes, SHA-256
 `067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb`).  It
@@ -112,6 +120,40 @@ python3 scripts/audit_almost_regular_42_pilot.py \
   checkers/almost_regular_42_ledger_b.c \
   tools/drat-trim/drat-trim.c \
   artifacts/almost_regular_42_q20_audit.replay.json
+```
+
+Replay the fixed-root q=20 pilot to fresh output paths with:
+
+```bash
+python3 /root/proof-factory/skills/computational-researcher/scripts/run_experiment.py \
+  --name r55-almost-regular-42-q20-normalized-replay \
+  --hypothesis "There exists a Ramsey(5,5,42) graph with every degree in {20,21}" \
+  --expected-signal "checked SAT, checked UNSAT under complement/relabel coverage, or an explicit 300-second UNKNOWN" \
+  --timeout 900 --memory-mb 1024 \
+  --source-url https://www.cs.rit.edu/~spr/PUBL/sur14.pdf \
+  -- python3 scripts/run_almost_regular_42_q20_normalized.py \
+  checkers/almost_regular_42_cnf.py \
+  checkers/almost_regular_42_normalization_a.py \
+  checkers/almost_regular_42_ledger_b.c checkers/checker_b.c \
+  sources/r55_42some.g6 artifacts/authenticated_corpus_report.json \
+  artifacts/almost_regular_42_q20/q20.cnf.gz \
+  tools/drat-trim/drat-trim.c tools/drat-trim/lrat-check.c \
+  artifacts/almost_regular_42_q20_normalized.replay \
+  artifacts/almost_regular_42_q20_normalized_report.replay.json
+```
+
+Cold-audit the normalized packet to fresh report paths with:
+
+```bash
+python3 scripts/audit_almost_regular_42_q20_normalized.py \
+  artifacts/almost_regular_42_q20_normalized_report.json \
+  artifacts/almost_regular_42_q20_normalized \
+  artifacts/almost_regular_42_q20/q20.cnf.gz \
+  checkers/almost_regular_42_normalization_a.py \
+  checkers/almost_regular_42_ledger_b.c \
+  tools/drat-trim/drat-trim.c \
+  artifacts/almost_regular_42_q20_normalized_cold_audit.replay.json \
+  artifacts/almost_regular_42_q20_normalized/q20-normalized.audit-cold.replay.json
 ```
 
 Replay the complete radius-2 gate with:

@@ -90,6 +90,7 @@ def generate(
     order: int,
     clique_size: int,
     degree_q: int | None,
+    fix_root_neighborhood: bool,
     cnf_path: Path,
     map_path: Path,
     summary_path: Path,
@@ -98,6 +99,11 @@ def generate(
         raise ValueError("invalid order or clique size")
     if degree_q is not None and not 0 <= degree_q < order:
         raise ValueError("degree q must be in 0..order-1")
+    if fix_root_neighborhood:
+        if degree_q is None:
+            raise ValueError("root-neighborhood normalization requires degree q")
+        if order != 2 * degree_q + 2:
+            raise ValueError("root-neighborhood normalization requires order = 2*q+2")
     primary = order * (order - 1) // 2
     ramsey_clauses = 2 * math.comb(order, clique_size)
     next_variable = primary + 1
@@ -109,7 +115,8 @@ def generate(
             degree_auxiliary += order * auxiliary
             degree_clauses += order * clauses
     variables = primary + degree_auxiliary
-    clauses = ramsey_clauses + degree_clauses
+    normalization_units = order - 1 if fix_root_neighborhood else 0
+    clauses = ramsey_clauses + degree_clauses + normalization_units
 
     for path in (cnf_path, map_path, summary_path):
         path.parent.mkdir(parents=True, exist_ok=True)
@@ -132,6 +139,11 @@ def generate(
                 )
                 degree_clauses -= emitted
                 degree_auxiliary -= next_variable - before
+        if fix_root_neighborhood:
+            for other in range(1, order):
+                variable = edge_var(0, other)
+                literal = variable if other <= degree_q else -variable
+                stream.write(f"{literal} 0\n")
     if next_variable != variables + 1 or degree_clauses or degree_auxiliary:
         raise AssertionError("counter accounting mismatch")
 
@@ -139,6 +151,10 @@ def generate(
         for high in range(1, order):
             for low in range(high):
                 stream.write(f"{edge_var(low, high)}\t{low}\t{high}\n")
+    unit_lines = [
+        f"{edge_var(0, other) if other <= degree_q else -edge_var(0, other)} 0\n"
+        for other in range(1, order)
+    ] if fix_root_neighborhood and degree_q is not None else []
     payload: dict[str, object] = {
         "checker": "python-itertools-sinz-sequential-counter",
         "order": order,
@@ -148,7 +164,13 @@ def generate(
         "primary_variables": primary,
         "variables": variables,
         "ramsey_clauses": ramsey_clauses,
-        "degree_clauses": clauses - ramsey_clauses,
+        "degree_clauses": clauses - ramsey_clauses - normalization_units,
+        "fix_root_neighborhood": fix_root_neighborhood,
+        "normalization_root": 0 if fix_root_neighborhood else None,
+        "normalization_neighbors": list(range(1, degree_q + 1)) if fix_root_neighborhood and degree_q is not None else [],
+        "normalization_nonneighbors": list(range(degree_q + 1, order)) if fix_root_neighborhood and degree_q is not None else [],
+        "normalization_unit_clauses": normalization_units,
+        "normalization_unit_ledger_sha256": hashlib.sha256("".join(unit_lines).encode("ascii")).hexdigest(),
         "clauses": clauses,
         "ramsey_ledger_sha256": ledger_hash.hexdigest(),
     }
@@ -161,11 +183,20 @@ def main() -> int:
     parser.add_argument("--order", type=int, required=True)
     parser.add_argument("--clique-size", type=int, required=True)
     parser.add_argument("--degree-q", type=int)
+    parser.add_argument("--fix-root-neighborhood", action="store_true")
     parser.add_argument("--cnf", type=Path, required=True)
     parser.add_argument("--map", type=Path, required=True)
     parser.add_argument("--summary", type=Path, required=True)
     args = parser.parse_args()
-    generate(args.order, args.clique_size, args.degree_q, args.cnf, args.map, args.summary)
+    generate(
+        args.order,
+        args.clique_size,
+        args.degree_q,
+        args.fix_root_neighborhood,
+        args.cnf,
+        args.map,
+        args.summary,
+    )
     return 0
 
 

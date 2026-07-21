@@ -1,4 +1,104 @@
-# R(5,5) research checkpoint — epoch 10
+# R(5,5) research checkpoint — epoch 11
+
+Recorded: 2026-07-21 08:25 UTC
+
+## Epoch-11 outcome: fixed-root normalization audited, pilot still UNKNOWN
+
+The saved q=20 branch was rerun with the exact proved representative
+
+```text
+N(0) = {1,...,20}.
+```
+
+This normalization is sound for every order-42 graph whose degrees lie in
+`{20,21}`: choose a degree-20 vertex; if none exists, the graph is 21-regular
+and its complement is 20-regular; then relabel the chosen root and its
+neighbors.  The generator added exactly 41 units and made no other formula
+change.  A standalone checker that does not import the generator reconstructed
+the edge map and proved byte-for-byte that the new CNF is the retained
+unsymmetrized CNF body followed by those units.
+
+CaDiCaL 1.7.3 nevertheless returned `UNKNOWN` after 300.226 seconds.  There is
+no model, completed proof, exclusion, or new Ramsey bound.  The maintained
+status remains `43 <= R(5,5) <= 46`.
+
+The exact production packet is:
+
+- experiment `.proof-experiments/20260721-081112-052e15`, experiment JSON
+  SHA-256 `b5b729e8b9bc3d9fa0d6a24e8ffdfd912dd4240c365120f1b49d338b586969f1`;
+- 336.833 seconds total, 524,756 KiB peak child RSS under an enforced 1,024-MiB
+  limit;
+- 71,421 variables and 1,844,093 clauses: the prior 1,844,052 clauses plus 41
+  units;
+- uncompressed CNF SHA-256
+  `87b70753dd07b3fc04ddb62799701a8a379efb2cd5c9ea9ddbd026f6679865dd`,
+  retained gzip SHA-256
+  `edc51d7e497a9d6da452800fb5ac09742d1b4db7db516d2ba4c673dda55dbfea`;
+- root-unit ledger SHA-256
+  `b3b4dfe90f2a1315386893d3ff9197258e046a8fe2372943f93c47253cefe7a6`;
+- main report `artifacts/almost_regular_42_q20_normalized_report.json`, SHA-256
+  `c0ee1711e81b6db391bf68a517662e55bd7a92dab3cdd2fab6f6e090a46c5a01`.
+
+## Controls and adversarial audit
+
+The independent normalization checker examined all 32,768 labelled
+six-vertex graphs.  Exactly 1,760 lie in the `{2,3}` degree band; all admit the
+declared representative, including 70 all-3-regular graphs that exercise the
+complement case.  It rejected missing, extra, reversed, shifted, and
+auxiliary-variable unit mutations.  The normalized `R(3,3,6)` control was
+UNSAT with checked DRAT and LRAT.  A separate C nested-loop generator retained
+the production Ramsey-clause ledger hash
+`c3ed87c4609c629948e6b51715f65fea99efed79af5baacbc96805041e9d1945`.
+
+Cold experiment `.proof-experiments/20260721-081843-52c306` completed in
+22.472 seconds (experiment JSON SHA-256
+`4db4704037f2bc97c35709e149c0446a0e83ac5c9e370a8a6e57e2d274bfecba`).
+It independently replayed the complete formula/unit/mutation audit from the
+compressed packet and rebuilt the C ledger.  Freshly compiled `drat-trim`
+returned 1 on the 60,558,002-byte interrupted proof stream, SHA-256
+`9f62127fecf1f9ebd1b616e4768b7ea20d940da368d59f41c4a2ceca69f22a66`.
+The stream is not a certificate.  Cold report
+`artifacts/almost_regular_42_q20_normalized_cold_audit.json` has SHA-256
+`53b9f0da836d46e869d3c644afce5aff4ca64a8c9e6a3c53e8a5680e0412e626`.
+
+Compared with the unsymmetrized pilot, the normalized run used less peak child
+memory (524,756 versus 582,876 KiB) but still exhausted the same solver time.
+The larger partial proof stream (60,558,002 versus 35,732,187 bytes) is only a
+cost observation, not evidence of greater logical progress.
+
+## Route disposition and exact continuation
+
+Repeating this same fixed-root formula with CaDiCaL 1.7.3 and the same options
+and budget is blocked.  Reopen the monolithic configuration only with a
+materially different proof-logging solver or encoding, justified additional
+resources, or a demonstrated packet defect.  Do not infer anything from the
+partial DRAT, and do not launch q=17--19 merely because q=20 remained unknown.
+
+The next cheapest discriminator is a tiny proof-carrying cube pilot.  First
+implement a deterministic 16-leaf cover on four declared cross-part edge
+variables.  Independently check that the 16 cubes are pairwise disjoint and
+exhaust all assignments, and validate the cover plus DRAT/LRAT path on the
+normalized `R(3,3,6)` control.  Only then give each production leaf the same
+short predeclared limit.  Stop if any cover/proof mapping fails, if no leaf
+resolves, or if projected certificate storage is not materially better than
+the monolithic packet.  A partial cube set is not an exclusion.
+
+## Epoch-11 reproduction and disclosure
+
+Replay commands are in `README.md`. GPT-5.6 Sol was principal investigator.
+The supplied GPT-5.6 Terra literature-strategy and experiment-verification
+memos were advisory and are preserved with provenance in
+`records/delegate-provenance-epoch11.json`. Sol independently audited their
+claims, implemented the generator and independent checker, ran both recorded
+experiments, and rejected any inference from `UNKNOWN`. No new subagent was
+spawned. Deterministic tools were Python 3.12.3, GCC 13.3.0, NetworkX 3.3,
+CaDiCaL 1.7.3, Debian nauty, `drat-trim`, `lrat-check`, SHA-256, and the
+computational-researcher experiment harness. No CAS, proof assistant, external
+publishing action, or system-level change was used.
+
+---
+
+# Prior checkpoint — epoch 10
 
 Recorded: 2026-07-21 06:30 UTC
 
