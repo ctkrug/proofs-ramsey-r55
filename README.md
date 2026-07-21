@@ -1,5 +1,16 @@
 # R(5,5) control packet
 
+## Checkpointed supplied-class embedding census
+
+The next approved computation reconciles the fixed order-30 core against all 328 supplied order-42
+graphs and their 328 complements. `scripts/run_known_class_embedding_census.py` checkpoints after each
+host, compares the custom bitset DFS with NetworkX VF2, writes compressed per-host artifacts, and fsyncs
+a hash manifest and progress record. Its approximately 5.6 core-hour estimate is allowed under the
+checkpointed continuation policy in `docs/LONG-JOB-POLICY.md`; there is no universal 12-hour rejection.
+The efficiency and soundness design is frozen in `docs/known-class-embedding-census-efficiency.json`.
+Scaling beyond this supplied corpus requires a bounded residual-SAT discriminator and materially
+independent validation.
+
 ## Epoch-15 labelled-model CEGAR discriminator
 
 One frozen order-30 core was held fixed while an incremental CaDiCaL driver

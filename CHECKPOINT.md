@@ -1361,6 +1361,17 @@ on any source, parser, mutation, canonical, or ledger mismatch.
 
 ## Exact continuation
 
+### Supplied-class census authorization (2026-07-21)
+
+Run the 656-host embedding census through the Proof Factory checkpointed lab. Start with one measured
+segment and review observed throughput, projection, artifact growth, exact stream agreement, and coverage
+before continuation. Preserve verified host artifacts on any pause. A failed agreement, correctness,
+coverage, throughput, artifact-growth, or decision-value gate stops with a recorded reason. Completion
+enters `completed_awaiting_review`; it is never lost while no model is scheduled. Only after the complete
+manifest passes `checkers/validate_known_class_embedding_census.py` may a bounded residual-SAT
+discriminator be designed, and no expansion beyond the supplied corpus occurs without independent
+validation.
+
 Continue the conflict-core route as a cyclic-domain-wall CSP rather than an
 unstructured Hamming-ball search. The first discriminator is the 20-slice
 sweep obtained by releasing distance 6 together with exactly one of the other
