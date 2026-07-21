@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "adjudicated_at": "2026-07-21T02:22:03Z",
+  "status": "verified_negative_experiment_and_infrastructure_result",
+  "clear_field_progress": false,
+  "maintained_bound": "43 <= R(5,5) <= 46",
+  "audit_claims": [
+    {
+      "claim": "The admitted Springer body is 3812 bytes with SHA-256 c2429869f6fa47ab7388134b580b014efae01e6f0e474f5bab2233afb1ef6990 and has two hash-linked successful HTTPS retrieval records.",
+      "status": "verified",
+      "evidence": "artifacts/adversarial_audit_report.json#source"
+    },
+    {
+      "claim": "The seed has exactly the all-zero K5s [6,12,17,36,42] and [6,12,31,36,42], and no all-one K5.",
+      "status": "verified",
+      "evidence": "artifacts/adversarial_audit_report.json#matrix"
+    },
+    {
+      "claim": "Every one of the 903 one-edge flips has burden at least 2.",
+      "status": "verified",
+      "evidence": "artifacts/adversarial_audit_report.json#radius_one"
+    },
+    {
+      "claim": "Every one of the 407253 distinct two-edge flips has burden at least 2, including the 403809-pair deletion-remainder-change family.",
+      "status": "verified",
+      "evidence": "artifacts/adversarial_audit_report.json#radius_two"
+    },
+    {
+      "claim": "Exactly two radius-two pairs attain burden 2: {(6,12),(9,15)} and {(33,39),(36,42)}.",
+      "status": "verified",
+      "evidence": "artifacts/adversarial_audit_report.json#radius_two/minimizers"
+    },
+    {
+      "claim": "The two edited graphs equal the original under u -> u-27 and u -> u+27 modulo 43.",
+      "status": "verified",
+      "evidence": "artifacts/adversarial_audit_report.json#rotation_checks"
+    },
+    {
+      "claim": "Twenty cyclic-distance orbits are constant and only distance 6 varies.",
+      "status": "verified",
+      "evidence": "artifacts/adversarial_audit_report.json#distance_orbits"
+    },
+    {
+      "claim": "The active one-orbit constraints reduce to translated positive pairs {0,18} and {0,20}, each with multiplicity 2, and negative triple {0,5,24}, with multiplicity 1.",
+      "status": "verified",
+      "evidence": "artifacts/adversarial_audit_report.json#one_orbit_constraints"
+    },
+    {
+      "claim": "There are 215 active five-sets and 129 unique one-orbit constraints, with all C(43,5)=962598 five-sets accounted for.",
+      "status": "verified",
+      "evidence": "artifacts/adversarial_audit_report.json#one_orbit_constraints/five_set_accounting"
+    },
+    {
+      "claim": "Distance-six burdens 0 and 1 are impossible.",
+      "status": "verified",
+      "evidence": "artifacts/distance6_independent_sat_report.json#certificates"
+    },
+    {
+      "claim": "Exactly 86 distance-six words attain burden 2: 43 rotations each of step-27 intervals of lengths 24 and 25.",
+      "status": "verified",
+      "evidence": "artifacts/distance6_independent_sat_report.json#result"
+    }
+  ],
+  "new_two_orbit_result": {
+    "family_definition": "For each d in {1,...,21} except 6, F_{6,d} varies exactly the 43 distance-6 and 43 distance-d edges of the authenticated Springer K43 matrix and freezes the other 19 cyclic-distance orbits.",
+    "families": 20,
+    "zero_conflict_witnesses": 0,
+    "exact_minimum_burden": 2,
+    "families_with_new_minimum_class": 0,
+    "minimum_classification": "In every family equality freezes distance d to its Springer color; the distance-6 word is one of the same 86 interval words, comprising two common-rotation and two graph-isomorphism classes.",
+    "raw_active_five_set_range": [731, 3913],
+    "unique_raw_clause_range": [258, 1763],
+    "primal_min_fill_width_upper_bound_range": [37, 58],
+    "checked_drat_proofs": 60,
+    "independent_unsymmetrized_z3_checks": 60,
+    "evidence": "artifacts/two_orbit_certified_sweep_report.json"
+  },
+  "field_progress_gate": [
+    {
+      "condition": 1,
+      "description": "Zero-conflict K43 witness passing two exact checkers",
+      "met": false,
+      "reason": "No two-orbit family contains a burden-zero assignment."
+    },
+    {
+      "condition": 2,
+      "description": "Lower conflict count in a broader independently interesting precise family",
+      "met": false,
+      "reason": "The exact minimum remains 2 in all 20 families and no new burden-two class appears."
+    },
+    {
+      "condition": 3,
+      "description": "Concise structural theorem explaining failure of the two-orbit or near-circulant family",
+      "met": false,
+      "reason": "A precise certificate-backed finite statement was obtained, but no concise human-checkable structural proof currently explains all 20 exclusions."
+    },
+    {
+      "condition": 4,
+      "description": "Certified exclusions materially shrinking an accepted R(5,5) search space",
+      "met": false,
+      "reason": "The encodings, proof logs, proof checks, and symmetry coverage are retained, but these 20 near-circulant slices are not an accepted material fraction of the global R(5,5) search space and have no external acceptance event."
+    },
+    {
+      "condition": 5,
+      "description": "Held-out matched-compute search-algorithm improvement",
+      "met": false,
+      "reason": "No search-algorithm benchmark was performed in this experiment."
+    }
+  ],
+  "contribution_assessment": {
+    "exact_contribution_class": "verified negative experiment plus certificate-carrying research infrastructure",
+    "closest_prior_result_or_baseline": "Molnar et al.'s published two-conflict K43 seed and the retained exact distance-six one-orbit minimum-two classification; pure circulants are already closed at C(5,5)=41.",
+    "measurable_improvement": "Verification improved from agreement of two local enumerators to deterministic CNFs, 63 checked DRAT proofs in total, independent unsymmetrized Z3 checks for every two-orbit decision, and dual full-graph validation of all 86 one-orbit optima. Family breadth increased from one 43-variable slice to twenty precisely defined 86-variable slices. The best conflict count and Ramsey bound did not improve.",
+    "independent_validation": "Line-oriented Python parser and full five-set scanner; C++20 triangle/common-neighborhood bitset evaluator; byte-for-byte radius-two ledger replay; CaDiCaL 3.0.1 proof generation; drat-trim proof checking; Z3 4.15.4 unsymmetrized pseudo-Boolean checks.",
+    "accepted_external_audience_or_channel": "None. No expert, repository, venue, or peer-review process has accepted this result.",
+    "what_remains_unproved": [
+      "No K43 Ramsey witness was found or excluded globally.",
+      "Global Ramsey multiplicity at order 43 is not proved to be 2.",
+      "No family releasing three or more cyclic-distance orbits is excluded.",
+      "No human-checkable theorem currently explains the two-orbit obstruction.",
+      "Historical novelty and external interest in the finite classification are not established."
+    ]
+  },
+  "route_recommendation": {
+    "decision": "close_and_redirect",
+    "closed_route": "Do not continue the one-orbit or two-orbit witness sweep, and do not launch all 190 three-orbit families by default.",
+    "next_experiment": {
+      "name": "proof-core compression for a human two-orbit obstruction theorem",
+      "hypothesis": "The 20 unsymmetrized burden-zero exclusions admit rotation-normalized minimal raw-clause cores of at most 20 clauses that collapse to at most five parameterized obstruction types, enabling a concise human-checkable theorem.",
+      "discriminator": "Extract deletion-minimal raw K5-clause cores for every d, canonicalize their signed incidence hypergraphs, and require a deterministic map from all 20 distances to at most five symbolic templates whose clauses can be checked directly from K43 five-sets.",
+      "success_certificate": "A short theorem and proof, plus a script that instantiates each template for every d and verifies the originating five-set identities without SAT auxiliaries or symmetry assumptions.",
+      "stop_condition": "Stop and abandon theorem compression if any exact core still exceeds 20 raw clauses after deletion minimization or if more than five nonisomorphic core types remain; then redirect to the leakage-safe held-out search-algorithm benchmark required by gate condition 5."
+    }
+  },
+  "decisive_experiments": [
+    ".proof-experiments/20260721-022123-71d7c4",
+    ".proof-experiments/20260721-020646-b4834f",
+    ".proof-experiments/20260721-020930-8c427b"
+  ],
+  "artifact_hashes": {
+    "artifacts/adversarial_audit_report.json": "73a5f9c9e78cdb680524b82110b89166c69246889c65018e26fb40eef591b534",
+    "artifacts/distance6_independent_sat_report.json": "d356697b39a391ec4088459a16bb25fec3285ba6c8c01ee6d83f8639fa4ceabd",
+    "artifacts/distance6_independent_models.json": "efa9c8dad2bcc69b71709add627540cfc5f3bf9acc7d62073b52013b727654e1",
+    "artifacts/two_orbit_certified_sweep_report.json": "9d8ec9a46cf74bdeab70fd39aebe0bd71c09badee163e69813c1ba67b84a55a8",
+    "artifacts/two_orbit_sweep_progress.jsonl": "1116b8c6d5ac535a4778fc3378f3389e9fd1f09c58ba11cd5fb906d8394a9b8e"
+  }
+}

@@ -1,0 +1,2187 @@
+{
+  "certificates": {
+    "burden_at_most_0": {
+      "checker_log": {
+        "bytes": 432,
+        "path": "artifacts/one_orbit_sat_certificates/distance6-burden0.checker.log",
+        "sha256": "0f1291c6d8fd3119ea2fd13082840e6ca0e5786d9425403f5b8dde8794d8bf57"
+      },
+      "checker_returncode": 0,
+      "checker_seconds": 0.045304,
+      "checker_verdict": "VERIFIED",
+      "cnf": {
+        "bytes": 1892,
+        "path": "artifacts/one_orbit_sat_certificates/distance6-burden0.cnf",
+        "sha256": "dffc49a6e7b7a0f5f0a85c2e092e8634cfc3674f5a8a45e931ccbd2f9d745eac"
+      },
+      "metadata": {
+        "bytes": 1750,
+        "path": "artifacts/one_orbit_sat_certificates/distance6-burden0.metadata.json",
+        "sha256": "2688a1954c3ac4c3ac8784fc059cb574b8fdf2042690603b905a26aa0120d052"
+      },
+      "metadata_summary": {
+        "active_five_sets_sha256": "247a1aede715fb72a9cf7779a60cea6cd917fc97e21a01b12466036904a6f39a",
+        "base_variable_occurrence_max": 11,
+        "base_variable_occurrence_min": 11,
+        "base_variables": 43,
+        "blocked_base_words": 0,
+        "cardinality": {
+          "counter_clauses": 0,
+          "counter_variables": 0
+        },
+        "cardinality_encoding": "none",
+        "cnf_clauses": 215,
+        "cnf_path": "artifacts/one_orbit_sat_certificates/distance6-burden0.cnf",
+        "cnf_sha256": "dffc49a6e7b7a0f5f0a85c2e092e8634cfc3674f5a8a45e931ccbd2f9d745eac",
+        "cnf_variables": 43,
+        "distances": [
+          6
+        ],
+        "five_set_accounting": {
+          "five_sets_examined": 962598,
+          "inactive_fixed_both_colors": 962383,
+          "one_active": 43,
+          "single_active": 215,
+          "zero_active": 172
+        },
+        "generator": "self-contained all-C(43,5) cyclic-orbit CNF generator",
+        "matrix_path": "sources/retrievals/springer_supplementary_data4_audit1.txt",
+        "matrix_sha256": "c2429869f6fa47ab7388134b580b014efae01e6f0e474f5bab2233afb1ef6990",
+        "max_burden": 0,
+        "orbit_change_clause_count": 0,
+        "primal_min_fill_width_upper_bound": 24,
+        "raw_active_five_sets": 215,
+        "raw_clause_length_histogram": {
+          "2": 172,
+          "3": 43
+        },
+        "relaxation_variables": 0,
+        "required_changed_orbit_indices": [],
+        "rotation_lex_leader": false,
+        "schema_version": 1,
+        "symmetry": {
+          "coverage_argument": "every finite common-rotation orbit contains a lexicographically least concatenated orbit word; the CNF admits exactly the least word(s), including periodic ties",
+          "group": "common Z_43 rotation on all released edge orbits",
+          "lex_clauses": 0,
+          "lex_variables": 0
+        },
+        "unique_raw_clauses": 129,
+        "variable_mapping": "1 + 43*orbit_index + u encodes edge {u,u+distance[orbit_index] mod 43}"
+      },
+      "proof": {
+        "bytes": 107,
+        "path": "artifacts/one_orbit_sat_certificates/distance6-burden0.drat",
+        "sha256": "5186bc07d846333e42b12d7a5db0a4ea0a747886e9cfa568e17d6f6708c361fd"
+      },
+      "solver_log": {
+        "bytes": 16,
+        "path": "artifacts/one_orbit_sat_certificates/distance6-burden0.solver.log",
+        "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+      },
+      "solver_returncode": 20,
+      "solver_seconds": 0.006511
+    },
+    "burden_at_most_1": {
+      "checker_log": {
+        "bytes": 444,
+        "path": "artifacts/one_orbit_sat_certificates/distance6-burden1.checker.log",
+        "sha256": "5e6b3709ac0c86b76780ed4fb305829a8829708c1dc4f3456a2019b491ab14e0"
+      },
+      "checker_returncode": 0,
+      "checker_seconds": 0.055682,
+      "checker_verdict": "VERIFIED",
+      "cnf": {
+        "bytes": 266775,
+        "path": "artifacts/one_orbit_sat_certificates/distance6-burden1.cnf",
+        "sha256": "cc269008a25457679f54c0a91ae4c6dd6bf3cadae49ac63614dca3068b73d58f"
+      },
+      "metadata": {
+        "bytes": 1768,
+        "path": "artifacts/one_orbit_sat_certificates/distance6-burden1.metadata.json",
+        "sha256": "dadd12358f1b1874cbe07076fb5746ca44043b3f0ed8df3ad17971d3283a21ad"
+      },
+      "metadata_summary": {
+        "active_five_sets_sha256": "247a1aede715fb72a9cf7779a60cea6cd917fc97e21a01b12466036904a6f39a",
+        "base_variable_occurrence_max": 11,
+        "base_variable_occurrence_min": 11,
+        "base_variables": 43,
+        "blocked_base_words": 0,
+        "cardinality": {
+          "counter_clauses": 23005,
+          "counter_variables": 0
+        },
+        "cardinality_encoding": "combinatorial",
+        "cnf_clauses": 23220,
+        "cnf_path": "artifacts/one_orbit_sat_certificates/distance6-burden1.cnf",
+        "cnf_sha256": "cc269008a25457679f54c0a91ae4c6dd6bf3cadae49ac63614dca3068b73d58f",
+        "cnf_variables": 258,
+        "distances": [
+          6
+        ],
+        "five_set_accounting": {
+          "five_sets_examined": 962598,
+          "inactive_fixed_both_colors": 962383,
+          "one_active": 43,
+          "single_active": 215,
+          "zero_active": 172
+        },
+        "generator": "self-contained all-C(43,5) cyclic-orbit CNF generator",
+        "matrix_path": "sources/retrievals/springer_supplementary_data4_audit1.txt",
+        "matrix_sha256": "c2429869f6fa47ab7388134b580b014efae01e6f0e474f5bab2233afb1ef6990",
+        "max_burden": 1,
+        "orbit_change_clause_count": 0,
+        "primal_min_fill_width_upper_bound": 24,
+        "raw_active_five_sets": 215,
+        "raw_clause_length_histogram": {
+          "2": 172,
+          "3": 43
+        },
+        "relaxation_variables": 215,
+        "required_changed_orbit_indices": [],
+        "rotation_lex_leader": false,
+        "schema_version": 1,
+        "symmetry": {
+          "coverage_argument": "every finite common-rotation orbit contains a lexicographically least concatenated orbit word; the CNF admits exactly the least word(s), including periodic ties",
+          "group": "common Z_43 rotation on all released edge orbits",
+          "lex_clauses": 0,
+          "lex_variables": 0
+        },
+        "unique_raw_clauses": 129,
+        "variable_mapping": "1 + 43*orbit_index + u encodes edge {u,u+distance[orbit_index] mod 43}"
+      },
+      "proof": {
+        "bytes": 2949,
+        "path": "artifacts/one_orbit_sat_certificates/distance6-burden1.drat",
+        "sha256": "f2f57b23ae0180e02430f5b6986601c93ef2cd430b8f86228bd50743e04c600d"
+      },
+      "solver_log": {
+        "bytes": 16,
+        "path": "artifacts/one_orbit_sat_certificates/distance6-burden1.solver.log",
+        "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+      },
+      "solver_returncode": 20,
+      "solver_seconds": 0.013388
+    },
+    "burden_at_most_2_after_blocking_all_86_models": {
+      "checker_log": {
+        "bytes": 455,
+        "path": "artifacts/one_orbit_sat_certificates/distance6-burden2-exhausted.checker.log",
+        "sha256": "ee3b6191037257a1ce7b2b922b4b101f129def186b70530325d5c045560913b4"
+      },
+      "checker_returncode": 0,
+      "checker_seconds": 2.086677,
+      "checker_verdict": "VERIFIED",
+      "cnf": {
+        "bytes": 26506039,
+        "path": "artifacts/one_orbit_sat_certificates/distance6-burden2-exhausted.cnf",
+        "sha256": "fe819e9dd6535bf65de50eabe23f2580367a707d8e9852549e6a286044074f89"
+      },
+      "metadata": {
+        "bytes": 1783,
+        "path": "artifacts/one_orbit_sat_certificates/distance6-burden2-exhausted.metadata.json",
+        "sha256": "26cef57ff71acf086f14298066e73f6df77618c8fc51eb5418968f7fb9445e5a"
+      },
+      "metadata_summary": {
+        "active_five_sets_sha256": "247a1aede715fb72a9cf7779a60cea6cd917fc97e21a01b12466036904a6f39a",
+        "base_variable_occurrence_max": 11,
+        "base_variable_occurrence_min": 11,
+        "base_variables": 43,
+        "blocked_base_words": 86,
+        "cardinality": {
+          "counter_clauses": 1633355,
+          "counter_variables": 0
+        },
+        "cardinality_encoding": "combinatorial",
+        "cnf_clauses": 1633656,
+        "cnf_path": "artifacts/one_orbit_sat_certificates/distance6-burden2-exhausted.cnf",
+        "cnf_sha256": "fe819e9dd6535bf65de50eabe23f2580367a707d8e9852549e6a286044074f89",
+        "cnf_variables": 258,
+        "distances": [
+          6
+        ],
+        "five_set_accounting": {
+          "five_sets_examined": 962598,
+          "inactive_fixed_both_colors": 962383,
+          "one_active": 43,
+          "single_active": 215,
+          "zero_active": 172
+        },
+        "generator": "self-contained all-C(43,5) cyclic-orbit CNF generator",
+        "matrix_path": "sources/retrievals/springer_supplementary_data4_audit1.txt",
+        "matrix_sha256": "c2429869f6fa47ab7388134b580b014efae01e6f0e474f5bab2233afb1ef6990",
+        "max_burden": 2,
+        "orbit_change_clause_count": 0,
+        "primal_min_fill_width_upper_bound": 24,
+        "raw_active_five_sets": 215,
+        "raw_clause_length_histogram": {
+          "2": 172,
+          "3": 43
+        },
+        "relaxation_variables": 215,
+        "required_changed_orbit_indices": [],
+        "rotation_lex_leader": false,
+        "schema_version": 1,
+        "symmetry": {
+          "coverage_argument": "every finite common-rotation orbit contains a lexicographically least concatenated orbit word; the CNF admits exactly the least word(s), including periodic ties",
+          "group": "common Z_43 rotation on all released edge orbits",
+          "lex_clauses": 0,
+          "lex_variables": 0
+        },
+        "unique_raw_clauses": 129,
+        "variable_mapping": "1 + 43*orbit_index + u encodes edge {u,u+distance[orbit_index] mod 43}"
+      },
+      "proof": {
+        "bytes": 384672,
+        "path": "artifacts/one_orbit_sat_certificates/distance6-burden2-exhausted.drat",
+        "sha256": "4c92291f4de1ffa2c148e669a37b92eb5cc572adb22bbec0c37afe17c49857cc"
+      },
+      "solver_log": {
+        "bytes": 16,
+        "path": "artifacts/one_orbit_sat_certificates/distance6-burden2-exhausted.solver.log",
+        "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+      },
+      "solver_returncode": 20,
+      "solver_seconds": 0.756913
+    }
+  },
+  "claim_scope": "All 2^43 assignments to the distance-six orbit with every other orbit frozen to the authenticated Springer matrix.",
+  "elapsed_seconds": 135.967,
+  "independence": "The deterministic DIMACS was generated from all C(43,5) five-sets without retained code; direct combinatorial cardinality clauses were used in every certified formula; CaDiCaL emitted proof logs checked by drat-trim; every decoded optimum was rescanned by exhaustive Python induced-edge counts and the separate C++ bitset triangle/common-neighborhood checker.",
+  "model_validations": [
+    {
+      "class": "step27_cyclic_interval_length_24",
+      "one_k5": [],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "0001110011100011100111001110001110011100111",
+      "zero_k5": [
+        [
+          0,
+          6,
+          13,
+          19,
+          24
+        ],
+        [
+          0,
+          6,
+          13,
+          19,
+          38
+        ]
+      ]
+    },
+    {
+      "class": "step27_cyclic_interval_length_24",
+      "one_k5": [],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "0001110011100111000111001110001110011100111",
+      "zero_k5": [
+        [
+          11,
+          16,
+          22,
+          29,
+          35
+        ],
+        [
+          16,
+          22,
+          29,
+          35,
+          40
+        ]
+      ]
+    },
+    {
+      "class": "step27_cyclic_interval_length_24",
+      "one_k5": [],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "0001110011100111000111001110011100011100111",
+      "zero_k5": [
+        [
+          2,
+          8,
+          13,
+          32,
+          38
+        ],
+        [
+          2,
+          8,
+          27,
+          32,
+          38
+        ]
+      ]
+    },
+    {
+      "class": "step27_cyclic_interval_length_25",
+      "one_k5": [
+        [
+          26,
+          29,
+          32,
+          35,
+          38
+        ],
+        [
+          29,
+          32,
+          35,
+          38,
+          41
+        ]
+      ],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "0001110011100111000111001110011110011100111",
+      "zero_k5": []
+    },
+    {
+      "class": "step27_cyclic_interval_length_25",
+      "one_k5": [
+        [
+          10,
+          13,
+          16,
+          19,
+          22
+        ],
+        [
+          13,
+          16,
+          19,
+          22,
+          25
+        ]
+      ],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "0001110011100111100111001110001110011100111",
+      "zero_k5": []
+    },
+    {
+      "class": "step27_cyclic_interval_length_24",
+      "one_k5": [],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "0011100011100111000111001110011100011100111",
+      "zero_k5": [
+        [
+          0,
+          5,
+          11,
+          18,
+          24
+        ],
+        [
+          5,
+          11,
+          18,
+          24,
+          29
+        ]
+      ]
+    },
+    {
+      "class": "step27_cyclic_interval_length_24",
+      "one_k5": [],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "0011100011100111001110001110011100011100111",
+      "zero_k5": [
+        [
+          2,
+          21,
+          27,
+          34,
+          40
+        ],
+        [
+          16,
+          21,
+          27,
+          34,
+          40
+        ]
+      ]
+    },
+    {
+      "class": "step27_cyclic_interval_length_24",
+      "one_k5": [],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "0011100011100111001110001110011100111000111",
+      "zero_k5": [
+        [
+          0,
+          7,
+          13,
+          18,
+          37
+        ],
+        [
+          0,
+          7,
+          13,
+          32,
+          37
+        ]
+      ]
+    },
+    {
+      "class": "step27_cyclic_interval_length_25",
+      "one_k5": [
+        [
+          0,
+          3,
+          34,
+          37,
+          40
+        ],
+        [
+          0,
+          31,
+          34,
+          37,
+          40
+        ]
+      ],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "0011100011100111001110001110011100111100111",
+      "zero_k5": []
+    },
+    {
+      "class": "step27_cyclic_interval_length_25",
+      "one_k5": [
+        [
+          15,
+          18,
+          21,
+          24,
+          27
+        ],
+        [
+          18,
+          21,
+          24,
+          27,
+          30
+        ]
+      ],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "0011100011100111001111001110011100011100111",
+      "zero_k5": []
+    },
+    {
+      "class": "step27_cyclic_interval_length_24",
+      "one_k5": [],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "0011100111000111001110001110011100111000111",
+      "zero_k5": [
+        [
+          5,
+          10,
+          16,
+          23,
+          29
+        ],
+        [
+          10,
+          16,
+          23,
+          29,
+          34
+        ]
+      ]
+    },
+    {
+      "class": "step27_cyclic_interval_length_24",
+      "one_k5": [],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "0011100111000111001110011100011100111000111",
+      "zero_k5": [
+        [
+          2,
+          7,
+          26,
+          32,
+          39
+        ],
+        [
+          2,
+          21,
+          26,
+          32,
+          39
+        ]
+      ]
+    },
+    {
+      "class": "step27_cyclic_interval_length_24",
+      "one_k5": [],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "0011100111000111001110011100011100111001110",
+      "zero_k5": [
+        [
+          5,
+          12,
+          18,
+          23,
+          42
+        ],
+        [
+          5,
+          12,
+          18,
+          37,
+          42
+        ]
+      ]
+    },
+    {
+      "class": "step27_cyclic_interval_length_25",
+      "one_k5": [
+        [
+          2,
+          5,
+          8,
+          39,
+          42
+        ],
+        [
+          2,
+          5,
+          36,
+          39,
+          42
+        ]
+      ],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "0011100111000111001110011100011100111001111",
+      "zero_k5": []
+    },
+    {
+      "class": "step27_cyclic_interval_length_25",
+      "one_k5": [
+        [
+          20,
+          23,
+          26,
+          29,
+          32
+        ],
+        [
+          23,
+          26,
+          29,
+          32,
+          35
+        ]
+      ],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "0011100111000111001110011110011100111000111",
+      "zero_k5": []
+    },
+    {
+      "class": "step27_cyclic_interval_length_24",
+      "one_k5": [],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "0011100111001110001110011100011100111001110",
+      "zero_k5": [
+        [
+          10,
+          15,
+          21,
+          28,
+          34
+        ],
+        [
+          15,
+          21,
+          28,
+          34,
+          39
+        ]
+      ]
+    },
+    {
+      "class": "step27_cyclic_interval_length_24",
+      "one_k5": [],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "0011100111001110001110011100111000111001110",
+      "zero_k5": [
+        [
+          1,
+          7,
+          12,
+          31,
+          37
+        ],
+        [
+          1,
+          7,
+          26,
+          31,
+          37
+        ]
+      ]
+    },
+    {
+      "class": "step27_cyclic_interval_length_25",
+      "one_k5": [
+        [
+          25,
+          28,
+          31,
+          34,
+          37
+        ],
+        [
+          28,
+          31,
+          34,
+          37,
+          40
+        ]
+      ],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "0011100111001110001110011100111100111001110",
+      "zero_k5": []
+    },
+    {
+      "class": "step27_cyclic_interval_length_25",
+      "one_k5": [
+        [
+          9,
+          12,
+          15,
+          18,
+          21
+        ],
+        [
+          12,
+          15,
+          18,
+          21,
+          24
+        ]
+      ],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "0011100111001111001110011100011100111001110",
+      "zero_k5": []
+    },
+    {
+      "class": "step27_cyclic_interval_length_25",
+      "one_k5": [
+        [
+          4,
+          7,
+          10,
+          13,
+          16
+        ],
+        [
+          7,
+          10,
+          13,
+          16,
+          19
+        ]
+      ],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "0011100111100111001110001110011100111000111",
+      "zero_k5": []
+    },
+    {
+      "class": "step27_cyclic_interval_length_25",
+      "one_k5": [
+        [
+          2,
+          5,
+          8,
+          11,
+          14
+        ],
+        [
+          2,
+          5,
+          8,
+          11,
+          42
+        ]
+      ],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "0011110011100111000111001110011100011100111",
+      "zero_k5": []
+    },
+    {
+      "class": "step27_cyclic_interval_length_24",
+      "one_k5": [],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "0111000111001110001110011100111000111001110",
+      "zero_k5": [
+        [
+          4,
+          10,
+          17,
+          23,
+          28
+        ],
+        [
+          4,
+          10,
+          17,
+          23,
+          42
+        ]
+      ]
+    },
+    {
+      "class": "step27_cyclic_interval_length_24",
+      "one_k5": [],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "0111000111001110011100011100111000111001110",
+      "zero_k5": [
+        [
+          1,
+          20,
+          26,
+          33,
+          39
+        ],
+        [
+          15,
+          20,
+          26,
+          33,
+          39
+        ]
+      ]
+    },
+    {
+      "class": "step27_cyclic_interval_length_24",
+      "one_k5": [],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "0111000111001110011100011100111001110001110",
+      "zero_k5": [
+        [
+          6,
+          12,
+          17,
+          36,
+          42
+        ],
+        [
+          6,
+          12,
+          31,
+          36,
+          42
+        ]
+      ]
+    },
+    {
+      "class": "step27_cyclic_interval_length_25",
+      "one_k5": [
+        [
+          2,
+          33,
+          36,
+          39,
+          42
+        ],
+        [
+          30,
+          33,
+          36,
+          39,
+          42
+        ]
+      ],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "0111000111001110011100011100111001111001110",
+      "zero_k5": []
+    },
+    {
+      "class": "step27_cyclic_interval_length_25",
+      "one_k5": [
+        [
+          14,
+          17,
+          20,
+          23,
+          26
+        ],
+        [
+          17,
+          20,
+          23,
+          26,
+          29
+        ]
+      ],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "0111000111001110011110011100111000111001110",
+      "zero_k5": []
+    },
+    {
+      "class": "step27_cyclic_interval_length_24",
+      "one_k5": [],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "0111001110001110011100011100111001110001110",
+      "zero_k5": [
+        [
+          4,
+          9,
+          15,
+          22,
+          28
+        ],
+        [
+          9,
+          15,
+          22,
+          28,
+          33
+        ]
+      ]
+    },
+    {
+      "class": "step27_cyclic_interval_length_24",
+      "one_k5": [],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "0111001110001110011100111000111001110001110",
+      "zero_k5": [
+        [
+          1,
+          6,
+          25,
+          31,
+          38
+        ],
+        [
+          1,
+          20,
+          25,
+          31,
+          38
+        ]
+      ]
+    },
+    {
+      "class": "step27_cyclic_interval_length_24",
+      "one_k5": [],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "0111001110001110011100111000111001110011100",
+      "zero_k5": [
+        [
+          4,
+          11,
+          17,
+          22,
+          41
+        ],
+        [
+          4,
+          11,
+          17,
+          36,
+          41
+        ]
+      ]
+    },
+    {
+      "class": "step27_cyclic_interval_length_25",
+      "one_k5": [
+        [
+          1,
+          4,
+          7,
+          38,
+          41
+        ],
+        [
+          1,
+          4,
+          35,
+          38,
+          41
+        ]
+      ],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "0111001110001110011100111000111001110011110",
+      "zero_k5": []
+    },
+    {
+      "class": "step27_cyclic_interval_length_25",
+      "one_k5": [
+        [
+          19,
+          22,
+          25,
+          28,
+          31
+        ],
+        [
+          22,
+          25,
+          28,
+          31,
+          34
+        ]
+      ],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "0111001110001110011100111100111001110001110",
+      "zero_k5": []
+    },
+    {
+      "class": "step27_cyclic_interval_length_24",
+      "one_k5": [],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "0111001110011100011100111000111001110011100",
+      "zero_k5": [
+        [
+          9,
+          14,
+          20,
+          27,
+          33
+        ],
+        [
+          14,
+          20,
+          27,
+          33,
+          38
+        ]
+      ]
+    },
+    {
+      "class": "step27_cyclic_interval_length_24",
+      "one_k5": [],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "0111001110011100011100111001110001110011100",
+      "zero_k5": [
+        [
+          0,
+          6,
+          11,
+          30,
+          36
+        ],
+        [
+          0,
+          6,
+          25,
+          30,
+          36
+        ]
+      ]
+    },
+    {
+      "class": "step27_cyclic_interval_length_25",
+      "one_k5": [
+        [
+          24,
+          27,
+          30,
+          33,
+          36
+        ],
+        [
+          27,
+          30,
+          33,
+          36,
+          39
+        ]
+      ],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "0111001110011100011100111001111001110011100",
+      "zero_k5": []
+    },
+    {
+      "class": "step27_cyclic_interval_length_25",
+      "one_k5": [
+        [
+          8,
+          11,
+          14,
+          17,
+          20
+        ],
+        [
+          11,
+          14,
+          17,
+          20,
+          23
+        ]
+      ],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "0111001110011110011100111000111001110011100",
+      "zero_k5": []
+    },
+    {
+      "class": "step27_cyclic_interval_length_25",
+      "one_k5": [
+        [
+          3,
+          6,
+          9,
+          12,
+          15
+        ],
+        [
+          6,
+          9,
+          12,
+          15,
+          18
+        ]
+      ],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "0111001111001110011100011100111001110001110",
+      "zero_k5": []
+    },
+    {
+      "class": "step27_cyclic_interval_length_25",
+      "one_k5": [
+        [
+          1,
+          4,
+          7,
+          10,
+          13
+        ],
+        [
+          1,
+          4,
+          7,
+          10,
+          41
+        ]
+      ],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "0111100111001110001110011100111000111001110",
+      "zero_k5": []
+    },
+    {
+      "class": "step27_cyclic_interval_length_24",
+      "one_k5": [],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "1000111001110001110011100111000111001110011",
+      "zero_k5": [
+        [
+          1,
+          7,
+          14,
+          20,
+          25
+        ],
+        [
+          1,
+          7,
+          14,
+          20,
+          39
+        ]
+      ]
+    },
+    {
+      "class": "step27_cyclic_interval_length_24",
+      "one_k5": [],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "1000111001110011100011100111000111001110011",
+      "zero_k5": [
+        [
+          12,
+          17,
+          23,
+          30,
+          36
+        ],
+        [
+          17,
+          23,
+          30,
+          36,
+          41
+        ]
+      ]
+    },
+    {
+      "class": "step27_cyclic_interval_length_24",
+      "one_k5": [],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "1000111001110011100011100111001110001110011",
+      "zero_k5": [
+        [
+          3,
+          9,
+          14,
+          33,
+          39
+        ],
+        [
+          3,
+          9,
+          28,
+          33,
+          39
+        ]
+      ]
+    },
+    {
+      "class": "step27_cyclic_interval_length_25",
+      "one_k5": [
+        [
+          27,
+          30,
+          33,
+          36,
+          39
+        ],
+        [
+          30,
+          33,
+          36,
+          39,
+          42
+        ]
+      ],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "1000111001110011100011100111001111001110011",
+      "zero_k5": []
+    },
+    {
+      "class": "step27_cyclic_interval_length_25",
+      "one_k5": [
+        [
+          11,
+          14,
+          17,
+          20,
+          23
+        ],
+        [
+          14,
+          17,
+          20,
+          23,
+          26
+        ]
+      ],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "1000111001110011110011100111000111001110011",
+      "zero_k5": []
+    },
+    {
+      "class": "step27_cyclic_interval_length_24",
+      "one_k5": [],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "1001110001110011100011100111001110001110011",
+      "zero_k5": [
+        [
+          1,
+          6,
+          12,
+          19,
+          25
+        ],
+        [
+          6,
+          12,
+          19,
+          25,
+          30
+        ]
+      ]
+    },
+    {
+      "class": "step27_cyclic_interval_length_24",
+      "one_k5": [],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "1001110001110011100111000111001110001110011",
+      "zero_k5": [
+        [
+          3,
+          22,
+          28,
+          35,
+          41
+        ],
+        [
+          17,
+          22,
+          28,
+          35,
+          41
+        ]
+      ]
+    },
+    {
+      "class": "step27_cyclic_interval_length_24",
+      "one_k5": [],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "1001110001110011100111000111001110011100011",
+      "zero_k5": [
+        [
+          1,
+          8,
+          14,
+          19,
+          38
+        ],
+        [
+          1,
+          8,
+          14,
+          33,
+          38
+        ]
+      ]
+    },
+    {
+      "class": "step27_cyclic_interval_length_25",
+      "one_k5": [
+        [
+          1,
+          4,
+          35,
+          38,
+          41
+        ],
+        [
+          1,
+          32,
+          35,
+          38,
+          41
+        ]
+      ],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "1001110001110011100111000111001110011110011",
+      "zero_k5": []
+    },
+    {
+      "class": "step27_cyclic_interval_length_25",
+      "one_k5": [
+        [
+          16,
+          19,
+          22,
+          25,
+          28
+        ],
+        [
+          19,
+          22,
+          25,
+          28,
+          31
+        ]
+      ],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "1001110001110011100111100111001110001110011",
+      "zero_k5": []
+    },
+    {
+      "class": "step27_cyclic_interval_length_24",
+      "one_k5": [],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "1001110011100011100111000111001110011100011",
+      "zero_k5": [
+        [
+          6,
+          11,
+          17,
+          24,
+          30
+        ],
+        [
+          11,
+          17,
+          24,
+          30,
+          35
+        ]
+      ]
+    },
+    {
+      "class": "step27_cyclic_interval_length_24",
+      "one_k5": [],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "1001110011100011100111001110001110011100011",
+      "zero_k5": [
+        [
+          3,
+          8,
+          27,
+          33,
+          40
+        ],
+        [
+          3,
+          22,
+          27,
+          33,
+          40
+        ]
+      ]
+    },
+    {
+      "class": "step27_cyclic_interval_length_25",
+      "one_k5": [
+        [
+          0,
+          3,
+          6,
+          9,
+          40
+        ],
+        [
+          0,
+          3,
+          6,
+          37,
+          40
+        ]
+      ],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "1001110011100011100111001110001110011100111",
+      "zero_k5": []
+    },
+    {
+      "class": "step27_cyclic_interval_length_25",
+      "one_k5": [
+        [
+          21,
+          24,
+          27,
+          30,
+          33
+        ],
+        [
+          24,
+          27,
+          30,
+          33,
+          36
+        ]
+      ],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "1001110011100011100111001111001110011100011",
+      "zero_k5": []
+    },
+    {
+      "class": "step27_cyclic_interval_length_25",
+      "one_k5": [
+        [
+          5,
+          8,
+          11,
+          14,
+          17
+        ],
+        [
+          8,
+          11,
+          14,
+          17,
+          20
+        ]
+      ],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "1001110011110011100111000111001110011100011",
+      "zero_k5": []
+    },
+    {
+      "class": "step27_cyclic_interval_length_25",
+      "one_k5": [
+        [
+          0,
+          3,
+          6,
+          9,
+          12
+        ],
+        [
+          3,
+          6,
+          9,
+          12,
+          15
+        ]
+      ],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "1001111001110011100011100111001110001110011",
+      "zero_k5": []
+    },
+    {
+      "class": "step27_cyclic_interval_length_24",
+      "one_k5": [],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "1100011100111000111001110011100011100111001",
+      "zero_k5": [
+        [
+          2,
+          8,
+          15,
+          21,
+          26
+        ],
+        [
+          2,
+          8,
+          15,
+          21,
+          40
+        ]
+      ]
+    },
+    {
+      "class": "step27_cyclic_interval_length_24",
+      "one_k5": [],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "1100011100111001110001110011100011100111001",
+      "zero_k5": [
+        [
+          13,
+          18,
+          24,
+          31,
+          37
+        ],
+        [
+          18,
+          24,
+          31,
+          37,
+          42
+        ]
+      ]
+    },
+    {
+      "class": "step27_cyclic_interval_length_24",
+      "one_k5": [],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "1100011100111001110001110011100111000111001",
+      "zero_k5": [
+        [
+          4,
+          10,
+          15,
+          34,
+          40
+        ],
+        [
+          4,
+          10,
+          29,
+          34,
+          40
+        ]
+      ]
+    },
+    {
+      "class": "step27_cyclic_interval_length_25",
+      "one_k5": [
+        [
+          0,
+          31,
+          34,
+          37,
+          40
+        ],
+        [
+          28,
+          31,
+          34,
+          37,
+          40
+        ]
+      ],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "1100011100111001110001110011100111100111001",
+      "zero_k5": []
+    },
+    {
+      "class": "step27_cyclic_interval_length_25",
+      "one_k5": [
+        [
+          12,
+          15,
+          18,
+          21,
+          24
+        ],
+        [
+          15,
+          18,
+          21,
+          24,
+          27
+        ]
+      ],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "1100011100111001111001110011100011100111001",
+      "zero_k5": []
+    },
+    {
+      "class": "step27_cyclic_interval_length_24",
+      "one_k5": [],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "1100111000111001110001110011100111000111001",
+      "zero_k5": [
+        [
+          2,
+          7,
+          13,
+          20,
+          26
+        ],
+        [
+          7,
+          13,
+          20,
+          26,
+          31
+        ]
+      ]
+    },
+    {
+      "class": "step27_cyclic_interval_length_24",
+      "one_k5": [],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "1100111000111001110011100011100111000111001",
+      "zero_k5": [
+        [
+          4,
+          23,
+          29,
+          36,
+          42
+        ],
+        [
+          18,
+          23,
+          29,
+          36,
+          42
+        ]
+      ]
+    },
+    {
+      "class": "step27_cyclic_interval_length_24",
+      "one_k5": [],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "1100111000111001110011100011100111001110001",
+      "zero_k5": [
+        [
+          2,
+          9,
+          15,
+          20,
+          39
+        ],
+        [
+          2,
+          9,
+          15,
+          34,
+          39
+        ]
+      ]
+    },
+    {
+      "class": "step27_cyclic_interval_length_25",
+      "one_k5": [
+        [
+          2,
+          5,
+          36,
+          39,
+          42
+        ],
+        [
+          2,
+          33,
+          36,
+          39,
+          42
+        ]
+      ],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "1100111000111001110011100011100111001111001",
+      "zero_k5": []
+    },
+    {
+      "class": "step27_cyclic_interval_length_25",
+      "one_k5": [
+        [
+          17,
+          20,
+          23,
+          26,
+          29
+        ],
+        [
+          20,
+          23,
+          26,
+          29,
+          32
+        ]
+      ],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "1100111000111001110011110011100111000111001",
+      "zero_k5": []
+    },
+    {
+      "class": "step27_cyclic_interval_length_24",
+      "one_k5": [],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "1100111001110001110011100011100111001110001",
+      "zero_k5": [
+        [
+          7,
+          12,
+          18,
+          25,
+          31
+        ],
+        [
+          12,
+          18,
+          25,
+          31,
+          36
+        ]
+      ]
+    },
+    {
+      "class": "step27_cyclic_interval_length_24",
+      "one_k5": [],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "1100111001110001110011100111000111001110001",
+      "zero_k5": [
+        [
+          4,
+          9,
+          28,
+          34,
+          41
+        ],
+        [
+          4,
+          23,
+          28,
+          34,
+          41
+        ]
+      ]
+    },
+    {
+      "class": "step27_cyclic_interval_length_25",
+      "one_k5": [
+        [
+          1,
+          4,
+          7,
+          10,
+          41
+        ],
+        [
+          1,
+          4,
+          7,
+          38,
+          41
+        ]
+      ],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "1100111001110001110011100111000111001110011",
+      "zero_k5": []
+    },
+    {
+      "class": "step27_cyclic_interval_length_25",
+      "one_k5": [
+        [
+          22,
+          25,
+          28,
+          31,
+          34
+        ],
+        [
+          25,
+          28,
+          31,
+          34,
+          37
+        ]
+      ],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "1100111001110001110011100111100111001110001",
+      "zero_k5": []
+    },
+    {
+      "class": "step27_cyclic_interval_length_25",
+      "one_k5": [
+        [
+          6,
+          9,
+          12,
+          15,
+          18
+        ],
+        [
+          9,
+          12,
+          15,
+          18,
+          21
+        ]
+      ],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "1100111001111001110011100011100111001110001",
+      "zero_k5": []
+    },
+    {
+      "class": "step27_cyclic_interval_length_25",
+      "one_k5": [
+        [
+          1,
+          4,
+          7,
+          10,
+          13
+        ],
+        [
+          4,
+          7,
+          10,
+          13,
+          16
+        ]
+      ],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "1100111100111001110001110011100111000111001",
+      "zero_k5": []
+    },
+    {
+      "class": "step27_cyclic_interval_length_24",
+      "one_k5": [],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "1110001110011100011100111001110001110011100",
+      "zero_k5": [
+        [
+          3,
+          9,
+          16,
+          22,
+          27
+        ],
+        [
+          3,
+          9,
+          16,
+          22,
+          41
+        ]
+      ]
+    },
+    {
+      "class": "step27_cyclic_interval_length_24",
+      "one_k5": [],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "1110001110011100111000111001110001110011100",
+      "zero_k5": [
+        [
+          0,
+          19,
+          25,
+          32,
+          38
+        ],
+        [
+          14,
+          19,
+          25,
+          32,
+          38
+        ]
+      ]
+    },
+    {
+      "class": "step27_cyclic_interval_length_24",
+      "one_k5": [],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "1110001110011100111000111001110011100011100",
+      "zero_k5": [
+        [
+          5,
+          11,
+          16,
+          35,
+          41
+        ],
+        [
+          5,
+          11,
+          30,
+          35,
+          41
+        ]
+      ]
+    },
+    {
+      "class": "step27_cyclic_interval_length_25",
+      "one_k5": [
+        [
+          1,
+          32,
+          35,
+          38,
+          41
+        ],
+        [
+          29,
+          32,
+          35,
+          38,
+          41
+        ]
+      ],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "1110001110011100111000111001110011110011100",
+      "zero_k5": []
+    },
+    {
+      "class": "step27_cyclic_interval_length_25",
+      "one_k5": [
+        [
+          13,
+          16,
+          19,
+          22,
+          25
+        ],
+        [
+          16,
+          19,
+          22,
+          25,
+          28
+        ]
+      ],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "1110001110011100111100111001110001110011100",
+      "zero_k5": []
+    },
+    {
+      "class": "step27_cyclic_interval_length_24",
+      "one_k5": [],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "1110011100011100111000111001110011100011100",
+      "zero_k5": [
+        [
+          3,
+          8,
+          14,
+          21,
+          27
+        ],
+        [
+          8,
+          14,
+          21,
+          27,
+          32
+        ]
+      ]
+    },
+    {
+      "class": "step27_cyclic_interval_length_24",
+      "one_k5": [],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "1110011100011100111001110001110011100011100",
+      "zero_k5": [
+        [
+          0,
+          5,
+          24,
+          30,
+          37
+        ],
+        [
+          0,
+          19,
+          24,
+          30,
+          37
+        ]
+      ]
+    },
+    {
+      "class": "step27_cyclic_interval_length_24",
+      "one_k5": [],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "1110011100011100111001110001110011100111000",
+      "zero_k5": [
+        [
+          3,
+          10,
+          16,
+          21,
+          40
+        ],
+        [
+          3,
+          10,
+          16,
+          35,
+          40
+        ]
+      ]
+    },
+    {
+      "class": "step27_cyclic_interval_length_25",
+      "one_k5": [
+        [
+          0,
+          3,
+          6,
+          37,
+          40
+        ],
+        [
+          0,
+          3,
+          34,
+          37,
+          40
+        ]
+      ],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "1110011100011100111001110001110011100111100",
+      "zero_k5": []
+    },
+    {
+      "class": "step27_cyclic_interval_length_25",
+      "one_k5": [
+        [
+          18,
+          21,
+          24,
+          27,
+          30
+        ],
+        [
+          21,
+          24,
+          27,
+          30,
+          33
+        ]
+      ],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "1110011100011100111001111001110011100011100",
+      "zero_k5": []
+    },
+    {
+      "class": "step27_cyclic_interval_length_24",
+      "one_k5": [],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "1110011100111000111001110001110011100111000",
+      "zero_k5": [
+        [
+          8,
+          13,
+          19,
+          26,
+          32
+        ],
+        [
+          13,
+          19,
+          26,
+          32,
+          37
+        ]
+      ]
+    },
+    {
+      "class": "step27_cyclic_interval_length_24",
+      "one_k5": [],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "1110011100111000111001110011100011100111000",
+      "zero_k5": [
+        [
+          5,
+          10,
+          29,
+          35,
+          42
+        ],
+        [
+          5,
+          24,
+          29,
+          35,
+          42
+        ]
+      ]
+    },
+    {
+      "class": "step27_cyclic_interval_length_25",
+      "one_k5": [
+        [
+          2,
+          5,
+          8,
+          11,
+          42
+        ],
+        [
+          2,
+          5,
+          8,
+          39,
+          42
+        ]
+      ],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "1110011100111000111001110011100011100111001",
+      "zero_k5": []
+    },
+    {
+      "class": "step27_cyclic_interval_length_25",
+      "one_k5": [
+        [
+          23,
+          26,
+          29,
+          32,
+          35
+        ],
+        [
+          26,
+          29,
+          32,
+          35,
+          38
+        ]
+      ],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "1110011100111000111001110011110011100111000",
+      "zero_k5": []
+    },
+    {
+      "class": "step27_cyclic_interval_length_25",
+      "one_k5": [
+        [
+          7,
+          10,
+          13,
+          16,
+          19
+        ],
+        [
+          10,
+          13,
+          16,
+          19,
+          22
+        ]
+      ],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "1110011100111100111001110001110011100111000",
+      "zero_k5": []
+    },
+    {
+      "class": "step27_cyclic_interval_length_25",
+      "one_k5": [
+        [
+          2,
+          5,
+          8,
+          11,
+          14
+        ],
+        [
+          5,
+          8,
+          11,
+          14,
+          17
+        ]
+      ],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "1110011110011100111000111001110011100011100",
+      "zero_k5": []
+    },
+    {
+      "class": "step27_cyclic_interval_length_25",
+      "one_k5": [
+        [
+          0,
+          3,
+          6,
+          9,
+          12
+        ],
+        [
+          0,
+          3,
+          6,
+          9,
+          40
+        ]
+      ],
+      "python_exhaustive_and_cpp_bitset_agree": true,
+      "word_u_order": "1111001110011100011100111001110001110011100",
+      "zero_k5": []
+    }
+  ],
+  "models": {
+    "bytes": 4217,
+    "path": "artifacts/distance6_independent_models.json",
+    "sha256": "efa9c8dad2bcc69b71709add627540cfc5f3bf9acc7d62073b52013b727654e1"
+  },
+  "result": {
+    "burden_at_most": {
+      "0": "UNSAT",
+      "1": "UNSAT",
+      "2": "SAT"
+    },
+    "classification": {
+      "step27_cyclic_interval_length_24": 43,
+      "step27_cyclic_interval_length_25": 43
+    },
+    "complete_model_set_matches_retained_report": true,
+    "each_model_validated_by_two_full_graph_checkers": true,
+    "minimum_burden": 2,
+    "minimum_model_count": 86
+  },
+  "schema_version": 1,
+  "status": "distance6_independent_cnf_drat_classification_pass",
+  "tools": {
+    "bitset_checker": {
+      "bytes": 8446,
+      "path": "checkers/adversarial_radius2_bitset.cpp",
+      "sha256": "864e40531019f22cd8db36a3d6843f033d305192a670db94fc9422d2610e3346"
+    },
+    "cadical": {
+      "path": ".venv/sat-audit-tools/cadical/build/cadical",
+      "sha256": "c0ca8a632d9c1b98162d59d97c5b2c25a2f6d442e8ac10b4d1228b8a6e712022",
+      "version": "3.0.1"
+    },
+    "drat_trim": {
+      "path": ".venv/sat-audit-tools/drat-trim/drat-trim",
+      "sha256": "f58f63b0f76945d4c4c9ff6e87afaf870f579e67c0f7cca589492df8fc7ebd47"
+    },
+    "generator": {
+      "bytes": 14262,
+      "path": "scripts/generate_orbit_cnf.py",
+      "sha256": "6525cce13a06df65a00e4e955ea2ee590350bce277d1d8ea245d9bdefb27e2c8"
+    }
+  }
+}

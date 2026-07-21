@@ -12,6 +12,7 @@
     "A local-search score, a partial SAT cube set, or an unchecked solver result is not a bound.",
     "Rediscovering one of the known 656 order-42 graphs is a control result, not frontier progress.",
     "The 656 known order-42 graphs are not a proved complete census.",
+    "Completing a structured-family sweep, accumulating UNSAT responses, or finding symmetry copies is not field progress without one of the five explicit contribution gates.",
     "A candidate is not a solution until independent and human review are recorded."
   ],
   "epoch_count": 14,
@@ -256,6 +257,22 @@
       "status": "computed",
       "source_attempt_id": "ramsey-r55-20260721-043422-7a2274",
       "updated_at": "2026-07-21T04:34:22.440967+00:00"
+    },
+    {
+      "claim": "An independently written C++20/Python audit reproduced the Springer seed, all 903 radius-one scores, and the complete 407253-entry radius-two ledger byte-for-byte, including both explicit rotation minimizers and the strict 403809-pair subfamily.",
+      "evidence": "artifacts/adversarial_audit_report.json and .proof-experiments/20260721-022123-71d7c4",
+      "scope": "The authenticated Springer source and the retained radius-one, radius-two, and distance-six derivations.",
+      "status": "independently-replicated",
+      "source_attempt_id": "20260721-022123-71d7c4",
+      "updated_at": "2026-07-21T02:22:03+00:00"
+    },
+    {
+      "claim": "In every family F_{6,d}, d != 6, equality at burden two forces the distance-d orbit back to its Springer color; the complete optimum set is exactly the same 86 one-orbit interval words.",
+      "evidence": "artifacts/two_orbit_certified_sweep_report.json, 60 checked DRAT proofs, and 60 independent unsymmetrized Z3 decisions",
+      "scope": "Exactly the 20 families releasing cyclic distances 6 and d while freezing the other 19 distance orbits.",
+      "status": "certified-computationally-no-field-progress",
+      "source_attempt_id": "20260721-020930-8c427b",
+      "updated_at": "2026-07-21T02:22:03+00:00"
     },
     {
       "claim": "The supplied 328 graphs and their complements all have degree spread exactly 3.",
@@ -580,6 +597,24 @@
       "updated_at": "2026-07-21T04:34:22.440967+00:00"
     },
     {
+      "id": "strategy-r55-two-orbit-proof-compression",
+      "family": "proof-core compression for structured Ramsey exclusions",
+      "fingerprint": "r55tworbitproofcompress2026",
+      "title": "Compress the certified two-orbit exclusions into a human theorem",
+      "mechanism": "Deletion-minimize unsymmetrized raw K5-clause cores, canonicalize signed incidence hypergraphs, and derive parameterized obstruction templates across the 20 second distances.",
+      "status": "proposed",
+      "hypothesis": "Every two-orbit burden-zero exclusion has a core of at most 20 raw clauses and the 20 distances collapse to at most five symbolic templates.",
+      "discriminating_test": "Continue only if both thresholds hold and every template maps directly to valid K43 five-set clauses without SAT auxiliaries or symmetry assumptions.",
+      "blocker": "No minimized raw-core atlas exists.",
+      "reopen_condition": "",
+      "last_attempt_id": "",
+      "attempts": 0,
+      "parent_ids": [
+        "strategy-r55twocore2026"
+      ],
+      "updated_at": "2026-07-21T02:22:03+00:00"
+    },
+    {
       "id": "strategy-33eb5acd3b31",
       "family": "novel order-42 basin discovery",
       "fingerprint": "33eb5acd3b31",
@@ -714,10 +749,20 @@
       "rationale": "Radius 2 contains only translations of the one-dimensional defect, while the full one-orbit family is exactly closed at burden 2. Any structured escape must couple the defect to at least one more orbit.",
       "next_experiment": "For each second distance, derive the 86-variable K5 CNF, quotient the common rotation action, ask first for burden 0, dual-check every SAT model, and retain proof logs before treating any UNSAT slice as certified. Rank nonzero slices by exact minimum and factor-graph width.",
       "priority": "high",
-      "status": "open",
+      "status": "closed",
       "id": "lead-r55-two-orbit-domain-wall",
       "strategy_id": "strategy-r55-two-orbit-domain-wall",
       "updated_at": "2026-07-20T19:10:03-06:00"
+    },
+    {
+      "description": "Compress the 20 certified two-orbit exclusions into a concise human-checkable theorem.",
+      "rationale": "The finite sweep is verified but fails the field-progress gate; a small symbolic obstruction family is the only nearby gate-eligible outcome.",
+      "next_experiment": "Extract deletion-minimal raw burden-zero clause cores and continue only if every core has at most 20 clauses and all 20 distances reduce to at most five signed-incidence types.",
+      "priority": "high",
+      "status": "open",
+      "id": "lead-r55-two-orbit-proof-compression",
+      "strategy_id": "strategy-r55-two-orbit-proof-compression",
+      "updated_at": "2026-07-21T02:22:03+00:00"
     },
     {
       "description": "Authenticate the 656 order-42 control corpus and reproduce the 13- and 9-conflict K43 constructions.",
@@ -1102,8 +1147,8 @@
     {
       "claim_or_route": "Lower the monochromatic-K5 burden below two in the fixed-background two-released-orbit family.",
       "scope": "All 20 declared 86-edge slices.",
-      "reason": "Both raw-origin burden-at-most-one encodings are proof-checked UNSAT in every slice.",
-      "evidence": "artifacts/two_orbit_burden_one, artifacts/two_orbit_burden_one_lrat, and the two retained reports.",
+      "reason": "Both raw-origin burden-at-most-one encodings are proof-checked UNSAT in every slice; an independent encoding further proves that burden-two equality freezes the second orbit and creates no new optimum class.",
+      "evidence": "artifacts/two_orbit_burden_one, artifacts/two_orbit_burden_one_lrat, artifacts/two_orbit_certificates, and the retained sweep reports.",
       "reopen_condition": "Demonstrate a source, raw-origin multiplicity, specialization, cardinality, graph-mapping, proof-checker, or distance-coverage defect.",
       "attempt_id": "ramsey-r55-20260721-043422-7a2274",
       "updated_at": "2026-07-21T04:34:22.440967+00:00"
@@ -1218,6 +1263,9 @@
     "ramsey-r55-20260721-082900-aea66d",
     "ramsey-r55-20260721-103733-ba8afb",
     "ramsey-r55-20260721-123303-2aa131",
-    "ramsey-r55-20260721-143151-8fb809"
+    "ramsey-r55-20260721-143151-8fb809",
+    "20260721-022123-71d7c4",
+    "20260721-020646-b4834f",
+    "20260721-020930-8c427b"
   ]
 }

@@ -1,0 +1,3473 @@
+{
+  "claim_scope": "The union of the 20 precisely defined 86-variable families obtained by releasing cyclic distance 6 and exactly one other distance orbit of the authenticated Springer K43 matrix.",
+  "elapsed_seconds": 349.959,
+  "families": [
+    {
+      "base_second_orbit_color": 1,
+      "certificates": {
+        "burden0": {
+          "checker_log": {
+            "bytes": 441,
+            "path": "artifacts/two_orbit_certificates/distance-06-01/burden0.checker.log",
+            "sha256": "a4900a7bebeba924d721090f9af3f10e0e289c058d3a264d663ccf960a4e0d75"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.067107,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 347690,
+            "path": "artifacts/two_orbit_certificates/distance-06-01/burden0.cnf",
+            "sha256": "d479a74afe14dbcd873a93d6b307e9ee47f7e9a9060ee7bebdfd87f1df04140a"
+          },
+          "metadata": {
+            "bytes": 1799,
+            "path": "artifacts/two_orbit_certificates/distance-06-01/burden0.metadata.json",
+            "sha256": "26e8ad03de28d4f8711941a49a05263d68c19e9d6dbb930e8e6a4b82bba096b0"
+          },
+          "proof": {
+            "bytes": 84881,
+            "path": "artifacts/two_orbit_certificates/distance-06-01/burden0.drat",
+            "sha256": "a0ec325d776f362020cfbd0ed440593a27f74df3d5525c203fa457ee9ea1c064"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-01/burden0.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.016806
+        },
+        "burden1": {
+          "checker_log": {
+            "bytes": 446,
+            "path": "artifacts/two_orbit_certificates/distance-06-01/burden1.checker.log",
+            "sha256": "4d1089e3d3036a89c910413f2398fe58fb80d285a9cfe37d9b8bd83c974c7cba"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.065525,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 411229,
+            "path": "artifacts/two_orbit_certificates/distance-06-01/burden1.cnf",
+            "sha256": "785edd0b150a127c0bff5edbb290c20fdb8aafc2b4a81cb7517a6dfb78d195f5"
+          },
+          "metadata": {
+            "bytes": 1814,
+            "path": "artifacts/two_orbit_certificates/distance-06-01/burden1.metadata.json",
+            "sha256": "924504afc472d6bf5f967c885a94433b507a6c37dd41aeaec500140b0b621ba8"
+          },
+          "proof": {
+            "bytes": 19328,
+            "path": "artifacts/two_orbit_certificates/distance-06-01/burden1.drat",
+            "sha256": "325a46560f49525ea7402c7e8732d7da7fbcd0618b80fcc61dadd2350cbf0c30"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-01/burden1.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.027801
+        },
+        "burden2-second-orbit-changed": {
+          "checker_log": {
+            "bytes": 445,
+            "path": "artifacts/two_orbit_certificates/distance-06-01/burden2-second-orbit-changed.checker.log",
+            "sha256": "4350327abe770068fc231db6752fd116db9a0535ad5b2990959a7139fbfa755f"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.066158,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 451735,
+            "path": "artifacts/two_orbit_certificates/distance-06-01/burden2-second-orbit-changed.cnf",
+            "sha256": "a72c20f04752781c7f9b2011a89a5909e4c7a1999d78f0fac3f2062c853957dc"
+          },
+          "metadata": {
+            "bytes": 1844,
+            "path": "artifacts/two_orbit_certificates/distance-06-01/burden2-second-orbit-changed.metadata.json",
+            "sha256": "a744d5093dc68fb6875aeb90c496735a543b175e1038cddd3a5c0d43236d9084"
+          },
+          "proof": {
+            "bytes": 6935,
+            "path": "artifacts/two_orbit_certificates/distance-06-01/burden2-second-orbit-changed.drat",
+            "sha256": "7a1d30f127d07b8bd7f3aa24728e6007c7568a38bd377d4cf56f80379a040111"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-01/burden2-second-orbit-changed.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.037708
+        }
+      },
+      "cnf_audits": {
+        "burden0": {
+          "change_clause_exact": false,
+          "cnf_clauses": 22710,
+          "cnf_variables": 3656,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": false
+        },
+        "burden1": {
+          "change_clause_exact": false,
+          "cnf_clauses": 26578,
+          "cnf_variables": 6236,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": true
+        },
+        "burden2-second-orbit-changed": {
+          "change_clause_exact": true,
+          "cnf_clauses": 29158,
+          "cnf_variables": 7526,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": true
+        }
+      },
+      "exact_minimum_burden": 2,
+      "family": "F_{6,1}: vary exactly the 43 distance-6 and 43 distance-1 edges; freeze all other cyclic-distance orbits to the Springer seed",
+      "five_set_accounting": {
+        "five_sets_examined": 962598,
+        "inactive_fixed_both_colors": 961308,
+        "one_active": 43,
+        "single_active": 1290,
+        "zero_active": 1247
+      },
+      "independent_unsymmetrized_z3": {
+        "burden_at_most_0": {
+          "seconds": 0.045902,
+          "verdict": "UNSAT"
+        },
+        "burden_at_most_1": {
+          "seconds": 0.040923,
+          "verdict": "UNSAT"
+        },
+        "burden_at_most_2_with_second_orbit_changed": {
+          "seconds": 0.038164,
+          "verdict": "UNSAT"
+        }
+      },
+      "minimum_assignments": 86,
+      "minimum_common_rotation_orbits": 2,
+      "minimum_diversity_explanation": "Every burden-two assignment keeps the second orbit at its frozen color, so the complete minima are exactly the one-orbit length-24 and length-25 interval classes (43 rotations each).",
+      "minimum_edge_counts": [
+        454,
+        455
+      ],
+      "minimum_graph_isomorphism_classes": 2,
+      "new_minimum_class_created_by_second_orbit": false,
+      "primal_min_fill_width_upper_bound": 49,
+      "raw_active_five_sets": 1290,
+      "raw_clause_length_histogram": {
+        "1": 344,
+        "2": 516,
+        "3": 387,
+        "4": 43
+      },
+      "rotation_invariance_checked_for_all_42_nonidentity_shifts": true,
+      "second_distance": 1,
+      "symmetry_coverage": "The exact audited lex-leader compares the concatenated 86-bit word with all 42 common rotations. Every finite Z_43 orbit contains a lexicographically least word; tied least words are retained. Independent unsymmetrized Z3 checks reach the same three UNSAT conclusions.",
+      "unique_raw_clauses": 688
+    },
+    {
+      "base_second_orbit_color": 1,
+      "certificates": {
+        "burden0": {
+          "checker_log": {
+            "bytes": 441,
+            "path": "artifacts/two_orbit_certificates/distance-06-02/burden0.checker.log",
+            "sha256": "7c1db380d822d794129228a60e578a0c6eb6b56ae68c4a0bef476f4d5d1a0525"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.064588,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 348708,
+            "path": "artifacts/two_orbit_certificates/distance-06-02/burden0.cnf",
+            "sha256": "22f94314e0c88c6db92adc4999dd6fa2415d4054eef97e0ecb66aa60bf940269"
+          },
+          "metadata": {
+            "bytes": 1786,
+            "path": "artifacts/two_orbit_certificates/distance-06-02/burden0.metadata.json",
+            "sha256": "8a39b2db3dc72a229f72b46bbab116a33ae69de75880ffcba67e175c7cc29835"
+          },
+          "proof": {
+            "bytes": 85765,
+            "path": "artifacts/two_orbit_certificates/distance-06-02/burden0.drat",
+            "sha256": "a2d1b0cc28ee63f3ff94bb7166bb461a49a6eb8c34af7b313852d8f250c3488b"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-02/burden0.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.014832
+        },
+        "burden1": {
+          "checker_log": {
+            "bytes": 447,
+            "path": "artifacts/two_orbit_certificates/distance-06-02/burden1.checker.log",
+            "sha256": "bb0579aebed189008816aa2504b04a7a143929db6972968827b7009110a21c2f"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.065517,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 427727,
+            "path": "artifacts/two_orbit_certificates/distance-06-02/burden1.cnf",
+            "sha256": "d22bd343148fa6f5adbae5e954ca029f3c3d17fd64376f09ac9600307506cdb5"
+          },
+          "metadata": {
+            "bytes": 1801,
+            "path": "artifacts/two_orbit_certificates/distance-06-02/burden1.metadata.json",
+            "sha256": "0353747129713a14203be12fb42d6c38d2899a83e09491b79b4f9d1d5386a707"
+          },
+          "proof": {
+            "bytes": 12932,
+            "path": "artifacts/two_orbit_certificates/distance-06-02/burden1.drat",
+            "sha256": "df042fb64a3c5a395135628bebb67c8f989cfc1736b3bd9a6d1819a35c89bbd3"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-02/burden1.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.027536
+        },
+        "burden2-second-orbit-changed": {
+          "checker_log": {
+            "bytes": 442,
+            "path": "artifacts/two_orbit_certificates/distance-06-02/burden2-second-orbit-changed.checker.log",
+            "sha256": "036832fd04c89af00dd3986a2f6318c7083a435ebddedb9439d8e20c455f9ed3"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.065809,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 479241,
+            "path": "artifacts/two_orbit_certificates/distance-06-02/burden2-second-orbit-changed.cnf",
+            "sha256": "80855a4b168e7a7c32e0f76bcdaf5d0b6d6d3fdd26556364b83aac170cb6ac8c"
+          },
+          "metadata": {
+            "bytes": 1831,
+            "path": "artifacts/two_orbit_certificates/distance-06-02/burden2-second-orbit-changed.metadata.json",
+            "sha256": "63925048a7aa9ba4c7464b51a3629b9da3c0a62c1ab49959209c783087caa362"
+          },
+          "proof": {
+            "bytes": 3763,
+            "path": "artifacts/two_orbit_certificates/distance-06-02/burden2-second-orbit-changed.drat",
+            "sha256": "cbae107c0f320df9a75509fe89bfa3982be6e383f66462622ec88735328b28af"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-02/burden2-second-orbit-changed.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.041384
+        }
+      },
+      "cnf_audits": {
+        "burden0": {
+          "change_clause_exact": false,
+          "cnf_clauses": 23054,
+          "cnf_variables": 3656,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": false
+        },
+        "burden1": {
+          "change_clause_exact": false,
+          "cnf_clauses": 27954,
+          "cnf_variables": 6924,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": true
+        },
+        "burden2-second-orbit-changed": {
+          "change_clause_exact": true,
+          "cnf_clauses": 31222,
+          "cnf_variables": 8558,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": true
+        }
+      },
+      "exact_minimum_burden": 2,
+      "family": "F_{6,2}: vary exactly the 43 distance-6 and 43 distance-2 edges; freeze all other cyclic-distance orbits to the Springer seed",
+      "five_set_accounting": {
+        "five_sets_examined": 962598,
+        "inactive_fixed_both_colors": 960964,
+        "one_active": 43,
+        "single_active": 1634,
+        "zero_active": 1591
+      },
+      "independent_unsymmetrized_z3": {
+        "burden_at_most_0": {
+          "seconds": 0.039003,
+          "verdict": "UNSAT"
+        },
+        "burden_at_most_1": {
+          "seconds": 0.039764,
+          "verdict": "UNSAT"
+        },
+        "burden_at_most_2_with_second_orbit_changed": {
+          "seconds": 0.038566,
+          "verdict": "UNSAT"
+        }
+      },
+      "minimum_assignments": 86,
+      "minimum_common_rotation_orbits": 2,
+      "minimum_diversity_explanation": "Every burden-two assignment keeps the second orbit at its frozen color, so the complete minima are exactly the one-orbit length-24 and length-25 interval classes (43 rotations each).",
+      "minimum_edge_counts": [
+        454,
+        455
+      ],
+      "minimum_graph_isomorphism_classes": 2,
+      "new_minimum_class_created_by_second_orbit": false,
+      "primal_min_fill_width_upper_bound": 49,
+      "raw_active_five_sets": 1634,
+      "raw_clause_length_histogram": {
+        "1": 516,
+        "2": 1075,
+        "3": 43
+      },
+      "rotation_invariance_checked_for_all_42_nonidentity_shifts": true,
+      "second_distance": 2,
+      "symmetry_coverage": "The exact audited lex-leader compares the concatenated 86-bit word with all 42 common rotations. Every finite Z_43 orbit contains a lexicographically least word; tied least words are retained. Independent unsymmetrized Z3 checks reach the same three UNSAT conclusions.",
+      "unique_raw_clauses": 473
+    },
+    {
+      "base_second_orbit_color": 1,
+      "certificates": {
+        "burden0": {
+          "checker_log": {
+            "bytes": 444,
+            "path": "artifacts/two_orbit_certificates/distance-06-03/burden0.checker.log",
+            "sha256": "f70acf2ee562a6792994eac51c8bcc7f3cb8d9fc45f962be193a73ba6d0cedd2"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.063182,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 342787,
+            "path": "artifacts/two_orbit_certificates/distance-06-03/burden0.cnf",
+            "sha256": "97503b5ec609702699deb8432c59ce3efc30918d09f6e7be02fc40792330d787"
+          },
+          "metadata": {
+            "bytes": 1795,
+            "path": "artifacts/two_orbit_certificates/distance-06-03/burden0.metadata.json",
+            "sha256": "ba1cf836acbff700af6566620936747d6927e4f9f17738de943df5c7557604c1"
+          },
+          "proof": {
+            "bytes": 82956,
+            "path": "artifacts/two_orbit_certificates/distance-06-03/burden0.drat",
+            "sha256": "d840148e8ce92a3b57215bc5ed7fa2d99b49bdd2d8f0bac08e42442f3d466185"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-03/burden0.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.013374
+        },
+        "burden1": {
+          "checker_log": {
+            "bytes": 445,
+            "path": "artifacts/two_orbit_certificates/distance-06-03/burden1.checker.log",
+            "sha256": "bf4267548261d92b93ac3d8f5aa581a91c5fd7c004003fe3bb5a35cf916c5f1c"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.063981,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 380990,
+            "path": "artifacts/two_orbit_certificates/distance-06-03/burden1.cnf",
+            "sha256": "fad656de184f9b540d3bad62a337171d49dbb3cc9ebcdc5000c0122e9e170a0f"
+          },
+          "metadata": {
+            "bytes": 1808,
+            "path": "artifacts/two_orbit_certificates/distance-06-03/burden1.metadata.json",
+            "sha256": "0f7378b54eb1e9a389615e7cc5aa17efa38b7d029afaf7335673bf029cb70eb5"
+          },
+          "proof": {
+            "bytes": 1907,
+            "path": "artifacts/two_orbit_certificates/distance-06-03/burden1.drat",
+            "sha256": "44db75d6ef9e65afe317e998d746a687005ee9d824d53df172e3fd788dbedf59"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-03/burden1.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.023014
+        },
+        "burden2-second-orbit-changed": {
+          "checker_log": {
+            "bytes": 442,
+            "path": "artifacts/two_orbit_certificates/distance-06-03/burden2-second-orbit-changed.checker.log",
+            "sha256": "a2ec0172c5065801657bfefa6e1e983049a2ff05bb0eedaf79fa361566cb72cd"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.059603,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 403791,
+            "path": "artifacts/two_orbit_certificates/distance-06-03/burden2-second-orbit-changed.cnf",
+            "sha256": "c7c63bda772c1cbddc0543ba0bed8ad8d30d77af6a3037e66f59d3b6d0ba8659"
+          },
+          "metadata": {
+            "bytes": 1839,
+            "path": "artifacts/two_orbit_certificates/distance-06-03/burden2-second-orbit-changed.metadata.json",
+            "sha256": "0ff43506130d2f5b0d6268336da19d978bcf412b71d3c15192208c9e6a4a11b5"
+          },
+          "proof": {
+            "bytes": 1054,
+            "path": "artifacts/two_orbit_certificates/distance-06-03/burden2-second-orbit-changed.drat",
+            "sha256": "57b1235d49abe37e17fd0a1c3d14816152c95e046d1ace3cd1dd020537201bbb"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-03/burden2-second-orbit-changed.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.040173
+        }
+      },
+      "cnf_audits": {
+        "burden0": {
+          "change_clause_exact": false,
+          "cnf_clauses": 22151,
+          "cnf_variables": 3656,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": false
+        },
+        "burden1": {
+          "change_clause_exact": false,
+          "cnf_clauses": 24342,
+          "cnf_variables": 5118,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": true
+        },
+        "burden2-second-orbit-changed": {
+          "change_clause_exact": true,
+          "cnf_clauses": 25804,
+          "cnf_variables": 5849,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": true
+        }
+      },
+      "exact_minimum_burden": 2,
+      "family": "F_{6,3}: vary exactly the 43 distance-6 and 43 distance-3 edges; freeze all other cyclic-distance orbits to the Springer seed",
+      "five_set_accounting": {
+        "five_sets_examined": 962598,
+        "inactive_fixed_both_colors": 961867,
+        "one_active": 43,
+        "single_active": 731,
+        "zero_active": 688
+      },
+      "independent_unsymmetrized_z3": {
+        "burden_at_most_0": {
+          "seconds": 0.021214,
+          "verdict": "UNSAT"
+        },
+        "burden_at_most_1": {
+          "seconds": 0.022488,
+          "verdict": "UNSAT"
+        },
+        "burden_at_most_2_with_second_orbit_changed": {
+          "seconds": 0.021818,
+          "verdict": "UNSAT"
+        }
+      },
+      "minimum_assignments": 86,
+      "minimum_common_rotation_orbits": 2,
+      "minimum_diversity_explanation": "Every burden-two assignment keeps the second orbit at its frozen color, so the complete minima are exactly the one-orbit length-24 and length-25 interval classes (43 rotations each).",
+      "minimum_edge_counts": [
+        454,
+        455
+      ],
+      "minimum_graph_isomorphism_classes": 2,
+      "new_minimum_class_created_by_second_orbit": false,
+      "primal_min_fill_width_upper_bound": 43,
+      "raw_active_five_sets": 731,
+      "raw_clause_length_histogram": {
+        "1": 387,
+        "2": 258,
+        "3": 43,
+        "7": 43
+      },
+      "rotation_invariance_checked_for_all_42_nonidentity_shifts": true,
+      "second_distance": 3,
+      "symmetry_coverage": "The exact audited lex-leader compares the concatenated 86-bit word with all 42 common rotations. Every finite Z_43 orbit contains a lexicographically least word; tied least words are retained. Independent unsymmetrized Z3 checks reach the same three UNSAT conclusions.",
+      "unique_raw_clauses": 258
+    },
+    {
+      "base_second_orbit_color": 0,
+      "certificates": {
+        "burden0": {
+          "checker_log": {
+            "bytes": 441,
+            "path": "artifacts/two_orbit_certificates/distance-06-04/burden0.checker.log",
+            "sha256": "487d34a3b31dc6e92f76069fd03787ac66860eb653899c0b0922e527632b68c2"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.064207,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 370777,
+            "path": "artifacts/two_orbit_certificates/distance-06-04/burden0.cnf",
+            "sha256": "1e78da01c2ca75fac45c38fa64736fdb8300d230d5126116d44eb9a5c6c6a55d"
+          },
+          "metadata": {
+            "bytes": 1816,
+            "path": "artifacts/two_orbit_certificates/distance-06-04/burden0.metadata.json",
+            "sha256": "bbb08c22505c8cc19acd2b0c1483a9bb1364de21bdf4dfdcd5ea24aeada24dd0"
+          },
+          "proof": {
+            "bytes": 92946,
+            "path": "artifacts/two_orbit_certificates/distance-06-04/burden0.drat",
+            "sha256": "f989f4d7f83b03ba57bbd5bc8ce95ddaf63210c539aa78df6d88c18216f859e8"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-04/burden0.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.013972
+        },
+        "burden1": {
+          "checker_log": {
+            "bytes": 445,
+            "path": "artifacts/two_orbit_certificates/distance-06-04/burden1.checker.log",
+            "sha256": "759526b6f5ddc24404fbbeaaa84e9b7cdf752a83e79e4b19187300df587aad61"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.068108,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 488496,
+            "path": "artifacts/two_orbit_certificates/distance-06-04/burden1.cnf",
+            "sha256": "201fa6c2b3795be963695d600076878ec4fed1a287383e86a2fe0a94f04336ab"
+          },
+          "metadata": {
+            "bytes": 1831,
+            "path": "artifacts/two_orbit_certificates/distance-06-04/burden1.metadata.json",
+            "sha256": "3d1cd61de97fd4c398d2754f80572e520412fe89d4749a762b8aebef61874f6e"
+          },
+          "proof": {
+            "bytes": 4339,
+            "path": "artifacts/two_orbit_certificates/distance-06-04/burden1.drat",
+            "sha256": "ca7ae710dc2a924753dc9086940b242bec88389d5c0a64428bbe7c11ea0f8f48"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-04/burden1.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.028648
+        },
+        "burden2-second-orbit-changed": {
+          "checker_log": {
+            "bytes": 444,
+            "path": "artifacts/two_orbit_certificates/distance-06-04/burden2-second-orbit-changed.checker.log",
+            "sha256": "40d5c309a7ad3083217318854f324853912c046bd637d273618e8d86c9cd7de6"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.069779,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 577684,
+            "path": "artifacts/two_orbit_certificates/distance-06-04/burden2-second-orbit-changed.cnf",
+            "sha256": "b0e199523dd2fc0fed234d8ac7563f6b4b2d5e6f1149807f8ee5a5702c7cb78b"
+          },
+          "metadata": {
+            "bytes": 1863,
+            "path": "artifacts/two_orbit_certificates/distance-06-04/burden2-second-orbit-changed.metadata.json",
+            "sha256": "623bb4d51031a44d1d99ca8cb3e9bd648c20ab6a001c68df1d8443d3e383b56b"
+          },
+          "proof": {
+            "bytes": 2933,
+            "path": "artifacts/two_orbit_certificates/distance-06-04/burden2-second-orbit-changed.drat",
+            "sha256": "3053f88b7c8ba4d0f8fd74fdc01c4b065630cf9ba7a92cf904b74496bdd9d56d"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-04/burden2-second-orbit-changed.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.044738
+        }
+      },
+      "cnf_audits": {
+        "burden0": {
+          "change_clause_exact": false,
+          "cnf_clauses": 23914,
+          "cnf_variables": 3656,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": false
+        },
+        "burden1": {
+          "change_clause_exact": false,
+          "cnf_clauses": 31394,
+          "cnf_variables": 8644,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": true
+        },
+        "burden2-second-orbit-changed": {
+          "change_clause_exact": true,
+          "cnf_clauses": 36382,
+          "cnf_variables": 11138,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": true
+        }
+      },
+      "exact_minimum_burden": 2,
+      "family": "F_{6,4}: vary exactly the 43 distance-6 and 43 distance-4 edges; freeze all other cyclic-distance orbits to the Springer seed",
+      "five_set_accounting": {
+        "five_sets_examined": 962598,
+        "inactive_fixed_both_colors": 960104,
+        "one_active": 2322,
+        "single_active": 2494,
+        "zero_active": 172
+      },
+      "independent_unsymmetrized_z3": {
+        "burden_at_most_0": {
+          "seconds": 0.066883,
+          "verdict": "UNSAT"
+        },
+        "burden_at_most_1": {
+          "seconds": 0.079326,
+          "verdict": "UNSAT"
+        },
+        "burden_at_most_2_with_second_orbit_changed": {
+          "seconds": 0.067913,
+          "verdict": "UNSAT"
+        }
+      },
+      "minimum_assignments": 86,
+      "minimum_common_rotation_orbits": 2,
+      "minimum_diversity_explanation": "Every burden-two assignment keeps the second orbit at its frozen color, so the complete minima are exactly the one-orbit length-24 and length-25 interval classes (43 rotations each).",
+      "minimum_edge_counts": [
+        454,
+        455
+      ],
+      "minimum_graph_isomorphism_classes": 2,
+      "new_minimum_class_created_by_second_orbit": false,
+      "primal_min_fill_width_upper_bound": 43,
+      "raw_active_five_sets": 2494,
+      "raw_clause_length_histogram": {
+        "1": 473,
+        "2": 430,
+        "3": 602,
+        "4": 645,
+        "5": 344
+      },
+      "rotation_invariance_checked_for_all_42_nonidentity_shifts": true,
+      "second_distance": 4,
+      "symmetry_coverage": "The exact audited lex-leader compares the concatenated 86-bit word with all 42 common rotations. Every finite Z_43 orbit contains a lexicographically least word; tied least words are retained. Independent unsymmetrized Z3 checks reach the same three UNSAT conclusions.",
+      "unique_raw_clauses": 1591
+    },
+    {
+      "base_second_orbit_color": 0,
+      "certificates": {
+        "burden0": {
+          "checker_log": {
+            "bytes": 442,
+            "path": "artifacts/two_orbit_certificates/distance-06-05/burden0.checker.log",
+            "sha256": "3b71f2e660666969b2e75889c7afdebfe87baca59f3689814a70161ab2a12d66"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.063483,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 354303,
+            "path": "artifacts/two_orbit_certificates/distance-06-05/burden0.cnf",
+            "sha256": "4383c27f74c37580814b9b8cba7b477fb14fe63e02259b8c407db84603deb513"
+          },
+          "metadata": {
+            "bytes": 1787,
+            "path": "artifacts/two_orbit_certificates/distance-06-05/burden0.metadata.json",
+            "sha256": "d7030e58db5820bbb7db7c155dfa0f7f84b52d4189b9de732a4868b9ac890114"
+          },
+          "proof": {
+            "bytes": 88196,
+            "path": "artifacts/two_orbit_certificates/distance-06-05/burden0.drat",
+            "sha256": "d06317c5dd7eb1e5811f282751ce45aa0797e0e731343a77112dc87c9bc6b5c0"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-05/burden0.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.016403
+        },
+        "burden1": {
+          "checker_log": {
+            "bytes": 448,
+            "path": "artifacts/two_orbit_certificates/distance-06-05/burden1.checker.log",
+            "sha256": "5e7cbf840649dfe4efbd429efb8f8b56429942fa7e70b2c1171b567c3329e491"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.070645,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 439127,
+            "path": "artifacts/two_orbit_certificates/distance-06-05/burden1.cnf",
+            "sha256": "e75d6e0e7922730608c89703e345411914adc35a2a6c378d5c6003b3b9a53aef"
+          },
+          "metadata": {
+            "bytes": 1802,
+            "path": "artifacts/two_orbit_certificates/distance-06-05/burden1.metadata.json",
+            "sha256": "73c7fe3407520bec2f2688a31003345cd2db7c087aa8ef76edb0172076c599c0"
+          },
+          "proof": {
+            "bytes": 21728,
+            "path": "artifacts/two_orbit_certificates/distance-06-05/burden1.drat",
+            "sha256": "e02561a8a35fc7bbd13445b08926e8999ac5394f47463461bcc20700db96bb59"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-05/burden1.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.024838
+        },
+        "burden2-second-orbit-changed": {
+          "checker_log": {
+            "bytes": 442,
+            "path": "artifacts/two_orbit_certificates/distance-06-05/burden2-second-orbit-changed.checker.log",
+            "sha256": "535e84fe75d3bf0221ea4833a761f657d26a95638b8dbfe9b79430b30ed03843"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.06827,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 494726,
+            "path": "artifacts/two_orbit_certificates/distance-06-05/burden2-second-orbit-changed.cnf",
+            "sha256": "1c5e821fe1f1a82e5d4ddc9dab4f9be8d07488dbc756edd13e361c0d84080c35"
+          },
+          "metadata": {
+            "bytes": 1832,
+            "path": "artifacts/two_orbit_certificates/distance-06-05/burden2-second-orbit-changed.metadata.json",
+            "sha256": "9e971a4e678d062a5724096d8b8001d8bb7f458ee136bb343a90fb83ec688419"
+          },
+          "proof": {
+            "bytes": 2149,
+            "path": "artifacts/two_orbit_certificates/distance-06-05/burden2-second-orbit-changed.drat",
+            "sha256": "6ba5721005c41438cde3439a1c53d51d7943303196f629c2253c66d01bb83660"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-05/burden2-second-orbit-changed.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.026422
+        }
+      },
+      "cnf_audits": {
+        "burden0": {
+          "change_clause_exact": false,
+          "cnf_clauses": 23183,
+          "cnf_variables": 3656,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": false
+        },
+        "burden1": {
+          "change_clause_exact": false,
+          "cnf_clauses": 28470,
+          "cnf_variables": 7182,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": true
+        },
+        "burden2-second-orbit-changed": {
+          "change_clause_exact": true,
+          "cnf_clauses": 31996,
+          "cnf_variables": 8945,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": true
+        }
+      },
+      "exact_minimum_burden": 2,
+      "family": "F_{6,5}: vary exactly the 43 distance-6 and 43 distance-5 edges; freeze all other cyclic-distance orbits to the Springer seed",
+      "five_set_accounting": {
+        "five_sets_examined": 962598,
+        "inactive_fixed_both_colors": 960835,
+        "one_active": 1591,
+        "single_active": 1763,
+        "zero_active": 172
+      },
+      "independent_unsymmetrized_z3": {
+        "burden_at_most_0": {
+          "seconds": 0.045474,
+          "verdict": "UNSAT"
+        },
+        "burden_at_most_1": {
+          "seconds": 0.059888,
+          "verdict": "UNSAT"
+        },
+        "burden_at_most_2_with_second_orbit_changed": {
+          "seconds": 0.046059,
+          "verdict": "UNSAT"
+        }
+      },
+      "minimum_assignments": 86,
+      "minimum_common_rotation_orbits": 2,
+      "minimum_diversity_explanation": "Every burden-two assignment keeps the second orbit at its frozen color, so the complete minima are exactly the one-orbit length-24 and length-25 interval classes (43 rotations each).",
+      "minimum_edge_counts": [
+        454,
+        455
+      ],
+      "minimum_graph_isomorphism_classes": 2,
+      "new_minimum_class_created_by_second_orbit": false,
+      "primal_min_fill_width_upper_bound": 54,
+      "raw_active_five_sets": 1763,
+      "raw_clause_length_histogram": {
+        "1": 516,
+        "2": 645,
+        "3": 602
+      },
+      "rotation_invariance_checked_for_all_42_nonidentity_shifts": true,
+      "second_distance": 5,
+      "symmetry_coverage": "The exact audited lex-leader compares the concatenated 86-bit word with all 42 common rotations. Every finite Z_43 orbit contains a lexicographically least word; tied least words are retained. Independent unsymmetrized Z3 checks reach the same three UNSAT conclusions.",
+      "unique_raw_clauses": 946
+    },
+    {
+      "base_second_orbit_color": 0,
+      "certificates": {
+        "burden0": {
+          "checker_log": {
+            "bytes": 442,
+            "path": "artifacts/two_orbit_certificates/distance-06-07/burden0.checker.log",
+            "sha256": "9b9c76aa145c95b0895fa1e9abbeae030fece16526e5af9055b9313b768d0705"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.063634,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 350908,
+            "path": "artifacts/two_orbit_certificates/distance-06-07/burden0.cnf",
+            "sha256": "65ef0766901403dc8a8b075793e9eb04377d9ee44ba308efc9930226a84efaa1"
+          },
+          "metadata": {
+            "bytes": 1800,
+            "path": "artifacts/two_orbit_certificates/distance-06-07/burden0.metadata.json",
+            "sha256": "92dd85ae9ecd20e9adc10f1478dea8e7fea4a9d45691a66bfd6874baceb64ccb"
+          },
+          "proof": {
+            "bytes": 86275,
+            "path": "artifacts/two_orbit_certificates/distance-06-07/burden0.drat",
+            "sha256": "97883fa9f6b6b54cef943ebbfe0fcefd43ac502a6b2c2becf76f50c5ddd27ace"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-07/burden0.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.013493
+        },
+        "burden1": {
+          "checker_log": {
+            "bytes": 445,
+            "path": "artifacts/two_orbit_certificates/distance-06-07/burden1.checker.log",
+            "sha256": "8fcae4e386e67c1d9a5630beaf34dfbff600eb97be610d02e257800d035186aa"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.064471,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 422187,
+            "path": "artifacts/two_orbit_certificates/distance-06-07/burden1.cnf",
+            "sha256": "56cdbd9c543db2fdc47b235fb6d04143dd4171dea030f846ba902803d808e767"
+          },
+          "metadata": {
+            "bytes": 1815,
+            "path": "artifacts/two_orbit_certificates/distance-06-07/burden1.metadata.json",
+            "sha256": "f4ba5c8747b06eb7c1264cf8dfb0c1e44cce5b3565f39f003ad5aa651e052d66"
+          },
+          "proof": {
+            "bytes": 8541,
+            "path": "artifacts/two_orbit_certificates/distance-06-07/burden1.drat",
+            "sha256": "2b8c8213bf532d5460c47faadedebb2cd80cf734f9be80b41db58a833834f381"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-07/burden1.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.036568
+        },
+        "burden2-second-orbit-changed": {
+          "checker_log": {
+            "bytes": 442,
+            "path": "artifacts/two_orbit_certificates/distance-06-07/burden2-second-orbit-changed.checker.log",
+            "sha256": "85eb307d11cf216d3d6badf691194adc71b3b2b3ebea34b41fe46d91a080e95c"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.065685,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 468154,
+            "path": "artifacts/two_orbit_certificates/distance-06-07/burden2-second-orbit-changed.cnf",
+            "sha256": "a43946d6715e24c4e304014d79a064e0814f05559c767903297c60dac36a95cd"
+          },
+          "metadata": {
+            "bytes": 1845,
+            "path": "artifacts/two_orbit_certificates/distance-06-07/burden2-second-orbit-changed.metadata.json",
+            "sha256": "e3a0896b108ae7bcb9c799549a8704aa42e8c54440afd1318c3ef8fa239f95f5"
+          },
+          "proof": {
+            "bytes": 2672,
+            "path": "artifacts/two_orbit_certificates/distance-06-07/burden2-second-orbit-changed.drat",
+            "sha256": "289fe12f8bdcc95a74ed7523babf98ef7cedee228d494ae3d0304278b58a0846"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-07/burden2-second-orbit-changed.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.044499
+        }
+      },
+      "cnf_audits": {
+        "burden0": {
+          "change_clause_exact": false,
+          "cnf_clauses": 22882,
+          "cnf_variables": 3656,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": false
+        },
+        "burden1": {
+          "change_clause_exact": false,
+          "cnf_clauses": 27266,
+          "cnf_variables": 6580,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": true
+        },
+        "burden2-second-orbit-changed": {
+          "change_clause_exact": true,
+          "cnf_clauses": 30190,
+          "cnf_variables": 8042,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": true
+        }
+      },
+      "exact_minimum_burden": 2,
+      "family": "F_{6,7}: vary exactly the 43 distance-6 and 43 distance-7 edges; freeze all other cyclic-distance orbits to the Springer seed",
+      "five_set_accounting": {
+        "five_sets_examined": 962598,
+        "inactive_fixed_both_colors": 961136,
+        "one_active": 1290,
+        "single_active": 1462,
+        "zero_active": 172
+      },
+      "independent_unsymmetrized_z3": {
+        "burden_at_most_0": {
+          "seconds": 0.036269,
+          "verdict": "UNSAT"
+        },
+        "burden_at_most_1": {
+          "seconds": 0.038567,
+          "verdict": "UNSAT"
+        },
+        "burden_at_most_2_with_second_orbit_changed": {
+          "seconds": 0.035461,
+          "verdict": "UNSAT"
+        }
+      },
+      "minimum_assignments": 86,
+      "minimum_common_rotation_orbits": 2,
+      "minimum_diversity_explanation": "Every burden-two assignment keeps the second orbit at its frozen color, so the complete minima are exactly the one-orbit length-24 and length-25 interval classes (43 rotations each).",
+      "minimum_edge_counts": [
+        454,
+        455
+      ],
+      "minimum_graph_isomorphism_classes": 2,
+      "new_minimum_class_created_by_second_orbit": false,
+      "primal_min_fill_width_upper_bound": 52,
+      "raw_active_five_sets": 1462,
+      "raw_clause_length_histogram": {
+        "1": 516,
+        "2": 516,
+        "3": 387,
+        "4": 43
+      },
+      "rotation_invariance_checked_for_all_42_nonidentity_shifts": true,
+      "second_distance": 7,
+      "symmetry_coverage": "The exact audited lex-leader compares the concatenated 86-bit word with all 42 common rotations. Every finite Z_43 orbit contains a lexicographically least word; tied least words are retained. Independent unsymmetrized Z3 checks reach the same three UNSAT conclusions.",
+      "unique_raw_clauses": 473
+    },
+    {
+      "base_second_orbit_color": 1,
+      "certificates": {
+        "burden0": {
+          "checker_log": {
+            "bytes": 441,
+            "path": "artifacts/two_orbit_certificates/distance-06-08/burden0.checker.log",
+            "sha256": "532092a763ad022c55c31284110b0720ea1549759f5072c5f5b8da3f3b2da591"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.062155,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 349622,
+            "path": "artifacts/two_orbit_certificates/distance-06-08/burden0.cnf",
+            "sha256": "ed7324d3a1f173e687272701815c53800192b3df7962e2b1e1e7c33342a4d161"
+          },
+          "metadata": {
+            "bytes": 1798,
+            "path": "artifacts/two_orbit_certificates/distance-06-08/burden0.metadata.json",
+            "sha256": "4da05682767c65b007ca26e27cfbb0ad0eaa6570be7b4bcebaadcb009db1b06a"
+          },
+          "proof": {
+            "bytes": 86904,
+            "path": "artifacts/two_orbit_certificates/distance-06-08/burden0.drat",
+            "sha256": "2b954ad804f7aa37459956d544eda9e3e36e75ea7504889e66b2a21125e27c88"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-08/burden0.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.013603
+        },
+        "burden1": {
+          "checker_log": {
+            "bytes": 447,
+            "path": "artifacts/two_orbit_certificates/distance-06-08/burden1.checker.log",
+            "sha256": "11f2dad869aa47c202c29c9d0215395a2074fa5d802149a87a0c5a39a5fd6eb2"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.066113,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 436381,
+            "path": "artifacts/two_orbit_certificates/distance-06-08/burden1.cnf",
+            "sha256": "31ca665ff321fc505f4fa6ad40efc46bc156c08c6c13f8732d39be34db8fe950"
+          },
+          "metadata": {
+            "bytes": 1813,
+            "path": "artifacts/two_orbit_certificates/distance-06-08/burden1.metadata.json",
+            "sha256": "6e18cce53337d80230e9c41fee8ca1055f15e1b8099dfa70c62eded0c02d29a4"
+          },
+          "proof": {
+            "bytes": 15949,
+            "path": "artifacts/two_orbit_certificates/distance-06-08/burden1.drat",
+            "sha256": "8b6fca620edc120725e14739ffbe60b26b61efb2793883b1a821bedcd13c4e25"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-08/burden1.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.029537
+        },
+        "burden2-second-orbit-changed": {
+          "checker_log": {
+            "bytes": 442,
+            "path": "artifacts/two_orbit_certificates/distance-06-08/burden2-second-orbit-changed.checker.log",
+            "sha256": "daa6229e0f54639dee492b4dfe43132be398c72c7276f2f9eeca4a04f2a1fd37"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.068827,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 493399,
+            "path": "artifacts/two_orbit_certificates/distance-06-08/burden2-second-orbit-changed.cnf",
+            "sha256": "4bc53deacdacf15e287fd8647aceacf2cb67fb907c07dcc1ed239e8ceb8e6752"
+          },
+          "metadata": {
+            "bytes": 1843,
+            "path": "artifacts/two_orbit_certificates/distance-06-08/burden2-second-orbit-changed.metadata.json",
+            "sha256": "78722738bdc369a27323cb26c033b6171f6de63291c8770fdf9ee0bef9e54ae4"
+          },
+          "proof": {
+            "bytes": 3776,
+            "path": "artifacts/two_orbit_certificates/distance-06-08/burden2-second-orbit-changed.drat",
+            "sha256": "b7889089392a3ff6d2f8b3ca5ab948aa6f63c88f556d8fc891de03311c57edaf"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-08/burden2-second-orbit-changed.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.040113
+        }
+      },
+      "cnf_audits": {
+        "burden0": {
+          "change_clause_exact": false,
+          "cnf_clauses": 23226,
+          "cnf_variables": 3656,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": false
+        },
+        "burden1": {
+          "change_clause_exact": false,
+          "cnf_clauses": 28642,
+          "cnf_variables": 7268,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": true
+        },
+        "burden2-second-orbit-changed": {
+          "change_clause_exact": true,
+          "cnf_clauses": 32254,
+          "cnf_variables": 9074,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": true
+        }
+      },
+      "exact_minimum_burden": 2,
+      "family": "F_{6,8}: vary exactly the 43 distance-6 and 43 distance-8 edges; freeze all other cyclic-distance orbits to the Springer seed",
+      "five_set_accounting": {
+        "five_sets_examined": 962598,
+        "inactive_fixed_both_colors": 960792,
+        "one_active": 43,
+        "single_active": 1806,
+        "zero_active": 1763
+      },
+      "independent_unsymmetrized_z3": {
+        "burden_at_most_0": {
+          "seconds": 0.042167,
+          "verdict": "UNSAT"
+        },
+        "burden_at_most_1": {
+          "seconds": 0.043525,
+          "verdict": "UNSAT"
+        },
+        "burden_at_most_2_with_second_orbit_changed": {
+          "seconds": 0.041216,
+          "verdict": "UNSAT"
+        }
+      },
+      "minimum_assignments": 86,
+      "minimum_common_rotation_orbits": 2,
+      "minimum_diversity_explanation": "Every burden-two assignment keeps the second orbit at its frozen color, so the complete minima are exactly the one-orbit length-24 and length-25 interval classes (43 rotations each).",
+      "minimum_edge_counts": [
+        454,
+        455
+      ],
+      "minimum_graph_isomorphism_classes": 2,
+      "new_minimum_class_created_by_second_orbit": false,
+      "primal_min_fill_width_upper_bound": 46,
+      "raw_active_five_sets": 1806,
+      "raw_clause_length_histogram": {
+        "1": 774,
+        "2": 946,
+        "3": 43,
+        "4": 43
+      },
+      "rotation_invariance_checked_for_all_42_nonidentity_shifts": true,
+      "second_distance": 8,
+      "symmetry_coverage": "The exact audited lex-leader compares the concatenated 86-bit word with all 42 common rotations. Every finite Z_43 orbit contains a lexicographically least word; tied least words are retained. Independent unsymmetrized Z3 checks reach the same three UNSAT conclusions.",
+      "unique_raw_clauses": 430
+    },
+    {
+      "base_second_orbit_color": 1,
+      "certificates": {
+        "burden0": {
+          "checker_log": {
+            "bytes": 442,
+            "path": "artifacts/two_orbit_certificates/distance-06-09/burden0.checker.log",
+            "sha256": "6648c174de41ad4e1e9a23e15519fbd57d8ed3ac5388097894ff553569cb3a4b"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.06351,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 357512,
+            "path": "artifacts/two_orbit_certificates/distance-06-09/burden0.cnf",
+            "sha256": "b0b3a03c5e735702a186432a63becf4e616da6dad4cc09f83f7176c0be40d51d"
+          },
+          "metadata": {
+            "bytes": 1814,
+            "path": "artifacts/two_orbit_certificates/distance-06-09/burden0.metadata.json",
+            "sha256": "f380d131586998fa3485ce5f6bcb95e08326fb40ff1078a7ddca2b1fd76ca14a"
+          },
+          "proof": {
+            "bytes": 91887,
+            "path": "artifacts/two_orbit_certificates/distance-06-09/burden0.drat",
+            "sha256": "b248e56dacb188646a8b7cf066848318b3336a27aab598e9de13db5ac5941cd4"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-09/burden0.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.015344
+        },
+        "burden1": {
+          "checker_log": {
+            "bytes": 445,
+            "path": "artifacts/two_orbit_certificates/distance-06-09/burden1.checker.log",
+            "sha256": "b551128b20b08a2228ebe0f7366e690020e44bee84bfe8f71c40e66127fd8bda"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.069845,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 488776,
+            "path": "artifacts/two_orbit_certificates/distance-06-09/burden1.cnf",
+            "sha256": "c137ba75ca5ea7f13836c22bd6660bf17f6e2df1a124b06443f6e3345050892c"
+          },
+          "metadata": {
+            "bytes": 1829,
+            "path": "artifacts/two_orbit_certificates/distance-06-09/burden1.metadata.json",
+            "sha256": "854e0beb8abda89b998c748d3fcdf7e4decd1fac63515135ad5d89e62280103f"
+          },
+          "proof": {
+            "bytes": 3390,
+            "path": "artifacts/two_orbit_certificates/distance-06-09/burden1.drat",
+            "sha256": "eaecbd332134357da997d13af8a424da8ba914c2781026153947b203f0c7b6e4"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-09/burden1.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.02647
+        },
+        "burden2-second-orbit-changed": {
+          "checker_log": {
+            "bytes": 443,
+            "path": "artifacts/two_orbit_certificates/distance-06-09/burden2-second-orbit-changed.checker.log",
+            "sha256": "769ce291e91d1b4fe94baeaca2f26f003c9977ebb3f3b57f605f167de69520b1"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.07386,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 595722,
+            "path": "artifacts/two_orbit_certificates/distance-06-09/burden2-second-orbit-changed.cnf",
+            "sha256": "4370b9beef5a726b2ea24a50f45c90e66f1068a5e9bcc00f12b148f3f2705901"
+          },
+          "metadata": {
+            "bytes": 1861,
+            "path": "artifacts/two_orbit_certificates/distance-06-09/burden2-second-orbit-changed.metadata.json",
+            "sha256": "107b6a1331cd9f5b8fbed936aedbba20e60ce8d3e140baae0a9ff9f16b03b04d"
+          },
+          "proof": {
+            "bytes": 4157,
+            "path": "artifacts/two_orbit_certificates/distance-06-09/burden2-second-orbit-changed.drat",
+            "sha256": "c11c555f7c46efac11e1be83281b52bf89d1090811b33f4a6717f159aac6180c"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-09/burden2-second-orbit-changed.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.272808
+        }
+      },
+      "cnf_audits": {
+        "burden0": {
+          "change_clause_exact": false,
+          "cnf_clauses": 24215,
+          "cnf_variables": 3656,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": false
+        },
+        "burden1": {
+          "change_clause_exact": false,
+          "cnf_clauses": 32598,
+          "cnf_variables": 9246,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": true
+        },
+        "burden2-second-orbit-changed": {
+          "change_clause_exact": true,
+          "cnf_clauses": 38188,
+          "cnf_variables": 12041,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": true
+        }
+      },
+      "exact_minimum_burden": 2,
+      "family": "F_{6,9}: vary exactly the 43 distance-6 and 43 distance-9 edges; freeze all other cyclic-distance orbits to the Springer seed",
+      "five_set_accounting": {
+        "five_sets_examined": 962598,
+        "inactive_fixed_both_colors": 959803,
+        "one_active": 43,
+        "single_active": 2795,
+        "zero_active": 2752
+      },
+      "independent_unsymmetrized_z3": {
+        "burden_at_most_0": {
+          "seconds": 0.061842,
+          "verdict": "UNSAT"
+        },
+        "burden_at_most_1": {
+          "seconds": 0.063431,
+          "verdict": "UNSAT"
+        },
+        "burden_at_most_2_with_second_orbit_changed": {
+          "seconds": 0.062258,
+          "verdict": "UNSAT"
+        }
+      },
+      "minimum_assignments": 86,
+      "minimum_common_rotation_orbits": 2,
+      "minimum_diversity_explanation": "Every burden-two assignment keeps the second orbit at its frozen color, so the complete minima are exactly the one-orbit length-24 and length-25 interval classes (43 rotations each).",
+      "minimum_edge_counts": [
+        454,
+        455
+      ],
+      "minimum_graph_isomorphism_classes": 2,
+      "new_minimum_class_created_by_second_orbit": false,
+      "primal_min_fill_width_upper_bound": 49,
+      "raw_active_five_sets": 2795,
+      "raw_clause_length_histogram": {
+        "1": 1290,
+        "2": 1032,
+        "3": 344,
+        "4": 86,
+        "5": 43
+      },
+      "rotation_invariance_checked_for_all_42_nonidentity_shifts": true,
+      "second_distance": 9,
+      "symmetry_coverage": "The exact audited lex-leader compares the concatenated 86-bit word with all 42 common rotations. Every finite Z_43 orbit contains a lexicographically least word; tied least words are retained. Independent unsymmetrized Z3 checks reach the same three UNSAT conclusions.",
+      "unique_raw_clauses": 602
+    },
+    {
+      "base_second_orbit_color": 1,
+      "certificates": {
+        "burden0": {
+          "checker_log": {
+            "bytes": 441,
+            "path": "artifacts/two_orbit_certificates/distance-06-10/burden0.checker.log",
+            "sha256": "ade9c1193cf06695333c348e164de042fc3b9bb77a3f3d8ef73ebc1f6d53dc44"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.06441,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 347841,
+            "path": "artifacts/two_orbit_certificates/distance-06-10/burden0.cnf",
+            "sha256": "24df145a19b7c01716f67c2fb8e00680e90015c4e233aa69711bb9f33bd960c1"
+          },
+          "metadata": {
+            "bytes": 1787,
+            "path": "artifacts/two_orbit_certificates/distance-06-10/burden0.metadata.json",
+            "sha256": "5fe9111aebf5c094d2cf4654c25cc9d9f5dac5d3a11013b8ac91a44b772b3748"
+          },
+          "proof": {
+            "bytes": 84443,
+            "path": "artifacts/two_orbit_certificates/distance-06-10/burden0.drat",
+            "sha256": "c2d255167f01d3d7980b03079a45612978e2e37e51c2ce01818876b96f0b701c"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-10/burden0.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.014641
+        },
+        "burden1": {
+          "checker_log": {
+            "bytes": 448,
+            "path": "artifacts/two_orbit_certificates/distance-06-10/burden1.checker.log",
+            "sha256": "8b081898a34395994490d6797db76490da0e2a57ed7d809f8d8ce3706806e216"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.06585,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 409445,
+            "path": "artifacts/two_orbit_certificates/distance-06-10/burden1.cnf",
+            "sha256": "743f0fe85a56641e57ab23880cf289e67b966a0c9866b90c26b1fb28d31c02c5"
+          },
+          "metadata": {
+            "bytes": 1802,
+            "path": "artifacts/two_orbit_certificates/distance-06-10/burden1.metadata.json",
+            "sha256": "1ce557890a0a86cf4d9fb338b0f9890e0ffb5c7def83ab40e5c7289f57e8959c"
+          },
+          "proof": {
+            "bytes": 12779,
+            "path": "artifacts/two_orbit_certificates/distance-06-10/burden1.drat",
+            "sha256": "d0df3858ba710e04253a68d02cb5eaccbf13e711f3fb69f37e248a85bb9ff356"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-10/burden1.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.026604
+        },
+        "burden2-second-orbit-changed": {
+          "checker_log": {
+            "bytes": 445,
+            "path": "artifacts/two_orbit_certificates/distance-06-10/burden2-second-orbit-changed.checker.log",
+            "sha256": "9299efc449f170c760e370f07a7dfa9c4584a62c596ba2435b7de885e75df734"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.065632,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 448575,
+            "path": "artifacts/two_orbit_certificates/distance-06-10/burden2-second-orbit-changed.cnf",
+            "sha256": "90a44aa4e742240d060fb92c02b11247ae7b3997771d2a172a01a6bc5ec85ba6"
+          },
+          "metadata": {
+            "bytes": 1832,
+            "path": "artifacts/two_orbit_certificates/distance-06-10/burden2-second-orbit-changed.metadata.json",
+            "sha256": "7b26743164433653672f785739b0103dacb1a80833b87f1d4067927b56fc3dae"
+          },
+          "proof": {
+            "bytes": 5698,
+            "path": "artifacts/two_orbit_certificates/distance-06-10/burden2-second-orbit-changed.drat",
+            "sha256": "039609acf761dba29a652dc40d2f68a016f11db92ba430f642d472ea30844c43"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-10/burden2-second-orbit-changed.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.043322
+        }
+      },
+      "cnf_audits": {
+        "burden0": {
+          "change_clause_exact": false,
+          "cnf_clauses": 22667,
+          "cnf_variables": 3656,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": false
+        },
+        "burden1": {
+          "change_clause_exact": false,
+          "cnf_clauses": 26406,
+          "cnf_variables": 6150,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": true
+        },
+        "burden2-second-orbit-changed": {
+          "change_clause_exact": true,
+          "cnf_clauses": 28900,
+          "cnf_variables": 7397,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": true
+        }
+      },
+      "exact_minimum_burden": 2,
+      "family": "F_{6,10}: vary exactly the 43 distance-6 and 43 distance-10 edges; freeze all other cyclic-distance orbits to the Springer seed",
+      "five_set_accounting": {
+        "five_sets_examined": 962598,
+        "inactive_fixed_both_colors": 961351,
+        "one_active": 43,
+        "single_active": 1247,
+        "zero_active": 1204
+      },
+      "independent_unsymmetrized_z3": {
+        "burden_at_most_0": {
+          "seconds": 0.033991,
+          "verdict": "UNSAT"
+        },
+        "burden_at_most_1": {
+          "seconds": 0.038086,
+          "verdict": "UNSAT"
+        },
+        "burden_at_most_2_with_second_orbit_changed": {
+          "seconds": 0.033885,
+          "verdict": "UNSAT"
+        }
+      },
+      "minimum_assignments": 86,
+      "minimum_common_rotation_orbits": 2,
+      "minimum_diversity_explanation": "Every burden-two assignment keeps the second orbit at its frozen color, so the complete minima are exactly the one-orbit length-24 and length-25 interval classes (43 rotations each).",
+      "minimum_edge_counts": [
+        454,
+        455
+      ],
+      "minimum_graph_isomorphism_classes": 2,
+      "new_minimum_class_created_by_second_orbit": false,
+      "primal_min_fill_width_upper_bound": 46,
+      "raw_active_five_sets": 1247,
+      "raw_clause_length_histogram": {
+        "1": 129,
+        "2": 731,
+        "3": 387
+      },
+      "rotation_invariance_checked_for_all_42_nonidentity_shifts": true,
+      "second_distance": 10,
+      "symmetry_coverage": "The exact audited lex-leader compares the concatenated 86-bit word with all 42 common rotations. Every finite Z_43 orbit contains a lexicographically least word; tied least words are retained. Independent unsymmetrized Z3 checks reach the same three UNSAT conclusions.",
+      "unique_raw_clauses": 731
+    },
+    {
+      "base_second_orbit_color": 0,
+      "certificates": {
+        "burden0": {
+          "checker_log": {
+            "bytes": 442,
+            "path": "artifacts/two_orbit_certificates/distance-06-11/burden0.checker.log",
+            "sha256": "45718d8db9dfb258455323a3a72159604f73b3562a934188fa892fe3551a20f5"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.067093,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 360753,
+            "path": "artifacts/two_orbit_certificates/distance-06-11/burden0.cnf",
+            "sha256": "4a82357631951b507fa667bf44d7f765b25b5aa375ce0aaa27327b321c7c21c5"
+          },
+          "metadata": {
+            "bytes": 1802,
+            "path": "artifacts/two_orbit_certificates/distance-06-11/burden0.metadata.json",
+            "sha256": "85acd95d58782c4f041b5098a200b874b778457ac65915bcee84bbc315304929"
+          },
+          "proof": {
+            "bytes": 91660,
+            "path": "artifacts/two_orbit_certificates/distance-06-11/burden0.drat",
+            "sha256": "1ea7e5bc69599e46967ea92ebba1a6a47aa9d1a12dd35005c0f07d0f196754c4"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-11/burden0.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.015394
+        },
+        "burden1": {
+          "checker_log": {
+            "bytes": 447,
+            "path": "artifacts/two_orbit_certificates/distance-06-11/burden1.checker.log",
+            "sha256": "ed50ad01f88812568ce01b45b40423a252121bbd12264ddea5eb1e0422102e33"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.068342,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 474602,
+            "path": "artifacts/two_orbit_certificates/distance-06-11/burden1.cnf",
+            "sha256": "8381dc5171fb83a2c1f7d74e1579090ba59f35975069c5ae8356600fc81dbf99"
+          },
+          "metadata": {
+            "bytes": 1817,
+            "path": "artifacts/two_orbit_certificates/distance-06-11/burden1.metadata.json",
+            "sha256": "db4efac2750da7c97bf6d3ef445f9c4442657c91a30337f08180d187b78408be"
+          },
+          "proof": {
+            "bytes": 22833,
+            "path": "artifacts/two_orbit_certificates/distance-06-11/burden1.drat",
+            "sha256": "1d6821eab218c277c79e383ed9c4fd8c8ee178da8cb1b01c2ddec40ed9fd4cab"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-11/burden1.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.030507
+        },
+        "burden2-second-orbit-changed": {
+          "checker_log": {
+            "bytes": 443,
+            "path": "artifacts/two_orbit_certificates/distance-06-11/burden2-second-orbit-changed.checker.log",
+            "sha256": "668295d4c762c7757be9fe36818d39dc4c98991970cc90d6dc13e793ad5d9ffb"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.068295,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 558728,
+            "path": "artifacts/two_orbit_certificates/distance-06-11/burden2-second-orbit-changed.cnf",
+            "sha256": "1f1ea7457553e1175d6234182f7d7501c80b44e69beba8e510197dc426121d6b"
+          },
+          "metadata": {
+            "bytes": 1849,
+            "path": "artifacts/two_orbit_certificates/distance-06-11/burden2-second-orbit-changed.metadata.json",
+            "sha256": "26b5e5f3a223bcff340dd5247be9f3b16b41d6f3aa69734a5744cd5d2aeb7374"
+          },
+          "proof": {
+            "bytes": 3568,
+            "path": "artifacts/two_orbit_certificates/distance-06-11/burden2-second-orbit-changed.drat",
+            "sha256": "413ccb1d26b3cb15376330f26e3f918d2e37ab19454655f33d801f2f174e91ae"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-11/burden2-second-orbit-changed.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.024733
+        }
+      },
+      "cnf_audits": {
+        "burden0": {
+          "change_clause_exact": false,
+          "cnf_clauses": 23828,
+          "cnf_variables": 3656,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": false
+        },
+        "burden1": {
+          "change_clause_exact": false,
+          "cnf_clauses": 31050,
+          "cnf_variables": 8472,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": true
+        },
+        "burden2-second-orbit-changed": {
+          "change_clause_exact": true,
+          "cnf_clauses": 35866,
+          "cnf_variables": 10880,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": true
+        }
+      },
+      "exact_minimum_burden": 2,
+      "family": "F_{6,11}: vary exactly the 43 distance-6 and 43 distance-11 edges; freeze all other cyclic-distance orbits to the Springer seed",
+      "five_set_accounting": {
+        "five_sets_examined": 962598,
+        "inactive_fixed_both_colors": 960190,
+        "one_active": 2236,
+        "single_active": 2408,
+        "zero_active": 172
+      },
+      "independent_unsymmetrized_z3": {
+        "burden_at_most_0": {
+          "seconds": 0.059332,
+          "verdict": "UNSAT"
+        },
+        "burden_at_most_1": {
+          "seconds": 0.074852,
+          "verdict": "UNSAT"
+        },
+        "burden_at_most_2_with_second_orbit_changed": {
+          "seconds": 0.059955,
+          "verdict": "UNSAT"
+        }
+      },
+      "minimum_assignments": 86,
+      "minimum_common_rotation_orbits": 2,
+      "minimum_diversity_explanation": "Every burden-two assignment keeps the second orbit at its frozen color, so the complete minima are exactly the one-orbit length-24 and length-25 interval classes (43 rotations each).",
+      "minimum_edge_counts": [
+        454,
+        455
+      ],
+      "minimum_graph_isomorphism_classes": 2,
+      "new_minimum_class_created_by_second_orbit": false,
+      "primal_min_fill_width_upper_bound": 58,
+      "raw_active_five_sets": 2408,
+      "raw_clause_length_histogram": {
+        "1": 774,
+        "2": 817,
+        "3": 774,
+        "4": 43
+      },
+      "rotation_invariance_checked_for_all_42_nonidentity_shifts": true,
+      "second_distance": 11,
+      "symmetry_coverage": "The exact audited lex-leader compares the concatenated 86-bit word with all 42 common rotations. Every finite Z_43 orbit contains a lexicographically least word; tied least words are retained. Independent unsymmetrized Z3 checks reach the same three UNSAT conclusions.",
+      "unique_raw_clauses": 1161
+    },
+    {
+      "base_second_orbit_color": 1,
+      "certificates": {
+        "burden0": {
+          "checker_log": {
+            "bytes": 441,
+            "path": "artifacts/two_orbit_certificates/distance-06-12/burden0.checker.log",
+            "sha256": "878b5d6e9ce41f422cecad62091a21d7629c38ee4e948a00fbd1f8d2da4993b9"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.064525,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 373079,
+            "path": "artifacts/two_orbit_certificates/distance-06-12/burden0.cnf",
+            "sha256": "8dcd47ff1f1645ad0c8b2730e33c968bb9e1f1e15698db4b117d39c80bf44c6f"
+          },
+          "metadata": {
+            "bytes": 1845,
+            "path": "artifacts/two_orbit_certificates/distance-06-12/burden0.metadata.json",
+            "sha256": "9928a01056adf3e8e2c13d8c90ec5a0f3195ebd7f84007df58d2c240a6be24cf"
+          },
+          "proof": {
+            "bytes": 99680,
+            "path": "artifacts/two_orbit_certificates/distance-06-12/burden0.drat",
+            "sha256": "584978373d6cc5331fa9fb3a2298f00dff39301f1182f5d28a77e0d3199edaf3"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-12/burden0.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.014996
+        },
+        "burden1": {
+          "checker_log": {
+            "bytes": 449,
+            "path": "artifacts/two_orbit_certificates/distance-06-12/burden1.checker.log",
+            "sha256": "13bf377d2ea117ff78bb8a0897494cfddde182c31a7e66ed85fe8156877aa762"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.077259,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 567930,
+            "path": "artifacts/two_orbit_certificates/distance-06-12/burden1.cnf",
+            "sha256": "5f2552b51bda5b9730647bea894d055b045ad4e509ae7a1e46341f787215594d"
+          },
+          "metadata": {
+            "bytes": 1862,
+            "path": "artifacts/two_orbit_certificates/distance-06-12/burden1.metadata.json",
+            "sha256": "f2977d94c597cdcebfc73db80fc6232609c6115e1462541ac394b28a068c9e37"
+          },
+          "proof": {
+            "bytes": 42842,
+            "path": "artifacts/two_orbit_certificates/distance-06-12/burden1.drat",
+            "sha256": "460b429bd0d9505aae28595e94953bc6d05664259c0016e0afb3c93910fd90f0"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-12/burden1.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.036398
+        },
+        "burden2-second-orbit-changed": {
+          "checker_log": {
+            "bytes": 443,
+            "path": "artifacts/two_orbit_certificates/distance-06-12/burden2-second-orbit-changed.checker.log",
+            "sha256": "5fe7b50ce9e07c05c320359076296908e95be75efcfe4e0ef5c61c238e166a53"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.078684,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 718358,
+            "path": "artifacts/two_orbit_certificates/distance-06-12/burden2-second-orbit-changed.cnf",
+            "sha256": "f6b7e352fa36b65008f70c945cde58d5ae13a9191bf6398ba879cfd704084b3f"
+          },
+          "metadata": {
+            "bytes": 1892,
+            "path": "artifacts/two_orbit_certificates/distance-06-12/burden2-second-orbit-changed.metadata.json",
+            "sha256": "2a7b6203d1feb1556321332dd2d79b36020887f20258bdeb496150bef4f9ba38"
+          },
+          "proof": {
+            "bytes": 4071,
+            "path": "artifacts/two_orbit_certificates/distance-06-12/burden2-second-orbit-changed.drat",
+            "sha256": "1fe916ce6981ad91ec0ea933f697d1f320f865d5a794a88d882a0d73b8ba3f65"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-12/burden2-second-orbit-changed.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.533109
+        }
+      },
+      "cnf_audits": {
+        "burden0": {
+          "change_clause_exact": false,
+          "cnf_clauses": 25333,
+          "cnf_variables": 3656,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": false
+        },
+        "burden1": {
+          "change_clause_exact": false,
+          "cnf_clauses": 37070,
+          "cnf_variables": 11482,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": true
+        },
+        "burden2-second-orbit-changed": {
+          "change_clause_exact": true,
+          "cnf_clauses": 44896,
+          "cnf_variables": 15395,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": true
+        }
+      },
+      "exact_minimum_burden": 2,
+      "family": "F_{6,12}: vary exactly the 43 distance-6 and 43 distance-12 edges; freeze all other cyclic-distance orbits to the Springer seed",
+      "five_set_accounting": {
+        "five_sets_examined": 962598,
+        "inactive_fixed_both_colors": 958685,
+        "one_active": 43,
+        "single_active": 3913,
+        "zero_active": 3870
+      },
+      "independent_unsymmetrized_z3": {
+        "burden_at_most_0": {
+          "seconds": 0.092255,
+          "verdict": "UNSAT"
+        },
+        "burden_at_most_1": {
+          "seconds": 0.100847,
+          "verdict": "UNSAT"
+        },
+        "burden_at_most_2_with_second_orbit_changed": {
+          "seconds": 0.092723,
+          "verdict": "UNSAT"
+        }
+      },
+      "minimum_assignments": 86,
+      "minimum_common_rotation_orbits": 2,
+      "minimum_diversity_explanation": "Every burden-two assignment keeps the second orbit at its frozen color, so the complete minima are exactly the one-orbit length-24 and length-25 interval classes (43 rotations each).",
+      "minimum_edge_counts": [
+        454,
+        455
+      ],
+      "minimum_graph_isomorphism_classes": 2,
+      "new_minimum_class_created_by_second_orbit": false,
+      "primal_min_fill_width_upper_bound": 47,
+      "raw_active_five_sets": 3913,
+      "raw_clause_length_histogram": {
+        "1": 1118,
+        "2": 1333,
+        "3": 645,
+        "4": 387,
+        "5": 301,
+        "6": 86,
+        "7": 43
+      },
+      "rotation_invariance_checked_for_all_42_nonidentity_shifts": true,
+      "second_distance": 12,
+      "symmetry_coverage": "The exact audited lex-leader compares the concatenated 86-bit word with all 42 common rotations. Every finite Z_43 orbit contains a lexicographically least word; tied least words are retained. Independent unsymmetrized Z3 checks reach the same three UNSAT conclusions.",
+      "unique_raw_clauses": 1505
+    },
+    {
+      "base_second_orbit_color": 0,
+      "certificates": {
+        "burden0": {
+          "checker_log": {
+            "bytes": 443,
+            "path": "artifacts/two_orbit_certificates/distance-06-13/burden0.checker.log",
+            "sha256": "73aaec008e7fcbe1b926af36878b07cf878ce340b668b2abc8072c1f4957d745"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.062363,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 346924,
+            "path": "artifacts/two_orbit_certificates/distance-06-13/burden0.cnf",
+            "sha256": "5e0ba89467f9dd787ce1e421f3bbedada27fce6e14163c91504f4e5fe0d20c50"
+          },
+          "metadata": {
+            "bytes": 1800,
+            "path": "artifacts/two_orbit_certificates/distance-06-13/burden0.metadata.json",
+            "sha256": "b99f82a5d71602f13e1127168680d1ecbed14210fad50d3f70a764890e658b51"
+          },
+          "proof": {
+            "bytes": 85815,
+            "path": "artifacts/two_orbit_certificates/distance-06-13/burden0.drat",
+            "sha256": "a57a3712508a4afc9b8355fc880cc8dc14c01d41bbc70699800d5068b7ea6525"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-13/burden0.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.013622
+        },
+        "burden1": {
+          "checker_log": {
+            "bytes": 445,
+            "path": "artifacts/two_orbit_certificates/distance-06-13/burden1.checker.log",
+            "sha256": "229a2f727c0afb033ead5b5ecbd90e86f800e9afbd09e6dc9e72855ede59e25b"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.06554,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 400788,
+            "path": "artifacts/two_orbit_certificates/distance-06-13/burden1.cnf",
+            "sha256": "1da3be11be6e2a840da95ea81d22cd64ddaa31d7c4d4255c62de1a1fc2f5af09"
+          },
+          "metadata": {
+            "bytes": 1815,
+            "path": "artifacts/two_orbit_certificates/distance-06-13/burden1.metadata.json",
+            "sha256": "fb9ed14bbfcbebefdaaec648b49831c0125027dedaf90134f7f88e28fea0ce86"
+          },
+          "proof": {
+            "bytes": 1273,
+            "path": "artifacts/two_orbit_certificates/distance-06-13/burden1.drat",
+            "sha256": "88249d2e1c34dd5db7d345313f6a48fcf8a1bc7854e31f56e999deeddbc4badf"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-13/burden1.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.02405
+        },
+        "burden2-second-orbit-changed": {
+          "checker_log": {
+            "bytes": 442,
+            "path": "artifacts/two_orbit_certificates/distance-06-13/burden2-second-orbit-changed.checker.log",
+            "sha256": "f937ab10736fbc5ca7bb30fcc2a3259fa2a2b8c1fc6c91631d1b54a7bd461c4c"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.06218,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 434371,
+            "path": "artifacts/two_orbit_certificates/distance-06-13/burden2-second-orbit-changed.cnf",
+            "sha256": "db82036a24a15dde1c2600626bc0011dd2d8697d59dc7edf5485cf13d84f7fdf"
+          },
+          "metadata": {
+            "bytes": 1845,
+            "path": "artifacts/two_orbit_certificates/distance-06-13/burden2-second-orbit-changed.metadata.json",
+            "sha256": "1470866063261a9212565e146670d771dc1aa2685ff341ced2008520f1f2b580"
+          },
+          "proof": {
+            "bytes": 1633,
+            "path": "artifacts/two_orbit_certificates/distance-06-13/burden2-second-orbit-changed.drat",
+            "sha256": "b24d7cdb5fc6187f274c5f8d22ea65ba56bbb058d8c10f157f0da12b61ecacb2"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-13/burden2-second-orbit-changed.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.022521
+        }
+      },
+      "cnf_audits": {
+        "burden0": {
+          "change_clause_exact": false,
+          "cnf_clauses": 22495,
+          "cnf_variables": 3656,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": false
+        },
+        "burden1": {
+          "change_clause_exact": false,
+          "cnf_clauses": 25718,
+          "cnf_variables": 5806,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": true
+        },
+        "burden2-second-orbit-changed": {
+          "change_clause_exact": true,
+          "cnf_clauses": 27868,
+          "cnf_variables": 6881,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": true
+        }
+      },
+      "exact_minimum_burden": 2,
+      "family": "F_{6,13}: vary exactly the 43 distance-6 and 43 distance-13 edges; freeze all other cyclic-distance orbits to the Springer seed",
+      "five_set_accounting": {
+        "five_sets_examined": 962598,
+        "inactive_fixed_both_colors": 961523,
+        "one_active": 903,
+        "single_active": 1075,
+        "zero_active": 172
+      },
+      "independent_unsymmetrized_z3": {
+        "burden_at_most_0": {
+          "seconds": 0.028478,
+          "verdict": "UNSAT"
+        },
+        "burden_at_most_1": {
+          "seconds": 0.033378,
+          "verdict": "UNSAT"
+        },
+        "burden_at_most_2_with_second_orbit_changed": {
+          "seconds": 0.027357,
+          "verdict": "UNSAT"
+        }
+      },
+      "minimum_assignments": 86,
+      "minimum_common_rotation_orbits": 2,
+      "minimum_diversity_explanation": "Every burden-two assignment keeps the second orbit at its frozen color, so the complete minima are exactly the one-orbit length-24 and length-25 interval classes (43 rotations each).",
+      "minimum_edge_counts": [
+        454,
+        455
+      ],
+      "minimum_graph_isomorphism_classes": 2,
+      "new_minimum_class_created_by_second_orbit": false,
+      "primal_min_fill_width_upper_bound": 55,
+      "raw_active_five_sets": 1075,
+      "raw_clause_length_histogram": {
+        "1": 430,
+        "2": 430,
+        "3": 43,
+        "4": 172
+      },
+      "rotation_invariance_checked_for_all_42_nonidentity_shifts": true,
+      "second_distance": 13,
+      "symmetry_coverage": "The exact audited lex-leader compares the concatenated 86-bit word with all 42 common rotations. Every finite Z_43 orbit contains a lexicographically least word; tied least words are retained. Independent unsymmetrized Z3 checks reach the same three UNSAT conclusions.",
+      "unique_raw_clauses": 344
+    },
+    {
+      "base_second_orbit_color": 1,
+      "certificates": {
+        "burden0": {
+          "checker_log": {
+            "bytes": 441,
+            "path": "artifacts/two_orbit_certificates/distance-06-14/burden0.checker.log",
+            "sha256": "aef22861704daef66f2203d646b5daced636c2ad73c4b64055d8b7bf8ebd54c1"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.064031,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 347837,
+            "path": "artifacts/two_orbit_certificates/distance-06-14/burden0.cnf",
+            "sha256": "c21057b4e34637571a51c4161caad19f6ecc61dfce24eefb4945318d7712bec8"
+          },
+          "metadata": {
+            "bytes": 1787,
+            "path": "artifacts/two_orbit_certificates/distance-06-14/burden0.metadata.json",
+            "sha256": "5b85942334b9972f7096a1285f352589b42e67c34a6d656ea42e672448b54f6f"
+          },
+          "proof": {
+            "bytes": 85308,
+            "path": "artifacts/two_orbit_certificates/distance-06-14/burden0.drat",
+            "sha256": "2851d87f379a50272645bc07003bb3529f256951c38bab24a71502b6893d94f2"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-14/burden0.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.013447
+        },
+        "burden1": {
+          "checker_log": {
+            "bytes": 447,
+            "path": "artifacts/two_orbit_certificates/distance-06-14/burden1.checker.log",
+            "sha256": "df9bbfa4670bce82e3d21dba63e3aefd9f3a42b8ddba2be0e876fcb987be23f0"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.065846,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 417181,
+            "path": "artifacts/two_orbit_certificates/distance-06-14/burden1.cnf",
+            "sha256": "aba6ef20d1665728a4ee23c7329893ddaffc26efb9e8ab9b44bf39c7731ccf53"
+          },
+          "metadata": {
+            "bytes": 1802,
+            "path": "artifacts/two_orbit_certificates/distance-06-14/burden1.metadata.json",
+            "sha256": "b32cf6f0b46e6d2a2ef7a3f5b7952345aca9c2985e385f6ed84481ca445ae028"
+          },
+          "proof": {
+            "bytes": 20211,
+            "path": "artifacts/two_orbit_certificates/distance-06-14/burden1.drat",
+            "sha256": "d4a66aff65de5872a9221242193d15506a4da7c2b4b237ddb3e97798cf8a72f8"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-14/burden1.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.030421
+        },
+        "burden2-second-orbit-changed": {
+          "checker_log": {
+            "bytes": 447,
+            "path": "artifacts/two_orbit_certificates/distance-06-14/burden2-second-orbit-changed.checker.log",
+            "sha256": "50fe0fd79165c5e0b601e84ac011439e0b5f89a14932f6d876f9a865f6a1d40e"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.069451,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 461815,
+            "path": "artifacts/two_orbit_certificates/distance-06-14/burden2-second-orbit-changed.cnf",
+            "sha256": "05099b72ef8626975e270ad609e0fe59a4f5f010b02918b54aadcb4c97de3019"
+          },
+          "metadata": {
+            "bytes": 1832,
+            "path": "artifacts/two_orbit_certificates/distance-06-14/burden2-second-orbit-changed.metadata.json",
+            "sha256": "7f75d2f044cb12a02673e7bb4599ea210c7fcb002ff8816da2a06e6f7e585847"
+          },
+          "proof": {
+            "bytes": 6226,
+            "path": "artifacts/two_orbit_certificates/distance-06-14/burden2-second-orbit-changed.drat",
+            "sha256": "dcc78296ce08a34eb036010f3d8c017d25605a3ee68a870e4b5068ef3e8cfc00"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-14/burden2-second-orbit-changed.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.053323
+        }
+      },
+      "cnf_audits": {
+        "burden0": {
+          "change_clause_exact": false,
+          "cnf_clauses": 22839,
+          "cnf_variables": 3656,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": false
+        },
+        "burden1": {
+          "change_clause_exact": false,
+          "cnf_clauses": 27094,
+          "cnf_variables": 6494,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": true
+        },
+        "burden2-second-orbit-changed": {
+          "change_clause_exact": true,
+          "cnf_clauses": 29932,
+          "cnf_variables": 7913,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": true
+        }
+      },
+      "exact_minimum_burden": 2,
+      "family": "F_{6,14}: vary exactly the 43 distance-6 and 43 distance-14 edges; freeze all other cyclic-distance orbits to the Springer seed",
+      "five_set_accounting": {
+        "five_sets_examined": 962598,
+        "inactive_fixed_both_colors": 961179,
+        "one_active": 43,
+        "single_active": 1419,
+        "zero_active": 1376
+      },
+      "independent_unsymmetrized_z3": {
+        "burden_at_most_0": {
+          "seconds": 0.036303,
+          "verdict": "UNSAT"
+        },
+        "burden_at_most_1": {
+          "seconds": 0.037844,
+          "verdict": "UNSAT"
+        },
+        "burden_at_most_2_with_second_orbit_changed": {
+          "seconds": 0.035429,
+          "verdict": "UNSAT"
+        }
+      },
+      "minimum_assignments": 86,
+      "minimum_common_rotation_orbits": 2,
+      "minimum_diversity_explanation": "Every burden-two assignment keeps the second orbit at its frozen color, so the complete minima are exactly the one-orbit length-24 and length-25 interval classes (43 rotations each).",
+      "minimum_edge_counts": [
+        454,
+        455
+      ],
+      "minimum_graph_isomorphism_classes": 2,
+      "new_minimum_class_created_by_second_orbit": false,
+      "primal_min_fill_width_upper_bound": 48,
+      "raw_active_five_sets": 1419,
+      "raw_clause_length_histogram": {
+        "1": 301,
+        "2": 989,
+        "3": 129
+      },
+      "rotation_invariance_checked_for_all_42_nonidentity_shifts": true,
+      "second_distance": 14,
+      "symmetry_coverage": "The exact audited lex-leader compares the concatenated 86-bit word with all 42 common rotations. Every finite Z_43 orbit contains a lexicographically least word; tied least words are retained. Independent unsymmetrized Z3 checks reach the same three UNSAT conclusions.",
+      "unique_raw_clauses": 516
+    },
+    {
+      "base_second_orbit_color": 0,
+      "certificates": {
+        "burden0": {
+          "checker_log": {
+            "bytes": 441,
+            "path": "artifacts/two_orbit_certificates/distance-06-15/burden0.checker.log",
+            "sha256": "446efdec24a01afd345b3071d25721b0dd2e9eb7d43e97499dec3d2eb6efe7dc"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.065543,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 349492,
+            "path": "artifacts/two_orbit_certificates/distance-06-15/burden0.cnf",
+            "sha256": "20b88a876b38e0f60feca2544d384e70fab0c6a44ead2c79b862c2f68d0dec4b"
+          },
+          "metadata": {
+            "bytes": 1813,
+            "path": "artifacts/two_orbit_certificates/distance-06-15/burden0.metadata.json",
+            "sha256": "e2b1da9b535667efabf9f13a24de4635370588c118636192dadd87dd92aba459"
+          },
+          "proof": {
+            "bytes": 83688,
+            "path": "artifacts/two_orbit_certificates/distance-06-15/burden0.drat",
+            "sha256": "ce398bd0c73abf6c9d3d2ca02c71c17c77e52752347e00b38cd654949510cbf7"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-15/burden0.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.014346
+        },
+        "burden1": {
+          "checker_log": {
+            "bytes": 447,
+            "path": "artifacts/two_orbit_certificates/distance-06-15/burden1.checker.log",
+            "sha256": "0f778308b9f35e610ec02f97f8ab3921a14767401e98ae7078e50d7cf3d650ad"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.062176,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 401421,
+            "path": "artifacts/two_orbit_certificates/distance-06-15/burden1.cnf",
+            "sha256": "0ad332b84f7ad68704d9cb2a55b1d2134ec1a8c726c0379df688b228a03f013d"
+          },
+          "metadata": {
+            "bytes": 1828,
+            "path": "artifacts/two_orbit_certificates/distance-06-15/burden1.metadata.json",
+            "sha256": "f8f92fffd6fb7d448b61bf30f1b4716c8520525b284498acec9f58178e283bc4"
+          },
+          "proof": {
+            "bytes": 20493,
+            "path": "artifacts/two_orbit_certificates/distance-06-15/burden1.drat",
+            "sha256": "c5d67e626a245773b7990644b4b8cdf7c03a57d34fc8c6131695c9e78806af42"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-15/burden1.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.027212
+        },
+        "burden2-second-orbit-changed": {
+          "checker_log": {
+            "bytes": 447,
+            "path": "artifacts/two_orbit_certificates/distance-06-15/burden2-second-orbit-changed.checker.log",
+            "sha256": "361a9aa22b0e4b0b8fd92d508767f465b42ac226b39097f8eb88e9f16c580c45"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.069894,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 433628,
+            "path": "artifacts/two_orbit_certificates/distance-06-15/burden2-second-orbit-changed.cnf",
+            "sha256": "f481904cc3d3c3d91ce76f8c954300e37b0401ee9c5bcd4d77a1d5f9b33d6630"
+          },
+          "metadata": {
+            "bytes": 1858,
+            "path": "artifacts/two_orbit_certificates/distance-06-15/burden2-second-orbit-changed.metadata.json",
+            "sha256": "83e1a4026110630084ec4e3da067f47889225fb814ca21bacb0fa7f171b0b5ac"
+          },
+          "proof": {
+            "bytes": 20670,
+            "path": "artifacts/two_orbit_certificates/distance-06-15/burden2-second-orbit-changed.drat",
+            "sha256": "57360e1ae25abd6f5f3dfba271cc5974915aabea43ce500e5445acf187932fcc"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-15/burden2-second-orbit-changed.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.049177
+        }
+      },
+      "cnf_audits": {
+        "burden0": {
+          "change_clause_exact": false,
+          "cnf_clauses": 22452,
+          "cnf_variables": 3656,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": false
+        },
+        "burden1": {
+          "change_clause_exact": false,
+          "cnf_clauses": 25546,
+          "cnf_variables": 5720,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": true
+        },
+        "burden2-second-orbit-changed": {
+          "change_clause_exact": true,
+          "cnf_clauses": 27610,
+          "cnf_variables": 6752,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": true
+        }
+      },
+      "exact_minimum_burden": 2,
+      "family": "F_{6,15}: vary exactly the 43 distance-6 and 43 distance-15 edges; freeze all other cyclic-distance orbits to the Springer seed",
+      "five_set_accounting": {
+        "five_sets_examined": 962598,
+        "inactive_fixed_both_colors": 961566,
+        "one_active": 860,
+        "single_active": 1032,
+        "zero_active": 172
+      },
+      "independent_unsymmetrized_z3": {
+        "burden_at_most_0": {
+          "seconds": 0.030009,
+          "verdict": "UNSAT"
+        },
+        "burden_at_most_1": {
+          "seconds": 0.034704,
+          "verdict": "UNSAT"
+        },
+        "burden_at_most_2_with_second_orbit_changed": {
+          "seconds": 0.031156,
+          "verdict": "UNSAT"
+        }
+      },
+      "minimum_assignments": 86,
+      "minimum_common_rotation_orbits": 2,
+      "minimum_diversity_explanation": "Every burden-two assignment keeps the second orbit at its frozen color, so the complete minima are exactly the one-orbit length-24 and length-25 interval classes (43 rotations each).",
+      "minimum_edge_counts": [
+        454,
+        455
+      ],
+      "minimum_graph_isomorphism_classes": 2,
+      "new_minimum_class_created_by_second_orbit": false,
+      "primal_min_fill_width_upper_bound": 43,
+      "raw_active_five_sets": 1032,
+      "raw_clause_length_histogram": {
+        "1": 129,
+        "2": 344,
+        "3": 387,
+        "4": 86,
+        "5": 86
+      },
+      "rotation_invariance_checked_for_all_42_nonidentity_shifts": true,
+      "second_distance": 15,
+      "symmetry_coverage": "The exact audited lex-leader compares the concatenated 86-bit word with all 42 common rotations. Every finite Z_43 orbit contains a lexicographically least word; tied least words are retained. Independent unsymmetrized Z3 checks reach the same three UNSAT conclusions.",
+      "unique_raw_clauses": 645
+    },
+    {
+      "base_second_orbit_color": 0,
+      "certificates": {
+        "burden0": {
+          "checker_log": {
+            "bytes": 441,
+            "path": "artifacts/two_orbit_certificates/distance-06-16/burden0.checker.log",
+            "sha256": "b404a2cb261d48456542440c05cb2c20a7f032c4039bd4f3e9e1c665eb0d9b8b"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.064864,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 345970,
+            "path": "artifacts/two_orbit_certificates/distance-06-16/burden0.cnf",
+            "sha256": "d95deba59287308dc91295cff539e25636c50987f99899d72733c7c0fa96aea9"
+          },
+          "metadata": {
+            "bytes": 1797,
+            "path": "artifacts/two_orbit_certificates/distance-06-16/burden0.metadata.json",
+            "sha256": "73806f798198664717bb22963ca0b74e7cf9386c656e7f2c22783a0fe082ea45"
+          },
+          "proof": {
+            "bytes": 82603,
+            "path": "artifacts/two_orbit_certificates/distance-06-16/burden0.drat",
+            "sha256": "a6bcaf9676c9a0a4cb7ca822f8ef79b7a0024aeb3edffcc9b3c845aac90a0234"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-16/burden0.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.014837
+        },
+        "burden1": {
+          "checker_log": {
+            "bytes": 444,
+            "path": "artifacts/two_orbit_certificates/distance-06-16/burden1.checker.log",
+            "sha256": "7158dd02560dfe19d4d6cf89d92c037e0502d5c02d4ce80486d02c9360cc844c"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.06293,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 386151,
+            "path": "artifacts/two_orbit_certificates/distance-06-16/burden1.cnf",
+            "sha256": "e2a3ade27b16c312c049e391d151cd567e907dd100a313b320c7d584779b1340"
+          },
+          "metadata": {
+            "bytes": 1810,
+            "path": "artifacts/two_orbit_certificates/distance-06-16/burden1.metadata.json",
+            "sha256": "1c5e07ba923bcf168844de53ce28aa1fddea54f039f81b8f39784a146576195c"
+          },
+          "proof": {
+            "bytes": 3871,
+            "path": "artifacts/two_orbit_certificates/distance-06-16/burden1.drat",
+            "sha256": "c40c4daa7159d7cab44c13c90e1a5d01cc88ec262472395dc3b86890e4312eb9"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-16/burden1.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.025824
+        },
+        "burden2-second-orbit-changed": {
+          "checker_log": {
+            "bytes": 448,
+            "path": "artifacts/two_orbit_certificates/distance-06-16/burden2-second-orbit-changed.checker.log",
+            "sha256": "9501e538bd74b1db67ecea226afa2ffbbd01efa94e39b33ca3bffa1e100e270a"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.06705,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 410242,
+            "path": "artifacts/two_orbit_certificates/distance-06-16/burden2-second-orbit-changed.cnf",
+            "sha256": "3cf4845bfcdeb73fcca993c73662fb5035a63f85f10b4630db83466bfd8d67ea"
+          },
+          "metadata": {
+            "bytes": 1841,
+            "path": "artifacts/two_orbit_certificates/distance-06-16/burden2-second-orbit-changed.metadata.json",
+            "sha256": "52b78dce77db7e8b2226ecf430631a42db994ee9dd651a1e46d4f25a6759b676"
+          },
+          "proof": {
+            "bytes": 15498,
+            "path": "artifacts/two_orbit_certificates/distance-06-16/burden2-second-orbit-changed.drat",
+            "sha256": "1191238baba0808d02c0b54e4e1745a8d64271f441c378c130036088ce2712d3"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-16/burden2-second-orbit-changed.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.044181
+        }
+      },
+      "cnf_audits": {
+        "burden0": {
+          "change_clause_exact": false,
+          "cnf_clauses": 22194,
+          "cnf_variables": 3656,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": false
+        },
+        "burden1": {
+          "change_clause_exact": false,
+          "cnf_clauses": 24514,
+          "cnf_variables": 5204,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": true
+        },
+        "burden2-second-orbit-changed": {
+          "change_clause_exact": true,
+          "cnf_clauses": 26062,
+          "cnf_variables": 5978,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": true
+        }
+      },
+      "exact_minimum_burden": 2,
+      "family": "F_{6,16}: vary exactly the 43 distance-6 and 43 distance-16 edges; freeze all other cyclic-distance orbits to the Springer seed",
+      "five_set_accounting": {
+        "five_sets_examined": 962598,
+        "inactive_fixed_both_colors": 961824,
+        "one_active": 602,
+        "single_active": 774,
+        "zero_active": 172
+      },
+      "independent_unsymmetrized_z3": {
+        "burden_at_most_0": {
+          "seconds": 0.0251,
+          "verdict": "UNSAT"
+        },
+        "burden_at_most_1": {
+          "seconds": 0.030155,
+          "verdict": "UNSAT"
+        },
+        "burden_at_most_2_with_second_orbit_changed": {
+          "seconds": 0.047368,
+          "verdict": "UNSAT"
+        }
+      },
+      "minimum_assignments": 86,
+      "minimum_common_rotation_orbits": 2,
+      "minimum_diversity_explanation": "Every burden-two assignment keeps the second orbit at its frozen color, so the complete minima are exactly the one-orbit length-24 and length-25 interval classes (43 rotations each).",
+      "minimum_edge_counts": [
+        454,
+        455
+      ],
+      "minimum_graph_isomorphism_classes": 2,
+      "new_minimum_class_created_by_second_orbit": false,
+      "primal_min_fill_width_upper_bound": 39,
+      "raw_active_five_sets": 774,
+      "raw_clause_length_histogram": {
+        "1": 86,
+        "2": 258,
+        "3": 344,
+        "4": 86
+      },
+      "rotation_invariance_checked_for_all_42_nonidentity_shifts": true,
+      "second_distance": 16,
+      "symmetry_coverage": "The exact audited lex-leader compares the concatenated 86-bit word with all 42 common rotations. Every finite Z_43 orbit contains a lexicographically least word; tied least words are retained. Independent unsymmetrized Z3 checks reach the same three UNSAT conclusions.",
+      "unique_raw_clauses": 602
+    },
+    {
+      "base_second_orbit_color": 1,
+      "certificates": {
+        "burden0": {
+          "checker_log": {
+            "bytes": 441,
+            "path": "artifacts/two_orbit_certificates/distance-06-17/burden0.checker.log",
+            "sha256": "b85536a64b421e7fcfcf77936aef144ffad357e7b7e8d3f5d695bc952278adf4"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.064425,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 351029,
+            "path": "artifacts/two_orbit_certificates/distance-06-17/burden0.cnf",
+            "sha256": "a087a55a76b43b120ea9df5e785265b6ed15229c615a6e61379a4862625c6f81"
+          },
+          "metadata": {
+            "bytes": 1800,
+            "path": "artifacts/two_orbit_certificates/distance-06-17/burden0.metadata.json",
+            "sha256": "61a3cf5ab57ceae7aad7ea472926c6fdfc1e3af6d1500adb6d0f8628d4fc1f6c"
+          },
+          "proof": {
+            "bytes": 86104,
+            "path": "artifacts/two_orbit_certificates/distance-06-17/burden0.drat",
+            "sha256": "a4f88559a40040e5de1397a13c7804242bc3db9a6991622898c78bd993c4f03e"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-17/burden0.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.014685
+        },
+        "burden1": {
+          "checker_log": {
+            "bytes": 446,
+            "path": "artifacts/two_orbit_certificates/distance-06-17/burden1.checker.log",
+            "sha256": "daffb31841876eb220fb9f79cc8161b2275b584d0fe36f73063658f158005015"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.066529,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 426178,
+            "path": "artifacts/two_orbit_certificates/distance-06-17/burden1.cnf",
+            "sha256": "a4569a1d5066ed057751a33ae39d158b1e488e8b8cd4bb11b1bd1290ab3c9188"
+          },
+          "metadata": {
+            "bytes": 1815,
+            "path": "artifacts/two_orbit_certificates/distance-06-17/burden1.metadata.json",
+            "sha256": "e15f2a17aa127be0da00f4a103ae6617b6e30432a330ef278433014a849dc9bf"
+          },
+          "proof": {
+            "bytes": 6993,
+            "path": "artifacts/two_orbit_certificates/distance-06-17/burden1.drat",
+            "sha256": "8e38f2545040bdd6ac07d5d9ea18e8d0ddc6c41cdda8aed7c3c709ab28db7ef0"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-17/burden1.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.031976
+        },
+        "burden2-second-orbit-changed": {
+          "checker_log": {
+            "bytes": 448,
+            "path": "artifacts/two_orbit_certificates/distance-06-17/burden2-second-orbit-changed.checker.log",
+            "sha256": "efa2539c470a45cf24d76dc1aa09128f151aba04d06bdf4d8a917bcbb0608507"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.076254,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 474940,
+            "path": "artifacts/two_orbit_certificates/distance-06-17/burden2-second-orbit-changed.cnf",
+            "sha256": "b39014e36fcd04156e3f3724da9b2c8e8cff2c79a9e11be45616be932e863dbc"
+          },
+          "metadata": {
+            "bytes": 1845,
+            "path": "artifacts/two_orbit_certificates/distance-06-17/burden2-second-orbit-changed.metadata.json",
+            "sha256": "fe1bb7e09e14c35b8167ae5b27e129bd9f25e683cfad5e35e1687ce41edf7000"
+          },
+          "proof": {
+            "bytes": 5343,
+            "path": "artifacts/two_orbit_certificates/distance-06-17/burden2-second-orbit-changed.drat",
+            "sha256": "fb54c86c9373fe2e9f9143ac426d634135207c801e3490388db231ac2862f208"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-17/burden2-second-orbit-changed.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.057235
+        }
+      },
+      "cnf_audits": {
+        "burden0": {
+          "change_clause_exact": false,
+          "cnf_clauses": 22968,
+          "cnf_variables": 3656,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": false
+        },
+        "burden1": {
+          "change_clause_exact": false,
+          "cnf_clauses": 27610,
+          "cnf_variables": 6752,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": true
+        },
+        "burden2-second-orbit-changed": {
+          "change_clause_exact": true,
+          "cnf_clauses": 30706,
+          "cnf_variables": 8300,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": true
+        }
+      },
+      "exact_minimum_burden": 2,
+      "family": "F_{6,17}: vary exactly the 43 distance-6 and 43 distance-17 edges; freeze all other cyclic-distance orbits to the Springer seed",
+      "five_set_accounting": {
+        "five_sets_examined": 962598,
+        "inactive_fixed_both_colors": 961050,
+        "one_active": 43,
+        "single_active": 1548,
+        "zero_active": 1505
+      },
+      "independent_unsymmetrized_z3": {
+        "burden_at_most_0": {
+          "seconds": 0.042204,
+          "verdict": "UNSAT"
+        },
+        "burden_at_most_1": {
+          "seconds": 0.048576,
+          "verdict": "UNSAT"
+        },
+        "burden_at_most_2_with_second_orbit_changed": {
+          "seconds": 0.042017,
+          "verdict": "UNSAT"
+        }
+      },
+      "minimum_assignments": 86,
+      "minimum_common_rotation_orbits": 2,
+      "minimum_diversity_explanation": "Every burden-two assignment keeps the second orbit at its frozen color, so the complete minima are exactly the one-orbit length-24 and length-25 interval classes (43 rotations each).",
+      "minimum_edge_counts": [
+        454,
+        455
+      ],
+      "minimum_graph_isomorphism_classes": 2,
+      "new_minimum_class_created_by_second_orbit": false,
+      "primal_min_fill_width_upper_bound": 47,
+      "raw_active_five_sets": 1548,
+      "raw_clause_length_histogram": {
+        "1": 258,
+        "2": 516,
+        "3": 688,
+        "4": 86
+      },
+      "rotation_invariance_checked_for_all_42_nonidentity_shifts": true,
+      "second_distance": 17,
+      "symmetry_coverage": "The exact audited lex-leader compares the concatenated 86-bit word with all 42 common rotations. Every finite Z_43 orbit contains a lexicographically least word; tied least words are retained. Independent unsymmetrized Z3 checks reach the same three UNSAT conclusions.",
+      "unique_raw_clauses": 903
+    },
+    {
+      "base_second_orbit_color": 0,
+      "certificates": {
+        "burden0": {
+          "checker_log": {
+            "bytes": 442,
+            "path": "artifacts/two_orbit_certificates/distance-06-18/burden0.checker.log",
+            "sha256": "ff89c1ed42e332a221f958f224e664ecfe3a7f0bcecc9b36d325f54f89019649"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.062838,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 346585,
+            "path": "artifacts/two_orbit_certificates/distance-06-18/burden0.cnf",
+            "sha256": "e488d64f491160f839581309e2ea3f3bae73a189e21960d4c931d76febfc0aa5"
+          },
+          "metadata": {
+            "bytes": 1800,
+            "path": "artifacts/two_orbit_certificates/distance-06-18/burden0.metadata.json",
+            "sha256": "679722df3cd3bbed33ccf88468d70ed2f9bcd2ca2d55059368bad455f0cadd08"
+          },
+          "proof": {
+            "bytes": 84833,
+            "path": "artifacts/two_orbit_certificates/distance-06-18/burden0.drat",
+            "sha256": "cc00cee40cc3375e8faa440765d6e71c3fdd62c1a6cc2f6488f04e2ea584fa23"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-18/burden0.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.0145
+        },
+        "burden1": {
+          "checker_log": {
+            "bytes": 447,
+            "path": "artifacts/two_orbit_certificates/distance-06-18/burden1.checker.log",
+            "sha256": "f8a6f0ab972bc1f7847f12effee19a0c997d4eb4e625cb743a5707d93922f099"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.065748,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 398514,
+            "path": "artifacts/two_orbit_certificates/distance-06-18/burden1.cnf",
+            "sha256": "a5380e801cf512a9c0e2f4748818b6c288db2aec584425c62812f365e9d781b8"
+          },
+          "metadata": {
+            "bytes": 1815,
+            "path": "artifacts/two_orbit_certificates/distance-06-18/burden1.metadata.json",
+            "sha256": "3082324234b1b658a23a6ac6cf55d0f7631bf57e4338fe11bdf6726ab60a4186"
+          },
+          "proof": {
+            "bytes": 15080,
+            "path": "artifacts/two_orbit_certificates/distance-06-18/burden1.drat",
+            "sha256": "10abc4279a3f8682bb93100579c2d6b4bc03c30bf292787ec401a4e170cd9f9d"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-18/burden1.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.023501
+        },
+        "burden2-second-orbit-changed": {
+          "checker_log": {
+            "bytes": 442,
+            "path": "artifacts/two_orbit_certificates/distance-06-18/burden2-second-orbit-changed.checker.log",
+            "sha256": "c6ed9ecc74f6108cc1dcf9eacecb977e8fb8b8d96ccde7cb61a837478c38bd18"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.063207,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 430721,
+            "path": "artifacts/two_orbit_certificates/distance-06-18/burden2-second-orbit-changed.cnf",
+            "sha256": "2d10c06a3329504245597f04e642a5c792c884851085137f5ebb34461a8e31bc"
+          },
+          "metadata": {
+            "bytes": 1845,
+            "path": "artifacts/two_orbit_certificates/distance-06-18/burden2-second-orbit-changed.metadata.json",
+            "sha256": "48f43672c5b42af4e30ac5af8bc77ab2143e7db277aa8d365473b3e5a7cc5ede"
+          },
+          "proof": {
+            "bytes": 3329,
+            "path": "artifacts/two_orbit_certificates/distance-06-18/burden2-second-orbit-changed.drat",
+            "sha256": "99ae66bf4ee2d0472c6b4bf45d54c135999141f6ac2e8ab180df2f51209e881b"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-18/burden2-second-orbit-changed.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.024597
+        }
+      },
+      "cnf_audits": {
+        "burden0": {
+          "change_clause_exact": false,
+          "cnf_clauses": 22452,
+          "cnf_variables": 3656,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": false
+        },
+        "burden1": {
+          "change_clause_exact": false,
+          "cnf_clauses": 25546,
+          "cnf_variables": 5720,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": true
+        },
+        "burden2-second-orbit-changed": {
+          "change_clause_exact": true,
+          "cnf_clauses": 27610,
+          "cnf_variables": 6752,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": true
+        }
+      },
+      "exact_minimum_burden": 2,
+      "family": "F_{6,18}: vary exactly the 43 distance-6 and 43 distance-18 edges; freeze all other cyclic-distance orbits to the Springer seed",
+      "five_set_accounting": {
+        "five_sets_examined": 962598,
+        "inactive_fixed_both_colors": 961566,
+        "one_active": 860,
+        "single_active": 1032,
+        "zero_active": 172
+      },
+      "independent_unsymmetrized_z3": {
+        "burden_at_most_0": {
+          "seconds": 0.028645,
+          "verdict": "UNSAT"
+        },
+        "burden_at_most_1": {
+          "seconds": 0.034424,
+          "verdict": "UNSAT"
+        },
+        "burden_at_most_2_with_second_orbit_changed": {
+          "seconds": 0.027615,
+          "verdict": "UNSAT"
+        }
+      },
+      "minimum_assignments": 86,
+      "minimum_common_rotation_orbits": 2,
+      "minimum_diversity_explanation": "Every burden-two assignment keeps the second orbit at its frozen color, so the complete minima are exactly the one-orbit length-24 and length-25 interval classes (43 rotations each).",
+      "minimum_edge_counts": [
+        454,
+        455
+      ],
+      "minimum_graph_isomorphism_classes": 2,
+      "new_minimum_class_created_by_second_orbit": false,
+      "primal_min_fill_width_upper_bound": 50,
+      "raw_active_five_sets": 1032,
+      "raw_clause_length_histogram": {
+        "1": 344,
+        "2": 430,
+        "3": 215,
+        "4": 43
+      },
+      "rotation_invariance_checked_for_all_42_nonidentity_shifts": true,
+      "second_distance": 18,
+      "symmetry_coverage": "The exact audited lex-leader compares the concatenated 86-bit word with all 42 common rotations. Every finite Z_43 orbit contains a lexicographically least word; tied least words are retained. Independent unsymmetrized Z3 checks reach the same three UNSAT conclusions.",
+      "unique_raw_clauses": 430
+    },
+    {
+      "base_second_orbit_color": 0,
+      "certificates": {
+        "burden0": {
+          "checker_log": {
+            "bytes": 442,
+            "path": "artifacts/two_orbit_certificates/distance-06-19/burden0.checker.log",
+            "sha256": "842ddf00d4ce7818bd1b636ecb3a3fc42f6c1618543be4326ddaa0f93dafec3f"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.066938,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 346752,
+            "path": "artifacts/two_orbit_certificates/distance-06-19/burden0.cnf",
+            "sha256": "cf8c8a0e8142193b4fb27fd016efb6c9f99138cf1e353cbbf04ea85650654542"
+          },
+          "metadata": {
+            "bytes": 1812,
+            "path": "artifacts/two_orbit_certificates/distance-06-19/burden0.metadata.json",
+            "sha256": "f7ec838ceab7409af229bb6d05a78833b22896c7dd084c2beb3b13de4dbf0f85"
+          },
+          "proof": {
+            "bytes": 85837,
+            "path": "artifacts/two_orbit_certificates/distance-06-19/burden0.drat",
+            "sha256": "a35e56d489bde69b87c47533125e3e996e432bbf07b78e35877491ff74bccc37"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-19/burden0.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.014226
+        },
+        "burden1": {
+          "checker_log": {
+            "bytes": 448,
+            "path": "artifacts/two_orbit_certificates/distance-06-19/burden1.checker.log",
+            "sha256": "6f6bf828045f09ad90451cc5ecf226b9c7913dfe03210861ad09f089ad410ae8"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.06675,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 402551,
+            "path": "artifacts/two_orbit_certificates/distance-06-19/burden1.cnf",
+            "sha256": "ef1042dca3226605c701401d63f53c3ae71e4a7a17a6dbe42b541c83078bdc32"
+          },
+          "metadata": {
+            "bytes": 1827,
+            "path": "artifacts/two_orbit_certificates/distance-06-19/burden1.metadata.json",
+            "sha256": "1cdfbcc3d61cbfce1be660a8ce791241e51edfd7689df8fdfec261ec0c137b69"
+          },
+          "proof": {
+            "bytes": 15488,
+            "path": "artifacts/two_orbit_certificates/distance-06-19/burden1.drat",
+            "sha256": "b652c141bc5b926b0986dd3fac48e1c45e5802728362a83c79b70d8000e8db68"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-19/burden1.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.024619
+        },
+        "burden2-second-orbit-changed": {
+          "checker_log": {
+            "bytes": 442,
+            "path": "artifacts/two_orbit_certificates/distance-06-19/burden2-second-orbit-changed.checker.log",
+            "sha256": "64b1d76a349b03a67b9736e90084a44bd73c9351afd5dba84bc5f17bf1d89379"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.065782,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 437510,
+            "path": "artifacts/two_orbit_certificates/distance-06-19/burden2-second-orbit-changed.cnf",
+            "sha256": "402366b9e024d0db35efb817f57fc7ac43129f89c25d1c6bafb5306199421903"
+          },
+          "metadata": {
+            "bytes": 1857,
+            "path": "artifacts/two_orbit_certificates/distance-06-19/burden2-second-orbit-changed.metadata.json",
+            "sha256": "5212c1f0715a192e6526e2680cae59857f94650a1d8b1e9b5e662e271aa2486c"
+          },
+          "proof": {
+            "bytes": 1877,
+            "path": "artifacts/two_orbit_certificates/distance-06-19/burden2-second-orbit-changed.drat",
+            "sha256": "8b489a7a142b3236eb937d50065ffa7bf8ce82043942acf008ca1d63b19aa5f0"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-19/burden2-second-orbit-changed.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.022451
+        }
+      },
+      "cnf_audits": {
+        "burden0": {
+          "change_clause_exact": false,
+          "cnf_clauses": 22538,
+          "cnf_variables": 3656,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": false
+        },
+        "burden1": {
+          "change_clause_exact": false,
+          "cnf_clauses": 25890,
+          "cnf_variables": 5892,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": true
+        },
+        "burden2-second-orbit-changed": {
+          "change_clause_exact": true,
+          "cnf_clauses": 28126,
+          "cnf_variables": 7010,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": true
+        }
+      },
+      "exact_minimum_burden": 2,
+      "family": "F_{6,19}: vary exactly the 43 distance-6 and 43 distance-19 edges; freeze all other cyclic-distance orbits to the Springer seed",
+      "five_set_accounting": {
+        "five_sets_examined": 962598,
+        "inactive_fixed_both_colors": 961480,
+        "one_active": 946,
+        "single_active": 1118,
+        "zero_active": 172
+      },
+      "independent_unsymmetrized_z3": {
+        "burden_at_most_0": {
+          "seconds": 0.030467,
+          "verdict": "UNSAT"
+        },
+        "burden_at_most_1": {
+          "seconds": 0.039891,
+          "verdict": "UNSAT"
+        },
+        "burden_at_most_2_with_second_orbit_changed": {
+          "seconds": 0.029095,
+          "verdict": "UNSAT"
+        }
+      },
+      "minimum_assignments": 86,
+      "minimum_common_rotation_orbits": 2,
+      "minimum_diversity_explanation": "Every burden-two assignment keeps the second orbit at its frozen color, so the complete minima are exactly the one-orbit length-24 and length-25 interval classes (43 rotations each).",
+      "minimum_edge_counts": [
+        454,
+        455
+      ],
+      "minimum_graph_isomorphism_classes": 2,
+      "new_minimum_class_created_by_second_orbit": false,
+      "primal_min_fill_width_upper_bound": 52,
+      "raw_active_five_sets": 1118,
+      "raw_clause_length_histogram": {
+        "1": 645,
+        "2": 258,
+        "3": 43,
+        "4": 86,
+        "5": 86
+      },
+      "rotation_invariance_checked_for_all_42_nonidentity_shifts": true,
+      "second_distance": 19,
+      "symmetry_coverage": "The exact audited lex-leader compares the concatenated 86-bit word with all 42 common rotations. Every finite Z_43 orbit contains a lexicographically least word; tied least words are retained. Independent unsymmetrized Z3 checks reach the same three UNSAT conclusions.",
+      "unique_raw_clauses": 387
+    },
+    {
+      "base_second_orbit_color": 0,
+      "certificates": {
+        "burden0": {
+          "checker_log": {
+            "bytes": 441,
+            "path": "artifacts/two_orbit_certificates/distance-06-20/burden0.checker.log",
+            "sha256": "22a213cdbc1e8591f8e36808fa50ecac69b92b77bfc7f4fab2a4216b22d6e74f"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.066029,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 378196,
+            "path": "artifacts/two_orbit_certificates/distance-06-20/burden0.cnf",
+            "sha256": "d1431744bf1904880b971f9c3e385078ea6813235144e2dc1892657b9be73153"
+          },
+          "metadata": {
+            "bytes": 1818,
+            "path": "artifacts/two_orbit_certificates/distance-06-20/burden0.metadata.json",
+            "sha256": "17cb29908f95dd612955d7379940a8cd01204a426abf55c1462f38d3c65dded4"
+          },
+          "proof": {
+            "bytes": 96501,
+            "path": "artifacts/two_orbit_certificates/distance-06-20/burden0.drat",
+            "sha256": "f3c553f8dec16a439f21ee4c2c0e3862ebad0ed28051ee77de9acec158764791"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-20/burden0.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.014872
+        },
+        "burden1": {
+          "checker_log": {
+            "bytes": 449,
+            "path": "artifacts/two_orbit_certificates/distance-06-20/burden1.checker.log",
+            "sha256": "2142685ffede3897ad2ee97fa0a8b92b9ba8a4a78877f36085c6430314453547"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.072114,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 535177,
+            "path": "artifacts/two_orbit_certificates/distance-06-20/burden1.cnf",
+            "sha256": "b27528badad10b63dc93a77a2cdd6a5a68f0040f1a3a23a1aed711081afba468"
+          },
+          "metadata": {
+            "bytes": 1834,
+            "path": "artifacts/two_orbit_certificates/distance-06-20/burden1.metadata.json",
+            "sha256": "64e84e96043884a583435130056393d0e5ee0f7947f84a6cd87a0c15de34ba08"
+          },
+          "proof": {
+            "bytes": 22925,
+            "path": "artifacts/two_orbit_certificates/distance-06-20/burden1.drat",
+            "sha256": "2effc0b11c9fa7051477c161b0320b9765174306cc18c43052c0974727983348"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-20/burden1.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.036
+        },
+        "burden2-second-orbit-changed": {
+          "checker_log": {
+            "bytes": 445,
+            "path": "artifacts/two_orbit_certificates/distance-06-20/burden2-second-orbit-changed.checker.log",
+            "sha256": "576f9b191930e732e1b353aa8908bd18bf01fd18933faa40608b912bff13fb3d"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.072315,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 669854,
+            "path": "artifacts/two_orbit_certificates/distance-06-20/burden2-second-orbit-changed.cnf",
+            "sha256": "fa3da90637935d9bf3fc42c1232b287bd8599df2de1fea504d6289326e8cf781"
+          },
+          "metadata": {
+            "bytes": 1865,
+            "path": "artifacts/two_orbit_certificates/distance-06-20/burden2-second-orbit-changed.metadata.json",
+            "sha256": "cc932103d9f2c5f7c0b3951ebbe34669a516a7148a4f19938ae93b48aef894c4"
+          },
+          "proof": {
+            "bytes": 3938,
+            "path": "artifacts/two_orbit_certificates/distance-06-20/burden2-second-orbit-changed.drat",
+            "sha256": "65b95697735ba969f4bad7ec474bb336a4963abb6f950f0eb4d09663ede31d19"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-20/burden2-second-orbit-changed.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.055065
+        }
+      },
+      "cnf_audits": {
+        "burden0": {
+          "change_clause_exact": false,
+          "cnf_clauses": 24731,
+          "cnf_variables": 3656,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": false
+        },
+        "burden1": {
+          "change_clause_exact": false,
+          "cnf_clauses": 34662,
+          "cnf_variables": 10278,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": true
+        },
+        "burden2-second-orbit-changed": {
+          "change_clause_exact": true,
+          "cnf_clauses": 41284,
+          "cnf_variables": 13589,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": true
+        }
+      },
+      "exact_minimum_burden": 2,
+      "family": "F_{6,20}: vary exactly the 43 distance-6 and 43 distance-20 edges; freeze all other cyclic-distance orbits to the Springer seed",
+      "five_set_accounting": {
+        "five_sets_examined": 962598,
+        "inactive_fixed_both_colors": 959287,
+        "one_active": 3139,
+        "single_active": 3311,
+        "zero_active": 172
+      },
+      "independent_unsymmetrized_z3": {
+        "burden_at_most_0": {
+          "seconds": 0.082162,
+          "verdict": "UNSAT"
+        },
+        "burden_at_most_1": {
+          "seconds": 0.097632,
+          "verdict": "UNSAT"
+        },
+        "burden_at_most_2_with_second_orbit_changed": {
+          "seconds": 0.085524,
+          "verdict": "UNSAT"
+        }
+      },
+      "minimum_assignments": 86,
+      "minimum_common_rotation_orbits": 2,
+      "minimum_diversity_explanation": "Every burden-two assignment keeps the second orbit at its frozen color, so the complete minima are exactly the one-orbit length-24 and length-25 interval classes (43 rotations each).",
+      "minimum_edge_counts": [
+        454,
+        455
+      ],
+      "minimum_graph_isomorphism_classes": 2,
+      "new_minimum_class_created_by_second_orbit": false,
+      "primal_min_fill_width_upper_bound": 57,
+      "raw_active_five_sets": 3311,
+      "raw_clause_length_histogram": {
+        "1": 774,
+        "2": 774,
+        "3": 774,
+        "4": 688,
+        "5": 301
+      },
+      "rotation_invariance_checked_for_all_42_nonidentity_shifts": true,
+      "second_distance": 20,
+      "symmetry_coverage": "The exact audited lex-leader compares the concatenated 86-bit word with all 42 common rotations. Every finite Z_43 orbit contains a lexicographically least word; tied least words are retained. Independent unsymmetrized Z3 checks reach the same three UNSAT conclusions.",
+      "unique_raw_clauses": 1763
+    },
+    {
+      "base_second_orbit_color": 1,
+      "certificates": {
+        "burden0": {
+          "checker_log": {
+            "bytes": 441,
+            "path": "artifacts/two_orbit_certificates/distance-06-21/burden0.checker.log",
+            "sha256": "fc2e5ced124f3602b0edc8ef3dab716eb1db2780f950c4216ded501106d3f243"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.064183,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 342785,
+            "path": "artifacts/two_orbit_certificates/distance-06-21/burden0.cnf",
+            "sha256": "6533e35e7da3070a5a58ea273b8c95c32a7c4ea5d219761397cc835de530b367"
+          },
+          "metadata": {
+            "bytes": 1784,
+            "path": "artifacts/two_orbit_certificates/distance-06-21/burden0.metadata.json",
+            "sha256": "ae5500b4921eaeeaae8433a2dafa797748b8f4fcc3f928db25de9ddb388e9d44"
+          },
+          "proof": {
+            "bytes": 82411,
+            "path": "artifacts/two_orbit_certificates/distance-06-21/burden0.drat",
+            "sha256": "c69521dc203904e8231f161eb9bb78eeeb85fbc926e61164b7ca5b925d00db9a"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-21/burden0.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.015209
+        },
+        "burden1": {
+          "checker_log": {
+            "bytes": 447,
+            "path": "artifacts/two_orbit_certificates/distance-06-21/burden1.checker.log",
+            "sha256": "0dd418aa11d6a7edc814d9ebf290848c3e7da8b67cd36aa821bd868678a6bff5"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.064475,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 382966,
+            "path": "artifacts/two_orbit_certificates/distance-06-21/burden1.cnf",
+            "sha256": "fc1700b6ee07d607bc14a624f34b0b23fac294bc8fdd59745c57c04912754da0"
+          },
+          "metadata": {
+            "bytes": 1797,
+            "path": "artifacts/two_orbit_certificates/distance-06-21/burden1.metadata.json",
+            "sha256": "e14f9dbfd0ec46c28e2fc7363e572480a256386f0319390b18a6b66adf89bbc3"
+          },
+          "proof": {
+            "bytes": 17662,
+            "path": "artifacts/two_orbit_certificates/distance-06-21/burden1.drat",
+            "sha256": "8a1ebb136d20a1bdc513498e0a9a1d0459044e5e63a63b6a33d80760203f19c1"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-21/burden1.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.028541
+        },
+        "burden2-second-orbit-changed": {
+          "checker_log": {
+            "bytes": 443,
+            "path": "artifacts/two_orbit_certificates/distance-06-21/burden2-second-orbit-changed.checker.log",
+            "sha256": "e8a837212e5bfc6f456f41969bcd568cf2ddf6d94a34b4ed2645ea4cfd0ab57a"
+          },
+          "checker_returncode": 0,
+          "checker_seconds": 0.069991,
+          "checker_verdict": "VERIFIED",
+          "cnf": {
+            "bytes": 407100,
+            "path": "artifacts/two_orbit_certificates/distance-06-21/burden2-second-orbit-changed.cnf",
+            "sha256": "94292ebe0c5b939cf977dabd7d47c3ab9e8e42f02f3729784ec1bf1343fa33e1"
+          },
+          "metadata": {
+            "bytes": 1828,
+            "path": "artifacts/two_orbit_certificates/distance-06-21/burden2-second-orbit-changed.metadata.json",
+            "sha256": "d1881fe6050676f7738b971dc4ba6cbb5e4115cdd38e0025924165e1f9a496f7"
+          },
+          "proof": {
+            "bytes": 5414,
+            "path": "artifacts/two_orbit_certificates/distance-06-21/burden2-second-orbit-changed.drat",
+            "sha256": "7c1bb0aaf93fb254c08d8971c4a5820d29a3966720bad5d98cca7d989c0f2521"
+          },
+          "solver_log": {
+            "bytes": 16,
+            "path": "artifacts/two_orbit_certificates/distance-06-21/burden2-second-orbit-changed.solver.log",
+            "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+          },
+          "solver_returncode": 20,
+          "solver_seconds": 0.035966
+        }
+      },
+      "cnf_audits": {
+        "burden0": {
+          "change_clause_exact": false,
+          "cnf_clauses": 22194,
+          "cnf_variables": 3656,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": false
+        },
+        "burden1": {
+          "change_clause_exact": false,
+          "cnf_clauses": 24514,
+          "cnf_variables": 5204,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": true
+        },
+        "burden2-second-orbit-changed": {
+          "change_clause_exact": true,
+          "cnf_clauses": 26062,
+          "cnf_variables": 5978,
+          "raw_clause_prefix_exact": true,
+          "rotation_lex_leader_exact": true,
+          "sequential_counter_exact": true
+        }
+      },
+      "exact_minimum_burden": 2,
+      "family": "F_{6,21}: vary exactly the 43 distance-6 and 43 distance-21 edges; freeze all other cyclic-distance orbits to the Springer seed",
+      "five_set_accounting": {
+        "five_sets_examined": 962598,
+        "inactive_fixed_both_colors": 961824,
+        "one_active": 43,
+        "single_active": 774,
+        "zero_active": 731
+      },
+      "independent_unsymmetrized_z3": {
+        "burden_at_most_0": {
+          "seconds": 0.024664,
+          "verdict": "UNSAT"
+        },
+        "burden_at_most_1": {
+          "seconds": 0.025221,
+          "verdict": "UNSAT"
+        },
+        "burden_at_most_2_with_second_orbit_changed": {
+          "seconds": 0.021872,
+          "verdict": "UNSAT"
+        }
+      },
+      "minimum_assignments": 86,
+      "minimum_common_rotation_orbits": 2,
+      "minimum_diversity_explanation": "Every burden-two assignment keeps the second orbit at its frozen color, so the complete minima are exactly the one-orbit length-24 and length-25 interval classes (43 rotations each).",
+      "minimum_edge_counts": [
+        454,
+        455
+      ],
+      "minimum_graph_isomorphism_classes": 2,
+      "new_minimum_class_created_by_second_orbit": false,
+      "primal_min_fill_width_upper_bound": 37,
+      "raw_active_five_sets": 774,
+      "raw_clause_length_histogram": {
+        "1": 301,
+        "2": 344,
+        "3": 129
+      },
+      "rotation_invariance_checked_for_all_42_nonidentity_shifts": true,
+      "second_distance": 21,
+      "symmetry_coverage": "The exact audited lex-leader compares the concatenated 86-bit word with all 42 common rotations. Every finite Z_43 orbit contains a lexicographically least word; tied least words are retained. Independent unsymmetrized Z3 checks reach the same three UNSAT conclusions.",
+      "unique_raw_clauses": 387
+    }
+  ],
+  "one_orbit_certificate": {
+    "bytes": 47554,
+    "path": "artifacts/distance6_independent_sat_report.json",
+    "sha256": "d356697b39a391ec4088459a16bb25fec3285ba6c8c01ee6d83f8639fa4ceabd"
+  },
+  "progress_log": {
+    "bytes": 2412,
+    "path": "artifacts/two_orbit_sweep_progress.jsonl",
+    "sha256": "1116b8c6d5ac535a4778fc3378f3389e9fd1f09c58ba11cd5fb906d8394a9b8e"
+  },
+  "result": {
+    "all_minima_identical_to_one_orbit_minima": true,
+    "checked_drat_proofs": 60,
+    "families": 20,
+    "families_with_exact_minimum_two": 20,
+    "families_with_minimum_below_two": 0,
+    "families_with_new_burden_two_class": 0,
+    "independent_unsymmetrized_z3_checks": 60,
+    "minimum_assignments_per_family": 86,
+    "minimum_common_rotation_orbits_per_family": 2,
+    "minimum_graph_isomorphism_classes_per_family": 2,
+    "zero_conflict_witnesses": 0
+  },
+  "schema_version": 1,
+  "status": "two_orbit_certified_sweep_pass",
+  "structural_statement": "For every d in {1,...,21}\\{6}, every coloring in F_{6,d} has at least two monochromatic K5s. Equality forces the entire distance-d orbit to its Springer frozen color, and the distance-6 word is a step-27 cyclic interval of length 24 or 25.",
+  "symmetry_statement": "The common rotation action is Z_43. Exact lex-leader clauses retain a least representative of every orbit; all 42 shifts and every generated clause were audited. The independent unsymmetrized formulation removes symmetry coverage as a single point of failure.",
+  "tools": {
+    "cadical": {
+      "path": ".venv/sat-audit-tools/cadical/build/cadical",
+      "sha256": "c0ca8a632d9c1b98162d59d97c5b2c25a2f6d442e8ac10b4d1228b8a6e712022",
+      "version": "3.0.1"
+    },
+    "drat_trim": {
+      "path": ".venv/sat-audit-tools/drat-trim/drat-trim",
+      "sha256": "f58f63b0f76945d4c4c9ff6e87afaf870f579e67c0f7cca589492df8fc7ebd47"
+    },
+    "generator": {
+      "bytes": 14262,
+      "path": "scripts/generate_orbit_cnf.py",
+      "sha256": "6525cce13a06df65a00e4e955ea2ee590350bce277d1d8ea245d9bdefb27e2c8"
+    },
+    "z3": "4.15.4"
+  }
+}

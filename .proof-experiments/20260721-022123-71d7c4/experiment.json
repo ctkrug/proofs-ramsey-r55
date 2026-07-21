@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "20260721-022123-71d7c4",
+  "name": "r55-final-adversarial-source-radius1-radius2-one-orbit-audit",
+  "hypothesis": "The frozen Springer provenance, seed conflicts, all 903 radius-one scores, complete radius-two ledger, explicit rotations, and one-orbit clause system survive an independent parser, bitset K5 algorithm, direct rescans, and all-five-set derivation",
+  "expected_signal": "Two hash-linked successful HTTPS retrieval records; exact source identity; complete radius-one histogram; byte-for-byte 407253-score ledger; explicit -27/+27 permutations; 215 active five-sets, 129 clauses; all malformed and semantic controls passing",
+  "command": [
+    "python3",
+    "scripts/run_adversarial_audit_gate.py",
+    "checkers/adversarial_radius2_bitset.cpp",
+    "sources/retrievals/springer_supplementary_data4_audit1.txt",
+    "sources/retrievals/springer_supplementary_data4_audit2.txt",
+    "artifacts/publisher_seed_radius1_report.json",
+    "artifacts/publisher_seed_radius2_report.json",
+    "artifacts/publisher_seed_radius2_scores.u16le",
+    "artifacts/distance6_slice_exact_report.json",
+    "artifacts/adversarial_audit_report.json"
+  ],
+  "cwd": "/Users/Krug/Desktop/ChatGPT/proofs/research/ramsey-r55/workspace",
+  "seed": 1430466598,
+  "timeout_seconds": 300,
+  "memory_limit_mb": 1024,
+  "memory_limit_enforced": false,
+  "started_at": "2026-07-21T02:21:23.592194+00:00",
+  "finished_at": "2026-07-21T02:22:03.018138+00:00",
+  "duration_seconds": 39.426,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.14.6",
+  "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+  "git_commit": "428e139bed1a756f3a4b642ed6b18e94ab336272",
+  "source_urls": [
+    "https://doi.org/10.1038/s41467-018-07327-2"
+  ],
+  "input_artifacts": {
+    "/Users/Krug/Desktop/ChatGPT/proofs/research/ramsey-r55/workspace/scripts/run_adversarial_audit_gate.py": "ada4d683bc0163d3db7c7f8d9bb8ddefc13a3de298f9c517fb28a60c4641bcdc",
+    "/Users/Krug/Desktop/ChatGPT/proofs/research/ramsey-r55/workspace/checkers/adversarial_radius2_bitset.cpp": "c74c25d44410fd06f00bbd06a8c71499dc9a6898fecbf4198589b8af174bea0a",
+    "/Users/Krug/Desktop/ChatGPT/proofs/research/ramsey-r55/workspace/sources/retrievals/springer_supplementary_data4_audit1.txt": "c2429869f6fa47ab7388134b580b014efae01e6f0e474f5bab2233afb1ef6990",
+    "/Users/Krug/Desktop/ChatGPT/proofs/research/ramsey-r55/workspace/sources/retrievals/springer_supplementary_data4_audit2.txt": "c2429869f6fa47ab7388134b580b014efae01e6f0e474f5bab2233afb1ef6990",
+    "/Users/Krug/Desktop/ChatGPT/proofs/research/ramsey-r55/workspace/artifacts/publisher_seed_radius1_report.json": "0db3cca75888b70850b60e1b891d8e08349ab0bec6196cd8f4c528603fa04fe9",
+    "/Users/Krug/Desktop/ChatGPT/proofs/research/ramsey-r55/workspace/artifacts/publisher_seed_radius2_report.json": "ee32f396c898894d32ffcbe69987caded6731f32398ce3be28cfde1d1b9c107a",
+    "/Users/Krug/Desktop/ChatGPT/proofs/research/ramsey-r55/workspace/artifacts/publisher_seed_radius2_scores.u16le": "60ba5158f8d7579785e026a9f00f0722a61fb8d47ed4d279ae128c419c524edb",
+    "/Users/Krug/Desktop/ChatGPT/proofs/research/ramsey-r55/workspace/artifacts/distance6_slice_exact_report.json": "8c8c64a82c84913222578fad537cc9beb73e74de5260a84090b9406f798a9fb1",
+    "/Users/Krug/Desktop/ChatGPT/proofs/research/ramsey-r55/workspace/artifacts/adversarial_audit_report.json": "7b5882db046af52a97996cd8d8cbd6cb3de1628574c1ca6be4b9709131a19511"
+  },
+  "peak_child_memory_rusage": 162054144,
+  "peak_child_memory_unit": "bytes",
+  "artifacts": {
+    "stdout.txt": "06bf7c0d16cceb59f41c4ee0ca63561946cb9954fa4a66d845dcf6f830bee673",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

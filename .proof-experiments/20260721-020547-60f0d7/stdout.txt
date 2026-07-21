@@ -1,0 +1,1 @@
+{"elapsed_seconds": 38.301, "output": "artifacts/adversarial_audit_report.json", "output_sha256": "e792538e3e67fb73e3a352a07ac389a6bb111032913d6379abe08f6fa6b22911", "status": "adversarial_radius2_and_one_orbit_audit_pass"}

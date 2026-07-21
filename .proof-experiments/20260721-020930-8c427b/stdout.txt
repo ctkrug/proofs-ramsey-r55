@@ -1,0 +1,21 @@
+{"minimum": 2, "new_minimum_class": false, "raw_active_five_sets": 1290, "second_distance": 1}
+{"minimum": 2, "new_minimum_class": false, "raw_active_five_sets": 1634, "second_distance": 2}
+{"minimum": 2, "new_minimum_class": false, "raw_active_five_sets": 731, "second_distance": 3}
+{"minimum": 2, "new_minimum_class": false, "raw_active_five_sets": 2494, "second_distance": 4}
+{"minimum": 2, "new_minimum_class": false, "raw_active_five_sets": 1763, "second_distance": 5}
+{"minimum": 2, "new_minimum_class": false, "raw_active_five_sets": 1462, "second_distance": 7}
+{"minimum": 2, "new_minimum_class": false, "raw_active_five_sets": 1806, "second_distance": 8}
+{"minimum": 2, "new_minimum_class": false, "raw_active_five_sets": 2795, "second_distance": 9}
+{"minimum": 2, "new_minimum_class": false, "raw_active_five_sets": 1247, "second_distance": 10}
+{"minimum": 2, "new_minimum_class": false, "raw_active_five_sets": 2408, "second_distance": 11}
+{"minimum": 2, "new_minimum_class": false, "raw_active_five_sets": 3913, "second_distance": 12}
+{"minimum": 2, "new_minimum_class": false, "raw_active_five_sets": 1075, "second_distance": 13}
+{"minimum": 2, "new_minimum_class": false, "raw_active_five_sets": 1419, "second_distance": 14}
+{"minimum": 2, "new_minimum_class": false, "raw_active_five_sets": 1032, "second_distance": 15}
+{"minimum": 2, "new_minimum_class": false, "raw_active_five_sets": 774, "second_distance": 16}
+{"minimum": 2, "new_minimum_class": false, "raw_active_five_sets": 1548, "second_distance": 17}
+{"minimum": 2, "new_minimum_class": false, "raw_active_five_sets": 1032, "second_distance": 18}
+{"minimum": 2, "new_minimum_class": false, "raw_active_five_sets": 1118, "second_distance": 19}
+{"minimum": 2, "new_minimum_class": false, "raw_active_five_sets": 3311, "second_distance": 20}
+{"minimum": 2, "new_minimum_class": false, "raw_active_five_sets": 774, "second_distance": 21}
+{"elapsed_seconds": 349.959, "families": 20, "output": "artifacts/two_orbit_certified_sweep_report.json", "output_sha256": "9d8ec9a46cf74bdeab70fd39aebe0bd71c09badee163e69813c1ba67b84a55a8", "status": "two_orbit_certified_sweep_pass", "zero_conflict_witnesses": 0}

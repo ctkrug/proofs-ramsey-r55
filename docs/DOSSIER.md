@@ -758,6 +758,36 @@ Before original search:
 5. Record the first mismatch and stop; do not silently repair source data.
 
 The controls now pass, the complete radius-2 enumeration is retained, and the seed's full one-orbit
-distance-6 family is exactly classified at minimum burden two. The next direct K43 discriminator is S17's
-20-slice two-orbit sweep; S3 remains the default route into a genuinely unknown order-42 basin. None of
-the control, local-neighborhood, or structured-slice results changes the Ramsey bound.
+distance-6 family and all 20 distance-6-plus-one-orbit families are exactly classified at minimum
+burden two. The direct one- and two-orbit witness route is closed; S3 remains the default route into a
+genuinely unknown order-42 basin. None of the control, local-neighborhood, or structured-slice results
+changes the Ramsey bound.
+
+## 14. Adversarial replay and certified two-orbit closure (2026-07-21)
+
+The retained radius-one, radius-two, and distance-six results survived a new implementation that did
+not import the prior parser, delta recurrence, pair-index function, constraint generator, or K5
+enumerator. A C++20 bitset method counts each K5 through its three smallest vertices and an edge in
+their common neighborhood. It reproduced all 903 radius-one scores and the complete 407,253-entry
+radius-two ledger byte-for-byte. A separate Python scanner supplied source/provenance, malformed input,
+forced clique/coclique, pair-ordering, random direct-rescan, explicit permutation, and all-five-set
+controls. No discrepancy was found.
+
+A separately generated DIMACS encoding upgraded the one-orbit result to a checked certificate. Direct
+combinatorial cardinality clauses and CaDiCaL/drat-trim prove burdens zero and one impossible; all 86
+burden-two words were independently enumerated and dual full-graph checked; a final checked proof
+excludes every other burden-at-most-two word.
+
+The 20 families `F_{6,d}`, `d != 6`, obtained by releasing distance 6 and one other cyclic-distance
+orbit are also complete. Every family has exact minimum burden two. Equality forces the second orbit
+back to its frozen Springer color, so every minimum is already one of the 43 rotations of the
+length-24 or length-25 distance-six intervals. Sixty deterministic proof logs check the burden-zero,
+burden-one, and changed-second-orbit burden-two exclusions; an unsymmetrized Z3 formulation independently
+agrees on all 60 decisions. The rotation lex leader and all raw clauses were audited separately.
+
+This is not clear field progress. It gives no witness, no better structured-family burden, no concise
+human theorem, no accepted material global pruning, and no held-out algorithm win. Close the one- and
+two-orbit witness route. A bounded proof-compression pass is eligible only if deletion-minimal raw
+cores for all 20 distances reduce to at most five symbolic obstruction types with at most 20 clauses
+each; otherwise redirect away from the family. Full adjudication and hashes are in
+`docs/FIELD_PROGRESS_AUDIT.md` and `artifacts/field_progress_gate_report.json`.

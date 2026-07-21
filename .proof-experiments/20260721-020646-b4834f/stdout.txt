@@ -1,0 +1,1 @@
+{"classification": {"step27_cyclic_interval_length_24": 43, "step27_cyclic_interval_length_25": 43}, "elapsed_seconds": 135.967, "models": 86, "output": "artifacts/distance6_independent_sat_report.json", "output_sha256": "d356697b39a391ec4088459a16bb25fec3285ba6c8c01ee6d83f8639fa4ceabd", "status": "distance6_independent_cnf_drat_classification_pass"}

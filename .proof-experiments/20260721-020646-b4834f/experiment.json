@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "id": "20260721-020646-b4834f",
+  "name": "r55-distance6-independent-cnf-drat-classification",
+  "hypothesis": "A separately generated direct-cardinality CNF and checked DRAT proof confirm that the distance-six slice has minimum burden two and exactly the 86 retained interval words",
+  "expected_signal": "Burden 0 and 1 UNSAT proofs verify; 86 burden-two words are dual full-graph checked; a final checked proof excludes any 87th model",
+  "command": [
+    "python3",
+    "scripts/run_one_orbit_sat_certificate.py",
+    "scripts/generate_orbit_cnf.py",
+    "checkers/adversarial_radius2_bitset.cpp",
+    "sources/retrievals/springer_supplementary_data4_audit1.txt",
+    "artifacts/distance6_slice_exact_report.json",
+    ".venv/sat-audit-tools/cadical/build/cadical",
+    ".venv/sat-audit-tools/drat-trim/drat-trim",
+    "artifacts/one_orbit_sat_certificates",
+    "artifacts/distance6_independent_sat_report.json",
+    "artifacts/distance6_independent_models.json"
+  ],
+  "cwd": "/Users/Krug/Desktop/ChatGPT/proofs/research/ramsey-r55/workspace",
+  "seed": 1430466598,
+  "timeout_seconds": 600,
+  "memory_limit_mb": 2048,
+  "memory_limit_enforced": false,
+  "started_at": "2026-07-21T02:06:46.053717+00:00",
+  "finished_at": "2026-07-21T02:09:02.213046+00:00",
+  "duration_seconds": 136.135,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.14.6",
+  "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+  "git_commit": "428e139bed1a756f3a4b642ed6b18e94ab336272",
+  "source_urls": [
+    "https://doi.org/10.1038/s41467-018-07327-2"
+  ],
+  "input_artifacts": {
+    "/Users/Krug/Desktop/ChatGPT/proofs/research/ramsey-r55/workspace/scripts/run_one_orbit_sat_certificate.py": "ba3718b24d4b0cc7989607707d6af6c407e8ed693d29b0583576c70f6489462e",
+    "/Users/Krug/Desktop/ChatGPT/proofs/research/ramsey-r55/workspace/scripts/generate_orbit_cnf.py": "6525cce13a06df65a00e4e955ea2ee590350bce277d1d8ea245d9bdefb27e2c8",
+    "/Users/Krug/Desktop/ChatGPT/proofs/research/ramsey-r55/workspace/checkers/adversarial_radius2_bitset.cpp": "864e40531019f22cd8db36a3d6843f033d305192a670db94fc9422d2610e3346",
+    "/Users/Krug/Desktop/ChatGPT/proofs/research/ramsey-r55/workspace/sources/retrievals/springer_supplementary_data4_audit1.txt": "c2429869f6fa47ab7388134b580b014efae01e6f0e474f5bab2233afb1ef6990",
+    "/Users/Krug/Desktop/ChatGPT/proofs/research/ramsey-r55/workspace/artifacts/distance6_slice_exact_report.json": "8c8c64a82c84913222578fad537cc9beb73e74de5260a84090b9406f798a9fb1",
+    "/Users/Krug/Desktop/ChatGPT/proofs/research/ramsey-r55/workspace/.venv/sat-audit-tools/cadical/build/cadical": "c0ca8a632d9c1b98162d59d97c5b2c25a2f6d442e8ac10b4d1228b8a6e712022",
+    "/Users/Krug/Desktop/ChatGPT/proofs/research/ramsey-r55/workspace/.venv/sat-audit-tools/drat-trim/drat-trim": "f58f63b0f76945d4c4c9ff6e87afaf870f579e67c0f7cca589492df8fc7ebd47"
+  },
+  "peak_child_memory_rusage": 377585664,
+  "peak_child_memory_unit": "bytes",
+  "artifacts": {
+    "stdout.txt": "a996bef99a529bc709879c815ffd097f681a2b69accd64f14962123c169873a9",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

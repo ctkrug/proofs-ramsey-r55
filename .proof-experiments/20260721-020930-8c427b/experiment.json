@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "20260721-020930-8c427b",
+  "name": "r55-two-orbit-certified-sweep",
+  "hypothesis": "Releasing distance 6 with one additional cyclic-distance orbit either lowers the exact burden below two or, if not, proves that all two-orbit minima collapse to the certified one-orbit interval classes",
+  "expected_signal": "For each of 20 families: checked burden-0 and burden-1 UNSAT proofs, checked burden-2-with-second-orbit-changed UNSAT proof, exact CNF/symmetry audits, and independent unsymmetrized Z3 agreement",
+  "command": [
+    "python3",
+    "scripts/run_two_orbit_certified_sweep.py",
+    "scripts/generate_orbit_cnf.py",
+    "sources/retrievals/springer_supplementary_data4_audit1.txt",
+    ".venv/sat-audit-tools/cadical/build/cadical",
+    ".venv/sat-audit-tools/drat-trim/drat-trim",
+    "artifacts/two_orbit_certificates",
+    "artifacts/distance6_independent_sat_report.json",
+    "artifacts/two_orbit_certified_sweep_report.json",
+    "artifacts/two_orbit_sweep_progress.jsonl"
+  ],
+  "cwd": "/Users/Krug/Desktop/ChatGPT/proofs/research/ramsey-r55/workspace",
+  "seed": 1430466598,
+  "timeout_seconds": 1200,
+  "memory_limit_mb": 2048,
+  "memory_limit_enforced": false,
+  "started_at": "2026-07-21T02:09:30.551899+00:00",
+  "finished_at": "2026-07-21T02:15:20.690728+00:00",
+  "duration_seconds": 350.142,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.14.6",
+  "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+  "git_commit": "428e139bed1a756f3a4b642ed6b18e94ab336272",
+  "source_urls": [
+    "https://doi.org/10.1038/s41467-018-07327-2"
+  ],
+  "input_artifacts": {
+    "/Users/Krug/Desktop/ChatGPT/proofs/research/ramsey-r55/workspace/scripts/run_two_orbit_certified_sweep.py": "5f741a4291a6be1f77f2b2cfec52d334c67f95bd6eca89739748431c79cf1e35",
+    "/Users/Krug/Desktop/ChatGPT/proofs/research/ramsey-r55/workspace/scripts/generate_orbit_cnf.py": "6525cce13a06df65a00e4e955ea2ee590350bce277d1d8ea245d9bdefb27e2c8",
+    "/Users/Krug/Desktop/ChatGPT/proofs/research/ramsey-r55/workspace/sources/retrievals/springer_supplementary_data4_audit1.txt": "c2429869f6fa47ab7388134b580b014efae01e6f0e474f5bab2233afb1ef6990",
+    "/Users/Krug/Desktop/ChatGPT/proofs/research/ramsey-r55/workspace/.venv/sat-audit-tools/cadical/build/cadical": "c0ca8a632d9c1b98162d59d97c5b2c25a2f6d442e8ac10b4d1228b8a6e712022",
+    "/Users/Krug/Desktop/ChatGPT/proofs/research/ramsey-r55/workspace/.venv/sat-audit-tools/drat-trim/drat-trim": "f58f63b0f76945d4c4c9ff6e87afaf870f579e67c0f7cca589492df8fc7ebd47",
+    "/Users/Krug/Desktop/ChatGPT/proofs/research/ramsey-r55/workspace/artifacts/distance6_independent_sat_report.json": "d356697b39a391ec4088459a16bb25fec3285ba6c8c01ee6d83f8639fa4ceabd"
+  },
+  "peak_child_memory_rusage": 72908800,
+  "peak_child_memory_unit": "bytes",
+  "artifacts": {
+    "stdout.txt": "cd4c13875651e21e1a5d3f899ff53e14e1be1b1aa51c13181b81dd82d8bc2987",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}
