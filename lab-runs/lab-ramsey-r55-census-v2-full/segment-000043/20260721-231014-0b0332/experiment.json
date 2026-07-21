@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "id": "20260721-231014-0b0332",
+  "name": "R55 locked full supplied-class embedding census v2 segment 43/open",
+  "hypothesis": "all induced fixed-core pullbacks over 328 supplied graphs and 328 complements can be exhaustively reconciled by two independent implementations under the aggregate per-host gate",
+  "expected_signal": "656 canonical host receipts with exact bitset/VF2 mapping and vector-stream agreement, bounded host times, and a hash-addressed compressed manifest",
+  "command": [
+    "scripts/run_known_class_embedding_census_locked.sh",
+    "--corpus",
+    "sources/r55_42some.g6",
+    "--checkpoint",
+    "artifacts/known-class-embedding-census-v2/checkpoint.json",
+    "--progress",
+    "artifacts/known-class-embedding-census-v2/progress.json",
+    "--output",
+    "artifacts/known-class-embedding-census-v2/output",
+    "--hosts-per-segment",
+    "1",
+    "--case-seconds",
+    "900",
+    "--total-hosts",
+    "656"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 120,
+  "memory_limit_mb": 1000,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-21T23:10:14.266807+00:00",
+  "finished_at": "2026-07-21T23:10:31.768468+00:00",
+  "duration_seconds": 17.502,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "0f2da14f4d7b7bc4ee50cdd683e015990a173315",
+  "source_urls": [],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/scripts/run_known_class_embedding_census_locked.sh": "4641fae36fd53c1b196696cee54cb5d846fcd6907b4a5a65ebb6c723b1c867a7",
+    "/root/proof-factory/research/ramsey-r55/workspace/sources/r55_42some.g6": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/known-class-embedding-census-v2/checkpoint.json": "ee9f9f920d4c3fd826322b6160f9ebccef2268c221295c0647c0bebc52371462",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/known-class-embedding-census-v2/progress.json": "839f5a92185b54e29cb76528e80298a5958f8ec06a8680c81a9d75e99607c406"
+  },
+  "peak_child_memory_rusage": 53492,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "0a5bf37ab297cd3c73cc49293484d58bb7c820f4de88a0cbc2b761b37afcbbb8",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}
