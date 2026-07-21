@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "id": "20260721-182712-0ba9c4",
+  "name": "r55-known-class-embedding-networkx-pilot",
+  "hypothesis": "NetworkX VF2 independently enumerates exactly the same complete induced-core embeddings and row-lex boundary vectors for records 21 and 12, with none in complement record 21, within 30 seconds per case.",
+  "expected_signal": "The exact sorted mapping and 426-bit vector stream hashes match the custom bitset manifest for all three cases; each positive case remains below 30 seconds and 100000 vectors.",
+  "command": [
+    "python3",
+    "scripts/enumerate_core_embeddings_networkx.py",
+    "sources/r55_42some.g6",
+    "artifacts/known_class_embedding_networkx_pilot.json",
+    "30"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 150,
+  "memory_limit_mb": 1024,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-21T18:27:12.558044+00:00",
+  "finished_at": "2026-07-21T18:28:10.510685+00:00",
+  "duration_seconds": 57.953,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "871e01cca4a2de753f40cf80ef75e00333d31563",
+  "source_urls": [
+    "https://users.cecs.anu.edu.au/~bdm/papers/r55.pdf"
+  ],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/scripts/enumerate_core_embeddings_networkx.py": "c4491591b16394e11d3bf0b907eea8c65a73308e8a2a366e5d594532c7010aaf",
+    "/root/proof-factory/research/ramsey-r55/workspace/sources/r55_42some.g6": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb"
+  },
+  "peak_child_memory_rusage": 52600,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "eba23e73e747dfdc851576c6a1fe03b1b5abcbc31d15ce754c67e45e03c57b4e",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

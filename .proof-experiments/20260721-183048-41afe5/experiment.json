@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "id": "20260721-183048-41afe5",
+  "name": "r55-known-class-embedding-independent-replay",
+  "hypothesis": "A third implementation replays every emitted embedding and row-lex pullback, recovers both historical positive vectors, rejects one-edge and one-map corruptions, and both exact five-set checkers accept every unique labelled graph.",
+  "expected_signal": "Complete manifest streams compare exactly; record-21 identity and record-12 candidate controls are present; complement is empty; all pullbacks, mutations, and dual five-set checks pass.",
+  "command": [
+    "python3",
+    "checkers/known_class_embedding_pilot_audit.py",
+    "sources/r55_42some.g6",
+    "artifacts/known_class_embedding_bitset_pilot.json",
+    "artifacts/known_class_embedding_networkx_pilot.json",
+    "artifacts/novel42_lex_quotient/record-21-row-sorted.g6",
+    "artifacts/novel42_lex_quotient/post-block-candidate.g6",
+    "checkers/checker_a.py",
+    "checkers/checker_b.c",
+    "artifacts/known_class_embedding_pilot_audit.json"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 180,
+  "memory_limit_mb": 1024,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-21T18:30:48.224358+00:00",
+  "finished_at": "2026-07-21T18:30:54.212322+00:00",
+  "duration_seconds": 5.988,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "871e01cca4a2de753f40cf80ef75e00333d31563",
+  "source_urls": [
+    "https://users.cecs.anu.edu.au/~bdm/papers/r55.pdf"
+  ],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/known_class_embedding_pilot_audit.py": "d396907561d8bce742a71ff8244a830d30695472c8f8df263ea8df7130a0efd1",
+    "/root/proof-factory/research/ramsey-r55/workspace/sources/r55_42some.g6": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/known_class_embedding_bitset_pilot.json": "794b281338a4dd5a126c7dd36d840fd1b0eabd9567e84311d777d0a03d2dccd9",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/known_class_embedding_networkx_pilot.json": "1c83da22cf2585e52d4f4c58903f9057667d47ece954499baafc90a79eba3cc8",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/novel42_lex_quotient/record-21-row-sorted.g6": "8672d9a6204722aaae23bbded698fd3b4ec1aa67d71b9c7baec4cddf63cdad5e",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/novel42_lex_quotient/post-block-candidate.g6": "26b331eb29478b6920883bd72d389c98952171026871143829435c87ae8ba5ce",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/checker_a.py": "b7f28adfec792139acce538ca879b775a0180467763b413e1a464672acddd259",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/checker_b.c": "40f719bb36f8d7d3db3a4b949dce8b20abd49499f57f7d5b651b718658014d2e"
+  },
+  "peak_child_memory_rusage": 31616,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "60d3f7c98d21864deacab73ec980a246f71fdb8d73f7380e220724e5c5c7017b",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

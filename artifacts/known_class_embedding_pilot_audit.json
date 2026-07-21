@@ -1,0 +1,61 @@
+{
+  "adversarial_controls": {
+    "one_edge_mutation_rejected": true,
+    "one_map_transposition_rejected": true,
+    "rejected_pattern_index_swap": [
+      0,
+      1
+    ]
+  },
+  "dual_five_set_check": {
+    "all_one_k5": true,
+    "all_zero_k5": true,
+    "checker_a": "A-direct-combinations",
+    "checker_b": "B-recursive-bitsets",
+    "graph6_path": "artifacts/known_class_embedding_pilot_graphs.g6",
+    "graph6_sha256": "249662ab7df7a7e3df9df82f214d910bcc4becfc1cd91a48031284ba7b6b5756",
+    "unique_labelled_graphs": 3
+  },
+  "exact_stream_comparisons": {
+    "complement_record_21": {
+      "embedding_count": 0,
+      "mapping_stream_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "unique_vector_count": 0,
+      "vector_occurrences": 0,
+      "vector_stream_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "source_record_12": {
+      "embedding_count": 2,
+      "mapping_stream_sha256": "f1002075411fa2c16d65031ae5ea1baa3fa345a4468099b71fd2af43ad674598",
+      "unique_vector_count": 2,
+      "vector_occurrences": 2,
+      "vector_stream_sha256": "9374c83ac69ca58df4c4e7da705424e9539d8825b3d61f2b750e5a4abfba0052"
+    },
+    "source_record_21": {
+      "embedding_count": 2,
+      "mapping_stream_sha256": "3c056f6eb5ef90f55ee7b882ff5da4cd4ad08009516409513f3b0f7e6a428a3f",
+      "unique_vector_count": 1,
+      "vector_occurrences": 2,
+      "vector_stream_sha256": "f90f31e6e471164b23f2e3d54339cd5e30c8a140ab977f2609e350b1f59d7fd5"
+    }
+  },
+  "historical_controls": {
+    "record_12_candidate_graph6_sha256": "26b331eb29478b6920883bd72d389c98952171026871143829435c87ae8ba5ce",
+    "record_12_candidate_vector_present": true,
+    "record_21_identity_embedding_present": true,
+    "row_sorted_source_sha256": "8672d9a6204722aaae23bbded698fd3b4ec1aa67d71b9c7baec4cddf63cdad5e"
+  },
+  "manifest_sha256": {
+    "bitset": "794b281338a4dd5a126c7dd36d840fd1b0eabd9567e84311d777d0a03d2dccd9",
+    "networkx": "1c83da22cf2585e52d4f4c58903f9057667d47ece954499baafc90a79eba3cc8"
+  },
+  "projection": {
+    "basis": "worst sum of the two observed positive-host implementation times",
+    "projected_656_host_core_hours": 5.597919552832221,
+    "qualification": "estimate only; unseen hosts can have more embeddings and tied rows",
+    "worst_observed_seconds_per_host": 30.72029022895731
+  },
+  "schema_version": 1,
+  "scope": "source records 21 and 12 plus complement-record-21 negative control only",
+  "status": "known_class_embedding_two_record_audit_pass"
+}

@@ -1,0 +1,24 @@
+{
+  "epoch": 17,
+  "recorded_at": "2026-07-21T18:31:32.002465+00:00",
+  "orchestration": "gpt-5.6-sol principal with supplied gpt-5.6-terra delegates",
+  "delegates": [
+    {
+      "role": "challenger-prior-art",
+      "source_path": ".delegates/20260721-181713-93cca4/challenger-prior-art/memo.md",
+      "source_sha256": "bdfaa0e7504f9530a3c80fdc1a91ed51893091951f64c4ab8c31082e88992d72",
+      "promoted_path": "docs/delegate-memos/20260721-181713-challenger-prior-art.md",
+      "promoted_kind": "Sol-audited concise promotion",
+      "use": "scope guard, challenger definition, and no-promotion condition"
+    },
+    {
+      "role": "experiment-verification",
+      "source_path": ".delegates/20260721-181713-93cca4/experiment-verification/memo.md",
+      "source_sha256": "b86d23872f8789c6b75be5ce996a294045763347b5a707dc1ba244649369a7b9",
+      "promoted_path": "docs/delegate-memos/20260721-181713-experiment-verification.md",
+      "promoted_kind": "Sol-audited concise promotion",
+      "use": "two-implementation pilot design, replay controls, and stop conditions"
+    }
+  ],
+  "principal_audit": "Sol checked the maintained survey and primary McKay-Radziszowski paper, wrote two independent enumerators and a third replay checker, and ran all three recorded experiments. No new subagent was spawned."
+}

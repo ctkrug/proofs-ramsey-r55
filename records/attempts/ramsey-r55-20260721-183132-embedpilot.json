@@ -1,0 +1,303 @@
+{
+  "id": "ramsey-r55-20260721-183132-embedpilot",
+  "problem_id": "ramsey-r55",
+  "started_at": "2026-07-21T18:17:13.000000+00:00",
+  "finished_at": "2026-07-21T18:31:32.002465+00:00",
+  "lane": "hard",
+  "phase": "technical",
+  "model": "gpt-5.6-sol",
+  "orchestration": {
+    "architecture": "sol-principal-terra-delegates",
+    "principal_model": "gpt-5.6-sol",
+    "delegate_model": "gpt-5.6-terra",
+    "delegate_roles": [
+      "challenger-prior-art",
+      "experiment-verification"
+    ]
+  },
+  "outcome": "progress",
+  "approach": "Complete induced-core embedding and row-lex boundary-pullback enumeration for supplied source records 21 and 12, with complement record 21 as a negative control.",
+  "strategy": {
+    "family": "complete known-class boundary blocking",
+    "fingerprint": "r55knownclassembeddingblock2026",
+    "mechanism": "Enumerate every induced embedding of the fixed record-21 order-30 core into a supplied order-42 control, expand every tied-row-compatible residual order, and deduplicate exact 426-bit boundary pullbacks before any blocking clause is emitted.",
+    "parent_ids": [
+      "strategy-a230b66ef386",
+      "strategy-r55novel42basin2026"
+    ],
+    "route_evaluation": {
+      "gate_proximity": 0.45,
+      "contribution_value": 0.35,
+      "decisiveness": 0.95,
+      "novelty_confidence": 0.45,
+      "novelty_risk": 0.35,
+      "scope": 0.2,
+      "reuse_value": 0.9,
+      "model_cost": 0.3,
+      "cpu_cost": 0.15
+    }
+  },
+  "hypothesis": "Every induced embedding and row-lex boundary pullback for source records 21 and 12 can be enumerated by two independent implementations within 30 seconds and 1 GiB per case, with identical exact streams and no embedding in complement record 21.",
+  "discriminating_test": "Run a custom graph6/bitset induced-embedding DFS and NetworkX graph6/VF2 exhaustive enumeration on records 21 and 12 plus the complement-21 negative control, then replay every map and vector with a third checker and the two established exact R(5,5) graph checkers.",
+  "search_efficiency": {
+    "naive_space": "C(42,12)=11,058,116,888 deleted residual sets per host before induced-isomorphism and core-automorphism work; each accepted pullback is a 426-bit boundary vector.",
+    "reductions_considered": [
+      "most-constrained induced-embedding branching",
+      "42-bit candidate domains",
+      "incremental edge and nonedge filters",
+      "unused-neighbor and unused-nonneighbor capacity",
+      "Hall-union pruning",
+      "row-lex residual normalization",
+      "complete tied-row permutation expansion",
+      "exact vector deduplication",
+      "independent VF2 coverage"
+    ],
+    "chosen_mechanism": "Search adjacency-consistent injections directly with packed domains, while retaining a materially different exhaustive VF2 enumeration and a third pairwise replay checker.",
+    "estimated_or_measured_savings": "The custom search visited 31,255--32,249 DFS states per host and finished in 3.58--3.96 seconds; NetworkX finished in 11.76--26.76 seconds. The worst observed positive-host two-implementation sum projects to 5.5979 core-hours over 656 host representations, but this is an estimate rather than a bound.",
+    "soundness_guard": "Exact full mapping-stream comparison, exact full vector-stream comparison, pairwise induced-map replay, complete tied-row order replay, host-pullback equality, historical record-21 and record-12 controls, empty complement control, two exact five-set checkers, and rejected edge/map mutations."
+  },
+  "space_reduction": {
+    "ambient_space": "2^861 labelled graphs on 42 vertices",
+    "represented_space_before": "2^66*C(2^30+11,12) row-sorted assignments in the fixed source-record-21 boundary",
+    "eliminated_or_quotiented": "No assignment was blocked this epoch; the exact future block pullbacks were classified for two supplied source classes only.",
+    "represented_space_after": "2^66*C(2^30+11,12), unchanged because the pilot emitted no CNF blocks",
+    "reduction_factor": "none",
+    "measurement_status": "not_applicable",
+    "unit": "labelled assignments",
+    "coverage_scope": "All induced embeddings and every row-lex-compatible residual order for supplied source records 21 and 12; complement record 21 is the negative control.",
+    "soundness_basis": "Two implementations emitted identical complete mapping and vector streams, and a third checker replayed every pullback exactly.",
+    "remaining_unknown": "The other 654 supplied host representations, any host with tied residual rows or many embeddings, unknown order-42 classes, all unsupplied boundary solutions, and R(5,5).",
+    "next_bulk_elimination": "Generate and reconcile the complete 656-host pullback corpus with checkpointed per-host manifests before emitting one deduplicated supplied-class block set."
+  },
+  "tactical_learning": {
+    "prediction": "Both positive cases would complete below 30 seconds with exact agreement, historical vectors would be present, and complement record 21 would be empty.",
+    "observation": "Both implementations agreed exactly. Each positive host has two core embeddings; record 21 produces one unique boundary vector and record 12 produces two. All residual rows are distinct. Complement record 21 has zero embeddings. All replay and adversarial controls passed.",
+    "surprise": "Record 21's two distinct core embeddings collapse to one identical row-lex boundary vector, while record 12's two embeddings remain two distinct vectors.",
+    "failure_signature": "none",
+    "bottleneck_update": "The pilot removes mapping orientation and tied-order handling as blockers for two controls; the bottleneck is now a checkpointed, fail-closed 656-host census and its unknown worst-case embedding multiplicity.",
+    "reusable_assets": [
+      {
+        "name": "Custom bitset induced-core enumerator",
+        "use": "Fast exact host-by-host embedding and boundary-pullback enumeration.",
+        "evidence": "scripts/enumerate_core_embeddings_bitset.py; SHA-256 01b3953b1db6a65737e4fb4ee176a88b7c8c8ed26a374c410cf274fe2500739a"
+      },
+      {
+        "name": "Independent NetworkX VF2 enumerator",
+        "use": "Materially different complete embedding and vector stream.",
+        "evidence": "scripts/enumerate_core_embeddings_networkx.py; SHA-256 c4491591b16394e11d3bf0b907eea8c65a73308e8a2a366e5d594532c7010aaf"
+      },
+      {
+        "name": "Independent embedding replay checker",
+        "use": "Fail-closed map, tied-row, vector, pullback, mutation, and dual graph-property validation.",
+        "evidence": "checkers/known_class_embedding_pilot_audit.py; SHA-256 d396907561d8bce742a71ff8244a830d30695472c8f8df263ea8df7130a0efd1"
+      }
+    ],
+    "constraints_learned": [
+      {
+        "constraint": "Every complete supplied-class block must include every induced core embedding and every residual ordering within tied core-neighborhood rows; one representative per host or embedding is not sound.",
+        "scope": "The fixed source-record-21 order-30 core and current row-lex boundary encoding.",
+        "evidence": "General pullback correspondence plus exact two-record manifests and third-checker replay."
+      }
+    ],
+    "route_decision": "continue",
+    "next_discriminator": "Run a checkpointed complete 656-host two-implementation census, stopping on any per-host mismatch, positive-case limit breach, tied expansion above 100,000, or aggregate projection above 12 core-hours/20 GiB."
+  },
+  "prior_art_check": {
+    "nearest_method_ids": [
+      "mckay-delete-three-extend",
+      "common-edge-subgraph-neighborhoods",
+      "random-36-subgraph-extension"
+    ],
+    "classification": "material_modification",
+    "exact_delta": "A deterministic certificate of every row-lex boundary pullback of each supplied control into one fixed-core SAT boundary, rather than delete/extend closure, heuristic neighborhood search, or one labelled model block.",
+    "duplicate_risk": "This can only exclude rediscoveries of the supplied 656 controls inside one boundary; it cannot establish that the corpus is complete or exclude an unknown order-42 class.",
+    "comparison_test": "Records 21 and 12 must reproduce the two retained supplied-class models while complement record 21 remains a negative control, under two exact enumeration methods.",
+    "decision": "control_only",
+    "source_urls": [
+      "https://users.cecs.anu.edu.au/~bdm/papers/r55.pdf",
+      "https://www.combinatorics.org/ojs/index.php/eljc/article/download/DS1/pdf/0",
+      "https://arxiv.org/abs/2409.15709"
+    ]
+  },
+  "field_progress_assessment": {
+    "status": "not_met",
+    "gate_id": "none",
+    "contribution_class": "verified research infrastructure",
+    "closest_prior_result": "McKay and Radziszowski closed the supplied 656 controls under delete-three/extend and searched common-subgraph neighborhoods, without proving the corpus complete.",
+    "measurable_improvement": "Complete, independently reconciled boundary pullbacks for exactly two supplied source classes: 4 embedding occurrences and 3 unique vectors; no class or Ramsey bound was excluded.",
+    "independent_validation": "A third checker replayed every map and vector, both exact five-set checkers accepted all three labelled graphs, and two deliberate corruptions were rejected.",
+    "external_audience": "none",
+    "remains_unproved": "No complete supplied-class block, novel order-42 graph, K43 witness, certified boundary exclusion, corpus completeness result, or improved R(5,5) bound.",
+    "route_recommendation": "Continue only through the declared checkpointed complete-corpus census; do not emit SAT blocks or claim an exclusion until every host representation reconciles."
+  },
+  "strategy_status": "promising",
+  "summary": "The two-record feasibility gate passed. Custom bitset DFS and NetworkX VF2 emitted identical complete induced-embedding and boundary-vector streams for source records 21 and 12 and an empty stream for complement record 21. A third checker replayed every pullback, recovered both historical controls, rejected edge/map mutations, and ran two exact five-set checks. No search assignment was blocked and no Ramsey bound changed.",
+  "rationale": "The exact stream agreement and independent replay establish the mechanism on its declared two-record scope, while the unprocessed 654 host representations and non-exhaustive nature of the supplied corpus forbid a class-exclusion or Ramsey claim.",
+  "claims": [
+    "For the fixed record-21 order-30 core, source record 21 has exactly two induced embeddings producing one unique row-lex 426-bit boundary vector.",
+    "For the same core, source record 12 has exactly two induced embeddings producing two unique row-lex 426-bit boundary vectors.",
+    "Complement record 21 has no induced embedding of this core.",
+    "The two independent enumeration implementations and the third replay checker agree on this exact three-case scope."
+  ],
+  "evidence": [
+    "artifacts/known_class_embedding_bitset_pilot.json; SHA-256 794b281338a4dd5a126c7dd36d840fd1b0eabd9567e84311d777d0a03d2dccd9",
+    "artifacts/known_class_embedding_networkx_pilot.json; SHA-256 1c83da22cf2585e52d4f4c58903f9057667d47ece954499baafc90a79eba3cc8",
+    "artifacts/known_class_embedding_pilot_audit.json; SHA-256 dbc0fc380b19f0eef14f4021570e840d67e77f175f9b829168dfe292af966ab0",
+    "artifacts/known_class_embedding_pilot_graphs.g6; SHA-256 249662ab7df7a7e3df9df82f214d910bcc4becfc1cd91a48031284ba7b6b5756",
+    ".proof-experiments/20260721-182632-8096f2: custom bitset pilot passed",
+    ".proof-experiments/20260721-182712-0ba9c4: NetworkX VF2 pilot passed",
+    ".proof-experiments/20260721-183048-41afe5: independent replay and dual checker audit passed"
+  ],
+  "evidence_files": [
+    "sources/r55_42some.g6",
+    "docs/known-class-embedding-pilot-predeclaration.md",
+    "scripts/enumerate_core_embeddings_bitset.py",
+    "scripts/enumerate_core_embeddings_networkx.py",
+    "checkers/known_class_embedding_pilot_audit.py",
+    "checkers/checker_a.py",
+    "checkers/checker_b.c",
+    "artifacts/known_class_embedding_bitset_pilot.json",
+    "artifacts/known_class_embedding_networkx_pilot.json",
+    "artifacts/known_class_embedding_pilot_audit.json",
+    "artifacts/known_class_embedding_pilot_graphs.g6",
+    "artifacts/novel42_lex_quotient/record-21-row-sorted.g6",
+    "artifacts/novel42_lex_quotient/post-block-candidate.g6",
+    ".proof-experiments/20260721-182632-8096f2/experiment.json",
+    ".proof-experiments/20260721-182632-8096f2/stdout.txt",
+    ".proof-experiments/20260721-182632-8096f2/stderr.txt",
+    ".proof-experiments/20260721-182712-0ba9c4/experiment.json",
+    ".proof-experiments/20260721-182712-0ba9c4/stdout.txt",
+    ".proof-experiments/20260721-182712-0ba9c4/stderr.txt",
+    ".proof-experiments/20260721-183048-41afe5/experiment.json",
+    ".proof-experiments/20260721-183048-41afe5/stdout.txt",
+    ".proof-experiments/20260721-183048-41afe5/stderr.txt"
+  ],
+  "next_steps": [
+    "Generalize both enumerators into checkpointed host-by-host corpus drivers over 328 source records and their complements.",
+    "Submit the complete 656-host reconciliation to the checkpointed lab, with atomic per-host manifests and the existing fail-closed limits.",
+    "Only after exact full-corpus reconciliation, emit a deterministic sorted block stream and replay every block-to-host correspondence before any residual SAT call."
+  ],
+  "citations": [
+    "https://www.combinatorics.org/ojs/index.php/eljc/article/download/DS1/pdf/0",
+    "https://users.cecs.anu.edu.au/~bdm/papers/r55.pdf",
+    "https://arxiv.org/abs/2409.15709"
+  ],
+  "techniques": [
+    "induced subgraph isomorphism",
+    "bitset depth-first search",
+    "most-constrained branching",
+    "NetworkX VF2",
+    "exact graph6 parsing",
+    "row-lex normalization",
+    "complete tied-row expansion",
+    "stream hashing",
+    "independent pullback replay",
+    "exact five-subset enumeration",
+    "recursive bitset clique checking",
+    "adversarial mutation testing"
+  ],
+  "research_mode": "computational",
+  "experiments": [
+    ".proof-experiments/20260721-182632-8096f2: 11.576 seconds total, 17,920 KiB peak child RSS, all custom cases passed",
+    ".proof-experiments/20260721-182712-0ba9c4: 57.953 seconds total, 52,600 KiB peak child RSS, all VF2 cases passed",
+    ".proof-experiments/20260721-183048-41afe5: 5.988 seconds total, 31,616 KiB peak child RSS, independent replay passed"
+  ],
+  "independent_checker": "checkers/known_class_embedding_pilot_audit.py imports neither enumerator, reparses graph6, checks every induced map pairwise, enumerates every allowed tied-row order, reconstructs every pullback, compares exact streams, recovers historical controls, rejects mutations, and invokes checker_a.py plus checker_b.c on every unique labelled graph.",
+  "transfer_insights": [],
+  "established_facts": [
+    {
+      "claim": "Source record 21 has exactly two induced embeddings of the fixed core and one unique row-lex boundary vector.",
+      "evidence": "Exact agreement of custom bitset and NetworkX VF2 manifests plus independent replay.",
+      "scope": "The fixed labelled order-30 core from source record 21 embedded into source record 21.",
+      "status": "computed"
+    },
+    {
+      "claim": "Source record 12 has exactly two induced embeddings of the fixed core and two unique row-lex boundary vectors.",
+      "evidence": "Exact agreement of custom bitset and NetworkX VF2 manifests plus independent replay and candidate-vector recovery.",
+      "scope": "The fixed labelled order-30 core from source record 21 embedded into source record 12.",
+      "status": "computed"
+    },
+    {
+      "claim": "Complement record 21 contains no induced copy of the fixed core.",
+      "evidence": "Both complete enumerators emitted empty mapping streams and the replay checker confirmed the empty control.",
+      "scope": "Complement of supplied source record 21 only.",
+      "status": "computed"
+    }
+  ],
+  "ruled_out": [
+    {
+      "claim_or_route": "The complete-pullback method is already infeasible at either named positive control under the 30-second/1-GiB gate.",
+      "scope": "Exactly source records 21 and 12 under the two retained implementations.",
+      "reason": "All four positive implementation/case combinations completed in 3.82--26.76 seconds and below 53 MiB peak process memory.",
+      "evidence": "The two experiment records and exact manifests.",
+      "reopen_condition": "A reproducible timing or completeness defect in the retained scripts or harness."
+    }
+  ],
+  "open_leads": [
+    {
+      "description": "Complete and reconcile all supplied-class boundary pullbacks for 328 source records and their 328 complements.",
+      "rationale": "This is the first sound bulk class-block prerequisite and directly tests whether the observed two-record tractability survives the full corpus.",
+      "next_experiment": "Build a checkpointed per-host driver around both enumerators, then submit it to the lab with the 30-second/1-GiB per-case, 100,000-vector, 12-core-hour, and 20-GiB fail-closed gates.",
+      "priority": "high",
+      "status": "open"
+    },
+    {
+      "description": "Test the raw-origin proof-core compression challenger if the corpus pass exceeds a declared gate.",
+      "rationale": "It is a distinct possible structural contribution and has a cheap at-most-20-clause kill condition.",
+      "next_experiment": "Deletion-minimize one certified two-orbit raw K5-clause set and stop if the first exact core exceeds 20 clauses.",
+      "priority": "normal",
+      "status": "open"
+    }
+  ],
+  "blocker": "The complete 656-host embedding/pullback corpus has not been generated or independently reconciled; worst-case embedding and tied-row multiplicities remain unknown.",
+  "reopen_condition": "not applicable; the route remains open under the full-corpus fail-closed gates",
+  "reopen_evidence": "The injected tactical brief supplied a materially stronger class-level discriminator than individual normal-form blocking; this two-record pilot passed it.",
+  "continuation": {
+    "objective": "Produce or fail closed on a complete two-implementation pullback corpus for all 656 supplied host representations.",
+    "first_action": "Generalize the two retained enumerators into an atomic host-by-host checkpoint driver, preserving exact per-host mapping/vector streams, then submit it with `/root/proof-factory/scripts/submit_lab.py` rather than running it interactively.",
+    "stop_condition": "Stop on any exact stream mismatch, replay failure, negative semantic control failure, per-host time at least 30 seconds, per-host tied expansion above 100,000 vectors, or aggregate projection above 12 core-hours/20 GiB; do not emit blocks or run residual SAT on partial output."
+  },
+  "campaign_assessment": {
+    "decision": "continue",
+    "close_signal": "Two independent complete 656-host streams and a third full replay pass under all declared limits.",
+    "reason": "The cheapest feasibility gate passed with exact agreement and leaves one concrete certificate-oriented bulk step before any SAT claim."
+  },
+  "strategy_proposals": [],
+  "synthesis_candidates": [],
+  "candidate_profile": {
+    "contribution_class": "research_artifact",
+    "scholarly_question": "Can every supplied order-42 control representation compatible with one fixed order-30 core be converted into a complete, replayable boundary-block corpus?",
+    "meaningful_delta": "Two-control exact pilot with two complete enumerators, historical pullback controls, and a third adversarial replay checker.",
+    "acceptance_test": "Accept only the exact two-record counts and reusable software; require all 656 reconciled hosts before accepting a supplied-class block corpus.",
+    "closest_prior_work": [
+      {
+        "url": "https://users.cecs.anu.edu.au/~bdm/papers/r55.pdf",
+        "difference": "Prior work used delete/extend and common-subgraph searches but did not publish this fixed-boundary pullback manifest and replay format."
+      }
+    ],
+    "novelty_searches": [
+      {
+        "source": "Dynamic Survey DS1.18 and cited McKay-Radziszowski paper",
+        "query": "R(5,5), 656 order-42 graphs, common subgraphs, exact value",
+        "url": "https://www.combinatorics.org/ojs/index.php/eljc/article/download/DS1/pdf/0",
+        "finding": "The survey still records 43 <= R(5,5) <= 46 and treats the 656 graphs as strong evidence rather than a complete census."
+      }
+    ],
+    "external_channel": {
+      "recipient": "none",
+      "url": "",
+      "acceptance_path": "No external submission is justified for the two-record pilot alone."
+    },
+    "independent_validations": [],
+    "relevance": {
+      "settles_exact_open_target": false,
+      "improves_best_known_result": false,
+      "source_explicitly_requests_result": false,
+      "expert_interest_confirmed": false,
+      "new_structural_result": false,
+      "evidence_url": ""
+    },
+    "arbitrary_cutoff_extension": false
+  },
+  "tool_disclosure": "GPT-5.6 Sol was principal investigator. Supplied GPT-5.6 Terra challenger-prior-art and experiment-verification delegates were advisory; Sol audited their scope and promoted concise memos with provenance. Sol read the maintained survey and primary R(5,5) papers, wrote both enumerators and the independent replay checker, and ran all recorded experiments. No new subagent was spawned. Deterministic tools were Python 3.12.3, NetworkX 3.3, GCC 13.3.0, the existing Python and C exact graph checkers, jq, pdftotext, SHA-256, and the computational-researcher experiment harness. No SAT solver, CAS, proof assistant, external publication, remote account, package install, or system change was used this epoch."
+}

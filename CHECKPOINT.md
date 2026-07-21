@@ -1,4 +1,131 @@
-# R(5,5) research checkpoint — epoch 16
+# R(5,5) research checkpoint — epoch 17
+
+Recorded: 2026-07-21 18:31 UTC
+
+## Epoch-17 outcome: the two-record complete-pullback gate passed
+
+The injected `strategy-r55-known-class-embedding-block` discriminator is
+complete on its exact pilot scope. The fixed labelled order-30 core is the
+source-record-21 induced graph outside
+
+```text
+{2,3,10,12,14,25,27,30,36,37,38,41}.
+```
+
+Two independent exhaustive implementations produced identical complete
+mapping and 426-bit row-lex boundary-vector streams:
+
+```text
+host                  embeddings   occurrences   unique vectors
+source record 21               2             2                1
+source record 12               2             2                2
+complement record 21           0             0                0
+```
+
+All residual core-neighbourhood rows in both positive hosts are distinct, so
+the pilot encountered no tied-row expansion. The custom graph6/bitset DFS took
+3.825, 3.962, and 3.584 seconds for records 21, 12, and complement 21. The
+independent NetworkX 3.3 graph6/VF2 path took 18.603, 26.758, and 11.764
+seconds. Peak child RSS was 17,920 KiB and 52,600 KiB, respectively. Every
+positive case remained below the predeclared 30-second and 1-GiB gates.
+
+The exact mapping stream hashes are:
+
+```text
+record 21       3c056f6eb5ef90f55ee7b882ff5da4cd4ad08009516409513f3b0f7e6a428a3f
+record 12       f1002075411fa2c16d65031ae5ea1baa3fa345a4468099b71fd2af43ad674598
+complement 21   e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+```
+
+The corresponding unique-vector stream hashes are:
+
+```text
+record 21       f90f31e6e471164b23f2e3d54339cd5e30c8a140ab977f2609e350b1f59d7fd5
+record 12       9374c83ac69ca58df4c4e7da705424e9539d8825b3d61f2b750e5a4abfba0052
+complement 21   e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+```
+
+The third checker imports neither enumerator. It pairwise replayed every
+induced embedding, enumerated every permitted residual order, reconstructed
+every labelled graph, and checked exact equality to the named host under the
+recorded pullback. It reproduced the retained row-sorted record-21 graph and
+the stored post-block record-12 candidate vector. A one-edge vector mutation
+and a map transposition were both rejected. The direct-combinations Python
+checker and the independent recursive-bitset C checker accepted all three
+distinct labelled graphs.
+
+The worst observed positive-host sum of the two implementation times is
+30.7203 seconds, giving a 5.5979-core-hour projection for 656 host
+representations. This is an estimate, not a bound: unseen hosts can have more
+embeddings or tied rows. The pilot therefore justifies a checkpointed complete
+corpus pass but does not establish its cost or completeness in advance.
+
+No block was emitted, no isomorphism class or boundary was excluded, the 656
+controls remain non-exhaustive, and `43 <= R(5,5) <= 46` is unchanged.
+
+Retained artifacts and hashes:
+
+```text
+bitset manifest    794b281338a4dd5a126c7dd36d840fd1b0eabd9567e84311d777d0a03d2dccd9
+NetworkX manifest  1c83da22cf2585e52d4f4c58903f9057667d47ece954499baafc90a79eba3cc8
+third audit         dbc0fc380b19f0eef14f4021570e840d67e77f175f9b829168dfe292af966ab0
+three graphs        249662ab7df7a7e3df9df82f214d910bcc4becfc1cd91a48031284ba7b6b5756
+bitset script       01b3953b1db6a65737e4fb4ee176a88b7c8c8ed26a374c410cf274fe2500739a
+NetworkX script     c4491591b16394e11d3bf0b907eea8c65a73308e8a2a366e5d594532c7010aaf
+third checker       d396907561d8bce742a71ff8244a830d30695472c8f8df263ea8df7130a0efd1
+```
+
+Experiment records:
+
+```text
+.proof-experiments/20260721-182632-8096f2  custom bitset enumeration
+.proof-experiments/20260721-182712-0ba9c4  NetworkX/VF2 enumeration
+.proof-experiments/20260721-183048-41afe5  independent replay and dual graph checks
+```
+
+### Exact continuation
+
+Do not run the projected multi-hour corpus census interactively. First
+generalize both retained enumerators into an atomic host-by-host checkpoint
+driver over the 328 source records and their 328 complements. The checkpoint
+must retain, per host and implementation, the exact mapping stream, every
+tied-row order and vector, counts, elapsed time, and stream hashes. It must be
+resumable without sharing parsing or search logic between implementations.
+
+Submit that driver through `/root/proof-factory/scripts/submit_lab.py`. Stop
+fail-closed on any exact stream mismatch, replay failure, per-host time at
+least 30 seconds, 1-GiB breach, tied expansion above 100,000 vectors, or
+aggregate projection above 12 core-hours/20 GiB. Do not emit a partial block
+set and do not run residual SAT. Only after all 656 host representations agree
+may a separate pass deduplicate the global 426-bit stream, replay every block
+to at least one recorded host pullback, emit blocks, and consider one bounded
+residual solve. Any residual UNSAT would exclude only supplied controls inside
+this fixed boundary, not unknown classes or order-43 graphs.
+
+The challenger remains
+`strategy-r55-two-orbit-proof-compression`: if the full-corpus pass hits a
+declared gate, deletion-minimize one certified raw K5-clause set and kill that
+route too if its first core exceeds 20 clauses.
+
+Full scope, code, hashes, and disclosure are in
+`records/attempts/ramsey-r55-20260721-183132-embedpilot.json`.
+
+## Epoch-17 disclosure
+
+GPT-5.6 Sol was principal investigator. Supplied GPT-5.6 Terra
+challenger-prior-art and experiment-verification memos were advisory and are
+promoted under `docs/delegate-memos/` with provenance in
+`records/delegate-provenance-epoch17.json`. Sol audited the maintained survey
+and primary papers, wrote both enumerators and the third checker, and ran all
+experiments. No new subagent was spawned. Deterministic tools were Python
+3.12.3, NetworkX 3.3, GCC 13.3.0, the existing Python and C exact graph
+checkers, jq, pdftotext, SHA-256, and the computational-researcher experiment
+harness. No solver, CAS, proof assistant, external publication, remote
+account, package installation, or system change was used.
+
+---
+
+# Prior checkpoint — epoch 16
 
 Recorded: 2026-07-21 17:24 UTC
 
