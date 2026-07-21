@@ -1,0 +1,11 @@
+{
+  "event": "stopped_with_reason",
+  "id": "lab-ramsey-r55-872a7c3ee855",
+  "review": {
+    "decision": "redirect",
+    "reason": "Hosts 0..48 pass the independent cold mathematical audit and all observed resource thresholds, but the lab spec omits hashes for both imported enumerators, records no historical worktree dirtiness, and does not enforce the intended aggregate 30-second host gate. Preserve the prefix as calibration evidence and restart from host 0 under a fail-closed hash-locked wrapper.",
+    "reviewer": "proof-factory:ramsey-r55-20260721-204644-7cb261",
+    "reviewed_at": "2026-07-21T20:46:46.199798+00:00",
+    "segment": 49
+  }
+}

@@ -1,0 +1,429 @@
+{
+  "schema_version": 1,
+  "kind": "proof-factory-attempt-delta-manifest",
+  "attempt_id": "ramsey-r55-20260721-204644-7cb261",
+  "created_at": "2026-07-21T20:46:46.107848+00:00",
+  "workspace": "/root/proof-factory/research/ramsey-r55/workspace",
+  "mutable_projection_patterns": [
+    ".delegates/**",
+    ".git/**",
+    ".pytest_cache/**",
+    ".venv/**",
+    "CHECKPOINT.md",
+    "README.md",
+    "__pycache__/**",
+    "docs/DOSSIER.md",
+    "lab-archive/**",
+    "lab-queue/**",
+    "records/problem.json",
+    "records/research-state.json",
+    "venv/**"
+  ],
+  "claimed_evidence_paths": [
+    ".proof-experiments/20260721-203603-1ca23d/experiment.json",
+    ".proof-experiments/20260721-204303-62d4b3/experiment.json",
+    "artifacts/known-class-embedding-prefix49-audit/audit.json",
+    "artifacts/known-class-embedding-prefix49-audit/known_class_embedding_tranche33_graphs.g6",
+    "artifacts/known-class-embedding-prefix49-audit/recorded-revision-gate-v2.json",
+    "checkers/checker_a.py",
+    "checkers/checker_b.c",
+    "checkers/known_class_embedding_provenance_gate.py",
+    "checkers/known_class_embedding_tranche_audit.py",
+    "records/labs/lab-ramsey-r55-872a7c3ee855-completed-awaiting-review-segment-49.json",
+    "scripts/enumerate_core_embeddings_bitset.py",
+    "scripts/enumerate_core_embeddings_networkx.py",
+    "scripts/run_known_class_embedding_census.py",
+    "sources/r55_42some.g6",
+    "sources/rowpair/dynamic-survey-revision18.pdf",
+    "sources/rowpair/subgraph-counting-r55.pdf"
+  ],
+  "artifact_count": 30,
+  "artifacts": [
+    {
+      "path": ".delegates/20260721-202807-0bf766/challenger-prior-art/memo.md",
+      "role": "immutable_artifact",
+      "change": "added",
+      "claimed_evidence": false,
+      "after": {
+        "kind": "file",
+        "sha256": "532780b22714deda8a0b16b42296d1f8c8536978b7987af7ae23063a41d5e27b",
+        "size": 832
+      }
+    },
+    {
+      "path": ".delegates/20260721-202807-0bf766/experiment-verification/memo.md",
+      "role": "immutable_artifact",
+      "change": "added",
+      "claimed_evidence": false,
+      "after": {
+        "kind": "file",
+        "sha256": "ef646edb4c63e1441edda151a12ef5e0d66782af1e605287d0ae397c8004bec0",
+        "size": 3663
+      }
+    },
+    {
+      "path": ".proof-experiments/20260721-203454-a7102e/experiment.json",
+      "role": "immutable_artifact",
+      "change": "added",
+      "claimed_evidence": false,
+      "after": {
+        "kind": "file",
+        "sha256": "45d5e4c51826657a97521c0211b4fd2545edeced48cb394c39cc369b3b481661",
+        "size": 2866
+      }
+    },
+    {
+      "path": ".proof-experiments/20260721-203454-a7102e/stderr.txt",
+      "role": "immutable_artifact",
+      "change": "added",
+      "claimed_evidence": false,
+      "after": {
+        "kind": "file",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size": 0
+      }
+    },
+    {
+      "path": ".proof-experiments/20260721-203454-a7102e/stdout.txt",
+      "role": "immutable_artifact",
+      "change": "added",
+      "claimed_evidence": false,
+      "after": {
+        "kind": "file",
+        "sha256": "bedb5744392e3a885550ebea8606a1c3845a8a40a0c5aa8ec91bb2820530fd50",
+        "size": 2679
+      }
+    },
+    {
+      "path": ".proof-experiments/20260721-203603-1ca23d/experiment.json",
+      "role": "immutable_artifact",
+      "change": "added",
+      "claimed_evidence": true,
+      "after": {
+        "kind": "file",
+        "sha256": "2365cb3ab7cdb875102a293a16de8c95088d5bd4f15c4042cbc3d95e3deff85f",
+        "size": 2866
+      }
+    },
+    {
+      "path": ".proof-experiments/20260721-203603-1ca23d/stderr.txt",
+      "role": "immutable_artifact",
+      "change": "added",
+      "claimed_evidence": false,
+      "after": {
+        "kind": "file",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size": 0
+      }
+    },
+    {
+      "path": ".proof-experiments/20260721-203603-1ca23d/stdout.txt",
+      "role": "immutable_artifact",
+      "change": "added",
+      "claimed_evidence": false,
+      "after": {
+        "kind": "file",
+        "sha256": "bedb5744392e3a885550ebea8606a1c3845a8a40a0c5aa8ec91bb2820530fd50",
+        "size": 2679
+      }
+    },
+    {
+      "path": ".proof-experiments/20260721-203936-cacdc6/experiment.json",
+      "role": "immutable_artifact",
+      "change": "added",
+      "claimed_evidence": false,
+      "after": {
+        "kind": "file",
+        "sha256": "0a67071ed30e24b9e7f74aadbb4c28e74456341c9c04d5b624b7855492d0ec9a",
+        "size": 2612
+      }
+    },
+    {
+      "path": ".proof-experiments/20260721-203936-cacdc6/stderr.txt",
+      "role": "immutable_artifact",
+      "change": "added",
+      "claimed_evidence": false,
+      "after": {
+        "kind": "file",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size": 0
+      }
+    },
+    {
+      "path": ".proof-experiments/20260721-203936-cacdc6/stdout.txt",
+      "role": "immutable_artifact",
+      "change": "added",
+      "claimed_evidence": false,
+      "after": {
+        "kind": "file",
+        "sha256": "183612f7f68070f4ba29126b026ecb24380462b3c7e1041316ff0938681a7726",
+        "size": 1635
+      }
+    },
+    {
+      "path": ".proof-experiments/20260721-204303-62d4b3/experiment.json",
+      "role": "immutable_artifact",
+      "change": "added",
+      "claimed_evidence": true,
+      "after": {
+        "kind": "file",
+        "sha256": "522305898daff5a8f9188c415065fc9273c17a2458975175586bf1c66389645c",
+        "size": 2636
+      }
+    },
+    {
+      "path": ".proof-experiments/20260721-204303-62d4b3/stderr.txt",
+      "role": "immutable_artifact",
+      "change": "added",
+      "claimed_evidence": false,
+      "after": {
+        "kind": "file",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size": 0
+      }
+    },
+    {
+      "path": ".proof-experiments/20260721-204303-62d4b3/stdout.txt",
+      "role": "immutable_artifact",
+      "change": "added",
+      "claimed_evidence": false,
+      "after": {
+        "kind": "file",
+        "sha256": "5749489f4fc4303cb21abb625c02a38b3d25ee0d6108596aa39e841c3b14f3c8",
+        "size": 1795
+      }
+    },
+    {
+      "path": "CHECKPOINT.md",
+      "role": "mutable_projection",
+      "change": "modified",
+      "claimed_evidence": false,
+      "before": {
+        "kind": "file",
+        "sha256": "e0442af551092cca12881e7ed897b622a540b85f469eec9fb38d4dce79fa31aa",
+        "size": 73531
+      },
+      "after": {
+        "kind": "file",
+        "sha256": "582f9521f25fd5907c4a767394fc97095c1dab723203e6cec833b4f4c8dbc125",
+        "size": 80302
+      }
+    },
+    {
+      "path": "artifacts/known-class-embedding-prefix49-audit/audit.json",
+      "role": "immutable_artifact",
+      "change": "added",
+      "claimed_evidence": true,
+      "after": {
+        "kind": "file",
+        "sha256": "e8c434e5c23cf90f3529ccbd961f561e6315d7240fbc761e767c75df7511e5f5",
+        "size": 3313
+      }
+    },
+    {
+      "path": "artifacts/known-class-embedding-prefix49-audit/known_class_embedding_tranche33_graphs.g6",
+      "role": "immutable_artifact",
+      "change": "added",
+      "claimed_evidence": true,
+      "after": {
+        "kind": "file",
+        "sha256": "4e99010340746b1c2ffdd81fec3da6b51342891d8cd906d8669fe1ac27053bcf",
+        "size": 1168
+      }
+    },
+    {
+      "path": "artifacts/known-class-embedding-prefix49-audit/provenance.json",
+      "role": "immutable_artifact",
+      "change": "added",
+      "claimed_evidence": false,
+      "after": {
+        "kind": "file",
+        "sha256": "a2c78b1e981fa69187148d82efe0c354741280cf65c4dbee5c969bcae010674d",
+        "size": 1725
+      }
+    },
+    {
+      "path": "artifacts/known-class-embedding-prefix49-audit/recorded-revision-gate-v2.json",
+      "role": "immutable_artifact",
+      "change": "added",
+      "claimed_evidence": true,
+      "after": {
+        "kind": "file",
+        "sha256": "38ecc494c401a23e2602ec99520c91b23f614e47b586dab228767268c4a69df9",
+        "size": 1885
+      }
+    },
+    {
+      "path": "checkers/checker_a.py",
+      "role": "immutable_artifact",
+      "change": "unchanged",
+      "claimed_evidence": true,
+      "before": {
+        "kind": "file",
+        "sha256": "b7f28adfec792139acce538ca879b775a0180467763b413e1a464672acddd259",
+        "size": 6681
+      },
+      "after": {
+        "kind": "file",
+        "sha256": "b7f28adfec792139acce538ca879b775a0180467763b413e1a464672acddd259",
+        "size": 6681
+      }
+    },
+    {
+      "path": "checkers/checker_b.c",
+      "role": "immutable_artifact",
+      "change": "unchanged",
+      "claimed_evidence": true,
+      "before": {
+        "kind": "file",
+        "sha256": "40f719bb36f8d7d3db3a4b949dce8b20abd49499f57f7d5b651b718658014d2e",
+        "size": 13864
+      },
+      "after": {
+        "kind": "file",
+        "sha256": "40f719bb36f8d7d3db3a4b949dce8b20abd49499f57f7d5b651b718658014d2e",
+        "size": 13864
+      }
+    },
+    {
+      "path": "checkers/known_class_embedding_provenance_gate.py",
+      "role": "immutable_artifact",
+      "change": "added",
+      "claimed_evidence": true,
+      "after": {
+        "kind": "file",
+        "sha256": "6488b308ac96e268a85b1419ea619b4ecb6acb12bfb9d896ebbf4893012c14ca",
+        "size": 9071
+      }
+    },
+    {
+      "path": "checkers/known_class_embedding_tranche_audit.py",
+      "role": "immutable_artifact",
+      "change": "unchanged",
+      "claimed_evidence": true,
+      "before": {
+        "kind": "file",
+        "sha256": "69d01e8bd189498c70390404de034b354023ffe2fae812ee7c287c64b7c46687",
+        "size": 21473
+      },
+      "after": {
+        "kind": "file",
+        "sha256": "69d01e8bd189498c70390404de034b354023ffe2fae812ee7c287c64b7c46687",
+        "size": 21473
+      }
+    },
+    {
+      "path": "records/labs/lab-ramsey-r55-872a7c3ee855-completed-awaiting-review-segment-49.json",
+      "role": "immutable_artifact",
+      "change": "unchanged",
+      "claimed_evidence": true,
+      "before": {
+        "kind": "file",
+        "sha256": "30eeb308e23df7f55cc04cf778aa043ffa7133dfe37c14609369719a6a785811",
+        "size": 8270
+      },
+      "after": {
+        "kind": "file",
+        "sha256": "30eeb308e23df7f55cc04cf778aa043ffa7133dfe37c14609369719a6a785811",
+        "size": 8270
+      }
+    },
+    {
+      "path": "scripts/enumerate_core_embeddings_bitset.py",
+      "role": "immutable_artifact",
+      "change": "unchanged",
+      "claimed_evidence": true,
+      "before": {
+        "kind": "file",
+        "sha256": "01b3953b1db6a65737e4fb4ee176a88b7c8c8ed26a374c410cf274fe2500739a",
+        "size": 10941
+      },
+      "after": {
+        "kind": "file",
+        "sha256": "01b3953b1db6a65737e4fb4ee176a88b7c8c8ed26a374c410cf274fe2500739a",
+        "size": 10941
+      }
+    },
+    {
+      "path": "scripts/enumerate_core_embeddings_networkx.py",
+      "role": "immutable_artifact",
+      "change": "unchanged",
+      "claimed_evidence": true,
+      "before": {
+        "kind": "file",
+        "sha256": "c4491591b16394e11d3bf0b907eea8c65a73308e8a2a366e5d594532c7010aaf",
+        "size": 7335
+      },
+      "after": {
+        "kind": "file",
+        "sha256": "c4491591b16394e11d3bf0b907eea8c65a73308e8a2a366e5d594532c7010aaf",
+        "size": 7335
+      }
+    },
+    {
+      "path": "scripts/run_known_class_embedding_census.py",
+      "role": "immutable_artifact",
+      "change": "unchanged",
+      "claimed_evidence": true,
+      "before": {
+        "kind": "file",
+        "sha256": "eac4d6f6f71abcc9eec0491a3a384acca73c0bbbe559e4906e9f4faa98028e78",
+        "size": 5988
+      },
+      "after": {
+        "kind": "file",
+        "sha256": "eac4d6f6f71abcc9eec0491a3a384acca73c0bbbe559e4906e9f4faa98028e78",
+        "size": 5988
+      }
+    },
+    {
+      "path": "sources/r55_42some.g6",
+      "role": "immutable_artifact",
+      "change": "unchanged",
+      "claimed_evidence": true,
+      "before": {
+        "kind": "file",
+        "sha256": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb",
+        "size": 47888
+      },
+      "after": {
+        "kind": "file",
+        "sha256": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb",
+        "size": 47888
+      }
+    },
+    {
+      "path": "sources/rowpair/dynamic-survey-revision18.pdf",
+      "role": "immutable_artifact",
+      "change": "unchanged",
+      "claimed_evidence": true,
+      "before": {
+        "kind": "file",
+        "sha256": "fc7df6ab2aae870f8b27039a336f368a1234bf4eb9325e80bf20510aba79f2d2",
+        "size": 349271
+      },
+      "after": {
+        "kind": "file",
+        "sha256": "fc7df6ab2aae870f8b27039a336f368a1234bf4eb9325e80bf20510aba79f2d2",
+        "size": 349271
+      }
+    },
+    {
+      "path": "sources/rowpair/subgraph-counting-r55.pdf",
+      "role": "immutable_artifact",
+      "change": "unchanged",
+      "claimed_evidence": true,
+      "before": {
+        "kind": "file",
+        "sha256": "b7e73035707628711563d91c46f0bc2df1d7fbe34cac0cccf10f99d5ba0212a7",
+        "size": 376687
+      },
+      "after": {
+        "kind": "file",
+        "sha256": "b7e73035707628711563d91c46f0bc2df1d7fbe34cac0cccf10f99d5ba0212a7",
+        "size": 376687
+      }
+    }
+  ],
+  "content_sha256": "19f459c21bc503eb365e6c1343c58af1c929efa28d6de2fc59fb334933f93c72"
+}

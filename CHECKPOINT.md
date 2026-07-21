@@ -1,4 +1,130 @@
-# R(5,5) research checkpoint — epoch 18
+# R(5,5) research checkpoint — epoch 19
+
+Recorded: 2026-07-21 20:40 UTC
+
+## Epoch-19 outcome: segment 49 cold-audited; redirect the under-recorded job
+
+Lab job `lab-ramsey-r55-872a7c3ee855` is at `completed_awaiting_review`
+after canonical hosts `0..48` of `656`; the durable checkpoint has
+`next_host = 49`.  The current frozen hashes are:
+
+```text
+corpus      067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb
+checkpoint  45bcdd67bd68c3749a2b6a54985f7b81e2d8e79b07c1c7a472b3311bdc9a03dd
+progress    f8213733c0b6cf255157a1d25e1eb92761c6cea5abccf82b65821065355753ba
+manifest    52fbdafb4b03decd835a62848e6e558ef720124a58c5176463e5ac5b17645a70
+```
+
+The independent prefix audit passed.  It re-parsed and hash-checked all 49
+rows and gzip artifacts, replayed every saved positive embedding and tied-row
+pullback, cold-regenerated the complete NetworkX 3.3 VF2 mapping streams for
+all six positive hosts, and cold-enumerated empty host 0.  The positive set is
+unchanged from the 33-host review:
+
+```text
+host index  case              embeddings  unique vectors
+11          source_record_12           2               2
+17          source_record_18           2               1
+18          source_record_19           2               1
+19          source_record_20           2               1
+20          source_record_21           2               1
+24          source_record_25           2               2
+```
+
+Thus the reviewed prefix contains twelve exact embeddings and eight distinct
+426-bit vectors.  Reconstructed labelled graphs all passed the independent
+direct-combinations Python and recursive-bitset C checks for both colours.
+Boundary-bit, mapping, residual-order, and manifest-hash mutations were all
+rejected.  The decisive report SHA-256 is
+`e8c434e5c23cf90f3529ccbd961f561e6315d7240fbc761e767c75df7511e5f5`;
+the eight-graph graph6 SHA-256 remains
+`4e99010340746b1c2ffdd81fec3da6b51342891d8cd906d8669fe1ac27053bcf`.
+The successful experiment record is
+`.proof-experiments/20260721-203603-1ca23d/experiment.json` (SHA-256
+`2365cb3ab7cdb875102a293a16de8c95088d5bd4f15c4042cbc3d95e3deff85f`).
+
+An additional recorded-revision gate resolved all 49 lab runner Git revisions
+and proved that each commit contains the same driver, custom bitset enumerator,
+and NetworkX enumerator bytes as the current clean tracked files:
+
+```text
+driver   eac4d6f6f71abcc9eec0491a3a384acca73c0bbbe559e4906e9f4faa98028e78
+bitset   01b3953b1db6a65737e4fb4ee176a88b7c8c8ed26a374c410cf274fe2500739a
+VF2      c4491591b16394e11d3bf0b907eea8c65a73308e8a2a366e5d594532c7010aaf
+```
+
+The operational gates also pass on the exact 49-host prefix: maximum summed
+bitset+VF2 host time `26.687636360060424` seconds (host 22), minimum segment
+throughput `0.03565625897312043` host/s, maximum segment artifact growth
+`1234` bytes, maximum peak child memory `53708` KiB, and maximum tied-row
+vector occurrences `2`.  The corrected recorded-revision report SHA-256 is
+`38ecc494c401a23e2602ec99520c91b23f614e47b586dab228767268c4a69df9`;
+its experiment record is `.proof-experiments/20260721-204303-62d4b3`.
+
+Qualification: the original lab spec hashes only the driver and corpus, not
+the two imported enumerators, and the runner does not record historical
+worktree dirtiness.  The gate proves identical committed producer bytes for
+segments 1--49 and a clean current worktree, but it cannot exclude a temporary
+uncommitted module edit during a past segment.  It therefore narrows but does
+not close the provenance gap.  In addition, the driver uses `--case-seconds
+900`; the exact first 49 rows happen to pass the intended 30-second aggregate
+gate, but the continuing job does not enforce that gate fail-closed.
+
+This remains a supplied-control infrastructure result.  It does not show the
+656 graphs are exhaustive, does not exclude an unknown order-42 graph, emits
+no boundary block, and leaves `43 <= R(5,5) <= 46` unchanged.  The lab review
+decision is `redirect`: preserve the exact 49-host prefix as a calibration
+artifact, but do not extend this under-recorded job.
+
+### Exact continuation
+
+After the epoch result applies the review, inspect
+`/root/proof-factory/state/labs/jobs/lab-ramsey-r55-872a7c3ee855.json` and
+confirm status `stopped_with_reason`, segment 49, and unchanged checkpoint
+`next_host = 49`.  Do not resume that job.
+
+The next epoch's first action is to create a replacement checkpointed job
+whose command names the driver and both imported enumerator modules as
+explicit hashed inputs, records worktree dirtiness or refuses a dirty producer,
+and enforces after every host: summed producer time below 30 seconds, less than
+1 GiB peak child memory, fewer than 100,000 tied-row vectors, throughput at
+least `0.001` host/s, and less than 200 MB segment growth.  Start the locked
+replacement from host 0 in a fresh artifact directory; the old 49-host prefix
+is a calibration control, not accepted proof input.  Use one host per segment
+until the locked lifecycle canary and first cold replay pass, then retune only
+at a recorded review boundary.
+
+Queue the full cold prefix audit as a lab job, because its measured runtime is
+131.465 seconds; do not babysit it interactively.  Before any known-class
+block or residual SAT, complete all 656 locked hosts, cold-regenerate every
+positive VF2 stream, cold-sample 32 predeclared empty hosts stratified across
+source/complement halves and edge-count layers, replay every pullback, and
+dual-check every distinct graph.  Stop without emitting blocks on any mismatch
+or resource-gate failure.  If the locked replacement cannot pass its canary,
+redirect to duplicate-preserving deletion minimization of the distance-3
+two-orbit raw K5-origin set, with success threshold at most 20 origins and
+immediate closure above 20.
+
+## Epoch-19 disclosure
+
+GPT-5.6 Sol was principal investigator.  The supplied GPT-5.6 Terra
+experiment-verification and challenger-prior-art memos were advisory leads;
+Sol independently reran the decisive cold audit, inspected the primary
+sources, and wrote and ran the recorded-revision/resource gate.  No subagent was
+spawned.  Deterministic tools were Python 3.12.3, NetworkX 3.3, GCC 13.3.0,
+Git object inspection, SHA-256, the existing Python and C exact graph
+checkers, and the computational-researcher harness.  The first cold-audit
+launch was externally terminated after about 22 seconds with empty logs and
+no metadata; `.proof-experiments/20260721-203454-a7102e` is a failed harness
+launch, not evidence.  The successful rerun took 131.465 seconds and should
+have been queued under the stated long-job policy; future runs are explicitly
+redirected to the lab.  No SAT solver, CAS, proof assistant, package install,
+system change, network retrieval, external publication, or remote account was
+used.
+
+---
+
+# Prior checkpoint — epoch 18
 
 Recorded: 2026-07-21 19:48 UTC
 

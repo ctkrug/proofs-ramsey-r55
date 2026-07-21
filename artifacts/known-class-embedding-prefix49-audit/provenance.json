@@ -1,0 +1,29 @@
+{
+  "distinct_recorded_git_revisions": 49,
+  "hashes": {
+    "checkpoint": "45bcdd67bd68c3749a2b6a54985f7b81e2d8e79b07c1c7a472b3311bdc9a03dd",
+    "job_state": "c4aedfb63d68a5d666630146faf717ad241936b65b59b1fed4b3441711c96d37",
+    "manifest": "52fbdafb4b03decd835a62848e6e558ef720124a58c5176463e5ac5b17645a70",
+    "progress": "f8213733c0b6cf255157a1d25e1eb92761c6cea5abccf82b65821065355753ba"
+  },
+  "job_id": "lab-ramsey-r55-872a7c3ee855",
+  "operational_gates": {
+    "max_aggregate_host_seconds": 26.687636360060424,
+    "max_aggregate_host_seconds_host": 22,
+    "max_peak_child_memory_kib": 53708,
+    "max_segment_artifact_growth_bytes": 1234,
+    "max_tied_row_vector_occurrences": 2,
+    "min_segment_throughput_per_second": 0.03565625897312043
+  },
+  "producer_hashes": {
+    "scripts/enumerate_core_embeddings_bitset.py": "01b3953b1db6a65737e4fb4ee176a88b7c8c8ed26a374c410cf274fe2500739a",
+    "scripts/enumerate_core_embeddings_networkx.py": "c4491591b16394e11d3bf0b907eea8c65a73308e8a2a366e5d594532c7010aaf",
+    "scripts/run_known_class_embedding_census.py": "eac4d6f6f71abcc9eec0491a3a384acca73c0bbbe559e4906e9f4faa98028e78",
+    "sources/r55_42some.g6": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb"
+  },
+  "qualification": "The submitted lab spec hashes the driver and corpus but not imported modules. This external gate closes the observed 49-segment prefix by resolving each recorded Git revision and checking identical imported-module bytes; it does not make the original spec self-hashing or certify future segments.",
+  "schema_version": 1,
+  "scope": "exactly lab segments and canonical hosts 0..48",
+  "segments": 49,
+  "status": "known_class_embedding_prefix_provenance_pass"
+}

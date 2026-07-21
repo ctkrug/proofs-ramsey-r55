@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "id": "20260721-203936-cacdc6",
+  "name": "r55-known-class-prefix49-provenance-gate",
+  "hypothesis": "all 49 recorded segments used identical committed producer bytes and satisfy the predeclared operational gates",
+  "expected_signal": "all three producer hashes are invariant across 49 recorded Git revisions; maximum aggregate host time is below 30 seconds; memory, throughput, artifact growth, and tied-vector gates pass",
+  "command": [
+    "python3",
+    "checkers/known_class_embedding_provenance_gate.py",
+    ".",
+    "/root/proof-factory/state/labs/jobs/lab-ramsey-r55-872a7c3ee855.json",
+    "artifacts/known-class-embedding-census/output/manifest.jsonl",
+    "artifacts/known-class-embedding-census/checkpoint.json",
+    "artifacts/known-class-embedding-census/progress.json",
+    "artifacts/known-class-embedding-prefix49-audit/provenance.json"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 120,
+  "memory_limit_mb": 1000,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-21T20:39:36.555833+00:00",
+  "finished_at": "2026-07-21T20:39:37.335686+00:00",
+  "duration_seconds": 0.78,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "356a4d35b405b8926ddc86dcc761ba70311f9ead",
+  "source_urls": [
+    "https://users.cecs.anu.edu.au/~bdm/papers/r55.pdf"
+  ],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/known_class_embedding_provenance_gate.py": "aa3fd46100878136bfee45f62a90e4f255979a4fd515b87ce93c3025a94bfccd",
+    "/root/proof-factory/state/labs/jobs/lab-ramsey-r55-872a7c3ee855.json": "c4aedfb63d68a5d666630146faf717ad241936b65b59b1fed4b3441711c96d37",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/known-class-embedding-census/output/manifest.jsonl": "52fbdafb4b03decd835a62848e6e558ef720124a58c5176463e5ac5b17645a70",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/known-class-embedding-census/checkpoint.json": "45bcdd67bd68c3749a2b6a54985f7b81e2d8e79b07c1c7a472b3311bdc9a03dd",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/known-class-embedding-census/progress.json": "f8213733c0b6cf255157a1d25e1eb92761c6cea5abccf82b65821065355753ba"
+  },
+  "peak_child_memory_rusage": 18048,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "183612f7f68070f4ba29126b026ecb24380462b3c7e1041316ff0938681a7726",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}
