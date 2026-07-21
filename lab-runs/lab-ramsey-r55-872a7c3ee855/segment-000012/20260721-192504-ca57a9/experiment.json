@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "id": "20260721-192504-ca57a9",
+  "name": "R55 full supplied-class embedding census segment 12/open",
+  "hypothesis": "all induced fixed-core pullbacks over 328 supplied graphs and 328 complements can be exhaustively reconciled by two implementations",
+  "expected_signal": "656 canonical host receipts with exact mapping/vector stream agreement and an independently checkable compressed manifest",
+  "command": [
+    "python3",
+    "scripts/run_known_class_embedding_census.py",
+    "--corpus",
+    "sources/r55_42some.g6",
+    "--checkpoint",
+    "artifacts/known-class-embedding-census/checkpoint.json",
+    "--progress",
+    "artifacts/known-class-embedding-census/progress.json",
+    "--output",
+    "artifacts/known-class-embedding-census/output",
+    "--hosts-per-segment",
+    "1",
+    "--case-seconds",
+    "900",
+    "--total-hosts",
+    "656"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 3600,
+  "memory_limit_mb": 1000,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-21T19:25:04.673050+00:00",
+  "finished_at": "2026-07-21T19:25:24.597717+00:00",
+  "duration_seconds": 19.925,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "8c5f6df95c2c0e407a0c5c3802e112f16198f349",
+  "source_urls": [],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/scripts/run_known_class_embedding_census.py": "eac4d6f6f71abcc9eec0491a3a384acca73c0bbbe559e4906e9f4faa98028e78",
+    "/root/proof-factory/research/ramsey-r55/workspace/sources/r55_42some.g6": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/known-class-embedding-census/checkpoint.json": "4ce1d8c9ed4148b3dfabd86a49854657ffb8eb7db7ab8e83c812a6d8f5fe046f",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/known-class-embedding-census/progress.json": "235b6471a88c73bf9d35e0f60e49393fa0a8de9649e42a6641362a8294256efd"
+  },
+  "peak_child_memory_rusage": 53444,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "3e698307bf67a32a032f788096efa0c55edfebea69641efe35447ebe721389a8",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}
