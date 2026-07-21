@@ -1,4 +1,5 @@
 {
+  "event": "checkpointed",
   "schema_version": 2,
   "id": "lab-ramsey-r55-872a7c3ee855",
   "problem_id": "ramsey-r55",
@@ -44,7 +45,7 @@
   "segment_seconds": 3600,
   "memory_mb": 1000,
   "max_segments": 0,
-  "segment": 8,
+  "segment": 7,
   "pilot_segments": 1,
   "review_every_segments": 16,
   "checkpoint_path": "artifacts/known-class-embedding-census/checkpoint.json",
@@ -60,5 +61,30 @@
     "scripts/run_known_class_embedding_census.py": "eac4d6f6f71abcc9eec0491a3a384acca73c0bbbe559e4906e9f4faa98028e78",
     "sources/r55_42some.g6": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb"
   },
-  "spec_sha256": "a8c895bb814f9b577b1c5d9a99d080b4d1ffe88df439cf25cce865fe7c2d52b0"
+  "spec_sha256": "a8c895bb814f9b577b1c5d9a99d080b4d1ffe88df439cf25cce865fe7c2d52b0",
+  "recorded_at": "2026-07-21T19:23:37.517305+00:00",
+  "job_id": "lab-ramsey-r55-872a7c3ee855",
+  "returncode": 0,
+  "duration_seconds": 22.548482,
+  "checkpoint_exists": true,
+  "checkpoint_sha256": "45e228baeb74e922fafcf640daaf84a92926dd73da972e2271e9b098152e045a",
+  "progress": {
+    "path": "artifacts/known-class-embedding-census/progress.json",
+    "sha256": "725953ba53489323abe7a85797807c55ea8798ce42234d7d338a0aac5fe342d3",
+    "completed_units": 7.0,
+    "total_units": 656.0,
+    "delta_units": 1.0,
+    "throughput_per_second": 0.04434888344146626,
+    "artifact_bytes": 5684,
+    "artifact_growth_bytes": 813,
+    "complete": false,
+    "correctness_checks_passed": true,
+    "decision_value_active": true,
+    "message": "reconciled 7/656 hosts with exact stream agreement"
+  },
+  "threshold_failures": [],
+  "runner_result": "{\n  \"experiment_dir\": \"/root/proof-factory/research/ramsey-r55/workspace/lab-runs/lab-ramsey-r55-872a7c3ee855/segment-000007/20260721-192315-9446d1\",\n  \"schema_version\": 1,\n  \"id\": \"20260721-192315-9446d1\",\n  \"name\": \"R55 full supplied-class embedding census segment 7/open\",\n  \"hypothesis\": \"all induced fixed-core pullbacks over 328 supplied graphs and 328 complements can be exhaustively reconciled by two implementations\",\n  \"expected_signal\": \"656 canonical host receipts with exact mapping/vector stream agreement and an independently checkable compressed manifest\",\n  \"command\": [\n    \"python3\",\n    \"scripts/run_known_class_embedding_census.py\",\n    \"--corpus\",\n    \"sources/r55_42some.g6\",\n    \"--checkpoint\",\n    \"artifacts/known-class-embedding-census/checkpoint.json\",\n    \"--progress\",\n    \"artifacts/known-class-embedding-census/progress.json\",\n    \"--output\",\n    \"artifacts/known-class-embedding-census/output\",\n    \"--hosts-per-segment\",\n    \"1\",\n    \"--case-seconds\",\n    \"900\",\n    \"--total-hosts\",\n    \"656\"\n  ],\n  \"cwd\": \"/root/proof-factory/research/ramsey-r55/workspace\",\n  \"seed\": 0,\n  \"timeout_seconds\": 3600,\n  \"memory_limit_mb\": 1000,\n  \"memory_limit_enforced\": true,\n  \"started_at\": \"2026-07-21T19:23:15.049182+00:00\",\n  \"finished_at\": \"2026-07-21T19:23:37.494128+00:00\",\n  \"duration_seconds\": 22.445,\n  \"returncode\": 0,\n  \"timed_out\": false,\n  \"python\": \"3.12.3\",\n  \"platform\": \"Linux-6.8.0-124-generic-x86_64-with-glibc2.39\",\n  \"git_commit\": \"f972e251f7794f66ce3b1de8ccfad94160dac539\",\n  \"source_urls\": [],\n  \"input_artifacts\": {\n    \"/root/proof-factory/research/ramsey-r55/workspace/scripts/run_known_class_embedding_census.py\": \"eac4d6f6f71abcc9eec0491a3a384acca73c0bbbe559e4906e9f4faa98028e78\",\n    \"/root/proof-factory/research/ramsey-r55/workspace/sources/r55_42some.g6\": \"067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb\",\n    \"/root/proof-factory/research/ramsey-r55/workspace/artifacts/known-class-embedding-census/checkpoint.json\": \"940dcd3d07d54cab4114329e7c2983d86fec1d378b07072ac0945fdb5fc61ad4\",\n    \"/root/proof-factory/research/ramsey-r55/workspace/artifacts/known-class-embedding-census/progress.json\": \"19139bd52d2402e313d9edef4e8df99f18f42482db8ada6a1f48163279186af8\"\n  },\n  \"peak_child_memory_rusage\": 53568,\n  \"peak_child_memory_unit\": \"kilobytes\",\n  \"artifacts\": {\n    \"stdout.txt\": \"9b50efa87bfb066630335b1392be1b66e1c208bf384d87964d403f8252a39239\",\n    \"stderr.txt\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\"\n  }\n}\n",
+  "runner_error": "",
+  "output_root": "lab-runs/lab-ramsey-r55-872a7c3ee855/segment-000007",
+  "research_event_id": "event-ramsey-r55-c3a5d9d46d99"
 }

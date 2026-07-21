@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "id": "20260721-192315-9446d1",
+  "name": "R55 full supplied-class embedding census segment 7/open",
+  "hypothesis": "all induced fixed-core pullbacks over 328 supplied graphs and 328 complements can be exhaustively reconciled by two implementations",
+  "expected_signal": "656 canonical host receipts with exact mapping/vector stream agreement and an independently checkable compressed manifest",
+  "command": [
+    "python3",
+    "scripts/run_known_class_embedding_census.py",
+    "--corpus",
+    "sources/r55_42some.g6",
+    "--checkpoint",
+    "artifacts/known-class-embedding-census/checkpoint.json",
+    "--progress",
+    "artifacts/known-class-embedding-census/progress.json",
+    "--output",
+    "artifacts/known-class-embedding-census/output",
+    "--hosts-per-segment",
+    "1",
+    "--case-seconds",
+    "900",
+    "--total-hosts",
+    "656"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 3600,
+  "memory_limit_mb": 1000,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-21T19:23:15.049182+00:00",
+  "finished_at": "2026-07-21T19:23:37.494128+00:00",
+  "duration_seconds": 22.445,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "f972e251f7794f66ce3b1de8ccfad94160dac539",
+  "source_urls": [],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/scripts/run_known_class_embedding_census.py": "eac4d6f6f71abcc9eec0491a3a384acca73c0bbbe559e4906e9f4faa98028e78",
+    "/root/proof-factory/research/ramsey-r55/workspace/sources/r55_42some.g6": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/known-class-embedding-census/checkpoint.json": "940dcd3d07d54cab4114329e7c2983d86fec1d378b07072ac0945fdb5fc61ad4",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/known-class-embedding-census/progress.json": "19139bd52d2402e313d9edef4e8df99f18f42482db8ada6a1f48163279186af8"
+  },
+  "peak_child_memory_rusage": 53568,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "9b50efa87bfb066630335b1392be1b66e1c208bf384d87964d403f8252a39239",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}
