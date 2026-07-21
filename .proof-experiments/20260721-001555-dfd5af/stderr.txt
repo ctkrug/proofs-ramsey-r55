@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/root/proof-factory/research/ramsey-r55/workspace/scripts/audit_publisher_radius1_sanitizers.py", line 87, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/root/proof-factory/research/ramsey-r55/workspace/scripts/audit_publisher_radius1_sanitizers.py", line 50, in main
+    result = subprocess.run(
+             ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/tmp/r55-radius1-sanitizer-wrneik8m/checker_b_sanitized', '--input', '/root/proof-factory/research/ramsey-r55/workspace/sources/retrievals/springer_supplementary_data4_audit1.txt']' died with <Signals.SIGABRT: 6>.

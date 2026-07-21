@@ -16,10 +16,11 @@ identities, performs positive semantic mutations, tests parser rejection, and
 checks all deletions through the intersection of a two-conflict K43 control.
 
 The K43 matrices in `inputs/k43_two_conflict_gist.txt` are a visible third-party
-transcription, not the raw Springer supplementary file.  They are useful for
-exercising the checkers but cannot close the publisher source-provenance gate.
-The McKay order-42 source gate is now closed for the supplied control packet;
-see `CHECKPOINT.md` for the exact scope and evidence.
+transcription and remain only parser/evaluator controls.  The actual Springer
+Supplementary Data 4 bytes are retained under `sources/retrievals/` with two
+independent raw retrieval records.  The dedicated publisher gate authenticates
+those bytes and exhausts all 903 one-edge flips with two independent raw parsers
+and exact evaluators.  See `CHECKPOINT.md` for the exact scope and evidence.
 
 `scripts/run_corpus_gate.py` freezes the mirror acquisition discriminator
 for that corpus (47,888 bytes, SHA-256
@@ -54,6 +55,20 @@ python3 scripts/run_corpus_gate.py \
 For a graph6 corpus, both standalone checkers accept `--format graph6`.  The
 matrix orchestrator is deliberately specialized to the provisional K43 control;
 the corpus orchestrator is the fail-closed source and graph6 gate.
+
+Replay the authenticated publisher-seed radius-1 gate with:
+
+```bash
+python3 scripts/run_publisher_radius1_gate.py \
+  checkers/publisher_radius1_a.py checkers/publisher_radius1_b.c \
+  sources/retrievals/springer_supplementary_data4_audit1.txt \
+  sources/retrievals/springer_supplementary_data4_audit2.txt \
+  artifacts/authenticated_corpus_report.json \
+  artifacts/publisher_seed_radius1_report.replay.json
+```
+
+This proves only the exact radius-1 statements recorded in the report; it is
+not a witness, global optimum, or Ramsey bound.
 
 The graph6 plumbing itself has a smaller cold-start control that does not need
 the historical corpus.  It generates all 1,044 order-7 isomorphism classes with

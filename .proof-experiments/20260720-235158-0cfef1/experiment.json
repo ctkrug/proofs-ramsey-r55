@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "20260720-235158-0cfef1",
+  "name": "r55-springer-supplementary-data4-retrieval-audit1",
+  "hypothesis": "The publisher raw TXT is directly retrievable with immutable body and response metadata",
+  "expected_signal": "Verified HTTPS response from the Springer raw URL, retained unchanged body and raw headers, and curl transfer JSON suitable for a fail-closed source gate",
+  "command": [
+    "curl",
+    "--proto",
+    "=https",
+    "--tlsv1.2",
+    "--fail-with-body",
+    "--silent",
+    "--show-error",
+    "--location",
+    "--dump-header",
+    "sources/retrievals/springer_supplementary_data4_audit1.headers",
+    "--output",
+    "sources/retrievals/springer_supplementary_data4_audit1.txt",
+    "--write-out",
+    "%{json}\\n",
+    "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-018-07327-2/MediaObjects/41467_2018_7327_MOESM6_ESM.txt"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 120,
+  "memory_limit_mb": 256,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-20T23:51:58.668451+00:00",
+  "finished_at": "2026-07-20T23:51:58.740279+00:00",
+  "duration_seconds": 0.072,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "8f6493bb12efa9f1b049f042478f563f926c2f80",
+  "source_urls": [
+    "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-018-07327-2/MediaObjects/41467_2018_7327_MOESM6_ESM.txt"
+  ],
+  "input_artifacts": {},
+  "peak_child_memory_rusage": 17920,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "5d885accd3f22be27f69ea87d8c4d48df48d5c68094120aa3894fb8fc04eb1ca",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

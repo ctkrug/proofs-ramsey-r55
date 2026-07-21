@@ -1,0 +1,27 @@
+HTTP/2 200 
+content-type: application/octet-stream
+x-guploader-uploadid: AKhXX7IW9mCkCQ-DDe7Yv2spg-OlpFAatp5Cvmp9bM_EnuP56t7_xI3Scp6F5zW3-Ob7lDpb2EYN4MU
+cache-control: private, max-age=86400
+last-modified: Mon, 04 Dec 2023 18:16:34 GMT
+etag: "69edc28d8a5ab0b3993babc0e6c74405"
+x-goog-generation: 1701713794219284
+x-goog-metageneration: 1
+x-goog-stored-content-encoding: identity
+x-goog-stored-content-length: 3812
+x-goog-hash: crc32c=hmY5bQ==
+x-goog-hash: md5=ae3CjYpasLOZO6vA5sdEBQ==
+x-goog-storage-class: MULTI_REGIONAL
+server: UploadServer
+x-cdn-origin: GCS, SNPaaS
+accept-ranges: bytes
+date: Mon, 20 Jul 2026 23:52:09 GMT
+via: 1.1 varnish
+age: 290925
+x-served-by: cache-sjc1000124-SJC
+x-cache: HIT
+x-cache-hits: 1
+x-timer: S1784591529.018088,VS0,VE3
+vary: Origin
+alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+content-length: 3812
+

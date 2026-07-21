@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "20260721-001555-dfd5af",
+  "name": "r55-publisher-radius1-sanitizer-audit",
+  "hypothesis": "The independent C radius-1 evaluator has no ASan or UBSan diagnostic and reproduces the retained full 903-entry identity ledger",
+  "expected_signal": "Sanitized build exits zero with empty stderr and exact seed/ledger identity agreement against the retained report",
+  "command": [
+    "python3",
+    "scripts/audit_publisher_radius1_sanitizers.py",
+    "checkers/publisher_radius1_b.c",
+    "sources/retrievals/springer_supplementary_data4_audit1.txt",
+    "artifacts/publisher_seed_radius1_report.json"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 60,
+  "memory_limit_mb": 1024,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-21T00:15:55.775985+00:00",
+  "finished_at": "2026-07-21T00:15:56.930016+00:00",
+  "duration_seconds": 1.154,
+  "returncode": 1,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "8f6493bb12efa9f1b049f042478f563f926c2f80",
+  "source_urls": [
+    "https://doi.org/10.1038/s41467-018-07327-2"
+  ],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/scripts/audit_publisher_radius1_sanitizers.py": "297989cedcf2c4ef1ada7b97c3e04f380646cef7c2ed9eb7deaac0ed63be7d13",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/publisher_radius1_b.c": "b1bfd2a51511ae0f3e6caccbaa29235cf65df2f8a3cae7ccdfce934af1f5914a",
+    "/root/proof-factory/research/ramsey-r55/workspace/sources/retrievals/springer_supplementary_data4_audit1.txt": "c2429869f6fa47ab7388134b580b014efae01e6f0e474f5bab2233afb1ef6990",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/publisher_seed_radius1_report.json": "0db3cca75888b70850b60e1b891d8e08349ab0bec6196cd8f4c528603fa04fe9"
+  },
+  "peak_child_memory_rusage": 35596,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr.txt": "86a8ed702178df369de33fce8437f6d598c37103d50c64cc24081d6a3e097e3e"
+  }
+}

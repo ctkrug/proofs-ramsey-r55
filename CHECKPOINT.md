@@ -1,172 +1,187 @@
-# R(5,5) research checkpoint — epoch 5
+# R(5,5) research checkpoint — epoch 6
 
-Recorded: 2026-07-20 22:37 UTC
+Recorded: 2026-07-21 00:08:55 UTC
 
 ## Outcome and exact scope
 
-The authoritative-source control blocker for McKay's supplied order-42 corpus
-is closed. This is research-software progress, not a Ramsey-number result. No
-new witness, bound, classification, target-instance exclusion, or canonical
-novelty claim is made. The maintained rigorous status remains
-`43 <= R(5,5) <= 46`.
+Springer Supplementary Data 4 is now authenticated as the published
+two-conflict K43 seed, and its complete Hamming-radius-1 edge neighborhood is
+exhausted. This is a reproducible local-landscape result and research artifact,
+not a Ramsey witness, bound, global multiplicity optimum, or order-42 census.
+The maintained published status remains `43 <= R(5,5) <= 46`.
 
-Exactly 328 supplied order-42 graph6 records and their 328 derived complements
-passed the full control gate. This does **not** prove that those 656 graphs are
-all `(5,5,42)` graphs.
+For exactly the frozen 43-vertex matrix with SHA-256
+`c2429869f6fa47ab7388134b580b014efae01e6f0e474f5bab2233afb1ef6990`:
 
-## What changed
+- it has 454 one-edges;
+- its only monochromatic K5s are the all-zero sets
+  `[6,12,17,36,42]` and `[6,12,31,36,42]`;
+- all 903 one-edge flips have total monochromatic-K5 burden at least 2;
+- the two global radius-1 minimizers are flips `(6,12)` and `(36,42)`,
+  both with burden 2;
+- among the 861 flips not incident to vertex 6, the unique minimum is
+  `(36,42)` with burden 2;
+- among all 741 flips avoiding every shared conflict vertex
+  `{6,12,36,42}`, the exact minimum is 3, attained by
+  `(0,37)`, `(5,11)`, `(10,16)`, `(16,22)`, `(21,27)`, `(26,32)`, and
+  `(32,38)`.
 
-A newly live command-network route enabled a second direct HTTPS retrieval from
-McKay's authoritative URL:
+The last predicate is a strict non-star firewall: its changed edge remains in
+the graph after deleting any of the four shared conflict vertices. It therefore
+changes every relevant order-42 deletion remainder, though it says nothing
+about larger edit sets or unknown order-42 components.
 
-`https://users.cecs.anu.edu.au/~bdm/data/r55_42some.g6`
+## Source and provenance gate
 
-The actual HTTP/2 200 response omits `Content-Type`. The prior sidecar's
-inference of `text/plain` was rejected. Provenance schema v2 instead preserves
-the missing field as `null` and requires hash-linked copies of:
+Primary article: https://doi.org/10.1038/s41467-018-07327-2
 
-- the raw response headers;
-- the independently retrieved body;
-- curl's transfer/TLS JSON;
-- the deterministic retrieval experiment record.
+Publisher object:
+https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-018-07327-2/MediaObjects/41467_2018_7327_MOESM6_ESM.txt
 
-The second body is byte-for-byte equal to the previously supplied body and to
-the frozen acquisition discriminator:
+Two direct retrievals are retained as
+`sources/retrievals/springer_supplementary_data4_audit{1,2}.{txt,headers}`.
+Both bodies are 3,812 bytes and byte-identical. Each retrieval record reports
+HTTP/2 200, verified TLS, no redirect, the publisher-controlled effective URL,
+`Content-Type: application/octet-stream`, and the correct byte count:
 
-- 47,888 bytes;
-- 328 nonblank LF-terminated records;
-- SHA-256
-  `067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb`.
+- `.proof-experiments/20260720-235158-0cfef1`;
+- `.proof-experiments/20260720-235208-a7e84e`.
 
-## Decisive experiments
+The gate hash-links both bodies, both raw header captures, both curl transfer
+records, and both experiment JSON files. It refuses a changed body even if the
+changed matrix remains structurally valid.
 
-### Second authoritative retrieval
+## Decisive experiment
 
-Experiment: `.proof-experiments/20260720-221528-34af71`
+Experiment: `.proof-experiments/20260721-000810-1f70a4`
 
-- Return code 0; duration 0.826 s; 256 MB cap.
-- HTTP/2 200; TLS verification result 0; no redirect.
-- `url_effective` is the authoritative URL.
-- `content_type` is `null` in curl metadata and no `content-type` field occurs
-  in the raw header block.
-- Body: `sources/retrievals/r55_42some_authoritative_epoch5.g6`, SHA-256
-  `067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb`.
-- Headers: `sources/retrievals/r55_42some_authoritative_epoch5.headers`,
-  186 bytes, SHA-256
-  `15d2e458cdc5a91c7c562460a91b15c0db15953c7e8174324aa1074063eaa430`.
+- Return code 0; duration 45.243 s; 1,024 MB cap; peak child RSS 34,560 KiB.
 - Experiment JSON SHA-256:
-  `e05052b4db512684c45c9efb64654cfd1f32a8edfffdba1b8e8bfc5fab3ac233`.
+  `3ce459a1a214f1c86dcc9351e4cabbae961a210785cab8e576c78c2f0dc8f98f`.
+- Report: `artifacts/publisher_seed_radius1_report.json`, 1,544,868 bytes,
+  SHA-256
+  `0db3cca75888b70850b60e1b891d8e08349ab0bec6196cd8f4c528603fa04fe9`.
+- The report retains the ordered 903-entry flip ledger, full violation
+  identities, family histograms, minimizer identities, provenance, mutations,
+  parser rejections, deletion membership, checker/compiler hashes, and 41
+  direct rescans.
 
-### Provenance-v2 and graph6 regression
+Checker A (`checkers/publisher_radius1_a.py`, SHA-256
+`f34ea148c36ab74b0c11784f9b4d333dc915ef0a6bd3d70c7ef9c2aa03f5a535`)
+independently parses the raw whitespace in Python, scans all `C(43,5)` subsets,
+and derives exact one-edge deltas. Checker B
+(`checkers/publisher_radius1_b.c`, SHA-256
+`b1bfd2a51511ae0f3e6caccbaa29235cf65df2f8a3cae7ccdfce934af1f5914a`)
+parses fixed raw byte positions in C and recursively enumerates K5s in the graph
+and complement afresh after every flip. Their complete identity ledgers agree.
 
-Experiment: `.proof-experiments/20260720-221937-5c7218`
+The report additionally rescans every family minimizer and one representative
+of every global burden class with both full evaluators. Forced clique and
+coclique mutations are detected. Both parsers reject nonbinary, shortened,
+nonzero-diagonal, asymmetric, and substituted-Gist inputs. A UBSan build of
+Checker B also reproduced the retained 903-entry ledger with no diagnostic:
+`.proof-experiments/20260721-001630-5af604`, experiment JSON SHA-256
+`2d22200322a85d0874f75253e86be41eda5500c1bfc7a57f1f4ea8f648a07032`.
 
-- Return code 0; duration 1.389 s; 1,024 MB cap.
-- A fixture with an explicitly absent `Content-Type` was accepted only when
-  linked raw header/body/transfer/experiment artifacts agreed.
-- Mutations to source authority, byte count, inference status, and raw-header
-  hash were rejected.
-- Both exact checkers, NetworkX, and `nauty-complg` retained full agreement on
-  every one of the 1,044 unlabeled order-7 classes and their complements.
-- Report: `artifacts/graph6_provenance_v2_regression.json`, SHA-256
-  `c3f0b3d7a0a29b093bd151201669aa63b81870f453b3c979f4d6821923744421`.
-- Experiment JSON SHA-256:
-  `f4f49fe131916090d9123b3e2e937c32b17b78e94ca1e22b994bf989a95a5e19`.
+An attempted combined ASan+UBSan replay under the harness's 1,024 MB
+`RLIMIT_AS` aborted before evaluation because ASan requires a much larger
+virtual shadow reservation. The captured failure is
+`.proof-experiments/20260721-001555-dfd5af`, experiment JSON SHA-256
+`969331a4fdfc9d8083fb545888d5093b42f6fdb9451c0ca465a13491dd16c6a8`.
+The durable repair is the UBSan-only audit above; the ASan failure is not a
+checker failure and is not counted as validation.
 
-### Full supplied-656 target gate
+An initial development version of Checker A failed the cross-check because its
+delta ledger omitted seed conflicts unaffected by the changed edge. That result
+was discarded, the recurrence was corrected, and the official experiment was
+run only after complete identity agreement. This failure is preserved here to
+prevent reintroducing the defect.
 
-Experiment: `.proof-experiments/20260720-221949-1e01b8`
+## Deletion and novelty firewall
 
-- One non-overlapping run; return code 0; duration 997.687 s; 2,048 MB cap;
-  peak child RSS 41,964 KiB.
-- Checker A: independently parsed Python Boolean matrices and direct exhaustive
-  5-subset enumeration.
-- Checker B: separately parsed C graph representation and recursive bitset
-  clique enumeration; compiled binary SHA-256
-  `f5e73e3a83cfff969b321e3288c7d90d083ddbc1517bba90a0d44e56ac455f51`.
-- Both checkers found zero 5-cliques and zero independent 5-sets on all 656
-  supplied/derived instances.
-- NetworkX agreed with both checker parsers on every complete 861-bit adjacency
-  fingerprint.
-- Local complement bytes matched `nauty-complg` byte-for-byte; output SHA-256
-  `8a8834f23a13d589df702df4016f308562c2226c445231ba2ea484f2e288d662`.
-- Base edge histogram was exactly
-  `{423:1,424:7,425:29,426:66,427:89,428:77,429:43,430:16}`.
-- Degree range across the 656 instances was exactly 19..22.
-- `nauty-labelg` produced 656 distinct canonical labels.
-- The entire 328-entry per-record manifest and all decisive graph fields equal
-  the prior host-side run; that earlier run's provenance was not accepted.
-- Report: `artifacts/authenticated_corpus_report.json`, SHA-256
-  `0d9b1801434edcc12f34e73cea6c98d911f0e0c6f0884f8f03d96a46eca1344c`.
-- Experiment JSON SHA-256:
-  `64332bc455ae9d04f743df14063910977e5f49c064ccd30a58f9c183322f3fca`.
+The two conflicts intersect in `{6,12,36,42}`. Deleting any member yields a
+valid order-42 graph because the seed's complete violation list contains only
+those two sets. `nauty-labelg` places all four deletions in the authenticated
+supplied-656 packet:
 
-## Current source/status audit
+- delete 6 or 42: canonical SHA-256
+  `ee2269437c3ba4cd8cde512768489089a5865ab701b38e8716acaddcdd07c3a7`,
+  complement of supplied record 42;
+- delete 12 or 36: canonical SHA-256
+  `3f16d9a422f89c250bebd7d50fa6cb4006de0655513bac24f34232d2620c623f`,
+  complement of supplied record 256.
 
-- Dynamic Survey DS1.18, revision 2026-04-24, reports the range 43..46 and
-  describes the 656 count as strong evidence rather than a proved census:
-  https://www.cs.rit.edu/~spr/ElJC/sur.pdf
-- McKay's maintained data page says the file contains 328 representatives and
-  the other 328 are complements, while leaving open additional order-42 and
-  larger graphs:
-  https://users.cecs.anu.edu.au/~bdm/data/ramsey.html
+This is membership in the supplied 656 only. It does not prove completeness.
+Ordinary star-only extension from these deletions remains historically
+saturated and should not be reopened.
 
-## Exact continuation
+## Cold replay
 
-Objective: authenticate unchanged Springer Supplementary Data 4, the published
-two-conflict K43 seed. Do not begin conflict-core repair, deletion novelty
-comparison, or unknown-42 search before this source gate passes.
-
-First run this bounded raw retrieval from the repository root:
+From the repository root:
 
 ```bash
 python3 /root/proof-factory/skills/computational-researcher/scripts/run_experiment.py \
-  --name r55-springer-supplementary-data4-retrieval \
-  --hypothesis "The publisher raw TXT is directly retrievable with immutable body and response metadata" \
-  --expected-signal "Verified HTTPS response from the Springer raw URL, retained unchanged body and raw headers, and curl transfer JSON suitable for a fail-closed source gate" \
-  --timeout 120 --memory-mb 256 \
+  --name r55-publisher-seed-radius1-replay \
+  --hypothesis "The retained authenticated publisher seed has no radius-1 witness and its strict avoid-intersection slice has minimum burden 3" \
+  --expected-signal "Byte/provenance/mutation gates pass and both exact implementations reproduce all 903 identities, global minimum 2, and strict 741-flip minimum 3" \
+  --timeout 240 --memory-mb 1024 \
+  --source-url 'https://doi.org/10.1038/s41467-018-07327-2' \
   --source-url 'https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-018-07327-2/MediaObjects/41467_2018_7327_MOESM6_ESM.txt' \
-  -- curl --proto '=https' --tlsv1.2 --fail-with-body --silent --show-error \
-  --location \
-  --dump-header sources/retrievals/springer_supplementary_data4.headers \
-  --output sources/retrievals/springer_supplementary_data4.txt \
-  --write-out '%{json}\n' \
-  'https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-018-07327-2/MediaObjects/41467_2018_7327_MOESM6_ESM.txt'
+  -- python3 scripts/run_publisher_radius1_gate.py \
+  checkers/publisher_radius1_a.py checkers/publisher_radius1_b.c \
+  sources/retrievals/springer_supplementary_data4_audit1.txt \
+  sources/retrievals/springer_supplementary_data4_audit2.txt \
+  artifacts/authenticated_corpus_report.json \
+  artifacts/publisher_seed_radius1_report.replay.json
 ```
 
-Stop immediately if TLS verification fails, the final URL is not publisher
-controlled, the response is not successful, the body is HTML/error content, or
-two immediate direct retrievals differ. Preserve all divergent bytes and
-metadata unchanged.
+Require the replay report's mathematical fields to equal the retained report;
+the report hash itself may differ because absolute temporary compiler paths or
+tool metadata can change only if the script is later revised. Stop immediately
+on any source, parser, mutation, canonical, or ledger mismatch.
 
-If retrieval is stable, create a source sidecar modeled on schema v2 without
-inventing missing headers. Then write a dedicated publisher-seed gate that:
+## Exact continuation
 
-1. parses the raw publisher representation without using the gist parser;
-2. identifies the color convention under both exact checkers;
-3. requires the exact conflict identities to agree;
-4. compares any claimed transformation to the provisional gist byte/object
-   explicitly, rather than assuming provenance;
-5. lists all valid vertex deletions and only then canonicalizes them against
-   the authenticated supplied 656.
+Continue strategy `strategy-r55-conflict-core`, fingerprint `r55twocore2026`.
+The next discriminator is the full Hamming-radius-2 neighborhood:
+`C(903,2)=407253` unordered two-edge flips.
 
-Only after that gate passes should one bounded six-vertex conflict-core repair
-slice be attempted. A zero must pass both exact checkers; an UNSAT neighborhood
-claim needs a checked exact certificate and applies only to that frozen slice.
+Implement two materially different evaluators:
 
-## Delegate provenance and tool disclosure
+1. a C evaluator that toggles each lexicographically ordered edge pair and
+   recursively enumerates K5s in the graph and complement;
+2. a Python evaluator that scans each 5-set and accounts exactly for whether
+   zero, one, or both edited edges lie in that 5-set.
 
-GPT-5.6 Sol was principal investigator. Two precomputed GPT-5.6 Terra memos
-were advisory. Sol hash-verified both. The experiment-verification memo
-identified the inferred-Content-Type defect and recommended the second raw
-retrieval plus one non-overlapping full gate; Sol independently inspected the
-actual response, designed and mutation-tested provenance schema v2, and ran the
-target gate. The substantive memo is retained at
-`docs/delegate-memos/20260720-221349-experiment-verification.md`; provenance is
-recorded in `records/delegate-provenance-epoch5.json`. The literature memo was
-not used as decisive evidence. No new subagent was spawned.
+Retain a compact complete pair-score ledger and full identities for every
+minimizer. Separately report the deletion-remainder-change slice defined by:
 
-Deterministic tools used: Python 3.12.3, C/GCC, curl 8.5.0 with OpenSSL 3.0.13,
-NetworkX 3.3, nauty, SHA-256, Git diagnostics, and the
-computational-researcher experiment harness. Web browsing checked the maintained
-survey and authoritative data pages. No SAT solver or proof assistant was used.
+```text
+for every v in {6,12,36,42}, at least one edited edge is not incident to v.
+```
+
+This predicate ensures the two-edge edit changes each of the four known
+deletion remainders. It is broader than requiring one edge to avoid the whole
+intersection.
+
+Stop on the first provenance, parser, ordering, score, or identity mismatch.
+Otherwise stop after all 407,253 pairs are recorded and independently agreed.
+A zero must pass both complete exact checkers. A nonzero minimum is only a
+radius-2 statement; it is not a Ramsey bound. Do not start radius 3 or a
+MaxSAT/UNSAT claim in the same pass unless radius 2 changes the decision and a
+new explicit certificate contract is written.
+
+## Tool and delegate disclosure
+
+GPT-5.6 Sol was principal investigator. Two precomputed GPT-5.6 Terra delegates
+provided advisory literature-strategy and experiment-verification memos. Sol
+hash-verified their original memo files, independently inspected the primary
+bytes and experiment records, implemented the retained checkers/gate, caught a
+delta-checker defect through cross-encoding disagreement, and ran the official
+experiment. No new subagent was spawned.
+
+Deterministic tools used: Python 3.12.3, C/GCC 13.3.0, nauty `labelg`, curl
+8.5.0 with OpenSSL 3.0.13, SHA-256, jq, Git diagnostics, AddressSanitizer,
+UndefinedBehaviorSanitizer, an attempted AddressSanitizer run limited by the
+harness address-space cap, and the computational-researcher experiment harness.
+No SAT solver, CAS, or proof assistant was used.

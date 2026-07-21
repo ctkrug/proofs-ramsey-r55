@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "id": "20260721-000810-1f70a4",
+  "name": "r55-publisher-seed-radius1",
+  "hypothesis": "For the authenticated Springer K43 two-conflict seed, no single-edge flip is a Ramsey witness, and every flip avoiding all four shared conflict vertices has at least three monochromatic K5s",
+  "expected_signal": "Two independent raw parsers/evaluators exhaust all 903 flips with full identity agreement; global minimum burden 2 and strict 741-flip non-star minimum burden 3, with provenance and mutation gates passing",
+  "command": [
+    "python3",
+    "scripts/run_publisher_radius1_gate.py",
+    "checkers/publisher_radius1_a.py",
+    "checkers/publisher_radius1_b.c",
+    "sources/retrievals/springer_supplementary_data4_audit1.txt",
+    "sources/retrievals/springer_supplementary_data4_audit2.txt",
+    "artifacts/authenticated_corpus_report.json",
+    "artifacts/publisher_seed_radius1_report.json"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 240,
+  "memory_limit_mb": 1024,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-21T00:08:10.286615+00:00",
+  "finished_at": "2026-07-21T00:08:55.529952+00:00",
+  "duration_seconds": 45.243,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "8f6493bb12efa9f1b049f042478f563f926c2f80",
+  "source_urls": [
+    "https://doi.org/10.1038/s41467-018-07327-2",
+    "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-018-07327-2/MediaObjects/41467_2018_7327_MOESM6_ESM.txt"
+  ],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/scripts/run_publisher_radius1_gate.py": "fe6bc9ac53b8cbe69406135a4ee5400fc64b3bb5a1e7d0a368c35485e981fbe4",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/publisher_radius1_a.py": "f34ea148c36ab74b0c11784f9b4d333dc915ef0a6bd3d70c7ef9c2aa03f5a535",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/publisher_radius1_b.c": "b1bfd2a51511ae0f3e6caccbaa29235cf65df2f8a3cae7ccdfce934af1f5914a",
+    "/root/proof-factory/research/ramsey-r55/workspace/sources/retrievals/springer_supplementary_data4_audit1.txt": "c2429869f6fa47ab7388134b580b014efae01e6f0e474f5bab2233afb1ef6990",
+    "/root/proof-factory/research/ramsey-r55/workspace/sources/retrievals/springer_supplementary_data4_audit2.txt": "c2429869f6fa47ab7388134b580b014efae01e6f0e474f5bab2233afb1ef6990",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/authenticated_corpus_report.json": "0d9b1801434edcc12f34e73cea6c98d911f0e0c6f0884f8f03d96a46eca1344c"
+  },
+  "peak_child_memory_rusage": 34560,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "be81167dceccd256e59e9b1e7d893d2e9dfc1c09c5029e9681c0990c3435eaea",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "epoch": 6,
+  "principal": {
+    "role": "Sol principal investigator",
+    "model": "gpt-5.6-sol"
+  },
+  "delegates": [
+    {
+      "role": "literature-strategy",
+      "model": "gpt-5.6-terra",
+      "status": "completed",
+      "ephemeral_memo_path": ".delegates/20260720-235130-b3f32e/literature-strategy/memo.md",
+      "ephemeral_memo_sha256": "e12cf18af1027f1bf2d1bc7af6eef889f702b1c9e5743d9d0336600d4de53fe7",
+      "promoted_substantive_memo_path": "docs/delegate-memos/20260720-235400-literature-strategy.md",
+      "promoted_substantive_memo_sha256": "f403c19a87d4e60168351385feb4482e60af421f80816ba4587a110eff579f3b",
+      "use": "Advisory source normalization, deletion-membership, and non-star strategy constraints; all decisive claims were rerun by Sol."
+    },
+    {
+      "role": "experiment-verification",
+      "model": "gpt-5.6-terra",
+      "status": "completed",
+      "ephemeral_memo_path": ".delegates/20260720-235130-b3f32e/experiment-verification/memo.md",
+      "ephemeral_memo_sha256": "9a438240fdea8f73d906c6230b45596b4d400da9f8118ee4940e15b730853b61",
+      "promoted_substantive_memo_path": "docs/delegate-memos/20260721-000000-experiment-verification.md",
+      "promoted_substantive_memo_sha256": "0227c4c07326de17465ebc9b9e7d7dc7e1cba903a00bd5a94062e7985ec82976",
+      "use": "Advisory radius-1 acceptance targets and adversarial controls; all 903 identities, provenance fields, mutations, and direct rescans were independently rerun by Sol."
+    }
+  ],
+  "qualification": "Delegate memos are advisory leads, not evidence. The accepted evidence is the hash-linked raw publisher packet, independent checker sources, complete retained ledger, and captured Sol experiment."
+}

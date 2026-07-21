@@ -1,0 +1,120 @@
+{
+  "direct_rescans": 41,
+  "family_minima": {
+    "all_edges": {
+      "edges": [
+        [
+          6,
+          12
+        ],
+        [
+          36,
+          42
+        ]
+      ],
+      "flips": 903,
+      "minimum": 2
+    },
+    "avoid_all_shared_conflict_vertices": {
+      "edges": [
+        [
+          0,
+          37
+        ],
+        [
+          5,
+          11
+        ],
+        [
+          10,
+          16
+        ],
+        [
+          16,
+          22
+        ],
+        [
+          21,
+          27
+        ],
+        [
+          26,
+          32
+        ],
+        [
+          32,
+          38
+        ]
+      ],
+      "flips": 741,
+      "minimum": 3
+    },
+    "nonstar_relative_to_deletion_6": {
+      "edges": [
+        [
+          36,
+          42
+        ]
+      ],
+      "flips": 861,
+      "minimum": 2
+    }
+  },
+  "report": "/root/proof-factory/research/ramsey-r55/workspace/artifacts/publisher_seed_radius1_report.json",
+  "report_sha256": "0db3cca75888b70850b60e1b891d8e08349ab0bec6196cd8f4c528603fa04fe9",
+  "seed_conflicts": [
+    [
+      6,
+      12,
+      17,
+      36,
+      42
+    ],
+    [
+      6,
+      12,
+      31,
+      36,
+      42
+    ]
+  ],
+  "status": "publisher_seed_radius1_pass",
+  "valid_deletions": [
+    {
+      "canonical_sha256": "ee2269437c3ba4cd8cde512768489089a5865ab701b38e8716acaddcdd07c3a7",
+      "supplied_656_membership": {
+        "kind": "complement",
+        "record": 42
+      },
+      "valid_from_complete_seed_violation_projection": true,
+      "vertex": 6
+    },
+    {
+      "canonical_sha256": "3f16d9a422f89c250bebd7d50fa6cb4006de0655513bac24f34232d2620c623f",
+      "supplied_656_membership": {
+        "kind": "complement",
+        "record": 256
+      },
+      "valid_from_complete_seed_violation_projection": true,
+      "vertex": 12
+    },
+    {
+      "canonical_sha256": "3f16d9a422f89c250bebd7d50fa6cb4006de0655513bac24f34232d2620c623f",
+      "supplied_656_membership": {
+        "kind": "complement",
+        "record": 256
+      },
+      "valid_from_complete_seed_violation_projection": true,
+      "vertex": 36
+    },
+    {
+      "canonical_sha256": "ee2269437c3ba4cd8cde512768489089a5865ab701b38e8716acaddcdd07c3a7",
+      "supplied_656_membership": {
+        "kind": "complement",
+        "record": 42
+      },
+      "valid_from_complete_seed_violation_projection": true,
+      "vertex": 42
+    }
+  ]
+}

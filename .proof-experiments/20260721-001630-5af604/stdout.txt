@@ -1,0 +1,24 @@
+{
+  "body_sha256": "c2429869f6fa47ab7388134b580b014efae01e6f0e474f5bab2233afb1ef6990",
+  "checked_flips": 903,
+  "checker_source_sha256": "b1bfd2a51511ae0f3e6caccbaa29235cf65df2f8a3cae7ccdfce934af1f5914a",
+  "compile_command": [
+    "/usr/bin/gcc",
+    "-std=c11",
+    "-O1",
+    "-g",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-fsanitize=undefined",
+    "-fno-omit-frame-pointer",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/publisher_radius1_b.c",
+    "-o",
+    "<temporary>/checker_b_sanitized"
+  ],
+  "compiler_version": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+  "report_sha256": "0db3cca75888b70850b60e1b891d8e08349ab0bec6196cd8f4c528603fa04fe9",
+  "sanitized_binary_sha256": "f5ed146cd1a4a9c707347a7d797c5a07ee2f04198f3cfe2f236b85bbd7155651",
+  "sanitized_output_sha256": "8847ebb981ed8592586e8dfb2b8260fdab60adc113d5bbd0a6470e978b35f89f",
+  "status": "sanitized_full_ledger_pass"
+}
