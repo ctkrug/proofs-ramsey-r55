@@ -1,0 +1,437 @@
+{
+  "id": "ramsey-r55-20260721-204644-7cb261",
+  "problem_id": "ramsey-r55",
+  "started_at": "2026-07-21T20:28:07.218009+00:00",
+  "finished_at": "2026-07-21T20:46:44.043303+00:00",
+  "duration_seconds": 1116.8,
+  "lane": "hard",
+  "phase": "technical",
+  "model": "gpt-5.6-sol",
+  "effort": "high",
+  "orchestration": {
+    "architecture": "sol-principal-terra-delegates",
+    "principal_model": "gpt-5.6-sol",
+    "delegate_model": "gpt-5.6-terra",
+    "delegate_roles": [
+      "challenger-prior-art",
+      "experiment-verification"
+    ],
+    "delegate_statuses": {
+      "challenger-prior-art": "completed",
+      "experiment-verification": "completed"
+    }
+  },
+  "delegates": [
+    {
+      "role": "challenger-prior-art",
+      "model": "gpt-5.6-terra",
+      "effort": "high",
+      "status": "completed",
+      "memo_path": ".delegates/20260721-202807-0bf766/challenger-prior-art/memo.md",
+      "memo_sha256": "532780b22714deda8a0b16b42296d1f8c8536978b7987af7ae23063a41d5e27b",
+      "usage": {
+        "input_tokens": 1122656,
+        "cached_input_tokens": 1030912,
+        "output_tokens": 6478,
+        "reasoning_output_tokens": 2023
+      },
+      "error": ""
+    },
+    {
+      "role": "experiment-verification",
+      "model": "gpt-5.6-terra",
+      "effort": "high",
+      "status": "completed",
+      "memo_path": ".delegates/20260721-202807-0bf766/experiment-verification/memo.md",
+      "memo_sha256": "ef646edb4c63e1441edda151a12ef5e0d66782af1e605287d0ae397c8004bec0",
+      "usage": {
+        "input_tokens": 1132162,
+        "cached_input_tokens": 1060864,
+        "output_tokens": 7852,
+        "reasoning_output_tokens": 2861
+      },
+      "error": ""
+    }
+  ],
+  "outcome": "progress",
+  "approach": "Cold-review the 49-host supplied-class embedding prefix, audit recorded producer revisions and operational thresholds, and decide whether the checkpointed job is safe to continue.",
+  "strategy": {
+    "family": "complete known-class boundary blocking",
+    "fingerprint": "r55knownclassembeddingblock2026",
+    "mechanism": "Enumerate induced embeddings of a frozen order-30 core into supplied order-42 controls using custom bitset DFS and NetworkX VF2, expand tied residual orders, and retain exact 426-bit pullbacks.",
+    "parent_ids": [
+      "strategy-r55knownclassembeddingblock2026"
+    ],
+    "route_evaluation": {
+      "gate_proximity": 0.55,
+      "contribution_value": 0.4,
+      "decisiveness": 0.95,
+      "novelty_confidence": 0.4,
+      "novelty_risk": 0.35,
+      "scope": 0.25,
+      "reuse_value": 0.9,
+      "model_cost": 0.2,
+      "cpu_cost": 0.6
+    }
+  },
+  "hypothesis": "Canonical supplied hosts 0 through 48 reconcile exactly and their recorded lab provenance is sufficient to authorize continuation under the declared resource gates.",
+  "discriminating_test": "Cold-replay the complete prefix, regenerate every positive VF2 stream, dual-check every retained graph, inject four mutations, inspect every recorded producer revision, and compare exact host timings with the predeclared gates.",
+  "search_efficiency": {
+    "naive_space": "For each host, the raw injection universe is 42P30, with C(42,12)=11,058,116,888 possible residual vertex sets before embedding constraints.",
+    "reductions_considered": [
+      "fixed labelled core and exact row-lex normalization",
+      "bitset adjacency and most-constrained branching",
+      "forward edge/nonedge feasibility and Hall-union pruning",
+      "independent VF2 enumeration",
+      "host-level decomposition and resumability",
+      "gzip artifacts and stream digests",
+      "memoization, unsafe symmetry quotienting, and learned-state reuse"
+    ],
+    "chosen_mechanism": "Custom bitset DFS plus independent VF2, exact tied-order expansion, one immutable host per segment, and independent cold pullback replay.",
+    "estimated_or_measured_savings": "Freezing 435 of 861 edges leaves 426 boundary primaries, 49.48% fewer primary variables. Across hosts 0..48, mean aggregate producer time was 20.525458284135794 seconds and the maximum was 26.687636360060424 seconds.",
+    "soundness_guard": "Exact mapping/vector stream equality, independent graph6 parsing and pullback reconstruction, two materially different K5 checkers, cold VF2 regeneration, and four fail-closed mutations."
+  },
+  "space_reduction": {
+    "ambient_space": "The 656 supplied labelled host profiles; this is not the global 2^861 labelled order-42 graph universe.",
+    "represented_space_before": "49 computed profiles, of which only hosts 0..32 had received the strengthened cold audit.",
+    "eliminated_or_quotiented": "No host profile or isomorphism class was eliminated. Independent audit coverage increased from 33 to 49 profiles.",
+    "represented_space_after": "49 cold-reviewed supplied profiles and 607 untouched supplied profiles.",
+    "reduction_factor": "none; certification coverage increased by 16 profiles",
+    "measurement_status": "exact",
+    "unit": "profiles",
+    "coverage_scope": "Exactly canonical supplied hosts 0..48 under the frozen source-record-21 order-30 core.",
+    "soundness_basis": "Hash-chain reconciliation, complete saved-positive replay, fresh VF2 streams, dual exact graph checks, and mutation rejection.",
+    "remaining_unknown": "Hosts 49..655, completeness of the supplied corpus, all unknown order-42 classes, and every order-43 graph.",
+    "next_bulk_elimination": "Run a fresh hash-locked 656-host census before emitting any supplied-class boundary block."
+  },
+  "tactical_learning": {
+    "prediction": "The 49-host prefix would pass cold mathematical checks and its provenance would justify continuation.",
+    "observation": "The mathematical prefix audit passed, all exact prefix resource measurements passed, and all recorded Git revisions contain identical producer bytes. However, the runner did not hash imported modules or record historical worktree dirtiness, and the driver did not enforce the intended aggregate 30-second gate.",
+    "surprise": "Recorded revision equality cannot exclude temporary uncommitted module edits during past segments; the first provenance interpretation was therefore corrected and superseded.",
+    "failure_signature": "A lab spec hashes only its top-level driver while executable behavior depends on unhashed imported modules, and a research threshold is stated but represented only by a much looser component timeout.",
+    "bottleneck_update": "The immediate bottleneck is a hash-locked replacement driver and lifecycle canary, not additional hosts from the under-recorded job.",
+    "reusable_assets": [
+      {
+        "name": "49-host cold-audit packet",
+        "use": "Calibration and regression control for a replacement census.",
+        "evidence": "artifacts/known-class-embedding-prefix49-audit/audit.json, SHA-256 e8c434e5c23cf90f3529ccbd961f561e6315d7240fbc761e767c75df7511e5f5"
+      },
+      {
+        "name": "Recorded-revision/resource gate",
+        "use": "Checks canonical prefix coverage, all recorded Git producer revisions, current tracked cleanliness, and exact resource thresholds.",
+        "evidence": "checkers/known_class_embedding_provenance_gate.py and recorded-revision-gate-v2.json"
+      }
+    ],
+    "constraints_learned": [
+      {
+        "constraint": "Every executable imported module must be an explicit hashed lab input or verified by a hash-locked wrapper before import.",
+        "scope": "Checkpointed census production and future proof-carrying experiments.",
+        "evidence": "The old lab input_sha256 contains only the driver and corpus."
+      },
+      {
+        "constraint": "The aggregate bitset+VF2 time must be checked after every host; --case-seconds 900 does not implement the declared less-than-30-second aggregate gate.",
+        "scope": "Known-class census continuation.",
+        "evidence": "Production driver inspection and exact 49-row timing audit."
+      }
+    ],
+    "route_decision": "redirect",
+    "next_discriminator": "Run one host from a fresh artifact directory through a wrapper that explicitly hashes all three producer files, refuses dirty producer files, and enforces every per-host gate."
+  },
+  "prior_art_check": {
+    "nearest_method_ids": [
+      "mckay-delete-three-extend",
+      "exoo-incremental-simulated-annealing"
+    ],
+    "classification": "replication_control",
+    "exact_delta": "This route creates a replayable fixed-core embedding and pullback ledger for the supplied controls; it neither repeats the historical extension closure nor searches stochastically for new classes.",
+    "duplicate_risk": "The resulting graphs are expected supplied controls, and completing the ledger must not be presented as a classification of all order-42 Ramsey graphs.",
+    "comparison_test": "Compare exact corpus scope and output certificates with the historical 656-control construction; require a new class or a complete natural boundary certificate before claiming field progress.",
+    "decision": "control_only",
+    "source_urls": [
+      "https://users.cecs.anu.edu.au/~bdm/papers/r55.pdf",
+      "https://www.cs.rit.edu/~spr/ElJC/sur.pdf"
+    ]
+  },
+  "field_progress_assessment": {
+    "status": "not_met",
+    "gate_id": "Produce certified exclusions that materially shrink an accepted R(5,5) search space, with deterministic encodings, checked proof logs, and sound symmetry coverage.",
+    "contribution_class": "verified infrastructure result and fail-closed job review",
+    "closest_prior_result": "The historical non-exhaustive collection of 656 known order-42 controls.",
+    "measurable_improvement": "Sixteen additional supplied profiles received strengthened cold review, bringing the audited prefix to 49/656; no accepted search space was excluded.",
+    "independent_validation": "Independent cold parser/pullback checker, fresh NetworkX VF2 streams, direct-combinations Python K5 checker, recursive-bitset C K5 checker, and four rejected mutations.",
+    "external_audience": "none",
+    "remains_unproved": "The remaining 607 supplied profiles, corpus completeness, any unknown order-42 class, existence of an order-43 witness, and every improved upper bound.",
+    "route_recommendation": "Redirect this job but continue the family through a fresh hash-locked replacement."
+  },
+  "lab_review": {
+    "job_id": "lab-ramsey-r55-872a7c3ee855",
+    "decision": "redirect",
+    "reason": "Hosts 0..48 pass the independent cold mathematical audit and all observed resource thresholds, but the lab spec omits hashes for both imported enumerators, records no historical worktree dirtiness, and does not enforce the intended aggregate 30-second host gate. Preserve the prefix as calibration evidence and restart from host 0 under a fail-closed hash-locked wrapper.",
+    "evidence": [
+      "records/labs/lab-ramsey-r55-872a7c3ee855-completed-awaiting-review-segment-49.json",
+      "artifacts/known-class-embedding-prefix49-audit/audit.json",
+      "artifacts/known-class-embedding-prefix49-audit/recorded-revision-gate-v2.json",
+      "/root/proof-factory/state/labs/jobs/lab-ramsey-r55-872a7c3ee855.json"
+    ]
+  },
+  "strategy_status": "promising",
+  "summary": "Canonical hosts 0..48 passed a strengthened cold audit: six positive hosts contain twelve exact embeddings and eight distinct vectors; fresh VF2 reproduced every positive mapping stream; two exact graph checkers accepted all eight pullbacks; and four mutations failed. All recorded Git revisions contain identical producer bytes and exact observed resource gates pass. The active job is nevertheless redirected because runtime imported-module provenance and aggregate gate enforcement are incomplete. No Ramsey bound or supplied-class exclusion changed.",
+  "rationale": "The positive mathematical evidence is independently reproducible on its exact prefix, but continuing an indefinitely growing certificate ledger with under-recorded executable inputs would violate the verification contract. Restarting the same mechanism with explicit hashes is cheaper and safer than attempting to repair provenance retrospectively after all 656 hosts.",
+  "claims": [
+    "Exactly canonical supplied hosts 0 through 48 reconcile with the saved manifest, artifacts, checkpoint, and progress hashes at the segment-49 boundary.",
+    "Hosts 11, 17, 18, 19, 20, and 24 contain twelve saved fixed-core embeddings producing eight distinct 426-bit pullback vectors.",
+    "All eight reconstructed labelled graphs contain neither a 5-clique nor an independent 5-set under two exact checkers.",
+    "Every one of the 49 recorded Git revisions contains identical driver, bitset-enumerator, and VF2-enumerator bytes.",
+    "The recorded revisions do not establish the actual historical imported-module bytes because dirty worktree state was not recorded.",
+    "The range remains 43 <= R(5,5) <= 46."
+  ],
+  "evidence": [
+    "Cold audit SHA-256 e8c434e5c23cf90f3529ccbd961f561e6315d7240fbc761e767c75df7511e5f5.",
+    "Eight-graph graph6 SHA-256 4e99010340746b1c2ffdd81fec3da6b51342891d8cd906d8669fe1ac27053bcf.",
+    "Recorded-revision gate v2 SHA-256 38ecc494c401a23e2602ec99520c91b23f614e47b586dab228767268c4a69df9.",
+    "Successful cold-audit experiment SHA-256 2365cb3ab7cdb875102a293a16de8c95088d5bd4f15c4042cbc3d95e3deff85f.",
+    "Recorded-revision experiment SHA-256 522305898daff5a8f9188c415065fc9273c17a2458975175586bf1c66389645c.",
+    "Segment-49 receipt SHA-256 30eeb308e23df7f55cc04cf778aa043ffa7133dfe37c14609369719a6a785811."
+  ],
+  "evidence_files": [
+    "sources/r55_42some.g6",
+    "sources/rowpair/dynamic-survey-revision18.pdf",
+    "sources/rowpair/subgraph-counting-r55.pdf",
+    "scripts/run_known_class_embedding_census.py",
+    "scripts/enumerate_core_embeddings_bitset.py",
+    "scripts/enumerate_core_embeddings_networkx.py",
+    "checkers/known_class_embedding_tranche_audit.py",
+    "checkers/known_class_embedding_provenance_gate.py",
+    "checkers/checker_a.py",
+    "checkers/checker_b.c",
+    "artifacts/known-class-embedding-prefix49-audit/audit.json",
+    "artifacts/known-class-embedding-prefix49-audit/known_class_embedding_tranche33_graphs.g6",
+    "artifacts/known-class-embedding-prefix49-audit/recorded-revision-gate-v2.json",
+    ".proof-experiments/20260721-203603-1ca23d/experiment.json",
+    ".proof-experiments/20260721-204303-62d4b3/experiment.json",
+    "records/labs/lab-ramsey-r55-872a7c3ee855-completed-awaiting-review-segment-49.json"
+  ],
+  "next_steps": [
+    "Confirm the redirect review changes the old job to stopped_with_reason at segment 49 without modifying its checkpoint.",
+    "Implement a replacement wrapper that names the driver and both enumerator modules as explicit hashed inputs and refuses dirty producer files.",
+    "Enforce aggregate host time, memory, tied-vector, throughput, and artifact-growth gates inside the replacement workflow.",
+    "Start the replacement census from host 0 in a fresh artifact directory and review a one-host lifecycle canary before scaling.",
+    "Queue all future full cold-prefix audits through the checkpointed lab."
+  ],
+  "citations": [
+    "https://www.cs.rit.edu/~spr/ElJC/sur.pdf",
+    "https://users.cecs.anu.edu.au/~bdm/papers/r55.pdf",
+    "https://arxiv.org/abs/2409.15709"
+  ],
+  "techniques": [
+    "induced-subgraph enumeration",
+    "bitset DFS",
+    "NetworkX VF2",
+    "exact graph6 parsing",
+    "tied-row orbit expansion",
+    "hash-chained artifacts",
+    "Git object inspection",
+    "direct-combinations K5 checking",
+    "recursive-bitset K5 checking",
+    "mutation testing"
+  ],
+  "research_mode": "computational",
+  "experiments": [
+    ".proof-experiments/20260721-203603-1ca23d: 131.465-second cold audit passed all prefix, VF2, pullback, dual-checker, and mutation obligations.",
+    ".proof-experiments/20260721-204303-62d4b3: recorded-revision/resource gate v2 passed while retaining the historical runtime-provenance limitation.",
+    ".proof-experiments/20260721-203454-a7102e: externally terminated launch with empty logs and no metadata; not evidence."
+  ],
+  "independent_checker": "known_class_embedding_tranche_audit.py imports neither production enumerator, independently parses graph6 and reconstructs every saved positive pullback. checker_a.py and checker_b.c use materially different exhaustive five-set algorithms. The recorded-revision gate independently resolves producer bytes from every recorded Git commit.",
+  "transfer_insights": [],
+  "established_facts": [
+    {
+      "claim": "The segment-49 prefix covers canonical supplied hosts 0..48 exactly once and all saved artifact hashes and byte counts reconcile.",
+      "evidence": "Independent cold audit report e8c434e5c23cf90f3529ccbd961f561e6315d7240fbc761e767c75df7511e5f5.",
+      "scope": "Exactly the first 49 supplied source hosts.",
+      "status": "computed"
+    },
+    {
+      "claim": "The twelve positive embeddings yield eight distinct valid Ramsey(5,5,42) labelled graphs.",
+      "evidence": "Exact pullback reconstruction plus independent Python and C K5 checkers.",
+      "scope": "The eight vectors found among canonical hosts 0..48.",
+      "status": "computed"
+    },
+    {
+      "claim": "All 49 recorded Git revisions contain identical committed producer bytes, and all exact prefix resource measurements pass their stated thresholds.",
+      "evidence": "Recorded-revision/resource gate v2.",
+      "scope": "Recorded commits and immutable prefix timing records only; not historical dirty worktrees.",
+      "status": "computed"
+    }
+  ],
+  "ruled_out": [
+    {
+      "claim_or_route": "Continue lab-ramsey-r55-872a7c3ee855 as proof-carrying production.",
+      "scope": "The existing job specification and future segments.",
+      "reason": "Imported modules are not explicit hashed inputs, historical dirty state is unavailable, and the aggregate 30-second gate is not enforced.",
+      "evidence": "Job-state and driver inspection plus recorded-revision gate v2.",
+      "reopen_condition": "Do not reopen this job; replace it with a hash-locked fail-closed job."
+    },
+    {
+      "claim_or_route": "Treat the 49-host prefix as a supplied-class block or exhaustive classification.",
+      "scope": "The fixed-core boundary and global order-42 Ramsey graph space.",
+      "reason": "Only 49 of 656 supplied profiles were processed, and the supplied 656 are historically non-exhaustive.",
+      "evidence": "Checkpoint scope and McKay-Radziszowski primary paper.",
+      "reopen_condition": "Complete a locked 656-host census and separately justify any claimed corpus completeness."
+    },
+    {
+      "claim_or_route": "Accept stored NetworkX summaries alone as offline proof of complete mapping streams.",
+      "scope": "The current archive format.",
+      "reason": "Full VF2 mapping streams are not retained.",
+      "evidence": "Production artifact inspection; cold regeneration was required for every positive host.",
+      "reopen_condition": "Retain complete VF2 sidecars or cold-regenerate every required stream."
+    },
+    {
+      "claim_or_route": "Use artifacts/known-class-embedding-prefix49-audit/provenance.json as proof that historical runtime imports were frozen.",
+      "scope": "The superseded first provenance interpretation.",
+      "reason": "Recorded Git commits do not reveal temporary uncommitted worktree changes.",
+      "evidence": "Corrected recorded-revision-gate-v2 qualification.",
+      "reopen_condition": "none; use the corrected v2 report."
+    }
+  ],
+  "open_leads": [
+    {
+      "description": "Restart the complete supplied-class embedding census under a hash-locked wrapper.",
+      "rationale": "It preserves the strongest live mechanism while repairing the exact verification-contract failure before substantial additional compute.",
+      "next_experiment": "Run a one-host lifecycle canary from host 0 with explicit hashes for the driver and both imported enumerators and fail-closed aggregate resource checks.",
+      "priority": "high",
+      "status": "open"
+    },
+    {
+      "description": "Deletion-minimize one certified distance-3 two-orbit raw K5-origin core.",
+      "rationale": "This remains the predeclared structural fallback if the locked census cannot pass its canary.",
+      "next_experiment": "Run duplicate-preserving deletion minimization and stop unless the exact core contains at most 20 origins.",
+      "priority": "normal",
+      "status": "open"
+    }
+  ],
+  "blocker": "The current job cannot establish the exact historical imported-module bytes and does not enforce the declared aggregate per-host time gate.",
+  "reopen_condition": "A fresh job must explicitly hash all executable producer modules, refuse dirty producer inputs, and enforce every host-level gate before writing a checkpoint.",
+  "reopen_evidence": "",
+  "policy_flags": [],
+  "candidate_profile": {
+    "contribution_class": "research_artifact",
+    "scholarly_question": "Can the supplied 656 order-42 controls be classified relative to one frozen order-30 boundary with a replayable exact ledger?",
+    "meaningful_delta": "A 49-host independently replayed calibration prefix and a concrete diagnosis of missing executable provenance and gate enforcement.",
+    "acceptance_test": "A fresh hash-locked 656-host census, complete positive-stream regeneration, stratified empty controls, exact pullback replay, and dual K5 checks.",
+    "closest_prior_work": [
+      {
+        "url": "https://users.cecs.anu.edu.au/~bdm/papers/r55.pdf",
+        "difference": "The prior work supplied the non-exhaustive 656 controls but not this fixed-core certificate ledger."
+      }
+    ],
+    "novelty_searches": [
+      {
+        "source": "Dynamic Survey of Small Ramsey Numbers",
+        "query": "R(5,5), 656 critical graphs, current bound",
+        "url": "https://www.cs.rit.edu/~spr/ElJC/sur.pdf",
+        "finding": "The maintained status remains 43 <= R(5,5) <= 46 and the 656-class completeness statement remains conjectural."
+      }
+    ],
+    "external_channel": {
+      "recipient": "none",
+      "url": "",
+      "acceptance_path": "No external submission until the complete locked artifact passes independent validation."
+    },
+    "independent_validations": [
+      {
+        "type": "repository_ci",
+        "validator": "Independent local cold audit and two exact graph checkers",
+        "result": "Passed on hosts 0..48 and eight distinct pullbacks.",
+        "artifact": "artifacts/known-class-embedding-prefix49-audit/audit.json",
+        "evidence_url": ""
+      }
+    ],
+    "relevance": {
+      "settles_exact_open_target": false,
+      "improves_best_known_result": false,
+      "source_explicitly_requests_result": false,
+      "expert_interest_confirmed": false,
+      "new_structural_result": false,
+      "evidence_url": ""
+    },
+    "arbitrary_cutoff_extension": false
+  },
+  "contribution_gate": {
+    "schema_version": 1,
+    "passed": false,
+    "status": "not_requested",
+    "reasons": []
+  },
+  "contribution_status": "research_attempt",
+  "continuation": {
+    "objective": "Create and canary a hash-locked replacement for the 656-host supplied-class embedding census.",
+    "first_action": "Implement scripts/run_known_class_embedding_census_locked.py so the lab command explicitly names the base driver, bitset module, and NetworkX module as hashed inputs; use a fresh checkpoint/output directory and run exactly host 0.",
+    "stop_condition": "Stop on any input-hash, dirty-worktree, stream, pullback, aggregate-time, memory, tied-vector, throughput, growth, or cold-replay failure; otherwise submit the locked continuation."
+  },
+  "campaign_assessment": {
+    "decision": "continue",
+    "close_signal": "The fixed-core mechanism remains computationally feasible and the 49-host mathematical prefix passed every independent check; only the execution-provenance wrapper must be replaced.",
+    "reason": "One bounded implementation repair can preserve the route's information value without accepting the old job as proof input."
+  },
+  "strategy_proposals": [],
+  "tool_disclosure": "GPT-5.6 Sol was principal investigator. Supplied GPT-5.6 Terra experiment-verification and challenger-prior-art delegates provided advisory leads; Sol independently reran relied-on checks and corrected an overstrong provenance interpretation. No subagent was spawned. Deterministic tools were Python 3.12.3, NetworkX 3.3, GCC 13.3.0, Git object inspection, SHA-256, the existing Python and C exact graph checkers, and the computational-researcher experiment harness. The successful 131.465-second cold audit should have been queued under the stated long-job policy; future cold audits are explicitly assigned to the checkpointed lab. No SAT solver, CAS, proof assistant, package installation, system change, network retrieval, external publication, or remote account was used.; orchestration: gpt-5.6-sol principal with gpt-5.6-terra delegates.",
+  "review_status": "not a result claim",
+  "usage": {
+    "input_tokens": 3520696,
+    "cached_input_tokens": 3258368,
+    "output_tokens": 29383,
+    "reasoning_output_tokens": 9590
+  },
+  "error": "",
+  "artifact_hashes": {
+    ".delegates/20260721-202807-0bf766/challenger-prior-art/memo.md": "532780b22714deda8a0b16b42296d1f8c8536978b7987af7ae23063a41d5e27b",
+    ".delegates/20260721-202807-0bf766/experiment-verification/memo.md": "ef646edb4c63e1441edda151a12ef5e0d66782af1e605287d0ae397c8004bec0",
+    ".proof-experiments/20260721-203454-a7102e/experiment.json": "45d5e4c51826657a97521c0211b4fd2545edeced48cb394c39cc369b3b481661",
+    ".proof-experiments/20260721-203454-a7102e/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".proof-experiments/20260721-203454-a7102e/stdout.txt": "bedb5744392e3a885550ebea8606a1c3845a8a40a0c5aa8ec91bb2820530fd50",
+    ".proof-experiments/20260721-203603-1ca23d/experiment.json": "2365cb3ab7cdb875102a293a16de8c95088d5bd4f15c4042cbc3d95e3deff85f",
+    ".proof-experiments/20260721-203603-1ca23d/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".proof-experiments/20260721-203603-1ca23d/stdout.txt": "bedb5744392e3a885550ebea8606a1c3845a8a40a0c5aa8ec91bb2820530fd50",
+    ".proof-experiments/20260721-203936-cacdc6/experiment.json": "0a67071ed30e24b9e7f74aadbb4c28e74456341c9c04d5b624b7855492d0ec9a",
+    ".proof-experiments/20260721-203936-cacdc6/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".proof-experiments/20260721-203936-cacdc6/stdout.txt": "183612f7f68070f4ba29126b026ecb24380462b3c7e1041316ff0938681a7726",
+    ".proof-experiments/20260721-204303-62d4b3/experiment.json": "522305898daff5a8f9188c415065fc9273c17a2458975175586bf1c66389645c",
+    ".proof-experiments/20260721-204303-62d4b3/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".proof-experiments/20260721-204303-62d4b3/stdout.txt": "5749489f4fc4303cb21abb625c02a38b3d25ee0d6108596aa39e841c3b14f3c8",
+    "artifacts/known-class-embedding-prefix49-audit/audit.json": "e8c434e5c23cf90f3529ccbd961f561e6315d7240fbc761e767c75df7511e5f5",
+    "artifacts/known-class-embedding-prefix49-audit/known_class_embedding_tranche33_graphs.g6": "4e99010340746b1c2ffdd81fec3da6b51342891d8cd906d8669fe1ac27053bcf",
+    "artifacts/known-class-embedding-prefix49-audit/provenance.json": "a2c78b1e981fa69187148d82efe0c354741280cf65c4dbee5c969bcae010674d",
+    "artifacts/known-class-embedding-prefix49-audit/recorded-revision-gate-v2.json": "38ecc494c401a23e2602ec99520c91b23f614e47b586dab228767268c4a69df9",
+    "checkers/checker_a.py": "b7f28adfec792139acce538ca879b775a0180467763b413e1a464672acddd259",
+    "checkers/checker_b.c": "40f719bb36f8d7d3db3a4b949dce8b20abd49499f57f7d5b651b718658014d2e",
+    "checkers/known_class_embedding_provenance_gate.py": "6488b308ac96e268a85b1419ea619b4ecb6acb12bfb9d896ebbf4893012c14ca",
+    "checkers/known_class_embedding_tranche_audit.py": "69d01e8bd189498c70390404de034b354023ffe2fae812ee7c287c64b7c46687",
+    "records/labs/lab-ramsey-r55-872a7c3ee855-completed-awaiting-review-segment-49.json": "30eeb308e23df7f55cc04cf778aa043ffa7133dfe37c14609369719a6a785811",
+    "scripts/enumerate_core_embeddings_bitset.py": "01b3953b1db6a65737e4fb4ee176a88b7c8c8ed26a374c410cf274fe2500739a",
+    "scripts/enumerate_core_embeddings_networkx.py": "c4491591b16394e11d3bf0b907eea8c65a73308e8a2a366e5d594532c7010aaf",
+    "scripts/run_known_class_embedding_census.py": "eac4d6f6f71abcc9eec0491a3a384acca73c0bbbe559e4906e9f4faa98028e78",
+    "sources/r55_42some.g6": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb",
+    "sources/rowpair/dynamic-survey-revision18.pdf": "fc7df6ab2aae870f8b27039a336f368a1234bf4eb9325e80bf20510aba79f2d2",
+    "sources/rowpair/subgraph-counting-r55.pdf": "b7e73035707628711563d91c46f0bc2df1d7fbe34cac0cccf10f99d5ba0212a7"
+  },
+  "evidence_validation": {
+    "status": "valid",
+    "manifest": "evidence/ramsey-r55-20260721-204644-7cb261/delta-manifest.json",
+    "manifest_sha256": "5b150a0723301287a408e2fb0b12f5eb5c5434598998a90bb51261cb26170f90",
+    "receipt": "evidence/ramsey-r55-20260721-204644-7cb261/evidence-receipt.json",
+    "artifact_count": 30,
+    "claimed_evidence_count": 16,
+    "errors": []
+  },
+  "lab_review_applied": {
+    "status": "stopped_with_reason",
+    "job_id": "lab-ramsey-r55-872a7c3ee855",
+    "review": {
+      "decision": "redirect",
+      "reason": "Hosts 0..48 pass the independent cold mathematical audit and all observed resource thresholds, but the lab spec omits hashes for both imported enumerators, records no historical worktree dirtiness, and does not enforce the intended aggregate 30-second host gate. Preserve the prefix as calibration evidence and restart from host 0 under a fail-closed hash-locked wrapper.",
+      "reviewer": "proof-factory:ramsey-r55-20260721-204644-7cb261",
+      "reviewed_at": "2026-07-21T20:46:46.199798+00:00",
+      "segment": 49
+    }
+  }
+}
