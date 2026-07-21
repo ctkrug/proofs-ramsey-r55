@@ -1,0 +1,64 @@
+{
+  "schema_version": 2,
+  "id": "lab-ramsey-r55-f314736c524b",
+  "problem_id": "ramsey-r55",
+  "name": "R55 lifecycle canary",
+  "hypothesis": "one supplied host is reconciled by two implementations and survives the full completion-review lifecycle",
+  "expected_signal": "one host complete with matching exact stream hashes",
+  "decision_value": "validates checkpoint, progress, durable completion event, reviewer, and artifact lifecycle before the full census",
+  "efficiency_design": {
+    "naive_cost": "For 656 labelled 42-vertex hosts, enumerate all injections of the fixed 30-vertex induced core, then all tied residual-row permutations; the raw injection space is 42P30 per host and is infeasible.",
+    "opportunities_considered": [
+      "Symmetry reduction and canonical augmentation: retain a fixed labelled core and canonical row-lex residual ordering; expand every tied-row orbit so quotient coverage remains exact.",
+      "Bitsets, batching, and incremental constraints: custom DFS uses adjacency bitsets, most-constrained branching, forward degree constraints, and a Hall-union prune.",
+      "Memoization, caching, learned clauses, and reusable proof prefixes: graph/core parsing is reused per segment; DFS memoization was rejected pending a proof that state keys preserve labelled-map multiplicity; learned clauses are reserved for residual SAT.",
+      "Decomposition and resumability: split the corpus into immutable per-host units, source and complement halves, with atomic checkpoints and independently replayable segments.",
+      "Compressed streamed artifacts: write one gzip artifact per host plus an fsync'd JSONL manifest containing hashes and exact stream digests.",
+      "Sound cheap prefilters and independent coverage: degree/adjacency feasibility and Hall-union filters are one-sided; NetworkX VF2 independently enumerates every embedding and exact vector streams must agree."
+    ],
+    "chosen_reductions": "Use custom bitset DFS as the fast enumerator, NetworkX VF2 as an implementation-independent enumerator, exact tied-row orbit expansion, host-level decomposition, gzip artifacts, and hash-chained manifest/checkpoint records.",
+    "expected_throughput_gain": "Pilot timings imply about 5.6 aggregate core-hours for all 656 host representations instead of an impossible 42P30 scan. The first tranche re-estimates remaining time from observed host throughput.",
+    "soundness_basis": "Both enumerators must agree on embedding counts, mapping stream SHA-256, occurrence counts, unique vector counts, vector stream SHA-256, and exact unique vectors. Corpus SHA-256 and 328+328 coverage are independently checked; every completed host artifact is hash-addressed.",
+    "remains_uncompressed": "All supplied hosts and complements remain in scope; all induced embeddings and all tied-row variants remain represented. The workflow does not quotient the supplied graph corpus by complement/isomorphism and does not yet run residual SAT."
+  },
+  "source_urls": [],
+  "command": [
+    "python3",
+    "scripts/run_known_class_embedding_census.py",
+    "--corpus",
+    "sources/r55_42some.g6",
+    "--checkpoint",
+    "artifacts/lab-canary-20260721/checkpoint.json",
+    "--progress",
+    "artifacts/lab-canary-20260721/progress.json",
+    "--output",
+    "artifacts/lab-canary-20260721/output",
+    "--hosts-per-segment",
+    "1",
+    "--case-seconds",
+    "120",
+    "--total-hosts",
+    "1"
+  ],
+  "seed": 0,
+  "segment_seconds": 300,
+  "memory_mb": 700,
+  "max_segments": 2,
+  "segment": 1,
+  "pilot_segments": 1,
+  "review_every_segments": 1,
+  "checkpoint_path": "artifacts/lab-canary-20260721/checkpoint.json",
+  "progress_path": "artifacts/lab-canary-20260721/progress.json",
+  "continuation_thresholds": {
+    "min_throughput_per_second": 0.001,
+    "max_artifact_growth_bytes": 10000000,
+    "require_correctness_checks": true
+  },
+  "submitted_at": "2026-07-21T19:04:17.689584+00:00",
+  "workspace_git_commit": "a639aea4d2eaf316ba1dc2becbd65862163e3398",
+  "input_sha256": {
+    "scripts/run_known_class_embedding_census.py": "eac4d6f6f71abcc9eec0491a3a384acca73c0bbbe559e4906e9f4faa98028e78",
+    "sources/r55_42some.g6": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb"
+  },
+  "spec_sha256": "2263a2c31021360187d92890358c3b7df5acfd883caf9208bf9d1f270a8e6872"
+}
