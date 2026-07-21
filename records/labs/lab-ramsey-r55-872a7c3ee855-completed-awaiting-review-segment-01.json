@@ -1,4 +1,5 @@
 {
+  "event": "completed_awaiting_review",
   "schema_version": 2,
   "id": "lab-ramsey-r55-872a7c3ee855",
   "problem_id": "ramsey-r55",
@@ -60,5 +61,30 @@
     "scripts/run_known_class_embedding_census.py": "eac4d6f6f71abcc9eec0491a3a384acca73c0bbbe559e4906e9f4faa98028e78",
     "sources/r55_42some.g6": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb"
   },
-  "spec_sha256": "a8c895bb814f9b577b1c5d9a99d080b4d1ffe88df439cf25cce865fe7c2d52b0"
+  "spec_sha256": "a8c895bb814f9b577b1c5d9a99d080b4d1ffe88df439cf25cce865fe7c2d52b0",
+  "recorded_at": "2026-07-21T19:20:20.647821+00:00",
+  "job_id": "lab-ramsey-r55-872a7c3ee855",
+  "returncode": 0,
+  "duration_seconds": 23.981084,
+  "checkpoint_exists": true,
+  "checkpoint_sha256": "8b2954cbf7ef95a4b796d979079e03b9dab85a43c4a711efe01bdcb9cec84826",
+  "progress": {
+    "path": "artifacts/known-class-embedding-census/progress.json",
+    "sha256": "39c1f7aa12c9dbc45aed10523ff28b151fe199d0918f8d27a0ef7e6c007d30fd",
+    "completed_units": 1.0,
+    "total_units": 656.0,
+    "delta_units": 1.0,
+    "throughput_per_second": 0.04169953284847341,
+    "artifact_bytes": 811,
+    "artifact_growth_bytes": 811,
+    "complete": false,
+    "correctness_checks_passed": true,
+    "decision_value_active": true,
+    "message": "reconciled 1/656 hosts with exact stream agreement"
+  },
+  "threshold_failures": [],
+  "runner_result": "{\n  \"experiment_dir\": \"/root/proof-factory/research/ramsey-r55/workspace/lab-runs/lab-ramsey-r55-872a7c3ee855/segment-000001/20260721-191956-b288a8\",\n  \"schema_version\": 1,\n  \"id\": \"20260721-191956-b288a8\",\n  \"name\": \"R55 full supplied-class embedding census segment 1/open\",\n  \"hypothesis\": \"all induced fixed-core pullbacks over 328 supplied graphs and 328 complements can be exhaustively reconciled by two implementations\",\n  \"expected_signal\": \"656 canonical host receipts with exact mapping/vector stream agreement and an independently checkable compressed manifest\",\n  \"command\": [\n    \"python3\",\n    \"scripts/run_known_class_embedding_census.py\",\n    \"--corpus\",\n    \"sources/r55_42some.g6\",\n    \"--checkpoint\",\n    \"artifacts/known-class-embedding-census/checkpoint.json\",\n    \"--progress\",\n    \"artifacts/known-class-embedding-census/progress.json\",\n    \"--output\",\n    \"artifacts/known-class-embedding-census/output\",\n    \"--hosts-per-segment\",\n    \"1\",\n    \"--case-seconds\",\n    \"900\",\n    \"--total-hosts\",\n    \"656\"\n  ],\n  \"cwd\": \"/root/proof-factory/research/ramsey-r55/workspace\",\n  \"seed\": 0,\n  \"timeout_seconds\": 3600,\n  \"memory_limit_mb\": 1000,\n  \"memory_limit_enforced\": true,\n  \"started_at\": \"2026-07-21T19:19:56.725283+00:00\",\n  \"finished_at\": \"2026-07-21T19:20:20.627040+00:00\",\n  \"duration_seconds\": 23.902,\n  \"returncode\": 0,\n  \"timed_out\": false,\n  \"python\": \"3.12.3\",\n  \"platform\": \"Linux-6.8.0-124-generic-x86_64-with-glibc2.39\",\n  \"git_commit\": \"fa795dfafca2c15178de3a9af40bf5e4d1fb0c03\",\n  \"source_urls\": [],\n  \"input_artifacts\": {\n    \"/root/proof-factory/research/ramsey-r55/workspace/scripts/run_known_class_embedding_census.py\": \"eac4d6f6f71abcc9eec0491a3a384acca73c0bbbe559e4906e9f4faa98028e78\",\n    \"/root/proof-factory/research/ramsey-r55/workspace/sources/r55_42some.g6\": \"067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb\"\n  },\n  \"peak_child_memory_rusage\": 53448,\n  \"peak_child_memory_unit\": \"kilobytes\",\n  \"artifacts\": {\n    \"stdout.txt\": \"5b0f5c0d4c95c080876182bf2db16da80823c34c09078568ee51015d4d633f17\",\n    \"stderr.txt\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\"\n  }\n}\n",
+  "runner_error": "",
+  "output_root": "lab-runs/lab-ramsey-r55-872a7c3ee855/segment-000001",
+  "research_event_id": "event-ramsey-r55-ade52ea6bd09"
 }
