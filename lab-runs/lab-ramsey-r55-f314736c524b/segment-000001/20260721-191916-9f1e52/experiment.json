@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "20260721-191916-9f1e52",
+  "name": "R55 lifecycle canary segment 1/2",
+  "hypothesis": "one supplied host is reconciled by two implementations and survives the full completion-review lifecycle",
+  "expected_signal": "one host complete with matching exact stream hashes",
+  "command": [
+    "python3",
+    "scripts/run_known_class_embedding_census.py",
+    "--corpus",
+    "sources/r55_42some.g6",
+    "--checkpoint",
+    "artifacts/lab-canary-20260721/checkpoint.json",
+    "--progress",
+    "artifacts/lab-canary-20260721/progress.json",
+    "--output",
+    "artifacts/lab-canary-20260721/output",
+    "--hosts-per-segment",
+    "1",
+    "--case-seconds",
+    "120",
+    "--total-hosts",
+    "1"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 300,
+  "memory_limit_mb": 700,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-21T19:19:16.765073+00:00",
+  "finished_at": "2026-07-21T19:19:36.821676+00:00",
+  "duration_seconds": 20.057,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "da9b6d21f61d7f4266f20afa99a3bfe51413bfa4",
+  "source_urls": [],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/scripts/run_known_class_embedding_census.py": "eac4d6f6f71abcc9eec0491a3a384acca73c0bbbe559e4906e9f4faa98028e78",
+    "/root/proof-factory/research/ramsey-r55/workspace/sources/r55_42some.g6": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb"
+  },
+  "peak_child_memory_rusage": 53604,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "21b74f77c812d74ae7526934ea5fd0133b160da22e88dcf4e62770579e8653c6",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

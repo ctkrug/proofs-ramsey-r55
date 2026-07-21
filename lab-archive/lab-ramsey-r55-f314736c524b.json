@@ -60,5 +60,34 @@
     "scripts/run_known_class_embedding_census.py": "eac4d6f6f71abcc9eec0491a3a384acca73c0bbbe559e4906e9f4faa98028e78",
     "sources/r55_42some.g6": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb"
   },
-  "spec_sha256": "2263a2c31021360187d92890358c3b7df5acfd883caf9208bf9d1f270a8e6872"
+  "spec_sha256": "2263a2c31021360187d92890358c3b7df5acfd883caf9208bf9d1f270a8e6872",
+  "final_record": {
+    "recorded_at": "2026-07-21T19:19:36.840957+00:00",
+    "job_id": "lab-ramsey-r55-f314736c524b",
+    "problem_id": "ramsey-r55",
+    "segment": 1,
+    "max_segments": 2,
+    "returncode": 0,
+    "duration_seconds": 20.144342,
+    "checkpoint_exists": true,
+    "checkpoint_sha256": "d8d50c94ccb4a5d3a812f4896b4d22d3f00da46915114aeb85ea8a47af308d9f",
+    "progress": {
+      "path": "artifacts/lab-canary-20260721/progress.json",
+      "sha256": "19586de0e62c9244be6f52158ec840e45c9f877fc7777cc59c49c7f85d6f6c88",
+      "completed_units": 1.0,
+      "total_units": 1.0,
+      "delta_units": 1.0,
+      "throughput_per_second": 0.0496417306656132,
+      "artifact_bytes": 812,
+      "artifact_growth_bytes": 812,
+      "complete": true,
+      "correctness_checks_passed": true,
+      "decision_value_active": true,
+      "message": "reconciled 1/1 hosts with exact stream agreement"
+    },
+    "threshold_failures": [],
+    "runner_result": "{\n  \"experiment_dir\": \"/root/proof-factory/research/ramsey-r55/workspace/lab-runs/lab-ramsey-r55-f314736c524b/segment-000001/20260721-191916-9f1e52\",\n  \"schema_version\": 1,\n  \"id\": \"20260721-191916-9f1e52\",\n  \"name\": \"R55 lifecycle canary segment 1/2\",\n  \"hypothesis\": \"one supplied host is reconciled by two implementations and survives the full completion-review lifecycle\",\n  \"expected_signal\": \"one host complete with matching exact stream hashes\",\n  \"command\": [\n    \"python3\",\n    \"scripts/run_known_class_embedding_census.py\",\n    \"--corpus\",\n    \"sources/r55_42some.g6\",\n    \"--checkpoint\",\n    \"artifacts/lab-canary-20260721/checkpoint.json\",\n    \"--progress\",\n    \"artifacts/lab-canary-20260721/progress.json\",\n    \"--output\",\n    \"artifacts/lab-canary-20260721/output\",\n    \"--hosts-per-segment\",\n    \"1\",\n    \"--case-seconds\",\n    \"120\",\n    \"--total-hosts\",\n    \"1\"\n  ],\n  \"cwd\": \"/root/proof-factory/research/ramsey-r55/workspace\",\n  \"seed\": 0,\n  \"timeout_seconds\": 300,\n  \"memory_limit_mb\": 700,\n  \"memory_limit_enforced\": true,\n  \"started_at\": \"2026-07-21T19:19:16.765073+00:00\",\n  \"finished_at\": \"2026-07-21T19:19:36.821676+00:00\",\n  \"duration_seconds\": 20.057,\n  \"returncode\": 0,\n  \"timed_out\": false,\n  \"python\": \"3.12.3\",\n  \"platform\": \"Linux-6.8.0-124-generic-x86_64-with-glibc2.39\",\n  \"git_commit\": \"da9b6d21f61d7f4266f20afa99a3bfe51413bfa4\",\n  \"source_urls\": [],\n  \"input_artifacts\": {\n    \"/root/proof-factory/research/ramsey-r55/workspace/scripts/run_known_class_embedding_census.py\": \"eac4d6f6f71abcc9eec0491a3a384acca73c0bbbe559e4906e9f4faa98028e78\",\n    \"/root/proof-factory/research/ramsey-r55/workspace/sources/r55_42some.g6\": \"067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb\"\n  },\n  \"peak_child_memory_rusage\": 53604,\n  \"peak_child_memory_unit\": \"kilobytes\",\n  \"artifacts\": {\n    \"stdout.txt\": \"21b74f77c812d74ae7526934ea5fd0133b160da22e88dcf4e62770579e8653c6\",\n    \"stderr.txt\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\"\n  }\n}\n",
+    "runner_error": "",
+    "output_root": "lab-runs/lab-ramsey-r55-f314736c524b/segment-000001"
+  }
 }

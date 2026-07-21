@@ -1,0 +1,15 @@
+{
+  "artifact_bytes": 812,
+  "complete": true,
+  "completed_units": 1,
+  "correctness_checks_passed": true,
+  "decision_value_active": true,
+  "last_segment_seconds": 19.154894856037572,
+  "manifest": "artifacts/lab-canary-20260721/output/manifest.jsonl",
+  "manifest_sha256": "b1bc90d169f31122664cb13a58ca8705d73b0f5b7868e754d97cd1e64fd5d085",
+  "message": "reconciled 1/1 hosts with exact stream agreement",
+  "observed_seconds_per_host": 19.154894856037572,
+  "projected_remaining_seconds": 0.0,
+  "schema_version": 1,
+  "total_units": 1
+}
