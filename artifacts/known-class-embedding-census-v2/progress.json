@@ -1,15 +1,15 @@
 {
-  "artifact_bytes": 5232,
+  "artifact_bytes": 6104,
   "complete": false,
-  "completed_units": 6,
+  "completed_units": 7,
   "correctness_checks_passed": true,
   "decision_value_active": true,
-  "last_segment_seconds": 17.785859192954376,
+  "last_segment_seconds": 20.13796077715233,
   "manifest": "artifacts/known-class-embedding-census-v2/output/manifest.jsonl",
-  "manifest_sha256": "d3cb73b6e1fcfa28de921fdffd3a90bc48e241a58f65ccbdbf491ff622eee1f3",
-  "message": "reconciled 6/656 hosts with exact stream agreement",
-  "observed_seconds_per_host": 17.785859192954376,
-  "projected_remaining_seconds": 11560.808475420345,
+  "manifest_sha256": "9c784775aa4f8113b5605208ae1ce00b079a17938ae760fb72f942020143b4d2",
+  "message": "reconciled 7/656 hosts with exact stream agreement",
+  "observed_seconds_per_host": 20.13796077715233,
+  "projected_remaining_seconds": 13069.536544371862,
   "schema_version": 1,
   "total_units": 656
 }
