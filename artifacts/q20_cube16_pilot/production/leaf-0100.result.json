@@ -1,0 +1,36 @@
+{
+  "aggregate_retained_certificate_bytes_after_leaf": 16966934,
+  "bits": [
+    0,
+    1,
+    0,
+    0
+  ],
+  "command": [
+    "cadical",
+    "-q",
+    "-t",
+    "20",
+    "leaf-0100.cnf",
+    "leaf-0100.partial-or-final.drat"
+  ],
+  "id": "0100",
+  "leaf_cnf_sha256": "f00a787707da7204ab3a0fff08b6a4070dd9e74c2d5f21afbf2452f9c99d8ef4",
+  "literals": [
+    -212,
+    213,
+    -234,
+    -235
+  ],
+  "proof_storage": {
+    "bytes": 8840928,
+    "gzip_bytes": 3624791,
+    "gzip_path": "leaf-0100.partial-or-final.drat.gz",
+    "gzip_sha256": "16db3b42add34ca750a296026a9b5d22049fdc350a0b3d27295110c85e30f9a0",
+    "sha256": "a4c588c79e18e9d766525d3d667feedcdde0d402f57811207d045f779ae33f68"
+  },
+  "qualification": "timeout, interruption, or proof limit; no exclusion",
+  "returncode": 0,
+  "solver_seconds": 20.453398152953014,
+  "status": "unknown"
+}

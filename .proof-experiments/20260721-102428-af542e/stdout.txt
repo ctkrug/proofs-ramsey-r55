@@ -1,0 +1,7 @@
+{
+  "production_partial_proofs_rejected": 16,
+  "report": "/root/proof-factory/research/ramsey-r55/workspace/artifacts/q20_cube16_pilot_cold_audit.json",
+  "report_sha256": "7e09c6ef485d05e5de2ff4a858c484289252b83f96969693d7d488ca73ffd812",
+  "status": "q20_cube_pilot_cold_audit_pass",
+  "toy_certificates_replayed": 16
+}

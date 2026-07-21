@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "id": "20260721-101546-136ce5",
+  "name": "r55-q20-cube16-pilot",
+  "hypothesis": "A complete four-variable cube cover of the normalized q=20 branch exposes at least one leaf decidable by CaDiCaL within 20 seconds with a checked SAT model or checked DRAT/LRAT proof",
+  "expected_signal": "All 16 normalized R(3,3,6) cube leaves verify first; then at least one q=20 leaf is independently verified SAT or UNSAT, otherwise the route is blocked at the declared budget",
+  "command": [
+    "python3",
+    "scripts/run_q20_cube_pilot.py",
+    "checkers/almost_regular_42_cnf.py",
+    "checkers/almost_regular_42_normalization_a.py",
+    "checkers/cube_manifest_a.py",
+    "artifacts/almost_regular_42_q20_normalized/q20-normalized.cnf.gz",
+    "artifacts/almost_regular_42_q20_normalized/q20-normalized.map.tsv",
+    "tools/drat-trim/drat-trim.c",
+    "tools/drat-trim/lrat-check.c",
+    "checkers/checker_b.c",
+    "artifacts/q20_cube16_pilot",
+    "artifacts/q20_cube16_pilot_report.json",
+    "20",
+    "256"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 1500,
+  "memory_limit_mb": 1024,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-21T10:15:46.738795+00:00",
+  "finished_at": "2026-07-21T10:22:04.700762+00:00",
+  "duration_seconds": 377.962,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "604619ec4058528a23740a30beb6b121b78c6913",
+  "source_urls": [
+    "https://www.cs.rit.edu/~spr/ElJC/sur.pdf"
+  ],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/scripts/run_q20_cube_pilot.py": "1b27e7283a6e877732be14f701b7a3bcab1d418cdeaa8681f818a8f202257e61",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/almost_regular_42_cnf.py": "06a192df18539f21ca12730f38f66e3d11a4d69a7501882f263fc3e0d2df3318",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/almost_regular_42_normalization_a.py": "5b6f737c876ea2645a57a9544e4df2fe76403ef4ce7599bdae5a15a03a53177e",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/cube_manifest_a.py": "37f82d5ddd7e965af2faa940cb1e4f9c269afd6a77e1aac1c955bab76d9d418a",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/almost_regular_42_q20_normalized/q20-normalized.cnf.gz": "edc51d7e497a9d6da452800fb5ac09742d1b4db7db516d2ba4c673dda55dbfea",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/almost_regular_42_q20_normalized/q20-normalized.map.tsv": "dc65a8e25bd320154c0c2dea86cc29b3e33ce5bc73979ab6dc7555265074fc9d",
+    "/root/proof-factory/research/ramsey-r55/workspace/tools/drat-trim/drat-trim.c": "d834b649f437e091597f5347f259b9f681087f89ca0844d0cee250a1a1a0c2ee",
+    "/root/proof-factory/research/ramsey-r55/workspace/tools/drat-trim/lrat-check.c": "bf07c2ac96b9035da1ebcc578cb95e956a2b795629d613154cdb307f8a8f4a95",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/checker_b.c": "40f719bb36f8d7d3db3a4b949dce8b20abd49499f57f7d5b651b718658014d2e"
+  },
+  "peak_child_memory_rusage": 484396,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "e3f8ed499cb64705c27615734a312045c87be568e02b7047300698c0af8f6b0a",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "epoch": 12,
+  "principal": {
+    "role": "Sol principal investigator",
+    "model": "GPT-5.6 Sol",
+    "actions": "Independently audited the delegate route and source status, rederived the branch variables and orbit structure, implemented the producer and independent checker, ran the bounded pilot and cold audit, and limited the result to the exact UNKNOWN scope."
+  },
+  "delegates": [
+    {
+      "role": "literature-strategy",
+      "model": "gpt-5.6-terra",
+      "effort": "high",
+      "completion_memo": ".delegates/20260721-100002-3564c0/literature-strategy/memo.md",
+      "completion_memo_sha256": "19eeec468e99730a4ec1a4da0a19970a59aed66d0a7d93abe3aa864778715e9c",
+      "promoted_memo": "docs/delegate-memos/20260721-100002-literature-strategy.md",
+      "promoted_memo_sha256": "19eeec468e99730a4ec1a4da0a19970a59aed66d0a7d93abe3aa864778715e9c"
+    },
+    {
+      "role": "experiment-verification",
+      "model": "gpt-5.6-terra",
+      "effort": "high",
+      "completion_memo": ".delegates/20260721-100002-3564c0/experiment-verification/memo.md",
+      "completion_memo_sha256": "33e1e9f40d5cf7a57cd2292ff7a1d4d80bf35975290ef45839a6b3e195fc0a2f",
+      "promoted_memo": "docs/delegate-memos/20260721-100002-experiment-verification.md",
+      "promoted_memo_sha256": "9e36ebba3c73f638ab02d384630425eadf4f2f42388afe6f49168f07d992be27"
+    }
+  ],
+  "audit_decisions": [
+    "Accepted the 16-leaf route only as a bounded architecture discriminator, not as an exclusion.",
+    "Independently rederived production variables 212, 213, 234, and 235 and verified they are cross-part primaries disjoint from root units.",
+    "Reported the P5 reversal symmetry as 10 orbit classes but retained all 16 raw leaves and used no symmetry quotient.",
+    "Required all 16 normalized R(3,3,6) leaves to pass DRAT-to-LRAT conversion and LRAT checking before production.",
+    "Cold-reconstructed all 16 production leaves and rejected every interrupted proof stream with freshly compiled drat-trim.",
+    "Rejected any inference from UNKNOWN, partial proof size, or incomplete leaf results to q=20 or R(5,5).",
+    "Did not spawn new subagents in the Sol pass."
+  ]
+}

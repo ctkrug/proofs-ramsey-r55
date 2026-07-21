@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "id": "20260721-102428-af542e",
+  "name": "r55-q20-cube16-cold-audit",
+  "hypothesis": "The retained cube packet reconstructs exactly, all 16 toy certificates replay, and none of the 16 production timeout streams is a valid DRAT certificate",
+  "expected_signal": "Independent manifest replay passes; 16 toy DRAT-to-LRAT conversions and LRAT checks pass; fresh drat-trim rejects all 16 production partial streams",
+  "command": [
+    "python3",
+    "scripts/audit_q20_cube_pilot.py",
+    "artifacts/q20_cube16_pilot_report.json",
+    "artifacts/q20_cube16_pilot",
+    "artifacts/almost_regular_42_q20_normalized/q20-normalized.cnf.gz",
+    "artifacts/almost_regular_42_q20_normalized/q20-normalized.map.tsv",
+    "checkers/cube_manifest_a.py",
+    "tools/drat-trim/drat-trim.c",
+    "tools/drat-trim/lrat-check.c",
+    "artifacts/q20_cube16_pilot_cold_audit.json",
+    "artifacts/q20_cube16_pilot/production/cube-manifest.audit-cold.json",
+    ".proof-experiments/20260721-101546-136ce5/experiment.json"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 900,
+  "memory_limit_mb": 1024,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-21T10:24:28.700304+00:00",
+  "finished_at": "2026-07-21T10:27:04.531004+00:00",
+  "duration_seconds": 155.831,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "604619ec4058528a23740a30beb6b121b78c6913",
+  "source_urls": [
+    "https://www.cs.rit.edu/~spr/ElJC/sur.pdf"
+  ],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/scripts/audit_q20_cube_pilot.py": "68c128321c98847d25e89be609dd40883b7410eb2fa33bbac9a1dced291ce830",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/q20_cube16_pilot_report.json": "864f2c67df3e963ba358e1c430880b1f2f39e89508830aca9fdfb06faa427251",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/almost_regular_42_q20_normalized/q20-normalized.cnf.gz": "edc51d7e497a9d6da452800fb5ac09742d1b4db7db516d2ba4c673dda55dbfea",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/almost_regular_42_q20_normalized/q20-normalized.map.tsv": "dc65a8e25bd320154c0c2dea86cc29b3e33ce5bc73979ab6dc7555265074fc9d",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/cube_manifest_a.py": "37f82d5ddd7e965af2faa940cb1e4f9c269afd6a77e1aac1c955bab76d9d418a",
+    "/root/proof-factory/research/ramsey-r55/workspace/tools/drat-trim/drat-trim.c": "d834b649f437e091597f5347f259b9f681087f89ca0844d0cee250a1a1a0c2ee",
+    "/root/proof-factory/research/ramsey-r55/workspace/tools/drat-trim/lrat-check.c": "bf07c2ac96b9035da1ebcc578cb95e956a2b795629d613154cdb307f8a8f4a95",
+    "/root/proof-factory/research/ramsey-r55/workspace/.proof-experiments/20260721-101546-136ce5/experiment.json": "0d13b0caa5500d441c145039a95220b97acbba492dbdbadbdd12b2e6dc791444"
+  },
+  "peak_child_memory_rusage": 411008,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "067f401846300f35f7edb9bff62ea1a74d4b478d495bf9d08567113ef96b07e8",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

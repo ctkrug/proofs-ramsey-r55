@@ -156,6 +156,57 @@ python3 scripts/audit_almost_regular_42_q20_normalized.py \
   artifacts/almost_regular_42_q20_normalized/q20-normalized.audit-cold.replay.json
 ```
 
+Replay the epoch-12 complete 16-cube pilot to fresh output paths with:
+
+```bash
+python3 /root/proof-factory/skills/computational-researcher/scripts/run_experiment.py \
+  --name r55-q20-cube16-pilot-replay \
+  --hypothesis "A complete four-variable q=20 cover exposes a leaf decidable in 20 seconds with a checked result" \
+  --expected-signal "all toy certificates verify, then at least one checked production SAT/UNSAT leaf or 16 explicit UNKNOWN results" \
+  --timeout 1500 --memory-mb 1024 \
+  --source-url https://www.cs.rit.edu/~spr/ElJC/sur.pdf \
+  -- python3 scripts/run_q20_cube_pilot.py \
+  checkers/almost_regular_42_cnf.py \
+  checkers/almost_regular_42_normalization_a.py \
+  checkers/cube_manifest_a.py \
+  artifacts/almost_regular_42_q20_normalized/q20-normalized.cnf.gz \
+  artifacts/almost_regular_42_q20_normalized/q20-normalized.map.tsv \
+  tools/drat-trim/drat-trim.c tools/drat-trim/lrat-check.c \
+  checkers/checker_b.c \
+  artifacts/q20_cube16_pilot.replay \
+  artifacts/q20_cube16_pilot_report.replay.json 20 256
+```
+
+Cold-audit that fresh packet by substituting its report, packet, and experiment
+JSON paths in the following retained-packet command. The cold auditor is
+intentionally hash-locked to the retained main report; update
+`MAIN_REPORT_SHA256` only after independently confirming a fresh report's exact
+scope and status.
+
+```bash
+python3 /root/proof-factory/skills/computational-researcher/scripts/run_experiment.py \
+  --name r55-q20-cube16-cold-audit-replay \
+  --hypothesis "the retained manifest and toy certificates replay and all production timeout streams are incomplete" \
+  --expected-signal "16 toy proof replays pass and fresh drat-trim rejects 16 production streams" \
+  --timeout 900 --memory-mb 1024 \
+  --source-url https://www.cs.rit.edu/~spr/ElJC/sur.pdf \
+  -- python3 scripts/audit_q20_cube_pilot.py \
+  artifacts/q20_cube16_pilot_report.json \
+  artifacts/q20_cube16_pilot \
+  artifacts/almost_regular_42_q20_normalized/q20-normalized.cnf.gz \
+  artifacts/almost_regular_42_q20_normalized/q20-normalized.map.tsv \
+  checkers/cube_manifest_a.py \
+  tools/drat-trim/drat-trim.c tools/drat-trim/lrat-check.c \
+  artifacts/q20_cube16_pilot_cold_audit.replay.json \
+  artifacts/q20_cube16_pilot/production/cube-manifest.audit-cold.replay.json \
+  .proof-experiments/20260721-101546-136ce5/experiment.json
+```
+
+This pilot proves no production leaf status: every retained q=20 leaf returned
+`UNKNOWN`, and the cold audit rejects every interrupted stream. Its positive
+deliverable is the complete physical-CNF manifest/checker and the fully checked
+small-instance proof path.
+
 Replay the complete radius-2 gate with:
 
 ```bash

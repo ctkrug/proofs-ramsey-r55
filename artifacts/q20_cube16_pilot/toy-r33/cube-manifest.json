@@ -1,0 +1,379 @@
+{
+  "cover_contract": "all 2^4 assignments in lexicographic bit order; no symmetry quotient",
+  "degree_q": 2,
+  "fixed_root": 0,
+  "leaves": [
+    {
+      "bits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "clauses": 349,
+      "id": "0000",
+      "leaf_uncompressed_sha256": "e1a0e68fe1d07a836aa99f093459aea065fb569ab37bd9efbd07fc3548b6f37c",
+      "literals": [
+        -5,
+        -8,
+        -9,
+        -13
+      ],
+      "suffix_sha256": "d0dc6b9c477794c6ac1407c7402e5041d22dd19c7b9b7dfb1fce6f7298af06e7"
+    },
+    {
+      "bits": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "clauses": 349,
+      "id": "0001",
+      "leaf_uncompressed_sha256": "6fcdcab00c59244429f450f1bb453967aa28e68f440c93ae99115664b85d1af1",
+      "literals": [
+        -5,
+        -8,
+        -9,
+        13
+      ],
+      "suffix_sha256": "6f4b763941c342a70c96890a058d32a84a9f22ea77a1a96ed2f30c34c8e432b7"
+    },
+    {
+      "bits": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "clauses": 349,
+      "id": "0010",
+      "leaf_uncompressed_sha256": "f8467f0563b71cc55b1fae019610d978eb284d9c3d545f2bec7c3668236cc113",
+      "literals": [
+        -5,
+        -8,
+        9,
+        -13
+      ],
+      "suffix_sha256": "b2a290f5263059cbff33aecd076a625615f968e34a44df17692e71d7fb64c9a6"
+    },
+    {
+      "bits": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "clauses": 349,
+      "id": "0011",
+      "leaf_uncompressed_sha256": "54b676e1356f4d81a36464f934c2d3acdd7ae231e695f1d35e25056416c9faa9",
+      "literals": [
+        -5,
+        -8,
+        9,
+        13
+      ],
+      "suffix_sha256": "01030a3cce1be715d31e2610c36666047df144e87e92455987f21d72aacc121e"
+    },
+    {
+      "bits": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "clauses": 349,
+      "id": "0100",
+      "leaf_uncompressed_sha256": "0f38dee6b84e1a2ec73304ca57ff61711ececed0ea2641dba80eb148a9bb79c5",
+      "literals": [
+        -5,
+        8,
+        -9,
+        -13
+      ],
+      "suffix_sha256": "fb567df71886825997589086b93b5aeacd4d14b21780fc0f317b878f790d83d8"
+    },
+    {
+      "bits": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "clauses": 349,
+      "id": "0101",
+      "leaf_uncompressed_sha256": "03381d10f8cd91591e4fa1ccf6335d67e5ee69f4dd7f637d1f3358f1cee5d0c6",
+      "literals": [
+        -5,
+        8,
+        -9,
+        13
+      ],
+      "suffix_sha256": "606fb861597328ddf8d3a59e1e107e8eec698b93d33ecdb9c8051bd03744af1d"
+    },
+    {
+      "bits": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "clauses": 349,
+      "id": "0110",
+      "leaf_uncompressed_sha256": "c1af81b7b57b4362deb599dd97b33440dc7ca996b6fdb98b56c75cb184ac5f58",
+      "literals": [
+        -5,
+        8,
+        9,
+        -13
+      ],
+      "suffix_sha256": "c53bced61a6367a9d7759ca816786460674aa9c9e36b76002cdb2ecf73d64e41"
+    },
+    {
+      "bits": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "clauses": 349,
+      "id": "0111",
+      "leaf_uncompressed_sha256": "05622651a02e5f7369dafcdd493c85ac664a5a52c17ae7c99e6243ea8e9fdf0c",
+      "literals": [
+        -5,
+        8,
+        9,
+        13
+      ],
+      "suffix_sha256": "9cbf1ce51f1563885bf07cd1ca0ebc73517901a15a0e6d54d314084eda35211d"
+    },
+    {
+      "bits": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "clauses": 349,
+      "id": "1000",
+      "leaf_uncompressed_sha256": "f699a7b001e8f45353fe20508906fe49beeeebeb376cd93d0f9747078c3b99d4",
+      "literals": [
+        5,
+        -8,
+        -9,
+        -13
+      ],
+      "suffix_sha256": "956408b7e690239520cd7af3e2ad1c72a4b9eb0c68efb7848d36c3c9f939f23f"
+    },
+    {
+      "bits": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "clauses": 349,
+      "id": "1001",
+      "leaf_uncompressed_sha256": "fde63148fa9b44139b9932d814eb203fd5a254b16acc65fba3f9e318812018f4",
+      "literals": [
+        5,
+        -8,
+        -9,
+        13
+      ],
+      "suffix_sha256": "68787d9a31115b524d3830c043ed76eefed50cc9d61924d3570f3e665de4e6c3"
+    },
+    {
+      "bits": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "clauses": 349,
+      "id": "1010",
+      "leaf_uncompressed_sha256": "9ba3fe0f15c98e17e93ce4bda32a6eb746f431a372c953a791ef2be5130e10b2",
+      "literals": [
+        5,
+        -8,
+        9,
+        -13
+      ],
+      "suffix_sha256": "307b24e3959922d723629383882678f2739696eecc4fba4d70ed904007e08a1b"
+    },
+    {
+      "bits": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "clauses": 349,
+      "id": "1011",
+      "leaf_uncompressed_sha256": "14b40dc8b2c9a3a048d68be49fa8a7a31b9b5a803bef234bc30e8200edf81afc",
+      "literals": [
+        5,
+        -8,
+        9,
+        13
+      ],
+      "suffix_sha256": "9b4bba6d2bd39f3313c651c175685652a196b82e841132fc899940944837d88a"
+    },
+    {
+      "bits": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "clauses": 349,
+      "id": "1100",
+      "leaf_uncompressed_sha256": "c40cb2c4131f06e5041e4c1d1e550de7e10de4cf7a77f74f46c547f0cfc3269f",
+      "literals": [
+        5,
+        8,
+        -9,
+        -13
+      ],
+      "suffix_sha256": "305773b752156b793a8995069e22f61f6eb53455da799028e7516bcbd14d33e9"
+    },
+    {
+      "bits": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "clauses": 349,
+      "id": "1101",
+      "leaf_uncompressed_sha256": "8e306a570dbc2ab70934d5c68385d9f5225fe103c3a7cecfa1ec230057e5bc4a",
+      "literals": [
+        5,
+        8,
+        -9,
+        13
+      ],
+      "suffix_sha256": "87d15c2782977f8b8e7c29c99c2c3952cabbb02969ebd4de904995f39188faf0"
+    },
+    {
+      "bits": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "clauses": 349,
+      "id": "1110",
+      "leaf_uncompressed_sha256": "0f1b4c9af25a7a2c931c08f894be62335aca668d59bbdbdd718138320e36458d",
+      "literals": [
+        5,
+        8,
+        9,
+        -13
+      ],
+      "suffix_sha256": "7a2147d35b23141d8b1c25d2547c0e365de92b6a18dec1e669fb971df841ca6c"
+    },
+    {
+      "bits": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "clauses": 349,
+      "id": "1111",
+      "leaf_uncompressed_sha256": "8ac084d94a930ee60075c643e7221411f2aa2579c68eaff9a4e42a62017a97c7",
+      "literals": [
+        5,
+        8,
+        9,
+        13
+      ],
+      "suffix_sha256": "10e353d9199017e23554a9ec8a343baf89cfc5a91aeb3c098338de617bca6c89"
+    }
+  ],
+  "left_part": [
+    1,
+    2
+  ],
+  "order": 6,
+  "parent": {
+    "body_sha256": "36bde21261edf15a42d9d952ec06f29db09391bcf47a417f8a6f9671b93f048f",
+    "clauses": 345,
+    "compressed_sha256": null,
+    "map_sha256": "a07c651c0b15234fcaac0b198d75d63003af986d8475a9cfc54b40b8dee16783",
+    "path": "artifacts/q20_cube16_pilot/toy-r33/normalized.cnf",
+    "uncompressed_sha256": "05575e9779a747cbaf1c131f16df6766a301dc143b26d5466c814e0b09f1286e",
+    "variables": 159
+  },
+  "path_edges": [
+    [
+      1,
+      3
+    ],
+    [
+      1,
+      4
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      2,
+      5
+    ]
+  ],
+  "path_reversal_orbit_classes": [
+    [
+      "0000"
+    ],
+    [
+      "0001",
+      "1000"
+    ],
+    [
+      "0010",
+      "0100"
+    ],
+    [
+      "0011",
+      "1100"
+    ],
+    [
+      "0101",
+      "1010"
+    ],
+    [
+      "0110"
+    ],
+    [
+      "0111",
+      "1110"
+    ],
+    [
+      "1001"
+    ],
+    [
+      "1011",
+      "1101"
+    ],
+    [
+      "1111"
+    ]
+  ],
+  "path_variables": [
+    5,
+    8,
+    9,
+    13
+  ],
+  "physical_leaf_contract": "replace parent header clause count by parent+4 and append four unit clauses",
+  "right_part": [
+    3,
+    4,
+    5
+  ],
+  "schema_version": 1,
+  "scope": "normalized R(3,3,6) degree-{2,3} control"
+}

@@ -1,4 +1,105 @@
-# R(5,5) research checkpoint — epoch 11
+# R(5,5) research checkpoint — epoch 12
+
+Recorded: 2026-07-21 10:27 UTC
+
+## Epoch-12 outcome: cube pipeline certified, production discriminator negative
+
+The saved `strategy-596a3981722b` discriminator is complete.  The frozen
+fixed-root q=20 parent remained exactly the 71,421-variable,
+1,844,093-clause CNF with uncompressed SHA-256
+`87b70753dd07b3fc04ddb62799701a8a379efb2cd5c9ea9ddbd026f6679865dd`.
+The four declared cross-part edges and independently rederived DIMACS variables
+were
+
+```text
+(1,21) -> 212, (2,21) -> 213, (2,22) -> 234, (3,22) -> 235.
+```
+
+All 16 signed assignments were retained as physical-CNF leaves.  The P5 edge
+pattern has 10 classes under path reversal, but this was reported only as a
+cost diagnostic: no leaf was quotiented, no isomorphism proof was transported,
+and no symmetry inference was used.  The production manifest has SHA-256
+`d1d18434b21fbb66d40d936a60084fd5dfaaad5dcf5140f5a17d73871be12180`.
+The primary and cold independent manifest audits are byte-identical, SHA-256
+`3c72ddc8e307fea078243ba72df74cd321ee930acd6d77020a81d03c4e136eff`.
+They reconstruct the full edge map, all suffix signs and hashes, all 120
+pairwise disjointness checks, exhaustive coverage, and nine adversarial
+mutations without importing the producer.
+
+### Proof-path control and production result
+
+Before production, every one of the 16 analogous normalized `R(3,3,6)` leaves
+was physically materialized, solved UNSAT, converted from DRAT to LRAT, and
+checked by freshly compiled `lrat-check`.  The cold audit repeated all 16 DRAT
+conversions and checked both regenerated and retained LRAT files.
+
+Production then ran all 16 q=20 leaves sequentially with CaDiCaL 1.7.3,
+20 seconds per leaf, a 64-MiB proof-file ceiling per leaf, and the experiment
+wrapper's enforced 1-GiB memory ceiling.  Every leaf returned `UNKNOWN`:
+
+- 322.789 aggregate solver-seconds; individual wall times 20.115--20.453 s;
+- zero decoded SAT models and zero verified UNSAT leaves;
+- partial DRAT sizes 7,378,403--8,840,928 bytes, 128,241,561 bytes total;
+- deterministic compressed retention 54,025,245 bytes, below the 256-MiB gate.
+
+The main report is `artifacts/q20_cube16_pilot_report.json`, SHA-256
+`864f2c67df3e963ba358e1c430880b1f2f39e89508830aca9fdfb06faa427251`.
+Experiment `.proof-experiments/20260721-101546-136ce5` completed in 377.962
+seconds with 484,396 KiB peak child RSS; its experiment JSON has SHA-256
+`0d13b0caa5500d441c145039a95220b97acbba492dbdbadbdd12b2e6dc791444`.
+
+### Cold rejection of every timeout stream
+
+The cold audit rebuilt each 80-MB production leaf from the hashed compressed
+parent and its manifest suffix, checked the exact leaf hash, decompressed and
+hash-checked the associated stream, and ran freshly compiled `drat-trim`.
+All 16 streams were rejected.  Therefore no cube is excluded.  Cold report
+`artifacts/q20_cube16_pilot_cold_audit.json` has SHA-256
+`7e09c6ef485d05e5de2ff4a858c484289252b83f96969693d7d488ca73ffd812`.
+Experiment `.proof-experiments/20260721-102428-af542e` completed in 155.831
+seconds with 411,008 KiB peak child RSS; its experiment JSON has SHA-256
+`5e1828729ef838804f3b46b018302b0a4fab6b6e9f355f14d4611f1cf2aa88e4`.
+
+This falsifies only the tractable-leaf hypothesis under the exact declared
+solver and 20-second budgets.  It does not prove q=20 SAT or UNSAT, does not
+cover the q=17--19 bands, and changes no Ramsey bound.  The maintained status
+remains `43 <= R(5,5) <= 46`.
+
+## Route disposition and exact continuation
+
+Do not repeat the same four-variable/20-second CaDiCaL configuration, treat
+partial proof size as logical progress, increase the cutoff without a
+principled cost model, or launch q=17--19 from this negative result.  Reopen
+q=20 only with a materially different proof-logging solver or encoding,
+justified branching/budget evidence, or a demonstrated parent/cover/audit
+defect.
+
+The next recommended family is the saved adjacency-row pair-distance route
+`strategy-r55-row-code-sdp`.  First extract exact row-weight,
+pair-intersection, and edge/nonedge distance distributions from all 656
+authenticated controls, then encode only the rational pair-moment relaxation
+for currently admissible n=43--45 profiles.  Stop before a custom SDP if the
+pair relaxation cuts no profile beyond the published degree/subgraph
+constraints, cuts any known control, or yields a numerical dual that cannot be
+rationalized and checked exactly.
+
+## Epoch-12 reproduction and disclosure
+
+Exact replay commands are in `README.md`. GPT-5.6 Sol was principal
+investigator. The supplied GPT-5.6 Terra literature-strategy and
+experiment-verification memos were advisory and are promoted under
+`docs/delegate-memos/` with provenance in
+`records/delegate-provenance-epoch12.json`. Sol independently audited the
+source status, variables, cover, orbit scope, proof targets, and cold replay.
+No new subagent was spawned. Deterministic tools were Python 3.12.3, GCC
+13.3.0, CaDiCaL 1.7.3, `drat-trim`, `lrat-check`, the independent C graph
+checker, SHA-256, jq, and the computational-researcher experiment harness. Web
+access checked DS1.18 and the current Angeltveit--McKay preprint. No CAS, proof
+assistant, external publishing action, or system-level change was used.
+
+---
+
+# Prior checkpoint — epoch 11
 
 Recorded: 2026-07-21 08:25 UTC
 

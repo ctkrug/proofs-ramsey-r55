@@ -1,0 +1,29 @@
+{
+  "checker": "python-itertools-sinz-sequential-counter",
+  "clauses": 345,
+  "clique_size": 3,
+  "degree_clauses": 300,
+  "degree_q": 2,
+  "degree_values": [
+    2,
+    3
+  ],
+  "fix_root_neighborhood": true,
+  "normalization_neighbors": [
+    1,
+    2
+  ],
+  "normalization_nonneighbors": [
+    3,
+    4,
+    5
+  ],
+  "normalization_root": 0,
+  "normalization_unit_clauses": 5,
+  "normalization_unit_ledger_sha256": "88792cfea2250c6a7ecb932e0b1b029bb23b146a3ce76411972c5097bba38058",
+  "order": 6,
+  "primary_variables": 15,
+  "ramsey_clauses": 40,
+  "ramsey_ledger_sha256": "e4e00e2ad62ae645e79d88c57a8afa097fb9eb1fcbff8807e30c937e6accec91",
+  "variables": 159
+}

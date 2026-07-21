@@ -1,0 +1,12 @@
+{
+  "conclusion": "No production leaf resolved; the 16-cube pilot changes no mathematical bound.",
+  "production_status_counts": {
+    "sat_verified": 0,
+    "unknown": 16,
+    "unsat_verified": 0
+  },
+  "report": "/root/proof-factory/research/ramsey-r55/workspace/artifacts/q20_cube16_pilot_report.json",
+  "report_sha256": "864f2c67df3e963ba358e1c430880b1f2f39e89508830aca9fdfb06faa427251",
+  "status": "q20_cube_pilot_complete",
+  "stop_reason": "all_16_leaf_budgets_executed"
+}

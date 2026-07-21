@@ -1,0 +1,90 @@
+{
+  "cover": {
+    "assignments": 16,
+    "exhaustive": true,
+    "leaf_hashes": {
+      "0000": "c8692c54ef9111fb3c262c4a2a476b04b6024206d9143911aea62e0aa01d509e",
+      "0001": "b4c66b5d8e8fd213f455b347fed44be8ac6533361e14306eaa9295f166fc351a",
+      "0010": "5945692653d57319ea9b3615b6a6d7133f9817c75f79f0d749034b0ae620655f",
+      "0011": "82f605184669e37091ca806efcfb72555578575356c5f66504487182eb2f86f6",
+      "0100": "f00a787707da7204ab3a0fff08b6a4070dd9e74c2d5f21afbf2452f9c99d8ef4",
+      "0101": "ee166e11917b9628b2603a3b5cc6e2112d0719875aec05b23d207d12afc2f128",
+      "0110": "a1f420a3dcbaaa2f7b59d634d469944b1b047e902a276c9c3f24e3d7422ba222",
+      "0111": "943b041b945141e731bf5596d6d503c11d1f15a62dc2521308beb656c4938f40",
+      "1000": "caab656bf0ae98fb36741c6980fc97c1ee53a5492c9c0f10e6cf0c458617cbe7",
+      "1001": "5d0109fbcc94a9b2545c39e6819e5bb5a02214289612a141e08554e76dd97bf1",
+      "1010": "7a3161d733d1ddea15ffc3901717aa2cb31c646b1e41927af52cdaebe2bbef37",
+      "1011": "05bc28ab80f2ed2c6296a524c019af986cfcf5847d88761a70973af26bf16171",
+      "1100": "f470dfc337ac0a9d4ca8495d4e18661aa8a23e2042fef11140964763f12e1c8d",
+      "1101": "3fe4209b0888bbd7d7834dcc2796d130330d2090f89373f10c4a76cb8bb38458",
+      "1110": "6fb32e281935b855305e4a8f52ddd7b3f05d731e495d598228801ee76bdab4f7",
+      "1111": "369a530f482238aa85dbf7d6831f6fff2148d5362ad1ad290337b1a53d6845de"
+    },
+    "pairwise_disjoint_pairs": 120,
+    "path_reversal_orbit_classes": [
+      [
+        "0000"
+      ],
+      [
+        "0001",
+        "1000"
+      ],
+      [
+        "0010",
+        "0100"
+      ],
+      [
+        "0011",
+        "1100"
+      ],
+      [
+        "0101",
+        "1010"
+      ],
+      [
+        "0110"
+      ],
+      [
+        "0111",
+        "1110"
+      ],
+      [
+        "1001"
+      ],
+      [
+        "1011",
+        "1101"
+      ],
+      [
+        "1111"
+      ]
+    ],
+    "path_reversal_orbit_count": 10,
+    "path_variables": [
+      212,
+      213,
+      234,
+      235
+    ],
+    "root_unit_variables_disjoint": true
+  },
+  "full_map_reconstructed_independently": true,
+  "mutation_rejections": {
+    "auxiliary_variable": true,
+    "cube_sign_reversal": true,
+    "duplicate_cube": true,
+    "missing_cube": true,
+    "parent_body_drift": true,
+    "proof_target_parent_substitution": true,
+    "repeated_variable": true,
+    "root_unit_variable": true,
+    "shifted_variable": true
+  },
+  "parent_body_sha256": "591eab8fdc10ed48c2308c6f8d75005b2448ad0f852a1cf4b88138e1299c7886",
+  "parent_clauses": 1844093,
+  "parent_uncompressed_sha256": "87b70753dd07b3fc04ddb62799701a8a379efb2cd5c9ea9ddbd026f6679865dd",
+  "parent_variables": 71421,
+  "physical_leaf_contract": "parent body with replaced clause-count header plus four final unit clauses",
+  "scope": "normalized Ramsey(5,5,42) degree-{20,21} q=20 branch",
+  "status": "cube_manifest_audit_pass"
+}

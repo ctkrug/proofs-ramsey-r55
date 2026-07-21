@@ -1,0 +1,32 @@
+{
+  "base_clause_lines_compared": 340,
+  "base_cnf_uncompressed_sha256": "4213582115174ab7d71ea6d3ce6fdd47e8f02f650441c2f5af5e8c13920ef381",
+  "coverage_control": {
+    "all_q_plus_one_regular_graphs_complemented": 70,
+    "degree_band_graphs": 1760,
+    "labelled_graphs_checked": 32768,
+    "semantic_control_pass": true,
+    "successful_relabel_checks": 1760
+  },
+  "coverage_lemma": "If a degree-q vertex exists, choose it; otherwise the graph is (q+1)-regular, and because order=2q+2 its complement is q-regular. Relabel the chosen root and its q neighbors to 0 and 1..q.",
+  "mutation_rejections": {
+    "auxiliary_variable_unit": true,
+    "extra_unit": true,
+    "missing_unit": true,
+    "reversed_unit": true,
+    "shifted_root_variable": true
+  },
+  "normalized_cnf_uncompressed_sha256": "05575e9779a747cbaf1c131f16df6766a301dc143b26d5466c814e0b09f1286e",
+  "normalized_formula_exactly_base_plus_units": true,
+  "primary_map_reconstructed_independently": true,
+  "scope": "degree-{2,3} graphs on 6 vertices",
+  "status": "fixed_root_normalization_audit_pass",
+  "unit_ledger_sha256": "88792cfea2250c6a7ecb932e0b1b029bb23b146a3ce76411972c5097bba38058",
+  "unit_literals": [
+    1,
+    2,
+    -4,
+    -7,
+    -11
+  ]
+}

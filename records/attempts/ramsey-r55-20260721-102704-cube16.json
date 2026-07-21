@@ -1,0 +1,169 @@
+{
+  "id": "ramsey-r55-20260721-102704-cube16",
+  "problem_id": "ramsey-r55",
+  "started_at": "2026-07-21T10:00:02+00:00",
+  "finished_at": "2026-07-21T10:27:04.531004+00:00",
+  "lane": "hard",
+  "phase": "technical",
+  "model": "gpt-5.6-sol",
+  "outcome": "progress",
+  "approach": "Complete 16-leaf physical-CNF cube pilot on the normalized order-42 degree-{20,21} q=20 branch",
+  "strategy": {
+    "family": "certificate-carrying cube-and-conquer",
+    "fingerprint": "596a3981722b",
+    "mechanism": "Partition the audited normalized formula on four declared cross-part primary variables, independently check the complete cover and physical leaf reconstruction, and require a checked model or DRAT/LRAT proof per resolved leaf.",
+    "parent_ids": [
+      "strategy-e81525840a9b",
+      "strategy-r55-certified-pilot"
+    ]
+  },
+  "hypothesis": "A complete four-variable cover exposes at least one normalized q=20 leaf decidable by CaDiCaL 1.7.3 within 20 seconds and 1 GiB with a checkable SAT model or UNSAT proof.",
+  "discriminating_test": "First require all 16 normalized R(3,3,6) physical leaves to pass DRAT-to-LRAT conversion and LRAT checking; then run all 16 q=20 physical leaves for 20 seconds each and accept only independently checked SAT or UNSAT.",
+  "strategy_status": "blocked",
+  "summary": "The complete manifest and independent cover/reconstruction audit passed. All 16 toy leaves were proof-checked UNSAT. All 16 production leaves returned UNKNOWN after 322.789 aggregate solver-seconds; fresh drat-trim rejected all 16 partial streams. No witness or exclusion was obtained, and 43 <= R(5,5) <= 46 remains unchanged.",
+  "rationale": "The experiment falsified the predeclared tractable-leaf hypothesis while producing a reusable, independently checked cube-manifest pipeline. The negative result is exact only for the declared solver, leaf CNFs, and 20-second budgets.",
+  "claims": [
+    "Variables 212, 213, 234, and 235 yield an explicit complete and pairwise-disjoint 16-cube cover of the frozen normalized q=20 formula.",
+    "The P5 edge pattern has 10 reversal-orbit classes among its 16 assignments; all 16 raw cubes were retained and no symmetry quotient was used.",
+    "All 16 normalized R(3,3,6) cube leaves have checked DRAT and LRAT certificates.",
+    "All 16 q=20 leaves returned UNKNOWN at 20 seconds, and none of their retained streams is a valid DRAT certificate."
+  ],
+  "evidence": [
+    "artifacts/q20_cube16_pilot_report.json; SHA-256 864f2c67df3e963ba358e1c430880b1f2f39e89508830aca9fdfb06faa427251",
+    "artifacts/q20_cube16_pilot_cold_audit.json; SHA-256 7e09c6ef485d05e5de2ff4a858c484289252b83f96969693d7d488ca73ffd812",
+    "artifacts/q20_cube16_pilot/production/cube-manifest.json; SHA-256 d1d18434b21fbb66d40d936a60084fd5dfaaad5dcf5140f5a17d73871be12180",
+    "Independent manifest audits both have SHA-256 3c72ddc8e307fea078243ba72df74cd321ee930acd6d77020a81d03c4e136eff",
+    ".proof-experiments/20260721-101546-136ce5/experiment.json; SHA-256 0d13b0caa5500d441c145039a95220b97acbba492dbdbadbdd12b2e6dc791444",
+    ".proof-experiments/20260721-102428-af542e/experiment.json; SHA-256 5e1828729ef838804f3b46b018302b0a4fab6b6e9f355f14d4611f1cf2aa88e4"
+  ],
+  "next_steps": [
+    "Park this exact cube configuration; do not repeat it or launch q=17--19 from these UNKNOWN results.",
+    "Run the existing adjacency-row pair-distance LP lead as a materially different, exact structural discriminator.",
+    "Return to q=20 only with a materially different proof-logging solver or encoding, justified branching evidence, or a demonstrated packet defect."
+  ],
+  "citations": [
+    "https://www.cs.rit.edu/~spr/ElJC/sur.pdf",
+    "https://arxiv.org/abs/2409.15709",
+    "https://github.com/marijnheule/drat-trim"
+  ],
+  "techniques": [
+    "certificate-carrying cube-and-conquer",
+    "deterministic CNF reconstruction",
+    "complete cube-cover checking",
+    "DRAT-to-LRAT conversion",
+    "LRAT verification",
+    "semantic mutation testing",
+    "cold artifact replay",
+    "SHA-256 identity gating"
+  ],
+  "research_mode": "computational",
+  "experiments": [
+    ".proof-experiments/20260721-101546-136ce5: 377.962 seconds total, 484,396 KiB peak child RSS, 16 toy leaves verified and 16 production leaves UNKNOWN.",
+    ".proof-experiments/20260721-102428-af542e: 155.831 seconds total, 411,008 KiB peak child RSS, all toy certificates replayed and all production partial proofs rejected."
+  ],
+  "independent_checker": "checkers/cube_manifest_a.py imports neither the producer nor the Ramsey generator; it reconstructs the full edge map, path variables, 16 assignments, unit suffixes, leaf hashes, pairwise disjointness, exhaustiveness, orbit ledger, and nine adversarial mutations. The cold audit freshly compiles drat-trim/lrat-check, rebuilds every production leaf, replays all toy certificates, and rejects all production partial streams.",
+  "transfer_insights": [
+    "Certificate-carrying cube-and-conquer -> a tiny explicit cover should expose tractable leaf heterogeneity -> the pipeline validated, but all 16 production leaves remained UNKNOWN under the declared budget."
+  ],
+  "established_facts": [
+    {
+      "claim": "The declared four-variable manifest exactly covers all assignments and reconstructs 16 physical q=20 leaf CNFs at locked hashes.",
+      "evidence": "Production manifest plus identical primary and cold audit hashes.",
+      "scope": "Frozen normalized q=20 parent only.",
+      "status": "computed"
+    },
+    {
+      "claim": "All 16 normalized R(3,3,6) leaf proofs pass DRAT-to-LRAT conversion and LRAT checking.",
+      "evidence": "Primary and cold certificate replays.",
+      "scope": "Six-vertex control only.",
+      "status": "computed"
+    },
+    {
+      "claim": "All 16 production leaves returned UNKNOWN and all 16 partial proof streams fail fresh DRAT verification.",
+      "evidence": "Primary pilot and cold-audit reports.",
+      "scope": "Exact CaDiCaL 1.7.3, 20-second-per-leaf configuration only.",
+      "status": "computed"
+    }
+  ],
+  "ruled_out": [
+    {
+      "claim_or_route": "Repeat the same four-variable q=20 cube pilot with CaDiCaL 1.7.3 and 20 seconds per leaf.",
+      "scope": "All 16 exact physical leaf CNFs in the retained manifest.",
+      "reason": "Every leaf returned UNKNOWN; an identical replay has low information value.",
+      "evidence": "artifacts/q20_cube16_pilot_report.json",
+      "reopen_condition": "Use a materially different proof-logging solver or encoding, justified branching/budget evidence, or demonstrate an artifact defect."
+    },
+    {
+      "claim_or_route": "Treat any retained production timeout stream as an UNSAT certificate.",
+      "scope": "All 16 partial streams, 128,241,561 aggregate uncompressed bytes.",
+      "reason": "Fresh drat-trim rejected every stream against its cold-reconstructed leaf CNF.",
+      "evidence": "artifacts/q20_cube16_pilot_cold_audit.json",
+      "reopen_condition": "Supply a completed proof bound to the exact leaf hash and passing DRAT-to-LRAT conversion and LRAT checking."
+    }
+  ],
+  "open_leads": [
+    {
+      "description": "Test the exact adjacency-row pair-distance relaxation before any custom SDP.",
+      "rationale": "It is a materially different, cheap structural discriminator and already has authenticated positive controls.",
+      "next_experiment": "Extract row weight/intersection distributions from all 656 controls and compare a rational pair-moment LP against the published degree/subgraph restrictions for n=43..45.",
+      "priority": "high",
+      "status": "open"
+    },
+    {
+      "description": "Revisit q=20 only after a solver, encoding, or branching change has an independently measured reason to alter certificate throughput.",
+      "rationale": "The monolith and all 16 short leaves are currently UNKNOWN.",
+      "next_experiment": "Benchmark a materially different proof-logging configuration first on the normalized R(3,3,6) and a declared bounded q=20 subset; retain exact certificate-throughput evidence.",
+      "priority": "low",
+      "status": "open"
+    }
+  ],
+  "blocker": "No production q=20 cube resolved within the declared budget; the current data provide no principled scaling law for a larger cutoff.",
+  "reopen_condition": "A materially different proof-logging solver or encoding, justified branching/budget evidence, or a demonstrated parent/cover/checker defect.",
+  "reopen_evidence": "The prior checked-cover precondition was satisfied by the independently audited manifest, enabling this attempt.",
+  "continuation": {
+    "objective": "Run the cheapest exact adjacency-row pair-distance LP discriminator before any custom SDP or q=20 retry.",
+    "first_action": "Extract exact row-weight, pair-intersection, and edge/nonedge distance distributions from all 656 authenticated controls, then encode the rational pair-moment relaxation for admissible n=43..45 profiles.",
+    "stop_condition": "Park the route if it cuts no profile beyond published constraints, cuts a known control, or yields only a numerical dual that cannot be rationalized and checked exactly."
+  },
+  "strategy_proposals": [],
+  "candidate_profile": {
+    "contribution_class": "research_artifact",
+    "scholarly_question": "Can a proof-carrying cube partition make the normalized degree-{20,21} order-42 Ramsey branch tractable?",
+    "meaningful_delta": "Supplies a reusable independently audited physical-CNF cube manifest/checker and a negative 16-leaf cost result; it does not answer the order-42 existence question.",
+    "acceptance_test": "Replay both recorded experiments and reproduce the manifest hashes, 16 toy certificate checks, 16 production UNKNOWN results, and 16 cold DRAT rejections.",
+    "closest_prior_work": [
+      {
+        "url": "https://arxiv.org/abs/2409.15709",
+        "difference": "Angeltveit and McKay use computational case checking for the upper bound; this packet concerns a separate bounded degree-band pilot and makes no bound claim."
+      },
+      {
+        "url": "https://github.com/marijnheule/drat-trim",
+        "difference": "The checker is reused as a certificate verifier; the new local artifact is the Ramsey-specific physical-leaf manifest and independent cover/reconstruction audit."
+      }
+    ],
+    "novelty_searches": [
+      {
+        "source": "Dynamic Survey and arXiv web search",
+        "query": "R(5,5) Ramsey 2025 2026 exact bound",
+        "url": "https://www.cs.rit.edu/~spr/ElJC/sur.pdf",
+        "finding": "DS1.18 still records 43 <= R(5,5) <= 46; no rigorous newer exact result was found."
+      }
+    ],
+    "external_channel": {
+      "recipient": "",
+      "url": "",
+      "acceptance_path": ""
+    },
+    "independent_validations": [],
+    "relevance": {
+      "settles_exact_open_target": false,
+      "improves_best_known_result": false,
+      "source_explicitly_requests_result": false,
+      "expert_interest_confirmed": false,
+      "new_structural_result": false,
+      "evidence_url": "https://www.cs.rit.edu/~spr/ElJC/sur.pdf"
+    },
+    "arbitrary_cutoff_extension": false
+  },
+  "tool_disclosure": "GPT-5.6 Sol was principal investigator. Two supplied GPT-5.6 Terra delegates provided advisory literature-strategy and experiment-verification memos; Sol independently audited all relied-on claims, and no new subagent was spawned. Deterministic tools were Python 3.12.3, GCC 13.3.0, CaDiCaL 1.7.3, freshly compiled drat-trim and lrat-check, the independent C recursive-bitset graph checker, SHA-256, jq, and the computational-researcher experiment harness. Web access checked DS1.18 and arXiv. No CAS, proof assistant, external publication, or system-level modification was used."
+}
