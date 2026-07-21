@@ -784,7 +784,11 @@ Before original search:
 4. Reconstruct and verify the public 13- and 9-violation K43 controls from the Exoo study.
 5. Record the first mismatch and stop; do not silently repair source data.
 
-The controls now pass, the complete radius-2 enumeration is retained, and the seed's full one-orbit
-distance-6 family is exactly classified at minimum burden two. The next direct K43 discriminator is S17's
-20-slice two-orbit sweep; S3 remains the default route into a genuinely unknown order-42 basin. None of
-the control, local-neighborhood, or structured-slice results changes the Ramsey bound.
+The controls now pass, including the frozen 328-record source corpus and its 328 complements. The
+complete radius-2 enumeration is retained, and the seed's full one-orbit distance-6 family is exactly
+classified at minimum burden two. The active discriminator is the checkpointed 656-host known-class
+embedding census for the frozen order-30 core. It must preserve exact agreement between the bitset and
+NetworkX streams, independently replayed coverage, and every verified host receipt. Only after the full
+corpus reconciles may a bounded residual-SAT discriminator run; any result then requires a materially
+independent validator before candidate review or broader scaling. None of the control, local-neighborhood,
+structured-slice, pilot, or partial-census results changes the Ramsey bound.
