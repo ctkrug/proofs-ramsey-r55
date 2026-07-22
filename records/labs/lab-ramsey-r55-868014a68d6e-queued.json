@@ -1,0 +1,11 @@
+{
+  "event": "queued",
+  "id": "lab-ramsey-r55-868014a68d6e",
+  "review": {
+    "decision": "continue",
+    "reason": "Pilot advanced exactly 255 to 256; dual streams agree; 0.0454 hosts/s exceeds 0.015 threshold; 4.5KB measured growth is below 64MiB; original 254-host prefix and calibrated host 254 remain bound",
+    "reviewer": "codex-operator:2026-07-22",
+    "reviewed_at": "2026-07-22T01:10:14.864999+00:00",
+    "segment": 1
+  }
+}
