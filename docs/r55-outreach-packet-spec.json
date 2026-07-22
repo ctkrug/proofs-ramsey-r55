@@ -1,0 +1,163 @@
+{
+  "packet_names": [
+    "packet-a",
+    "packet-b",
+    "packet-c"
+  ],
+  "output": "outreach/r55-alignment-20260721",
+  "packets": [
+    {
+      "include": [
+        {
+          "kind": "tree",
+          "path": "artifacts/two_orbit_certificates"
+        },
+        {
+          "kind": "file",
+          "path": "artifacts/two_orbit_certified_sweep_report.json"
+        },
+        {
+          "kind": "file",
+          "path": "scripts/run_two_orbit_certified_sweep.py"
+        },
+        {
+          "kind": "file",
+          "path": "scripts/generate_orbit_cnf.py"
+        },
+        {
+          "kind": "file",
+          "path": "sources/retrievals/springer_supplementary_data4_audit1.txt"
+        },
+        {
+          "kind": "tree",
+          "path": "tools/drat-trim"
+        }
+      ],
+      "inherits": [],
+      "name": "packet-a",
+      "scope": "These 60 checked certificates classify exactly 20 cyclic two-orbit families around one published K43 seed at minimum monochromatic-K5 burden two. They do not cover arbitrary gluing configurations or the full graph space.",
+      "semantic_replay": [
+        "make -C tools/drat-trim drat-trim && python3 - <<'PY'\nimport json, subprocess\nfrom pathlib import Path\nr=json.loads(Path('artifacts/two_orbit_certified_sweep_report.json').read_text())\nfor family in r['families']:\n    for cert in family['certificates'].values():\n        subprocess.run(['tools/drat-trim/drat-trim', cert['cnf']['path'], cert['proof']['path']], check=True)\nprint('verified', sum(len(f['certificates']) for f in r['families']), 'DRAT certificates')\nPY"
+      ],
+      "title": "Packet A: generalized-gluing alignment"
+    },
+    {
+      "include": [
+        {
+          "kind": "file",
+          "path": "sources/r55_42some.g6"
+        },
+        {
+          "kind": "file",
+          "path": "sources/r55_42some.g6.provenance.json"
+        },
+        {
+          "kind": "file",
+          "path": "sources/retrievals/r55_42some_authoritative_epoch5.g6"
+        },
+        {
+          "kind": "file",
+          "path": "sources/retrievals/r55_42some_authoritative_epoch5.headers"
+        },
+        {
+          "kind": "tree",
+          "path": ".proof-experiments/20260720-221528-34af71"
+        },
+        {
+          "kind": "file",
+          "path": "artifacts/authenticated_corpus_report.json"
+        },
+        {
+          "kind": "tree",
+          "path": "artifacts/known-class-embedding-census-v2"
+        },
+        {
+          "kind": "file",
+          "path": "scripts/run_known_class_embedding_census.py"
+        },
+        {
+          "kind": "file",
+          "path": "scripts/run_known_class_embedding_census_locked.sh"
+        },
+        {
+          "kind": "file",
+          "path": "scripts/enumerate_core_embeddings_bitset.py"
+        },
+        {
+          "kind": "file",
+          "path": "scripts/enumerate_core_embeddings_networkx.py"
+        },
+        {
+          "kind": "file",
+          "path": "checkers/validate_known_class_embedding_census.py"
+        },
+        {
+          "kind": "file",
+          "path": "docs/known-class-embedding-census-v2-predeclaration.md"
+        },
+        {
+          "kind": "file",
+          "path": "docs/known-class-embedding-census-v2-efficiency.json"
+        }
+      ],
+      "inherits": [],
+      "name": "packet-b",
+      "scope": "This packet authenticates the supplied corpus and reports only the independently validated 656-host embedding census recorded in its manifest. It does not prove that the supplied corpus is complete or classify all Ramsey(5,5,42) graphs.",
+      "semantic_replay": [
+        "python3 checkers/validate_known_class_embedding_census.py artifacts/known-class-embedding-census-v2/output/manifest.jsonl"
+      ],
+      "title": "Packet B: CMU SRG alignment"
+    },
+    {
+      "include": [
+        {
+          "kind": "file",
+          "path": "sources/r55_42some.g6"
+        },
+        {
+          "kind": "file",
+          "path": "sources/r55_42some.g6.provenance.json"
+        },
+        {
+          "kind": "file",
+          "path": "sources/retrievals/r55_42some_authoritative_epoch5.g6"
+        },
+        {
+          "kind": "file",
+          "path": "sources/retrievals/r55_42some_authoritative_epoch5.headers"
+        },
+        {
+          "kind": "tree",
+          "path": ".proof-experiments/20260720-221528-34af71"
+        },
+        {
+          "kind": "file",
+          "path": "artifacts/authenticated_corpus_report.json"
+        },
+        {
+          "kind": "file",
+          "path": "scripts/run_corpus_gate.py"
+        },
+        {
+          "kind": "file",
+          "path": "checkers/checker_a.py"
+        },
+        {
+          "kind": "file",
+          "path": "checkers/checker_b.c"
+        }
+      ],
+      "inherits": [
+        "packet-a"
+      ],
+      "name": "packet-c",
+      "scope": "This packet demonstrates a retained CNF/proof/checker-log/hash-manifest convention and corpus authentication. It does not claim to reproduce BigCompute's 656/656 extension run.",
+      "semantic_replay": [
+        "replay=$(mktemp) && trap 'rm -f \"$replay\"' EXIT && python3 scripts/run_corpus_gate.py checkers/checker_a.py checkers/checker_b.c sources/r55_42some.g6 \"$replay\"",
+        "# Replay Packet A's 60 DRAT checks using the Packet A hook above."
+      ],
+      "title": "Packet C: BigCompute reproduction alignment"
+    }
+  ],
+  "schema_version": 1
+}
