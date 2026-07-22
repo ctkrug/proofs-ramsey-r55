@@ -1,0 +1,27 @@
+Traceback (most recent call last):
+  File "/root/proof-factory/research/ramsey-r55/workspace/scripts/run_known_class_embedding_census.py", line 142, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/root/proof-factory/research/ramsey-r55/workspace/scripts/run_known_class_embedding_census.py", line 96, in main
+    right = nximpl.process_case(name, nx_pattern, nx_host, min(float(args.case_seconds), remaining))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/proof-factory/research/ramsey-r55/workspace/scripts/enumerate_core_embeddings_networkx.py", line 128, in process_case
+    embeddings = all_embeddings(host, pattern)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/proof-factory/research/ramsey-r55/workspace/scripts/enumerate_core_embeddings_networkx.py", line 62, in all_embeddings
+    for host_to_pattern in matcher.subgraph_isomorphisms_iter():
+  File "/root/proof-factory/.lab-venv/lib/python3.12/site-packages/networkx/algorithms/isomorphism/isomorphvf2.py", line 389, in subgraph_isomorphisms_iter
+    yield from self.match()
+  File "/root/proof-factory/.lab-venv/lib/python3.12/site-packages/networkx/algorithms/isomorphism/isomorphvf2.py", line 321, in match
+    yield from self.match()
+  File "/root/proof-factory/.lab-venv/lib/python3.12/site-packages/networkx/algorithms/isomorphism/isomorphvf2.py", line 321, in match
+    yield from self.match()
+  File "/root/proof-factory/.lab-venv/lib/python3.12/site-packages/networkx/algorithms/isomorphism/isomorphvf2.py", line 317, in match
+    if self.syntactic_feasibility(G1_node, G2_node):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/proof-factory/.lab-venv/lib/python3.12/site-packages/networkx/algorithms/isomorphism/isomorphvf2.py", line 507, in syntactic_feasibility
+    if neighbor not in self.inout_1:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/proof-factory/research/ramsey-r55/workspace/scripts/run_known_class_embedding_census.py", line 54, in host_timeout
+    raise TimeoutError(f"aggregate host gate exceeded {args.host_seconds:g} seconds")
+TimeoutError: aggregate host gate exceeded 30 seconds
