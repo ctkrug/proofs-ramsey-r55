@@ -1,0 +1,14 @@
+{
+  "artifact_hash_ledger_sha256": "5c49fd998df00380c24271c602df8164790c173e68e1e5024166842e6ed8eddc",
+  "continuation_scope": "fresh experiment may append canonical hosts 254..655; prefix rows and artifacts are immutable",
+  "copied_checkpoint_sha256": "12dd99da2e5f122954b08806376e6449ee779ad670855a7328b4c5f3ff1d2332",
+  "copied_manifest_sha256": "50946975a8be443f08218377924028e6b4762b0a84fd47f10ecb0125e4cfff95",
+  "next_host": 254,
+  "original_checkpoint_sha256": "12dd99da2e5f122954b08806376e6449ee779ad670855a7328b4c5f3ff1d2332",
+  "original_host_gate_seconds": 30.0,
+  "original_manifest_sha256": "50946975a8be443f08218377924028e6b4762b0a84fd47f10ecb0125e4cfff95",
+  "prefix_hosts": 254,
+  "schema_version": 1,
+  "status": "known_class_embedding_resume_prefix_audit_pass",
+  "total_hosts": 656
+}
