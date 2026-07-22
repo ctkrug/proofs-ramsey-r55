@@ -1,0 +1,121 @@
+{
+  "event": "checkpointed",
+  "schema_version": 2,
+  "id": "lab-ramsey-r55-868014a68d6e",
+  "problem_id": "ramsey-r55",
+  "name": "R55 known-class embedding census v3 full continuation",
+  "hypothesis": "all remaining supplied hosts reconcile under exact dual enumeration after the passed cap-60 calibration",
+  "expected_signal": "canonical manifest reaches 656 hosts with exact stream agreement, preserved frozen prefix, and no threshold failure",
+  "decision_value": "completes the predeclared supplied-class boundary needed before the residual-SAT discriminator",
+  "efficiency_design": {
+    "naive_cost": "Restarting the 656-host census would discard 254 exact two-implementation results and repeat roughly 1.4 core-hours. Raising the cap globally without measurement could conceal a performance regression.",
+    "opportunities_considered": [
+      "Preserve the verified 254-host prefix and replay only the first blocked host in an isolated copy.",
+      "Keep the proved source/complement indexing and existing bitset implementation; do not re-enumerate the prefix.",
+      "Retain the independent NetworkX VF2 stream as the semantic cross-check even though it is the bottleneck.",
+      "Use one host per segment so a failure cannot contaminate a later host or lose completed work.",
+      "Bind the copied prefix by checkpoint, progress, manifest, per-artifact, and protected-code hashes.",
+      "Use compressed per-host JSON artifacts and an append-only hash manifest rather than an unbounded aggregate file."
+    ],
+    "chosen_reductions": "Copy the stopped v2 experiment to a new path, independently verify its exact 254-row prefix, and execute only host index 254 with the unchanged producer implementations under a new hash-locked 60-second aggregate cap. The stopped v2 paths remain read-only evidence.",
+    "expected_throughput_gain": "Approximately 254x less repeated host work than restarting. The calibration is one bounded <=120-second segment; production continues only if exact stream agreement completes in <=45 seconds, leaving 33% headroom under the 60-second cap.",
+    "soundness_basis": "The original prefix has sequential indices 0..253; checkpoint rows equal manifest rows; all gzip streams and artifact SHA-256 values verify; the checkpoint, progress, and manifest hashes are fixed below. The new host must pass exact agreement on embedding count, mapping stream, vector occurrences, unique-vector count, vector stream, and unique vectors.",
+    "remains_uncompressed": "NetworkX still enumerates the complete host-254 VF2 mapping stream. The calibration does not prove later hosts finish within 60 seconds; every later segment retains the same cap and automatic correctness, throughput, artifact-growth, checkpoint, and decision-value gates."
+  },
+  "source_urls": [
+    "https://users.cecs.anu.edu.au/~bdm/data/ramsey.html"
+  ],
+  "command": [
+    "scripts/run_known_class_embedding_census_cap60_locked.sh",
+    "--corpus",
+    "sources/r55_42some.g6",
+    "--checkpoint",
+    "artifacts/known-class-embedding-census-v3/checkpoint.json",
+    "--progress",
+    "artifacts/known-class-embedding-census-v3/progress.json",
+    "--output",
+    "artifacts/known-class-embedding-census-v3/output",
+    "--hosts-per-segment",
+    "1",
+    "--case-seconds",
+    "60",
+    "--total-hosts",
+    "656"
+  ],
+  "seed": 0,
+  "segment_seconds": 120,
+  "memory_mb": 1000,
+  "max_segments": 401,
+  "segment": 266,
+  "pilot_segments": 1,
+  "review_every_segments": 400,
+  "checkpoint_path": "artifacts/known-class-embedding-census-v3/checkpoint.json",
+  "progress_path": "artifacts/known-class-embedding-census-v3/progress.json",
+  "continuation_thresholds": {
+    "min_throughput_per_second": 0.015,
+    "max_artifact_growth_bytes": 67108864,
+    "require_correctness_checks": true
+  },
+  "submitted_at": "2026-07-22T01:09:06.184606+00:00",
+  "workspace_git_commit": "16b9dcc0e1a15d4a95ffe2978ec4cb812fcf73e9",
+  "input_sha256": {
+    "scripts/run_known_class_embedding_census_cap60_locked.sh": "7c029a199b41d91aaafd399b9dc935a3db3b84792906a4d38d62a25aeb5d64f4",
+    "scripts/run_known_class_embedding_census.py": "d571103060c50a82bc6b7d41c7affabc4062ef975750da397bacf93ae81623dc",
+    "scripts/enumerate_core_embeddings_bitset.py": "01b3953b1db6a65737e4fb4ee176a88b7c8c8ed26a374c410cf274fe2500739a",
+    "scripts/enumerate_core_embeddings_networkx.py": "c4491591b16394e11d3bf0b907eea8c65a73308e8a2a366e5d594532c7010aaf",
+    "sources/r55_42some.g6": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb",
+    "artifacts/known-class-embedding-census-v3/v3-prefix-receipt.json": "f1fc8a9a6d57dd9d112c6a7a0f8ad247f31971df9459059caf8ca8325927e7e6",
+    "records/labs/lab-ramsey-r55-99d6e467cd79-completed-awaiting-review-segment-01.json": "705afc87824d783c1396907ef4cc4fa84cf57373a0120fb3c294844dff6f138b",
+    "docs/known-class-embedding-census-v3-predeclaration.md": "ba0f739da10edbbf5c6d8089db6ca16cef3a47e0754bbdf4eebbc25616d0fae9"
+  },
+  "mutable_argv_paths": [
+    "artifacts/known-class-embedding-census-v3/checkpoint.json",
+    "artifacts/known-class-embedding-census-v3/progress.json"
+  ],
+  "mutable_argv_initial_sha256": {
+    "artifacts/known-class-embedding-census-v3/checkpoint.json": "84b429083cf04aef04c10710abba0da02e86b497710b38de8e54805d339af633",
+    "artifacts/known-class-embedding-census-v3/progress.json": "f4cac19348d7b184d9785d12974ee01f1007d9b92afa69010427deac9e1f1ca1"
+  },
+  "progress_baseline": {
+    "completed_units": 255.0,
+    "reported_artifact_bytes": 226520,
+    "artifact_bytes": 226520
+  },
+  "spec_sha256": "64e7c9638ec1b445c6ceaf538b79fdea0b544e2dc6e35468122723289d7a74b4",
+  "recorded_at": "2026-07-22T02:28:58.673166+00:00",
+  "job_id": "lab-ramsey-r55-868014a68d6e",
+  "returncode": 0,
+  "duration_seconds": 11.990844,
+  "checkpoint_exists": true,
+  "checkpoint_sha256": "b6ef57f3e911218c526359191ab979a5efe8d8a6e9b17e483548e44a218a408f",
+  "progress": {
+    "path": "artifacts/known-class-embedding-census-v3/progress.json",
+    "sha256": "a508bf22ed0f7fa638c0db5dc50b08332aef6d346ee22644f248171da029924a",
+    "completed_units": 521.0,
+    "total_units": 656.0,
+    "delta_units": 1.0,
+    "throughput_per_second": 0.08339696521779452,
+    "artifact_bytes": 463312,
+    "reported_artifact_bytes": 463312,
+    "reported_artifact_growth_bytes": 897,
+    "measured_artifact_growth_bytes": 4558,
+    "artifact_growth_bytes": 4558,
+    "complete": false,
+    "correctness_checks_passed": true,
+    "decision_value_active": true,
+    "message": "reconciled 521/656 hosts with exact stream agreement"
+  },
+  "threshold_failures": [],
+  "runner_result": "{\n  \"experiment_dir\": \"/root/proof-factory/research/ramsey-r55/workspace/lab-runs/lab-ramsey-r55-868014a68d6e/segment-000266/20260722-022846-9bf654\",\n  \"schema_version\": 1,\n  \"id\": \"20260722-022846-9bf654\",\n  \"name\": \"R55 known-class embedding census v3 full continuation segment 266/401\",\n  \"hypothesis\": \"all remaining supplied hosts reconcile under exact dual enumeration after the passed cap-60 calibration\",\n  \"expected_signal\": \"canonical manifest reaches 656 hosts with exact stream agreement, preserved frozen prefix, and no threshold failure\",\n  \"command\": [\n    \"scripts/run_known_class_embedding_census_cap60_locked.sh\",\n    \"--corpus\",\n    \"sources/r55_42some.g6\",\n    \"--checkpoint\",\n    \"artifacts/known-class-embedding-census-v3/checkpoint.json\",\n    \"--progress\",\n    \"artifacts/known-class-embedding-census-v3/progress.json\",\n    \"--output\",\n    \"artifacts/known-class-embedding-census-v3/output\",\n    \"--hosts-per-segment\",\n    \"1\",\n    \"--case-seconds\",\n    \"60\",\n    \"--total-hosts\",\n    \"656\"\n  ],\n  \"cwd\": \"/root/proof-factory/research/ramsey-r55/workspace\",\n  \"seed\": 0,\n  \"timeout_seconds\": 120,\n  \"memory_limit_mb\": 1000,\n  \"memory_limit_enforced\": true,\n  \"started_at\": \"2026-07-22T02:28:46.492791+00:00\",\n  \"finished_at\": \"2026-07-22T02:28:58.407223+00:00\",\n  \"duration_seconds\": 11.914,\n  \"returncode\": 0,\n  \"timed_out\": false,\n  \"python\": \"3.12.3\",\n  \"platform\": \"Linux-6.8.0-124-generic-x86_64-with-glibc2.39\",\n  \"git_commit\": \"165ff00a5fb4ca1625cb921101ddbbb54c16a255\",\n  \"source_urls\": [\n    \"https://users.cecs.anu.edu.au/~bdm/data/ramsey.html\"\n  ],\n  \"input_artifacts\": {\n    \"/root/proof-factory/research/ramsey-r55/workspace/scripts/run_known_class_embedding_census_cap60_locked.sh\": \"7c029a199b41d91aaafd399b9dc935a3db3b84792906a4d38d62a25aeb5d64f4\",\n    \"/root/proof-factory/research/ramsey-r55/workspace/sources/r55_42some.g6\": \"067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb\",\n    \"/root/proof-factory/research/ramsey-r55/workspace/artifacts/known-class-embedding-census-v3/checkpoint.json\": \"cde7a0c72d80d7997c6040a375f0b66667721a11951f1b7234a7b01d7103a963\",\n    \"/root/proof-factory/research/ramsey-r55/workspace/artifacts/known-class-embedding-census-v3/progress.json\": \"feb3d8127c763a1ce3c5334f55b2fbdc59d3c65110a7f1b4d629ac8af7244591\"\n  },\n  \"peak_child_memory_rusage\": 56040,\n  \"peak_child_memory_unit\": \"kilobytes\",\n  \"artifacts\": {\n    \"stdout.txt\": \"6c88c54ec3619b2725745b9c4c00a94dbd10f128c55438668679c842cf467196\",\n    \"stderr.txt\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\"\n  }\n}\n",
+  "runner_error": "",
+  "output_root": "lab-runs/lab-ramsey-r55-868014a68d6e/segment-000266",
+  "mutable_argv_before_sha256": {
+    "artifacts/known-class-embedding-census-v3/checkpoint.json": "cde7a0c72d80d7997c6040a375f0b66667721a11951f1b7234a7b01d7103a963",
+    "artifacts/known-class-embedding-census-v3/progress.json": "feb3d8127c763a1ce3c5334f55b2fbdc59d3c65110a7f1b4d629ac8af7244591"
+  },
+  "mutable_argv_after_sha256": {
+    "artifacts/known-class-embedding-census-v3/checkpoint.json": "b6ef57f3e911218c526359191ab979a5efe8d8a6e9b17e483548e44a218a408f",
+    "artifacts/known-class-embedding-census-v3/progress.json": "a508bf22ed0f7fa638c0db5dc50b08332aef6d346ee22644f248171da029924a"
+  },
+  "research_event_id": "event-ramsey-r55-473a5a6f1b62"
+}
