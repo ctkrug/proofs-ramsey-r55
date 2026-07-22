@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "experiment": "R(5,5) v3 full-corpus standalone validation",
+  "status": "predeclared",
+  "naive_cost": "Re-enumerating every embedding with both producers would repeat the completed multi-hour census. The validation target is instead the immutable 656-row manifest, its 656 compressed host artifacts, and the preserved dual-enumerator summaries.",
+  "opportunities_considered": [
+    "Stream the JSONL manifest once rather than loading or regenerating the corpus search.",
+    "Hash and decompress each compact per-host artifact exactly once.",
+    "Reuse the already recorded bitset/NetworkX stream agreement while independently checking the stored streams, counts, summaries, paths, and hashes.",
+    "Verify the frozen 254-row prefix by its raw-line aggregate hash and every row by its individual artifact hash.",
+    "Write one atomic validation result bound to the final manifest hash.",
+    "Reserve fresh semantic re-enumeration for the separately implemented cold residual audit."
+  ],
+  "chosen_reductions": "Perform a standalone single-pass integrity and semantic-consistency validation of all 656 canonical rows and gzip artifacts. Enforce the 30-second gate for hosts 0..253, the 60-second gate for hosts 254..655, the frozen original-prefix hash, sequential coverage, exact artifact paths and hashes, and stored bitset/NetworkX agreement.",
+  "expected_throughput_gain": "Avoids repeating roughly 4-6 core-hours of embedding enumeration; expected validation is bounded to one <=600-second, <=1000-MB job while still rehashing every final artifact.",
+  "soundness_basis": "The validator is a separate executable and parser. It binds the final manifest SHA-256, rechecks every declared artifact SHA-256 after gzip decoding, enforces canonical source coverage and mixed timing gates, and rejects malformed or inconsistent summaries. Its exact command and execution receipt will be independently hash-bound before operator validation.",
+  "remains_uncompressed": "This validator does not freshly enumerate embeddings. Its conclusion is full-corpus artifact integrity and stored dual-enumerator agreement, not an independent re-performance of NetworkX. The later cold residual audit supplies that stronger semantic independence.",
+  "decision_thresholds": {
+    "validate_if": "all 656 rows and artifacts pass, the original prefix hash matches, the manifest hash is bound in validation.json, and the distinct lab job exits zero",
+    "stop_if": "any missing row, malformed stream, hash mismatch, path escape, timing-gate failure, or stored enumerator disagreement occurs"
+  }
+}
