@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "20260722-025229-002d51",
+  "name": "R55 known-class embedding census v3 full continuation segment 348/401",
+  "hypothesis": "all remaining supplied hosts reconcile under exact dual enumeration after the passed cap-60 calibration",
+  "expected_signal": "canonical manifest reaches 656 hosts with exact stream agreement, preserved frozen prefix, and no threshold failure",
+  "command": [
+    "scripts/run_known_class_embedding_census_cap60_locked.sh",
+    "--corpus",
+    "sources/r55_42some.g6",
+    "--checkpoint",
+    "artifacts/known-class-embedding-census-v3/checkpoint.json",
+    "--progress",
+    "artifacts/known-class-embedding-census-v3/progress.json",
+    "--output",
+    "artifacts/known-class-embedding-census-v3/output",
+    "--hosts-per-segment",
+    "1",
+    "--case-seconds",
+    "60",
+    "--total-hosts",
+    "656"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 120,
+  "memory_limit_mb": 1000,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-22T02:52:29.153816+00:00",
+  "finished_at": "2026-07-22T02:52:42.413738+00:00",
+  "duration_seconds": 13.26,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "0e7dd8bf587a01eefc3d8c9a04d8ff2161b7a46b",
+  "source_urls": [
+    "https://users.cecs.anu.edu.au/~bdm/data/ramsey.html"
+  ],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/scripts/run_known_class_embedding_census_cap60_locked.sh": "7c029a199b41d91aaafd399b9dc935a3db3b84792906a4d38d62a25aeb5d64f4",
+    "/root/proof-factory/research/ramsey-r55/workspace/sources/r55_42some.g6": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/known-class-embedding-census-v3/checkpoint.json": "300d05fa384d70e4509aa425cad2075ec5bc68a1434ea486a75155e30d6af034",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/known-class-embedding-census-v3/progress.json": "fb435d8fb1f8fe900908fb4a72e0b0b8f37468a65c7ab963f1213a7025199569"
+  },
+  "peak_child_memory_rusage": 56516,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "c20a7ea9d72f7ca93e90e8dc3977d879e3297c9c7f35bb65333089dc8c6d3d02",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}
