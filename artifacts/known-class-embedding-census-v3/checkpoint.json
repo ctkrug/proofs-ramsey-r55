@@ -7469,10 +7469,25 @@
       "unique_vector_count": 0,
       "vector_occurrences": 0,
       "vector_stream_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "artifact": "hosts/498-complement_record_171.json.gz",
+      "artifact_sha256": "1fe0f8ba9f6335e6522302deb3d6a26f4c0772291b176a6d68400af4affc97ac",
+      "bitset_seconds": 3.2210980530362576,
+      "case": "complement_record_171",
+      "embedding_count": 0,
+      "host_gate_seconds": 60.0,
+      "host_index": 498,
+      "host_seconds": 13.194368841126561,
+      "mapping_stream_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "networkx_seconds": 9.971594725036994,
+      "unique_vector_count": 0,
+      "vector_occurrences": 0,
+      "vector_stream_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     }
   ],
   "corpus_sha256": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb",
-  "next_host": 498,
+  "next_host": 499,
   "schema_version": 1,
   "total_hosts": 656
 }
