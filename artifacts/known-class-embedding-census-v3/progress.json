@@ -1,0 +1,15 @@
+{
+  "artifact_bytes": 226520,
+  "complete": false,
+  "completed_units": 255,
+  "correctness_checks_passed": true,
+  "decision_value_active": true,
+  "last_segment_seconds": 21.627758764196187,
+  "manifest": "artifacts/known-class-embedding-host254-cap60-calibration/output/manifest.jsonl",
+  "manifest_sha256": "7567570231659ee37fa7af17ddb962422adc8b91ad2fc107ed3659ab0c3d6cde",
+  "message": "reconciled 255/656 hosts with exact stream agreement",
+  "observed_seconds_per_host": 21.627758764196187,
+  "projected_remaining_seconds": 8672.731264442671,
+  "schema_version": 1,
+  "total_units": 656
+}

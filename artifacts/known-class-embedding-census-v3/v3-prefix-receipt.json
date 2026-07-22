@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "status": "validated_calibration_prefix_copy",
+  "source_job_id": "lab-ramsey-r55-99d6e467cd79",
+  "source_status": "completed_awaiting_review",
+  "prefix_hosts": 255,
+  "next_host": 255,
+  "total_hosts": 656,
+  "original_v2_prefix_hosts": 254,
+  "original_v2_manifest_sha256": "50946975a8be443f08218377924028e6b4762b0a84fd47f10ecb0125e4cfff95",
+  "calibration_host_index": 254,
+  "calibration_host_seconds": 21.617251398041844,
+  "calibration_threshold_seconds": 45,
+  "checkpoint_sha256": "84b429083cf04aef04c10710abba0da02e86b497710b38de8e54805d339af633",
+  "progress_sha256": "f4cac19348d7b184d9785d12974ee01f1007d9b92afa69010427deac9e1f1ca1",
+  "manifest_sha256": "7567570231659ee37fa7af17ddb962422adc8b91ad2fc107ed3659ab0c3d6cde",
+  "byte_identical_tree_ledger_sha256": "7cdad6504b0b4ebe27e9bd85038d692250e81e3ff6501d479a7ea990ffc56f56",
+  "calibration_completion_record_sha256": "705afc87824d783c1396907ef4cc4fa84cf57373a0120fb3c294844dff6f138b",
+  "decision": "continue under new immutable v3 job with 60-second cap"
+}

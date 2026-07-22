@@ -1,0 +1,10 @@
+{
+  "scripts/run_known_class_embedding_census_cap60_locked.sh": "7c029a199b41d91aaafd399b9dc935a3db3b84792906a4d38d62a25aeb5d64f4",
+  "scripts/run_known_class_embedding_census.py": "d571103060c50a82bc6b7d41c7affabc4062ef975750da397bacf93ae81623dc",
+  "scripts/enumerate_core_embeddings_bitset.py": "01b3953b1db6a65737e4fb4ee176a88b7c8c8ed26a374c410cf274fe2500739a",
+  "scripts/enumerate_core_embeddings_networkx.py": "c4491591b16394e11d3bf0b907eea8c65a73308e8a2a366e5d594532c7010aaf",
+  "sources/r55_42some.g6": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb",
+  "artifacts/known-class-embedding-census-v3/v3-prefix-receipt.json": "f1fc8a9a6d57dd9d112c6a7a0f8ad247f31971df9459059caf8ca8325927e7e6",
+  "records/labs/lab-ramsey-r55-99d6e467cd79-completed-awaiting-review-segment-01.json": "705afc87824d783c1396907ef4cc4fa84cf57373a0120fb3c294844dff6f138b",
+  "docs/known-class-embedding-census-v3-predeclaration.md": "ba0f739da10edbbf5c6d8089db6ca16cef3a47e0754bbdf4eebbc25616d0fae9"
+}
