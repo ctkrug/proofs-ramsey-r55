@@ -1,0 +1,24 @@
+{
+  "aggregate_host_gate_schedule": [
+    {
+      "first_host": 0,
+      "last_host": 253,
+      "seconds": 30.0
+    },
+    {
+      "first_host": 254,
+      "last_host": 655,
+      "seconds": 60.0
+    }
+  ],
+  "hosts": 656,
+  "manifest_sha256": "e8a23728a45b7696dbc22f60396e90b764f42a9b8a769493206150c9a3fa36a6",
+  "max_observed_host_seconds": {
+    "cap_30_prefix": 24.832829244900495,
+    "cap_60_continuation": 23.039058859925717
+  },
+  "original_prefix_hosts": 254,
+  "original_prefix_manifest_sha256": "50946975a8be443f08218377924028e6b4762b0a84fd47f10ecb0125e4cfff95",
+  "schema_version": 2,
+  "status": "valid"
+}

@@ -1,4 +1,5 @@
 {
+  "event": "completed_awaiting_review",
   "schema_version": 2,
   "id": "lab-ramsey-r55-8ea9f8eeb6cc",
   "problem_id": "ramsey-r55",
@@ -49,5 +50,26 @@
     "artifacts/known-class-embedding-census-v3/output/manifest.jsonl": "e8a23728a45b7696dbc22f60396e90b764f42a9b8a769493206150c9a3fa36a6",
     "checkers/validate_known_class_embedding_census.py": "2491cdc91f1d6a954db924e8cf3ccee401a9747052cfbb4f7dcc61e2b9fe6581"
   },
-  "spec_sha256": "5c2d60a160c93dca12c57269941b83f309b4cfad1e072fded0b32ee3fce028a3"
+  "spec_sha256": "5c2d60a160c93dca12c57269941b83f309b4cfad1e072fded0b32ee3fce028a3",
+  "recorded_at": "2026-07-22T03:15:44.484929+00:00",
+  "job_id": "lab-ramsey-r55-8ea9f8eeb6cc",
+  "returncode": 0,
+  "duration_seconds": 0.671781,
+  "checkpoint_exists": false,
+  "checkpoint_sha256": "",
+  "progress": {
+    "complete": true,
+    "completed_units": 1,
+    "total_units": 1,
+    "correctness_checks_passed": true,
+    "decision_value_active": true,
+    "artifact_bytes": 2956,
+    "artifact_growth_bytes": 2956,
+    "measured_artifact_growth_bytes": 2956
+  },
+  "threshold_failures": [],
+  "runner_result": "{\n  \"experiment_dir\": \"/root/proof-factory/research/ramsey-r55/workspace/lab-runs/lab-ramsey-r55-8ea9f8eeb6cc/segment-000001/20260722-031543-ec1e48\",\n  \"schema_version\": 1,\n  \"id\": \"20260722-031543-ec1e48\",\n  \"name\": \"R55 v3 full-corpus standalone validation segment 1/1\",\n  \"hypothesis\": \"the completed 656-row census preserves canonical coverage, frozen prefix, mixed timing gates, artifact hashes, and dual-enumerator summaries\",\n  \"expected_signal\": \"standalone validator exits zero and writes status=valid bound to the final manifest hash\",\n  \"command\": [\n    \"python3\",\n    \"checkers/validate_known_class_embedding_census.py\",\n    \"artifacts/known-class-embedding-census-v3/output/manifest.jsonl\",\n    \"--output\",\n    \"artifacts/known-class-embedding-census-v3/validation.json\"\n  ],\n  \"cwd\": \"/root/proof-factory/research/ramsey-r55/workspace\",\n  \"seed\": 0,\n  \"timeout_seconds\": 600,\n  \"memory_limit_mb\": 1000,\n  \"memory_limit_enforced\": true,\n  \"started_at\": \"2026-07-22T03:15:43.616730+00:00\",\n  \"finished_at\": \"2026-07-22T03:15:44.195318+00:00\",\n  \"duration_seconds\": 0.579,\n  \"returncode\": 0,\n  \"timed_out\": false,\n  \"python\": \"3.12.3\",\n  \"platform\": \"Linux-6.8.0-124-generic-x86_64-with-glibc2.39\",\n  \"git_commit\": \"44a8f9353b592a753ec967a414a3473f4722c38e\",\n  \"source_urls\": [],\n  \"input_artifacts\": {\n    \"/root/proof-factory/research/ramsey-r55/workspace/checkers/validate_known_class_embedding_census.py\": \"2491cdc91f1d6a954db924e8cf3ccee401a9747052cfbb4f7dcc61e2b9fe6581\",\n    \"/root/proof-factory/research/ramsey-r55/workspace/artifacts/known-class-embedding-census-v3/output/manifest.jsonl\": \"e8a23728a45b7696dbc22f60396e90b764f42a9b8a769493206150c9a3fa36a6\"\n  },\n  \"peak_child_memory_rusage\": 19712,\n  \"peak_child_memory_unit\": \"kilobytes\",\n  \"artifacts\": {\n    \"stdout.txt\": \"4e20055e45f53f7703ef9ff713daeb833284ccb8fee1720d6760cfcae6963ec3\",\n    \"stderr.txt\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\"\n  }\n}\n",
+  "runner_error": "",
+  "output_root": "lab-runs/lab-ramsey-r55-8ea9f8eeb6cc/segment-000001",
+  "research_event_id": "event-ramsey-r55-9e77244d1f7f"
 }

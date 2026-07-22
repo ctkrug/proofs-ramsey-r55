@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "20260722-031543-ec1e48",
+  "name": "R55 v3 full-corpus standalone validation segment 1/1",
+  "hypothesis": "the completed 656-row census preserves canonical coverage, frozen prefix, mixed timing gates, artifact hashes, and dual-enumerator summaries",
+  "expected_signal": "standalone validator exits zero and writes status=valid bound to the final manifest hash",
+  "command": [
+    "python3",
+    "checkers/validate_known_class_embedding_census.py",
+    "artifacts/known-class-embedding-census-v3/output/manifest.jsonl",
+    "--output",
+    "artifacts/known-class-embedding-census-v3/validation.json"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 600,
+  "memory_limit_mb": 1000,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-22T03:15:43.616730+00:00",
+  "finished_at": "2026-07-22T03:15:44.195318+00:00",
+  "duration_seconds": 0.579,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "44a8f9353b592a753ec967a414a3473f4722c38e",
+  "source_urls": [],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/validate_known_class_embedding_census.py": "2491cdc91f1d6a954db924e8cf3ccee401a9747052cfbb4f7dcc61e2b9fe6581",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/known-class-embedding-census-v3/output/manifest.jsonl": "e8a23728a45b7696dbc22f60396e90b764f42a9b8a769493206150c9a3fa36a6"
+  },
+  "peak_child_memory_rusage": 19712,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "4e20055e45f53f7703ef9ff713daeb833284ccb8fee1720d6760cfcae6963ec3",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}
