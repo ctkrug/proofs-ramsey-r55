@@ -1,0 +1,14 @@
+{
+  "event": "validated",
+  "id": "lab-ramsey-r55-868014a68d6e",
+  "review": {
+    "decision": "validate",
+    "reason": "Complete 656-host census passed a distinct hash-bound standalone validation job; final progress, execution record, stdout, manifest, checkpoint, validation result, and all 656 host artifacts were rehashed.",
+    "reviewer": "codex-operator:2026-07-22",
+    "reviewed_at": "2026-07-22T03:22:29.232406+00:00",
+    "segment": 401,
+    "validation_receipt": "artifacts/known-class-embedding-census-v3/validation-receipt.json",
+    "validation_receipt_sha256": "4eb03f4a2cfac40bcd352101d36bcfa80125badce1ddaedcd424f5753449d04d",
+    "independent_validator": "standalone full-corpus integrity validator in a distinct lab job"
+  }
+}
