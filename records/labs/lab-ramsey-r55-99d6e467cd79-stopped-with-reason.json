@@ -1,0 +1,11 @@
+{
+  "event": "stopped_with_reason",
+  "id": "lab-ramsey-r55-99d6e467cd79",
+  "review": {
+    "decision": "redirect",
+    "reason": "The cap-60 calibration was superseded by the completed and independently validated v3 full-corpus census; continuing this partial calibration has no remaining decision value.",
+    "reviewer": "operator:codex-2026-07-22",
+    "reviewed_at": "2026-07-22T13:18:55.701618+00:00",
+    "segment": 1
+  }
+}
