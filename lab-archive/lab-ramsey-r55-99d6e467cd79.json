@@ -73,5 +73,45 @@
     "artifacts/known-class-embedding-host254-cap60-calibration/checkpoint.json": "12dd99da2e5f122954b08806376e6449ee779ad670855a7328b4c5f3ff1d2332",
     "artifacts/known-class-embedding-host254-cap60-calibration/progress.json": "ec8f949e004566b77901f53344b8fe8f5fef4732bbf61760b614e7389df71629"
   },
-  "spec_sha256": "fe13d2444c6f1babfaf445621ea56616ba130d6c68b255af739111ef18c2cdd5"
+  "spec_sha256": "fe13d2444c6f1babfaf445621ea56616ba130d6c68b255af739111ef18c2cdd5",
+  "final_record": {
+    "recorded_at": "2026-07-22T01:02:31.905996+00:00",
+    "job_id": "lab-ramsey-r55-99d6e467cd79",
+    "problem_id": "ramsey-r55",
+    "segment": 1,
+    "max_segments": 1,
+    "returncode": 0,
+    "duration_seconds": 22.628094,
+    "checkpoint_exists": true,
+    "checkpoint_sha256": "84b429083cf04aef04c10710abba0da02e86b497710b38de8e54805d339af633",
+    "progress": {
+      "path": "artifacts/known-class-embedding-host254-cap60-calibration/progress.json",
+      "sha256": "f4cac19348d7b184d9785d12974ee01f1007d9b92afa69010427deac9e1f1ca1",
+      "completed_units": 255.0,
+      "total_units": 656.0,
+      "delta_units": 255.0,
+      "throughput_per_second": 11.269177156502884,
+      "artifact_bytes": 226520,
+      "reported_artifact_bytes": 226520,
+      "reported_artifact_growth_bytes": 226520,
+      "measured_artifact_growth_bytes": 4569,
+      "artifact_growth_bytes": 226520,
+      "complete": false,
+      "correctness_checks_passed": true,
+      "decision_value_active": true,
+      "message": "reconciled 255/656 hosts with exact stream agreement"
+    },
+    "threshold_failures": [],
+    "runner_result": "{\n  \"experiment_dir\": \"/root/proof-factory/research/ramsey-r55/workspace/lab-runs/lab-ramsey-r55-99d6e467cd79/segment-000001/20260722-010209-a0f47c\",\n  \"schema_version\": 1,\n  \"id\": \"20260722-010209-a0f47c\",\n  \"name\": \"R55 host 254 cap-60 calibration segment 1/1\",\n  \"hypothesis\": \"source_record_255 completes with exact dual-stream agreement within 45 seconds\",\n  \"expected_signal\": \"completed_units advances exactly 254 to 255 with correctness true and host_seconds <=45\",\n  \"command\": [\n    \"scripts/run_known_class_embedding_census_cap60_locked.sh\",\n    \"--corpus\",\n    \"sources/r55_42some.g6\",\n    \"--checkpoint\",\n    \"artifacts/known-class-embedding-host254-cap60-calibration/checkpoint.json\",\n    \"--progress\",\n    \"artifacts/known-class-embedding-host254-cap60-calibration/progress.json\",\n    \"--output\",\n    \"artifacts/known-class-embedding-host254-cap60-calibration/output\",\n    \"--hosts-per-segment\",\n    \"1\",\n    \"--case-seconds\",\n    \"60\",\n    \"--total-hosts\",\n    \"656\"\n  ],\n  \"cwd\": \"/root/proof-factory/research/ramsey-r55/workspace\",\n  \"seed\": 0,\n  \"timeout_seconds\": 120,\n  \"memory_limit_mb\": 1000,\n  \"memory_limit_enforced\": true,\n  \"started_at\": \"2026-07-22T01:02:09.253613+00:00\",\n  \"finished_at\": \"2026-07-22T01:02:31.772237+00:00\",\n  \"duration_seconds\": 22.519,\n  \"returncode\": 0,\n  \"timed_out\": false,\n  \"python\": \"3.12.3\",\n  \"platform\": \"Linux-6.8.0-124-generic-x86_64-with-glibc2.39\",\n  \"git_commit\": \"f6f8c4681b33e9b6a808a732eae3cd1fe91d14c3\",\n  \"source_urls\": [\n    \"https://users.cecs.anu.edu.au/~bdm/data/ramsey.html\"\n  ],\n  \"input_artifacts\": {\n    \"/root/proof-factory/research/ramsey-r55/workspace/scripts/run_known_class_embedding_census_cap60_locked.sh\": \"7c029a199b41d91aaafd399b9dc935a3db3b84792906a4d38d62a25aeb5d64f4\",\n    \"/root/proof-factory/research/ramsey-r55/workspace/sources/r55_42some.g6\": \"067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb\",\n    \"/root/proof-factory/research/ramsey-r55/workspace/artifacts/known-class-embedding-host254-cap60-calibration/checkpoint.json\": \"12dd99da2e5f122954b08806376e6449ee779ad670855a7328b4c5f3ff1d2332\",\n    \"/root/proof-factory/research/ramsey-r55/workspace/artifacts/known-class-embedding-host254-cap60-calibration/progress.json\": \"ec8f949e004566b77901f53344b8fe8f5fef4732bbf61760b614e7389df71629\"\n  },\n  \"peak_child_memory_rusage\": 54496,\n  \"peak_child_memory_unit\": \"kilobytes\",\n  \"artifacts\": {\n    \"stdout.txt\": \"b057ecaee86caeb4dfec30ccbe26cfe8d2b9e86e017a4521fcb0729ca01f6a76\",\n    \"stderr.txt\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\"\n  }\n}\n",
+    "runner_error": "",
+    "output_root": "lab-runs/lab-ramsey-r55-99d6e467cd79/segment-000001",
+    "mutable_argv_before_sha256": {
+      "artifacts/known-class-embedding-host254-cap60-calibration/checkpoint.json": "12dd99da2e5f122954b08806376e6449ee779ad670855a7328b4c5f3ff1d2332",
+      "artifacts/known-class-embedding-host254-cap60-calibration/progress.json": "ec8f949e004566b77901f53344b8fe8f5fef4732bbf61760b614e7389df71629"
+    },
+    "mutable_argv_after_sha256": {
+      "artifacts/known-class-embedding-host254-cap60-calibration/checkpoint.json": "84b429083cf04aef04c10710abba0da02e86b497710b38de8e54805d339af633",
+      "artifacts/known-class-embedding-host254-cap60-calibration/progress.json": "f4cac19348d7b184d9785d12974ee01f1007d9b92afa69010427deac9e1f1ca1"
+    }
+  }
 }

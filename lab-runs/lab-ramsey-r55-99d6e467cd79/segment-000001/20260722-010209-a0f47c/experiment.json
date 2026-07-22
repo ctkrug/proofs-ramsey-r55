@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "20260722-010209-a0f47c",
+  "name": "R55 host 254 cap-60 calibration segment 1/1",
+  "hypothesis": "source_record_255 completes with exact dual-stream agreement within 45 seconds",
+  "expected_signal": "completed_units advances exactly 254 to 255 with correctness true and host_seconds <=45",
+  "command": [
+    "scripts/run_known_class_embedding_census_cap60_locked.sh",
+    "--corpus",
+    "sources/r55_42some.g6",
+    "--checkpoint",
+    "artifacts/known-class-embedding-host254-cap60-calibration/checkpoint.json",
+    "--progress",
+    "artifacts/known-class-embedding-host254-cap60-calibration/progress.json",
+    "--output",
+    "artifacts/known-class-embedding-host254-cap60-calibration/output",
+    "--hosts-per-segment",
+    "1",
+    "--case-seconds",
+    "60",
+    "--total-hosts",
+    "656"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 120,
+  "memory_limit_mb": 1000,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-22T01:02:09.253613+00:00",
+  "finished_at": "2026-07-22T01:02:31.772237+00:00",
+  "duration_seconds": 22.519,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "f6f8c4681b33e9b6a808a732eae3cd1fe91d14c3",
+  "source_urls": [
+    "https://users.cecs.anu.edu.au/~bdm/data/ramsey.html"
+  ],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/scripts/run_known_class_embedding_census_cap60_locked.sh": "7c029a199b41d91aaafd399b9dc935a3db3b84792906a4d38d62a25aeb5d64f4",
+    "/root/proof-factory/research/ramsey-r55/workspace/sources/r55_42some.g6": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/known-class-embedding-host254-cap60-calibration/checkpoint.json": "12dd99da2e5f122954b08806376e6449ee779ad670855a7328b4c5f3ff1d2332",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/known-class-embedding-host254-cap60-calibration/progress.json": "ec8f949e004566b77901f53344b8fe8f5fef4732bbf61760b614e7389df71629"
+  },
+  "peak_child_memory_rusage": 54496,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "b057ecaee86caeb4dfec30ccbe26cfe8d2b9e86e017a4521fcb0729ca01f6a76",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}
