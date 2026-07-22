@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "20260722-040756-4a31ae",
+  "name": "r55-known-class-residual-preflight-epoch20",
+  "hypothesis": "the validated 656-host census induces exactly eight blocks and the production and cold encodings agree on the record-21 residual formula while all three corruption controls fail closed",
+  "expected_signal": "preflight reports 198912 base clauses, 8 blocks, exact producer/cold equality, and three rejected mutations",
+  "command": [
+    "python3",
+    "checkers/known_class_residual_sat_preflight.py",
+    "artifacts/known-class-embedding-census-v3/output/manifest.jsonl",
+    "artifacts/known-class-embedding-census-v3/validation.json",
+    "sources/r55_42some.g6",
+    "artifacts/known-class-residual-sat-preflight-epoch20.json"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 120,
+  "memory_limit_mb": 1200,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-22T04:07:56.871161+00:00",
+  "finished_at": "2026-07-22T04:08:10.056450+00:00",
+  "duration_seconds": 13.185,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "9ec5fb9f24e48540bfcc864976479ab74d9e3057",
+  "source_urls": [
+    "https://www.cs.rit.edu/~spr/ElJC/sur.pdf",
+    "https://users.cecs.anu.edu.au/~bdm/papers/r55.pdf"
+  ],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/known_class_residual_sat_preflight.py": "707629d53c0a0f7851021e2ad0ea9e552b1d35edd6ef965ce7033c706bf183ca",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/known-class-embedding-census-v3/output/manifest.jsonl": "e8a23728a45b7696dbc22f60396e90b764f42a9b8a769493206150c9a3fa36a6",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/known-class-embedding-census-v3/validation.json": "4cbfa591bdacb4afdbc3ac8f62c7a27892d78747f488cc0664944dfe8d70c76c",
+    "/root/proof-factory/research/ramsey-r55/workspace/sources/r55_42some.g6": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb"
+  },
+  "peak_child_memory_rusage": 133452,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "a51dc80844fa4c76e0eed5b7e48e7e7cb7d03d4fe6580711d3b4ff98b72d7d32",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

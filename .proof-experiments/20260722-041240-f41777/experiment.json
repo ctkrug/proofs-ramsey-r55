@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "id": "20260722-041240-f41777",
+  "name": "r55-residual-cold-audit-prefix-epoch20",
+  "hypothesis": "the cold auditor begins independently replaying all 656 host embeddings and exact tied-row expansions without disagreeing with the retained census",
+  "expected_signal": "the durable coverage checkpoint advances through a nonzero host prefix with no semantic mismatch before the 115-second outer stop",
+  "command": [
+    "python3",
+    "checkers/known_class_residual_sat_audit.py",
+    "artifacts/known-class-embedding-census-v3/output/manifest.jsonl",
+    "artifacts/known-class-embedding-census-v3/validation.json",
+    "sources/r55_42some.g6",
+    "artifacts/authenticated_corpus_report.json",
+    "artifacts/known-class-residual-sat-epoch20/output",
+    "artifacts/known-class-residual-sat-epoch20/report.json",
+    "artifacts/toolchain/drat-trim-2e3b2dc0-cold/drat-trim",
+    "artifacts/known-class-residual-sat-epoch20/cold-audit.json"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 115,
+  "memory_limit_mb": 2304,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-22T04:12:40.698136+00:00",
+  "finished_at": "2026-07-22T04:14:35.718652+00:00",
+  "duration_seconds": 115.021,
+  "returncode": 124,
+  "timed_out": true,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "9ec5fb9f24e48540bfcc864976479ab74d9e3057",
+  "source_urls": [
+    "https://www.cs.rit.edu/~spr/ElJC/sur.pdf",
+    "https://users.cecs.anu.edu.au/~bdm/papers/r55.pdf"
+  ],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/known_class_residual_sat_audit.py": "fa9145a5da0ca380c9e95e90db596828aa02d0c9a91ba70788698ed81fbf3d00",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/known-class-embedding-census-v3/output/manifest.jsonl": "e8a23728a45b7696dbc22f60396e90b764f42a9b8a769493206150c9a3fa36a6",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/known-class-embedding-census-v3/validation.json": "4cbfa591bdacb4afdbc3ac8f62c7a27892d78747f488cc0664944dfe8d70c76c",
+    "/root/proof-factory/research/ramsey-r55/workspace/sources/r55_42some.g6": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/authenticated_corpus_report.json": "0d9b1801434edcc12f34e73cea6c98d911f0e0c6f0884f8f03d96a46eca1344c",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/known-class-residual-sat-epoch20/report.json": "52ccd2dd786052a371b7a2f8e6aadff73e8ea4f3616dffbc494a604c365abe4b",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/toolchain/drat-trim-2e3b2dc0-cold/drat-trim": "cc4e99e52445e3114bed2acacf1900cdc465c31278a7a9192a1ff2b72c5e4459"
+  },
+  "peak_child_memory_rusage": 56656,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

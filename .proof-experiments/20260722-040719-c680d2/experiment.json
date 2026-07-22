@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "20260722-040719-c680d2",
+  "name": "r55-residual-tests-epoch20",
+  "hypothesis": "the residual SAT producer, cold auditor, immutable attempts, lex gadget, proof timeout handling, and exact block polarity pass their deterministic regression suite",
+  "expected_signal": "all residual SAT unit tests pass",
+  "command": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_known_class_residual_sat.py",
+    "-v"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 120,
+  "memory_limit_mb": 1000,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-22T04:07:19.850329+00:00",
+  "finished_at": "2026-07-22T04:07:33.340801+00:00",
+  "duration_seconds": 13.49,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "9ec5fb9f24e48540bfcc864976479ab74d9e3057",
+  "source_urls": [
+    "https://www.cs.rit.edu/~spr/ElJC/sur.pdf"
+  ],
+  "input_artifacts": {},
+  "peak_child_memory_rusage": 134512,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr.txt": "494552ca4ac94bdcb221c9f360800fa520cf4395b0e6d02a7ffb94d0e8fa491a"
+  }
+}

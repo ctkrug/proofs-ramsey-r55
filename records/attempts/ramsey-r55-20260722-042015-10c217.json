@@ -1,0 +1,464 @@
+{
+  "id": "ramsey-r55-20260722-042015-10c217",
+  "problem_id": "ramsey-r55",
+  "started_at": "2026-07-22T04:00:08.165057+00:00",
+  "finished_at": "2026-07-22T04:20:15.836306+00:00",
+  "duration_seconds": 1207.7,
+  "lane": "hard",
+  "phase": "technical",
+  "model": "gpt-5.6-sol",
+  "effort": "high",
+  "orchestration": {
+    "architecture": "sol-principal-terra-delegates",
+    "principal_model": "gpt-5.6-sol",
+    "delegate_model": "gpt-5.6-terra",
+    "delegate_roles": [
+      "experiment-verification"
+    ],
+    "delegate_statuses": {
+      "experiment-verification": "completed"
+    },
+    "delegate_admission": {
+      "event_kinds": [
+        "lab_completed"
+      ],
+      "selected_roles": [
+        "experiment-verification"
+      ],
+      "route_decision_event_kinds": [
+        "evidence_repaired",
+        "external_feedback",
+        "route_authorized",
+        "source_changed"
+      ]
+    }
+  },
+  "delegates": [
+    {
+      "role": "experiment-verification",
+      "model": "gpt-5.6-terra",
+      "effort": "high",
+      "status": "completed",
+      "memo_path": ".delegates/20260722-040008-2a87e5/experiment-verification/memo.md",
+      "memo_sha256": "f3c1429881f0f242d1b3c84e8e02b2afc3897766ee0068e29a597466d08fe1d4",
+      "usage": {
+        "input_tokens": 925939,
+        "cached_input_tokens": 840704,
+        "output_tokens": 7412,
+        "reasoning_output_tokens": 2936
+      },
+      "error": ""
+    }
+  ],
+  "outcome": "progress",
+  "approach": "Certified residual-SAT exclusion for the record-21 frozen order-30 core after blocking all eight supplied-class boundary vectors",
+  "summary": "The exact record-21 residual formula contains 196998 Ramsey clauses, 1914 row-lex clauses, and 8 supplied-class blocks. CaDiCaL proved it UNSAT in 3.802 seconds. Two separately invoked fresh builds of pinned drat-trim verified the 2728822-byte proof. This is a rigorous propositional exclusion of one narrow frozen-core quotient, not a new Ramsey bound. Full independent semantic census replay remains incomplete at 7/656 hosts.",
+  "rationale": "Exact reconstruction agreement, corruption controls, a retained physical CNF, and two proof checks support the scoped UNSAT conclusion. Incomplete cold census replay and absent external usefulness prevent candidate promotion.",
+  "claims": [
+    "The physical CNF with SHA-256 cb3347f62affdb58e2c018fd156429165724ed1fc1375b17f7cdf20c85c81d54 is UNSAT.",
+    "That CNF represents only the record-21 frozen order-30 core, S12 row-lex quotient, and eight exact supplied-class blocks.",
+    "No conclusion about R(5,5) or all order-42 Ramsey graphs follows from this exclusion."
+  ],
+  "evidence": [
+    "Preflight: 196998 raw Ramsey clauses + 1914 lex clauses + 8 blocks; all three mutations rejected.",
+    "CaDiCaL 1.7.3 seed 1: UNSAT in 3.801555 seconds.",
+    "Production drat-trim: s VERIFIED in 2.544180 seconds.",
+    "Fresh cold drat-trim: s VERIFIED in 2.482 seconds.",
+    "Cold semantic replay: hosts 0..6 reproduced; checkpoint next_host=7."
+  ],
+  "evidence_files": [
+    "sources/rowpair/dynamic-survey-revision18.pdf",
+    "sources/rowpair/subgraph-counting-r55.pdf",
+    "sources/r55_42some.g6",
+    "tools/drat-trim/drat-trim.c",
+    "scripts/run_known_class_residual_sat.py",
+    "checkers/known_class_residual_sat_preflight.py",
+    "checkers/known_class_residual_sat_audit.py",
+    "artifacts/known-class-embedding-census-v3/output/manifest.jsonl",
+    "artifacts/known-class-embedding-census-v3/validation.json",
+    "artifacts/known-class-residual-sat-preflight-epoch20.json",
+    ".proof-experiments/20260722-040756-4a31ae/experiment.json",
+    "artifacts/toolchain/cadical-1.7.3/cadical",
+    "artifacts/toolchain/drat-trim-2e3b2dc0/drat-trim",
+    "artifacts/toolchain/drat-trim-2e3b2dc0-cold/drat-trim",
+    "artifacts/known-class-residual-sat-epoch20/output/known-primary-vectors.txt.gz",
+    "artifacts/known-class-residual-sat-epoch20/output/record-21-lex-known-classes-blocked.cnf",
+    "artifacts/known-class-residual-sat-epoch20/output/cadical.drat",
+    "artifacts/known-class-residual-sat-epoch20/output/drat-trim.log",
+    "artifacts/known-class-residual-sat-epoch20/report.json",
+    ".proof-experiments/20260722-041055-58db63/experiment.json",
+    ".proof-experiments/20260722-041214-e6c3af/experiment.json",
+    ".proof-experiments/20260722-041214-e6c3af/stdout.txt",
+    "artifacts/known-class-residual-sat-epoch20/cold-audit.json.coverage-checkpoint.json",
+    ".proof-experiments/20260722-041240-f41777/experiment.json"
+  ],
+  "next_steps": [
+    "Create a lab wrapper that mirrors the unchanged auditor checkpoint into standard progress JSON without changing the auditor hash.",
+    "Resume cold replay from host 7 and require all 656 hosts, physical DIMACS equality, and final cold drat-trim verification.",
+    "If validation completes, ask an R(5,5) specialist whether this fixed-core exclusion materially benefits an accepted search."
+  ],
+  "citations": [
+    "https://www.cs.rit.edu/~spr/ElJC/sur.pdf",
+    "https://arxiv.org/abs/2409.15709",
+    "https://users.cecs.anu.edu.au/~bdm/papers/r55.pdf",
+    "https://users.cecs.anu.edu.au/~bdm/data/ramsey.html",
+    "https://arxiv.org/abs/1801.06620"
+  ],
+  "techniques": [
+    "SAT",
+    "DRAT verification",
+    "frozen-core decomposition",
+    "row-lex symmetry breaking",
+    "exact assignment blocking",
+    "independent CNF reconstruction",
+    "mutation testing",
+    "checkpointed VF2 replay"
+  ],
+  "experiments": [
+    ".proof-experiments/20260722-040756-4a31ae: preflight passed with exact counts and three rejected mutations",
+    ".proof-experiments/20260722-041055-58db63: UNSAT in 3.802 seconds; production proof check passed",
+    ".proof-experiments/20260722-041214-e6c3af: independently rebuilt drat-trim returned s VERIFIED",
+    ".proof-experiments/20260722-041240-f41777: cold replay timed out as declared after checkpointing next_host=7"
+  ],
+  "transfer_insights": [
+    "Certificate-carrying SAT exclusions -> compact fixed-core boundary -> rapid verified UNSAT",
+    "Graph-label symmetry -> sorted residual core-neighbourhood rows -> covering S12 quotient",
+    "Census deduplication -> exact assignment blocks -> 12 occurrences compressed to 8 clauses"
+  ],
+  "established_facts": [
+    {
+      "claim": "The maintained range remains 43 <= R(5,5) <= 46.",
+      "evidence": "Dynamic Survey DS1.18 and Angeltveit–McKay",
+      "scope": "Status checked through the April 24, 2026 survey revision",
+      "status": "proved"
+    },
+    {
+      "claim": "The blocked record-21 fixed-core row-lex CNF is UNSAT.",
+      "evidence": "CNF cb3347f6…d54 and DRAT a0f0e2e6…e231, verified twice",
+      "scope": "Exactly the retained 745-variable, 198920-clause formula",
+      "status": "proved"
+    },
+    {
+      "claim": "Cold semantic replay agrees through canonical host 6.",
+      "evidence": "Coverage checkpoint f8117ad7…b08e with next_host=7",
+      "scope": "Supplied hosts 0..6 only",
+      "status": "computed"
+    }
+  ],
+  "ruled_out": [
+    {
+      "claim_or_route": "A ninth or otherwise unblocked completion exists in the represented record-21 frozen-core row-lex boundary family.",
+      "scope": "The exact physical CNF after eight supplied-vector blocks",
+      "reason": "Verified UNSAT",
+      "evidence": "DRAT proof a0f0e2e6…e231 and two s VERIFIED checks",
+      "reopen_condition": "A demonstrated mismatch in CNF generation, proof checking, block semantics, or symmetry coverage"
+    },
+    {
+      "claim_or_route": "Promote the result as fully cold-validated now.",
+      "scope": "Current epoch packet",
+      "reason": "Fresh semantic replay covers only 7 of 656 hosts.",
+      "evidence": "cold-audit coverage checkpoint next_host=7 and absent final audit JSON",
+      "reopen_condition": "Complete all 656 host replays and final cold formula/proof audit"
+    }
+  ],
+  "open_leads": [
+    {
+      "description": "Complete the cold all-host audit from its hash-bound host-7 checkpoint.",
+      "rationale": "This is the only missing internal validation step for the scoped fixed-core exclusion.",
+      "next_experiment": "Run the unchanged cold auditor in a writable checkpointed lab with a progress-mirroring wrapper.",
+      "priority": "high",
+      "status": "open"
+    },
+    {
+      "description": "Deletion-minimize one distance-3 two-orbit raw K5-origin core.",
+      "rationale": "It is a structurally different fallback if the cold audit or external usefulness gate fails.",
+      "next_experiment": "Run duplicate-preserving minimization and stop unless the exact core has at most 20 origins.",
+      "priority": "normal",
+      "status": "open"
+    }
+  ],
+  "strategy_proposals": [
+    {
+      "family": "proof-core compression for structured Ramsey exclusions",
+      "mechanism": "Deletion-minimize raw K5-clause cores and canonicalize their signed incidence hypergraphs across two-orbit slices.",
+      "hypothesis": "At least one certified slice has a duplicate-preserving obstruction core with at most 20 origins.",
+      "discriminating_test": "Run exact deletion minimization on the predeclared distance-3 slice and stop above 20 origins.",
+      "rationale": "A concise obstruction template may have greater structural and external value than another isolated fixed-core SAT exclusion."
+    }
+  ],
+  "synthesis_candidates": [],
+  "strategy": {
+    "family": "complete known-class boundary blocking",
+    "fingerprint": "r55knownclassembeddingblock2026",
+    "mechanism": "Freeze a 30-vertex core, quotient the twelve residual labels by row-lex order, block eight validated 426-bit supplied-class assignments, and verify UNSAT with DRAT",
+    "parent_ids": [],
+    "route_evaluation": {
+      "gate_proximity": 0.65,
+      "contribution_value": 0.45,
+      "decisiveness": 0.95,
+      "novelty_confidence": 0.35,
+      "novelty_risk": 0.55,
+      "scope": 0.25,
+      "reuse_value": 0.9,
+      "model_cost": 0.2,
+      "cpu_cost": 0.25
+    }
+  },
+  "continuation": {
+    "objective": "Independently validate the complete fixed-core UNSAT packet.",
+    "first_action": "Implement a wrapper around checkers/known_class_residual_sat_audit.py that mirrors next_host from artifacts/known-class-residual-sat-epoch20/cold-audit.json.coverage-checkpoint.json into lab progress JSON, then submit the unchanged auditor resuming at host 7.",
+    "stop_condition": "Stop on any hash or semantic mismatch; validate only at next_host=656 with final physical DIMACS equality and cold drat-trim s VERIFIED."
+  },
+  "candidate_profile": {
+    "contribution_class": "research_artifact",
+    "scholarly_question": "Can a natural frozen order-30 boundary of Ramsey(5,5,42) be exhaustively classified after supplied known classes are removed?",
+    "meaningful_delta": "A certificate-carrying UNSAT classification of one record-21 fixed-core row-lex residual family.",
+    "acceptance_test": "Complete cold semantic replay, final independent proof audit, and confirmation that a specialist search can use the exclusion.",
+    "closest_prior_work": [
+      {
+        "url": "https://users.cecs.anu.edu.au/~bdm/papers/r55.pdf",
+        "difference": "Prior work generated and extended known order-42 classes; it did not publish this fixed-core blocked CNF/DRAT classification."
+      },
+      {
+        "url": "https://arxiv.org/abs/1801.06620",
+        "difference": "Analog Max-SAT searched broadly for low-conflict graphs rather than proving this exact frozen-core exclusion."
+      }
+    ],
+    "novelty_searches": [
+      {
+        "source": "Electronic Journal of Combinatorics Dynamic Survey",
+        "query": "R(5,5), critical graphs, SAT approaches",
+        "url": "https://www.cs.rit.edu/~spr/ElJC/sur.pdf",
+        "finding": "The 2026 survey retains the 43–46 range and 656-class conjecture; no matching fixed-core certificate was identified."
+      },
+      {
+        "source": "McKay maintained Ramsey data page",
+        "query": "largest known Ramsey(5,5) graphs and supplied corpus",
+        "url": "https://users.cecs.anu.edu.au/~bdm/data/ramsey.html",
+        "finding": "The page supplies 328 graphs plus complements and explicitly does not claim completeness."
+      }
+    ],
+    "external_channel": {
+      "recipient": "Brendan McKay and Stanislaw Radziszowski",
+      "url": "https://users.cecs.anu.edu.au/~bdm/data/ramsey.html",
+      "acceptance_path": "After full cold validation, provide the compact CNF/DRAT packet and ask whether the frozen-core exclusion is useful to an active R(5,5) search."
+    },
+    "independent_validations": [],
+    "relevance": {
+      "settles_exact_open_target": false,
+      "improves_best_known_result": false,
+      "source_explicitly_requests_result": false,
+      "expert_interest_confirmed": false,
+      "new_structural_result": false,
+      "evidence_url": "https://www.cs.rit.edu/~spr/ElJC/sur.pdf"
+    },
+    "arbitrary_cutoff_extension": false
+  },
+  "campaign_assessment": {
+    "decision": "hold",
+    "close_signal": "",
+    "reason": "The SAT route was decisive, but the remaining cold replay cannot responsibly be replaced by repeated local prefixes while durable lab state is unavailable."
+  },
+  "search_efficiency": {
+    "naive_space": "The ambient labelled K42 universe has 2^861 graphs; the selected fixed-core boundary has 2^426 primary assignments before Ramsey and row-lex constraints.",
+    "reductions_considered": [
+      "S12 residual-label symmetry quotient by sorted 30-bit core-neighbourhood rows",
+      "global deduplication of supplied-class vectors",
+      "one batched CNF retaining learned clauses",
+      "frozen-core decomposition",
+      "gzip ledgers and hash-bound manifests",
+      "cube-and-conquer, rejected until the one-solve runtime was measured",
+      "cheap width, hash, timing, and corruption prefilters"
+    ],
+    "chosen_mechanism": "A single row-lex CNF with eight globally unique exact assignment blocks and one proof-logging solve.",
+    "estimated_or_measured_savings": "Vector deduplication reduced 12 occurrences to 8 clauses, a 33.3% reduction; the solver finished in 3.802 seconds.",
+    "soundness_guard": "Independent formula reconstruction, three corruption sentinels, two fresh drat-trim invocations, and a separately written cold auditor; the latter has replayed only hosts 0..6 so far."
+  },
+  "space_reduction": {
+    "ambient_space": "2^861 labelled graphs on 42 vertices",
+    "represented_space_before": "{x in {0,1}^426 : record-21 frozen-core Ramsey clauses and S12 row-lex clauses hold}",
+    "eliminated_or_quotiented": "All assignments remaining after eight exact supplied-class boundary vectors were blocked",
+    "represented_space_after": "0 satisfying assignments for the blocked fixed-core CNF",
+    "reduction_factor": "complete elimination of the represented blocked family; no global numeric factor claimed",
+    "measurement_status": "exact",
+    "unit": "labelled assignments",
+    "coverage_scope": "Record-21 frozen order-30 core with deleted vertices {2,3,10,12,14,25,27,30,36,37,38,41}, under the S12 row-lex quotient",
+    "soundness_basis": "The physical CNF and 2728822-byte DRAT proof were verified twice; row sorting preserves the frozen core and Ramsey property.",
+    "remaining_unknown": "Graphs with other order-30 cores, global completeness of the supplied 656 classes, and full cold semantic validation of the census.",
+    "next_bulk_elimination": "Complete the hash-bound cold replay of the remaining 649 supplied hosts, then assess whether additional frozen cores form a useful cover."
+  },
+  "tactical_learning": {
+    "prediction": "The blocked formula would yield a checked SAT candidate, checked fixed-core UNSAT certificate, or bounded UNKNOWN.",
+    "observation": "CaDiCaL returned UNSAT in 3.802 seconds; two drat-trim runs returned s VERIFIED.",
+    "surprise": "The formula was decisively UNSAT far below the 60-second pilot cap.",
+    "failure_signature": "Independent semantic census validation remains incomplete even when the propositional proof is valid.",
+    "bottleneck_update": "The limiting operation is now the 656-host cold VF2/tied-row replay and unavailable durable lab-state write access, not SAT solving.",
+    "reusable_assets": [
+      {
+        "name": "Residual fixed-core CNF and DRAT proof",
+        "use": "Recheck or compare future frozen-core boundary encodings",
+        "evidence": "CNF cb3347f6…d54; proof a0f0e2e6…e231; two VERIFIED checks"
+      },
+      {
+        "name": "Fail-closed residual preflight",
+        "use": "Reconstruct formula counts and reject vector, manifest, or block corruption",
+        "evidence": "artifacts/known-class-residual-sat-preflight-epoch20.json"
+      },
+      {
+        "name": "Cold-audit checkpoint",
+        "use": "Resume semantic census validation at host 7",
+        "evidence": "artifacts/known-class-residual-sat-epoch20/cold-audit.json.coverage-checkpoint.json"
+      }
+    ],
+    "constraints_learned": [
+      {
+        "constraint": "The blocked record-21 row-lex residual CNF is UNSAT.",
+        "scope": "Exactly 745 variables and 198920 clauses bound by CNF SHA-256 cb3347f6…d54",
+        "evidence": "DRAT proof a0f0e2e6…e231 verified twice"
+      },
+      {
+        "constraint": "The supplied census contributes 12 vector occurrences but only 8 unique 426-bit blocks.",
+        "scope": "Validated 656-host supplied corpus",
+        "evidence": "Preflight report 840e5b41…52ed"
+      }
+    ],
+    "route_decision": "hold",
+    "next_discriminator": "Resume the cold auditor from next_host=7 in a writable checkpointed lab and require completion through host 655 plus final physical-CNF and DRAT checks."
+  },
+  "prior_art_check": {
+    "nearest_method_ids": [
+      "mckay-delete-three-extend",
+      "exoo-incremental-simulated-annealing"
+    ],
+    "classification": "genuinely_different",
+    "exact_delta": "Prior work generated and extended order-42 graphs; this route classifies one frozen-core boundary quotient by exact supplied-vector blocking and a certificate-carrying SAT exclusion.",
+    "duplicate_risk": "The narrow fixed-core exclusion may already be implicit in unpublished searches or may lack external utility despite using a different mechanism.",
+    "comparison_test": "Ask whether the certified frozen-core boundary is consumed by or measurably shrinks a current specialist R(5,5) search.",
+    "decision": "proceed",
+    "source_urls": [
+      "https://users.cecs.anu.edu.au/~bdm/papers/r55.pdf",
+      "https://users.cecs.anu.edu.au/~bdm/data/ramsey.html"
+    ]
+  },
+  "field_progress_assessment": {
+    "status": "not_met",
+    "gate_id": "Produce certified exclusions that materially shrink an accepted R(5,5) search space, with deterministic encodings, checked proof logs, and sound symmetry coverage.",
+    "contribution_class": "verified internal fixed-core exclusion",
+    "closest_prior_result": "McKay and Radziszowski's 656 supplied order-42 classes and their nonextension searches",
+    "measurable_improvement": "One exact frozen-core row-lex boundary is UNSAT after eight blocks; external search-space utility is not established.",
+    "independent_validation": "Physical proof independently rechecked, but fresh census semantic replay is only 7/656 hosts.",
+    "external_audience": "No specialist acceptance yet.",
+    "remains_unproved": "Global completeness of the 656 classes, any improved Ramsey bound, and material usefulness of this fixed-core exclusion.",
+    "route_recommendation": "continue only after completing cold validation; then seek specialist utility review before promotion"
+  },
+  "lab_review": {
+    "job_id": "",
+    "decision": "none",
+    "reason": "Submission failed before activation because the sandbox could not write /root/proof-factory/state/labs/jobs; no lab job ID exists.",
+    "evidence": [
+      "artifacts/known-class-residual-sat-epoch20/failed-lab-submission-spec.json",
+      "Cold replay instead stopped locally at its 115-second bound with next_host=7"
+    ]
+  },
+  "hypothesis": "After blocking all eight boundary vectors induced by the validated supplied 656-class corpus, no Ramsey(5,5,42) completion remains in the record-21 frozen-core S12 row-lex quotient.",
+  "discriminating_test": "Construct the exact 745-variable, 198920-clause CNF and run one seed-1 CaDiCaL solve, accepting UNSAT only after two drat-trim checks.",
+  "strategy_status": "blocked",
+  "research_mode": "computational",
+  "independent_checker": "A separately written cold auditor reconstructs the formula without importing producer code, and a second fresh drat-trim build verified the physical proof. Its all-host semantic census replay is incomplete at 7/656.",
+  "blocker": "The full 656-host semantic replay needs checkpointed compute, but this sandbox cannot write the lab's durable state directory; external usefulness also remains unconfirmed.",
+  "reopen_condition": "Restore writable lab-state submission, resume the bound cold checkpoint, and obtain a final audit covering all 656 hosts with physical-CNF equality and s VERIFIED.",
+  "reopen_evidence": "",
+  "tool_disclosure": "GPT-5.6 Sol served as principal investigator. A supplied GPT-5.6 Terra experiment-verification memo was advisory and promoted with provenance; Sol independently reproduced every relied-on computation. No subagent was spawned. Deterministic tools: Python 3.12.3, NetworkX 3.3, CaDiCaL 1.7.3, GCC/cc 13.3.0, drat-trim pinned to 2e3b2dc0ecf938addbd779d42877b6ed69d9a985, nauty tools, SHA-256, exact Python/C graph checkers, and the computational-researcher experiment harness.; orchestration: gpt-5.6-sol principal with gpt-5.6-terra delegates.",
+  "policy_flags": [],
+  "contribution_gate": {
+    "schema_version": 1,
+    "passed": false,
+    "status": "not_requested",
+    "reasons": [],
+    "contribution_class": "unspecified",
+    "meaningful_delta": "",
+    "scholarly_question": "",
+    "external_recipient": "",
+    "independent_validation_types": []
+  },
+  "contribution_status": "research_attempt",
+  "review_status": "not a result claim",
+  "usage": {
+    "input_tokens": 6850446,
+    "cached_input_tokens": 6607104,
+    "output_tokens": 31332,
+    "reasoning_output_tokens": 12262
+  },
+  "json_repair": {
+    "attempted": false,
+    "used": false,
+    "model": null,
+    "effort": null,
+    "timeout_seconds": 180,
+    "usage": {},
+    "error": "",
+    "policy": "serialization-only; protected outcome and classification fields must remain unchanged"
+  },
+  "error": "",
+  "artifact_hashes": {
+    ".delegates/20260722-040008-2a87e5/experiment-verification/memo.md": "f3c1429881f0f242d1b3c84e8e02b2afc3897766ee0068e29a597466d08fe1d4",
+    ".proof-experiments/20260722-040719-c680d2/experiment.json": "5cea2eba32686e6c6a33a11057141a446c84784e4230124fdc4f238bed236f97",
+    ".proof-experiments/20260722-040719-c680d2/stderr.txt": "494552ca4ac94bdcb221c9f360800fa520cf4395b0e6d02a7ffb94d0e8fa491a",
+    ".proof-experiments/20260722-040719-c680d2/stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".proof-experiments/20260722-040719-e84a1b/experiment.json": "0416f0c644f23a47e421c70320fba3932b8bffea657fa5b49bb464e8f3825126",
+    ".proof-experiments/20260722-040719-e84a1b/stderr.txt": "d251183b168da25cc78d275849d5ef28bcf2e7278402cd88405d05184b463002",
+    ".proof-experiments/20260722-040719-e84a1b/stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".proof-experiments/20260722-040756-4a31ae/experiment.json": "9d4b3e1a90164c70795f27227cf6bcf592fffcbc79d570dd819a652252e3f5e4",
+    ".proof-experiments/20260722-040756-4a31ae/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".proof-experiments/20260722-040756-4a31ae/stdout.txt": "a51dc80844fa4c76e0eed5b7e48e7e7cb7d03d4fe6580711d3b4ff98b72d7d32",
+    ".proof-experiments/20260722-040937-f91457/experiment.json": "8d61acb0386f0b2bc2f57ea8e5c61786f9a9152f9412e8809f0164446f698327",
+    ".proof-experiments/20260722-040937-f91457/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".proof-experiments/20260722-040937-f91457/stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".proof-experiments/20260722-041055-58db63/experiment.json": "c8b23daee4888573fc42fd74e11505d8d16c9027cc9547c07acd2379280fe98f",
+    ".proof-experiments/20260722-041055-58db63/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".proof-experiments/20260722-041055-58db63/stdout.txt": "6734125712e9f1970d3637c16d64d479868c4d380c32735be3f8e25c11c0c782",
+    ".proof-experiments/20260722-041201-91a80e/experiment.json": "cd1815f19170c0a7f88b818b51d456c1cf49c32555d1d5416cefad2f5fe97ac3",
+    ".proof-experiments/20260722-041201-91a80e/stderr.txt": "d251183b168da25cc78d275849d5ef28bcf2e7278402cd88405d05184b463002",
+    ".proof-experiments/20260722-041201-91a80e/stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".proof-experiments/20260722-041214-e6c3af/experiment.json": "e1bea7d1b165f032af3f4ca93ebe89d9bd5e5c40116948c4a2d97e4c44b31b61",
+    ".proof-experiments/20260722-041214-e6c3af/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".proof-experiments/20260722-041214-e6c3af/stdout.txt": "f3ea2ad92c2ba4b0c6823cac3995dea64c00e83b6186b4fda111c9bf8f548033",
+    ".proof-experiments/20260722-041240-f41777/experiment.json": "7ee3fed5a986cfc5a6eb30c3e49458fd2824c974c551824d825b2f5f428c7b27",
+    ".proof-experiments/20260722-041240-f41777/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".proof-experiments/20260722-041240-f41777/stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifacts/known-class-embedding-census-v3/output/manifest.jsonl": "e8a23728a45b7696dbc22f60396e90b764f42a9b8a769493206150c9a3fa36a6",
+    "artifacts/known-class-embedding-census-v3/validation.json": "4cbfa591bdacb4afdbc3ac8f62c7a27892d78747f488cc0664944dfe8d70c76c",
+    "artifacts/known-class-residual-sat-epoch20/cold-audit.json.coverage-checkpoint.json": "f8117ad7f3d3215576830572243f871ca5cfe15ee05fdb240c599e4e0837b08e",
+    "artifacts/known-class-residual-sat-epoch20/failed-lab-submission-spec.json": "0c9a5b1b517b59b37a6f64d014f92da7e9532ce7b6fb3c8a997d5d5c59330dfc",
+    "artifacts/known-class-residual-sat-epoch20/output/attempt-state.json": "ea33b6ce27ed81ebdd698eb12c082bf80cba455d365521b55c82df948ade8876",
+    "artifacts/known-class-residual-sat-epoch20/output/cadical.drat": "a0f0e2e695a96befb93443f1a3d86280d1444d5625169af77306523d2828e231",
+    "artifacts/known-class-residual-sat-epoch20/output/cadical.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifacts/known-class-residual-sat-epoch20/output/cadical.stdout": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162",
+    "artifacts/known-class-residual-sat-epoch20/output/drat-trim.log": "d126e1330194275e0cfc0c5c3e5a7d38bcedb8d22ede2924aa22a30d3487cf7c",
+    "artifacts/known-class-residual-sat-epoch20/output/known-primary-vectors.txt.gz": "024da850d79b6d08a51a766c4ad9677ec5d8ddb0652c240420176649217dac99",
+    "artifacts/known-class-residual-sat-epoch20/output/record-21-lex-known-classes-blocked.cnf": "cb3347f62affdb58e2c018fd156429165724ed1fc1375b17f7cdf20c85c81d54",
+    "artifacts/known-class-residual-sat-epoch20/report.json": "52ccd2dd786052a371b7a2f8e6aadff73e8ea4f3616dffbc494a604c365abe4b",
+    "artifacts/known-class-residual-sat-preflight-epoch20.json": "840e5b412b17bdc12d2f0135dd908accab30af9d07cd60f6258203ab9a3852ed",
+    "artifacts/toolchain/cadical-1.7.3/cadical": "7b73df0a6d9cf3c751a1948300e5baff8e82c4d39bcd88f0c063b5f5cfb8b33e",
+    "artifacts/toolchain/drat-trim-2e3b2dc0-cold/drat-trim": "cc4e99e52445e3114bed2acacf1900cdc465c31278a7a9192a1ff2b72c5e4459",
+    "artifacts/toolchain/drat-trim-2e3b2dc0/drat-trim": "cc4e99e52445e3114bed2acacf1900cdc465c31278a7a9192a1ff2b72c5e4459",
+    "checkers/known_class_residual_sat_audit.py": "fa9145a5da0ca380c9e95e90db596828aa02d0c9a91ba70788698ed81fbf3d00",
+    "checkers/known_class_residual_sat_preflight.py": "707629d53c0a0f7851021e2ad0ea9e552b1d35edd6ef965ce7033c706bf183ca",
+    "docs/delegate-memos/20260722-040008-experiment-verification.md": "c178aded7d07fe3270cc7674058474e8061d6300fec46db4ac042c6f91b1444b",
+    "records/delegate-provenance-epoch20.json": "8b772577f1d62b0a0d2188f2f6b231d88ec6e45c57207ea251d50d6020afb402",
+    "scripts/run_known_class_residual_sat.py": "c24d1e7f5bc5c030fec8af1e88f15d857c264a90d99faeead71afeb88b1e9e94",
+    "sources/r55_42some.g6": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb",
+    "sources/rowpair/dynamic-survey-revision18.pdf": "fc7df6ab2aae870f8b27039a336f368a1234bf4eb9325e80bf20510aba79f2d2",
+    "sources/rowpair/subgraph-counting-r55.pdf": "b7e73035707628711563d91c46f0bc2df1d7fbe34cac0cccf10f99d5ba0212a7",
+    "tools/drat-trim/drat-trim.c": "d834b649f437e091597f5347f259b9f681087f89ca0844d0cee250a1a1a0c2ee"
+  },
+  "evidence_validation": {
+    "status": "valid",
+    "manifest": "evidence/ramsey-r55-20260722-042015-10c217/delta-manifest.json",
+    "manifest_sha256": "953f37e88ba5fedc0f9e267c976e8df4c2d58554cf8b39247abc3466d516f732",
+    "receipt": "evidence/ramsey-r55-20260722-042015-10c217/evidence-receipt.json",
+    "artifact_count": 52,
+    "claimed_evidence_count": 24,
+    "errors": []
+  }
+}

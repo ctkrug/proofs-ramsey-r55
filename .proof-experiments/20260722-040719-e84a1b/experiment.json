@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "id": "20260722-040719-e84a1b",
+  "name": "r55-drat-trim-build-epoch20",
+  "hypothesis": "the pinned upstream drat-trim source compiles reproducibly with the project compiler",
+  "expected_signal": "cc exits zero and emits the retained checker binary",
+  "command": [
+    "cc",
+    "-std=c99",
+    "-O2",
+    "tools/drat-trim/drat-trim.c",
+    "-o",
+    "artifacts/toolchain/drat-trim-2e3b2dc0/drat-trim"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 120,
+  "memory_limit_mb": 1000,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-22T04:07:19.846769+00:00",
+  "finished_at": "2026-07-22T04:07:21.798237+00:00",
+  "duration_seconds": 1.951,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "9ec5fb9f24e48540bfcc864976479ab74d9e3057",
+  "source_urls": [
+    "https://github.com/marijnheule/drat-trim/tree/2e3b2dc0ecf938addbd779d42877b6ed69d9a985"
+  ],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/tools/drat-trim/drat-trim.c": "d834b649f437e091597f5347f259b9f681087f89ca0844d0cee250a1a1a0c2ee"
+  },
+  "peak_child_memory_rusage": 46936,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr.txt": "d251183b168da25cc78d275849d5ef28bcf2e7278402cd88405d05184b463002"
+  }
+}

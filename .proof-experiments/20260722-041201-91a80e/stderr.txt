@@ -1,0 +1,4 @@
+tools/drat-trim/drat-trim.c: In function ‘read_lit’:
+tools/drat-trim/drat-trim.c:986:10: warning: implicit declaration of function ‘getc_unlocked’ [-Wimplicit-function-declaration]
+  986 |     lc = getc_unlocked (S->proofFile);
+      |          ^~~~~~~~~~~~~

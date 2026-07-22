@@ -1,0 +1,1 @@
+{"output": "artifacts/known-class-residual-sat-preflight-epoch20.json", "sha256": "840e5b412b17bdc12d2f0135dd908accab30af9d07cd60f6258203ab9a3852ed", "status": "known_class_residual_sat_preflight_pass"}

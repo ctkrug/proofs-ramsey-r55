@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "epoch": 20,
+  "principal": {
+    "role": "Sol principal investigator",
+    "model": "gpt-5.6-sol"
+  },
+  "delegates": [
+    {
+      "role": "experiment-verification",
+      "model": "gpt-5.6-terra",
+      "effort": "high",
+      "source_run": "20260722-040008-2a87e5",
+      "source_memo_sha256": "f3c1429881f0f242d1b3c84e8e02b2afc3897766ee0068e29a597466d08fe1d4",
+      "promoted_path": "docs/delegate-memos/20260722-040008-experiment-verification.md",
+      "use": "advisory route and verification checklist; all relied-on computational claims were locally reproduced"
+    }
+  ],
+  "subagents_spawned": false
+}

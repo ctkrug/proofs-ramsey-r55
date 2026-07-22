@@ -1,0 +1,29 @@
+{
+  "actual_output": "artifacts/known-class-residual-sat-epoch20/output",
+  "actual_report": "artifacts/known-class-residual-sat-epoch20/report.json",
+  "attempt_index": 0,
+  "command": [
+    "/root/proof-factory/.lab-venv/bin/python3",
+    "scripts/run_known_class_residual_sat.py",
+    "artifacts/known-class-embedding-census-v3/output/manifest.jsonl",
+    "artifacts/known-class-embedding-census-v3/validation.json",
+    "sources/r55_42some.g6",
+    "artifacts/authenticated_corpus_report.json",
+    "checkers/checker_a.py",
+    "checkers/checker_b.c",
+    "artifacts/toolchain/cadical-1.7.3/cadical",
+    "artifacts/toolchain/drat-trim-2e3b2dc0/drat-trim",
+    "artifacts/known-class-residual-sat-epoch20/output",
+    "artifacts/known-class-residual-sat-epoch20/report.json",
+    "60",
+    "1"
+  ],
+  "completed_unix": 1784693468.3544452,
+  "producer_sha256": "c24d1e7f5bc5c030fec8af1e88f15d857c264a90d99faeead71afeb88b1e9e94",
+  "report_sha256": "52ccd2dd786052a371b7a2f8e6aadff73e8ea4f3616dffbc494a604c365abe4b",
+  "requested_output": "artifacts/known-class-residual-sat-epoch20/output",
+  "requested_report": "artifacts/known-class-residual-sat-epoch20/report.json",
+  "result_status": "unsat_verified",
+  "schema_version": 1,
+  "status": "completed"
+}

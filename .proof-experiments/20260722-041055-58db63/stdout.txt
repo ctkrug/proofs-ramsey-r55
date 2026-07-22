@@ -1,0 +1,1 @@
+{"report": "artifacts/known-class-residual-sat-epoch20/report.json", "report_sha256": "52ccd2dd786052a371b7a2f8e6aadff73e8ea4f3616dffbc494a604c365abe4b", "status": "unsat_verified", "vectors": 8}

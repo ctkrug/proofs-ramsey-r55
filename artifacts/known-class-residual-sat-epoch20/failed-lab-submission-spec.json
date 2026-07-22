@@ -1,0 +1,73 @@
+{
+  "schema_version": 2,
+  "id": "lab-ramsey-r55-8dc1334b8231",
+  "problem_id": "ramsey-r55",
+  "name": "R55 record-21 known-class residual SAT epoch20",
+  "hypothesis": "after blocking all eight validated supplied-class boundary vectors, the record-21 frozen-core S12 row-lex residual formula is either SAT with a dual-checked corpus-relative new order-42 class or UNSAT with a checked fixed-core exclusion certificate",
+  "expected_signal": "one seed-1 CaDiCaL run returns a retained SAT model passing exact checks or an UNSAT proof passing drat-trim; timeout or any checker failure is UNKNOWN",
+  "decision_value": "decides the smallest complete supplied-class boundary test now available and either yields an order-42 corpus-relative candidate or a certified exclusion within the exact frozen-core quotient",
+  "efficiency_design": {
+    "naive_cost": "The unquotiented fixed-core boundary has 2^426 labelled assignments. Re-solving separately for every supplied class/vector would repeatedly parse roughly two hundred thousand base clauses and discard learned clauses.",
+    "opportunities_considered": [
+      "Symmetry reduction: quotient the full S_12 action on destroyed labels by exact nondecreasing 30-bit core-neighborhood rows; tied rows retain coverage without a uniqueness claim.",
+      "Canonical augmentation and orbit quotients: use the already checked row-lex quotient, but do not add unproved nauty-derived predicates inside SAT.",
+      "Bitsets, batching, and incremental evaluation: the prerequisite census uses bitset DFS plus independent VF2; the discriminator batches all unique vectors into one parsed CNF and one solve.",
+      "Memoization, caching, learned clauses, and proof prefixes: one formula/one solve lets CaDiCaL retain learned clauses across the entire block set; the immutable CNF and DRAT become reusable audit inputs.",
+      "Decomposition, cube-and-conquer, meet-in-the-middle, and distributed segments: rejected for this bounded discriminator because a cube cover would add a new coverage proof burden before the one-solve runtime is measured.",
+      "Compressed artifacts and streamed manifests: census host packets and the deduplicated vector ledger are gzip compressed and SHA-256 bound; the physical CNF/proof remain uncompressed because drat-trim must consume them directly.",
+      "Sound cheap prefilters and independent coverage: exact manifest/hash/width/stream checks reject bad blocks before CNF construction; production and cold audit independently reconstruct every clause and vector union."
+    ],
+    "chosen_reductions": "Use the sound S_12 row-lex quotient, deduplicate exact 426-bit census vectors globally, append one exact primary block per vector, and perform one seed-1 proof-logging solve. The initial pilot fails closed above 10,000 unique blocks instead of constructing a memory-heavy partial formula. The independent auditor does not import producer code.",
+    "expected_throughput_gain": "At least the 12! = 479,001,600 label factor when all twelve core rows are distinct; tied rows preserve coverage with a smaller orbit factor. Global vector deduplication replaces potentially many repeated host/embedding occurrences with one clause each. Observed SAT throughput is intentionally left unclaimed until the bounded run.",
+    "soundness_basis": "Destroyed-label permutations preserve the frozen core and Ramsey property; sorting core-neighborhood rows gives at least one representative of every S_12 orbit. Each long clause is false on exactly one 426-bit primary assignment. The complete census is independently dual-enumerated and must pass a hash-bound 656-row validator; the cold audit additionally re-enumerates every induced embedding and exact tied-row permutation from the source graphs under a durable per-host checkpoint. UNSAT requires two resource-bounded drat-trim checks; SAT requires independent full-graph scans and nauty classification, with known-control and corpus-novel-candidate statuses kept distinct.",
+    "remains_uncompressed": "All raw Ramsey clauses touching the boundary, all exact lex comparator clauses, every globally unique census vector block, the entire physical DIMACS, and any DRAT proof. No graph outside the record-21 frozen-core quotient is represented, and no claim extends beyond that scope."
+  },
+  "source_urls": [
+    "https://www.cs.rit.edu/~spr/ElJC/sur.pdf",
+    "https://users.cecs.anu.edu.au/~bdm/papers/r55.pdf"
+  ],
+  "command": [
+    "python3",
+    "scripts/run_known_class_residual_sat.py",
+    "artifacts/known-class-embedding-census-v3/output/manifest.jsonl",
+    "artifacts/known-class-embedding-census-v3/validation.json",
+    "sources/r55_42some.g6",
+    "artifacts/authenticated_corpus_report.json",
+    "checkers/checker_a.py",
+    "checkers/checker_b.c",
+    "artifacts/toolchain/cadical-1.7.3/cadical",
+    "artifacts/toolchain/drat-trim-2e3b2dc0/drat-trim",
+    "artifacts/known-class-residual-sat-epoch20/output",
+    "artifacts/known-class-residual-sat-epoch20/report.json",
+    "900",
+    "1"
+  ],
+  "seed": 1,
+  "segment_seconds": 3600,
+  "memory_mb": 2304,
+  "max_segments": 1,
+  "segment": 1,
+  "pilot_segments": 1,
+  "review_every_segments": 1,
+  "checkpoint_path": "",
+  "progress_path": "",
+  "continuation_thresholds": {
+    "min_throughput_per_second": 0.0,
+    "max_artifact_growth_bytes": 7516192768,
+    "require_correctness_checks": true
+  },
+  "submitted_at": "2026-07-22T04:10:04.375238+00:00",
+  "workspace_git_commit": "9ec5fb9f24e48540bfcc864976479ab74d9e3057",
+  "input_sha256": {
+    "artifacts/authenticated_corpus_report.json": "0d9b1801434edcc12f34e73cea6c98d911f0e0c6f0884f8f03d96a46eca1344c",
+    "artifacts/known-class-embedding-census-v3/output/manifest.jsonl": "e8a23728a45b7696dbc22f60396e90b764f42a9b8a769493206150c9a3fa36a6",
+    "artifacts/known-class-embedding-census-v3/validation.json": "4cbfa591bdacb4afdbc3ac8f62c7a27892d78747f488cc0664944dfe8d70c76c",
+    "artifacts/toolchain/cadical-1.7.3/cadical": "7b73df0a6d9cf3c751a1948300e5baff8e82c4d39bcd88f0c063b5f5cfb8b33e",
+    "artifacts/toolchain/drat-trim-2e3b2dc0/drat-trim": "cc4e99e52445e3114bed2acacf1900cdc465c31278a7a9192a1ff2b72c5e4459",
+    "checkers/checker_a.py": "b7f28adfec792139acce538ca879b775a0180467763b413e1a464672acddd259",
+    "checkers/checker_b.c": "40f719bb36f8d7d3db3a4b949dce8b20abd49499f57f7d5b651b718658014d2e",
+    "scripts/run_known_class_residual_sat.py": "c24d1e7f5bc5c030fec8af1e88f15d857c264a90d99faeead71afeb88b1e9e94",
+    "sources/r55_42some.g6": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb"
+  },
+  "spec_sha256": "bc474f36a14456cf773be8330aeab007e58603937739aee042dea36ace989a93"
+}

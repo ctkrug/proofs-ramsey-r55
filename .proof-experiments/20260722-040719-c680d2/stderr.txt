@@ -1,0 +1,13 @@
+test_cold_tied_expansion_is_exact_and_duplicate_free (test_known_class_residual_sat.ResidualSatTests.test_cold_tied_expansion_is_exact_and_duplicate_free) ... ok
+test_immutable_attempt_allocation_preserves_interrupted_outputs (test_known_class_residual_sat.ResidualSatTests.test_immutable_attempt_allocation_preserves_interrupted_outputs) ... ok
+test_independent_lex_comparator_matches_and_has_unique_auxiliaries (test_known_class_residual_sat.ResidualSatTests.test_independent_lex_comparator_matches_and_has_unique_auxiliaries) ... ok
+test_partial_census_fails_before_vector_use (test_known_class_residual_sat.ResidualSatTests.test_partial_census_fails_before_vector_use) ... ok
+test_producer_and_auditor_reconstruct_same_real_formula (test_known_class_residual_sat.ResidualSatTests.test_producer_and_auditor_reconstruct_same_real_formula) ... ok
+test_proof_checker_timeout_is_incomplete_and_preserves_log (test_known_class_residual_sat.ResidualSatTests.test_proof_checker_timeout_is_incomplete_and_preserves_log) ... ok
+test_sat_status_distinguishes_known_and_candidate (test_known_class_residual_sat.ResidualSatTests.test_sat_status_distinguishes_known_and_candidate) ... ok
+test_vector_block_has_exact_single_assignment_polarity (test_known_class_residual_sat.ResidualSatTests.test_vector_block_has_exact_single_assignment_polarity) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 12.980s
+
+OK

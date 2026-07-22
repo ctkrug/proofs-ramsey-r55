@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "id": "20260722-041055-58db63",
+  "name": "r55-known-class-residual-sat-60s-epoch20",
+  "hypothesis": "after blocking all eight validated supplied-class boundary vectors, a seed-1 60-second CaDiCaL pilot either returns a checked corpus-relative SAT candidate, a checked fixed-core UNSAT result, or an explicit bounded UNKNOWN",
+  "expected_signal": "SAT model passes physical DIMACS and two graph checkers, or UNSAT proof passes drat-trim; otherwise preserve UNKNOWN without a mathematical claim",
+  "command": [
+    "python3",
+    "scripts/run_known_class_residual_sat.py",
+    "artifacts/known-class-embedding-census-v3/output/manifest.jsonl",
+    "artifacts/known-class-embedding-census-v3/validation.json",
+    "sources/r55_42some.g6",
+    "artifacts/authenticated_corpus_report.json",
+    "checkers/checker_a.py",
+    "checkers/checker_b.c",
+    "artifacts/toolchain/cadical-1.7.3/cadical",
+    "artifacts/toolchain/drat-trim-2e3b2dc0/drat-trim",
+    "artifacts/known-class-residual-sat-epoch20/output",
+    "artifacts/known-class-residual-sat-epoch20/report.json",
+    "60",
+    "1"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 1,
+  "timeout_seconds": 115,
+  "memory_limit_mb": 2304,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-22T04:10:55.844739+00:00",
+  "finished_at": "2026-07-22T04:11:08.437461+00:00",
+  "duration_seconds": 12.593,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "9ec5fb9f24e48540bfcc864976479ab74d9e3057",
+  "source_urls": [
+    "https://www.cs.rit.edu/~spr/ElJC/sur.pdf",
+    "https://users.cecs.anu.edu.au/~bdm/papers/r55.pdf"
+  ],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/scripts/run_known_class_residual_sat.py": "c24d1e7f5bc5c030fec8af1e88f15d857c264a90d99faeead71afeb88b1e9e94",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/known-class-embedding-census-v3/output/manifest.jsonl": "e8a23728a45b7696dbc22f60396e90b764f42a9b8a769493206150c9a3fa36a6",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/known-class-embedding-census-v3/validation.json": "4cbfa591bdacb4afdbc3ac8f62c7a27892d78747f488cc0664944dfe8d70c76c",
+    "/root/proof-factory/research/ramsey-r55/workspace/sources/r55_42some.g6": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/authenticated_corpus_report.json": "0d9b1801434edcc12f34e73cea6c98d911f0e0c6f0884f8f03d96a46eca1344c",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/checker_a.py": "b7f28adfec792139acce538ca879b775a0180467763b413e1a464672acddd259",
+    "/root/proof-factory/research/ramsey-r55/workspace/checkers/checker_b.c": "40f719bb36f8d7d3db3a4b949dce8b20abd49499f57f7d5b651b718658014d2e",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/toolchain/cadical-1.7.3/cadical": "7b73df0a6d9cf3c751a1948300e5baff8e82c4d39bcd88f0c063b5f5cfb8b33e",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/toolchain/drat-trim-2e3b2dc0/drat-trim": "cc4e99e52445e3114bed2acacf1900cdc465c31278a7a9192a1ff2b72c5e4459"
+  },
+  "peak_child_memory_rusage": 79232,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "6734125712e9f1970d3637c16d64d479868c4d380c32735be3f8e25c11c0c782",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

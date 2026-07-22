@@ -1,4 +1,123 @@
-# R(5,5) research checkpoint — epoch 19
+# R(5,5) research checkpoint — epoch 20
+
+Recorded: 2026-07-22 04:15 UTC
+
+## Epoch-20 outcome: verified fixed-core UNSAT; full cold census replay incomplete
+
+The post-census record-21 residual-SAT discriminator returned `UNSAT` under
+CaDiCaL 1.7.3, seed 1.  This is a bounded fixed-core exclusion, not a new
+Ramsey bound and not a classification of all order-42 graphs.
+
+The exact represented family fixes the induced order-30 core of supplied
+record 21 after deleting vertices
+
+```text
+{2,3,10,12,14,25,27,30,36,37,38,41}
+```
+
+and quotients permutations of the twelve deleted labels by nondecreasing
+30-bit core-neighbourhood rows.  Every one of the eight distinct 426-bit
+boundary vectors retained from the validated 656-host supplied corpus is
+blocked exactly once.
+
+The independent preflight reported:
+
+```text
+raw Ramsey clauses       196998
+row-lex clauses            1914
+base clauses             198912
+supplied-class blocks          8
+total clauses            198920
+primary / total variables   426 / 745
+```
+
+The production and cold formula constructors agreed exactly.  The complete
+census had 12 vector occurrences and eight distinct vectors; the row-sorted
+record-21 control vector was present and blocked.  Three mutations were
+rejected before solving: a retained-vector bit flip changed its stream hash,
+an altered validation manifest hash failed before vector use, and a replaced
+block literal differed from the independent formula reconstruction.  The
+preflight report is
+`artifacts/known-class-residual-sat-preflight-epoch20.json`, SHA-256
+`840e5b412b17bdc12d2f0135dd908accab30af9d07cd60f6258203ab9a3852ed`.
+
+The 60-second seed-1 solver pilot finished in 3.8016 seconds.  Its physical
+CNF is 7,405,128 bytes with SHA-256
+`cb3347f62affdb58e2c018fd156429165724ed1fc1375b17f7cdf20c85c81d54`.
+The 2,728,822-byte DRAT proof has SHA-256
+`a0f0e2e695a96befb93443f1a3d86280d1444d5625169af77306523d2828e231`.
+The production drat-trim check returned `s VERIFIED` in 2.5442 seconds.  A
+fresh second build from pinned upstream revision
+`2e3b2dc0ecf938addbd779d42877b6ed69d9a985` independently returned
+`s VERIFIED` in 2.482 seconds; both builds had SHA-256
+`cc4e99e52445e3114bed2acacf1900cdc465c31278a7a9192a1ff2b72c5e4459`.
+The production report is
+`artifacts/known-class-residual-sat-epoch20/report.json`, SHA-256
+`52ccd2dd786052a371b7a2f8e6aadff73e8ea4f3616dffbc494a604c365abe4b`.
+
+The theorem supported by the formula and proof is only:
+
+> No Ramsey(5,5,42) graph in the record-21 frozen-core, `S_12` row-lex
+> boundary family remains after removing the eight exact labelled boundary
+> assignments induced by the validated supplied 656-class corpus.
+
+This does not prove that the 656 supplied classes are globally exhaustive.
+It does not exclude a graph with another order-30 core, and it leaves
+`43 <= R(5,5) <= 46` unchanged.
+
+The required fresh semantic census replay was started under a 115-second
+bound.  It independently reproduced canonical hosts `0..6` with no mismatch
+and stopped at the outer timeout with a hash-bound checkpoint at `next_host =
+7`.  The checkpoint is
+`artifacts/known-class-residual-sat-epoch20/cold-audit.json.coverage-checkpoint.json`,
+SHA-256
+`f8117ad7f3d3215576830572243f871ca5cfe15ee05fdb240c599e4e0837b08e`.
+No final cold-audit JSON exists, so the result remains internal progress and
+must not be promoted as an independently validated contribution.
+
+The intended 900-second lab submission failed before activation because this
+sandbox could not create the required durable state file under
+`/root/proof-factory/state/labs/jobs`.  The orphan queue spec was removed from
+the live queue and preserved at
+`artifacts/known-class-residual-sat-epoch20/failed-lab-submission-spec.json`.
+No lab job ID exists for this epoch.
+
+### Exact continuation
+
+Preserve every current hash.  Do not rerun the SAT solver and do not alter the
+CNF or proof.  First create a small lab wrapper around the unchanged auditor
+SHA-256
+`fa9145a5da0ca380c9e95e90db596828aa02d0c9a91ba70788698ed81fbf3d00`
+that mirrors `next_host` from the existing coverage checkpoint into a standard
+lab progress JSON after each host.  Submit the unchanged cold-audit command to
+the checkpointed lab, resuming at host 7.  Stop on any binding or semantic
+mismatch.  Completion requires `next_host = 656`, physical DIMACS equality,
+and a final cold drat-trim `s VERIFIED` receipt.  If lab state remains
+unwritable, hold this route rather than consuming another sequence of local
+115-second prefixes.
+
+Only after the final cold audit should a novelty/usefulness review ask whether
+this narrow fixed-core exclusion materially shrinks an accepted R(5,5) search
+space.  Without that external relevance test, retain it as infrastructure
+progress rather than a candidate contribution.
+
+## Epoch-20 disclosure
+
+GPT-5.6 Sol was principal investigator.  The supplied GPT-5.6 Terra
+experiment-verification memo was advisory and was promoted with provenance;
+Sol independently reproduced its preflight counts, corruption controls,
+solver result, and proof checks.  No subagent was spawned.  Deterministic
+tools were Python 3.12.3, NetworkX 3.3, CaDiCaL 1.7.3, GCC/cc 13.3.0,
+drat-trim at upstream revision `2e3b2dc0...`, nauty tools, SHA-256, the two
+existing exact graph checkers, and the computational-researcher experiment
+harness.  Web review used Dynamic Survey DS1.18 (April 24, 2026), the
+Angeltveit--McKay upper-bound paper, McKay--Radziszowski's primary 656-class
+paper, and McKay's maintained data page.  No package installation, system
+change, external publication, or remote account was used.
+
+---
+
+# Prior checkpoint — epoch 19
 
 Recorded: 2026-07-21 20:40 UTC
 

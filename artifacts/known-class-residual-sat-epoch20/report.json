@@ -1,0 +1,115 @@
+{
+  "census": {
+    "all_vectors_exactly_426_bits": true,
+    "block_ledger": {
+      "bytes": 199,
+      "path": "artifacts/known-class-residual-sat-epoch20/output/known-primary-vectors.txt.gz",
+      "sha256": "024da850d79b6d08a51a766c4ad9677ec5d8ddb0652c240420176649217dac99"
+    },
+    "hosts": 656,
+    "row_sorted_record_21_vector_present": true,
+    "unique_primary_vectors": 8,
+    "vector_occurrences": 12
+  },
+  "claim_limit": "no conclusion beyond this fixed-core quotient; UNKNOWN is inconclusive; SAT novelty is not established by corpus nonmembership alone",
+  "formula": {
+    "base_clauses": 198912,
+    "class_blocks": 8,
+    "cnf": {
+      "bytes": 7405128,
+      "path": "artifacts/known-class-residual-sat-epoch20/output/record-21-lex-known-classes-blocked.cnf",
+      "sha256": "cb3347f62affdb58e2c018fd156429165724ed1fc1375b17f7cdf20c85c81d54"
+    },
+    "hamming_constraint_present": false,
+    "primary_variables": 426,
+    "total_clauses": 198920,
+    "total_variables": 745
+  },
+  "inputs": {
+    "cadical": {
+      "bytes": 746960,
+      "path": "artifacts/toolchain/cadical-1.7.3/cadical",
+      "sha256": "7b73df0a6d9cf3c751a1948300e5baff8e82c4d39bcd88f0c063b5f5cfb8b33e"
+    },
+    "census_manifest": {
+      "bytes": 369319,
+      "path": "artifacts/known-class-embedding-census-v3/output/manifest.jsonl",
+      "sha256": "e8a23728a45b7696dbc22f60396e90b764f42a9b8a769493206150c9a3fa36a6"
+    },
+    "census_validation": {
+      "bytes": 620,
+      "path": "artifacts/known-class-embedding-census-v3/validation.json",
+      "sha256": "4cbfa591bdacb4afdbc3ac8f62c7a27892d78747f488cc0664944dfe8d70c76c"
+    },
+    "checker_a": {
+      "bytes": 6681,
+      "path": "checkers/checker_a.py",
+      "sha256": "b7f28adfec792139acce538ca879b775a0180467763b413e1a464672acddd259"
+    },
+    "checker_b_source": {
+      "bytes": 13864,
+      "path": "checkers/checker_b.c",
+      "sha256": "40f719bb36f8d7d3db3a4b949dce8b20abd49499f57f7d5b651b718658014d2e"
+    },
+    "corpus": {
+      "bytes": 47888,
+      "path": "sources/r55_42some.g6",
+      "sha256": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb"
+    },
+    "corpus_report": {
+      "bytes": 234857,
+      "path": "artifacts/authenticated_corpus_report.json",
+      "sha256": "0d9b1801434edcc12f34e73cea6c98d911f0e0c6f0884f8f03d96a46eca1344c"
+    },
+    "drat_trim": {
+      "bytes": 51216,
+      "path": "artifacts/toolchain/drat-trim-2e3b2dc0/drat-trim",
+      "sha256": "cc4e99e52445e3114bed2acacf1900cdc465c31278a7a9192a1ff2b72c5e4459"
+    }
+  },
+  "result": {
+    "claim_limit": "excludes only the record-21 frozen-core S_12 row-lex quotient after blocking every exact vector in the validated supplied-class census",
+    "proof": {
+      "bytes": 2728822,
+      "path": "artifacts/known-class-residual-sat-epoch20/output/cadical.drat",
+      "sha256": "a0f0e2e695a96befb93443f1a3d86280d1444d5625169af77306523d2828e231"
+    },
+    "proof_check": {
+      "bytes": 458,
+      "path": "artifacts/known-class-residual-sat-epoch20/output/drat-trim.log",
+      "sha256": "d126e1330194275e0cfc0c5c3e5a7d38bcedb8d22ede2924aa22a30d3487cf7c"
+    },
+    "proof_check_limits": {
+      "log_bytes": 67108864,
+      "memory_bytes": 2147483648,
+      "wall_seconds": 7200
+    },
+    "proof_check_seconds": 2.5441796691156924,
+    "status": "unsat_verified"
+  },
+  "schema_version": 1,
+  "scope": "record-21 frozen order-30 core; exact S_12 destroyed-row lex quotient; complete validated supplied-corpus vector blocks",
+  "solver": {
+    "memory_limit_bytes": 2147483648,
+    "name": "CaDiCaL",
+    "nonproof_headroom_bytes": 536870912,
+    "proof_file_limit_bytes": 6442450944,
+    "returncode": 20,
+    "root_disk_reserve_bytes": 8589934592,
+    "seconds": 3.8015554579906166,
+    "seed": 1,
+    "stderr": {
+      "bytes": 0,
+      "path": "artifacts/known-class-residual-sat-epoch20/output/cadical.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 16,
+      "path": "artifacts/known-class-residual-sat-epoch20/output/cadical.stdout",
+      "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+    },
+    "version": "1.7.3",
+    "wall_limit_seconds": 60
+  },
+  "status": "known_class_residual_sat_complete"
+}

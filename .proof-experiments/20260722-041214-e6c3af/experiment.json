@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "id": "20260722-041214-e6c3af",
+  "name": "r55-residual-drat-cold-check-epoch20",
+  "hypothesis": "the independently rebuilt pinned drat-trim checker verifies the retained residual-SAT UNSAT proof against the physical CNF",
+  "expected_signal": "drat-trim exits zero and prints s VERIFIED",
+  "command": [
+    "artifacts/toolchain/drat-trim-2e3b2dc0-cold/drat-trim",
+    "artifacts/known-class-residual-sat-epoch20/output/record-21-lex-known-classes-blocked.cnf",
+    "artifacts/known-class-residual-sat-epoch20/output/cadical.drat"
+  ],
+  "cwd": "/root/proof-factory/research/ramsey-r55/workspace",
+  "seed": 0,
+  "timeout_seconds": 120,
+  "memory_limit_mb": 2304,
+  "memory_limit_enforced": true,
+  "started_at": "2026-07-22T04:12:14.033487+00:00",
+  "finished_at": "2026-07-22T04:12:16.607476+00:00",
+  "duration_seconds": 2.574,
+  "returncode": 0,
+  "timed_out": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "git_commit": "9ec5fb9f24e48540bfcc864976479ab74d9e3057",
+  "source_urls": [
+    "https://github.com/marijnheule/drat-trim/tree/2e3b2dc0ecf938addbd779d42877b6ed69d9a985"
+  ],
+  "input_artifacts": {
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/toolchain/drat-trim-2e3b2dc0-cold/drat-trim": "cc4e99e52445e3114bed2acacf1900cdc465c31278a7a9192a1ff2b72c5e4459",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/known-class-residual-sat-epoch20/output/record-21-lex-known-classes-blocked.cnf": "cb3347f62affdb58e2c018fd156429165724ed1fc1375b17f7cdf20c85c81d54",
+    "/root/proof-factory/research/ramsey-r55/workspace/artifacts/known-class-residual-sat-epoch20/output/cadical.drat": "a0f0e2e695a96befb93443f1a3d86280d1444d5625169af77306523d2828e231"
+  },
+  "peak_child_memory_rusage": 79232,
+  "peak_child_memory_unit": "kilobytes",
+  "artifacts": {
+    "stdout.txt": "f3ea2ad92c2ba4b0c6823cac3995dea64c00e83b6186b4fda111c9bf8f548033",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}
